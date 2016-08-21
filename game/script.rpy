@@ -37,7 +37,7 @@ image grant normal = "grant"
 label start:
     scene black
     # remove this these things to enable music later
-    play music "Deemo - Paper Plane's Adventure - from YouTube.mp3"
+    play music "Deemo - Paper Plane's Adventure - from YouTube.mp3" loop
     "The Year is 2016"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
@@ -80,18 +80,22 @@ label TheKwokappears:
         jump phys1
 label Lyingsze:
         sze "\"N-No, I w-wwas going to ask her what n-next period is\""
+        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
         kok "\"cool story bro\"" with vpunch
         kok "\"suck my dick\"" with vpunch
         kok "\"I'll wreck you\"" with vpunch
         hide willis normal
         with dissolve
+        stop music
         jump dead
 label Honestsze:
         sze "\"Yea, so what\""
+        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
         kok "\"so imma fuck you up\"" with vpunch
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
         with dissolve
+        stop music
         jump dead
 label Rektrusali:
         sze "\"I was just going to talk to Rusali, who's trying to talk to her\""

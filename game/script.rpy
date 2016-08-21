@@ -434,16 +434,16 @@ label phys1p3principal1:
     #        sze "\"faarrrr\"
     #        jump dead
     #    else:
-            show moxham unhappy
-            mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
-            mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
-            mox "\"Do you understand?\""
-                menu:
-                    "\"Yes\"":
-                        jump phys1p3principal3
-                    "\"No\"":
-                        jump phys1p3principal4
-                    jump eng1p1
+    show moxham unhappy
+    mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
+    mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
+    mox "\"Do you understand?\""
+        menu:
+            "\"Yes\"":
+                jump phys1p3principal3
+            "\"No\"":
+                jump phys1p3principal4
+            jump eng1p1
 label phys1p3principal2:
     #Sze and Chao - David cos Zhichao geddit?
     scene bg principaldoor

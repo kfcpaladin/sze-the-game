@@ -37,7 +37,7 @@ image grant normal = "grant"
 label start:
     scene black
     # remove this these things to enable music later
-    # play music "Nasheed-Saleel_Al_Sawarim.mp3"
+    play music "Nasheed-Saleel_Al_Sawarim.mp3"
     "The Year is 2016"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
@@ -94,67 +94,67 @@ label Honestsze:
         with dissolve
         jump dead
 label Rektrusali:
-        sze "\I was just going to talk to Rusali, who's trying to talk to her\""
-        kok "\Hah, funny joke mate, go suck a dick\"" with vpunch
-        sze "\Argh... no really look\""
-        kok "\Shit you're right\""
-        kok "\Oi Rusali ur fcking ded bro\""
+        sze "\"I was just going to talk to Rusali, who's trying to talk to her\""
+        kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
+        sze "\"Argh... no really look\""
+        kok "\"Shit you're right\""
+        kok "\"Oi Rusali ur fcking ded bro\""
         hide willis normal
         with dissolve
         show rusali normal
         with dissolve
-        rus "\Waah I was just asking how to ace trials\""
+        rus "\"Waah I was just asking how to ace trials\""
         hide rusali normal
         with dissolve
         show willis normal
         with dissolve
-        kok "\Sure bro, let's see how long u last before i make you tell teh truth.\"" with vpunch
+        kok "\"Sure bro, let's see how long u last before i make you tell teh truth.\"" with vpunch
         hide willis normal
         show rusali normal
-        rus "\Plz stop\""
+        rus "\"Plz stop\""
         hide rusali normal
         show willis normal
-        kok "\Nah brah\"" with vpunch
+        kok "\"Nah brah\"" with vpunch
         hide willis normal
         show rusali normal
-        rus "\Waah\"" with hpunch
+        rus "\"Waah\"" with hpunch
         hide rusali normal
         show willis normal
-        kok "\u wot m8, trying to hit meh!?!\"" with vpunch
-        kok "\git rekt m8, gg ez kill\"" with vpunch
-        kok "\lol imma get gaz to re-educate you with 1000 years of pain after im done\"" with vpunch
-        kok "\thanks arthur\"" with vpunch
+        kok "\"u wot m8, trying to hit meh!?!\"" with vpunch
+        kok "\"git rekt m8, gg ez kill\"" with vpunch
+        kok "\"lol imma get gaz to re-educate you with 1000 years of pain after im done\"" with vpunch
+        kok "\"thanks arthur\"" with vpunch
         hide willis normal
         show rusali normal
-        rus "\waow arthur, why you do this?\""
-        rus "\just watch me\"" with hpunch 
+        rus "\"waow arthur, why you do this?\""
+        rus "\"just watch me\"" with hpunch 
         hide rusali normal
         show willis normal
-        kok "\ow\""
-        kok "\jks lol weak, more weak than lemon to face\"" with vpunch
+        kok "\"ow\""
+        kok "\"jks lol weak, more weak than lemon to face\"" with vpunch
         hide willis normal
         show rusali normal
-        rus "\waow just watch me\"" with hpunch
+        rus "\"waow just watch me\"" with hpunch
         hide rusali normal
         show willis normal
-        kok "\Weak\""
+        kok "\"Weak\""
         hide willis normal
         show rusali normal
-        rus "\Screw you guys. I'm going home\"" with hpunch
+        rus "\"Screw you guys. I'm going home\"" with hpunch
         hide rusali normal
         show willis normal
-        mox "\Well, well, well, what have we here?\""
-        kok "\Dennis Rusali was attacking me\""
-        mox "\One year in this school and you are being loading dock?\""
-        mox "\Bitch, you on detention. And you said you were going to truant? Double detention after school in my dungeon\""
-        rus "\Faaaaar\""
-        mox "\Make that triple\""
+        mox "\"Well, well, well, what have we here?\""
+        kok "\"Dennis Rusali was attacking me\""
+        mox "\"One year in this school and you are being loading dock?\""
+        mox "\"Bitch, you on detention. And you said you were going to truant? Double detention after school in my dungeon\""
+        rus "\"Faaaaar\""
+        mox "\"Make that triple\""
         call rusfriendshiploss from _call_rusfriendshiploss
-        rus "\Waow Arthur\""
+        rus "\"Waow Arthur\""
         show willis normal
         with dissolve
-        kok "\Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
-        sze "\K\""
+        kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
+        sze "\"K\""
         jump phys1
 label phys1:
     scene bg physclass

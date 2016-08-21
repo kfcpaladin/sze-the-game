@@ -142,15 +142,33 @@ label Rektrusali:
         show rusali normal
         rus "\"Screw you guys. I'm going home\"" with hpunch
         hide rusali normal
-        show willis normal
+        show moxham unhappy
         mox "\"Well, well, well, what have we here?\""
+        mox "\"You little fucks better not be fighting in this school\""
+        mox "\"The expression of violence is a very un-Fortian method of ejaculating your suppressed emotions\""
+        hide moxham unhappy
+        show willis normal
         kok "\"Dennis Rusali was attacking me\""
+        kok "\"He was being dog and not very Fortian\""
+        hide willis normal
+        show moxham unhappy
         mox "\"One year in this school and you are being loading dock?\""
         mox "\"Bitch, you on detention. And you said you were going to truant? Double detention after school in my dungeon\""
+        mox "\"Put that shit down in your diary\""
+        hide moxham unhappy
+        show rusali normal
         rus "\"Faaaaar\""
-        mox "\"Make that triple\""
+        rus "\"What did I do\""
+        hide rusali normal
+        show moxham unhappy
+        mox "\"Make that triple detention in my dungeon\""
+        hide moxham unhappy
+        with dissolve
         call rusfriendshiploss from _call_rusfriendshiploss
+        show rusali normal
+        with dissolve
         rus "\"Waow Arthur\""
+        hide rusali normal
         show willis normal
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""

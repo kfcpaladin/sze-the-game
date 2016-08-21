@@ -414,6 +414,7 @@ label phys1p3principal1:
     "It seems that Rusali does not appreciate this comment of yours"
     call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
     scene bg principaloffice
+    jump dead
     #$ phys1p3principal1_a = True
     #$ phys1p3principal1_b = False
     #call Rektrusali from _phys1p3principal1callRektrusali
@@ -434,16 +435,16 @@ label phys1p3principal1:
     #        sze "\"faarrrr\"
     #        jump dead
     #    else:
-    show moxham unhappy
-    mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
-    mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
-    mox "\"Do you understand?\""
-        menu:
-            "\"Yes\"":
-                jump phys1p3principal3
-            "\"No\"":
-                jump phys1p3principal4
-            jump eng1p1
+    # show moxham unhappy
+    # mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
+    # mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
+    # mox "\"Do you understand?\""
+    #    menu:
+    #        "\"Yes\"":
+    #            jump phys1p3principal3
+    #        "\"No\"":
+    #            jump phys1p3principal4
+    #        jump eng1p1
 label phys1p3principal2:
     #Sze and Chao - David cos Zhichao geddit?
     scene bg principaldoor
@@ -452,6 +453,7 @@ label phys1p3principal2:
     cha "\"You just do\""
     call charmincrease from _phys1p3principal2callcharmincrease
     scene bg principaloffice
+    jump dead
     # $ phys1p3principal2_a = True
     # $ phys1p3principal3_b = False
     # call Rektrusali from _phys1p3principal2callRektrusali
@@ -463,12 +465,12 @@ label phys1p3principal2:
     #        sze "\"nope\""
     #        jump dead
     #    else:
-            show moxham unhappy
-            mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
-            mox "\"Especially you Joshua, you have a history of being drop kick\""
-            mox "\"This behaviour is intolerable at Fort Street High School\""
-            mox "\"You two are lucky you arent expelled\""
-            jump eng1p1
+    #        show moxham unhappy
+    #        mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
+    #       mox "\"Especially you Joshua, you have a history of being drop kick\""
+    #        mox "\"This behaviour is intolerable at Fort Street High School\""
+    #        mox "\"You two are lucky you arent expelled\""
+    #       jump eng1p1
 label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop

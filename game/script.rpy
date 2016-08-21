@@ -37,6 +37,8 @@ image grant normal = "grant"
 
 label start:
     $ intelligence = 0
+    $ moxcounter1 = 0
+    $ moxcounter2 = 0
     $ charm = 0
     $ strength = 0
     $ inteltutorial = False
@@ -61,6 +63,10 @@ label start:
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
     sze "I had always loved her, since she first graced my eyes in Year 7."
+    sze "Her name is Serena, a name which evokes images or clear, running brooks and endless fields of wildflower meadows"
+    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
+    sze "beside a rose garden in bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana's Intermezzo of Act 1"
+    sze "But for now, school"
     
     scene bg school
     with fade
@@ -454,9 +460,9 @@ label phys1p3principal2:
     call charmincrease from _phys1p3principal2callcharmincrease
     scene bg principaloffice
     jump dead
-    # $ phys1p3principal2_a = True
-    # $ phys1p3principal3_b = False
-    # call Rektrusali from _phys1p3principal2callRektrusali
+    $ phys1p3principal2_a = True
+    $ phys1p3principal3_b = False
+    call Rektrusali from _phys1p3principal2callRektrusali
     #   if Rektrusali is True:
     #        mox "\"You again?\""
     #        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"

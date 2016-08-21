@@ -184,18 +184,23 @@ label Rektrusali:
         hide rusali normal
         show moxham unhappy
         mox "\"Make that triple detention in my dungeon\""
+        mox "\"And you there, bitch standing by being bystander.\""
+        sze "\"What did I do?\""
+        mox "\"Nothing, which makes you almost as bad a shit as Rusali.\""
+        sze "\"ok...\""
+        mox "\"I've got my eyes on you, ya hear? punks...\""
         hide moxham unhappy
         with dissolve
-        call rusfriendshiploss from _Rektrusalirusfriendshiploss
         show rusali normal
         with dissolve
-        rus "\"Waow Arthur\""
+        rus "\"Waow Arthur, I was gonna hate you but you're a nice guy\""
         hide rusali normal
         play music "Deemo - Paper Plane's Adventure - from YouTube.mp3" loop
         show willis normal
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
         sze "\"K\""
+        call kokfriendshipincrease from _Rektrusalikokfriendshipincrease
         jump phys1
 label phys1:
     scene bg physclass
@@ -224,6 +229,39 @@ label phys1answered:
     flu "\"Great answer Arthur. It's only the first day and you are already demonstrating why you are rank double one.\""
     flu "\"You should stay after school for some private tutoring ;);)\""
     call intelincrease from _phys1answeredintelincrease
+    menu:
+        "Say nothing":
+            jump phys1answered_a
+        "Ok...":
+            jump phys1answered_b
+label phys1answered_a:
+    flu "\"What? No response?\""
+    sze "\"...Wot?\""
+    flu "\"I bet you go tutoring\""
+    play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+    sze "\"...um\""
+    flu "\"Stop reading so far ahead its not fair on everyone else\"" with vpunch
+    flu "\"In fact I bet you are doing secret tutor-homework right now\"" with hpunch
+    sze "\"Wot, Ms-\""
+    flu "\"Everyone, kill the heretic\"" with vpunch
+    pra "\"Sorry Arthur\""
+    pra "\"For the watch\"" with hpunch
+    pra "\"Ow my hand\""
+    show willis normal
+    kok "\"For the watch\"" with vpunch
+    hide willis normal
+    show rusali normal
+    rus "\"For the watch\"" with hpunch
+    hide rusali normal
+    cha "\"...\""
+    sze "\"hunh...\""
+    sze "\"...urg...\""
+    cha "\"...\""
+    sze "\"...chao..\""
+    cha "\"...\"" with vpunch
+    cha "\"For teh watch\""
+    jump dead
+label phys1answered_b:
     kok "\"wow sugoi, you are a genius arthur\""
     jump phys1part2
     

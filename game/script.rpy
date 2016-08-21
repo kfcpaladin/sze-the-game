@@ -38,15 +38,15 @@ label start:
     scene black
     # remove this these things to enable music later
     # play music "Nasheed-Saleel_Al_Sawarim.mp3"
-    "The Year is 2015"
-    "It is the first day of school, you do not look forward to another miserable year of school."
+    "The Year is 2016"
+    "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
-    sze "I had always loved her, since my first sight of her in Year 7."
+    sze "I had always loved her, since she first graced my eyes in Year 7."
     
     scene bg school
     with fade
     sze "My life feels empty without her, like a photoelectric cell without UV rays"
-    sze "I watch her from afar, but i doubt she notices arthur"
+    sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the library"
     menu stealwillisgirl:
         "Go talk to her":
@@ -65,6 +65,8 @@ label TheKwokappears:
                 jump Lyingsze
             "Yea, so what??":
                 jump Honestsze
+            "I was just going to talk to Rusali; he's trying to talk to her"
+                jump Rektrusali
 
     else:
         show willis normal
@@ -91,6 +93,69 @@ label Honestsze:
         hide willis normal
         with dissolve
         jump dead
+label Rektrusali
+        sze "\I was just going to talk to Rusali, who's trying to talk to her\""
+        kok "\Hah, funny joke mate, go suck a dick\"" with vpunch
+        sze "\Argh... no really look\""
+        kok "\Shit you're right\""
+        kok "\Oi Rusali ur fcking ded bro\""
+        hide willis normal
+        with dissolve
+        show rusali normal
+        with dissolve
+        rus "\Waah I was just asking how to ace trials\""
+        hide rusali normal
+        with dissolve
+        show willis normal
+        with dissolve
+        kok "\Sure bro, let's see how long u last before i make you tell teh truth.\"" with vpunch
+        hide willis normal
+        show rusali normal
+        rus "\Plz stop\""
+        hide rusali normal
+        show willis normal
+        kok "\Nah brah\"" with vpunch
+        hide willis normal
+        show rusali normal
+        rus "\Waah\"" with vpunch
+        hide rusali normal
+        show willis normal
+        kok "\u wot m8, trying to hit meh!?!\"" with vpunch
+        kok "\git rekt m8, gg ez kill\"" with vpunch
+        kok "\lol imma get gaz to re-educate you with 1000 years of pain after im done\"" with vpunch
+        kok "\thanks arthur\"" with vpunch
+        hide willis normal
+        show rusali normal
+        rus "\waow arthur, why you do this?\""
+        rus "\just watch me\"" with vpunch 
+        hide rusali normal
+        show willis normal
+        kok "\ow\""
+        kok "\jks lol weak, more weak than lemon to face\"" with vpunch
+        hide willis normal
+        show rusali normal
+        rus "\waow just watch me\"" with vpunch
+        hide rusali normal
+        show willis normal
+        kok "\Weak\""
+        hide willis normal
+        show rusali normal
+        rus "\Screw you guys. I'm going home\""
+        hide rusali normal
+        show willis normal
+        mox "\Well, well, well, what have we here?\""
+        kok "\Dennis Rusali was attacking me\""
+        mox "\One year in this school and you are being loading dock?\""
+        mox "\Bitch, you on detention. And you said you were going to truant? Double detention after school in my dungeon\""
+        rus "\Faaaaar\""
+        mox "\Make that triple\""
+        call rusfriendshiploss from _call_rusfriendshiploss
+        rus "\Waow Arthur\""
+        show willis normal
+        with dissolve
+        kok "\Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
+        sze "\K\""
+        jump phys1
 label phys1:
     scene bg physclass
     "You enter the classroom, and glance around. It seems that there is only 1 seat left, right next to willis"

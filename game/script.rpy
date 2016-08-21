@@ -5,8 +5,8 @@
 
 image bg school = "Fort_Street_High_School_Memorial_Hall.JPG"
 image bg physclass = "physclass"
-image bg principaldoor = "principal office door"
-image bg principaloffice = "principal office"
+image bg principaldoor = "principalofficedoor"
+image bg principaloffice = "principaloffice"
 image bg workshop = "Workshop.jpg"
 image bg hall = "hall"
 image bg hallentrance = "CZ2Yss_UAAAPRqz"
@@ -24,12 +24,12 @@ define mox = Character('MOXHAM', color="#FFFFFF", image="moxham")
 define gra = Character('GRANT', color="#FFFFFF", image="grant")
 style window:
     left_padding 150
-image side arthur ="arthur see through.png"
+image side arthur ="arthurside.png"
 image willis normal = "willis1.png"
 image side willis = "willisside1"
 image rusali normal = "rusali"
-image moxham happy = "moxham happy"
-image moxham unhappy = "moxham unhappy"
+image moxham happy = "moxhamhappy"
+image moxham unhappy = "moxhamunhappy"
 image side moxham = "moxhamside"
 image grant normal = "grant"
 # The game starts here.

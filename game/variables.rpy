@@ -5,6 +5,13 @@ label tutorialfriendship:
     $ friendshiptutorial = True
     return
 
+label dailymoxcounter:
+    $ moxcounter2 += 1
+    $ moxcounter1 += 1
+label overallmoxcountergain:
+    $ moxcounter1 += 1
+label overallmoxcounterloss:
+    $ moxcounter 1 -= 1
 label rusfriendshiploss:
     $ rusfriendship -= 1
     "You lost a friendship point with Rusali. It is currently at [rusfriendship]"

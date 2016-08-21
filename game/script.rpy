@@ -185,7 +185,7 @@ label Rektrusali:
         mox "\"Make that triple detention in my dungeon\""
         hide moxham unhappy
         with dissolve
-        call rusfriendshiploss from _call_rusfriendshiploss
+        call rusfriendshiploss from _Rektrusalirusfriendshiploss
         show rusali normal
         with dissolve
         rus "\"Waow Arthur\""
@@ -222,7 +222,7 @@ label phys1answered:
     scene bg physclass
     flu "\"Great answer Arthur. It's only the first day and you are already demonstrating why you are rank double one.\""
     flu "\"You should stay after school for some private tutoring ;);)\""
-    call intelincrease from _call_intelincrease
+    call intelincrease from _phys1answeredintelincrease
     kok "\"wow sugoi, you are a genius arthur\""
     jump phys1part2
     
@@ -242,7 +242,7 @@ label phys1talked:
     sze "\"How has your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also i did 200 past papers for economics\""
     sze "Wow, this guy is diligent"
-    call prafriendshipincrease from _call_prafriendshipincrease
+    call prafriendshipincrease from _phys1talkedprafriendshipincrease
     jump phys1part2
     
 label phys1part2:
@@ -263,19 +263,19 @@ label phys1p2p1:
     rus "\"gotta ace trials ... gotta ace trials ... gotta ace trials\""
     "You pick up the paper and throw it at rusali" with vpunch
     rus "\"Waow, what was that for.\""
-    call rusfriendshiploss from _call_rusfriendshiploss
-    call chafriendshipgain from _call_chafriendshipgain
+    call rusfriendshiploss from _phys1p2p1callrusfriendshiploss
+    call chafriendshipgain from _phys1p2p1callchafriendshipgain
     "He picks up the paper, and readies himself to through it back"
     flu "\"Stop throwing paper.\""
     rus "\"Waa, it wasnt me, arthur threw it first\""
     hide rusali normal
     $ phys1p2p1t = True
     $ phys1p2p3t = False
-    call phys1p2p4 from _call_phys1p2p4
+    call phys1p2p4 from _phys1p2p1callphys1p2p4
     if phys1p2p4t is True:
         flu "\"I'm very proud of both of you for physically applying your theoretical physics knowledge.\""
         "Pragash and Willis gaze in awe at your remarkable talent at lying"
-        call intelincrease from _call_intelincrease_1
+        call intelincrease from _phys1p2p1callintelincrease
         show willis normal
         kok "\"Teach me senpai\""
         hide willis normal
@@ -296,7 +296,7 @@ label phys1p2p3:
     flu "\"Why are there paper balls in front of you\""
     $ phys1p2p1t = False
     $ phys1p2p3t = True
-    call phys1p2p4 from _call_phys1p2p4_1
+    call phys1p2p4 from _phys1p2p3callphys1p2p4
     if phys1p2p4t is True:
         flu "\"CHAO, go stand in the naughty corner\""
         cha "\"Fuck you, arthur\""
@@ -321,7 +321,7 @@ label phys1p2p4:
             else:
                 sze "\"A piece of paper was thrown at my head, in an vicious and inexcusable attack. The perpetrator, Chao must be punished\""
                 $ phys1p2p4t = True
-                call chafriendshiploss from _call_chafriendshiploss
+                call chafriendshiploss from _phys1p2p4callchafriendshiploss
                 return
         "Say nothing":
             sze "\"...\""
@@ -332,26 +332,26 @@ label phys1p3p1:
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    call intelincrease from _call_intelincrease_2
+    call intelincrease from _phys1p3p1callintelincrease
     "As you start to leave class ..."
     cha "\"I won't forget this ..."
-    call chafriendshiploss from _call_chafriendshiploss_1
+    call chafriendshiploss from _phys1p3p1callchafriendshiploss
     show willis normal
     kok "\"Isn't annoying chao the most fun thing to do.\""
     kok "\"It seems we have a lot in common\""
     hide willis normal
-    call kokfriendshipgain from _call_kokfriendshipgain
+    call kokfriendshipgain from _phys1p3p1callkokfriendshipgain
     jump eng1p1
 label phys1p3p2:
     #No-one in trouble
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    call intelincrease from _call_intelincrease_3
+    call intelincrease from _phys1p3p2callintelincrease
     show rusali normal
     rus "\"Thanks for not reporting me, my ATAR wouldve been dead if i got a detention\""
     hide rusali normal
-    call rusfriendshipgain from _call_rusfriendshipgain
+    call rusfriendshipgain from _phys1p3p2callrusfriendshipgain
     jump eng1p1
 label phys1p3principal1:
     #You and rusali
@@ -362,7 +362,7 @@ label phys1p3principal1:
     sze "\"Religion is a lie\""
     sze "\"Science is the truth\""
     "It seems that rusali does not appreciate this comment of yours"
-    call rusfriendshiploss from _call_rusfriendshiploss_1
+    call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
     scene bg principaloffice
     show moxham unhappy
     mox "\"I've been told of two boys who were displaying unsatisfactory behaviour in class\""
@@ -380,7 +380,7 @@ label phys1p3principal2:
     cha "\"Fuck, i cant go to an afternoon detention, i have to slay my gfs after school\""
     sze "\"Wow, how do you slay so many LG's\""
     cha "\"You just do\""
-    call charmincrease from _call_charmincrease
+    call charmincrease from _phys1p3principal2callcharmincrease
     scene bg principaloffice
     show moxham unhappy
     mox "\"I've been told of two boys who were displaying unsatisfactory behaviour in class\""

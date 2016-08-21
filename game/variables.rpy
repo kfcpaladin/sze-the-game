@@ -1,20 +1,3 @@
-$ intelligence = 0
-$ charm = 0
-$ strength = 0
-$ inteltutorial = False
-$ thirst = 0
-$ friendshiptutorial = False
-$ charmtutorial = False
-$ rinfriendship = 0
-$ kokfriendship = 0
-$ flufriendship = 0
-$ rusfriendship = 0
-$ prafriendship = 0
-$ deafriendship = 0
-$ wilfriendship = 0
-$ chafriendship = 0
-$ grafriendship = 0
-$ moxfriendship = 0
 
 label tutorialfriendship:
     # edit this stuff

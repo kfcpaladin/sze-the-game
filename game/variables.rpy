@@ -16,82 +16,82 @@ $ chafriendship = 0
 $ grafriendship = 0
 $ moxfriendship = 0
 
+label tutorialfriendship:
+    # edit this stuff
+    "Friendship is a measure of how close you are with someone"
+    $ friendshiptutorial = True
+    return
 
 label rusfriendshiploss:
+    $ rusfriendship -= 1
+    "You lost a friendship point with Rusali. It is currently at [rusfriendship]"
     if friendshiptutorial is False:
-        "You lost a friendship point with Rusali, friendship points can affect future events and decisions"
-        $ rusfriendship -= 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ prafriendship -= 1
-        "You lost a friendship point with Rusali. It is currently at [rusfriendship]"
         return
         
 label rusfriendshipgain:
+    $ rusfriendship += 1
+    "You gained a friendship point with Rusali. It is currently at [rusfriendship]"
     if friendshiptutorial is False:
-        "You gained a friendship point with Rusali, friendship points can affect future events and decisions"
-        $ rusfriendship += 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ prafriendship += 1
-        "You gained a friendship point with Rusali. It is currently at [rusfriendship]"
         return
         
 label kokfriendshipgain:
+    $ kokfriendship += 1
+    "You gained a friendship point with Willis. It is currently at [kokfriendship]"
     if friendshiptutorial is False:
-        "You gained a friendship point with Willis, friendship points can affect future events and decisions"
-        $ kokfriendship += 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ kokfriendship += 1
-        "You gained a friendship point with Willis. It is currently at [chafriendship]"
         return
         
 label kokfriendshiploss:
+    $ kokfriendship -= 1
+    "You gained a friendship point with Willis. It is currently at [kokfriendship]"
     if friendshiptutorial is False:
-        "You lost a friendship point with Willis, friendship points can affect future events and decisions"
-        $ kokfriendship -= 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ kokfriendship -= 1
-        "You lost a friendship point with Willis. It is currently at [chafriendship]"
         return
         
 label chafriendshipgain:
+    $ chafriendship += 1
+    "You gained a friendship point with Chao. It is currently at [chafriendship]"
     if friendshiptutorial is False:
-        "You gained a friendship point with Chao, friendship points can affect future events and decisions"
-        $ chafriendship += 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ chafriendship += 1
-        "You gained a friendship point with Chao. It is currently at [chafriendship]"
         return
         
 label chafriendshiploss:
+    $ chafriendship -= 1
+    "You lost a friendship point with Chao. It is currently at [chafriendship]"
     if friendshiptutorial is False:
-        "You lost a friendship point with Chao, friendship points can affect future events and decisions"
-        $ chafriendship -= 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ chafriendship -= 1
-        "You lost a friendship point with Chao. It is currently at [chafriendship]"
         return
         
 label prafriendshipincrease:
+    $ prafriendship += 1
+    "You gained a friendship point with Pragash. It is currently at [prafriendship]"
     if friendshiptutorial is False:
-        "You gained a friendship point with Pragash, friendship points can affect future events and decisions"
-        $ prafriendship += 1
-        $ friendshiptutorial = True
+        call tutorialfriendship
         return
     else:
-        $ prafriendship += 1
-        "You gained a friendship point with Pragash. It is currently at [prafriendship]"
+        return
+    
+label prafriendshipdecrease:
+    $ prafriendship -= 1
+    "You lost a friendship point with Pragash. It is currently at [prafriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
         return
         
 label intelincrease:

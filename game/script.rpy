@@ -28,6 +28,7 @@ image side arthur ="arthurside.png"
 image willis normal = "willis1.png"
 image side willis = "willisside1"
 image rusali normal = "rusali"
+image side rusali = "rusali_side.jpg"
 image moxham happy = "moxhamhappy"
 image moxham unhappy = "moxhamunhappy"
 image side moxham = "moxhamside"
@@ -273,6 +274,8 @@ label phys1p2p1:
     $ phys1p2p3t = False
     call phys1p2p4 from _phys1p2p1callphys1p2p4
     if phys1p2p4t is True:
+        stop music
+        play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
         flu "\"I'm very proud of both of you for physically applying your theoretical physics knowledge.\""
         "Pragash and Willis gaze in awe at your remarkable talent at lying"
         call intelincrease from _phys1p2p1callintelincrease
@@ -282,13 +285,23 @@ label phys1p2p1:
         pra "\"I will forever be your pupil\""
         jump phys1p3p2
     else:
-        flu "\"Both of you go to the principles office, NOW\""
+        flu "\"Both of you go to the principal's office, NOW\""
         jump phys1p3principal1
         
 label phys1p2p2:
     play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
+    call phys1p2p4 from _phys1p2p3callphys1p2p4
+    if phys1p2p4t is True:
+        flu "\"CHAO, go stand in the naughty corner\""
+        cha "\"Fuck you, arthur\""
+        stop music
+        play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
+        flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
+        jump phys1p3p1
+    else:
+        flu "\"Both of you go to the principal's off- oh wait he ded nvrmnd.\""
     jump dead
     
 label phys1p2p3:
@@ -303,7 +316,7 @@ label phys1p2p3:
         flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
         jump phys1p3p1
     else:
-        flu "\"Both of you go to the principles office, NOW\""
+        flu "\"Both of you go to the principal's office, NOW\""
         jump phys1p3principal2
                                                        
 label phys1p2p4:
@@ -357,17 +370,17 @@ label phys1p3principal1:
     #You and rusali
     scene bg principaldoor
     rus "\"Oh no, ive never had a detention before.\""
-    "He adopts a praying position"
-    rus "\"Jesus please absolve me of my sins\""
-    sze "\"Religion is a lie\""
-    sze "\"Science is the truth\""
+    "He starts muttering in Indonesian"
+    rus "\"Better tell my parents otherwise I'll get rekt\""
+    sze "\"If you don't tell your parents, wouldn't you get less rekt?\""
+    sze "\"Stop roasting me\""
     "It seems that rusali does not appreciate this comment of yours"
     call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
     scene bg principaloffice
     show moxham unhappy
     mox "\"I've been told of two boys who were displaying unsatisfactory behaviour in class\""
-    mox "\"In this school we have a no tolerance policy on throwing paper balls\""
-    mox "\"Do you understand\""
+    mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
+    mox "\"Do you understand?\""
     menu:
         "\"Yes\"":
             jump phys1p3principal3
@@ -390,6 +403,7 @@ label phys1p3principal2:
     jump eng1p1
 label eng1p1:
     "I should probably be heading to the next period then."
+    play music "Edith Piaf - Non, Je ne regrette rien - from YouTube.mp3" loop
     wil "\"Ayy, sup arthur\""
     wil "\"U keen for engineering m8\""
     sze "\"uhh, not really\""

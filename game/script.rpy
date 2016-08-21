@@ -65,7 +65,7 @@ label TheKwokappears:
                 jump Lyingsze
             "Yea, so what??":
                 jump Honestsze
-            "I was just going to talk to Rusali; he's trying to talk to her"
+            "I was just going to talk to Rusali; he's trying to talk to her":
                 jump Rektrusali
 
     else:
@@ -93,7 +93,7 @@ label Honestsze:
         hide willis normal
         with dissolve
         jump dead
-label Rektrusali
+label Rektrusali:
         sze "\I was just going to talk to Rusali, who's trying to talk to her\""
         kok "\Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\Argh... no really look\""
@@ -117,7 +117,7 @@ label Rektrusali
         kok "\Nah brah\"" with vpunch
         hide willis normal
         show rusali normal
-        rus "\Waah\"" with vpunch
+        rus "\Waah\"" with hpunch
         hide rusali normal
         show willis normal
         kok "\u wot m8, trying to hit meh!?!\"" with vpunch
@@ -127,20 +127,20 @@ label Rektrusali
         hide willis normal
         show rusali normal
         rus "\waow arthur, why you do this?\""
-        rus "\just watch me\"" with vpunch 
+        rus "\just watch me\"" with hpunch 
         hide rusali normal
         show willis normal
         kok "\ow\""
         kok "\jks lol weak, more weak than lemon to face\"" with vpunch
         hide willis normal
         show rusali normal
-        rus "\waow just watch me\"" with vpunch
+        rus "\waow just watch me\"" with hpunch
         hide rusali normal
         show willis normal
         kok "\Weak\""
         hide willis normal
         show rusali normal
-        rus "\Screw you guys. I'm going home\""
+        rus "\Screw you guys. I'm going home\"" with hpunch
         hide rusali normal
         show willis normal
         mox "\Well, well, well, what have we here?\""

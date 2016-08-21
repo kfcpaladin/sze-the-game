@@ -104,7 +104,6 @@ label Lyingsze:
         kok "\"I'll wreck you\"" with vpunch
         hide willis normal
         with dissolve
-        stop music
         jump dead
 label Honestsze:
         sze "\"Yea, so what\""
@@ -113,10 +112,10 @@ label Honestsze:
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
         with dissolve
-        stop music
         jump dead
 label Rektrusali:
         sze "\"I was just going to talk to Rusali, who's trying to talk to her\""
+        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
         kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\"Argh... no really look\""
         kok "\"Shit you're right\""
@@ -191,6 +190,7 @@ label Rektrusali:
         with dissolve
         rus "\"Waow Arthur\""
         hide rusali normal
+        play music "Deemo - Paper Plane's Adventure - from YouTube.mp3" loop
         show willis normal
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
@@ -286,6 +286,7 @@ label phys1p2p1:
         jump phys1p3principal1
         
 label phys1p2p2:
+    play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
     jump dead

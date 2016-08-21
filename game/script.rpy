@@ -200,7 +200,7 @@ label Rektrusali:
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
         sze "\"K\""
-        call kokfriendshipincrease from _Rektrusalikokfriendshipincrease
+        call kokfriendshipgain from _Rektrusalikokfriendshipgain
         jump phys1
 label phys1:
     scene bg physclass
@@ -356,7 +356,6 @@ label phys1p2p3:
     else:
         flu "\"Both of you go to the principal's office, NOW\""
         jump phys1p3principal2
-                                                       
 label phys1p2p4:
     menu:
         "Use your physics knowledge to make a believable lie" if intelligence > 0:
@@ -415,60 +414,61 @@ label phys1p3principal1:
     "It seems that Rusali does not appreciate this comment of yours"
     call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
     scene bg principaloffice
-    $ phys1p3principal1_a = True
-    $ phys1p3principal1_b = False
-    call Rektrusali from _phys1p3principallcallRektrusali
-    if Rektrusali is True:
-    mox "\"You two again?\""
-    play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
-    mox "\"You're already in my shit books\""
-    rus "\"Oh no...\""
-    mox "\"I didn't say you could speak\"" with hpunch
-    rus "\"Aowwww\""
-    sze "\"Oh shit\""
-    mox "\"You're both dead\"" with vpunch
-    rus "\"Run, ru-\""
-    mox "\"I'll clear all your records of loading dockness if you rek Arthur and spend afternoon of re-education with me\""
-    show rusali normal
-    rus "\Soz man. Need to ace trials\"" with vpunch
-    sze "\"faarrrr\"
-    jump dead
-    else:
-    show moxham unhappy
-    mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
-    mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
-    mox "\"Do you understand?\""
-    menu:
-        "\"Yes\"":
-            jump phys1p3principal3
-        "\"No\"":
-            jump phys1p3principal4
-    jump eng1p1
+    #$ phys1p3principal1_a = True
+    #$ phys1p3principal1_b = False
+    #call Rektrusali from _phys1p3principal1callRektrusali
+    #    if Rektrusali is True:
+    #        
+    #        mox "\"You two again?\""
+    #        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+    #        mox "\"You're already in my shit books\""
+    #        rus "\"Oh no...\""
+    #        mox "\"I didn't say you could speak\"" with hpunch
+    #        rus "\"Aowwww\""
+    #        sze "\"Oh shit\""
+    #        mox "\"You're both dead\"" with vpunch
+    #        rus "\"Run, ru-\""
+    #        mox "\"I'll clear all your records of loading dockness if you rek Arthur and spend afternoon of re-education with me\""
+    #        show rusali normal
+    #        rus "\Soz man. Need to ace trials\"" with vpunch
+    #        sze "\"faarrrr\"
+    #        jump dead
+    #    else:
+            show moxham unhappy
+            mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
+            mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
+            mox "\"Do you understand?\""
+                menu:
+                    "\"Yes\"":
+                        jump phys1p3principal3
+                    "\"No\"":
+                        jump phys1p3principal4
+                    jump eng1p1
 label phys1p3principal2:
-    #You and Chao
+    #Sze and Chao - David cos Zhichao geddit?
     scene bg principaldoor
     cha "\"Fuck, i cant go to an afternoon detention, i have to slay my gfs after school\""
     sze "\"Wow, how do you slay so many LG's\""
     cha "\"You just do\""
     call charmincrease from _phys1p3principal2callcharmincrease
     scene bg principaloffice
-    $ phys1p3principal2_a = True
-    $ phys1p3principal3_b = False
-    call Rektrusali from _phys1p3principal2callRektrusali
-    if Rektrusali is True:
-    mox "\"You again?\""
-    play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
-    mox "\"Chao, I'll clear you of your dropkickness records if you beat the shit out of him\""
-    cha "\"Yes ma'am\""
-    sze "\"nope\""
-    jump dead
-    else:
-    show moxham unhappy
-    mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
-    mox "\"Especially you Joshua, you have a history of being drop kick\""
-    mox "\"This behaviour is intolerable at Fort Street High School\""
-    mox "\"You two are lucky you arent expelled\""
-    jump eng1p1
+    # $ phys1p3principal2_a = True
+    # $ phys1p3principal3_b = False
+    # call Rektrusali from _phys1p3principal2callRektrusali
+    #   if Rektrusali is True:
+    #        mox "\"You again?\""
+    #        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+    #        mox "\"Chao, I'll clear you of your dropkickness records if you beat the shit out of him\""
+    #        cha "\"Yes ma'am\""
+    #        sze "\"nope\""
+    #        jump dead
+    #    else:
+            show moxham unhappy
+            mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
+            mox "\"Especially you Joshua, you have a history of being drop kick\""
+            mox "\"This behaviour is intolerable at Fort Street High School\""
+            mox "\"You two are lucky you arent expelled\""
+            jump eng1p1
 label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop

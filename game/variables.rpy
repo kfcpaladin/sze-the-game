@@ -8,10 +8,13 @@ label tutorialfriendship:
 label dailymoxcounter:
     $ moxcounter2 += 1
     $ moxcounter1 += 1
+    return
 label overallmoxcountergain:
     $ moxcounter1 += 1
+    return
 label overallmoxcounterloss:
     $ moxcounter 1 -= 1
+    return
 label rusfriendshiploss:
     $ rusfriendship -= 1
     "You lost a friendship point with Rusali. It is currently at [rusfriendship]"

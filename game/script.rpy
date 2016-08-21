@@ -37,7 +37,7 @@ image grant normal = "grant"
 label start:
     scene black
     # remove this these things to enable music later
-    play music "Nasheed-Saleel_Al_Sawarim.mp3"
+    play music "Deemo - Paper Plane's Adventure - from YouTube.mp3"
     "The Year is 2016"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."

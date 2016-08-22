@@ -547,7 +547,7 @@ label eng1p1:
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
-jump eng1p1naughtycorner:ll
+jump eng1p1naughtycorner:
     pra "\"Oi, this is my spot\""
     pra "\"Ill rek you\""
     jump dead

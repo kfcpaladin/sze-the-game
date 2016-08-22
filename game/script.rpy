@@ -235,7 +235,7 @@ label phys1answered:
     scene bg physclass
     flu "\"Great answer Arthur. It's only the first day and you are already demonstrating why you are rank double one.\""
     flu "\"You should stay after school for some private tutoring ;);)\""
-    call intelincrease from _phys1answeredintelincrease
+    call intelgain from _phys1answeredintelgain
     menu:
         "Say nothing":
             jump phys1answered_a
@@ -293,7 +293,7 @@ label phys1talked:
     sze "\"How have your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also i did 200 past papers for economics\""
     sze "Wow Pragash is so smart, actually kill myself."
-    call prafriendshipincrease from _phys1talkedprafriendshipincrease
+    call prafriendshipgain from _phys1talkedprafriendshipgain
     "you talk a bit more with Pragash before refocusing like electron beam from electron gun in cathode ray tube\""
     jump phys1part2
     
@@ -332,7 +332,7 @@ label phys1p2p1:
         rus "\"I was helping Arthur\""
         flu "\"I'm very proud of both of you for physically applying your theoretical physics knowledge.\""
         "Pragash and Willis gaze in awe at your remarkable talent in the art of lying"
-        call intelincrease from _phys1p2p1callintelincrease
+        call intelgain from _phys1p2p1callintelgain
         show willis normal
         kok "\"Teach me senpai\""
         hide willis normal
@@ -400,7 +400,7 @@ label phys1p3p1:
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    call intelincrease from _phys1p3p1callintelincrease
+    call intelgain from _phys1p3p1callintelgain
     "As you start to leave class ..."
     cha "\"I won't forget this ..."
     call chafriendshiploss from _phys1p3p1callchafriendshiploss
@@ -415,7 +415,7 @@ label phys1p3p2:
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    call intelincrease from _phys1p3p2callintelincrease
+    call intelgain from _phys1p3p2callintelgain
     show rusali normal
     rus "\"Thanks for not reporting me, my ATAR wouldve been dead if i got a detention\""
     hide rusali normal
@@ -464,7 +464,7 @@ label phys1p3principal2:
     cha "\"Fuck, i cant go to an afternoon detention, i have to slay my gfs after school\""
     sze "\"Wow, how do you slay so many LG's\""
     cha "\"You just do\""
-    call charmincrease from _phys1p3principal2callcharmincrease
+    call charmgain from _phys1p3principal2callcharmgain
     scene bg principaloffice
     call dailymoxcounter from _phys1p3principal2dailymoxcounter
     if moxcounter2 > 1:
@@ -486,6 +486,8 @@ label phys1p3principal2:
 label phys1p3principal3:
     # said yes
     mox "\"I hope that this is the end of the matter\""
+    mox "\"Go to your next period, here's a note excusing your lateness.\""
+    
 label phys1p3principal4:
     # said no
     mox "\"Show some respect young man\""
@@ -503,8 +505,50 @@ label eng1p1:
     sze "\"k.\""
     show grant normal
     gra "\"Good morning class. Lets do some engineering.\""
-    
-
+    gra "\"I'm glad all of you made it to class on time\""
+    gra "\"Today we are going to learn about planes\""
+    gra "\"What does a plane do?\""
+    menu:
+        "\"It flies\"":
+            sze "\"Planes fly through the air\""
+            sze "\"Wings can make lift because of air\""
+            gra "\"Excellent answer, mr sze\""
+            gra "\"Mingle around children, let us achieve band 6's together\""
+            wil "\"Nice arthur, so smart, rank double 1\""
+            call intelgain from _eng1p2intelgain
+            call wilfriendshipgain from _eng1p2wilfriendshipgain
+            jump eng1p1p1
+        "\"It swims\"":
+            sze "\"Everybody knows that planes swim on the water\""
+            wil "\"How did 9/11 happen you dumbass. Was it all an inside job?\""
+            wil "\"I swear this engineering class is so dropkick\""
+            wil "\"Im rank 1 but i feel im still only going to get a 99.90 ATAR\""
+            wil "\"actual RIP ATAR\""
+            call intelloss from _eng1p2intelloss
+            call wilfriendshiploss from _eng1p2wilfriendshiploss
+            jump eng1p1p2
+        "\"..."\":
+            dea "\"A plane is like a flat surface.\""
+            "*collective facepalming from the class*"
+            gra "\"Wrong plane m8\""
+            dea "\"Ummm\""
+            dea "\"Its like a level of existence or something\""
+            gra "\"still wrong\""
+            jump eng1p1p3
+        "Play with vices":
+            "you are unable to contain yourself, your hands inexorably moving towards the vices"
+            "with a swift movement, you gracefully turn the handle a half-revolution, the two plates inching closer"
+            "your palm glide across its surface, each pore, each bump upon the steel surface"
+            "you rotate the handle, slowly, feeling the tightening vice plates upon your hand"
+            "the exhilarating pleasure of the vice consumes you, tears of elation drip down your eyes"
+            "your mind fades away, replaced only by the words"
+            "vice, Vice, VICE"
+            gra "\"Aaaaah\""
+            gra "\"STOP PLAYING WITH VICES\""
+            gra "\"You're in trouble\""
+            sze "\"FUCK\""
+            gra "\"GO STAND IN THE NAUGHTY CORNER\""
+            jump eng1p1naughtycorner
         
 label dead:
     scene black

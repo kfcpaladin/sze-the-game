@@ -470,7 +470,7 @@ label phys1p3principal2:
             mox "\"Especially you Joshua, you have a history of being drop kick\""
             mox "\"This behaviour is intolerable at Fort Street High School\""
             mox "\"You two are lucky you arent expelled\""
-           jump eng1p1
+            jump eng1p1
 label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop

@@ -471,6 +471,14 @@ label phys1p3principal2:
         mox "\"This behaviour is intolerable at Fort Street High School\""
         mox "\"You two are lucky you arent expelled\""
         jump eng1p1
+        
+label phys1p3principal3:
+    # said yes
+    mox "\"I hope that this is the end of the matter\""
+label phys1p3principal4:
+    # said no
+    mox "\"Show some respect young man\""
+    
 label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop

@@ -547,8 +547,7 @@ label eng1p1:
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
-jump eng1p1naughtycorner:
-    "You see that the naughty corner is already occupied by Pragash"
+jump eng1p1naughtycorner:ll
     pra "\"Oi, this is my spot\""
     pra "\"Ill rek you\""
     jump dead

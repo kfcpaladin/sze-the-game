@@ -63,10 +63,10 @@ label start:
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
     sze "I had always loved her, since she first graced my eyes in Year 7."
-    sze "Her name is Serena, a name which evokes images or clear, running brooks and endless fields of wildflower meadows"
+    sze "Her name is Serena, a name which evokes images of clear, running brooks and endless fields of wildflower meadows"
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-    sze "beside a rose garden in bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana's Intermezzo of Act 1"
-    sze "But for now, school"
+    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana's Intermezzo of Act 1"
+    sze "But for now, her name wrings out nought but sadness. And now, for school"
     
     scene bg school
     with fade
@@ -347,32 +347,20 @@ label phys1p2p2:
     play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
-    call phys1p2p4 from _phys1p2p2callphys1p2p4
-    if phys1p2p4t is True:
-        flu "\"CHAO, go stand in the naughty corner\""
-        cha "\"Fuck you, arthur\""
-        stop music
-        play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
-        flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
-        jump phys1p3p1
-    else:
-        flu "\"Both of you go to the principal's off- oh wait he ded nvrmnd.\""
-        jump dead
-    
+    flu "\"CHAO, go stand in the naughty corner\""
+    cha "\"Fuck you, arthur\""
+    stop music
+    play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
+    flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
+    jump phys1p3p1
 label phys1p2p3:
     "You do nothing"
     flu "\"Why are there paper balls in front of you\""
-    $ phys1p2p1t = False
-    $ phys1p2p3t = True
-    call phys1p2p4 from _phys1p2p3callphys1p2p4
-    if phys1p2p4t is True:
-        flu "\"CHAO, go stand in the naughty corner\""
-        cha "\"Fuck you, arthur\""
-        flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
-        jump phys1p3p1
-    else:
-        flu "\"Both of you go to the principal's office, NOW\""
-        jump phys1p3principal2
+    flu "\"CHAO, go stand in the naughty corner\""
+    cha "\"Fuck you, arthur\""
+    sze "\"Suck it\""
+    flu "\"Both of you go to the principal's office, NOW\""
+    jump phys1p3principal2
         
 label phys1p2p4:
     menu:
@@ -503,9 +491,14 @@ label eng1p1:
     wil "\"I love engineering, i think about constructing planes and bridges every day\""
     wil "\"Not a day goes without me thinking up a new bridge design\""
     sze "\"k.\""
+    sze "\"...when is Grant arriving?\""
+    wil "\"He's usually half a lesson late\""
     show grant normal
     gra "\"Good morning class. Lets do some engineering.\""
     gra "\"I'm glad all of you made it to class on time\""
+    wil "\"That's a new record sir\""
+    wil "\"You made it to class only 15min and 27s late\""
+    gra "\"Thank you all, I would like to dedicate this new record to my family and pies\""
     gra "\"Today we are going to learn about planes\""
     gra "\"What does a plane do?\""
     menu:
@@ -520,17 +513,22 @@ label eng1p1:
             jump eng1p1p1
         "\"It swims\"":
             sze "\"Everybody knows that planes swim on the water\""
-            wil "\"How did 9/11 happen you dumbass. Was it all an inside job?\""
+            wil "\"Ur a fckin idiot\""
+            wil "\"U deserve to die\""
+            play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+            sze "\"Actually hydroplanes do kinda swim\""
+            stop music
+            wil "\"Fuck you, I'm unfriending you\""
+            call wilfriendshiploss from _eng1p2wilfriendshiploss
             wil "\"I swear this engineering class is so dropkick\""
             wil "\"Im rank 1 but i feel im still only going to get a 99.90 ATAR\""
             wil "\"actual RIP ATAR\""
             call intelloss from _eng1p2intelloss
-            call wilfriendshiploss from _eng1p2wilfriendshiploss
             jump eng1p1p2
-        "\"..."\":
+        "\"...\"":
             dea "\"A plane is like a flat surface.\""
             "*collective facepalming from the class*"
-            gra "\"Wrong plane m8\""
+            gra "\"Wrong plane fool\""
             dea "\"Ummm\""
             dea "\"Its like a level of existence or something\""
             gra "\"still wrong\""
@@ -549,6 +547,11 @@ label eng1p1:
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
+jump eng1p1naughtycorner
+    "You see that the naughty corner is already occupied by Pragash"
+    pra "\"Oi, this is my spot\""
+    pra "\"Ill rek you\""
+    jump dead
         
 label dead:
     scene black

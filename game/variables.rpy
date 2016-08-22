@@ -51,6 +51,24 @@ label kokfriendshiploss:
     else:
         return
         
+label wilfriendshipgain:
+    $ wilfriendship += 1
+    "You gained a friendship point with Yang. It is currently at [wilfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return
+        
+label wilfriendshiploss:
+    $ wilfriendship -= 1
+    "You gained a friendship point with Yang. It is currently at [wilfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return
+        
 label chafriendshipgain:
     $ chafriendship += 1
     "You gained a friendship point with Chao. It is currently at [chafriendship]"
@@ -87,7 +105,7 @@ label prafriendshipdecrease:
     else:
         return
         
-label intelincrease:
+label intelgain:
     if inteltutorial is True:
         $ intelligence += 1
         "Your intelligence just increased. It is now at [intelligence]"
@@ -98,7 +116,7 @@ label intelincrease:
         $ inteltutorial = True
         return
         
-label inteldecrease:
+label intelloss:
     if inteltutorial is True:
         $ intelligence -= 1
         "Your intelligence just decreased. It is now at [intelligence]"
@@ -109,7 +127,7 @@ label inteldecrease:
         $ inteltutorial = True
         return
         
-label charmincrease:
+label charmgain:
     if charmtutorial is True:
         $ charm += 1
         "Your charm just increased. It is now at [charm]"
@@ -120,7 +138,7 @@ label charmincrease:
         $ charmtutorial = True
         return
         
-label charmdecrease:
+label charmloss:
     if charmtutorial is True:
         $ charm -= 1
         "Your charm just decreased. It is now at [charm]"

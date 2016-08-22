@@ -435,7 +435,7 @@ label phys1p3principal1:
         mox "\"I'll clear all your records of loading dockness if you rek Arthur and spend afternoon of re-education with me\""
         show rusali normal
         rus "\Soz man. Need to ace trials\"" with vpunch
-        sze "\"faarrrr\"
+        sze "\"faarrrr\""
         jump dead
     else:
         show moxham unhappy

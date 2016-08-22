@@ -59,7 +59,7 @@ label start:
     scene black
     # remove this these things to enable music later
     play music "Deemo - Paper Plane's Adventure - from YouTube.mp3" loop
-    "The Year is 2016"
+    "The Year is 2015"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
     sze "I had always loved her, since she first graced my eyes in Year 7."
@@ -131,7 +131,7 @@ label Rektrusali:
         with dissolve
         show rusali normal
         with dissolve
-        rus "\"Waah I was just asking how to ace trials\""
+        rus "\"Waah I was just asking her if she was part of HSPAS\""
         hide rusali normal
         with dissolve
         show willis normal
@@ -217,9 +217,9 @@ label phys1:
     show willis normal
     kok "\"We should be quiet, looks like class is starting soon.\""
     hide willis normal
-    flu "\"Since it's the first lesson, I think we showed start right in the midst of the topic\""
+    flu "\"Since it's the first lesson of year 11, I think we should start in the middle of a later topic\""
     flu "\"Can someone explain what a superconductor is?\""
-    flu "\"Anyone?\""
+    flu "\"I know it's a year 12 topic and you kids are in year 11, but does anyone know?\""
     menu:
         "\"Superconductivity is a phenomenon of exactly zero electrical resistance and expulsion of magnetic flux fields occurring in certain materials when cooled below a characteristic critical temperature.
          It was discovered by Dutch physicist Heike Kamerlingh Onnes on April 8, 1911 in Leiden.
@@ -242,6 +242,7 @@ label phys1answered:
         "Ok...":
             jump phys1answered_b
 label phys1answered_a:
+    sze "\"...\""
     flu "\"What? No response?\""
     sze "\"...Wot?\""
     flu "\"I bet you go tutoring\""
@@ -269,7 +270,10 @@ label phys1answered_a:
     cha "\"For teh watch\""
     jump dead
 label phys1answered_b:
+    sze "\"ok...\""
+    flu "\"Anything you want, anytime...\""
     kok "\"wow sugoi, you are a genius arthur\""
+    pra "\"Whoa Arthur, too good\""
     jump phys1part2
     
 label phys1nothing:
@@ -278,22 +282,24 @@ label phys1nothing:
     "..."
     "suddenly you see a hand being raised at the back of the classroom"
     flu "\"yes?\""
-    dea "\"Is it, like dude, when wires are really strong or something\""
+    dea "\"Dude, is it, like, um, when wires are good strong or some shit, man?\""
     "*collective facepalming from the class*"
     flu "\"Not exactly, I think we need to revise the basics\""
+    flu "\"Let's start by learning some stuff about light refraction\""
     jump phys1part2
     
 label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
-    sze "\"How has your holidays been?\""
+    sze "\"How have your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also i did 200 past papers for economics\""
     sze "Wow Pragash is so smart, actually kill myself."
     call prafriendshipincrease from _phys1talkedprafriendshipincrease
+    "you talk a bit more with Pragash before refocusing like electron beam from electron gun in cathode ray tube\""
     jump phys1part2
     
 label phys1part2:
     scene bg physclass
-    "Suddenly a paper ball flies through the air, and hits you in the face"
+    "Suddenly a paper ball flies through the air, and hits you in the face from behind..."
     cha "\"Oh, shit. Meant to hit rusali with it\""
     menu:
         "Throw it at rusali":
@@ -321,16 +327,20 @@ label phys1p2p1:
     if phys1p2p4t is True:
         stop music
         play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
+        sze "\"I'm just observing the parabolic motion of a projectile with a specific focus on the horizontal component of motion\""
+        sze "\"However, I had failed to take into account the effects of air resistance, which is outside of the syllabus\""
+        rus "\"I was helping Arthur\""
         flu "\"I'm very proud of both of you for physically applying your theoretical physics knowledge.\""
-        "Pragash and Willis gaze in awe at your remarkable talent at lying"
+        "Pragash and Willis gaze in awe at your remarkable talent in the art of lying"
         call intelincrease from _phys1p2p1callintelincrease
         show willis normal
         kok "\"Teach me senpai\""
         hide willis normal
         pra "\"I will forever be your pupil\""
+        cha "\"Niiiiice, two birds with one ball\""
         jump phys1p3p2
     else:
-        flu "\"Both of you go to the principal's office, NOW\""
+        flu "\"Both of you go to the principal's office, NOW!\""
         jump phys1p3principal1
         
 label phys1p2p2:

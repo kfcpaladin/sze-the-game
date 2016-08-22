@@ -287,7 +287,7 @@ label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
     sze "\"How has your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also i did 200 past papers for economics\""
-    sze "Wow, this guy is diligent"
+    sze "Wow Pragash is so smart, actually kill myself."
     call prafriendshipincrease from _phys1talkedprafriendshipincrease
     jump phys1part2
     
@@ -417,7 +417,7 @@ label phys1p3principal1:
     "He starts muttering in Indonesian"
     rus "\"Better tell my parents otherwise I'll get rekt\""
     sze "\"If you don't tell your parents, wouldn't you get less rekt?\""
-    rus "\"Stop roasting me\""
+    rus "\"Waow, stop roasting me\""
     "It seems that Rusali does not appreciate this comment of yours"
     call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
     scene bg principaloffice
@@ -484,8 +484,8 @@ label eng1p1:
     scene bg workshop
     with dissolve
     play music "Edith Piaf - Non, Je ne regrette rien - from YouTube.mp3" loop
-    wil "\"Ayy, sup arthur\""
-    wil "\"U keen for engineering m8\""
+    wil "\"Heil hitler\""
+    wil "\"Are you ready for engineering?\""
     sze "\"uhh, not really\""
     wil "\"I love engineering, i think about constructing planes and bridges every day\""
     wil "\"Not a day goes without me thinking up a new bridge design\""

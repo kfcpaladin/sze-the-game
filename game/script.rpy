@@ -347,7 +347,7 @@ label phys1p2p2:
     play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
-    call phys1p2p4 from _phys1p2p3callphys1p2p4
+    call phys1p2p4 from _phys1p2p2callphys1p2p4
     if phys1p2p4t is True:
         flu "\"CHAO, go stand in the naughty corner\""
         cha "\"Fuck you, arthur\""
@@ -357,7 +357,7 @@ label phys1p2p2:
         jump phys1p3p1
     else:
         flu "\"Both of you go to the principal's off- oh wait he ded nvrmnd.\""
-    jump dead
+        jump dead
     
 label phys1p2p3:
     "You do nothing"
@@ -373,6 +373,7 @@ label phys1p2p3:
     else:
         flu "\"Both of you go to the principal's office, NOW\""
         jump phys1p3principal2
+        
 label phys1p2p4:
     menu:
         "Use your physics knowledge to make a believable lie" if intelligence > 0:

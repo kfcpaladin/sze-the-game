@@ -87,7 +87,7 @@ label chafriendshiploss:
     else:
         return
         
-label prafriendshipincrease:
+label prafriendshipgain:
     $ prafriendship += 1
     "You gained a friendship point with Pragash. It is currently at [prafriendship]"
     if friendshiptutorial is False:
@@ -96,7 +96,7 @@ label prafriendshipincrease:
     else:
         return
     
-label prafriendshipdecrease:
+label prafriendshiploss:
     $ prafriendship -= 1
     "You lost a friendship point with Pragash. It is currently at [prafriendship]"
     if friendshiptutorial is False:

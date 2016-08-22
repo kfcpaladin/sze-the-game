@@ -13,7 +13,7 @@ label overallmoxcountergain:
     $ moxcounter1 += 1
     return
 label overallmoxcounterloss:
-    $ moxcounter 1 -= 1
+    $ moxcounter1 -= 1
     return
 label rusfriendshiploss:
     $ rusfriendship -= 1

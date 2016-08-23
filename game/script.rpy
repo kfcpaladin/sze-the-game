@@ -475,10 +475,29 @@ label phys1p3principal3:
     # said yes
     mox "\"I hope that this is the end of the matter\""
     mox "\"Go to your next period, here's a note excusing your lateness.\""
+    mox "\"Now scram\""
+    hide moxham unhappy
+    show rusali
+    rus "\"WAOW, this is my first detention.\""
+    rus "\"How will i ever ace trials with a detention\""
+    rus "\"I can no longer spend my afternoon doing tutoring and writing textbooks\""
+    call rusfriendshiploss from _phys1p3principal3rusfriendshiploss
+    jump eng1p1
     
 label phys1p3principal4:
     # said no
     mox "\"Show some respect young man\""
+    mox "\"For that i am upgrading your punishment to 2 afterschool detentions\""
+    mox "\"You are literally 1 centimetre from getting expelled\""
+    mox "\"And DCR, i had expected better of a student wanting ace trials\""
+    call dailymoxcounter from _phys1p3principal4dailymoxcounter
+    hide moxham unhappy
+    show rusali
+    rus "\"FUARR, my trials can no longer be aced\""
+    rus "\"I'll have to become a drop kick, or worse, go to the loading dock\""
+    sze "\"Calm down trials are still 1.5 years away\""
+    rus "\"Why do i always get roasted\""
+    jump eng1p1
     
 label eng1p1:
     "I should probably be heading to the next period then."

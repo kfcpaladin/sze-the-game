@@ -513,6 +513,10 @@ label eng1p1:
             jump eng1p1p1
         "\"It swims\"":
             sze "\"Everybody knows that planes swim on the water\""
+            wil "\"WTF!!!\""
+            wil "\"How did 9/11 happen then?\""
+            wil "\"Was it all an inside job?\""
+            sze "\"The plane swam on the water, and then hit the towers\""
             wil "\"Ur a fckin idiot\""
             wil "\"U deserve to die\""
             play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"

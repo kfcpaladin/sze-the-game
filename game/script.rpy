@@ -556,6 +556,25 @@ label eng1p1naughtycorner:
     pra "\"Ill rek you\""
     jump dead
         
+label eng1p1p1:
+    # answer correctly, All dat foreshadowing
+    wil "\"You would make a leader as part of my fourth reich\""
+    wil "\"Together we can purge the world of jews and non-Band 6 students\""
+    sze "\"lol, what a joke\""
+    
+label eng1p1p2:
+    # answers wrong
+    wil "\"Unfortunate, i had thought you to be smarter.\""
+    wil "\"Under my Fourth Reich's eugenics program you shall be one of the first to be removed\""
+    
+label eng1p1p3:
+    #doesnt talk    
+    wil "\"Dean hou is a dissapointment\""
+    wil "\"Dean is a mess\""
+    wil "\"When achieve he Fourth Reich, dean shall be processed under the eugenics program\""
+    wil "\"We cannot tolerate any non Band 6 students\""
+
+
 label dead:
     scene black
     sze "I dead"

@@ -1,7 +1,7 @@
 
 label tutorialfriendship:
     # edit this stuff
-    "Friendship is a measure of how close you are with someone"
+    "Friendship is a measure of how close you are with someone, although if you are reading this, ur probs a faggot to them."
     $ friendshiptutorial = True
     return
 
@@ -17,7 +17,7 @@ label overallmoxcounterloss:
     return
 label rusfriendshiploss:
     $ rusfriendship -= 1
-    "You lost a friendship point with Rusali. It is currently at [rusfriendship]"
+    "You dogged Rusali, thus your friendship level with him is currently at [rusfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -26,7 +26,7 @@ label rusfriendshiploss:
         
 label rusfriendshipgain:
     $ rusfriendship += 1
-    "You gained a friendship point with Rusali. It is currently at [rusfriendship]"
+    "You're Rusali's best friend. Not really, you have to be a girl but your friendship with him is currently at [rusfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -35,7 +35,8 @@ label rusfriendshipgain:
         
 label kokfriendshipgain:
     $ kokfriendship += 1
-    "You gained a friendship point with Willis. It is currently at [kokfriendship]"
+    "You have strategically gained friendship with Willis, hoping that he will divulge secrets to slaying Serena.
+    It is currently at [kokfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -44,7 +45,7 @@ label kokfriendshipgain:
         
 label kokfriendshiploss:
     $ kokfriendship -= 1
-    "You gained a friendship point with Willis. It is currently at [kokfriendship]"
+    "Fuck Willis. \"Friendship\" is currently at [kokfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -53,7 +54,7 @@ label kokfriendshiploss:
         
 label wilfriendshipgain:
     $ wilfriendship += 1
-    "You gained a friendship point with Yang. It is currently at [wilfriendship]"
+    "You have further proved to Yang that you belong in his 4th Reich, friendship is currently at [wilfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -62,7 +63,7 @@ label wilfriendshipgain:
         
 label wilfriendshiploss:
     $ wilfriendship -= 1
-    "You gained a friendship point with Yang. It is currently at [wilfriendship]"
+    "Ur a fcktard and will, at this rate, fail Yang's eugenics program. Friendship with him is currently at [wilfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -71,7 +72,7 @@ label wilfriendshiploss:
         
 label chafriendshipgain:
     $ chafriendship += 1
-    "You gained a friendship point with Chao. It is currently at [chafriendship]"
+    "If you were a LG, you would be one of Chao's gfs. Friendship with Chao is currently at [chafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -80,7 +81,7 @@ label chafriendshipgain:
         
 label chafriendshiploss:
     $ chafriendship -= 1
-    "You lost a friendship point with Chao. It is currently at [chafriendship]"
+    "You almost made Chao raep you, friendship with Chao is currently at [chafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -89,7 +90,7 @@ label chafriendshiploss:
         
 label prafriendshipgain:
     $ prafriendship += 1
-    "You gained a friendship point with Pragash. It is currently at [prafriendship]"
+    "If you continue this way, maybe Dynamite Black might mention you in a future song, as friendship with Pragash is currently at [prafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -98,7 +99,7 @@ label prafriendshipgain:
     
 label prafriendshiploss:
     $ prafriendship -= 1
-    "You lost a friendship point with Pragash. It is currently at [prafriendship]"
+    "You weren't very cricket to Pragash, reducing your friendship with him to [prafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -108,7 +109,8 @@ label prafriendshiploss:
 label intelgain:
     if inteltutorial is True:
         $ intelligence += 1
-        "Your intelligence just increased. It is now at [intelligence]"
+       "Congratulations"
+       "You just got smarter, maybe you'll be able to impress Serena with your mental capacity and intelligence, now at [intelligence]
         return
     else:
         $ intelligence += 1
@@ -119,7 +121,8 @@ label intelgain:
 label intelloss:
     if inteltutorial is True:
         $ intelligence -= 1
-        "Your intelligence just decreased. It is now at [intelligence]"
+        "Congratulations"
+        "U just got more retarded, your intelligence, or lack thereof, is now at [intelligence]"
         return
     else:
         "Your intelligence just decreased. Intelligence is a measure of how smart you are. Currently you are a retard, however this may be changed through diligent studying and participating in class."
@@ -130,7 +133,7 @@ label intelloss:
 label charmgain:
     if charmtutorial is True:
         $ charm += 1
-        "Your charm just increased. It is now at [charm]"
+        "One day, you'll be ultimate slayer. Your charm is now at [charm]"
         return
     else:
         $ charm += 1
@@ -141,10 +144,29 @@ label charmgain:
 label charmloss:
     if charmtutorial is True:
         $ charm -= 1
-        "Your charm just decreased. It is now at [charm]"
+        "U might actually be gay, cos your charm is now at [charm]"
         return
     else:
         "Your Charm just decreased. Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life."
         $ charm -= 1
         $ charmtutorial = True
         return
+label fortiangain:
+    if forttutorial is True:
+        $ fort += 1
+        "You became more PC, socially just and Fortian, maybe one day you will be proper Nationalist Socialist and march in protests as your Fortianness is at [fort]"
+        return
+    else:
+        $ fort += 1
+        "Your Fortianness has just increased. Fortianness is a measure of how Fortian you are and can be improved by being more hippy and protester. Currently, you aren't very Fortian."
+        $ forttutorial = True
+label fortianloss:
+    if forttutorial is True:
+        $ fort -= 1
+        "You are less Michael Kirby and are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations as you allowed you Fortianness to drop to [fort]"
+        return
+    else:
+        $ fort -= 1
+        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more hippy and protester. Currently, you aren't very Fortian."
+        return
+    

@@ -10,6 +10,7 @@ image bg principaloffice = "principaloffice"
 image bg workshop = "Workshop.jpg"
 image bg hall = "hall"
 image bg hallentrance = "CZ2Yss_UAAAPRqz"
+image bg schoolfront = "91_big.jpg"
 # Declare characters used by this game.
 define sze = Character('Sze', color="#FCFCFC", image="arthur")
 define rin = Character('Rina', color="#007408", image="serena")
@@ -67,11 +68,13 @@ label start:
     sze "Her name is Serena, a name which evokes images of clear, running brooks and endless fields of wildflower meadows"
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana's Intermezzo of Act 1"
-    sze "But for now, her name wrings out nought but sadness. And now, for school"
+    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school"
     
     scene bg school
     with fade
-    "I arrived at school 3 hours early to increase my diligence"
+    sze "I arrived at school 3 hours early to show my dedication to the system"
+    sze "One day she will notice"
+    #btw, the day is probably wednesday or tuesday because first day back
     show moxham happy
     with dissolve
     mox "\"Wow, you are a good Fortian\""
@@ -80,15 +83,32 @@ label start:
     sze "\"Why is she already here? Maybe she was preparing her dungeon...\""
     "3 hours later"
     sze "\"Need to go assembly\""
+    scene bg hallentrance
+    with fade
+    "Chao is blocking me from szeing anyone"
+    scene bg hall
+    with fade
+    "Gaudeamus igitur..."
     mox "\"I would like to acknowledge the traditional owners of the land...\""
     "30 minutes later"
-    mox "\"Michael Kirby blahblahblah\""
-    #Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla.
-
+    mox "\"Michael Kirby is great, let us worship Michael Kirby\""
+    "40 minutes later"
+    mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
+    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.'
+        There is more to high school than ATAR\""
+    "20 minutes later"
+    sze "..."
+    sze "..."
+    "Everyone is leaving, better wake up"
+    "Got a new timetable"
+    "I have Physics (Flujtsma), Engineering (Grant), English (Schlam),
+    Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
+    "Assembly was so long, we skipped recess"
+    scene bg school
+    with fade
     sze "My life feels empty without her, like a photoelectric cell without UV rays"
     sze "I watch her from afar, but I doubt she notices arthur"
-    sze "I see her, walking towards the library"
+    sze "I see her, walking towards the classroom"
     menu stealwillisgirl:
         "Go talk to her":
             $ stealwillisgirl=True
@@ -274,9 +294,11 @@ label phys1answered_a:
     flu "\"In fact I bet you are doing secret tutor-homework right now\"" with hpunch
     sze "\"Wot, Ms-\""
     flu "\"Everyone, kill the heretic\"" with vpunch
+    show pragash normal
     pra "\"Sorry Arthur\""
     pra "\"For the watch\"" with hpunch
     pra "\"Ow my hand\""
+    hide pragash normal
     show willis normal
     kok "\"For the watch\"" with vpunch
     hide willis normal
@@ -287,7 +309,7 @@ label phys1answered_a:
     sze "\"hunh...\""
     sze "\"...urg...\""
     cha "\"...\""
-    sze "\"...chao..\""
+    sze "\"...Chao..\""
     cha "\"...\"" with vpunch
     cha "\"For teh watch\""
     jump dead
@@ -610,7 +632,7 @@ label eng1p1p2:
     
 label eng1p1p3:
     #doesnt talk    
-    wil "\"Dean hou is a dissapointment\""
+    wil "\"Dean Hou is a dissapointment\""
     wil "\"Dean is a mess\""
     wil "\"When achieve he Fourth Reich, dean shall be processed under the eugenics program\""
     wil "\"We cannot tolerate any non Band 6 students\""

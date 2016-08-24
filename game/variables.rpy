@@ -109,8 +109,8 @@ label prafriendshiploss:
 label intelgain:
     if inteltutorial is True:
         $ intelligence += 1
-       "Congratulations"
-       "You just got smarter, maybe you'll be able to impress Serena with your mental capacity and intelligence, now at [intelligence]
+        "Congratulations"
+        "You just got smarter, maybe you'll be able to impress Serena with your mental capacity and intelligence, now at [intelligence]"
         return
     else:
         $ intelligence += 1

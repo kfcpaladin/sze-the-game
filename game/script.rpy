@@ -45,8 +45,10 @@ label start:
     $ strength = 0
     $ inteltutorial = False
     $ thirst = 0
+    $ fort = 0
     $ friendshiptutorial = False
     $ charmtutorial = False
+    $ fortutorial = False
     $ rinfriendship = 0
     $ kokfriendship = 0
     $ flufriendship = 0
@@ -80,11 +82,10 @@ label start:
     mox "\"Wow, you are a good Fortian\""
     mox "\"I don't know who you are but, you are like next Michael Kirby\""
     hide moxham happy
-    sze "\"Why is she already here? Maybe she was preparing her dungeon...\""
+    call fortiangain
     "3 hours later"
     "Got a new timetable"
-    "I have Physics (Flujtsma), Engineering (Grant), English (Schlam),
-    Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
+    "I have Physics (Flujtsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
     scene bg school
     with fade
     sze "My life feels empty without her, like a photoelectric cell without UV rays"

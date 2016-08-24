@@ -82,28 +82,9 @@ label start:
     hide moxham happy
     sze "\"Why is she already here? Maybe she was preparing her dungeon...\""
     "3 hours later"
-    sze "\"Need to go assembly\""
-    scene bg hallentrance
-    with fade
-    "Chao is blocking me from szeing anyone"
-    scene bg hall
-    with fade
-    "Gaudeamus igitur..."
-    mox "\"I would like to acknowledge the traditional owners of the land...\""
-    "30 minutes later"
-    mox "\"Michael Kirby is great, let us worship Michael Kirby\""
-    "40 minutes later"
-    mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
-    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.'
-        There is more to high school than ATAR\""
-    "20 minutes later"
-    sze "..."
-    sze "..."
-    "Everyone is leaving, better wake up"
     "Got a new timetable"
     "I have Physics (Flujtsma), Engineering (Grant), English (Schlam),
     Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
-    "Assembly was so long, we skipped recess"
     scene bg school
     with fade
     sze "My life feels empty without her, like a photoelectric cell without UV rays"
@@ -637,7 +618,24 @@ label eng1p1p3:
     wil "\"When achieve he Fourth Reich, dean shall be processed under the eugenics program\""
     wil "\"We cannot tolerate any non Band 6 students\""
 
-
+# sze "\"Need to go assembly\""
+#    scene bg hallentrance
+#    with fade
+#   "Chao is blocking me from szeing anyone"
+#    scene bg hall
+#    with fade
+#    "Gaudeamus igitur..."
+#    mox "\"I would like to acknowledge the traditional owners of the land...\""
+#    "30 minutes later"
+#    mox "\"Michael Kirby is great, let us worship Michael Kirby\""
+#    "40 minutes later"
+#    mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
+#    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.'
+#        There is more to high school than ATAR\""
+#    "20 minutes later"
+#    sze "..."
+#    sze "..."
+#    "Everyone is leaving, better wake up"
 label dead:
     scene black
     sze "I dead"

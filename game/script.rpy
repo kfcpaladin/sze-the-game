@@ -33,6 +33,7 @@ image moxham happy = "moxhamhappy"
 image moxham unhappy = "moxhamunhappy"
 image side moxham = "moxhamside"
 image grant normal = "grant"
+image pragash normal = "pragash2.png"
 # The game starts here.
 
 label start:
@@ -48,10 +49,10 @@ label start:
     $ rinfriendship = 0
     $ kokfriendship = 0
     $ flufriendship = 0
-    $ rusfriendship = 0
+    $ rusfriendship = 1
     $ prafriendship = 0
     $ deafriendship = 0
-    $ wilfriendship = 0
+    $ wilfriendship = 4
     $ chafriendship = 0
     $ grafriendship = 0
     $ moxfriendship = 0
@@ -70,6 +71,21 @@ label start:
     
     scene bg school
     with fade
+    "I arrived at school 3 hours early to increase my diligence"
+    show moxham happy
+    with dissolve
+    mox "\"Wow, you are a good Fortian\""
+    mox "\"I don't know who you are but, you are like next Michael Kirby\""
+    hide moxham happy
+    sze "\"Why is she already here? Maybe she was preparing her dungeon...\""
+    "3 hours later"
+    sze "\"Need to go assembly\""
+    mox "\"I would like to acknowledge the traditional owners of the land...\""
+    "30 minutes later"
+    mox "\"Michael Kirby blahblahblah\""
+    #Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla.
+
     sze "My life feels empty without her, like a photoelectric cell without UV rays"
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the library"
@@ -217,7 +233,13 @@ label phys1:
     show willis normal
     kok "\"We should be quiet, looks like class is starting soon.\""
     hide willis normal
-    flu "\"Since it's the first lesson of year 11, I think we should start in the middle of a later topic\""
+    flu "\"Take your syllabuses out\""
+    dea "\"We have not received syllables yet\""
+    flu "\"Syllabuses\""
+    dea "\"Ok, man, if you say so\""
+    flu "\"Oh crap, I didn't give you syllabuses yet\""
+    flu "\"Ok then, let's do something else\""
+    flu "\"Since it's the first lesson of year 11, I think we should start in the middle of a currently unrelated topic\""
     flu "\"Can someone explain what a superconductor is?\""
     flu "\"I know it's a year 12 topic and you kids are in year 11, but does anyone know?\""
     menu:

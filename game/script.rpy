@@ -19,7 +19,7 @@ define flu = Character('FLUITSMA', color="#FFFFFF", image="fluitsma")
 define rus = Character('Rusali', color="#FFFFFF", image="rusali")
 define pra = Character('Pragash', color="#FFFFFF", image="pragash")
 define dea = Character('Dean', color="#FFFFFF", image="dean")
-define wil = Character('Will Yang', color="#FFFFFF", image="will")
+define wil = Character('Will Yang', color="#FFFFFF", image="yang")
 define cha = Character('Chao', color="#FFFFFF", image="chao")
 define mox = Character('MOXHAM', color="#FFFFFF", image="moxham")
 define gra = Character('GRANT', color="#FFFFFF", image="grant")
@@ -34,7 +34,9 @@ image moxham happy = "moxhamhappy"
 image moxham unhappy = "moxhamunhappy"
 image side moxham = "moxhamside"
 image grant normal = "grant"
-image pragash normal = "pragash2.png"
+image pragash normal = "pragashnormal.png"
+image pragash shocked = "pragash2.png"
+image yang normal = "yang1.png"
 # The game starts here.
 
 label start:
@@ -316,11 +318,13 @@ label phys1nothing:
     
 label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
+    show pragash normal
     sze "\"How have your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also I did 200 past papers for economics\""
     sze "Wow Pragash is so smart, actually kill myself."
     call prafriendshipgain from _phys1talkedprafriendshipgain
     "you talk a bit more with Pragash before refocusing like electron beam from electron gun in cathode ray tube\""
+    hide pragash normal
     jump phys1part2
     
 label phys1part2:
@@ -532,6 +536,7 @@ label eng1p1:
     scene bg workshop
     with dissolve
     play music "Edith Piaf - Non, Je ne regrette rien - from YouTube.mp3" loop
+    show yang normal
     wil "\"Heil hitler\""
     wil "\"Are you ready for engineering?\""
     sze "\"uhh, not really\""
@@ -540,11 +545,14 @@ label eng1p1:
     sze "\"k.\""
     sze "\"...when is Grant arriving?\""
     wil "\"He's usually half a lesson late\""
+    hide yang normal
     show grant normal
     gra "\"Good morning class. Lets do some engineering.\""
     gra "\"I'm glad all of you made it to class on time\""
+    show yang normal
     wil "\"That's a new record sir\""
     wil "\"You made it to class only 15min and 27s late\""
+    hide yang normal
     gra "\"Thank you all, I would like to dedicate this new record to my family and pies\""
     gra "\"Today we are going to learn about planes\""
     gra "\"What does a plane do?\""
@@ -554,12 +562,17 @@ label eng1p1:
             sze "\"Wings can make lift because of air\""
             gra "\"Excellent answer, mr sze\""
             gra "\"Mingle around children, let us achieve band 6's together\""
+            hide grant normal
+            show yang normal
             wil "\"Nice arthur, so smart, rank double 1\""
+            hide yang normal
             call intelgain from _eng1p2intelgain
             call wilfriendshipgain from _eng1p2wilfriendshipgain
             jump eng1p1p1
         "\"It swims\"":
             sze "\"Everybody knows that planes swim on the water\""
+            hide grant normal
+            show yang normal
             wil "\"WTF!!!\""
             wil "\"How did 9/11 happen then?\""
             wil "\"Was it all an inside job?\""
@@ -574,6 +587,7 @@ label eng1p1:
             wil "\"I swear this engineering class is so dropkick\""
             wil "\"Im rank 1 but i feel im still only going to get a 99.90 ATAR\""
             wil "\"actual RIP ATAR\""
+            hide yang normal
             call intelloss from _eng1p2intelloss
             jump eng1p1p2
         "\"...\"":
@@ -599,23 +613,28 @@ label eng1p1:
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
 label eng1p1naughtycorner:
+    hide grant normal
+    show pragash normal
     pra "\"Oi, this is my spot\""
     pra "\"Ill rek you\""
     jump dead
         
 label eng1p1p1:
     # answer correctly, All dat foreshadowing
+    show yang normal
     wil "\"You would make a leader as part of my fourth reich\""
     wil "\"Together we can purge the world of jews and non-Band 6 students\""
     sze "\"lol, what a joke\""
     
 label eng1p1p2:
     # answers wrong
+    show yang normal
     wil "\"Unfortunate, i had thought you to be smarter.\""
     wil "\"Under my Fourth Reich's eugenics program you shall be one of the first to be removed\""
     
 label eng1p1p3:
-    #doesnt talk    
+    #doesnt talk
+    show yang normal
     wil "\"Dean Hou is a dissapointment\""
     wil "\"Dean is a mess\""
     wil "\"When achieve he Fourth Reich, dean shall be processed under the eugenics program\""

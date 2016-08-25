@@ -637,6 +637,7 @@ label eng1p1p3:
 #    sze "..."
 #    sze "..."
 #    "Everyone is leaving, better wake up"
+#    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
 label dead:
     scene black
     sze "I dead"

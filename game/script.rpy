@@ -69,7 +69,7 @@ label start:
     sze "I had always loved her, since she first graced my eyes in Year 7."
     sze "Her name is Serena, a name which evokes images of clear, running brooks and endless fields of wildflower meadows"
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana's Intermezzo of Act 1"
+    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school"
     
     scene bg school
@@ -311,13 +311,13 @@ label phys1nothing:
     dea "\"Dude, is it, like, um, when wires are good strong or some shit, man?\""
     "*collective facepalming from the class*"
     flu "\"Not exactly, I think we need to revise the basics\""
-    flu "\"Let's start by learning some stuff about light refraction\""
+    flu "\"Let's start by learning some stuff about the refraction of light\""
     jump phys1part2
     
 label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
     sze "\"How have your holidays been?\""
-    pra "\"Pretty good. Been playing cricket daily all summer. Also i did 200 past papers for economics\""
+    pra "\"Pretty good. Been playing cricket daily all summer. Also I did 200 past papers for economics\""
     sze "Wow Pragash is so smart, actually kill myself."
     call prafriendshipgain from _phys1talkedprafriendshipgain
     "you talk a bit more with Pragash before refocusing like electron beam from electron gun in cathode ray tube\""
@@ -446,7 +446,7 @@ label phys1p3principal1:
     "It seems that Rusali does not appreciate this comment of yours"
     call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
     scene bg principaloffice
-    call dailymoxcounter from _phys1p3principal1calldailymoxcounter
+    call dailymoxcounter from _phys1p3principal1acalldailymoxcounter
     if moxcounter2 is > 1:
         mox "\"You two again?\""
         play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
@@ -464,6 +464,7 @@ label phys1p3principal1:
         jump dead
     else:
         show moxham unhappy
+        call dailymoxcounter from _phys1p3principal1bcalldailymoxcounter
         mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
         mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
         mox "\"Do you understand?\""
@@ -480,7 +481,7 @@ label phys1p3principal2:
     cha "\"You just do\""
     call charmgain from _phys1p3principal2callcharmgain
     scene bg principaloffice
-    call dailymoxcounter from _phys1p3principal2dailymoxcounter
+    call dailymoxcounter from _phys1p3principal2adailymoxcounter
     if moxcounter2 > 1:
         show moxham unhappy
         mox "\"You again?\""
@@ -491,6 +492,7 @@ label phys1p3principal2:
         jump dead
     else:
         show moxham unhappy
+        call dailymoxcounter from _phys1p3principal2bdailymoxcounter
         mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
         mox "\"Especially you Joshua, you have a history of being drop kick\""
         mox "\"This behaviour is intolerable at Fort Street High School\""

@@ -144,7 +144,7 @@ label charmgain:
 label charmloss:
     if charmtutorial is True:
         $ charm -= 1
-        "U might actually be gay, cos your charm is now at [charm]"
+        "U make Indian sewage look better than you cos your charm is now at [charm]"
         return
     else:
         "Your Charm just decreased. Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life."
@@ -158,15 +158,14 @@ label fortiangain:
         return
     else:
         $ fort += 1
-        "Your Fortianness has just increased. Fortianness is a measure of how Fortian you are and can be improved by being more hippy and protester. Currently, you aren't very Fortian."
+        "Your Fortianness has just increased. Fortianness is how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
         $ forttutorial = True
 label fortianloss:
     if forttutorial is True:
         $ fort -= 1
-        "You are less Michael Kirby and are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations as you allowed you Fortianness to drop to [fort]"
+        "You are less Michael Kirby and are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations as you allowed your Fortianness to drop to [fort]"
         return
     else:
         $ fort -= 1
-        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more hippy and protester. Currently, you aren't very Fortian."
+        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
         return
-    

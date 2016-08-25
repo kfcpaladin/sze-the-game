@@ -73,7 +73,9 @@ label start:
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school"
+    jump schoolday1
     
+label schoolday1:
     scene bg school
     with fade
     sze "I arrived at school 3 hours early to show my dedication to the system"
@@ -84,7 +86,7 @@ label start:
     mox "\"Wow, you are a good Fortian\""
     mox "\"I don't know who you are but, you are like next Michael Kirby\""
     hide moxham happy
-    call fortiangain
+    call fortiangain from _schoolday1fortiangain
     "3 hours later"
     "Got a new timetable"
     "I have Physics (Flujtsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"

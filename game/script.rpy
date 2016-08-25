@@ -685,7 +685,7 @@ label yangrantp1_2:
     wil "\"We wouldn't want to jig and experience \"refined interrogation techniques\" now would we?\""
     call fortiangain from _yangrantp1_2fortiangain
 
-Label yangrantp1_3:
+label jump yangrantp1_3p:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
     call wilfriendshipgain from _yangrantp1_3wilfriendshipgain

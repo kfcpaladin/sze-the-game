@@ -50,14 +50,14 @@ label start:
     $ fort = 0
     $ friendshiptutorial = False
     $ charmtutorial = False
-    $ fortutorial = False
+    $ forttutorial = False
     $ rinfriendship = 0
     $ kokfriendship = 0
     $ flufriendship = 0
-    $ rusfriendship = 1
+    $ rusfriendship = 3
     $ prafriendship = 0
     $ deafriendship = 0
-    $ wilfriendship = 4
+    $ wilfriendship = 40
     $ chafriendship = 0
     $ grafriendship = 0
     $ moxfriendship = 0

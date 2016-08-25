@@ -448,7 +448,7 @@ label phys1p3principal1:
     sze "\"If you don't tell your parents, wouldn't you get less rekt?\""
     rus "\"Waow, stop roasting me\""
     "It seems that Rusali does not appreciate this comment of yours"
-    call rusfriendshiploss from _phys1p3principal1callrusfriendshiploss
+    call rusfriendshiploss from _phys1p3principal1acallrusfriendshiploss
     scene bg principaloffice
     call dailymoxcounter from _phys1p3principal1acalldailymoxcounter
     if moxcounter2 is > 1:
@@ -553,7 +553,7 @@ label eng1p1:
     wil "\"That's a new record sir\""
     wil "\"You made it to class only 15min and 27s late\""
     hide yang normal
-    gra "\"Thank you all, I would like to dedicate this new record to my family and pies\""
+    gra "\"Thank you all, I would like to dedicate this new record to my friends and family for their continued support and their pies\""
     gra "\"Today we are going to learn about planes\""
     gra "\"What does a plane do?\""
     menu:
@@ -615,8 +615,18 @@ label eng1p1:
 label eng1p1naughtycorner:
     hide grant normal
     show pragash normal
+    pra "\"...\""
+    play music "rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.mp3"
+        #Can this be done in 20 seconds?
+    sze "\"Uh, Grant put me here\""
     pra "\"Oi, this is my spot\""
-    pra "\"Ill rek you\""
+    pra "\"Do you have a puff\""
+    sze "\"You what?!?!?!?!?!?!?!?!?!?!?!\""
+    pra "\"Do you have a ciggy\""
+    sze "\"You smoke?!?!?!?!?!?!?!?!?!?!?!\""
+    pra "\"Hey yall got a cigarette?\""
+    sze "\"Um, I don't smoke\""
+    pra "\"Fuck off\""
     jump dead
         
 label eng1p1p1:
@@ -625,12 +635,22 @@ label eng1p1p1:
     wil "\"You would make a leader as part of my fourth reich\""
     wil "\"Together we can purge the world of jews and non-Band 6 students\""
     sze "\"lol, what a joke\""
+    wil "\"Yes...indeed what a joke\""
+    sze "\"k.....\""
     
 label eng1p1p2:
     # answers wrong
     show yang normal
     wil "\"Unfortunate, i had thought you to be smarter.\""
     wil "\"Under my Fourth Reich's eugenics program you shall be one of the first to be removed\""
+    sze "\"You're joking right?\""
+    wil "\"Only one way to find out\""
+    wil "\"MWAHAHAHAHAHAHAHAHAHAHHA!!\""
+    sze "\"You had two consecutive Hs in your laugh, therefore that was just a joke\""
+    wil "\"Ur a faggot; if I already unfriended you, I'll unfriend you again\""
+    call wilfriendshiploss from _eng1p1p2wilfriendshiploss
+    sze "\"You are weird\""
+    sze "\"I think we have assembly next\""
     
 label eng1p1p3:
     #doesnt talk
@@ -639,7 +659,38 @@ label eng1p1p3:
     wil "\"Dean is a mess\""
     wil "\"When achieve he Fourth Reich, dean shall be processed under the eugenics program\""
     wil "\"We cannot tolerate any non Band 6 students\""
+    menu yangrant1:
+        "Heil the Fourth Reich!":
+            jump yangrantp1_1
+        "Heil Moxham!":
+            jump yangrantp1_2
+        "Indeed"
+            jump yangrantp1_3
 
+label yangrantp1_1:
+    sze "\"Heil the Fourth Reich!\""
+    "Yang nods dissmissively"
+    wil "\"I need not hear it now: in the future all humanity will be saying it\""
+    sze "\"Ok friend\""
+    wil "\"There is a fine line between friend and tool...\""
+    wil "\"Which are you?\""
+    sze "\"...\""
+    wil "\"Just joking, assembly's about to start\""
+    
+label yangrantp1_2:
+    sze "\"Heil Moxham!\""
+    wil "The leader of my Sturmabeteilung is deserving of praise, especially in regards to the art of special methods of questioning\""     
+    sze "\"Wot\""
+    wil "\"Ignore that, we have an assembly to attend\""
+    wil "\"We wouldn't want to jig and experience \"refined interrogation techniques\" now would we?\""
+    call fortiangain from _yangrantp1_2fortiangain
+
+Label yangrantp1_3:
+    sze "\"Indeed\""
+    wil "\"I am glad to see that we are in agreement\""
+    call wilfriendshipgain from _yangrantp1_3wilfriendshipgain
+    wil "\"Now for assembly time\""
+    
 # sze "\"Need to go assembly\""
 #    scene bg hallentrance
 #    with fade

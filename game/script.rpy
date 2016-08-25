@@ -664,7 +664,7 @@ label eng1p1p3:
             jump yangrantp1_1
         "Heil Moxham!":
             jump yangrantp1_2
-        "Indeed"
+        "Indeed":
             jump yangrantp1_3
 
 label yangrantp1_1:

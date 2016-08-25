@@ -151,6 +151,7 @@ label charmloss:
         $ charm -= 1
         $ charmtutorial = True
         return
+    
 label fortiangain:
     if forttutorial is True:
         $ fort += 1
@@ -160,6 +161,7 @@ label fortiangain:
         $ fort += 1
         "Your Fortianness has just increased. Fortianness is how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
         $ forttutorial = True
+        
 label fortianloss:
     if forttutorial is True:
         $ fort -= 1

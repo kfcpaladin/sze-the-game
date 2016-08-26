@@ -639,6 +639,7 @@ label eng1p1p1:
     sze "\"lol, what a joke\""
     wil "\"Yes...indeed what a joke\""
     sze "\"k.....\""
+    jump dead
     
 label eng1p1p2:
     # answers wrong
@@ -653,6 +654,7 @@ label eng1p1p2:
     call wilfriendshiploss from _eng1p1p2wilfriendshiploss
     sze "\"You are weird\""
     sze "\"I think we have assembly next\""
+    jump dead
     
 label eng1p1p3:
     #doesnt talk
@@ -678,6 +680,7 @@ label yangrantp1_1:
     wil "\"Which are you?\""
     sze "\"...\""
     wil "\"Just joking, assembly's about to start\""
+    jump dead
     
 label yangrantp1_2:
     sze "\"Heil Moxham!\""
@@ -686,12 +689,14 @@ label yangrantp1_2:
     wil "\"Ignore that, we have an assembly to attend\""
     wil "\"We wouldn't want to jig and experience \"refined interrogation techniques\" now would we?\""
     call fortiangain from _yangrantp1_2fortiangain
+    jump dead
 
 label yangrantp1_3p:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
     call wilfriendshipgain from _yangrantp1_3wilfriendshipgain
     wil "\"Now for assembly time\""
+    jump dead
     
 # sze "\"Need to go assembly\""
 #    scene bg hallentrance

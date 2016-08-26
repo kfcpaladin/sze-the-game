@@ -614,6 +614,7 @@ label eng1p1:
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
+            
 label eng1p1naughtycorner:
     hide grant normal
     show pragash normal
@@ -679,17 +680,41 @@ label yangrantp1_1:
     wil "\"There is a fine line between friend and tool...\""
     wil "\"Which are you?\""
     sze "\"...\""
-    wil "\"Just joking, assembly's about to start\""
+    wil "\"Just joking, let's continue learning planes\""
     jump dead
     
 label yangrantp1_2:
     sze "\"Heil Moxham!\""
-    wil "The leader of my Sturmabeteilung is deserving of praise, especially in regards to the art of special methods of questioning\""     
-    sze "\"Wot\""
-    wil "\"Ignore that, we have an assembly to attend\""
-    wil "\"We wouldn't want to jig and experience \"refined interrogation techniques\" now would we?\""
+    wil "The leader of my Sturmabeteilung- I mean the SRC and P&C - is deserving of praise, especially in regards to the art of special methods of questioning\""     
+    sze "\"Praise... Akuete\""
+    wil "\"We must learn to blend in so that we may takeover the SRC/P&C and bring the 4th Reich into fruition\""
     call fortiangain from _yangrantp1_2fortiangain
+    wil "\"The question is... how? hmmmmm\""
+    menu:
+            "\"We pressure Sarah Desney\"":
+                sze "\"We pressure Sarah Desney\""
+                wil "\"That's a brilliant idea\""
+                sze "\"Wow really? Senpai finally noticed me!\""
+                wil "\"For an amoebic brained cretinous slime without a sense of political intrigue\""
+                call wilfriendshiploss from _yangrantp1_2op1awilfriendshiploss
+                sze "\"Why is Senpai always so mean to me?\""
+                sze "\"Baka-senpai\""
+                wil "\"Sze baka-desu\""
+                call wilfriendshiploss from _yangrantp1_2op1bwilfriendshiploss
+                wil "\"Now, shut the fuck up, I need to learn engines. I'm only rank 1 in this class, need to get better...\""
+            "\"We vote in Wesley Lai\"":
+                sze "\"We vote in Wesley Lai\""
+                wil "\"That's retarded\""
+                pra "\"That's retarded\""
+                wil "\"But... his biggest political rival...\""
+                sze "\"uh... yeah... that's who I meant\""
+                wil "\"Actually somewhat smart\""
+                wil "\"But since I thought of that, you still retarded\""
+            "\"Pragash Haran will be the figurehead\"":
+                
+    wil "\"Hush now, I need to learn how to jet engine for strategic bomber development\""
     jump dead
+    # Note to self: include refined interrogation techniques later on
 
 label yangrantp1_3p:
     sze "\"Indeed\""

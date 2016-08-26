@@ -379,20 +379,31 @@ label phys1p2p2:
     play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
-    flu "\"CHAO, go stand in the naughty corner\""
-    cha "\"Fuck you, arthur\""
-    stop music
-    play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
-    flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
-    jump phys1p3p1
+    menu:
+        "Yes":
+            sze "\"actually want to kill myself\""
+            cha "\"Mental health is a serious issue among male youths\""
+            jump phy1p3p3
+        "No":
+            sze "\"no, pls dont kill me\""
+            cha "\"Dissappointing\""
+            cha "\"You will be a great entree in my new restaurant\""
+            jump dead
+    
 label phys1p2p3:
     "You do nothing"
     flu "\"Why are there paper balls in front of you\""
-    flu "\"CHAO, go stand in the naughty corner\""
-    cha "\"Fuck you, arthur\""
-    sze "\"Suck it\""
-    flu "\"Both of you go to the principal's office, NOW\""
-    jump phys1p3principal2
+    $ phys1p2p1t = False
+    $ phys1p2p3t = True
+    call phys1p2p4 from _call_phys1p2p4_1
+    if phys1p2p4t is True:
+        flu "\"CHAO, go stand in the naughty corner\""
+        cha "\"Fuck you, arthur\""
+        flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
+        jump phys1p3p1
+    else:
+        flu "\"Both of you go to the principles office, NOW\""
+        jump phys1p3principal2
         
 label phys1p2p4:
     menu:
@@ -441,6 +452,15 @@ label phys1p3p2:
     hide rusali normal
     call rusfriendshipgain from _phys1p3p2callrusfriendshipgain
     jump eng1p1
+    
+label phys1p3p3:
+    #No-one in trouble
+    "The class continues without any further issues"
+    "You feel like you learnt a lot this lesson"
+    "the secrets of superconductors have been revealed"
+    call intelgain from _phys1p3p2callintelgain
+    jump eng1p1    
+
 label phys1p3principal1:
     #You and rusali
     scene bg principaldoor

@@ -161,6 +161,7 @@ label fortiangain:
         $ fort += 1
         "Your Fortianness has just increased. Fortianness is how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
         $ forttutorial = True
+        return
         
 label fortianloss:
     if forttutorial is True:

@@ -721,7 +721,7 @@ label yangrantp1_2:
                 sze "\"Baka-senpai\""
                 wil "\"Sze baka-desu\""
                 call wilfriendshiploss from _yangrantp1_2op1bwilfriendshiploss
-                wil "\"Now, shut the fuck up, I need to learn engines. I'm only rank 1 in this class, need to get better...\""
+                return
             "\"We vote in Wesley Lai\"":
                 sze "\"We vote in Wesley Lai\""
                 wil "\"That's retarded\""
@@ -730,9 +730,22 @@ label yangrantp1_2:
                 sze "\"uh... yeah... that's who I meant\""
                 wil "\"Actually somewhat smart\""
                 wil "\"But since I thought of that, you still retarded\""
+                gra "\"Now listen here, you little runts, gather around the front table\""
+                return
             "\"Pragash Haran will be the figurehead\"":
-                
-    wil "\"Hush now, I need to learn how to jet engine for strategic bomber development\""
+                sze "\"Pragash Haran will be the figurehead\""
+                wil "\"Hmmmmm....\""
+                wil "\"A true stroke of genius\""
+                sze "\"...I'm waiting for you to say \"Just Joking\"...\""
+                wil "\"Why would I say that? It is a good idea, one for immediate implementation\""
+                call intelgain from _yangrantp1_2op3intelgain
+                wil "\"Perhaps you do have your uses\""
+                call wilfriendshipgain from _yangrantp1_2op3wilfriendshipgain
+                "You listen to Grant talk for the rest of the rest of the lesson"
+                gra "\"Now listen here, you little runts, gather around the front table\""
+                sze "\"Yang, what's going on?\""
+                return
+    wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
     jump dead
     # Note to self: include refined interrogation techniques later on
 

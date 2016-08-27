@@ -639,17 +639,33 @@ label eng1p1naughtycorner:
     hide grant normal
     show pragash normal
     pra "\"...\""
-    play music "rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.mp3"
-        #Can this be done in 20 seconds?
-    sze "\"Uh, Grant put me here\""
-    pra "\"Oi, this is my spot\""
-    pra "\"Do you have a puff\""
-    sze "\"You what?!?!?!?!?!?!?!?!?!?!?!\""
-    pra "\"Do you have a ciggy\""
-    sze "\"You smoke?!?!?!?!?!?!?!?!?!?!?!\""
-    pra "\"Hey yall got a cigarette?\""
-    sze "\"Um, I don't smoke\""
-    pra "\"Fuck off\""
+    pra "\"You here as well? At least you weren't put here for life...\""
+    sze "\"What? How\""
+    pra "\"I thought this time I might get the Dope for engi or maybe Grant might forgive me...\""
+    sze "\"For what?\""
+    pra "\"Idk\""
+    pra "\"I think it was because I was watching some guy destroy an engineering project, when someone told me to hold a hammer...\""
+    pra "\"And then Grant turned around and saw me holding the hammer over the smashed project\""
+    sze "\"Oh shit\""
+    pra "\"And then he said \""AAAAahhh, you're in trouble, go to the naughty corner for life\""
+    sze "\"wow\""
+    pra "\"Here, in the naughty corner, time behaves differently, space warps but is the same\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycorneraintelloss
+    pra "\"In fact, the mass of the retardedness of this corner is such that it causes these disturbances in the space-time continuum\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycornerbintelloss
+    pra "\"Over time, I have adapted to this anomalous curvature in spacetime by studying economics and meditating\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycornercintelloss
+    pra "\"But this process takes many years of being in the corner\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycornerdintelloss 
+    pra "\"So, you are more likely to just become retarded and dropkick here\""
+    sze "\"ok\""
+    gra "\"Lesson is over, pack up and go to assembly\""
+    sze "Wow, after that I feel so retarded and loading dock"
+    #call loadingdockness?
     jump dead
         
 label eng1p1p1:

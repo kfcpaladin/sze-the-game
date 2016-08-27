@@ -647,7 +647,7 @@ label eng1p1naughtycorner:
     pra "\"I think it was because I was watching some guy destroy an engineering project, when someone told me to hold a hammer...\""
     pra "\"And then Grant turned around and saw me holding the hammer over the smashed project\""
     sze "\"Oh shit\""
-    pra "\"And then he said \""AAAAahhh, you're in trouble, go to the naughty corner for life\""
+    pra "\"And then he said \"AAAAahhh, you're in trouble, go to the naughty corner for life\"\""
     sze "\"wow\""
     pra "\"Here, in the naughty corner, time behaves differently, space warps but is the same\""
     sze "\"Wot\""

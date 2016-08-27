@@ -64,7 +64,7 @@ label start:
 
     scene black
     # remove this these things to enable music later
-    play music "Deemo - Paper Plane's Adventure - from YouTube.mp3" loop
+    play music "Persona 4 - Traumerei - from YouTube.mp3" loop
     "The Year is 2015"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."

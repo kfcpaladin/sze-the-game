@@ -133,7 +133,7 @@ label intelloss:
 label charmgain:
     if charmtutorial is True:
         $ charm += 1
-        "One day, you'll be ultimate slayer. Your charm is now at [charm]"
+        "One day, you'll be dragonslayer. Your charm is now at [charm]"
         return
     else:
         $ charm += 1
@@ -144,7 +144,7 @@ label charmgain:
 label charmloss:
     if charmtutorial is True:
         $ charm -= 1
-        "U make Indian sewage look better than you cos your charm is now at [charm]"
+        "U make 3rd World fermented sewage look better than you cos your charm is now at [charm]"
         return
     else:
         "Your Charm just decreased. Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life."
@@ -155,7 +155,7 @@ label charmloss:
 label fortiangain:
     if forttutorial is True:
         $ fort += 1
-        "You became more PC, socially just and Fortian, maybe one day you will be proper Nationalist Socialist and march in protests as your Fortianness is at [fort]"
+        "You became more Michael Kirby maybe one day you will be proper protester, call the police "pig dogs" and be part of an artist collective, as your Fortianness is at [fort]"
         return
     else:
         $ fort += 1

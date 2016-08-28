@@ -105,7 +105,25 @@ label prafriendshiploss:
         return
     else:
         return
+    
+    label deafriendshipgain:
+    $ deafriendship += 1
+    "You have Arbitrarily become more Masterchief to Dean, causing your friendship with Dean to increase to [deafriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return
         
+label deafriendshiploss:
+    $ deafriendship -= 1
+    "You must've confused Masterchief with Masterchef cos he thinks you're a shit, resulting in friendship with Dean to drop to [deafriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+    
 label intelgain:
     if inteltutorial is True:
         $ intelligence += 1

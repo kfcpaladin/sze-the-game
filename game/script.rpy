@@ -78,7 +78,7 @@ label start:
     sze "Her name is Serena, a name which evokes images of clear, running brooks and endless fields of wildflower meadows"
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1"
-    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school"
+    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
     jump schoolday1
     
 label schoolday1:
@@ -417,6 +417,7 @@ label phys1p2p3:
         flu "\"Both of you should stop playing around\""
         sze "\"But-\""
         flu "\"Both of you go to the principles office, NOW\"" with hpunch
+        sze "\"Wow Chao\""
         jump phys1p3principal2
         
 label phys1p2p4:
@@ -438,6 +439,10 @@ label phys1p2p4:
                 return
         "Say nothing":
             sze "\"...\""
+            flu "\"Well?\""
+            sze "\"These paper balls magically appeared in front of me\""
+            sze "\"I blame Dean\""
+            flu "\"There is more to this...\""
             $ phys1p2p4t = False
             return
 label phys1p3p1:

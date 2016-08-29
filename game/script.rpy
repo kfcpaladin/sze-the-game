@@ -23,6 +23,9 @@ define wil = Character('Will Yang', color="#FFFFFF", image="yang")
 define cha = Character('Chao', color="#FFFFFF", image="chao")
 define mox = Character('MOXHAM', color="#FFFFFF", image="moxham")
 define gra = Character('GRANT', color="#FFFFFF", image="grant")
+define dik = Character('Richard', color="#000080", image="richard")
+define drk = Character('Derek', color="#4169e1", image="derek")
+define jit = Character('Gary', color="#CCFFCC", image="gary")
 style window:
     left_padding 150
 image side arthur ="arthurside.png"
@@ -61,6 +64,9 @@ label start:
     $ chafriendship = 0
     $ grafriendship = 0
     $ moxfriendship = 0
+    $ dikfriendship = 0
+    $ drkfriendship = 0
+    $ jitfriendship = 0
 
     scene black
     # remove this these things to enable music later
@@ -397,12 +403,20 @@ label phys1p2p3:
     $ phys1p2p3t = True
     call phys1p2p4 from _call_phys1p2p4_1
     if phys1p2p4t is True:
+        sze "\"...\""
+        dea "\"Chao threw it at Arthur\""
+        sze "\"He had assaulted my body\""
         flu "\"CHAO, go stand in the naughty corner\""
         cha "\"Fuck you, arthur\""
-        flu "\"As for you Arthur. If Chao ever tries to distract you again, report it immediately\""
+        cha "\"Fuck you, dean\""
+        flu "\"As for you Arthur, if Chao ever tries to distract you again, report it immediately\""
         jump phys1p3p1
     else:
-        flu "\"Both of you go to the principles office, NOW\""
+        sze "\"...\""
+        dea "\"It was all Chao's fault\""
+        flu "\"Both of you should stop playing around\""
+        sze "\"But-\""
+        flu "\"Both of you go to the principles office, NOW\"" with hpunch
         jump phys1p3principal2
         
 label phys1p2p4:
@@ -434,6 +448,7 @@ label phys1p3p1:
     call intelgain from _phys1p3p1callintelgain
     "As you start to leave class ..."
     cha "\"I won't forget this ..."
+        $ phys1p3p1chaopissed = True
     call chafriendshiploss from _phys1p3p1callchafriendshiploss
     show willis normal
     kok "\"Isn't annoying chao the most fun thing to do.\""
@@ -473,7 +488,7 @@ label phys1p3principal1:
     call rusfriendshiploss from _phys1p3principal1acallrusfriendshiploss
     scene bg principaloffice
     call dailymoxcounter from _phys1p3principal1acalldailymoxcounter
-    if moxcounter2 is > 1:
+    if moxcounter2 > 1:
         mox "\"You two again?\""
         play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
         mox "\"You're already in my shit books\""
@@ -527,6 +542,7 @@ label phys1p3principal2:
         
 label phys1p3principal3:
     # said yes
+    sze "\"Yes\""
     mox "\"I hope that this is the end of the matter\""
     mox "\"Go to your next period, here's a note excusing your lateness.\""
     mox "\"Now scram\""
@@ -540,9 +556,11 @@ label phys1p3principal3:
     
 label phys1p3principal4:
     # said no
-    mox "\"Show some respect young man\""
-    mox "\"For that i am upgrading your punishment to 2 afterschool detentions\""
-    mox "\"You are literally 1 centimetre from getting expelled\""
+    sze "\"...No\""
+    mox "\"Wow, you must be retarded\""
+    mox "\"Our school offers support programs for retarded fucks like you, so i am giving you 2 afterschool detentions for the price of 1.\""
+    mox "\"This way you will be exit profile\""
+    call fortiangain from _phys1p3princpal4fortiangain
     mox "\"And DCR, i had expected better of a student wanting ace trials\""
     call dailymoxcounter from _phys1p3principal4dailymoxcounter
     hide moxham unhappy
@@ -551,6 +569,7 @@ label phys1p3principal4:
     rus "\"I'll have to become a drop kick, or worse, go to the loading dock\""
     sze "\"Calm down trials are still 1.5 years away\""
     rus "\"Why do i always get roasted\""
+    rus "\"Stop roasting me arthur\""
     jump eng1p1
     
 label eng1p1:
@@ -619,13 +638,16 @@ label eng1p1:
             dea "\"Ummm\""
             dea "\"Its like a level of existence or something\""
             gra "\"still wrong\""
+            dea "\"Then you must be talking about that woodworking tool, man\""
+            gra "\"...I give up on this class\""
             jump eng1p1p3
         "Play with vices":
             "you are unable to contain yourself, your hands inexorably moving towards the vices"
             "with a swift movement, you gracefully turn the handle a half-revolution, the two plates inching closer"
-            "your palm glide across its surface, each pore, each bump upon the steel surface"
-            "you rotate the handle, slowly, feeling the tightening vice plates upon your hand"
+            "your palm glide across its surface, each pore, each bump upon the slick steel surface"
+            "you rotate the handle, slowly, feeling the tightening vice plates in your hand"
             "the exhilarating pleasure of the vice consumes you, tears of elation drip down your eyes"
+            "you feel the pressure rising, resisting against you, soon to overwhelm you"
             "your mind fades away, replaced only by the words"
             "vice, Vice, VICE"
             gra "\"Aaaaah\""
@@ -775,6 +797,7 @@ label yangrantp1_3p:
 # sze "\"Need to go assembly\""
 #    scene bg hallentrance
 #    with fade
+#    if $ phys1p3p1chaopissed = True:
 #   "Chao is blocking me from szeing anyone"
 #    scene bg hall
 #    with fade

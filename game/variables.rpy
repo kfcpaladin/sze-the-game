@@ -124,6 +124,24 @@ label deafriendshiploss:
     else:
         return  
     
+label dikfriendshipgain:
+    $ dikfriendship += 1
+    "You probably listened to some capitalist or historical or weapon related rant, increasing your friendship with Richard to [dikfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return
+        
+label deafriendshiploss:
+    $ dikfriendship -= 1
+    "You most likely called Richard by one of his Derek-assigned names, causing friendship with him to drop to [dikfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+
 label intelgain:
     if inteltutorial is True:
         $ intelligence += 1

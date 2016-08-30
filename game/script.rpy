@@ -74,6 +74,7 @@ label start:
     $ royfriendship = 0
     $ leefriendship = 0
     $ butfriendship = 0
+    $ timetravel = 0
     scene black
     # remove this these things to enable music later
     play music "Persona 4 - Traumerei - from YouTube.mp3" loop
@@ -394,12 +395,13 @@ label phys1p2p2:
     menu:
         "Yes":
             sze "\"actually want to kill myself\""
-            cha "\"Mental health is a serious issue among male youths\""
+            cha "\"Arthur Sze, i deeply care about your mental health.\""
+            cha "\"If you are having issues concering suicide please call Lifeline at 13 11 14\""
             jump phy1p3p3
         "No":
             sze "\"no, pls dont kill me\""
-            cha "\"Dissappointing\""
-            cha "\"You will be a great entree in my new restaurant\""
+            cha "\"Fuck you\""
+            cha "\"I'll eat you for lunch!\"" with vpunch
             jump dead
     
 label phys1p2p3:
@@ -549,7 +551,7 @@ label phys1p3principal2:
         mox "\"Especially you Joshua, you have a history of being drop kick\""
         mox "\"This behaviour is intolerable at Fort Street High School\""
         mox "\"You two are lucky you arent expelled\""
-        jump eng1p1
+        jump eng1p2
         
 label phys1p3principal3:
     # said yes
@@ -563,7 +565,7 @@ label phys1p3principal3:
     rus "\"How will i ever ace trials with a detention\""
     rus "\"I can no longer spend my afternoon doing tutoring and writing textbooks\""
     call rusfriendshiploss from _phys1p3principal3rusfriendshiploss
-    jump eng1p1
+    jump eng1p2
     
 label phys1p3principal4:
     # said no
@@ -581,7 +583,7 @@ label phys1p3principal4:
     sze "\"Calm down trials are still 1.5 years away\""
     rus "\"Why do i always get roasted\""
     rus "\"Stop roasting me arthur\""
-    jump eng1p1
+    jump eng1p2
     
 label eng1p1:
     "I should probably be heading to the next period then."
@@ -699,10 +701,73 @@ label eng1p1naughtycorner:
     pra "\"So, you are more likely to just become retarded and dropkick here\""
     sze "\"ok\""
     gra "\"Lesson is over, pack up and go to assembly\""
-    sze "Wow, after that I feel so retarded and loading dock"
-    #call loadingdockness?
-    jump dead
+    pra "\"Don't listen to him, the corner needs you.\""
+    pra "\"It's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
+    menu:
+        "Stay in the corner":
+            pra "\"Goood"\"
+            pra "\"Feel the corner's strength overwhelming your feeble mind\""
+            pra "\"With the Corner, a day is like a thousand years, and a thousand years are like a day.\""
+            sze "\"I finally sze the truth. Time was never linear, in its fractal loop there is no end, there is no beginning\""
+            menu:
+                #rewrite this stuff as you wish
+                "Head deeper into the corner":
+                    "You walk a steep closer towards the corner"
+                    "The edges of the classroom contort around you,\""
+                    "One second ago, Pragash stood merely half a metre behind you"
+                    "The next, Pragash was a mile away. Or had an eternity passed\""
+                    if timetravel > 4:
+                        "Yet again you step inside the corner, but this time it feels different\"
+                        #continue this
+                        jump dead
+                    elif timetravel > 3:    
+                        "Yet again you step inside the corner"
+                        "By now you are used to it, no longer disturbed by its seemingly illogical content"
+                        "But in the distance you hear a voice calling to you"
+                        gra "\"Arthur stop this madness.\""
+                        gra "\"You are damaging the integrity of the world system\""
+                        gra "\"Soon time and space will merge, and the multiple timelines of this world will collapse into one"
+                        "his voices fades into the distance as you start to awaken"
+                        $ timetravel +=1
+                        jump timetravel1
+                    elif timetravel > 0:
+                        "You enter further into the familiar corner, and repeat the process again"
+                        $ timetravel += 1
+                        jump timetravel1
+                    else:
+                        "You step further into the corner, your body now inches from the wall"
+                        "You blink, and the inches now seem like lightyears"
+                        "You look back, the aeons old light from an old Earth finally reaching your eyes"
+                        "But ahead, your future lays, your 70 ATAR, Serena's rejection of your love, and your eventual suicide"
+                        "To your sides, the many paths that could've, should've been"
+                        "Acing trials,"
+                        "Slaying Serena,"
+                        "99.95 ATAR"
+                        "You start running into the darkness, determined to make good of your short life"
+                        "And as you run, you start to lose track of time, of where you are, of who you are"
+                        "..."
+                        "..."
+                        "And then you start to stirr from your slumber, the first light of a school morning illuminating your eyes"
+                        $ timetravel += 1
+                        jump timetravel1
+                "Escape whilst you still can":
+        "Go to assembly":
+            pra "\"How could you?\""
+            pra "\"You were the chosen one\""
+            pra "\"It was said you would destroy the Grant, not join him\""
+            sze "\"k."\"
+            "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
+            sze "Wow, after that I feel so retarded and loading dock"
+            #call loadingdockness?
+            jump dead
         
+label timetravel1:
+    "You wake up in a familiar bed"
+    "You check your phone, it's the first day of year 11"
+    sze "\"Deja vu\""
+    "You pack your bags, munch down your breakfast, ready for another day of school"
+    jump schoolday1
+
 label eng1p1p1:
     # answer correctly, All dat foreshadowing
     show yang normal
@@ -804,8 +869,15 @@ label yangrantp1_3p:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
     call wilfriendshipgain from _yangrantp1_3wilfriendshipgain
-    wil "\"Now for assembly time\""
-    jump dead
+    wil "\"But all this talking is distracting me from my true joy, ENGINEERING!!\""
+    wil "\"So without ado let us learn more engineering\""
+    jump eng1p2
+    
+label eng1p2
+    gra "\"I think we learnt enough about planes today\""
+    gra "\"Let's move onto the next topic, BRIDGES\""
+    wil "\"But sir, We still havent learnt about Vapor cones and the Prandtl–Glauert singularity\""
+    gra "\"Whats that???\""
     
 # sze "\"Need to go assembly\""
 #    scene bg hallentrance

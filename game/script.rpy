@@ -873,7 +873,7 @@ label yangrantp1_3p:
     wil "\"So without ado let us learn more engineering\""
     jump eng1p2
     
-label eng1p2
+label eng1p2:
     gra "\"I think we learnt enough about planes today\""
     gra "\"Let's move onto the next topic, BRIDGES\""
     wil "\"But sir, We still havent learnt about Vapor cones and the Prandtl–Glauert singularity\""

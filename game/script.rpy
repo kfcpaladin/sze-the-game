@@ -459,7 +459,7 @@ label phys1p3p1:
     call intelgain from _phys1p3p1callintelgain
     "As you start to leave class ..."
     cha "\"I won't forget this ..."
-        $ phys1p3p1chaopissed = True
+    $ phys1p3p1chaopissed = True
     call chafriendshiploss from _phys1p3p1callchafriendshiploss
     show willis normal
     kok "\"Isn't annoying chao the most fun thing to do.\""

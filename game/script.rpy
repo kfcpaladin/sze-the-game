@@ -676,7 +676,9 @@ label eng1p1naughtycorner:
     pra "\"...\""
     pra "\"You here as well? At least you weren't put here for life...\""
     sze "\"What? How\""
-    pra "\"I thought this time I might get the Dope for engi or maybe Grant might forgive me...\""
+    stop music
+    play music "The Room Soundtrack Main Theme - from YouTube.mp3"
+    pra "\"I thought this time I might get the Matrix brain plug for engi or maybe Grant might forgive me...\""
     sze "\"For what?\""
     pra "\"Idk\""
     pra "\"I think it was because I was watching some guy destroy an engineering project, when someone told me to hold a hammer...\""
@@ -689,8 +691,9 @@ label eng1p1naughtycorner:
     call intelloss from _eng1p1naughtycorneraintelloss
     pra "\"In fact, the mass of the retardedness of this corner is such that it enhances Earth's warping of the space-time continuum\""
     sze "\"Wot\""
-    pra "\"The massiveness of the retardedness of this corner...\""
-    # complete line asdsa
+    call intelloss from _eng1p1naughtycornereintelloss
+    pra "\"The massiveness of the retardedness of this corner draws you further into the retardedness\""
+    sze "\"Wot\""
     call intelloss from _eng1p1naughtycornerbintelloss
     pra "\"Over time, I have adapted to this anomalous curvature in spacetime by studying economics and meditating\""
     sze "\"Wot\""
@@ -700,9 +703,10 @@ label eng1p1naughtycorner:
     call intelloss from _eng1p1naughtycornerdintelloss 
     pra "\"So, you are more likely to just become retarded and dropkick here\""
     sze "\"ok\""
-    gra "\"Lesson is over, pack up and go to assembly\""
+    gra "\"Bitches, do your work!!!!\""
     pra "\"Don't listen to him, the corner needs you.\""
-    pra "\"It's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
+    gra "\"Oi, that's right: you two naughty-corner grunts, do nothing as punishment\""
+    pra "\"The school's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
     menu:
         "Stay in the corner":
             pra "\"Goood\""
@@ -715,23 +719,25 @@ label eng1p1naughtycorner:
                     "You walk a steep closer towards the corner"
                     "The edges of the classroom contort around you,\""
                     "One second ago, Pragash stood merely half a metre behind you"
-                    "The next, Pragash was a mile away. Or had an eternity passed\""
+                    "The next, Pragash was a mile away. Or is he closer...\""
                     if timetravel > 4:
                         "Yet again you step inside the corner, but this time it feels different"
+                        "...It feels"
+                        "...wrong"
                         #continue this
                         jump dead
                     elif timetravel > 3:    
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"
                         "But in the distance you hear a voice calling to you"
-                        gra "\"Arthur stop this madness.\""
+                        gra "\"Arthur, stop this madness.\""
                         gra "\"You are damaging the integrity of the world system\""
                         gra "\"Soon time and space will merge, and the multiple timelines of this world will collapse into one"
                         "his voices fades into the distance as you start to awaken"
                         $ timetravel +=1
                         jump timetravel1
                     elif timetravel > 0:
-                        "You enter further into the familiar corner, and repeat the process again"
+                        "You enter further into the familiar corner and repeat the process again"
                         $ timetravel += 1
                         jump timetravel1
                     else:
@@ -747,23 +753,24 @@ label eng1p1naughtycorner:
                         "And as you run, you start to lose track of time, of where you are, of who you are"
                         "..."
                         "..."
-                        "And then you start to stirr from your slumber, the first light of a school morning illuminating your eyes"
+                        "And then you start to stir from your slumber, the first light of a school morning illuminating your eyes"
                         $ timetravel += 1
                         jump timetravel1
                 "Escape whilst you still can":
                     "You turn away from the corner, and take a step away from it"
                     "It tries to pull you back in, but you resist your feeble strength barely holding out against its immense pressure"
                     "But slowly you make an advancement, and manage to return to the world of the living"
-                    gra "\"So planes have wings, and wings let them fly\""
+                    gra "\"So planes have wings, and wings let them fly and you will learn this in a year and a half's time\""
                     "you have never felt this relieved to be in a shitty engineering classroom"
                     jump eng1p2
         "Go to assembly":
             pra "\"How could you?\""
             pra "\"You were the chosen one\""
             pra "\"It was said you would destroy the Grant, not join him\""
-            sze "\"k.\""
+            sze "\"...k\""
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
             sze "Wow, after that I feel so retarded and loading dock"
+            sze "Wow, I thikn I ded becuz of rtrdednesszes"
             #call loadingdockness?
             jump dead
         
@@ -782,7 +789,7 @@ label eng1p1p1:
     sze "\"lol, what a joke\""
     wil "\"Yes...indeed what a joke\""
     sze "\"k.....\""
-    jump dead
+    jump eng1p2
     
 label eng1p1p2:
     # answers wrong
@@ -797,7 +804,7 @@ label eng1p1p2:
     call wilfriendshiploss from _eng1p1p2wilfriendshiploss
     sze "\"You are weird\""
     sze "\"I think we have assembly next\""
-    jump dead
+    jump eng1p2
     
 label eng1p1p3:
     #doesnt talk
@@ -823,7 +830,7 @@ label yangrantp1_1:
     wil "\"Which are you?\""
     sze "\"...\""
     wil "\"Just joking, let's continue learning planes\""
-    jump dead
+    jump eng1p2
     
 label yangrantp1_2:
     sze "\"Heil Moxham!\""
@@ -868,7 +875,7 @@ label yangrantp1_2:
                 sze "\"Yang, what's going on?\""
                 return
     wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
-    jump dead
+    jump eng1p2
     # Note to self: include refined interrogation techniques later on
 
 label yangrantp1_3p:
@@ -880,11 +887,147 @@ label yangrantp1_3p:
     jump eng1p2
     
 label eng1p2:
-    gra "\"I think we learnt enough about planes today\""
-    gra "\"Let's move onto the next topic, BRIDGES\""
+    gra "\"Gather around the front table, grunts\""
+    gra "\"Before we learn about planes, do these worksheets\""
+    gra "\"Actually no, do these safety tests on doing work sheets before you can do the worksheets\""
     wil "\"But sir, We still havent learnt about Vapor cones and the Prandtl–Glauert singularity\""
-    gra "\"Whats that???\""
-    
+    gra "\"...Whats that???\""
+    gra "\"If it's not chocolate, I don't want to hear about it\""
+    wil "\"But-\""
+    gra "\"Do whatever, just hand in these worksheets whenever\""
+    menu:
+        "\"Do worksheets\"":
+            "You decide to do worksheets"
+            "..."
+            "..."
+            sze "\"Sir, I have completed the worksheets\""
+            gra "\"Hmmm...\""
+            gra "\"You are good Fortian, now just do whatever you want\""
+            sze "These worksheets are fucking useless"
+            sze "I learnt all this stuff in primary school"
+            call fortiangain from _eng1p2fortiangain
+            "As you sit down, you see someone at the door"
+            menu:
+                "\"Open door\"":
+                    "You open the door"
+                    sze "\"Sir, someon-\""
+                    dik "\"...\"" with hpunch
+                    "You find yourself being garotted by earphones"
+                    dik "\"Whoops, that was for Dean\""
+                    dik "\"Uh... my bad\""
+                    sze "\"Gurg... Sir, someone has a message for you\""
+                    gra "\"Give it to me\""
+                    gra "\"...yes...indeed\""
+                    dik "\"Lol, Pragash is still in naughty corner\""
+                    gra "\"He has inappropriate footwear\""
+                    pra "\"What?!? These are leather shoes\""
+                    gra "\"Richard, give me the specs of your shoes\""
+                    dik "\"Very well...custom made Steel Blue work boots, leather upper, quarter and tongue\""
+                    dik "\"Underneath the upper, the toe cap is made of AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
+                    dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
+                    dik "\"The insole contains an advanced ventilation system for optimum comfort and the vulcanised rubber heel and outsole contain compartments\""
+                    sze "\"...wtf\""
+                    pra "\"...wtf\""
+                    gra "\"Now those are leather shoes\""
+                    dik "\"Sorry for strangling you earlier, I'll be sure to right my wongs later on\""
+                    "Richard left"
+                    call dikfriendshipgain from _eng1p2dikfriendshipgain
+                    return
+                "\"Don't open door\"":
+                    "*Knock *knock\"" 
+                    sze "\"...\""
+                    sze "\"ceebs\""
+                    dea "\"I'll get it\""
+                    "Sudden movement catches your peripheral vision"
+                    dea "\"Gaaaafuuuuccc\"" with hpunch
+                    dea "\"heeelllllppppp\""
+                    dik "\"Sorry, you had your back to me...\""
+                    "Richard left"
+                    dea "\"Fuck you Arthur\""
+                    sze "\"What did I do?\""
+                    dea "\"Nothing\""
+                    call fortianloss from _eng1p2fortianloss
+                    dea "\"Sir, message for you\""
+                    gra "\"k\""
+                    return
+                gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
+                jump asszembly1
+        "\"Don't do worksheets\"":
+            sze "Ceebs to worksheet"
+            sze "I'll just do maths..."
+            dea "\"Whoa, are those maths questions?\""
+            dea "\"Aaw shit, they are...you must be good at maths, help me\""
+            sze "\"...ok\""
+            dea "\"I cannot differentiate this integral properly\""
+            "It turned out that the question was a difficult question relating to permutations and combinations"
+            call intelgain from _eng1p2intelgain
+            dea "\"shit you smart\""
+            "Whilst basking in your glory, you hear knocking on the door"
+            menu:
+                "\"Open door\"":
+                    "You open the door"
+                    sze "\"Sir, someon-\""
+                    dik "\"...\"" with hpunch
+                    "You find yourself being garotted by earphones"
+                    dik "\"Whoops, that was for Dean\""
+                    dik "\"Uh... my bad\""
+                    sze "\"Gurg... Sir, someone has a message for you\""
+                    gra "\"Give it to me\""
+                    gra "\"...yes...indeed\""
+                    dik "\"Lol, Pragash is still in naughty corner\""
+                    gra "\"He has inappropriate footwear\""
+                    pra "\"What?!? These are leather shoes\""
+                    gra "\"Richard, give me the specs of your shoes\""
+                    dik "\"Very well...custom made Steel Blue work boots, leather upper, quarter and tongue\""
+                    dik "\"Underneath the upper, the toe cap is made of AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
+                    dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
+                    dik "\"The insole contains an advanced ventilation system for optimum comfort and the vulcanised rubber heel and outsole contain compartments\""
+                    sze "\"...wtf\""
+                    pra "\"...wtf\""
+                    gra "\"Now those are leather shoes\""
+                    dik "\"Sorry for strangling you earlier, I'll be sure to right my wongs later on\""
+                    "Richard left"
+                    call dikfriendshipgain from _eng1p2dikfriendshipgain
+                    return
+                "\"Don't open door\"":
+                    "*Knock *knock\"" 
+                    sze "\"...\""
+                    sze "\"ceebs\""
+                    dea "\"I'll get it\""
+                    "Sudden movement catches your peripheral vision"
+                    dea "\"Gaaaafuuuuccc\"" with hpunch
+                    dea "\"heeelllllppppp\""
+                    dik "\"Sorry, you had your back to me...\""
+                    "Richard left"
+                    dea "\"Fuck you Arthur\""
+                    sze "\"What did I do?\""
+                    dea "\"Nothing\""
+                    call fortianloss from _eng1p2fortianloss
+                    dea "\"Sir, message for you\""
+                    gra "\"k\""
+                    return
+                 gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
+                jump asszembly1
+        "\"Play with vices\"":
+            "you are unable to contain yourself, your hands inexorably moving towards the vices"
+            "with a swift movement, you gracefully turn the handle a half-revolution, the two plates inching closer"
+            "your palm glide across its surface, each pore, each bump upon the slick steel surface"
+            "you rotate the handle, slowly, feeling the tightening vice plates in your hand"
+            "the exhilarating pleasure of the vice consumes you, tears of elation drip down your eyes"
+            "you feel the pressure rising, resisting against you, soon to overwhelm you"
+            "your mind fades away, replaced only by the words"
+            "vice, Vice, VICE"
+            gra "\"Aaaaah\""
+            gra "\"STOP PLAYING WITH VICES\""
+            gra "\"You're in trouble\""
+            sze "\"FUCK\""
+            gra "\"GO STAND IN THE NAUGHTY CORNER\""
+            jump eng1p1naughtycorner
+
+label asszembly1:
+    jump dead
+#need scene transition and options
+        
 # sze "\"Need to go assembly\""
 #    scene bg hallentrance
 #    with fade

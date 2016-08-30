@@ -26,6 +26,10 @@ define gra = Character('GRANT', color="#FFFFFF", image="grant")
 define dik = Character('Richard', color="#000080", image="richard")
 define drk = Character('Derek', color="#4169e1", image="derek")
 define jit = Character('Gary', color="#CCFFCC", image="gary")
+define lee = Character('Andrew', color="#FFFFFF", image="andrew")
+define roy = Character('Roy', color="#FFFFFF", image="roy")
+define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
+#not sure if that's legit spelling, plz check
 style window:
     left_padding 150
 image side arthur ="arthurside.png"
@@ -67,7 +71,9 @@ label start:
     $ dikfriendship = 0
     $ drkfriendship = 0
     $ jitfriendship = 0
-
+    $ royfriendship = 0
+    $ leefriendship = 0
+    $ butfriendship = 0
     scene black
     # remove this these things to enable music later
     play music "Persona 4 - Traumerei - from YouTube.mp3" loop
@@ -676,11 +682,13 @@ label eng1p1naughtycorner:
     sze "\"Oh shit\""
     pra "\"And then he said \"AAAAahhh, you're in trouble, go to the naughty corner for life\"\""
     sze "\"wow\""
-    pra "\"Here, in the naughty corner, time behaves differently, space warps but is the same\""
+    pra "\"Here, in the naughty corner, time behaves differently and space warps\""
     sze "\"Wot\""
     call intelloss from _eng1p1naughtycorneraintelloss
-    pra "\"In fact, the mass of the retardedness of this corner is such that it causes these disturbances in the space-time continuum\""
+    pra "\"In fact, the mass of the retardedness of this corner is such that it enhances Earth's warping of the space-time continuum\""
     sze "\"Wot\""
+    pra "\"The massiveness of the retardedness of this corner...\""
+    # complete line asdsa
     call intelloss from _eng1p1naughtycornerbintelloss
     pra "\"Over time, I have adapted to this anomalous curvature in spacetime by studying economics and meditating\""
     sze "\"Wot\""

@@ -705,7 +705,7 @@ label eng1p1naughtycorner:
     pra "\"It's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
     menu:
         "Stay in the corner":
-            pra "\"Goood"\"
+            pra "\"Goood\""
             pra "\"Feel the corner's strength overwhelming your feeble mind\""
             pra "\"With the Corner, a day is like a thousand years, and a thousand years are like a day.\""
             sze "\"I finally sze the truth. Time was never linear, in its fractal loop there is no end, there is no beginning\""
@@ -717,7 +717,7 @@ label eng1p1naughtycorner:
                     "One second ago, Pragash stood merely half a metre behind you"
                     "The next, Pragash was a mile away. Or had an eternity passed\""
                     if timetravel > 4:
-                        "Yet again you step inside the corner, but this time it feels different\"
+                        "Yet again you step inside the corner, but this time it feels different"
                         #continue this
                         jump dead
                     elif timetravel > 3:    
@@ -751,11 +751,17 @@ label eng1p1naughtycorner:
                         $ timetravel += 1
                         jump timetravel1
                 "Escape whilst you still can":
+                    "You turn away from the corner, and take a step away from it"
+                    "It tries to pull you back in, but you resist your feeble strength barely holding out against its immense pressure"
+                    "But slowly you make an advancement, and manage to return to the world of the living"
+                    gra "\"So planes have wings, and wings let them fly\""
+                    "you have never felt this relieved to be in a shitty engineering classroom"
+                    jump eng1p2
         "Go to assembly":
             pra "\"How could you?\""
             pra "\"You were the chosen one\""
             pra "\"It was said you would destroy the Grant, not join him\""
-            sze "\"k."\"
+            sze "\"k.\""
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
             sze "Wow, after that I feel so retarded and loading dock"
             #call loadingdockness?

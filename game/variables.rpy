@@ -1,32 +1,23 @@
-
+#FRIENDSHIP LEVELS
+	#friends included already: Rusali, Willis, Yang, Chao, Pragash, Dean, Richard
 label tutorialfriendship:
-    # edit this stuff
+    # edit this stuff, also they are not necessarily a faggot cos of the starting friendship values
     "Friendship is a measure of how close you are with someone, although if you are reading this, ur probs a faggot to them."
     $ friendshiptutorial = True
     return
-
-label dailymoxcounter:
-    $ moxcounter2 += 1
-    $ moxcounter1 += 1
-    return
-label overallmoxcountergain:
-    $ moxcounter1 += 1
-    return
-label overallmoxcounterloss:
-    $ moxcounter1 -= 1
-    return
-label rusfriendshiploss:
-    $ rusfriendship -= 1
-    "You dogged Rusali, thus your friendship level with him is currently at [rusfriendship]"
+	
+label rusfriendshipgain:
+    $ rusfriendship += 1
+    "You're Rusali's best friend. Not really, you have to be a girl but your friendship with him is currently at [rusfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
     else:
         return
-        
-label rusfriendshipgain:
-    $ rusfriendship += 1
-    "You're Rusali's best friend. Not really, you have to be a girl but your friendship with him is currently at [rusfriendship]"
+    
+label rusfriendshiploss:
+    $ rusfriendship -= 1
+    "You dogged Rusali, thus your friendship level with him is currently at [rusfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -106,7 +97,7 @@ label prafriendshiploss:
     else:
         return
     
-    label deafriendshipgain:
+label deafriendshipgain:
     $ deafriendship += 1
     "You have Arbitrarily become more Masterchief to Dean, causing your friendship with Dean to increase to [deafriendship]"
     if friendshiptutorial is False:
@@ -133,21 +124,213 @@ label dikfriendshipgain:
     else:
         return
         
-label deafriendshiploss:
+label dikfriendshiploss:
     $ dikfriendship -= 1
-    "You most likely called Richard by one of his Derek-assigned names, causing friendship with him to drop to [dikfriendship]"
+    "You probably use wrong grammar or make rude joke, very annoy Rick Dick, Friendship now is [dikfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return
+		
+label rinfriendshipgain:
+    $ rinfriendship += 1
+    "You grew one step closer with Serena, your friendship with her is now at [rinfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label rinfriendshiploss:
+    $ rinfriendship -= 1
+    "Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rinfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
     else:
         return  
 
+label flufriendshipgain:
+    $ flufriendship += 1
+    "Your phys rank is rapidly rising, as is your friendship with Fluitsma, now at [flufriendship]. Maybe soon you could get some \"private lessons\""
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label flufriendshiploss:
+    $ flufriendship -= 1
+    "Something you did upset Ms Fluistma. Your current predicted Phys HSC mark is [flufriendship]. Just kidding, thats your friendship with her"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label grafriendshipgain:
+    $ grafriendship += 1
+    "You are probably one of the few students who actually try in engineering. This does not go unnoticed by Grant-senpai, and your friendship with him is now at [grafriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label grafriendshiploss:
+    $ grafriendship -= 1
+    "Grant wasnt exactly pleased with your behaviour, resulting in friendship dropping to [grafriendship]. Looks like you might have to spend some more time in the naughty corner."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+		
+label moxfriendshipgain:
+    $ moxfriendship += 1
+    "Moxham has finally recognised you diligence and continued efforts to improve the school, resulting in your friendship rising to [moxfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label moxfriendshiploss:
+    $ moxfriendship -= 1
+    "Your friendship with Moxham dropped to [moxfriendship]. Looks like more afterschool detentions, suspensions or worse."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+		
+label drkfriendshipgain:
+    $ drkfriendship += 1
+    "?????? [drkfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label drkfriendshiploss:
+    $ drkfriendship -= 1
+    "??????? [drkfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+		
+label jitfriendshipgain:
+    $ jitfriendship += 1
+    "Your friendship with Gary rose to [jitfriendship]. Maybe now he will allow you to access his secret hentai stash."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label jitfriendshiploss:
+    $ jitfriendship -= 1
+    "Your friendship with Gary dropped to [jitfriendship]. You probably criticized his interests in chinese cartoons or something."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+		
+label leefriendshipgain:
+    $ leefriendship += 1
+    "???? [leefriendship]. ?????."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label leefriendshiploss:
+    $ leefriendship -= 1
+    "??????[leefriendship]. ????."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  	
+		
+label royfriendshipgain:
+    $ royfriendship += 1
+    "You improved your friendship with Roy, it is now at [royfriendship]. You are safe from his gas attacks, for now."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label royfriendshiploss:
+    $ royfriendship -= 1
+    "Your friendship with Roy dropped to [royfriendship]. It is strongly advised you immediately evacuate the room."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  	
+		
+label butfriendshipgain:
+    $ butfriendship += 1
+    "????? [butfriendship]. ?????."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+	
+label royfriendshiploss:
+    $ butfriendship -= 1
+    "????? [butfriendship]. ?????."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+		
+#STATS
+		
 label intelgain:
     if inteltutorial is True:
         $ intelligence += 1
         "Congratulations"
-        "You just got smarter, maybe you'll be able to impress Serena with your mental capacity and intelligence, now at [intelligence]"
-        return
+		if intelligence > 100:
+			"You have surpassed even Justin Wu, your intelligence is now at [intelligence]"
+			return
+		elif intelligence > 75:
+			"You just got smarter, maybe you'll be able to impress Serena with your 99.95 predicted ATAR, and your intelligence of [intelligence]"
+			return
+		elif intelligence > 50:
+			"You are quite smart already, maybe not band-6 yet, but getting there. A bit more hard work and you will truly ACE TRIALS. Your current intelligence is [intelligence]"
+			return
+		elif intelligence > 25:
+			"At marginally above average you really shouldnt be celebrating yet. Your intelligence is at [intelligence]"
+			return
+		elif intelligence > 0:
+			"With your remarkably average intelligence of [intelligence], Serena will probably not be impressed."
+			return
+		elif intelligence > -25:
+			"You are a bit slow, with intelligence of [intelligence]"
+			return
+		elif intelligence > -50:
+			"You are probably doing worse than Chao in your tests currently, with intelligence of [intelligence]"
+			return
+		elif intelligence > -75:
+			"It's astonishing how someone with an intelligence of [intelligence] even made it to Fort Street. How many dicks did you have to suck to get here?"
+			return
+		elif intelligence > -100:
+			"With intelligence of [intelligence], you are not even a functioning member of society."
+			return
+		else:
+			"You're getting there, a bit more hard work and you will be smarter than a braindead ant."
+			return
     else:
         $ intelligence += 1
         "Your intelligence just increased. Intelligence is a measure of how smart you are. Currently you are a retard, however this may be changed through diligent studying and participating in class."
@@ -157,9 +340,37 @@ label intelgain:
 label intelloss:
     if inteltutorial is True:
         $ intelligence -= 1
-        "Congratulations"
-        "U just got more retarded, your intelligence, or lack thereof, is now at [intelligence]"
-        return
+        "You become a bit dumber"
+		if intelligence > 100:
+			"With intelligence of [intelligence], maybe its for the better. Your thoughts were too complex for even Stephen Hawking."
+			return
+		elif intelligence > 75:
+			"But your predicted ATAR is still a safe 99.95, and your intelligence of [intelligence]"
+			return
+		elif intelligence > 50:
+			"You are quite smart already, maybe not band-6 yet, but getting there. A bit more hard work and you will truly ACE TRIALS. Your current intelligence is [intelligence]"
+			return
+		elif intelligence > 25:
+			"Your intelligence is at [intelligence], not particularly amazing."
+			return
+		elif intelligence > 0:
+			"With your remarkably average intelligence of [intelligence], Serena will probably not be impressed."
+			return
+		elif intelligence > -25:
+			"You are a bit slow, with intelligence of [intelligence]"
+			return
+		elif intelligence > -50:
+			"You are probably doing worse than Chao in your tests currently, with intelligence of [intelligence]"
+			return
+		elif intelligence > -75:
+			"It's astonishing how someone with an intelligence of [intelligence] even made it to Fort Street. How many dicks did you have to suck to get here?"
+			return
+		elif intelligence > -100:
+			"With intelligence of [intelligence], you are not even a functioning member of society."
+			return
+		else:
+			"You are somehow dumber than a rock, like literally. I dont know how that is even possible."
+			return
     else:
         "Your intelligence just decreased. Intelligence is a measure of how smart you are. Currently you are a retard, however this may be changed through diligent studying and participating in class."
         $ intelligence -= 1
@@ -208,3 +419,16 @@ label fortianloss:
         $ fort -= 1
         "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
         return
+
+label dailymoxcounter:
+    $ moxcounter2 += 1
+    $ moxcounter1 += 1
+    return
+
+label overallmoxcountergain:
+    $ moxcounter1 += 1
+    return
+
+label overallmoxcounterloss:
+    $ moxcounter1 -= 1
+    return

@@ -1006,8 +1006,8 @@ label eng1p2:
                     dea "\"Sir, message for you\""
                     gra "\"k\""
                     return
-                 gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
-                jump asszembly1
+            gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
+            jump asszembly1
         "\"Play with vices\"":
             "you are unable to contain yourself, your hands inexorably moving towards the vices"
             "with a swift movement, you gracefully turn the handle a half-revolution, the two plates inching closer"

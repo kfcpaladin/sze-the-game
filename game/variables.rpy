@@ -380,8 +380,37 @@ label intelloss:
 label charmgain:
     if charmtutorial is True:
         $ charm += 1
-        "One day, you'll be dragonslayer. Your charm is now at [charm]"
-        return
+		"Your charm increased"
+		if charm > 100:
+			"With a charm of [charm], you probably have slayed all 3.4Bn women in the world right now."
+			return
+		elif charm > 75:
+			"With a charm of [charm], you have probably slayed every LG in Sydney by now"
+			return
+		elif charm > 50:
+			"You have surpassed even Chao in slaying ability with a charm of [charm]"
+			return
+		elif charm > 25:
+			"You are just very slightly charming, at [charm]"
+			return
+		elif charm > 0:
+			"With exceptionally average charm of [charm], its going to take a very long time for Serena to notice you."
+			return
+		elif charm > -25:
+			"With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
+			return
+		elif charm > -50:
+			"Even prostitutes would refuse to bang you, and your [charm] charm."
+			return
+		elif charm > -75:
+			"The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
+			return
+		elif charm > -100:
+			"You once tried to masturbate, your hand rejected you."
+			return
+		else:
+			"Even bacteria tries to avoid you."
+			return
     else:
         $ charm += 1
         "Your Charm just increased. Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life."
@@ -391,8 +420,37 @@ label charmgain:
 label charmloss:
     if charmtutorial is True:
         $ charm -= 1
-        "U make 3rd World fermented sewage look better than you cos your charm is now at [charm]"
-        return
+		"Your charm just decreased"
+		if charm > 100:
+			"With a charm of [charm], you probably have slayed all 3.4Bn women in the world right now."
+			return
+		elif charm > 75:
+			"With a charm of [charm], you have probably slayed every LG in Sydney by now"
+			return
+		elif charm > 50:
+			"You have surpassed even Chao in slaying ability with a charm of [charm]"
+			return
+		elif charm > 25:
+			"You are just very slightly charming, at [charm]"
+			return
+		elif charm > 0:
+			"With exceptionally average charm of [charm], its going to take a very long time for Serena to notice you."
+			return
+		elif charm > -25:
+			"With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
+			return
+		elif charm > -50:
+			"Even prostitutes would refuse to bang you, and your [charm] charm."
+			return
+		elif charm > -75:
+			"The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
+			return
+		elif charm > -100:
+			"You once tried to masturbate, your hand rejected you."
+			return
+		else:
+			"Even bacteria tries to avoid you."
+			return
     else:
         "Your Charm just decreased. Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life."
         $ charm -= 1
@@ -402,8 +460,35 @@ label charmloss:
 label fortiangain:
     if forttutorial is True:
         $ fort += 1
-        "You became more Michael Kirby maybe one day you will be proper protester, call the police "pig dogs" and be part of an artist collective, as your Fortianness is at [fort]"
-        return
+        "You became more Michael Kirby.  , as your Fortianness is at [fort]"
+		if fort > 100:
+			"But you are still the epitome of the fort, with a fortianness of [fort]"
+			"you are a proper protester, you call the police "pig dogs" and you are part of an artist collective"
+			return
+		elif fort > 75:
+			"Michael Kirby looks up to you and your fortianness of [fort]"
+			return
+		elif fort > 50:
+			"With a fortianness of [fort], you are often called in to speak at Speech Day"
+			return
+		elif fort > 25:
+			"With a fortianness of [fort], you probably made it into the SRC"
+			return
+		elif fort > 0:
+			"At [fort] fortianness, you are merely a generic student"
+			return
+		elif fort > -25:
+			"Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+			return
+		elif fort > -50:
+			"At [fort] fortianness, your death is the fantasy of Ms Moxham"
+			return
+		elif fort > -75:
+			"With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+			return
+		else:
+			"Your racist, sexist and classist behaviour is an affront to the school"
+			return
     else:
         $ fort += 1
         "Your Fortianness has just increased. Fortianness is how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
@@ -413,8 +498,34 @@ label fortiangain:
 label fortianloss:
     if forttutorial is True:
         $ fort -= 1
-        "You are less Michael Kirby and are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations as you allowed your Fortianness to drop to [fort]"
-        return
+        "You fortianness dropped."
+		if fort > 100:
+			"But you are still the epitome of the fort, with a fortianness of [fort]"
+			return
+		elif fort > 75:
+			"Michael Kirby looks up to you and your fortianness of [fort]"
+			return
+		elif fort > 50:
+			"With a fortianness of [fort], you are often called in to speak at Speech Day"
+			return
+		elif fort > 25:
+			"With a fortianness of [fort], you probably made it into the SRC"
+			return
+		elif fort > 0:
+			"At [fort] fortianness, you are merely a generic student"
+			return
+		elif fort > -25:
+			"Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+			return
+		elif fort > -50:
+			"At [fort] fortianness, your death is the fantasy of Ms Moxham"
+			return
+		elif fort > -75:
+			"With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+			return
+		else:
+			"Your racist, sexist and classist behaviour is an affront to the school"
+			return
     else:
         $ fort -= 1
         "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."

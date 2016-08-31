@@ -301,7 +301,7 @@ label intelgain:
     if inteltutorial is True:
         $ intelligence += 1
         "Congratulations"
-	    if intelligence > 100:
+        if intelligence > 100:
 			"You have surpassed even Justin Wu, your intelligence is now at [intelligence]"
 			return
 		elif intelligence > 75:

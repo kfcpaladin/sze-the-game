@@ -1,5 +1,5 @@
 #FRIENDSHIP LEVELS
-	#friends included already: Rusali, Willis, Yang, Chao, Pragash, Dean, Richard
+#friends included already: Rusali, Willis, Yang, Chao, Pragash, Dean, Richard
 label tutorialfriendship:
     # edit this stuff, also they are not necessarily a faggot cos of the starting friendship values
     "Friendship is a measure of how close you are with someone, although if you are reading this, ur probs a faggot to them."

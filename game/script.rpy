@@ -950,8 +950,8 @@ label eng1p2:
                     dea "\"Sir, message for you\""
                     gra "\"k\""
                     return
-                gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
-                jump asszembly1
+            gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
+            jump asszembly1
         "\"Don't do worksheets\"":
             sze "Ceebs to worksheet"
             sze "I'll just do maths..."

@@ -5,7 +5,7 @@ label tutorialfriendship:
     "Friendship is a measure of how close you are with someone, although if you are reading this, ur probs a faggot to them."
     $ friendshiptutorial = True
     return
-	
+
 label rusfriendshipgain:
     $ rusfriendship += 1
     "You're Rusali's best friend. Not really, you have to be a girl but your friendship with him is currently at [rusfriendship]"

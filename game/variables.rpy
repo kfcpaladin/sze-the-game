@@ -132,7 +132,7 @@ label dikfriendshiploss:
         return
     else:
         return
-		
+
 label rinfriendshipgain:
     $ rinfriendship += 1
     "You grew one step closer with Serena, your friendship with her is now at [rinfriendship]"
@@ -141,7 +141,7 @@ label rinfriendshipgain:
         return
     else:
         return  
-	
+
 label rinfriendshiploss:
     $ rinfriendship -= 1
     "Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rinfriendship]"
@@ -159,7 +159,7 @@ label flufriendshipgain:
         return
     else:
         return  
-	
+
 label flufriendshiploss:
     $ flufriendship -= 1
     "Something you did upset Ms Fluistma. Your current predicted Phys HSC mark is [flufriendship]. Just kidding, thats your friendship with her"
@@ -168,7 +168,7 @@ label flufriendshiploss:
         return
     else:
         return  
-	
+
 label grafriendshipgain:
     $ grafriendship += 1
     "You are probably one of the few students who actually try in engineering. This does not go unnoticed by Grant-senpai, and your friendship with him is now at [grafriendship]"
@@ -177,7 +177,7 @@ label grafriendshipgain:
         return
     else:
         return  
-	
+
 label grafriendshiploss:
     $ grafriendship -= 1
     "Grant wasnt exactly pleased with your behaviour, resulting in friendship dropping to [grafriendship]. Looks like you might have to spend some more time in the naughty corner."
@@ -186,7 +186,7 @@ label grafriendshiploss:
         return
     else:
         return  
-		
+
 label moxfriendshipgain:
     $ moxfriendship += 1
     "Moxham has finally recognised you diligence and continued efforts to improve the school, resulting in your friendship rising to [moxfriendship]"
@@ -195,7 +195,7 @@ label moxfriendshipgain:
         return
     else:
         return  
-	
+
 label moxfriendshiploss:
     $ moxfriendship -= 1
     "Your friendship with Moxham dropped to [moxfriendship]. Looks like more afterschool detentions, suspensions or worse."
@@ -204,7 +204,7 @@ label moxfriendshiploss:
         return
     else:
         return  
-		
+
 label drkfriendshipgain:
     $ drkfriendship += 1
     "?????? [drkfriendship]"
@@ -213,7 +213,7 @@ label drkfriendshipgain:
         return
     else:
         return  
-	
+
 label drkfriendshiploss:
     $ drkfriendship -= 1
     "??????? [drkfriendship]"
@@ -222,7 +222,7 @@ label drkfriendshiploss:
         return
     else:
         return  
-		
+
 label jitfriendshipgain:
     $ jitfriendship += 1
     "Your friendship with Gary rose to [jitfriendship]. Maybe now he will allow you to access his secret hentai stash."
@@ -231,7 +231,7 @@ label jitfriendshipgain:
         return
     else:
         return  
-	
+
 label jitfriendshiploss:
     $ jitfriendship -= 1
     "Your friendship with Gary dropped to [jitfriendship]. You probably criticized his interests in chinese cartoons or something."
@@ -240,7 +240,7 @@ label jitfriendshiploss:
         return
     else:
         return  
-		
+
 label leefriendshipgain:
     $ leefriendship += 1
     "???? [leefriendship]. ?????."
@@ -249,7 +249,7 @@ label leefriendshipgain:
         return
     else:
         return  
-	
+
 label leefriendshiploss:
     $ leefriendship -= 1
     "??????[leefriendship]. ????."
@@ -258,7 +258,7 @@ label leefriendshiploss:
         return
     else:
         return  	
-		
+
 label royfriendshipgain:
     $ royfriendship += 1
     "You improved your friendship with Roy, it is now at [royfriendship]. You are safe from his gas attacks, for now."
@@ -267,7 +267,7 @@ label royfriendshipgain:
         return
     else:
         return  
-	
+
 label royfriendshiploss:
     $ royfriendship -= 1
     "Your friendship with Roy dropped to [royfriendship]. It is strongly advised you immediately evacuate the room."
@@ -276,7 +276,7 @@ label royfriendshiploss:
         return
     else:
         return  	
-		
+
 label butfriendshipgain:
     $ butfriendship += 1
     "????? [butfriendship]. ?????."
@@ -285,7 +285,7 @@ label butfriendshipgain:
         return
     else:
         return  
-	
+
 label royfriendshiploss:
     $ butfriendship -= 1
     "????? [butfriendship]. ?????."
@@ -294,14 +294,14 @@ label royfriendshiploss:
         return
     else:
         return  
-		
+
 #STATS
-		
+
 label intelgain:
     if inteltutorial is True:
         $ intelligence += 1
         "Congratulations"
-		if intelligence > 100:
+	    if intelligence > 100:
 			"You have surpassed even Justin Wu, your intelligence is now at [intelligence]"
 			return
 		elif intelligence > 75:

@@ -275,7 +275,7 @@ label royfriendshiploss:
         call tutorialfriendship
         return
     else:
-        return  	
+        return
 
 label butfriendshipgain:
     $ butfriendship += 1

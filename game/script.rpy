@@ -584,6 +584,7 @@ label phys1p3principal2:
         mox "\"Especially you Joshua, you have a history of being drop kick\""
         mox "\"This behaviour is intolerable at Fort Street High School\""
         mox "\"You two are lucky you arent expelled\""
+        hide moxham unhappy
         jump eng1p2
         
 label phys1p3principal3:
@@ -598,6 +599,7 @@ label phys1p3principal3:
     rus "\"How will i ever ace trials with a detention\""
     rus "\"I can no longer spend my afternoon doing tutoring and writing textbooks\""
     call rusfriendshiploss from _phys1p3principal3rusfriendshiploss
+    hide rusali
     jump eng1p2
     
 label phys1p3principal4:
@@ -616,6 +618,7 @@ label phys1p3principal4:
     sze "\"Calm down trials are still 1.5 years away\""
     rus "\"Why do i always get roasted\""
     rus "\"Stop roasting me arthur\""
+    hide rusali
     jump eng1p2
     
 label eng1p1:
@@ -950,6 +953,8 @@ label yangrantp1_3p:
     jump eng1p2
     
 label eng1p2:
+    scene bg workshop
+    show grant normal
     gra "\"Gather around the front table, grunts\""
     gra "\"Before we learn about planes, do these worksheets\""
     gra "\"Actually no, do these safety tests on doing work sheets before you can do the worksheets\""

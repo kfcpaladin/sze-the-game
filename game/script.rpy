@@ -1154,7 +1154,7 @@ label asszembly1:
     else:
         wil "\"Why would you want to enact revenge upon engineering\""
         wil "\"It is the greatest subject to have ever existed\""
-        pra "\"...You will never understand
+        pra "\"...You will never understand\""
         jump asszembly1p1
         
 label asszembly1p1:

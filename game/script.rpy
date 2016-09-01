@@ -97,7 +97,7 @@ label schoolday1:
     #btw, the day is probably wednesday or tuesday because first day back
     show moxham happy
     with dissolve
-    if timetravel = 1:
+    if timetravel is 1:
         if moxcounter2 > 1:
             hide moxham happy
             show moxham unhappy

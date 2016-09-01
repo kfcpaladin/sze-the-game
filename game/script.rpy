@@ -118,23 +118,24 @@ label schoolday1:
             sze "\"Sze, I'm studying right now\""
             mox "\"Very well\""
             jump postrollcall1
-    if timetravel >= 2:
+    elif timetravel >= 2:
         sze "\"I must avoid Moxham\""
         sze "\"She passes through the quad in 5 minutes, time to hide\""
         sze "\"...\""
         sze "\"I safe now\""
-        call 
-    mox "\"Wow, you are a good Fortian\""
-    mox "\"I don't know who you are but, you are like next Michael Kirby\""
-    hide moxham happy
-    call fortiangain from _schoolday1fortiangain
-    "3 hours later"
-    "Got a new timetable"
-    "I have Physics (Flujtsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
-    scene bg school
-    with fade
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-    jump postrollcall1
+        call postrollcall
+    else:
+        mox "\"Wow, you are a good Fortian\""
+        mox "\"I don't know who you are but, you are like next Michael Kirby\""
+        hide moxham happy
+        call fortiangain from _schoolday1fortiangain
+        "3 hours later"
+        "Got a new timetable"
+        "I have Physics (Flujtsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
+        scene bg school
+        with fade
+        sze "My life feels empty without her, like a photoelectric cell without UV rays"
+        jump postrollcall1
     
 label postrollcall1:
     sze "I watch her from afar, but I doubt she notices arthur"
@@ -832,6 +833,8 @@ label eng1p1naughtycorner:
             jump dead
         
 label timetravel1:
+    hide grant normal
+    scene black
     "You wake up in a familiar bed"
     "You check your phone, it's the first day of year 11"
     sze "\"Deja vu\""

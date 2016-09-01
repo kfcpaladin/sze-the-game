@@ -126,7 +126,7 @@ label schoolday1:
         sze "\"She passes through the quad in 5 minutes, time to hide\""
         sze "\"...\""
         sze "\"I safe now\""
-        call postrollcall
+        call postrollcall1
     else:
         mox "\"Wow, you are a good Fortian\""
         mox "\"I don't know who you are but, you are like next Michael Kirby\""
@@ -592,7 +592,7 @@ label phys1p3principal2:
         mox "\"This behaviour is intolerable at Fort Street High School\""
         mox "\"You two are lucky you arent expelled\""
         hide moxham unhappy
-        jump eng1p2
+        jump eng1p1
         
 label phys1p3principal3:
     # said yes
@@ -607,7 +607,7 @@ label phys1p3principal3:
     rus "\"I can no longer spend my afternoon doing tutoring and writing textbooks\""
     call rusfriendshiploss from _phys1p3principal3rusfriendshiploss
     hide rusali
-    jump eng1p2
+    jump eng1p1
     
 label phys1p3principal4:
     # said no

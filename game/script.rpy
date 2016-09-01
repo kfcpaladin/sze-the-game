@@ -1177,7 +1177,8 @@ label asszembly1jigolo:
     dea "\"BYEEEE!!!\""
     "You hurry off to a secluded area, trying not to look suss"
     "To be continued"
-
+    jump dead
+    
 label asszembly1_2:
     scene bg hallentrance
     with fade

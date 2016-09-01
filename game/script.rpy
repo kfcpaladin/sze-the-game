@@ -105,6 +105,7 @@ label schoolday1:
             mox "\"You!\""
             mox "\"You're already causing trouble, planning on causing trouble a second time?\""
             mox "\"I'll fuck you over\""
+            hide moxham unhappy
             jump dead
         else:
             hide moxham happy
@@ -118,6 +119,7 @@ label schoolday1:
             sze "\"I swear I'll be a good boy\""
             sze "\"Sze, I'm studying right now\""
             mox "\"Very well\""
+            hide moxham unhappy
             jump postrollcall1
     elif timetravelcount >= 2:
         sze "\"I must avoid Moxham\""
@@ -279,6 +281,8 @@ label Rektrusali:
         jump phys1
 label phys1:
     scene bg physclass
+    stop music
+    play music "Los Lobos - La Bamba (HQ,16-9) - from YouTube.mp3" loop
     "You enter the classroom, and glance around. It seems that there is only 1 seat left, right next to willis"
     "To your left is Willis, to your right is Pragash"
     "You spot Serena sitting at the front of the class right in front the teacher"
@@ -427,11 +431,13 @@ label phys1p2p2:
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
     menu:
         "Yes":
+            sze "\"Yes\""
             sze "\"actually want to kill myself\""
             cha "\"Arthur Sze, i deeply care about your mental health.\""
             cha "\"If you are having issues concering suicide please call Lifeline at 13 11 14\""
-            jump phy1p3p3
+            jump phy1p3ps3
         "No":
+            sze "\"No\""
             sze "\"no, pls dont kill me\""
             cha "\"Fuck you\""
             cha "\"I'll eat you for lunch!\"" with vpunch
@@ -502,6 +508,7 @@ label phys1p3p1:
     hide willis normal
     call kokfriendshipgain from _phys1p3p1callkokfriendshipgain
     jump eng1p1
+    
 label phys1p3p2:
     #No-one in trouble
     "The class continues without any further issues"
@@ -619,7 +626,7 @@ label phys1p3principal4:
     rus "\"Why do i always get roasted\""
     rus "\"Stop roasting me arthur\""
     hide rusali
-    jump eng1p2
+    jump eng1p1
     
 label eng1p1:
     "I should probably be heading to the next period then."
@@ -832,6 +839,9 @@ label eng1p1naughtycorner:
             pra "\"It was said you would destroy the Grant, not join him\""
             sze "\"...k\""
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
+            dea "\"Where you going?\""
+            sze "\"Asszembly\""
+            dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
             #call loadingdockness?
@@ -868,7 +878,7 @@ label eng1p1p2:
     wil "\"Ur a faggot; if I already unfriended you, I'll unfriend you again\""
     call wilfriendshiploss from _eng1p1p2wilfriendshiploss
     sze "\"You are weird\""
-    sze "\"I think we have assembly next\""
+    sze "\"I think sir is trying to say something\""
     jump eng1p2
     
 label eng1p1p3:
@@ -944,16 +954,15 @@ label yangrantp1_2:
     jump eng1p2
     # Note to self: include refined interrogation techniques later on
 
-label yangrantp1_3p:
+label yangrantp1_3:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
     call wilfriendshipgain from _yangrantp1_3wilfriendshipgain
     wil "\"But all this talking is distracting me from my true joy, ENGINEERING!!\""
-    wil "\"So without ado let us learn more engineering\""
+    wil "\"So without further ado let us learn more engineering\""
     jump eng1p2
     
 label eng1p2:
-    scene bg workshop
     show grant normal
     gra "\"Gather around the front table, grunts\""
     gra "\"Before we learn about planes, do these worksheets\""
@@ -1095,7 +1104,7 @@ label eng1p2:
 label asszembly1:
     stop music
     play music "Persona 3 - Iwatodai Dorm - from YouTube.mp3" loop
-    scene bg hallentrance
+    scene bg rowecorridor
     with fade
     sze "\"Time for my first assembly of the year\""
     wil "\"Indeed, I wonder whether Moxham will be here\""
@@ -1145,7 +1154,9 @@ label asszembly1:
     else:
         wil "\"Why would you want to enact revenge upon engineering\""
         wil "\"It is the greatest subject to have ever existed\""
-        "To be continued"
+        pra "\"...You will never understand
+        jump asszembly1p1
+        
 label asszembly1p1:
     dea "\"Hey guys, looking forward to assembly?\""
     wil "\"It would be un-Fortian to skip it\""

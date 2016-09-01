@@ -119,26 +119,11 @@ label schoolday1:
             mox "\"Very well\""
             jump postrollcall1
     if timetravel >= 2:
-        if moxcounter2 > 1:
-            hide moxham happy
-            show moxham unhappy
-            mox "\"You!\""
-            mox "\"You're already causing trouble, planning on causing trouble a second time?\""
-            mox "\"I'll fuck you over\""
-            jump dead
-        else:
-            hide moxham happy
-            show moxham unhappy
-            mox "\"You!\""
-            sze "\"Wot?\""
-            mox "\"I won't mind you jumping around so long as you aren't being a fuckwit\""
-            mox "\"I've got my eye on you\""
-            sze "\"...um...\""
-            sze "\"...uh\""
-            sze "\"I swear I'll be a good boy\""
-            sze "\"Sze, I'm studying right now\""
-            mox "\"Very well\""
-            jump postrollcall1
+        sze "\"I must avoid Moxham\""
+        sze "\"She passes through the quad in 5 minutes, time to hide\""
+        sze "\"...\""
+        sze "\"I safe now\""
+        call 
     mox "\"Wow, you are a good Fortian\""
     mox "\"I don't know who you are but, you are like next Michael Kirby\""
     hide moxham happy
@@ -741,6 +726,18 @@ label eng1p1naughtycorner:
     pra "\"The massiveness of the retardedness of this corner draws you further into the retardedness\""
     sze "\"Wot\""
     call intelloss from _eng1p1naughtycornerbintelloss
+    pra "\"In fact, this corner seems to allow for, not just the interaction with past light from Minkowski's spacetime cones\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycornerfintelloss
+    pra "\"It allows one to interact with the past light, to in fact, redo one's actions\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycornergintelloss
+    pra "\"However, unlike Harry Potter's time turner, instead of being simultaneously present with your previous self, you literally replace your previous self\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycornerhintelloss
+    pra "\"Even at this distance, somehow, the mass of retardedness must be emitting some undiscovered form of radiation, spreading its influence\""
+    sze "\"Wot\""
+    call intelloss from _eng1p1naughtycorneriintelloss
     pra "\"Over time, I have adapted to this anomalous curvature in spacetime by studying economics and meditating\""
     sze "\"Wot\""
     call intelloss from _eng1p1naughtycornercintelloss
@@ -767,9 +764,21 @@ label eng1p1naughtycorner:
                     "One second ago, Pragash stood merely half a metre behind you"
                     "The next, Pragash was a mile away. Or is he closer...\""
                     if timetravel > 4:
+                        scene bg black
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
                         "...wrong"
+                        sze "\"Urgh, mornings are shit\""
+                        sze "\"Wait what\"" with hpunch
+                        sze "\"Wha- what the fuck are you\"" with vpunch
+                        sze "\"Huh? You\""
+                        sze "\"No, I'm me, you're...\""
+                        sze "\"You\""
+                        sze "\"No, not me, you\""
+                        sze "\"Yes, I am you\""
+                        sze "\"Just answer the damn question, who are you?\""
+                        sze "\"I have told you\""
+                        sze "\"This is retarded, I'm going to go now...\""
                         "The past light cone is warping, you find yourself flashing through time and space to find..."
                         "Wow"
                         "Eoarchaen Era Earth is retardedly unsuitable for human life"

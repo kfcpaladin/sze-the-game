@@ -925,7 +925,8 @@ label yangrantp1_2:
                 sze "\"Baka-senpai\""
                 wil "\"Sze baka-desu\""
                 call wilfriendshiploss from _yangrantp1_2op1bwilfriendshiploss
-                return
+                wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
+                jump eng1p2
             "\"We vote in Wesley Lai\"":
                 sze "\"We vote in Wesley Lai\""
                 wil "\"That's retarded\""
@@ -935,7 +936,8 @@ label yangrantp1_2:
                 wil "\"Actually somewhat smart\""
                 wil "\"But since I thought of that, you still retarded\""
                 gra "\"Now listen here, you little runts, gather around the front table\""
-                return
+                wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
+                jump eng1p2
             "\"Pragash Haran will be the figurehead\"":
                 $ yangrant1_2eingutidee = True
                 sze "\"Pragash Haran will be the figurehead\""
@@ -949,11 +951,10 @@ label yangrantp1_2:
                 "You see Grant waddling to the front"
                 gra "\"Now listen here, you little runts, gather around the front table\""
                 sze "\"Yang, what's going on?\""
-                return
-    wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
-    jump eng1p2
+                wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
+                jump eng1p2
     # Note to self: include refined interrogation techniques later on
-
+    
 label yangrantp1_3:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
@@ -1178,7 +1179,22 @@ label asszembly1jigolo:
     "To be continued"
 
 label asszembly1_2:
+    scene bg hallentrance
+    with fade
     sze "\"Lol, actually ceebs skipping asszembly though\""
+    call fortiangain from _asszembly1_2fortiangain
+    wil "\"You are true Fortian, Moxham would be proud of you\""
+    sze "\"Really?\""
+    wil "\"No, I don't think she cares\""
+    show willis normal
+    with dissolve
+    kok "\"Arthur, my man!\""
+    sze "\"...Willis\""
+    pra "\"Willis, I thought we were friends, how could you forget me?\""
+    kok "\"I haven't\""
+    dea "\"Oh hey, fucktard\""
+    wil "\"Why you still following us?\""
+    dea "\"Looking for Mon and Pang\""
     "To be continued"
     
 # sze "\"Need to go assembly\""

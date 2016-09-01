@@ -435,7 +435,7 @@ label phys1p2p2:
             sze "\"actually want to kill myself\""
             cha "\"Arthur Sze, i deeply care about your mental health.\""
             cha "\"If you are having issues concering suicide please call Lifeline at 13 11 14\""
-            jump phy1p3ps3
+            jump phy1p3p3
         "No":
             sze "\"No\""
             sze "\"no, pls dont kill me\""

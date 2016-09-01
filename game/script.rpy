@@ -97,6 +97,48 @@ label schoolday1:
     #btw, the day is probably wednesday or tuesday because first day back
     show moxham happy
     with dissolve
+    if timetravel = 1:
+        if moxcounter2 > 1:
+            hide moxham happy
+            show moxham unhappy
+            mox "\"You!\""
+            mox "\"You're already causing trouble, planning on causing trouble a second time?\""
+            mox "\"I'll fuck you over\""
+            jump dead
+        else:
+            hide moxham happy
+            show moxham unhappy
+            mox "\"You!\""
+            sze "\"Wot?\""
+            mox "\"I won't mind you jumping around so long as you aren't being a fuckwit\""
+            mox "\"I've got my eye on you\""
+            sze "\"...um...\""
+            sze "\"...uh\""
+            sze "\"I swear I'll be a good boy\""
+            sze "\"Sze, I'm studying right now\""
+            mox "\"Very well\""
+            jump postrollcall1
+    if timetravel >= 2:
+        if moxcounter2 > 1:
+            hide moxham happy
+            show moxham unhappy
+            mox "\"You!\""
+            mox "\"You're already causing trouble, planning on causing trouble a second time?\""
+            mox "\"I'll fuck you over\""
+            jump dead
+        else:
+            hide moxham happy
+            show moxham unhappy
+            mox "\"You!\""
+            sze "\"Wot?\""
+            mox "\"I won't mind you jumping around so long as you aren't being a fuckwit\""
+            mox "\"I've got my eye on you\""
+            sze "\"...um...\""
+            sze "\"...uh\""
+            sze "\"I swear I'll be a good boy\""
+            sze "\"Sze, I'm studying right now\""
+            mox "\"Very well\""
+            jump postrollcall1
     mox "\"Wow, you are a good Fortian\""
     mox "\"I don't know who you are but, you are like next Michael Kirby\""
     hide moxham happy
@@ -107,6 +149,9 @@ label schoolday1:
     scene bg school
     with fade
     sze "My life feels empty without her, like a photoelectric cell without UV rays"
+    jump postrollcall1
+    
+label postrollcall1:
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the classroom"
     menu stealwillisgirl:
@@ -927,7 +972,7 @@ label eng1p2:
                     pra "\"What?!? These are leather shoes\""
                     gra "\"Richard, give me the specs of your shoes\""
                     dik "\"Very well...custom made Steel Blue work boots, leather upper, quarter and tongue\""
-                    dik "\"Underneath the upper, the toe cap is made of AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
+                    dik "\"Underneath the upper, the toe cap is made of bullet resistant AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
                     dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
                     dik "\"The insole contains an advanced ventilation system for optimum comfort and the vulcanised rubber heel and outsole contain compartments\""
                     sze "\"...wtf\""

@@ -781,6 +781,7 @@ label eng1p1naughtycorner:
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
                         "...wrong"
+                        "You wake up in bed next to...someone"
                         sze "\"Urgh, mornings are shit\""
                         sze "\"Wait what\"" with hpunch
                         sze "\"Wha- what the fuck are you\"" with vpunch
@@ -800,9 +801,10 @@ label eng1p1naughtycorner:
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"
                         "But in the distance you hear a voice calling to you"
-                        gra "\"Arthur, stop this madness.\""
+                        gra "\"Arthur, stop this madness...\""
                         gra "\"You are damaging the integrity of the world system\""
-                        gra "\"Soon time and space will merge, and the multiple timelines of this world will collapse into one"
+                        gra "\"Soon time and space will merge, and the multiple timelines of this world will collapse into one\""
+                        gra "\"Aaaaah, we're all in trouble\""
                         "his voices fades into the distance as you start to awaken"
                         $ timetravelcount +=1
                         jump timetravel1
@@ -1176,6 +1178,8 @@ label asszembly1jigolo:
     sze "\"uh...yeah...\""
     dea "\"BYEEEE!!!\""
     "You hurry off to a secluded area, trying not to look suss"
+    jit "\"Arthur? That you?\""
+    jit "\"What you doing?\""
     "To be continued"
     jump dead
     

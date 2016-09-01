@@ -1,4 +1,4 @@
-﻿# You can place the script of your game in this file.
+# You can place the script of your game in this file.
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
@@ -9,7 +9,7 @@ image bg principaldoor = "principalofficedoor"
 image bg principaloffice = "principaloffice"
 image bg workshop = "Workshop.jpg"
 image bg hall = "hall"
-image bg hallentrance = "CZ2Yss_UAAAPRqz"
+image bg hallentrance = "CZ2Yss_UAAAPRqz.jpg"
 image bg schoolfront = "91_big.jpg"
 image bg rowecorridor = "fortrowecorridor.jpg"
 # Declare characters used by this game.
@@ -75,7 +75,8 @@ label start:
     $ royfriendship = 0
     $ leefriendship = 0
     $ butfriendship = 0
-    $ timetravel = 0
+    $ timetravelcount = 0
+    $ yangrant1_2eingutidee = False
     scene black
     # remove this these things to enable music later
     play music "Persona 4 - Traumerei - from YouTube.mp3" loop
@@ -97,7 +98,7 @@ label schoolday1:
     #btw, the day is probably wednesday or tuesday because first day back
     show moxham happy
     with dissolve
-    if timetravel is 1:
+    if timetravelcount is 1:
         if moxcounter2 > 1:
             hide moxham happy
             show moxham unhappy
@@ -118,7 +119,7 @@ label schoolday1:
             sze "\"Sze, I'm studying right now\""
             mox "\"Very well\""
             jump postrollcall1
-    elif timetravel >= 2:
+    elif timetravelcount >= 2:
         sze "\"I must avoid Moxham\""
         sze "\"She passes through the quad in 5 minutes, time to hide\""
         sze "\"...\""
@@ -635,6 +636,7 @@ label eng1p1:
     show grant normal
     gra "\"Good morning class. Lets do some engineering.\""
     gra "\"I'm glad all of you made it to class on time\""
+    hide grant normal
     show yang normal
     wil "\"That's a new record sir\""
     wil "\"You made it to class only 15min and 27s late\""
@@ -764,7 +766,7 @@ label eng1p1naughtycorner:
                     "The edges of the classroom contort around you,\""
                     "One second ago, Pragash stood merely half a metre behind you"
                     "The next, Pragash was a mile away. Or is he closer...\""
-                    if timetravel > 4:
+                    if timetravelcount > 4:
                         scene bg black
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
@@ -784,7 +786,7 @@ label eng1p1naughtycorner:
                         "Wow"
                         "Eoarchaen Era Earth is retardedly unsuitable for human life"
                         jump dead
-                    elif timetravel > 3:    
+                    elif timetravelcount > 3:    
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"
                         "But in the distance you hear a voice calling to you"
@@ -792,11 +794,11 @@ label eng1p1naughtycorner:
                         gra "\"You are damaging the integrity of the world system\""
                         gra "\"Soon time and space will merge, and the multiple timelines of this world will collapse into one"
                         "his voices fades into the distance as you start to awaken"
-                        $ timetravel +=1
+                        $ timetravelcount +=1
                         jump timetravel1
-                    elif timetravel > 0:
+                    elif timetravelcount > 0:
                         "You enter further into the familiar corner and repeat the process again"
-                        $ timetravel += 1
+                        $ timetravelcount += 1
                         jump timetravel1
                     else:
                         "You step further into the corner, your body now inches from the wall"
@@ -812,7 +814,7 @@ label eng1p1naughtycorner:
                         "..."
                         "..."
                         "And then you start to stir from your slumber, the first light of a school morning illuminating your eyes"
-                        $ timetravel += 1
+                        $ timetravelcount += 1
                         jump timetravel1
                 "Escape whilst you still can":
                     "You turn away from the corner, and take a step away from it"
@@ -1088,63 +1090,67 @@ label eng1p2:
 label asszembly1:
     stop music
     play music "Persona 3 - Iwatodai Dorm - from YouTube.mp3" loop
-    scene bg rowecorridor
+    scene bg hallentrance
     with fade
     sze "\"Time for my first assembly of the year\""
     wil "\"Indeed, I wonder whether Moxham will be here\""
     pra "\"I'm finally free from the Engineering room...\""
     sze "\"Why not drop it?\""
     pra "\"Not just yet... I need to enact my revenge\""
-if $ yangrant1_2eingutidee = True:
-    wil "\"That reminds me, Pragash, I have a proposal of sorts\""
-    pra "\"What kind?\""
-    wil "\"One that might facilitate for such an enactment of revenge, in return for a minor favour\""
-    sze "\"Aaah, yes, indeed\""
-    "Yang appreciates the backup, allowing Pragash to hear the proposal for his election onto the SRC"
-    call wilfriendshipgain from _asszembly1wilfriendshipgain
-    pra "\"Unfortunately, the SRC&PNC hate me, I will need something really hero from a PR team to pull this off\""
-    pra "\"Otherwise, I would love to help\""
-    wil "\"Hmmm... Arthur, I don't suppose you could be a good friend and help out here...\""
+    if yangrant1_2eingutidee is True:
+        wil "\"That reminds me, Pragash, I have a proposal of sorts\""
+        pra "\"What kind?\""
+        wil "\"One that might facilitate for such an enactment of revenge, in return for a minor favour\""
+        sze "\"Aaah, yes, indeed\""
+        "Yang appreciates the backup, allowing Pragash to hear the proposal for his election onto the SRC"
+        call wilfriendshipgain from _asszembly1wilfriendshipgain
+        pra "\"Unfortunately, the SRC&PNC hate me, I will need something really hero from a PR team to pull this off\""
+        pra "\"Otherwise, I would love to help\""
+        wil "\"Hmmm... Arthur, I don't suppose you could be a good friend and help out here...\""
+        menu:
+            "\"Ok\"":
+                sze "\"Ok\""
+                pra "\"There's the Fortian spirit\""
+                call fortiangain from _asszembly1fortiangain
+                wil "\"My plan will come into fruition then\""
+                pra "\"I owe much to the two of you then\""
+                call prafriendshipgain from _asszembly1prafriendshipgain
+                sze "\"np\""
+                $ quest1electionpromise = True
+                jump asszembly1p1
+            "\"I'll pass\"":
+                sze "\"I'll pass\""
+                pra "\"Wow, what a little shit\""
+                call prafriendshiploss from _asszembly1prafriendshiploss
+                wil "\"Indeed\""
+                call wilfriendshiploss from _asszembly1wilfriendshiploss
+                sze "\"Calm down, fine\""
+                $ quest1electionpromise = True
+                jump asszembly1p1
+            "\"Play with vices\"":
+                sze "\"I wanna play with vices\""
+                wil "\"The fuck you talking about?\""
+                sze "\"Nevermind\""
+                call intelloss from _asszembly1intelloss
+                pra "\"Just do it\""
+                sze "\"...\""
+                sze "\"fine\""
+                $ quest1electionpromise = True
+                jump asszembly1p1
+    else:
+        wil "\"Why would you want to enact revenge upon engineering\""
+        wil "\"It is the greatest subject to have ever existed\""
+        "To be continued"
+label asszembly1p1:
+    dea "\"Hey guys, looking forward to assembly?\""
+    wil "\"It would be un-Fortian to skip it\""
+    pra "\"I hear Gary might be...\""
+    "The conversation gets you thinking about your options..."
     menu:
-        "\"Ok\"":
-            sze "\"Ok\""
-            pra "\"There's the Fortian spirit\""
-            call fortiangain from _asszembly1fortiangain
-            wil "\"My plan will come into fruition then\""
-            pra "\"I owe much to the two of you then\""
-            call prafriendshipgain from _asszembly1prafriendshipgain
-            sze "\"np\""
-            $ quest1electionpromise = True
-            return
-        "\"I'll pass\"":
-            sze "\"I'll pass\""
-            pra "\"Wow, what a little shit\""
-            call prafriendshiploss from _asszembly1prafriendshiploss
-            wil "\"Indeed\""
-            call wilfriendshiploss from _asszembly1wilfriendshiploss
-            sze "\"Calm down, fine\""
-            $ quest1electionpromise = True
-            return
-        "\"Play with vices\"":
-            sze "\"I wanna play with vices\""
-            wil "\"The fuck you talking about?\""
-            sze "\"Nevermind\""
-            call intelloss from _asszembly1intelloss
-            pra "\"Just do it\""
-            sze "\"...\""
-            sze "\"fine\""
-            $ quest1electionpromise = True
-            return
-    return
-dea "\"Hey guys, looking forward to assembly?\""
-wil "\"It would be un-Fortian to skip it\""
-pra "\"I hear Gary might be...\""
-"The conversation gets you thinking about your options..."
-menu:
-    "\"I need to put some stuff in my locker\"":
-        jump asszembly1jigolo
-    "\"Lol, actually ceebs skipping asszembly though\"":
-        jump asszembly1_2
+        "\"I need to put some stuff in my locker\"":
+            jump asszembly1jigolo
+        "\"Lol, actually ceebs skipping asszembly though\"":
+            jump asszembly1_2
 
 label asszembly1jigolo:
     sze "\"I need to put some stuff in my locker\""
@@ -1153,9 +1159,11 @@ label asszembly1jigolo:
     sze "\"uh...yeah...\""
     dea "\"BYEEEE!!!\""
     "You hurry off to a secluded area, trying not to look suss"
+    "To be continued"
 
 label asszembly1_2:
     sze "\"Lol, actually ceebs skipping asszembly though\""
+    "To be continued"
     
 # sze "\"Need to go assembly\""
 #    scene bg hallentrance

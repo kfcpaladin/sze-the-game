@@ -207,7 +207,7 @@ label moxfriendshiploss:
 
 label drkfriendshipgain:
     $ drkfriendship += 1
-    "?????? [drkfriendship]"
+    "You probably had deep conversation with him about the Naziness of toilet paper or some shit, raising friendship with him to [drkfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -216,7 +216,7 @@ label drkfriendshipgain:
 
 label drkfriendshiploss:
     $ drkfriendship -= 1
-    "??????? [drkfriendship]"
+    "You dirked Derk, causing friendship with him to fall to [drkfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -243,7 +243,7 @@ label jitfriendshiploss:
 
 label leefriendshipgain:
     $ leefriendship += 1
-    "???? [leefriendship]. ?????."
+    "You were lame but its ok coz your friendship with Billabong Lee is at [leefriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -252,7 +252,7 @@ label leefriendshipgain:
 
 label leefriendshiploss:
     $ leefriendship -= 1
-    "??????[leefriendship]. ????."
+    "You Gullible George, coz your friendship with him is lowered to [leefriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -261,7 +261,7 @@ label leefriendshiploss:
 
 label royfriendshipgain:
     $ royfriendship += 1
-    "You improved your friendship with Roy, it is now at [royfriendship]. You are safe from his gas attacks, for now."
+    "You improved your friendship with Roy, it is now at [royfriendship]. You might be safe from his gas attacks, for now."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -270,7 +270,7 @@ label royfriendshipgain:
 
 label royfriendshiploss:
     $ royfriendship -= 1
-    "Your friendship with Roy dropped to [royfriendship]. It is strongly advised you immediately evacuate the room."
+    "Your friendship with Roy dropped to [royfriendship]. It is strongly advised that you immediately evacuate the room."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -279,16 +279,34 @@ label royfriendshiploss:
 
 label butfriendshipgain:
     $ butfriendship += 1
-    "????? [butfriendship]. ?????."
+    "You probably had a deep philosophical debate about politics, increasing your friendship with Aradhya to [butfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
     else:
         return  
 
-label royfriendshiploss:
+label butfriendshiploss:
     $ butfriendship -= 1
-    "????? [butfriendship]. ?????."
+    "You probably made a bad butter pun or mispelt Arradiia's name, causing friendship with him to drop to [butfriendship]."
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+
+label dngfriendshipgain:
+    $ dngfriendship += 1
+    "You probably engaged in illtasted Naomi puns causing Deng friendship to drop to [butfriendship]"
+    if friendshiptutorial is False:
+        call tutorialfriendship
+        return
+    else:
+        return  
+
+label dngfriendshiploss:
+    $ dngfriendship -= 1
+    "You probably made a bad butter pun or mispelt Arradiia's name, causing friendship with him to drop to [butfriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -400,7 +418,7 @@ label charmgain:
             "With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
             return
         elif charm > -50:
-            "Even prostitutes would refuse to bang you, and your [charm] charm."
+            "Even prostitutes would refund you and put you on their blacklist cos your charm is [charm]."
             return
         elif charm > -75:
             "The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
@@ -481,7 +499,7 @@ label fortiangain:
             "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
             return
         elif fort > -50:
-            "At [fort] fortianness, your death is the fantasy of Ms Moxham"
+            "At [fort] fortianness, Moxham is willing to engage in the capitalist process of putting a bounty on your head to kill you"
             return
         elif fort > -75:
             "With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
@@ -530,7 +548,78 @@ label fortianloss:
         $ fort -= 1
         "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
         return
-
+    
+label strengthgain:
+    if forttutorial is True:
+        $ fort -= 1
+        "You fortianness dropped."
+        if fort > 100:
+            "But you are still the epitome of the fort, with a fortianness of [fort]"
+            return
+        elif fort > 75:
+            "Michael Kirby looks up to you and your fortianness of [fort]"
+            return
+        elif fort > 50:
+            "With a fortianness of [fort], you are often called in to speak at Speech Day"
+            return
+        elif fort > 25:
+            "With a fortianness of [fort], you probably made it into the SRC"
+            return
+        elif fort > 0:
+            "At [fort] fortianness, you are merely a generic student"
+            return
+        elif fort > -25:
+            "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+            return
+        elif fort > -50:
+            "At [fort] fortianness, your death is the fantasy of Ms Moxham"
+            return
+        elif fort > -75:
+            "With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+            return
+        else:
+            "Your racist, sexist and classist behaviour is an affront to the school"
+            return
+    else:
+        $ fort -= 1
+        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
+        return
+label strengthloss:
+    if forttutorial is True:
+        $ fort -= 1
+        "You fortianness dropped."
+        if fort > 100:
+            "But you are still the epitome of the fort, with a fortianness of [fort]"
+            return
+        elif fort > 75:
+            "Michael Kirby looks up to you and your fortianness of [fort]"
+            return
+        elif fort > 50:
+            "With a fortianness of [fort], you are often called in to speak at Speech Day"
+            return
+        elif fort > 25:
+            "With a fortianness of [fort], you probably made it into the SRC"
+            return
+        elif fort > 0:
+            "At [fort] fortianness, you are merely a generic student"
+            return
+        elif fort > -25:
+            "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+            return
+        elif fort > -50:
+            "At [fort] fortianness, your death is the fantasy of Ms Moxham"
+            return
+        elif fort > -75:
+            "With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+            return
+        else:
+            "Your racist, sexist and classist behaviour is an affront to the school"
+            return
+    else:
+        $ fort -= 1
+        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
+        return
+    
 label dailymoxcounter:
     $ moxcounter2 += 1
     $ moxcounter1 += 1

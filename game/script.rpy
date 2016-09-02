@@ -1165,6 +1165,7 @@ label asszembly1p1:
     wil "\"It would be un-Fortian to skip it\""
     pra "\"I hear Gary might be...\""
     "The conversation gets you thinking about your options..."
+    #wil fuck you derek lol totes 
     menu:
         "\"I need to put some stuff in my locker\"":
             jump asszembly1jigolo

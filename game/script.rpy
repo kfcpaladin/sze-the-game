@@ -30,6 +30,7 @@ define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
+define dng = Character('Steven'. color="#FFFFFF", image="steven")
 #not sure if that's legit spelling, plz check
 style window:
     left_padding 150
@@ -75,6 +76,7 @@ label start:
     $ royfriendship = 0
     $ leefriendship = 0
     $ butfriendship = 0
+    $ dngfriendship = 0
     $ timetravelcount = 0
     $ yangrant1_2eingutidee = False
     scene black
@@ -1185,6 +1187,11 @@ label asszembly1jigolo:
     menu:
         "\"Run\"":
             "You run to assembly like the chicken that you are"
+            jump asszembly1_2
+        "\"Sneak up on the source of the sound\"":
+            "You sneak up on the source of the sound"
+        "\"You confront the speaker\"":
+            "You walk up to the speaker, without attempting to disguise your approach"
             
     jump dead
     

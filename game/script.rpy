@@ -24,9 +24,9 @@ define wil = Character('Will Yang', color="#FFFFFF", image="yang")
 define cha = Character('Chao', color="#FFFFFF", image="chao")
 define mox = Character('MOXHAM', color="#FFFFFF", image="moxham")
 define gra = Character('GRANT', color="#FFFFFF", image="grant")
-define dik = Character('Richard', color="#000080", image="richard")
-define drk = Character('Derek', color="#4169e1", image="derek")
-define jit = Character('Gary', color="#CCFFCC", image="gary")
+define dik = Character('Richard', color="#FFFFFF", image="richard")
+define drk = Character('Derek', color="#FFFFFF", image="derek")
+define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
@@ -776,7 +776,7 @@ label eng1p1naughtycorner:
                     "The edges of the classroom contort around you,\""
                     "One second ago, Pragash stood merely half a metre behind you"
                     "The next, Pragash was a mile away. Or is he closer...\""
-                    if timetravelcount > 4:
+                    if timetravelcount >= 4:
                         scene bg black
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
@@ -797,7 +797,7 @@ label eng1p1naughtycorner:
                         "Wow"
                         "Eoarchaen Era Earth is retardedly unsuitable for human life"
                         jump dead
-                    elif timetravelcount > 3:    
+                    elif timetravelcount >= 3:    
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"
                         "But in the distance you hear a voice calling to you"
@@ -808,7 +808,7 @@ label eng1p1naughtycorner:
                         "his voices fades into the distance as you start to awaken"
                         $ timetravelcount +=1
                         jump timetravel1
-                    elif timetravelcount > 0:
+                    elif timetravelcount >= 1:
                         "You enter further into the familiar corner and repeat the process again"
                         $ timetravelcount += 1
                         jump timetravel1
@@ -1177,10 +1177,14 @@ label asszembly1jigolo:
     pra "\"Alright, see you at assembly\""
     sze "\"uh...yeah...\""
     dea "\"BYEEEE!!!\""
-    "You hurry off to a secluded area, trying not to look suss"
-    jit "\"Arthur? That you?\""
-    jit "\"What you doing?\""
-    "To be continued"
+    "You hurry off back to the Rowe corridor, trying not to look suss"
+    scene bg rowecorridor
+    jit "\"Who's that?\""
+    sze "\"Fuck\""
+    menu:
+        "\"Run\"":
+            "You run to assembly like the chicken that you are"
+            
     jump dead
     
 label asszembly1_2:

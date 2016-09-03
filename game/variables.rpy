@@ -297,7 +297,7 @@ label butfriendshiploss:
 
 label dngfriendshipgain:
     $ dngfriendship += 1
-    "You probably engaged in illtasted Naomi puns causing Deng friendship to drop to [butfriendship]"
+    "You were metal enough for Deng, resulting in friendship with him increasing to [dngfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -306,7 +306,7 @@ label dngfriendshipgain:
 
 label dngfriendshiploss:
     $ dngfriendship -= 1
-    "You probably made a bad butter pun or mispelt Arradiia's name, causing friendship with him to drop to [butfriendship]."
+    "You made bad joke about a female friend of Deng's, lowering friendship with him to [dngfriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -418,7 +418,7 @@ label charmgain:
             "With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
             return
         elif charm > -50:
-            "Even prostitutes would refund you and put you on their blacklist cos your charm is [charm]."
+            "With charm at [charm], even contemporary art museums refuse to let you in as an art piece."
             return
         elif charm > -75:
             "The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
@@ -458,7 +458,7 @@ label charmloss:
             "With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
             return
         elif charm > -50:
-            "Even prostitutes would refuse to bang you, and your [charm] charm."
+            "With charm at [charm], even contemporary art museums refuse to let you in as an art piece."
             return
         elif charm > -75:
             "The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
@@ -467,7 +467,7 @@ label charmloss:
             "You once tried to masturbate, your hand rejected you."
             return
         else:
-            "Even bacteria tries to avoid you."
+            "Even bacteria try to avoid you."
             return
     else:
         "Your Charm just decreased. Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life."
@@ -480,7 +480,7 @@ label fortiangain:
         $ fort += 1
         "You became more Michael Kirby.  , as your Fortianness is at [fort]"
         if fort > 100:
-            "But you are still the epitome of the fort, with a fortianness of [fort]"
+            "You are the epitome of the fort, with a fortianness of [fort]"
             "you are a proper protester, you call the police "pig dogs" and you are part of an artist collective"
             return
         elif fort > 75:

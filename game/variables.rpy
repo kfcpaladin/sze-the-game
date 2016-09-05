@@ -234,7 +234,7 @@ label jitfriendshipgain:
 
 label jitfriendshiploss:
     $ jitfriendship -= 1
-    "Your friendship with Gary dropped to [jitfriendship]. You probably criticized his interests in chinese cartoons or something."
+    "Your friendship with Gary dropped to [jitfriendship]. You probably criticized his interests in chinese \"cartoons\" or something."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -306,7 +306,7 @@ label dngfriendshipgain:
 
 label dngfriendshiploss:
     $ dngfriendship -= 1
-    "You made bad joke about a female friend of Deng's, lowering friendship with him to [dngfriendship]."
+    "You probs made bad joke about a female friend of Deng's, or were just retard, lowering friendship with him to [dngfriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
         return
@@ -400,7 +400,7 @@ label charmgain:
         $ charm += 1
         "Your charm increased"
         if charm > 100:
-            "With a charm of [charm], you probably have slayed all 3.4Bn women in the world right now."
+            "With a charm of [charm], you slay just by looking. Gaze upon the world, your dominion."
             return
         elif charm > 75:
             "With a charm of [charm], you have probably slayed every LG in Sydney by now"
@@ -418,7 +418,7 @@ label charmgain:
             "With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
             return
         elif charm > -50:
-            "With charm at [charm], even contemporary art museums refuse to let you in as an art piece."
+            "With charm at [charm], you are often mistaken as a modern art piece."
             return
         elif charm > -75:
             "The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
@@ -458,7 +458,7 @@ label charmloss:
             "With charm of [charm], there seems to be an invisible forcefield repelling LGs from you"
             return
         elif charm > -50:
-            "With charm at [charm], even contemporary art museums refuse to let you in as an art piece."
+            "With charm at [charm], you are often mistaken as a modern art piece."
             return
         elif charm > -75:
             "The average gayness of every room you enter is increased by 100%, due to your charm of [charm]"
@@ -547,77 +547,87 @@ label fortianloss:
     else:
         $ fort -= 1
         "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
+        $ forttutorial = True
+    return
+    
+label strengthloss:
+    if strengthtutorial is True:
+        $ strength -= 1
+        "Your combat propensity has increased."
+        if strength > 100:
+            "Your combat propensity is at [strength], making you Level {\displaystyle \aleph _{0}} \aleph _{0} S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Knight Marshal Admiral, surpassing Saitama in skill."
+            return
+        elif strength > 75:
+            "With combat propensity at [strength], you probably ended 300 spartans with a single one-inch punch."
+            return
+        elif strength > 50:
+            "Your combat propensity of [strength] would allow you to beat black-belt Aradhya and Jew-jitsu Steven with ease."
+            return
+        elif strength > 25:
+            "At combat propensity levels of [strength], you can probs beat the average student."
+            return
+        elif strength > 0:
+            "At [strength], your combat propensity, it is advised that you tactically retreat from your \"fights\"."
+            return
+        elif strength > -25:
+            "Your below average combat propensity of [strength] suggests that you have a thing for being dominated."
+            return
+        elif strength > -50:
+            "At [strength] combat propensity, a samurai would rather commit seppuku than face the dishonour of seeing you."
+            return
+        elif strength > -75:
+            "With [strength] combat propensity, 6 year olds will raep your ass and pussy slays you."
+            return
+        elif strength > -100:
+            "When you have [strength] combat \"propensity\", you will get rekt so hard, you will be reincarnated as an abortion."
+            return
+        else:
+            "Your combat \"propensity\" or lack thereof will lead to much assrippings in the future"
+            return
+    else:
+        $ strength -= 1
+        "Your combat propensity has decreased and can be improved by getting good. Currently, you make 6 year olds look like professional MMA fighters."
+        $ strengthtutorial = True
         return
     
 label strengthgain:
-    if forttutorial is True:
-        $ fort -= 1
-        "You fortianness dropped."
-        if fort > 100:
-            "But you are still the epitome of the fort, with a fortianness of [fort]"
+    if strengthtutorial is True:
+        $ strength += 1
+        "Your combat propensity has increased."
+        if strength > 100:
+            "Your combat propensity is at [strength], making you Level {\displaystyle \aleph _{0}} \aleph _{0} S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Knight Marshal Admiral, surpassing Saitama in skill."
             return
-        elif fort > 75:
-            "Michael Kirby looks up to you and your fortianness of [fort]"
+        elif strength > 75:
+            "With combat propensity at [strength], you probably ended 300 spartans with a single one-inch punch."
             return
-        elif fort > 50:
-            "With a fortianness of [fort], you are often called in to speak at Speech Day"
+        elif strength > 50:
+            "Your combat propensity of [strength] would allow you to beat black-belt Aradhya and Jew-jitsu Steven with ease."
             return
-        elif fort > 25:
-            "With a fortianness of [fort], you probably made it into the SRC"
+        elif strength > 25:
+            "At combat propensity levels of [strength], you can probs beat the average student."
             return
-        elif fort > 0:
-            "At [fort] fortianness, you are merely a generic student"
+        elif strength > 0:
+            "At [strength], your combat propensity, it is advised that you tactically retreat from your \"fights\"."
             return
-        elif fort > -25:
-            "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+        elif strength > -25:
+            "Your below average combat propensity of [strength] suggests that you have a thing for being dominated."
             return
-        elif fort > -50:
-            "At [fort] fortianness, your death is the fantasy of Ms Moxham"
+        elif strength > -50:
+            "At [strength] combat propensity, a samurai would rather commit seppuku than face the dishonour of seeing you."
             return
-        elif fort > -75:
-            "With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+        elif strength > -75:
+            "With [strength] combat propensity, 6 year olds will raep your ass and pussy slays you."
             return
-        else:
-            "Your racist, sexist and classist behaviour is an affront to the school"
-            return
-    else:
-        $ fort -= 1
-        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
-        return
-label strengthloss:
-    if forttutorial is True:
-        $ fort -= 1
-        "You fortianness dropped."
-        if fort > 100:
-            "But you are still the epitome of the fort, with a fortianness of [fort]"
-            return
-        elif fort > 75:
-            "Michael Kirby looks up to you and your fortianness of [fort]"
-            return
-        elif fort > 50:
-            "With a fortianness of [fort], you are often called in to speak at Speech Day"
-            return
-        elif fort > 25:
-            "With a fortianness of [fort], you probably made it into the SRC"
-            return
-        elif fort > 0:
-            "At [fort] fortianness, you are merely a generic student"
-            return
-        elif fort > -25:
-            "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
-            return
-        elif fort > -50:
-            "At [fort] fortianness, your death is the fantasy of Ms Moxham"
-            return
-        elif fort > -75:
-            "With [fort] fortianness, you are probably a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+        elif strength > -100:
+            "When you have [strength] combat \"propensity\", you will get rekt so hard, you will be reincarnated as an abortion."
             return
         else:
-            "Your racist, sexist and classist behaviour is an affront to the school"
+            "One day, O destined Dragon Warrior, you will fulfil your destined destiny of being Dragonslayer"
             return
     else:
-        $ fort -= 1
-        "Your Fortianness has just decreased. Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian."
+        $ strength += 1
+        "Your combat propensity has increased and can be improved by getting good. Currently you aren't very good."
+        $ strengthtutorial = True
         return
     
 label dailymoxcounter:

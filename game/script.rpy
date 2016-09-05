@@ -30,7 +30,7 @@ define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
-define dng = Character('Steven'. color="#FFFFFF", image="steven")
+define dng = Character('Steven', color="#FFFFFF", image="steven")
 #not sure if that's legit spelling, plz check
 style window:
     left_padding 150

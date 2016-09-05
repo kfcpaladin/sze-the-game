@@ -1256,7 +1256,7 @@ label asszembly1_2:
     dng "\"Hey Arthur, how have you prepared for 3-unit?\""
     sze "\"uh...\""
     dng "\"I'm just revising simple harmonic motion and permutations and combinations\""
-    wil "\"Don't worry, they're easy topics, ez 100% in tests\""
+    wil "\"Don't worry, they're easy topics, ez 100 in tests\""
     kok "\"Tests? I think Chao should get one of his LGs to do one, make sure-\""
     cha "\"Fee\"" with vpunch
     cha "\"Fi\"" with vpunch

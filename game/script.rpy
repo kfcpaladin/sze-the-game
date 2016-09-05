@@ -54,6 +54,7 @@ label start:
     $ moxcounter2 = 0
     $ charm = 0
     $ strength = 0
+    $ strengthtutorial = False
     $ inteltutorial = False
     $ thirst = 0
     $ fort = 0
@@ -969,6 +970,7 @@ label yangrantp1_3:
     
 label eng1p2:
     show grant normal
+    gra "\"AAAHH, MINGLE!!\"" with hpunch
     gra "\"Gather around the front table, grunts\""
     gra "\"Before we learn about planes, do these worksheets\""
     gra "\"Actually no, do these safety tests on doing work sheets before you can do the worksheets\""
@@ -1026,7 +1028,8 @@ label eng1p2:
                     dea "\"heeelllllppppp\""
                     dik "\"Sorry, you had your back to me...\""
                     "Richard left"
-                    dea "\"Fuck you Arthur\""
+                    dea "\"Fuck you Arthur, you're a coward\""
+                    call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
                     dea "\"Nothing\""
                     call fortianloss from _eng1p2fortianloss
@@ -1187,13 +1190,27 @@ label asszembly1jigolo:
     menu:
         "\"Run\"":
             "You run to assembly like the chicken that you are"
+            sze "That was a close call"
+            call strengthloss from _asszemblyjigolostrengthloss
             jump asszembly1_2
         "\"Sneak up on the source of the sound\"":
             "You sneak up on the source of the sound"
+            sze "\"...\""
+            jit "\"Whoa, SHIT!\"" with vpunch
+            sze "\"Oh, it's just Gary\""
+            call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
+            jit "\"Can u not, like plz? I thought you were teacher\""
+            sze "\"Soz, why you here?\""
+            jump asszemblyjigolo2
         "\"You confront the speaker\"":
             "You walk up to the speaker, without attempting to disguise your approach"
-            
-    jump dead
+            jit "\"Oh, hi Arthur\""
+            sze "\"lol, why you so scared?\""
+            call strengthgain from _asszemblyjigolostrengthgain
+            jit "\"Calm down, mate\""
+            jit "\"Shut the fuck up, there might be teachers...\""
+            sze "\"Well, I'm planning on ditching\""
+            jump asszemblyjigolo1_2
     
 label asszembly1_2:
     scene bg hallentrance
@@ -1209,30 +1226,135 @@ label asszembly1_2:
     sze "\"...Willis\""
     pra "\"Willis, I thought we were friends, how could you forget me?\""
     kok "\"I haven't\""
+    hide willis normal
+    with dissolve
     dea "\"Oh hey, fucktard\""
     wil "\"Why you still following us?\""
     dea "\"Looking for Mon and Pang\""
-    "To be continued"
-    
-# sze "\"Need to go assembly\""
-#    scene bg hallentrance
-#    with fade
-#    if $ phys1p3p1chaopissed = True:
-#   "Chao is blocking me from szeing anyone"
-#    scene bg hall
-#    with fade
-#    "Gaudeamus igitur..."
-#    mox "\"I would like to acknowledge the traditional owners of the land...\""
-#    "30 minutes later"
-#    mox "\"Michael Kirby is great, let us worship Michael Kirby\""
-#    "40 minutes later"
-#    mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
-#    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.'
-#        There is more to high school than ATAR\""
-#    "20 minutes later"
-#    sze "..."
-#    sze "..."
-#    "Everyone is leaving, better wake up"
+    dea "\"Oh, they're there, cya suckaz\""
+    "Dean left"
+    show willis normal
+    kok "\"Oh look, there's Derkaderk and DickDick\""
+    hide willis normal
+    dik "\"Oh bonjour, Monseiur Willie L'Willie\""
+    drk "\"Hi cunts\""
+    wil "\"Heil\""
+    kok "\"Polite as always, maybe Rusali over there might teach you some etiquette\""
+    dik "\"Hey, I was being French, and they know everything about etiquette; the word originated from the Old French word estiquette, which means \"ticket\"-\""
+    kok "\"Shut the fuck up, no one cares\""
+    sze "\"Wow Willis\""
+    show rusali normal
+    rus "\"Waow Willis\""
+    sze "\"Hi Rusali\""
+    rus "\"Arthur, you are thur best friend I have\""
+    sze "\"Really?\""
+    rus "\"Nah, you aren't hot chick ;);)\""
+    drk "\";);)\""
+    hide rusali normal
+    dng "\"Woh, who's this? I heard \"hot chick\"...\""
+    sze "\"Hi Steven\""
+    dng "\"Hey Arthur, how have you prepared for 3-unit?\""
+    sze "\"uh...\""
+    dng "\"I'm just revising simple harmonic motion and permutations and combinations\""
+    wil "\"Don't worry, they're easy topics, ez 100% in tests\""
+    kok "\"Tests? I think Chao should get one of his LGs to do one, make sure-\""
+    cha "\"Fee\"" with vpunch
+    cha "\"Fi\"" with vpunch
+    cha "\"Fo\"" with vpunch
+    cha "\"Fum\"" with vpunch
+    cha "\"Imma fuck you up the bum\""
+    if $ phys1p3p1chaopissed = True:
+        "Chao is blocking me"
+        cha "\"I promised I would have my revenge...\"" with vpunch
+        sze "\"Shit\""
+        "You try to run but the crowd blocks you and Chao grabs you"
+        sze "\"Aarrgh, fuck off, don't touch me\""
+        cha "\"Huehue\"" with hpunch
+        sze "\"Ow, fuck, my head...\""
+        call intelloss from _asszembly1_2chaopisssedintelloss1
+        cha "\"Fuck your head? Ok\"" with hpunch
+        sze "\"Nooo, raep, raep\""
+        if $ dikfriendship > 0:
+            dik "\"Oi, fatass, pick on people your own size, like Willem or someone\""
+            cha "\"Lemme think...\""
+            cha "\"Nah...\""
+            dik "\"Alright, then\""
+            dik "\"Take this!\"" with hpunch
+            cha "\"FUUUUUUCCCCKKKKK, what the shit was that?!?!?!\""
+            dik "\"Steel toes, bitch\""
+            cha "\"Arrgh, don't make me angry\""
+            dik "\"Don't make me make Chao Mein\""
+            cha "\"...\""
+            cha "\"Fuck off\""
+            "You observed how some combat technique"
+            call strengthgain from __asszembly1_2chaopisssedstrengthgain
+            jump asszembly1_3
+        else:
+            cha "\"I go full force\"" with vpunch
+            call intelloss from _asszembly1_2chaopisssedintelloss2
+            sze "\"Aaah, plz stop\""
+            cha "\"Why should I? You know you like it\""
+            call intelloss from _asszembly1_2chaopisssedintelloss3
+            sze "\"No... No means no\""
+            "Chao slams you down onto the ground"
+            cha "\"I will bodyslam you to Chaoder\"" with vpunch
+            call intelloss from _asszembly1_2chaopisssedintelloss4
+            call intelloss from _asszembly1_2chaopisssedintelloss5
+            call intelloss from _asszembly1_2chaopisssedintelloss6
+            sze "\"Raep, raep\""
+            sze "\"I positively assert that no means no\""
+            "You faintly hear people shouting at Chao and through your blurred vision you can make out a crowd of people swarming Chao..."
+            "The whities have heard you positively asserting yourself against Chao's desecration of your physical form, one is helping you up"
+            "They praise the Fortianness of your actions"
+            call fortiangain from _asszembly1_2chaopisssedfortiangain
+            "You proceed to weakly move your battered and bruised body into asszembly"
+            jump asszembly1_3
+
+            
+label asszembly1_3:
+    scene bg hall
+    with fade
+    "Gaudeamus igitur..."
+    mox "\"I would like to acknowledge the traditional owners of the land...\""
+    sze "Wow, this is boring"
+    menu:
+        "\"Sleep\"":
+            drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
+            jump dead
+        "\"Talk\"":
+            "You turn to talk to Derek and Richard"
+            if $ quest1electionpromise = True:
+                sze "\"I wonder what it would be like for Pragash to be on the SRC...\""
+                dik "\"Wow, that is an interesting idea\""
+                dik "\"And retarded at the same time\""
+                drk "\"Well actually...\""
+                "Roy farted"
+                jump dead
+            else:
+                dik "\"I reckon I a 16in High Explosive shell fired from a battleship can destroy the hall\""
+                sze "\"Why would that even happen\""
+                "A 16in High Explosive shell fired from a battleship destroyed the hall" with hpunch
+                sze "\"Fuck\""
+                jump dead
+        "\"Pay attention\"":
+            "30 minutes later"
+            mox "\"Michael Kirby is great, let us worship Michael Kirby\""
+            "40 minutes later"
+            mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
+            mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.'
+            There is more to high school than ATAR\""
+            "20 minutes later"
+            sze "\"Well that was fucking useless\""
+            call fortiangain from _asszembly1_3fortiangain
+            jump dead
+label asszemblyjigolo1_2:
+    jit "\"Huehuehue...\""
+    sze "\"What?\""
+    jit "\"I can now re-educate you\""
+    sze "\"AAAHHHHH RAEP RAEP!!!\""
+    jit "\"Scream all you like, no one can hear you\""
+    sze "\"Fuck\""
+    jump dead
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
 label dead:
     scene black

@@ -79,6 +79,7 @@ label start:
     $ butfriendship = 0
     $ dngfriendship = 0
     $ timetravelcount = 0
+    $ phys1p3p1chaopissed = False
     $ yangrant1_2eingutidee = False
     scene black
     # remove this these things to enable music later
@@ -1234,22 +1235,6 @@ label asszembly1_2:
     dea "\"Oh, they're there, cya suckaz\""
     "Dean left"
     show willis normal
-    kok "\"Oh look, there's Derkaderk and DickDick\""
-    hide willis normal
-    dik "\"Oh bonjour, Monseiur Willie L'Willie\""
-    drk "\"Hi cunts\""
-    wil "\"Heil\""
-    kok "\"Polite as always, maybe Rusali over there might teach you some etiquette\""
-    dik "\"Hey, I was being French, and they know everything about etiquette; the word originated from the Old French word estiquette, which means \"ticket\"-\""
-    kok "\"Shut the fuck up, no one cares\""
-    sze "\"Wow Willis\""
-    show rusali normal
-    rus "\"Waow Willis\""
-    sze "\"Hi Rusali\""
-    rus "\"Arthur, you are thur best friend I have\""
-    sze "\"Really?\""
-    rus "\"Nah, you aren't hot chick ;);)\""
-    drk "\";);)\""
     hide rusali normal
     dng "\"Woh, who's this? I heard \"hot chick\"...\""
     sze "\"Hi Steven\""

@@ -16,7 +16,7 @@ image bg rowecorridor = "fortrowecorridor.jpg"
 define sze = Character('Sze', color="#FCFCFC", image="arthur")
 define rin = Character('Rina', color="#007408", image="serena")
 define kok = Character('Willis', color="#666666", image="willis")
-define flu = Character('FLUITSMA', color="#FFFFFF", image="fluitsma")
+define flu = Character('FLUITSIE', color="#FFFFFF", image="fluitsma")
 define rus = Character('Rusali', color="#FFFFFF", image="rusali")
 define pra = Character('Pragash', color="#FFFFFF", image="pragash")
 define dea = Character('Dean', color="#FFFFFF", image="dean")

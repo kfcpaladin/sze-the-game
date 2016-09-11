@@ -67,7 +67,7 @@ label start:
     $ rusfriendship = 3
     $ prafriendship = 0
     $ deafriendship = 0
-    $ wilfriendship = 40
+    $ wilfriendship = 0
     $ chafriendship = 0
     $ grafriendship = 0
     $ moxfriendship = 0

@@ -1386,12 +1386,14 @@ label asszembly1_4:
     wil "\"Pah, talking about helping the community; only I know of what must be done for the greater good\""
     jump recess1
 label asszemblyjigolo1_2:
-    jit "\"Huehuehue...\""
-    sze "\"What?\""
-    jit "\"I can now re-educate you\""
-    sze "\"AAAHHHHH RAEP RAEP!!!\""
-    jit "\"Scream all you like, no one can hear you\""
-    sze "\"Fuck\""
+    jit "\"Arrite, so long as you don't be dog, we'll be fine with you here\""
+    jit "\"Follow me, and listen, yeh? If u see a teacher, bail yeh.\""
+    "You see a couple of other people milling about"
+    sze "\"Where are we going?\""
+    jit "\"The Rowe Dungeon\""
+    sze "\"Fuck, not there! We'll get destroyed by the principal\""
+    jit "\"That's not it, son! Y would we use that one? That one's the legendary Cohen Dungeon\""
+    jit "\"U must be munted to not know dat\""
     jump dead
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
 label recess1:

@@ -67,7 +67,7 @@ label start:
     $ rusfriendship = 3
     $ prafriendship = 0
     $ deafriendship = 0
-    $ wilfriendship = 0
+    $ wilfriendship = 40
     $ chafriendship = 0
     $ grafriendship = 0
     $ moxfriendship = 0
@@ -172,7 +172,7 @@ label TheKwokappears:
         with dissolve
         kok "\"Ayy, if it aint my old buddy Arthur.\""
         kok "\"I aint seen you in a while, what you been up to lately\""
-        sze "Oh dear, its willis. He is currently in a relationship with serena, but i will win her in the end."
+        sze "Oh dear, its Willis Lau Kwok. He is currently in a relationship with serena, but i will win her in the end."
         sze "\"U-Uh nothing in particular.. umm, Just been study and yeah...\""
         kok "\"Well we should be going to next period soon, wouldnt want Fluitsma to get mad\""
         sze "\"Yea, lets go\""
@@ -636,7 +636,7 @@ label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop
     with dissolve
-    play music "Edith Piaf - Non, Je ne regrette rien - from YouTube.mp3" loop
+    play music "Los Lobos - La Bamba (HQ,16-9) - from YouTube.mp3" loop
     show yang normal
     wil "\"Heil hitler\""
     wil "\"Are you ready for engineering?\""
@@ -820,11 +820,12 @@ label eng1p1naughtycorner:
                         "You step further into the corner, your body now inches from the wall"
                         "You blink, and the inches now seem like lightyears"
                         "You look back, the aeons old light from an old Earth finally reaching your eyes"
-                        "But ahead, your future lays, your 70 ATAR, Serena's rejection of your love, and your eventual suicide"
+                        "But ahead, your future lays, your 60 ATAR, Serena's rejection of your love, and your eventual suicide"
                         "To your sides, the many paths that could've, should've been"
                         "Acing trials,"
                         "Slaying Serena,"
                         "99.95 ATAR"
+                        "Becoming surgical engineering legal financial adviser"
                         "You start running into the darkness, determined to make good of your short life"
                         "And as you run, you start to lose track of time, of where you are, of who you are"
                         "..."
@@ -1172,6 +1173,7 @@ label asszembly1p1:
     pra "\"I hear Gary might be...\""
     "The conversation gets you thinking about your options..."
     #wil fuck you derek lol totes 
+    #wow calm down wil, plus I wrote it not derk ;)
     menu:
         "\"I need to put some stuff in my locker\"":
             jump asszembly1jigolo
@@ -1224,6 +1226,11 @@ label asszembly1_2:
     show willis normal
     with dissolve
     kok "\"Arthur, my man!\""
+    kok "\"Nice to see you all faggots\""
+    kok "\"and Arthur, my friend, my rock, the Chosen One...\""
+    sze "\"Eh?\""
+    kok "\"the Uberfaggot\""
+    sze "\"...\""
     sze "\"...Willis\""
     pra "\"Willis, I thought we were friends, how could you forget me?\""
     kok "\"I haven't\""
@@ -1234,7 +1241,7 @@ label asszembly1_2:
     dea "\"Looking for Mon and Pang\""
     dea "\"Oh, they're there, cya suckaz\""
     "Dean left"
-    show willis normal
+    dik "\"Greetings and salutations, all, Willy la Willy
     hide rusali normal
     dng "\"Woh, who's this? I heard \"hot chick\"...\""
     sze "\"Hi Steven\""
@@ -1274,15 +1281,15 @@ label asszembly1_2:
             "You observed how some combat technique"
             call strengthgain from __asszembly1_2chaopisssedstrengthgain
             jump asszembly1_3
-        else:
-            cha "\"I go full force\"" with vpunch
+        elif $ dikfriendship < 1:
+            cha "\"I go full frontal\"" with vpunch
             call intelloss from _asszembly1_2chaopisssedintelloss2
             sze "\"Aaah, plz stop\""
-            cha "\"Why should I? You know you like it\""
+            cha "\"Why should I? Beg slave, you know you like it\""
             call intelloss from _asszembly1_2chaopisssedintelloss3
             sze "\"No... No means no\""
             "Chao slams you down onto the ground"
-            cha "\"I will bodyslam you to Chaoder\"" with vpunch
+            cha "\"I will ravage you to Chaoder\"" with vpunch
             call intelloss from _asszembly1_2chaopisssedintelloss4
             call intelloss from _asszembly1_2chaopisssedintelloss5
             call intelloss from _asszembly1_2chaopisssedintelloss6
@@ -1292,31 +1299,68 @@ label asszembly1_2:
             "The whities have heard you positively asserting yourself against Chao's desecration of your physical form, one is helping you up"
             "They praise the Fortianness of your actions"
             call fortiangain from _asszembly1_2chaopisssedfortiangain
-            "You proceed to weakly move your battered and bruised body into asszembly"
+            "You proceed to weakly move your battered and bruised assemblage into asszembly"
             jump asszembly1_3
-
-            
+    else:
+        cha "\"Hi\""
+        den "\"Oi, don't roast me\""
+        cha "\"Chill, I'm just here to raep Pragga\""
+        pra "\"No, fuck off...\""
+        "You feel it best not to intervene" with hpunch
+        "Despite Pragash's attempts to positively assert himself, the whites call him out for not accepting non-heterosexual practices"
+        "They must've really hated him being on the Student Representative Council..."
+        cha "\"Let's go in\""
+        pra "\"...Nooo...not again\""
+        cha "\"I meant the hall...\""
+        jump asszembly1_3
 label asszembly1_3:
     scene bg hall
     with fade
-    "Gaudeamus igitur..."
+    "Gaudeamus igitur...something something...venit mors velociter, rapit nos atrociter..."
     mox "\"I would like to acknowledge the traditional owners of the land...\""
     sze "Wow, this is boring"
     menu:
         "\"Sleep\"":
+        #derk, leaving this part up to you
             drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
             jump dead
         "\"Talk\"":
             "You turn to talk to Derek and Richard"
             if $ quest1electionpromise = True:
+                pra "\"urgh...\""
+                "You are reminded of your quest"
                 sze "\"I wonder what it would be like for Pragash to be on the SRC...\""
                 dik "\"Wow, that is an interesting idea\""
                 dik "\"And retarded at the same time\""
-                drk "\"Well actually...\""
-                "Roy farted"
-                jump dead
+                pra "\"Hey, I heard that\""
+                drk "\"Well actually, we could probably make this work. First, identify likely opponents.\""
+                dik "\"Then spin policy which will get him elected\""
+                drk "\"Sigh... you conservatives... Character attacks are the only ways to guarantee election\""
+                dik "\"But surely he needs to be able to back up his attacks with something of substance\""
+                "You have an epiphany"
+                call intelgain from _asszembly1_3intelgain
+                sze "\"Maybe, we can get together a campaign team...\""
+                pra "\"Is that even necessa-\""
+                drk "\"Good idea\""
+                sze "\"How about I get a bunch of guys to work with Pragash to figure out policy, so that he can debate\""
+                dik "\"First he needs to figure out how to debate...\""
+                pra "\"Rap battle\""
+                drk "\"Indeed, something which the populace can relate and rally to\""
+                drk "\"What will we do?\""
+                sze "\"Both of you lead the attack with PR, make Pragash the Vox Populi\""
+                dik "\"Yes... and then we cross the Rubicon-er, the bridge from Kilgour to Wilkins building- and force them to flee...\""
+                drk "\"Figuratively, of course, yes?\""
+                dik "\"errr.....\""
+                pra "\"Thanks all of you\""
+                call prafriendshipgain from _asszembly1_3quest1prafriendshipgain
+                pra "\"By the way, have you heard that Chelsea destroyed ManU last night\""
+                dik "\"I was just watching news about that. I thought it was the other way around; the government destroyed the rebels\""
+                pra "\"Get your hearing checked\""
+                "You should relay this news to William Yang - he is currently engaged in conversation with Deng"
+                "You engage in mindless conversation with Richard, Derek and Pragash"
+                jump asszembly1_4
             else:
-                dik "\"I reckon I a 16in High Explosive shell fired from a battleship can destroy the hall\""
+                dik "\"I reckon a 16in High Explosive shell fired from a battleship can destroy the hall\""
                 sze "\"Why would that even happen\""
                 "A 16in High Explosive shell fired from a battleship destroyed the hall" with hpunch
                 sze "\"Fuck\""
@@ -1324,14 +1368,18 @@ label asszembly1_3:
         "\"Pay attention\"":
             "30 minutes later"
             mox "\"Michael Kirby is great, let us worship Michael Kirby\""
+            "You worship Michael Kirby, allowing yourself to absorb the power of social justice"
+            call fortgain from _asszembly1_3fortgain
             "40 minutes later"
-            mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
-            mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.'
-            There is more to high school than ATAR\""
-            "20 minutes later"
-            sze "\"Well that was fucking useless\""
-            call fortiangain from _asszembly1_3fortiangain
-            jump dead
+            jump asszembly1_4
+label asszembly1_4:
+    mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
+    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo. There is more to high school than ATAR\""
+    "20 minutes later"
+    sze "\"Well that was fucking useless\""
+    call fortiangain from _asszembly1_3fortiangain
+    wil "\"Pah, talking about helping the community; only I know of what must be done for the greater good\""
+    jump recess1
 label asszemblyjigolo1_2:
     jit "\"Huehuehue...\""
     sze "\"What?\""
@@ -1341,6 +1389,9 @@ label asszemblyjigolo1_2:
     sze "\"Fuck\""
     jump dead
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
+label recess1:
+    sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
+    jump dead
 label dead:
     scene black
     sze "I dead"

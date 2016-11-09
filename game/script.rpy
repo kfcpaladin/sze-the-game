@@ -142,7 +142,7 @@ label schoolday1:
         call fortiangain from _schoolday1fortiangain
         "3 hours later"
         "Got a new timetable"
-        "I have Physics (Flujtsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
+        "I have Physics (Fluitsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
         scene bg school
         with fade
         sze "My life feels empty without her, like a photoelectric cell without UV rays"
@@ -153,9 +153,9 @@ label postrollcall1:
     sze "I see her, walking towards the classroom"
     menu stealwillisgirl:
         "Go talk to her":
-            $ stealwillisgirl=True
+            $ stealwillisgirl = True
         "Ignore her, and continue walking to your next class":
-            $ stealwillisgirl=False
+            $ stealwillisgirl = False
 
 label TheKwokappears:
     if stealwillisgirl is True:
@@ -1260,7 +1260,7 @@ label asszembly1_2:
     cha "\"Fo\"" with vpunch
     cha "\"Fum\"" with vpunch
     cha "\"Imma fuck you up the bum\""
-    if $ phys1p3p1chaopissed = True:
+    if phys1p3p1chaopissed is True:
         "Chao is blocking me"
         cha "\"I promised I would have my revenge...\"" with vpunch
         sze "\"Shit\""
@@ -1271,7 +1271,7 @@ label asszembly1_2:
         call intelloss from _asszembly1_2chaopisssedintelloss1
         cha "\"Fuck your head? Ok\"" with hpunch
         sze "\"Nooo, raep, raep\""
-        if $ dikfriendship > 0:
+        if dikfriendship > 0:
             dik "\"Oi, fatass, pick on people your own size, like Willem or someone\""
             cha "\"Lemme think...\""
             cha "\"Nah...\""
@@ -1286,7 +1286,7 @@ label asszembly1_2:
             "You observed how some combat technique"
             call strengthgain from __asszembly1_2chaopisssedstrengthgain
             jump asszembly1_3
-        elif $ dikfriendship < 1:
+        elif dikfriendship < 1:
             cha "\"I go full frontal\"" with vpunch
             call intelloss from _asszembly1_2chaopisssedintelloss2
             sze "\"Aaah, plz stop\""
@@ -1331,7 +1331,7 @@ label asszembly1_3:
             jump dead
         "\"Talk\"":
             "You turn to talk to Derek and Richard"
-            if $ quest1electionpromise = True:
+            if quest1electionpromise is True:
                 pra "\"urgh...\""
                 "You are reminded of your quest"
                 sze "\"I wonder what it would be like for Pragash to be on the SRC...\""

@@ -1243,7 +1243,7 @@ label asszembly1_2:
     "Dean left"
     dik "\"Greetings and salutations, all, Willy la Willy
     hide rusali normal
-    dng "\"Woh, who's this? I heard \"hot chick\"...\""
+    dng "\"Woh, who's this? I heard hot chick...\""
     sze "\"Hi Steven\""
     dng "\"Hey Arthur, how have you prepared for 3-unit?\""
     sze "\"uh...\""

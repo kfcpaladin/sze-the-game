@@ -1241,9 +1241,10 @@ label asszembly1_2:
     dea "\"Looking for Mon and Pang\""
     dea "\"Oh, they're there, cya suckaz\""
     "Dean left"
-    dik "\"Greetings and salutations, all, Willy la Willy
+    dik "\"Greetings and salutations, all, Willy la Willy\""
+    kok "\"Fuck you\""
     hide rusali normal
-    dng "\"Woh, who's this? I heard hot chick...\""
+    dng "\"I heard there was someone to fuck...\""
     sze "\"Hi Steven\""
     dng "\"Hey Arthur, how have you prepared for 3-unit?\""
     sze "\"uh...\""

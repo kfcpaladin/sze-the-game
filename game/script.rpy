@@ -1401,3 +1401,8 @@ label dead:
     scene black
     sze "I dead"
     return
+
+label deadrestart:
+    scene black
+    sze "I dead"
+    jump start

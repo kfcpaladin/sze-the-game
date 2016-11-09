@@ -3,6 +3,7 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 
+image bg intro = "arthur.jpg"
 image bg school = "Fort_Street_High_School_Memorial_Hall.JPG"
 image bg physclass = "physclass"
 image bg principaldoor = "principalofficedoor"
@@ -82,6 +83,9 @@ label start:
     $ phys1p3p1chaopissed = False
     $ yangrant1_2eingutidee = False
     scene black
+    with fade
+    scene bg intro
+    with fade
     # remove this these things to enable music later
     play music "Persona 4 - Traumerei - from YouTube.mp3" loop
     "The Year is 2015"

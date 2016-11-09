@@ -591,7 +591,7 @@ screen kms():
             xalign 0.5
             spacing 100
 
-            textbutton _("Yes") action ShowMenu('dead')
+            textbutton _("Yes") action Start('deadrestart')
             textbutton _("No") action Return()
 
     # Right-click and escape answer "no".

@@ -897,7 +897,7 @@ label eng1p1p3:
     show yang normal
     wil "\"Dean Hou is a dissapointment\""
     wil "\"Dean is a mess\""
-    wil "\"When achieve he Fourth Reich, dean shall be processed under the eugenics program\""
+    wil "\"When I achieve the Fourth Reich, dean shall be processed under the eugenics program\""
     wil "\"We cannot tolerate any non Band 6 students\""
     menu yangrant1:
         "Heil the Fourth Reich!":

@@ -136,8 +136,9 @@ label schoolday1:
         sze "\"I safe now\""
         call postrollcall1
     else:
+        "Oh shit, the Principal..."
         mox "\"Wow, you are a good Fortian\""
-        mox "\"I don't know who you are but, you are like next Michael Kirby\""
+        mox "\"I don't know who you are but, you are like next Michael Kirby, greatest of Fortians\""
         hide moxham happy
         call fortiangain from _schoolday1fortiangain
         "3 hours later"
@@ -161,8 +162,9 @@ label TheKwokappears:
     if stealwillisgirl is True:
         show willis normal
         with dissolve
+        sze "Oh dear, its Willis Lau Kwok. He is currently in a relationship with serena, but i will win her in the end."
         kok "\"Were you tryna steal my girl just then\""
-        "Oh shit, its Willis. He would be furious if he found out i wanted to steal his girl"
+        "Oh shit, he would be furious if he found out i wanted to steal his girl"
         menu stealwillisgirl2:
             "No, i was just going to ask her what next period is":
                 jump Lyingsze
@@ -200,6 +202,7 @@ label Honestsze:
         jump dead
 label Rektrusali:
         sze "\"I was just going to talk to Rusali, who's trying to talk to her\""
+        sze "Dennis C. Rusali is friend to everyone. Why I dog him?"
         play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
         kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\"Argh... no really look\""
@@ -293,7 +296,7 @@ label phys1:
     play music "Los Lobos - La Bamba (HQ,16-9) - from YouTube.mp3" loop
     "You enter the classroom, and glance around. It seems that there is only 1 seat left, right next to willis"
     "To your left is Willis, to your right is Pragash"
-    "You spot Serena sitting at the front of the class right in front the teacher"
+    "You spot Serena sitting at the front of the class right in front the teacher, Ms. Fluitsma"
     show willis normal
     kok "\"We should be quiet, looks like class is starting soon.\""
     hide willis normal
@@ -301,6 +304,7 @@ label phys1:
     dea "\"We have not received syllables yet\""
     flu "\"Syllabuses\""
     dea "\"Ok, man, if you say so\""
+    sze "Dean's intelligence is inconsistent and primarily revolves around Halo"
     flu "\"Oh crap, I didn't give you syllabuses yet\""
     flu "\"Ok then, let's do something else\""
     flu "\"Since it's the first lesson of year 11, I think we should start in the middle of a currently unrelated topic\""
@@ -378,6 +382,7 @@ label phys1nothing:
     
 label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
+    sze "Pragash is very...cricket"
     show pragash normal
     sze "\"How have your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also I did 200 past papers for economics\""
@@ -391,6 +396,7 @@ label phys1part2:
     scene bg physclass
     "Suddenly a paper ball flies through the air, and hits you in the face from behind..."
     cha "\"Oh, shit. Meant to hit rusali with it\""
+    sze "Chao is {s}fat{/s} a rather large individual with a larger appetite"
     menu:
         "Throw it at rusali":
             jump phys1p2p1

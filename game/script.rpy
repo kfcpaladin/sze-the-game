@@ -382,7 +382,7 @@ label phys1nothing:
     
 label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
-    sze "Pragash is very...cricket"
+    sze "Pragash is very...cricket and has grand ambitions"
     show pragash normal
     sze "\"How have your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also I did 200 past papers for economics\""
@@ -1263,12 +1263,10 @@ label asszembly1_2:
     "Dean left"
     dik "\"Greetings and salutations, all, Willy la Willy\""
     kok "\"Fuck you\""
-    hide rusali normal
-    dng "\"I heard there was someone to fuck...\""
-    sze "\"Hi Steven\""
-    dng "\"Hey Arthur, how have you prepared for 3-unit?\""
-    sze "\"uh...\""
-    dng "\"I'm just revising simple harmonic motion and permutations and combinations\""
+    dik "\"No thanks, I don't swing that way\""
+    kok "\"Fuc- never mind{nw}\""
+    pra "\"Tell you what fucks with the mind forever? Simple harmonic motio{nw}\""
+    wil "\"I'm just revising simple harmonic motion and permutations and combinations\""
     wil "\"Don't worry, they're easy topics, ez 100 in tests\""
     kok "\"Tests? I think Chao should get one of his LGs to do one, make sure-\""
     cha "\"Fee\"" with vpunch
@@ -1316,6 +1314,7 @@ label asszembly1_2:
             call intelloss from _asszembly1_2chaopisssedintelloss6
             sze "\"Raep, raep\""
             sze "\"I positively assert that no means no\""
+            call strengthloss from _asszembly1_2chaopissedthenraepedyou
             "You faintly hear people shouting at Chao and through your blurred vision you can make out a crowd of people swarming Chao..."
             "The whities have heard you positively asserting yourself against Chao's desecration of your physical form, one is helping you up"
             "They praise the Fortianness of your actions"
@@ -1355,6 +1354,7 @@ label asszembly1_3:
                 dik "\"And retarded at the same time\""
                 pra "\"Hey, I heard that\""
                 drk "\"Well actually, we could probably make this work. First, identify likely opponents.\""
+                sze "Derkie Derk {nw}"
                 dik "\"Then spin policy which will get him elected\""
                 drk "\"Sigh... you conservatives... Character attacks are the only ways to guarantee election\""
                 dik "\"But surely he needs to be able to back up his attacks with something of substance\""
@@ -1377,12 +1377,13 @@ label asszembly1_3:
                 pra "\"By the way, have you heard that Chelsea destroyed ManU last night\""
                 dik "\"I was just watching news about that. I thought it was the other way around; the government destroyed the rebels\""
                 pra "\"Get your hearing checked\""
-                "You should relay this news to William Yang - he is currently engaged in conversation with Deng"
+                "You should relay this news to William Yang - he is currently engaged in conversation with his hand"
                 "You engage in mindless conversation with Richard, Derek and Pragash"
+                $ metderek = true
                 jump asszembly1_4
             else:
                 dik "\"I reckon a 16in High Explosive shell fired from a battleship can destroy the hall\""
-                sze "\"Why would that even happen\""
+                sze "\"Why would that even happen?\""
                 "A 16in High Explosive shell fired from a battleship destroyed the hall" with hpunch
                 sze "\"Fuck\""
                 jump dead

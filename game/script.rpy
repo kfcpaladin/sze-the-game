@@ -1344,7 +1344,7 @@ label asszembly1_3:
         #derk, leaving this part up to you
             sze "\"I sleep\""
             sze "{i}I dream {/i}"
-            sze "\"{size=+100}{b}{i}lor=#9400D3}C{/color} {color=#4B0082}O{/color} {color=#0000FF}L{/color} {color=#00FF00}O{/color} {color=#FFFF00}U{/color} {color=#FF7F00}R{/color} {color=#FF0000}F{/color} {color=#ff69b4}U{/color} {color=#d2691e}L{/color}{/i}{/b}{/size}"\" with hpunch
+            sze "{size=+100}{b}{i}lor=#9400D3}C{/color} {color=#4B0082}O{/color} {color=#0000FF}L{/color} {color=#00FF00}O{/color} {color=#FFFF00}U{/color} {color=#FF7F00}R{/color} {color=#FF0000}F{/color} {color=#ff69b4}U{/color} {color=#d2691e}L{/color}{/i}{/b}{/size}" with hpunch
             drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
             jump dead
         "\"Talk\"":

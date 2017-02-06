@@ -1033,17 +1033,19 @@ label eng1p2:
                 "\"Don't open door\"":
                     "*Knock *knock\"" 
                     sze "\"...\""
-                    sze "\"ceebs\""
+                    sze "\"szeebs\""
                     dea "\"I'll get it\""
                     "Sudden movement catches your peripheral vision"
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     dik "\"Sorry, you had your back to me...\""
-                    "Richard left"
-                    dea "\"Fuck you Arthur, you're a coward\""
+                    dik "\"Message for Mr. Grant\""
+                    "Richard {s}is a dick{/s} is a great guy cos he coded this line {size=+100}AND MANY MORE{/size}" 
+                    "Richard left {cps=*20}leaving Dean cowering on the ground moaning in feverish pitch{/cps}"
+                    dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
-                    dea "\"Nothing\""
+                    dea "\"nuthing\""
                     call fortianloss from _eng1p2fortianloss
                     dea "\"Sir, message for you\""
                     gra "\"k\""
@@ -1090,16 +1092,19 @@ label eng1p2:
                 "\"Don't open door\"":
                     "*Knock *knock\"" 
                     sze "\"...\""
-                    sze "\"ceebs\""
+                    sze "\"szeebs\""
                     dea "\"I'll get it\""
                     "Sudden movement catches your peripheral vision"
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     dik "\"Sorry, you had your back to me...\""
-                    "Richard left"
-                    dea "\"Fuck you Arthur\""
+                    dik "\"Message for Mr. Grant\""
+                    "Richard {s}is a dick{/s} is a GREAT GUY cos he coded this line {size=+100}AND MANY MORE{/size}" 
+                    "Richard left {cps=*25}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
+                    dea "\"...fuck u arthur, ur a coward\""
+                    call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
-                    dea "\"Nothing\""
+                    dea "\"nuthing\""
                     call fortianloss from _eng1p2fortianloss
                     dea "\"Sir, message for you\""
                     gra "\"k\""
@@ -1203,6 +1208,7 @@ label asszembly1jigolo:
     menu:
         "\"Run\"":
             "You run to assembly like the chicken that you are"
+            sze "{cps=*30}BOk BOk BOk BOk BOk{/cps}{nw}"
             sze "That was a close call"
             call strengthloss from _asszemblyjigolostrengthloss
             jump asszembly1_2
@@ -1211,6 +1217,8 @@ label asszembly1jigolo:
             sze "\"...\""
             jit "\"Whoa, SHIT!\"" with vpunch
             sze "\"Oh, it's just Gary\""
+            sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
+            sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
             jit "\"Can u not, like plz? I thought you were teacher\""
             sze "\"Soz, why you here?\""
@@ -1218,6 +1226,8 @@ label asszembly1jigolo:
         "\"You confront the speaker\"":
             "You walk up to the speaker, without attempting to disguise your approach"
             jit "\"Oh, hi Arthur\""
+            sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
+            sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             sze "\"lol, why you so scared?\""
             call strengthgain from _asszemblyjigolostrengthgain
             jit "\"Calm down, mate\""

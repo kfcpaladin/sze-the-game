@@ -1217,7 +1217,7 @@ label asszembly1jigolo:
             sze "\"...\""
             jit "\"Whoa, SHIT!\"" with vpunch
             sze "\"Oh, it's just Gary\""
-            sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
+            sze "{cps=*0.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
             jit "\"Can u not, like plz? I thought you were teacher\""
@@ -1264,7 +1264,7 @@ label asszembly1_2:
     dik "\"Greetings and salutations, all, Willy la Willy\""
     kok "\"Fuck you\""
     dik "\"No thanks, I don't swing that way\""
-    kok "\"Fuc- never mind{nw}\""
+    kok "\"Fuc- never mind\""
     pra "\"Tell you what fucks with the mind forever? Simple harmonic motio{nw}\""
     wil "\"I'm just revising simple harmonic motion and permutations and combinations\""
     wil "\"Don't worry, they're easy topics, ez 100 in tests\""
@@ -1323,7 +1323,7 @@ label asszembly1_2:
             jump asszembly1_3
     else:
         cha "\"Hi\""
-        den "\"Oi, don't roast me\""
+        rus "\"Oi, don't roast me\""
         cha "\"Chill, I'm just here to raep Pragga\""
         pra "\"No, fuck off...\""
         "You feel it best not to intervene" with hpunch

@@ -1041,7 +1041,7 @@ label eng1p2:
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a great guy cos he coded this line {size=+100}AND MANY MORE{/size}" 
-                    "Richard left {cps=*20}leaving Dean cowering on the ground moaning in feverish pitch{/cps}"
+                    "Richard left {cps=*3}leaving Dean cowering on the ground moaning in feverish pitch{/cps}"
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
@@ -1100,7 +1100,7 @@ label eng1p2:
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a GREAT GUY cos he coded this line {size=+100}AND MANY MORE{/size}" 
-                    "Richard left {cps=*25}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
+                    "Richard left {cps=*3}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
@@ -1208,7 +1208,7 @@ label asszembly1jigolo:
     menu:
         "\"Run\"":
             "You run to assembly like the chicken that you are"
-            sze "{cps=*30}BOk BOk BOk BOk BOk{/cps}{nw}"
+            sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
             sze "That was a close call"
             call strengthloss from _asszemblyjigolostrengthloss
             jump asszembly1_2
@@ -1217,7 +1217,7 @@ label asszembly1jigolo:
             sze "\"...\""
             jit "\"Whoa, SHIT!\"" with vpunch
             sze "\"Oh, it's just Gary\""
-            sze "{cps=*0.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
+            sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
             jit "\"Can u not, like plz? I thought you were teacher\""
@@ -1344,7 +1344,7 @@ label asszembly1_3:
         #derk, leaving this part up to you
             sze "\"I sleep\""
             sze "{i}I dream {/i}"
-            sze "{size=+100}{b}{i}lor=#9400D3}C{/color} {color=#4B0082}O{/color} {color=#0000FF}L{/color} {color=#00FF00}O{/color} {color=#FFFF00}U{/color} {color=#FF7F00}R{/color} {color=#FF0000}F{/color} {color=#ff69b4}U{/color} {color=#d2691e}L{/color}{/i}{/b}{/size}" with hpunch
+            sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
             jump dead
         "\"Talk\"":
@@ -1357,7 +1357,7 @@ label asszembly1_3:
                 dik "\"And retarded at the same time\""
                 pra "\"Hey, I heard that\""
                 drk "\"Well actually, we could probably make this work. First, identify likely opponents.\""
-                sze "{cps=*25}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
+                sze "{cps=*3}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
                 sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"  
                 drk "\"There are many but we focus on getting him a nemesis and then lock on\""
                 dik "\"Then spin policy which will get him elected\""

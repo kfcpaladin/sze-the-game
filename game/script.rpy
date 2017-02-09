@@ -835,7 +835,7 @@ label eng1p1naughtycorner:
                         "Acing trials,"
                         "Slaying Serena,"
                         "99.95 ATAR"
-                        "Becoming surgical engineering legal financial adviser"
+                        "Becoming surgical engineering legal financial software adviser"
                         "You start running into the darkness, determined to make good of your short life"
                         "And as you run, you start to lose track of time, of where you are, of who you are"
                         "..."
@@ -945,15 +945,17 @@ label yangrantp1_2:
                 wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
                 jump eng1p2
             "\"We vote in Wesley Lai\"":
+                $ yangrant1_2eingutidee = True
                 sze "\"We vote in Wesley Lai\""
                 wil "\"That's retarded\""
                 pra "\"That's retarded\""
-                wil "\"But... his biggest political rival...\""
+                wil "\"But... his biggest political rival...now that might work...\""
                 sze "\"uh... yeah... that's who I meant\""
+                sze "\"Wait, who is he again?\""
                 wil "\"Actually somewhat smart\""
-                wil "\"But since I thought of that, you still retarded\""
+                wil "\"But since I thought of that, you still retarded...\""
                 gra "\"Now listen here, you little runts, gather around the front table\""
-                wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
+                wil "\"Be quite now, I need to find Pragash\""
                 jump eng1p2
             "\"Pragash Haran will be the figurehead\"":
                 $ yangrant1_2eingutidee = True
@@ -1021,7 +1023,7 @@ label eng1p2:
                     dik "\"Very well...custom made Steel Blue work boots, leather upper, quarter and tongue\""
                     dik "\"Underneath the upper, the toe cap is made of bullet resistant AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
                     dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
-                    dik "\"The insole contains an advanced ventilation system for optimum comfort and the vulcanised rubber heel and outsole contain compartments\""
+                    dik "\"The insole contains an advanced ventilation system for optimum comfort. Both the vulcanised rubber heel and outsole contain compartments\""
                     sze "\"...wtf\""
                     pra "\"...wtf\""
                     gra "\"Now those are leather shoes\""
@@ -1040,7 +1042,7 @@ label eng1p2:
                     dea "\"heeelllllppppp\""
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
-                    "Richard {s}is a dick{/s} is a great guy cos he coded this line {size=+100}AND MANY MORE{/size}" 
+                    "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..." 
                     "Richard left {cps=*3}leaving Dean cowering on the ground moaning in feverish pitch{/cps}"
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
@@ -1099,7 +1101,7 @@ label eng1p2:
                     dea "\"heeelllllppppp\""
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
-                    "Richard {s}is a dick{/s} is a GREAT GUY cos he coded this line {size=+100}AND MANY MORE{/size}" 
+                    "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..."
                     "Richard left {cps=*3}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
@@ -1261,14 +1263,16 @@ label asszembly1_2:
     dea "\"Looking for Mon and Pang\""
     dea "\"Oh, they're there, cya suckaz\""
     "Dean left"
-    dik "\"Greetings and salutations, all, Willy la Willy\""
+    dik "\"Greetings and salutations to all and Willy la Willy\""
     kok "\"Fuck you\""
-    dik "\"No thanks, I don't swing that way\""
+    dik "\"No thank you, I don't swing that way\""
     kok "\"Fuc- never mind\""
-    pra "\"Tell you what fucks with the mind forever? Simple harmonic motio{nw}\""
+    pra "\"Tell you what fucks with the mind? Simple harmonic motio{nw}\""
     wil "\"I'm just revising simple harmonic motion and permutations and combinations\""
     wil "\"Don't worry, they're easy topics, ez 100 in tests\""
-    kok "\"Tests? I think Chao should get one of his LGs to do one, make sure-\""
+    pra "\"Teach me William, show me the way to your greatness...\""
+    wil "\"Relax, just do 20,000 tests.\""
+    kok "\"Tests? I think Chao should get one of his LGs to do one, make sure- {nw}\""
     cha "\"Fee\"" with vpunch
     cha "\"Fi\"" with vpunch
     cha "\"Fo\"" with vpunch
@@ -1286,18 +1290,19 @@ label asszembly1_2:
         cha "\"Fuck your head? Ok\"" with hpunch
         sze "\"Nooo, raep, raep\""
         if dikfriendship > 0:
-            dik "\"Oi, fatass, pick on people your own size, like Willem or someone\""
+            dik "\"Oi, fat ass, pick on people your own size, like Gabe Newell or someone of similar girth\""
             cha "\"Lemme think...\""
             cha "\"Nah...\""
-            dik "\"Alright, then\""
-            dik "\"Take this!\"" with hpunch
+            dik "\"My apologies, then\""
+            cha "\"?\""
+            dik "\"For {b}this{/b}\"" with hpunch
             cha "\"FUUUUUUCCCCKKKKK, what the shit was that?!?!?!\""
             dik "\"Steel toes, bitch\""
             cha "\"Arrgh, don't make me angry\""
             dik "\"Don't make me make Chao Mein\""
             cha "\"...\""
             cha "\"Fuck off\""
-            "You observed how some combat technique"
+            "You observed how to some combat technique"
             call strengthgain from __asszembly1_2chaopisssedstrengthgain
             jump asszembly1_3
         elif dikfriendship < 1:
@@ -1416,11 +1421,40 @@ label asszemblyjigolo1_2:
     sze "\"Fuck, not there! We'll get destroyed by the principal\""
     jit "\"That's not it, son! Y would we use that one? That one's the legendary Cohen Dungeon\""
     jit "\"U must be munted to not know dat\""
+    "You follow Gary to Rowe Dungeon"
+    sze "\"Why is there shifty BDSM gear hanging on the wall?\""
     jump dead
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
 label recess1:
-    sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
-    jump dead
+    if $ metderek is true:
+        sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
+        jump dead
+    else:
+        "You go to Rowe Corner"
+        sze "I sze Serena... I should talk"
+        menu:
+            Talk:
+               "You move like a panther, with slick moves and predatory focus"
+               "..." with vpunch
+               "Until you bump into Richard and Derek"
+               drk "\"Watch where you going, fgt\""
+               dik "\"Actually it's pronounced \"faggot\"\""
+               drk "\"Whatevs\""
+               sze "\"Wow soz...geez\""
+               sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
+               "You turn around continuing on your hunt for {nw}"
+               "Foot + banana peel + concrete = dead"
+               jump dead
+            Don't talk:
+                "You stand on the spot trying to muster up some courage but find it futile"
+                sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
+                call strengthloss from _recess1chickenstrengthloss
+                "You notice you look retarded frozen in mid-stride with your mouth wide open"
+                drk "\"Wow, Arthur looks retarded frozen in mid-stride with his mouth wide open\""
+                sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
+                sze "\"whaa- can you not...geez\""
+                sze "I die of embarassment"
+                jump dead
 label dead:
     scene black
     sze "I dead"

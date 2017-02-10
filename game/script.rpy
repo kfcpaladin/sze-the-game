@@ -1434,7 +1434,7 @@ label recess1:
         "You go to Rowe Corner"
         sze "I sze Serena... I should talk"
         menu:
-            Talk:
+            "Talk":
                "You move like a panther, with slick moves and predatory focus"
                "..." with vpunch
                "Until you bump into Richard and Derek"
@@ -1446,7 +1446,8 @@ label recess1:
                "You turn around continuing on your hunt for {nw}"
                "Foot + banana peel + concrete = dead"
                jump dead
-            Do not talk:
+               
+            "Do not talk":
                 "You stand on the spot trying to muster up some courage but find it futile"
                 sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
                 call strengthloss from _recess1chickenstrengthloss

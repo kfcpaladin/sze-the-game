@@ -1446,7 +1446,7 @@ label recess1:
                "You turn around continuing on your hunt for {nw}"
                "Foot + banana peel + concrete = dead"
                jump dead
-            Don\'t talk:
+            Do not talk:
                 "You stand on the spot trying to muster up some courage but find it futile"
                 sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
                 call strengthloss from _recess1chickenstrengthloss

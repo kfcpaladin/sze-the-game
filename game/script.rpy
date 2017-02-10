@@ -61,6 +61,7 @@ label start:
     $ fort = 0
     $ friendshiptutorial = False
     $ charmtutorial = False
+    $ thirsttutorial = False
     $ forttutorial = False
     $ rinfriendship = 0
     $ kokfriendship = 0

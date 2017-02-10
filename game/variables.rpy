@@ -550,6 +550,81 @@ label fortianloss:
         $ forttutorial = True
     return
     
+label thirstgain:
+    if thirsttutorial is True:
+        $ thirst += 1
+        "You became more thirsty"
+        if thirst > 100:
+            "At a thirst of [thirst], you rival Tiddalik"
+            return
+        elif thirst > 75:
+            "Even a can of SOLO cannot crush your thirst of [thirst]"
+            return
+        elif thirst > 50:
+            "With a thirst of [thirst], sometimes moxham appears in your dreams"
+            return
+        elif thirst > 25:
+            "With a thirst of [thirst], like Roy, you are willing to partake in sexual activities with robots"
+            return
+        elif thirst > 0:
+            "At [thirst] thirstiness , you have the standard healthy desires of a teenage boy of your age."
+            return
+        elif thirst > -25:
+            "With a thirstiness of [thirst], you have been oft compared to Lixu"
+            return
+        elif thirst > -50:
+            "At a thirst of [thirst], it is no surprise you have already taken a vow of celibacy."
+            return
+        elif thirst > -75:
+            "With [thirst] thirstiness, you elected to have a penectomy."
+            return
+        else:
+            "You are disgusted by the concept of sexual relations, even with Serena."
+            return
+    else:
+        $ thirst += 1
+        "Your thirst has just increased to [thirst]. Thirst is a measure of desperately you want to drink water."
+        $ thirsttutorial = True
+        return
+        
+label thirstloss:
+    if thirsttutorial is True:
+        $ thirst -= 1
+        "You became less thirsty."
+        if thirst > 100:
+            "At a thirst of [thirst], you rival Tiddalik"
+            return
+        elif thirst > 75:
+            "Even a can of SOLO cannot crush your thirst of [thirst]"
+            return
+        elif thirst > 50:
+            "With a thirst of [thirst], sometimes moxham appears in your dreams"
+            return
+        elif thirst > 25:
+            "With a thirst of [thirst], like Roy, you are willing to partake in sexual activities with robots."
+            return
+        elif thirst > 0:
+            "At [thirst] thirstiness , you have the standard healthy desires of a teenage boy of your age."
+            return
+        elif thirst > -25:
+            "With a thirstiness of [thirst], you have been oft compared to Lixu"
+            return
+        elif thirst > -50:
+            "At a thirst of [thirst], it is no surprise you have already taken a vow of celibacy."
+            return
+        elif thirst > -75:
+            "With [thirst] thirstiness, you elected to have a penectomy."
+            return
+        else:
+            "You are disgusted by the concept of sexual relations, even with Serena."
+            return
+    else:
+        $ thirst -= 1
+        "Your thirst has just decreased to [thirst]. Thirst is a measure of desperately you want to drink water."
+        $ thirsttutorial = True
+    return
+    
+    
 label strengthloss:
     if strengthtutorial is True:
         $ strength -= 1

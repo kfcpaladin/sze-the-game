@@ -30,6 +30,7 @@ define drk = Character('Derek', color="#FFFFFF", image="derek")
 define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
+# jenkins
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
 define dng = Character('Steven', color="#FFFFFF", image="steven")
 #not sure if that's legit spelling, plz check
@@ -90,6 +91,8 @@ label start:
     # remove this these things to enable music later
     play music "Persona 4 - Traumerei - from YouTube.mp3" loop
     "The Year is 2015"
+    scene black
+    with fade
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
     sze "I had always loved her, since she first graced my eyes in Year 7."
@@ -126,7 +129,7 @@ label schoolday1:
             sze "\"...um...\""
             sze "\"...uh\""
             sze "\"I swear I'll be a good boy\""
-            sze "\"Sze, I'm studying right now\""
+            sze "\"As you can Sze, I'm studying right now\""
             mox "\"Very well\""
             hide moxham unhappy
             jump postrollcall1
@@ -161,6 +164,8 @@ label postrollcall1:
 
 label TheKwokappears:
     if stealwillisgirl is True:
+        call thirstgain from _thirstdayback
+        # geddit?
         show willis normal
         with dissolve
         sze "Oh dear, its Willis Lau Kwok. He is currently in a relationship with serena, but i will win her in the end."
@@ -429,6 +434,7 @@ label phys1p2p1:
         rus "\"I was helping Arthur\""
         flu "\"I'm very proud of both of you for physically applying your theoretical physics knowledge.\""
         "Pragash and Willis gaze in awe at your remarkable talent in the art of lying"
+        "You notice that you may have caught the fleeting interest of Serena"
         call intelgain from _phys1p2p1callintelgain
         show willis normal
         kok "\"Teach me senpai\""
@@ -457,6 +463,11 @@ label phys1p2p2:
             cha "\"Fuck you\""
             cha "\"I'll eat you for lunch!\"" with vpunch
             jump dead
+        "Ummmm...":
+            sze "\"Ummm...lolwut?\""
+            cha "\"I'll take that as a {nw}\""
+            sze "\"Lemme think\""
+            jump phys1p2p3
     
 label phys1p2p3:
     "You do nothing"
@@ -587,6 +598,7 @@ label phys1p3principal2:
     scene bg principaldoor
     cha "\"Fuck, i cant go to an afternoon detention, i have to slay my gfs after school\""
     sze "\"Wow, how do you slay so many LG's\""
+    call thirstgain from _phys1p3principal2callthirstgain
     cha "\"You just do\""
     call charmgain from _phys1p3principal2callcharmgain
     scene bg principaloffice
@@ -604,8 +616,9 @@ label phys1p3principal2:
         call dailymoxcounter from _phys1p3principal2bdailymoxcounter
         mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
         mox "\"Especially you Joshua, you have a history of being drop kick\""
-        mox "\"This behaviour is intolerable at Fort Street High School\""
+        mox "\"This behaviour is intolerable and unbefitting of the Fortian Race. I expect this from\""
         mox "\"You two are lucky you arent expelled\""
+        mox "\"Instead you will be given after school detention...how merciful of me\""
         hide moxham unhappy
         jump eng1p1
         
@@ -613,7 +626,7 @@ label phys1p3principal3:
     # said yes
     sze "\"Yes\""
     mox "\"I hope that this is the end of the matter\""
-    mox "\"Go to your next period, here's a note excusing your lateness.\""
+    mox "\"Go to your next period, here's a note excusing your lateness and another one for after school detention.\""
     mox "\"Now scram\""
     hide moxham unhappy
     show rusali
@@ -677,7 +690,7 @@ label eng1p1:
             gra "\"Mingle around children, let us achieve band 6's together\""
             hide grant normal
             show yang normal
-            wil "\"Nice arthur, so smart, rank double 1\""
+            wil "\"Nice arthur, so smart, rank double 1 out of 11\""
             hide yang normal
             call intelgain from _eng1p2intelgain
             call wilfriendshipgain from _eng1p2wilfriendshipgain
@@ -691,14 +704,14 @@ label eng1p1:
             wil "\"Was it all an inside job?\""
             sze "\"The plane swam on the water, and then hit the towers\""
             wil "\"Ur a fckin idiot\""
+            wil "\"U must be thirst as fuck to be thinking of water all day\""
+            call thirstgain from _eng1p1callthirstgain
             wil "\"U deserve to die\""
-            play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
             sze "\"Actually hydroplanes do kinda swim\""
-            stop music
             wil "\"Fuck you, I'm unfriending you\""
             call wilfriendshiploss from _eng1p2wilfriendshiploss
             wil "\"I swear this engineering class is so dropkick\""
-            wil "\"Im rank 1 but i feel im still only going to get a 99.90 ATAR\""
+            wil "\"Im rank 1 but i feel im still only going to get a 99 ATAR\""
             wil "\"actual RIP ATAR\""
             hide yang normal
             call intelloss from _eng1p2intelloss
@@ -776,7 +789,7 @@ label eng1p1naughtycorner:
     sze "\"ok\""
     gra "\"Bitches, do your work!!!!\""
     pra "\"Don't listen to him, the corner needs you.\""
-    gra "\"Oi, that's right: you two naughty-corner grunts, do nothing as punishment\""
+    gra "\"Aaaah, that's right: you two naughty-corner grunts, do nothing as punishment\""
     pra "\"The school's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
     menu:
         "Stay in the corner":
@@ -796,6 +809,7 @@ label eng1p1naughtycorner:
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
                         "...wrong"
+                        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
                         "You wake up in bed next to...someone"
                         sze "\"Urgh, mornings are shit\""
                         sze "\"Wait what\"" with hpunch
@@ -859,6 +873,7 @@ label eng1p1naughtycorner:
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
             dea "\"Where you going?\""
             sze "\"Asszembly\""
+            play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
@@ -877,12 +892,14 @@ label timetravel1:
 label eng1p1p1:
     # answer correctly, All dat foreshadowing
     show yang normal
-    wil "\"You would make a leader as part of my fourth reich\""
-    wil "\"Together we can purge the world of jews and non-Band 6 students\""
+    wil "\"You would make a leader as part of my fourth reich, a possible replacement for Moxham\""
+    wil "\"Together we can purge the world of non-Band 6 students and similar unwashed masses\""
     sze "\"lol, what a joke\""
     wil "\"Yes...indeed what a joke\""
     sze "\"k.....\""
-    jump eng1p2
+    wil "\"Although it would be interesting if we could replace Moxham with a student...\""
+    sze "\"lol Dean?\""
+    jump eng1p1p3
     
 label eng1p1p2:
     # answers wrong
@@ -918,11 +935,11 @@ label yangrantp1_1:
     sze "\"Heil the Fourth Reich!\""
     "Yang nods dissmissively"
     wil "\"I need not hear it now: in the future all humanity will be saying it\""
-    sze "\"Ok friend\""
+    sze "\"Ok friend, funny joke\""
     wil "\"There is a fine line between friend and tool...\""
     wil "\"Which are you?\""
     sze "\"...\""
-    wil "\"Just joking, let's continue learning planes\""
+    wil "\"I kid, let's continue learning planes\""
     jump eng1p2
     
 label yangrantp1_2:
@@ -1231,11 +1248,11 @@ label asszembly1jigolo:
             jit "\"Oh, hi Arthur\""
             sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "Gary/Jitian is a great guy with a taste for questionable animes..."
-            sze "\"lol, why you so scared?\""
+            sze "\"lol, why you always so shifty?\""
             call strengthgain from _asszemblyjigolostrengthgain
-            jit "\"Calm down, mate\""
+            jit "\"Calm your tits, mate\""
             jit "\"Shut the fuck up, there might be teachers...\""
-            sze "\"Well, I'm planning on ditching\""
+            sze "\"Well, I'm planning on ditching the assembly\""
             jump asszemblyjigolo1_2
     
 label asszembly1_2:
@@ -1298,7 +1315,7 @@ label asszembly1_2:
             cha "\"?\""
             dik "\"For {b}this{/b}\"" with hpunch
             cha "\"FUUUUUUCCCCKKKKK, what the shit was that?!?!?!\""
-            dik "\"Steel toes, bitch\""
+            dik "\"Steel cap work boots, bitch\""
             cha "\"Arrgh, don't make me angry\""
             dik "\"Don't make me make Chao Mein\""
             cha "\"...\""
@@ -1354,50 +1371,104 @@ label asszembly1_3:
             drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
             jump dead
         "\"Talk\"":
-            "You turn to talk to Derek and Richard"
             if quest1electionpromise is True:
-                pra "\"urgh...\""
-                "You are reminded of your quest"
-                sze "\"I wonder what it would be like for Pragash to be on the SRC...\""
-                dik "\"Wow, that is an interesting idea\""
-                dik "\"And retarded at the same time\""
-                pra "\"Hey, I heard that\""
-                drk "\"Well actually, we could probably make this work. First, identify likely opponents.\""
-                sze "{cps=*3}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
-                sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"  
-                drk "\"There are many but we focus on getting him a nemesis and then lock on\""
-                dik "\"Then spin policy which will get him elected\""
-                drk "\"Sigh... you conservatives... Character attacks are the only ways to guarantee election\""
-                dik "\"But surely he needs to be able to back up his attacks with something of substance\""
-                "You have an epiphany"
-                call intelgain from _asszembly1_3intelgain
-                sze "\"Maybe, we can get together a campaign team...\""
-                pra "\"Is that even necessa-\""
-                drk "\"Good idea\""
-                sze "\"How about I get a bunch of guys to work with Pragash to figure out policy, so that he can debate\""
-                dik "\"First he needs to figure out how to debate...\""
-                pra "\"Rap battle\""
-                drk "\"Indeed, something which the populace can relate and rally to\""
-                drk "\"What will we do?\""
-                sze "\"Both of you lead the attack with PR, make Pragash the Vox Populi\""
-                dik "\"Yes... and then we cross the Rubicon-er, the bridge from Kilgour to Wilkins building- and force them to flee...\""
-                drk "\"Figuratively, of course, yes?\""
-                dik "\"errr.....\""
-                pra "\"Thanks all of you\""
-                call prafriendshipgain from _asszembly1_3quest1prafriendshipgain
-                pra "\"By the way, have you heard that Chelsea destroyed ManU last night\""
-                dik "\"I was just watching news about that. I thought it was the other way around; the government destroyed the rebels\""
-                pra "\"Get your hearing checked\""
-                "You should relay this news to William Yang - he is currently engaged in conversation with his hand"
-                "You engage in mindless conversation with Richard, Derek and Pragash"
-                $ metderek = true
-                jump asszembly1_4
+            call quest1electionpromise1_a
+            jump asszembly1_4
             else:
-                dik "\"I reckon a 16in High Explosive shell fired from a battleship can destroy the hall\""
-                sze "\"Why would that even happen?\""
-                "A 16in High Explosive shell fired from a battleship destroyed the hall" with hpunch
-                sze "\"Fuck\""
-                jump dead
+                "But the silhouette of Serena, seated four rows ahead, catches your eye"
+                "You watch as she gossips with Willis"
+                call thirstgain from _asszembly1_3callthirstgain
+                drk "\"wtf, are u drooling Arthur?\""
+                "You notice Derek for the first time this year"
+                sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"  
+                sze "shit, I need to make a convincing lie or something"
+                    $ metderek = true
+                menu:
+                    "Stand up":
+                        if intelligence >=4:
+                            sze "Shit, better say something..."
+                            sze "\" That's Bullshit!!!\""
+                            "Everyone turns and looks at you"
+                            sze "\"The academic inequality between Indigenous peoples and the rest of Australia is inherently related to the unequal global distribution of food\""
+                            "You hear a wave of agreement and admiration wash over the entire hall"
+                            show moxham happy
+                            mox "\"Yes, yes indeed\""
+                            mox "\"This is extremely relevant to the efforts to donate canned food to the families of the Charlie Hebdo shooting victims\""
+                            mox "\"This man is epitome of Fortian\""
+                            hide moxham happy
+                            call charmgain from _asszembly1_3charmgain
+                            call fortgain from _asszembly1_3_asdasdafortgain
+                            "You sit back down, basking in the glory of your social justice-ness"
+                            dik "\"Wow, you commie hippy bastard\""
+                            call dikfriendshiploss from _asszembly1_3calldikfriendshiploss
+                            drk "\"Lol calm down, nice one Sze, so u were just drooling out of social justice\""
+                            "You dodged a bullet there"
+                            jump asszembly1_4
+                        elif intelligence >=2:
+                            sze "\"...\""
+                            "People around you look expectantly at you"
+                            sze "Shit forgot what I was going to say"
+                            "You spend a few awkward seconds sweating like some craven pig in the middle of summer"
+                            call charmloss from _asszembly1_3callcharmloss
+                            sze "\"urm...mumble need...toilet\""
+                            drk "\"lolwut? why u drool even more?\""
+                            sze "\"I need to go to toilet, wash hands\""
+                            sze "Fuck that was awkward"
+                            "you disappear into toilet for 20 minutes"
+                        else:
+                            play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+                            "You stand rooted to the spot, even as Moxham noticed you and stopped speaking" with vpunch
+                            "Your heartbeat starts irregularly racing" with vpunch
+                            sze "shit shit {nw}" with vpunch
+                            sze "shit shit {nw}" with vpunch
+                            sze "shit shit {nw}" with vpunch
+                            "Your heart finally gives up as you die of embarrassment"
+                            jump dead
+                "Deny all charges":
+                    if intelligence >=2:
+                        sze "\"I am merely salivating in anticipation of my recess which consists of leftover butter chicken\""
+                        pra "\"Butter chicken is good but rogan josh is better\""
+                        sze "\"That was ordered from the restaurant the night before but it was all finished\""
+                        drk "\"Wait why u even order from Indian restaurant?\""
+                        sze "\"It was more Hong Kong/Indian/Italian/American fusion\""
+                        pra "\"wtf\""
+                        sze "\"I am accepting to new ideas because of my Fortianness\""
+                        call fortgain from _asszembly1_3sadasdasdcalllfortiangain
+                        pra "\"That almost makes me as annoyed as Desney being on SRC\""
+                        "You see that this has caught the attention of Will Yang\""
+                        wil "\"Perhaps you might be persuaded to run?\""
+                        pra "\"But they hate me on the SRC\""
+                        wil "\"I hear Wesley is planning on running\""
+                        wil "\"If not you then Wesley...\""
+                        pra "\"Then I need assistance\""
+                        "They disrupt your gazing at Serena by asking if you would render aid"
+                        menu:
+                            "Szeebs":
+                                sze "\"Szeebs tho\""
+                                call prafriendshiploss from _asszembly1_3callprafriendshiploosss
+                                wil "\"I had higher expectations for you, you are disappointment\""
+                                call wilfriendshiploss from _asszembly1_3wilfriendshiploss
+                                jump asszembly1_4
+                            "K":
+                                sze "\"K\""
+                                "You talk more with them to discuss plans before Yang turns away"
+                                sze "I have idea...maybe Derek and Rick have better idea for this"
+                                $ quest1electionpromise = True
+                                call quest1electionpromise1_a
+                                jump asszembly1_4
+                    else:
+                        sze "\"I wasn't drooling tho\""
+                        drk "\"You definitely were drooling\""
+                        sze "\"But I wasn't\""
+                        drk "\"you were\""
+                        dik "\"You definitely were\""
+                        pra "\"You were\""
+                        drk "\"If you think about it, you were\""
+                        sze "\"Nooo...why you be like this?\""
+                        call charmloss from _asszembly1_3callcharmlosslol
+                        "You spend the next few minutes insisting that you weren't drooling"
+                        jump asszembly1_4
+                        
         "\"Pay attention\"":
             "30 minutes later"
             mox "\"Michael Kirby is great, let us worship Michael Kirby\""
@@ -1405,14 +1476,63 @@ label asszembly1_3:
             call fortgain from _asszembly1_3fortgain
             "40 minutes later"
             jump asszembly1_4
+
+label quest1electionpromise1_a
+                "You turn to talk to Derek and Richard"
+                pra "\"urgh...\""
+                "You are reminded of your quest"
+                sze "\"I wonder what it would be like for Pragash to be on the SRC...\""
+                dik "\"Wow, that is an interesting idea\""
+                dik "\"And retarded at the same time\""
+                pra "\"Hey, I heard that\""
+                drk "\"Well actually, we could probably make this work. First, identify likely opponents.\""
+                if metderek = true:
+                    return
+                else:
+                    sze "{cps=*3}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
+                    sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"
+                    $ metderek = true
+                    return
+                drk "\"There are many but we focus on getting him a nemesis and then lock on\""
+                dik "\"Then spin policy which will get him elected\""
+                drk "\"Sigh... you conservatives... Character attacks are the only ways to guarantee election\""
+                dik "\"But surely he needs to be able to back up his attacks with something of substance\""
+                "You have an epiphany"
+                call intelgain from _asszembly1_3intelgain
+                sze "\"Maybe, we can get together a campaign team...\""
+                pra "\"Is that even necessa{nw}\""
+                drk "\"Good idea\""
+                sze "\"How about I get a bunch of guys to work with Pragash to figure out policy, so that he can debate\""
+                dik "\"First he needs to figure out how to debate...\""
+                pra "\"Like a Rap battle\""
+                drk "\"Indeed, something which the populace can relate and rally to\""
+                dik "\"What will we do?\""
+                sze "\"Both of you lead the attack with PR\""
+                dik "\"Make Pragash the Vox Populi\""
+                dik "\"Yes... and then we cross the Rubicon {nw}\""
+                dik "\"erm, the bridge from Kilgour to Wilkins building- and force them to flee...\""
+                drk "\"Figuratively, of course, yes?\""
+                dik "\"errr.....\""
+                pra "\"Thanks all of you\""
+                call prafriendshipgain from _asszembly1_3quest1prafriendshipgain
+                pra "\"By the way, have you heard that Chelsea destroyed ManU last night\""
+                dik "\"I was just watching news about that. The cricket match was most intense\""
+                pra "\"OMFG\""
+                dik "\"I jest\""
+                dik "\"or do I?\""
+                "You should relay this news to William Yang - he is currently engaged in conversation with his hand"
+                "You engage in mindless conversation with Richard, Derek and Pragash"
+                return
+                
 label asszembly1_4:
-    mox "\"It's ok if half the previous year's Year 12 got band 4, Fortians are the epitome of social justice and exit profile\""
+    mox "\"It's ok if half the previous year's Year 12 got band 3, Fortians are the epitome of social justice and exit profile\""
     mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo. There is more to high school than ATAR\""
     "20 minutes later"
     sze "\"Well that was fucking useless\""
     call fortiangain from _asszembly1_3fortiangain
     wil "\"Pah, talking about helping the community; only I know of what must be done for the greater good\""
     jump recess1
+    
 label asszemblyjigolo1_2:
     jit "\"Arrite, so long as you don't be dog, we'll be fine with you here\""
     jit "\"Follow me, and listen, yeh? If u see a teacher, bail yeh.\""
@@ -1423,8 +1543,63 @@ label asszemblyjigolo1_2:
     jit "\"That's not it, son! Y would we use that one? That one's the legendary Cohen Dungeon\""
     jit "\"U must be munted to not know dat\""
     "You follow Gary to Rowe Dungeon"
-    sze "\"Why is there shifty BDSM gear hanging on the wall?\""
+    jit "\"Hey Sze, check this out\""
+    menu:
+        "Look at the stuff on Gary's laptop":
+        jit "\"This is quality anime\""
+        sze "\"Lol why is there a bunch of schoolgirls and a tentacle {nw}\""
+        sze "\"Oh\""
+        call thirstgain from _asszemblyjigolo1_2thirstgaina
+        jit "\"Oh ho ho ho\""
+        jit "\"This is the good bit\""
+        "..."
+        "You go to wash hands"
+        call thirstgain from _asszemblyjigolo1_2thirstgainb
+        jit "\"That was good scene wasn't it?\""
+        sze "\"...yea...is ok, i guess\""
+        call jitfriendshipgain from _asszemblyjigolo1_2gazzafriendshipgaingaywanker
+        jump asszemblyjigolo1_3
+        
+        "Study":
+        sze "\"No ty, I need to study for HSC\""
+        jit "\"Relax it's still the first day of year 11\""
+        sze "\"But William is already doing 50 HSC papers per day\""
+        #that moment when someone has more than 150 hours per day...
+        jit "\"He's going to get 99+ ATAR anyway, he's just one of those guys\""
+        jit "\"And then there are some others who will go all tryhard yet still get rekt. No offence mate\""
+        "You ponder the philosophical nature of intelligence and ruminate upon the mysteries and questions of epistemology"
+        call intelgain from _asszemblyjigolo1_2callintelgainphilosopher
+        "You then direct your focus to your work, this time examining the ways of the locus"
+        call intelgain from _asszemblyjigolo1_2callintelgainmathematician
+        jit "\"Whoa ok chill calm down\""
+        jit "\"Don't need to be that try hard\""
+        jump asszemblyjigolo1_3
+        
+        "Talk to Gary" if quest1electionpromise = true:
+        sze "\"Actually, I wanted to ask you something\""
+        jit "\"Eh? I'm watching my pronz tho\""
+        sze "\"...k...\""
+        jit "\"Yeah, what is it?\""
+        sze "\"For some reason...Will wants Pragash to run for SRC\""
+        jit "\"lol that would be funny, considering how they kicked him off\""
+        jit "\"But idk man, Will always has agenda...seems kinda shifty to me...\"" 
+        "The thought never occurred to you but Gary's warning has made you more alert...ish"
+        call strengthgain from _asszemblyjigolo1_2callstrengthgainwarning
+        sze "\"I'll leave you to your hentai then\""
+        jit "\"*nods* thanks mate\""
+        call jitfriendshipgain from _asszemblyjigolo1_2garyfriendshipgaincosyoulethimwatchhentai
+        jump asszemblyjigolo1_3
+
+label asszemblyjigolo1_3:
+    "You suddenly hear heavy footsteps at the top of the stairs leading down to the dungeon"
+    jit "\"Shit, it must be Moxham's Brown Shirt Patrol\""
+    jit "\"Every man for himself\""
+    "Everyone scrambles to escape"
+    "{b}Kill der Untermenschen! Feuer! {b} {nw}"
+    "Oops, ve are not up to zat phase yet, capture zem all"
+    sze "shit shit shit"
     jump dead
+# need to take break after typing, like, 200 lines or something 
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
 label recess1:
     if $ metderek is true:

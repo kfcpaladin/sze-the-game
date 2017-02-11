@@ -648,10 +648,10 @@ label strengthloss:
             "Your below average combat propensity of [strength] suggests that you have a thing for being dominated."
             return
         elif strength > -50:
-            "At [strength] combat propensity, a samurai would rather commit seppuku than face the dishonour of seeing you."
+            "At [strength] combat propensity, the only slaying you know is in Dungeons & Dragons..."
             return
         elif strength > -75:
-            "With [strength] combat propensity, 6 year olds will raep your ass and pussy slays you."
+            "With [strength] combat propensity pussies slays you."
             return
         elif strength > -100:
             "When you have [strength] combat \"propensity\", you will get rekt so hard, you will be reincarnated as an abortion."
@@ -691,7 +691,7 @@ label strengthgain:
             "At [strength] combat propensity, a samurai would rather commit seppuku than face the dishonour of seeing you."
             return
         elif strength > -75:
-            "With [strength] combat propensity, 6 year olds will raep your ass and pussy slays you."
+            "With [strength] combat propensity pussies slays you."
             return
         elif strength > -100:
             "When you have [strength] combat \"propensity\", you will get rekt so hard, you will be reincarnated as an abortion."

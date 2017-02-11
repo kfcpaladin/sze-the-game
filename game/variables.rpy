@@ -558,13 +558,15 @@ label thirstgain:
             "At a thirst of [thirst], you rival Tiddalik"
             return
         elif thirst > 75:
-            "Even a can of SOLO cannot crush your thirst of [thirst]"
+            show moxham happy
+            "With a thirst of [thirst], sometimes moxham appears in your {s}dreams{/s} hallucinations"
+            hide moxham 
             return
         elif thirst > 50:
-            "With a thirst of [thirst], sometimes moxham appears in your dreams"
+            "With a thirst of [thirst], like Roy, you are willing to partake in sexual activities with robots for water"
             return
         elif thirst > 25:
-            "With a thirst of [thirst], like Roy, you are willing to partake in sexual activities with robots"
+            "Even a can of SOLO cannot crush your thirst of [thirst]"
             return
         elif thirst > 0:
             "At [thirst] thirstiness , you have the standard healthy desires of a teenage boy of your age."
@@ -590,18 +592,19 @@ label thirstgain:
 label thirstloss:
     if thirsttutorial is True:
         $ thirst -= 1
-        "You became less thirsty."
         if thirst > 100:
             "At a thirst of [thirst], you rival Tiddalik"
             return
         elif thirst > 75:
-            "Even a can of SOLO cannot crush your thirst of [thirst]"
+            show moxham happy
+            "With a thirst of [thirst], sometimes moxham appears in your {s}dreams{/s} hallucinations"
+            hide moxham 
             return
         elif thirst > 50:
-            "With a thirst of [thirst], sometimes moxham appears in your dreams"
+            "With a thirst of [thirst], like Roy, you are willing to partake in sexual activities with robots for water"
             return
         elif thirst > 25:
-            "With a thirst of [thirst], like Roy, you are willing to partake in sexual activities with robots."
+            "Even a can of SOLO cannot crush your thirst of [thirst]"
             return
         elif thirst > 0:
             "At [thirst] thirstiness , you have the standard healthy desires of a teenage boy of your age."
@@ -613,7 +616,7 @@ label thirstloss:
             "At a thirst of [thirst], it is no surprise you have already taken a vow of celibacy."
             return
         elif thirst > -75:
-            "With [thirst] thirstiness, you elected to have a penectomy on top of your vasectomy."
+            "With [thirst] thirstiness, you elected to have a penectomy."
             return
         else:
             "You are disgusted by the concept of sexual relations, even with Serena."

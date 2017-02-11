@@ -570,7 +570,7 @@ label thirstgain:
             "At [thirst] thirstiness , you have the standard healthy desires of a teenage boy of your age."
             return
         elif thirst > -25:
-            "With a thirstiness of [thirst], you have been oft compared to Lixu"
+            "With a thirstiness of [thirst], you have been oft compared to LiXu"
             return
         elif thirst > -50:
             "At a thirst of [thirst], it is no surprise you have already taken a vow of celibacy."
@@ -607,13 +607,13 @@ label thirstloss:
             "At [thirst] thirstiness , you have the standard healthy desires of a teenage boy of your age."
             return
         elif thirst > -25:
-            "With a thirstiness of [thirst], you have been oft compared to Lixu"
+            "With a thirstiness of [thirst], you have been oft compared to LiXu"
             return
         elif thirst > -50:
             "At a thirst of [thirst], it is no surprise you have already taken a vow of celibacy."
             return
         elif thirst > -75:
-            "With [thirst] thirstiness, you elected to have a penectomy."
+            "With [thirst] thirstiness, you elected to have a penectomy on top of your vasectomy."
             return
         else:
             "You are disgusted by the concept of sexual relations, even with Serena."

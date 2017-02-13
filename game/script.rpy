@@ -1372,8 +1372,8 @@ label asszembly1_3:
             jump dead
         "\"Talk\"":
             if quest1electionpromise is True:
-            call quest1electionpromise1_a
-            jump asszembly1_4
+                call quest1electionpromise1_a
+                jump asszembly1_4
             else:
                 "But the silhouette of Serena, seated four rows ahead, catches your eye"
                 "You watch as she gossips with Willis"
@@ -1382,7 +1382,7 @@ label asszembly1_3:
                 "You notice Derek for the first time this year"
                 sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"  
                 sze "shit, I need to make a convincing lie or something"
-                    $ metderek = true
+                $ metderek = true
                 menu:
                     "Stand up":
                         if intelligence >=4:
@@ -1477,7 +1477,7 @@ label asszembly1_3:
             "40 minutes later"
             jump asszembly1_4
 
-label quest1electionpromise1_a
+label quest1electionpromise1_a:
                 "You turn to talk to Derek and Richard"
                 pra "\"urgh...\""
                 "You are reminded of your quest"
@@ -1546,49 +1546,49 @@ label asszemblyjigolo1_2:
     jit "\"Hey Sze, check this out\""
     menu:
         "Look at the stuff on Gary's laptop":
-        jit "\"This is quality anime\""
-        sze "\"Lol why is there a bunch of schoolgirls and a tentacle {nw}\""
-        sze "\"Oh\""
-        call thirstgain from _asszemblyjigolo1_2thirstgaina
-        jit "\"Oh ho ho ho\""
-        jit "\"This is the good bit\""
-        "..."
-        "You go to wash hands"
-        call thirstgain from _asszemblyjigolo1_2thirstgainb
-        jit "\"That was good scene wasn't it?\""
-        sze "\"...yea...is ok, i guess\""
-        call jitfriendshipgain from _asszemblyjigolo1_2gazzafriendshipgaingaywanker
-        jump asszemblyjigolo1_3
+            jit "\"This is quality anime\""
+            sze "\"Lol why is there a bunch of schoolgirls and a tentacle {nw}\""
+            sze "\"Oh\""
+            call thirstgain from _asszemblyjigolo1_2thirstgaina
+            jit "\"Oh ho ho ho\""
+            jit "\"This is the good bit\""
+            "..."
+            "You go to wash hands"
+            call thirstgain from _asszemblyjigolo1_2thirstgainb
+            jit "\"That was good scene wasn't it?\""
+            sze "\"...yea...is ok, i guess\""
+            call jitfriendshipgain from _asszemblyjigolo1_2gazzafriendshipgaingaywanker
+            jump asszemblyjigolo1_3
         
         "Study":
-        sze "\"No ty, I need to study for HSC\""
-        jit "\"Relax it's still the first day of year 11\""
-        sze "\"But William is already doing 50 HSC papers per day\""
-        #that moment when someone has more than 150 hours per day...
-        jit "\"He's going to get 99+ ATAR anyway, he's just one of those guys\""
-        jit "\"And then there are some others who will go all tryhard yet still get rekt. No offence mate\""
-        "You ponder the philosophical nature of intelligence and ruminate upon the mysteries and questions of epistemology"
-        call intelgain from _asszemblyjigolo1_2callintelgainphilosopher
-        "You then direct your focus to your work, this time examining the ways of the locus"
-        call intelgain from _asszemblyjigolo1_2callintelgainmathematician
-        jit "\"Whoa ok chill calm down\""
-        jit "\"Don't need to be that try hard\""
-        jump asszemblyjigolo1_3
+            sze "\"No ty, I need to study for HSC\""
+            jit "\"Relax it's still the first day of year 11\""
+            sze "\"But William is already doing 50 HSC papers per day\""
+            #that moment when someone has more than 150 hours per day...
+            jit "\"He's going to get 99+ ATAR anyway, he's just one of those guys\""
+            jit "\"And then there are some others who will go all tryhard yet still get rekt. No offence mate\""
+            "You ponder the philosophical nature of intelligence and ruminate upon the mysteries and questions of epistemology"
+            call intelgain from _asszemblyjigolo1_2callintelgainphilosopher
+            "You then direct your focus to your work, this time examining the ways of the locus"
+            call intelgain from _asszemblyjigolo1_2callintelgainmathematician
+            jit "\"Whoa ok chill calm down\""
+            jit "\"Don't need to be that try hard\""
+            jump asszemblyjigolo1_3
         
         "Talk to Gary" if quest1electionpromise = true:
-        sze "\"Actually, I wanted to ask you something\""
-        jit "\"Eh? I'm watching my pronz tho\""
-        sze "\"...k...\""
-        jit "\"Yeah, what is it?\""
-        sze "\"For some reason...Will wants Pragash to run for SRC\""
-        jit "\"lol that would be funny, considering how they kicked him off\""
-        jit "\"But idk man, Will always has agenda...seems kinda shifty to me...\"" 
-        "The thought never occurred to you but Gary's warning has made you more alert...ish"
-        call strengthgain from _asszemblyjigolo1_2callstrengthgainwarning
-        sze "\"I'll leave you to your hentai then\""
-        jit "\"*nods* thanks mate\""
-        call jitfriendshipgain from _asszemblyjigolo1_2garyfriendshipgaincosyoulethimwatchhentai
-        jump asszemblyjigolo1_3
+            sze "\"Actually, I wanted to ask you something\""
+            jit "\"Eh? I'm watching my pronz tho\""
+            sze "\"...k...\""
+            jit "\"Yeah, what is it?\""
+            sze "\"For some reason...Will wants Pragash to run for SRC\""
+            jit "\"lol that would be funny, considering how they kicked him off\""
+            jit "\"But idk man, Will always has agenda...seems kinda shifty to me...\"" 
+            "The thought never occurred to you but Gary's warning has made you more alert...ish"
+            call strengthgain from _asszemblyjigolo1_2callstrengthgainwarning
+            sze "\"I'll leave you to your hentai then\""
+            jit "\"*nods* thanks mate\""
+            call jitfriendshipgain from _asszemblyjigolo1_2garyfriendshipgaincosyoulethimwatchhentai
+            jump asszemblyjigolo1_3
 
 label asszemblyjigolo1_3:
     "You suddenly hear heavy footsteps at the top of the stairs leading down to the dungeon"

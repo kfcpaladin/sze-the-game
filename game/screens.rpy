@@ -612,7 +612,7 @@ screen statsscreen:
     tag menu
     # Include the navigation.
     use navigation
-    grid 3 1:
+    grid 2 1:
         style_group "prefs"
         xfill True
         vbox:
@@ -643,7 +643,3 @@ screen statsscreen:
                 text "Andrew: [leefriendship] points"
                 text "Aradhya: [butfriendship] points"
                 text "Steven: [dngfriendship] points"
-        vbox:
-            frame:
-                has vbox
-                textbutton "Return" action Return()

@@ -227,6 +227,7 @@ screen navigation():
 
         textbutton _("Return") action Return()
         textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Stats") action ShowMenu("statsscreen")
         textbutton _("Save Game") action ShowMenu("save")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Main Menu") action MainMenu()
@@ -534,7 +535,8 @@ screen quick_menu():
 
         xalign 1.0
         yalign 1.0
-        
+
+        textbutton _("Stats") action ShowMenu('statsscreen')
         textbutton _("kms") action ShowMenu('kms')
         textbutton _("Back") action Rollback()
         textbutton _("Save") action ShowMenu('save')
@@ -605,3 +607,43 @@ init -2:
         text_align 0.5
         layout "subtitle"
 
+###########################################################################
+screen statsscreen:
+    tag menu
+    # Include the navigation.
+    use navigation
+    grid 3 1:
+        style_group "prefs"
+        xfill True
+        vbox:
+            frame:
+                has vbox
+                text "intelligence: [intelligence] points"
+                text "charm: [charm] points"
+                text "strength: [strength] points"
+                text "thirst: [thirst] points"
+                text "fort: [fort] points"
+        vbox:
+            frame:
+                has vbox
+                text "Serena: [rinfriendship] points"
+                text "Willis: [kokfriendship] points"
+                text "Fluitsma: [flufriendship] points"
+                text "Rusali: [rusfriendship] points"
+                text "Pragash: [prafriendship] points"
+                text "Dean: [deafriendship] points"
+                text "William: [wilfriendship] points"
+                text "Chao: [chafriendship] points"
+                text "Grant: [grafriendship] points"
+                text "Moxham: [moxfriendship] points"
+                text "Richard Wang:[dikfriendship] points"
+                text "Derek: [drkfriendship] points"
+                text "Jittian:[jitfriendship] points"
+                text "Roy: [royfriendship] points"
+                text "Andrew: [leefriendship] points"
+                text "Aradhya: [butfriendship] points"
+                text "Steven: [dngfriendship] points"
+        vbox:
+            frame:
+                has vbox
+                textbutton "Return" action Return()

@@ -1424,50 +1424,50 @@ label asszembly1_3:
                             sze "shit shit {nw}" with vpunch
                             "Your heart finally gives up as you die of embarrassment"
                             jump dead
-                "Deny all charges":
-                    if intelligence >=2:
-                        sze "\"I am merely salivating in anticipation of my recess which consists of leftover butter chicken\""
-                        pra "\"Butter chicken is good but rogan josh is better\""
-                        sze "\"That was ordered from the restaurant the night before but it was all finished\""
-                        drk "\"Wait why u even order from Indian restaurant?\""
-                        sze "\"It was more Hong Kong/Indian/Italian/American fusion\""
-                        pra "\"wtf\""
-                        sze "\"I am accepting to new ideas because of my Fortianness\""
-                        call fortgain from _asszembly1_3sadasdasdcalllfortiangain
-                        pra "\"That almost makes me as annoyed as Desney being on SRC\""
-                        "You see that this has caught the attention of Will Yang\""
-                        wil "\"Perhaps you might be persuaded to run?\""
-                        pra "\"But they hate me on the SRC\""
-                        wil "\"I hear Wesley is planning on running\""
-                        wil "\"If not you then Wesley...\""
-                        pra "\"Then I need assistance\""
-                        "They disrupt your gazing at Serena by asking if you would render aid"
-                        menu:
-                            "Szeebs":
-                                sze "\"Szeebs tho\""
-                                call prafriendshiploss from _asszembly1_3callprafriendshiploosss
-                                wil "\"I had higher expectations for you, you are disappointment\""
-                                call wilfriendshiploss from _asszembly1_3wilfriendshiploss
-                                jump asszembly1_4
-                            "K":
-                                sze "\"K\""
-                                "You talk more with them to discuss plans before Yang turns away"
-                                sze "I have idea...maybe Derek and Rick have better idea for this"
-                                $ quest1electionpromise = True
-                                call quest1electionpromise1_a
-                                jump asszembly1_4
-                    else:
-                        sze "\"I wasn't drooling tho\""
-                        drk "\"You definitely were drooling\""
-                        sze "\"But I wasn't\""
-                        drk "\"you were\""
-                        dik "\"You definitely were\""
-                        pra "\"You were\""
-                        drk "\"If you think about it, you were\""
-                        sze "\"Nooo...why you be like this?\""
-                        call charmloss from _asszembly1_3callcharmlosslol
-                        "You spend the next few minutes insisting that you weren't drooling"
-                        jump asszembly1_4
+                    "Deny all charges":
+                        if intelligence >=2:
+                            sze "\"I am merely salivating in anticipation of my recess which consists of leftover butter chicken\""
+                            pra "\"Butter chicken is good but rogan josh is better\""
+                            sze "\"That was ordered from the restaurant the night before but it was all finished\""
+                            drk "\"Wait why u even order from Indian restaurant?\""
+                            sze "\"It was more Hong Kong/Indian/Italian/American fusion\""
+                            pra "\"wtf\""
+                            sze "\"I am accepting to new ideas because of my Fortianness\""
+                            call fortgain from _asszembly1_3sadasdasdcalllfortiangain
+                            pra "\"That almost makes me as annoyed as Desney being on SRC\""
+                            "You see that this has caught the attention of Will Yang\""
+                            wil "\"Perhaps you might be persuaded to run?\""
+                            pra "\"But they hate me on the SRC\""
+                            wil "\"I hear Wesley is planning on running\""
+                            wil "\"If not you then Wesley...\""
+                            pra "\"Then I need assistance\""
+                            "They disrupt your gazing at Serena by asking if you would render aid"
+                            menu:
+                                "Szeebs":
+                                    sze "\"Szeebs tho\""
+                                    call prafriendshiploss from _asszembly1_3callprafriendshiploosss
+                                    wil "\"I had higher expectations for you, you are disappointment\""
+                                    call wilfriendshiploss from _asszembly1_3wilfriendshiploss
+                                    jump asszembly1_4
+                                "K":
+                                    sze "\"K\""
+                                    "You talk more with them to discuss plans before Yang turns away"
+                                    sze "I have idea...maybe Derek and Rick have better idea for this"
+                                    $ quest1electionpromise = True
+                                    call quest1electionpromise1_a
+                                    jump asszembly1_4
+                        else:
+                            sze "\"I wasn't drooling tho\""
+                            drk "\"You definitely were drooling\""
+                            sze "\"But I wasn't\""
+                            drk "\"you were\""
+                            dik "\"You definitely were\""
+                            pra "\"You were\""
+                            drk "\"If you think about it, you were\""
+                            sze "\"Nooo...why you be like this?\""
+                            call charmloss from _asszembly1_3callcharmlosslol
+                            "You spend the next few minutes insisting that you weren't drooling"
+                            jump asszembly1_4
                         
         "\"Pay attention\"":
             "30 minutes later"

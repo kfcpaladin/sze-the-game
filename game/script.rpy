@@ -1535,7 +1535,7 @@ label asszembly1_4:
     
 label asszemblyjigolo1_2:
     jit "\"Arrite, so long as you don't be dog, we'll be fine with you here\""
-    jit "\"Follow me, and listen, yeh? If u see a teacher, bail yeh.\""
+    jit "\"Follow me, and listen... If u see a teacher, bail yeh.\""
     "You see a couple of other people milling about"
     sze "\"Where are we going?\""
     jit "\"The Rowe Dungeon\""
@@ -1591,16 +1591,91 @@ label asszemblyjigolo1_2:
             jump asszemblyjigolo1_3
 
 label asszemblyjigolo1_3:
-    "You suddenly hear heavy footsteps at the top of the stairs leading down to the dungeon"
-    jit "\"Shit, it must be Moxham's Brown Shirt Patrol\""
-    jit "\"Every man for himself\""
-    "Everyone scrambles to escape"
-    "{b}Kill der Untermenschen! Feuer! {b} {nw}"
-    "Oops, ve are not up to zat phase yet, capture zem all"
-    sze "shit shit shit"
-    jump dead
-# need to take break after typing, like, 200 lines or something 
+    "You suddenly hear heavy footsteps echoing down the corridor leading to the stairs to the dungeon"
+    "Gaz stops and looks up"
+    jit "\"Shit, go see what's going on...quietly\""
+    sze "\"Why me?\""
+    jit "\"Just cos brah...u need to do it...do it for the Africans\""
+    sze "\"I don't see any Africans{nw}\""
+    jit "\"We're all from Africa cos Science\""
+    sze "\"Yeah, but we're not Africans cos we're not black{nw}\""
+    jit "\"U being racist? Ever heard of Afrikaans? Are u denying the white colonisation of Africa and by extension the subsequent genocides and the apartheid?\""
+    sze "\"What? No?!\""
+    sze "\"But we're not white either\""
+    jit "\"We're in Australia tho... ur pretty much white boi in the eyes of ur ancestors\""
+    sze "\"Fine...\""
+    jit "\"Look, mate, just sneak out, take a peek, return and report\""
+    "You hear more footsteps, this time drawing closer to the top of the stairs\""
+    sze "\"...\""
+    jit "\"Go... go up and look\""
+    sze "\"...\""
+    menu:
+        "Continue arguing" if jitfriendship <=2:
+            sze "\"Jitian, I really don't want to tho\""
+            jit "\"...\""
+            jit "\"omfg...Just\""
+            jit "\"Go out there\""
+            jit "\"Look\""
+            jit "\"See who it is\""
+            jit "\"Come back\""
+            jit "\"Ez pz\""
+            sze "\"{b} What if it is a teacher {b}\""
+            jit "\"{b} stfu, if it is then they can hear you {b}\""
+            "Turns out, it wasn't a teacher...it was several of them on patrol"
+            "\"{i} {b} Oi, you there! STOP! {b} {i}\""
+            jit "\"fml, fcking Arthur\""
+            call jitfriendshiploss from _asszemblyjigolo1_3jitfriendshiploss
+            sze "\"Why is it my fault?\""
+            call jitfriendshiploss from _asszemblyjigolo1_3jitfriendshiplossagain
+            jit "\"U for realz??? I don't even...\""
+            call jitfriendshiploss from _asszemblyjigolo1_3jitfriendshiplossyetagain
+            "You sense that Gary is somewhat reluctant to talk to you now..."
+            "\" {i} Off to the principal with youse...no funny moves, put your things in your bags, place your hands behind your head, interlock your fingers...{i} {nw}\""
+            sze "fuck fuck fuck fuck fuck"
+            sze "knew I shouldn't've jigged"
+            "You endure the march of shame in silence"
+            "..."
+            "..."
+# need scene change {reminder}
+            "You finally arrive at the Fountain quad in front of the school hall and wait for asszembly to end"
+            jump dead
+# check mox counter, if >=1 = suspension, if <1 = detention after school 
+        "Don't look just run" if intelligence >=3:
+            sze "\"Wait...\""
+            jit "\"?...\""
+            sze "\"It can't be random students cos this place is too far away from the hall or the toilets\""
+            jit "\"Oh shit tru...Everyone bail, sneak out\""
+            jit "\"Oh tru...smart, Sze, good job\""
+            call jitfriendshipgain from _calljitfriendshipgainasszemblyjigolo1_3
+            "Everyone sneaks through the side door of the Rowe Dungeon just as the footsteps reach the stairwell"
+            "\"{i} I thought I saw movement... {/i}\""
+            "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
+            jit "\"Whew...Sze let's go, find somewhere to hide\""
+            sze "\"k, you lead the way\""
+            jit "\"Nah, you probs have better ideas as to what would be best place to go to\""
+            sze "\"Whaa- fine\""
+            menu:
+                "Tennis courts":
+                    sze "\"What about Tennis courts?\""
+                    jump dead
+                "Toilets":
+                    sze "\"What about the toilets?\""
+                    jump dead
+                "Outside the school":
+                    sze "\"Let's just go outside school\""
+                    jump dead
+                "Play with vices":
+                    sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
+                    jump dead
+        "Go look":
+            sze "\"Fine\""
+# will finish
+            jump dead
+        "Dog the bois":
+            sze "\"Fuck this shit, I'm out!\""
+            jit "\"Oi, you can't just leave\""
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
+            jump dead
 label recess1:
     if $ metderek is true:
         sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""

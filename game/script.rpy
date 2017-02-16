@@ -105,6 +105,7 @@ label start:
 label schoolday1:
     scene bg school
     with fade
+    "Wednesday Morning"
     sze "I arrived at school 3 hours early to show my dedication to the system"
     sze "One day she will notice"
     #btw, the day is probably wednesday or tuesday because first day back
@@ -973,7 +974,8 @@ label yangrantp1_2:
                 wil "\"Actually somewhat smart\""
                 wil "\"But since I thought of that, you still retarded...\""
                 gra "\"Now listen here, you little runts, gather around the front table\""
-                wil "\"Be quite now, I need to find Pragash\""
+                sze "\"We should probs, like, go there {nw}\""
+                wil "\"Be quiet now, I need to talk to Pragash\""
                 jump eng1p2
             "\"Pragash Haran will be the figurehead\"":
                 $ yangrant1_2eingutidee = True

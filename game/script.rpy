@@ -89,7 +89,7 @@ label start:
     scene bg intro
     with fade
     # remove this these things to enable music later
-    play music "Persona 4 - Traumerei - from YouTube.mp3" loop
+    play music "Deemo - Paper Plane's Adventure - from YouTube.mp3"
     "The Year is 2015"
     scene black
     with fade

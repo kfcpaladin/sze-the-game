@@ -1399,7 +1399,7 @@ label asszembly1_3:
                             mox "\"This man is epitome of Fortian\""
                             hide moxham happy
                             call charmgain from _asszembly1_3charmgain
-                            call fortgain from _asszembly1_3_asdasdafortgain
+                            call fortiangain from _asszembly1_3_asdasdafortgain
                             "You sit back down, basking in the glory of your social justice-ness"
                             dik "\"Wow, you commie hippy bastard\""
                             call dikfriendshiploss from _asszembly1_3calldikfriendshiploss
@@ -1435,7 +1435,7 @@ label asszembly1_3:
                             sze "\"It was more Hong Kong/Indian/Italian/American fusion\""
                             pra "\"wtf\""
                             sze "\"I am accepting to new ideas because of my Fortianness\""
-                            call fortgain from _asszembly1_3sadasdasdcalllfortiangain
+                            call fortiangain from _asszembly1_3sadasdasdcalllfortiangain
                             pra "\"That almost makes me as annoyed as Desney being on SRC\""
                             "You see that this has caught the attention of Will Yang\""
                             wil "\"Perhaps you might be persuaded to run?\""
@@ -1475,7 +1475,7 @@ label asszembly1_3:
             "30 minutes later"
             mox "\"Michael Kirby is great, let us worship Michael Kirby\""
             "You worship Michael Kirby, allowing yourself to absorb the power of social justice"
-            call fortgain from _asszembly1_3fortgain
+            call fortiangain from _asszembly1_3fortgain
             "40 minutes later"
             jump asszembly1_4
 
@@ -1621,10 +1621,10 @@ label asszemblyjigolo1_3:
             jit "\"See who it is\""
             jit "\"Come back\""
             jit "\"Ez pz\""
-            sze "\"{b} What if it is a teacher {b}\""
-            jit "\"{b} stfu, if it is then they can hear you {b}\""
+            sze "\"{b} What if it is a teacher {/b}\""
+            jit "\"{b} stfu, if it is then they can hear you {/b}\""
             "Turns out, it wasn't a teacher...it was several of them on patrol"
-            "\"{i} {b} Oi, you there! STOP! {b} {i}\""
+            "\"{i} {b} Oi, you there! STOP! {/b} {/i}\""
             jit "\"fml, fcking Arthur\""
             call jitfriendshiploss from _asszemblyjigolo1_3jitfriendshiploss
             sze "\"Why is it my fault?\""
@@ -1632,7 +1632,7 @@ label asszemblyjigolo1_3:
             jit "\"U for realz??? I don't even...\""
             call jitfriendshiploss from _asszemblyjigolo1_3jitfriendshiplossyetagain
             "You sense that Gary is somewhat reluctant to talk to you now..."
-            "\" {i} Off to the principal with youse...no funny moves, put your things in your bags, place your hands behind your head, interlock your fingers...{i} {nw}\""
+            "\" {i} Off to the principal with youse...no funny moves, put your things in your bags, place your hands behind your head, interlock your fingers...{/i} {nw}\""
             sze "fuck fuck fuck fuck fuck"
             sze "knew I shouldn't've jigged"
             "You endure the march of shame in silence"

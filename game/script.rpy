@@ -1640,7 +1640,7 @@ label asszemblyjigolo1_3:
             "..."
 # need scene change {reminder}
             "You finally arrive at the Fountain quad in front of the school hall and wait for asszembly to end"
-            jump dead
+            jump asszembly1shitstorm
 # check mox counter, if >=1 = suspension, if <1 = detention after school 
         "Don't look just run" if intelligence >=3:
             sze "\"Wait...\""
@@ -1659,9 +1659,13 @@ label asszemblyjigolo1_3:
             menu:
                 "Tennis courts":
                     sze "\"What about Tennis courts?\""
+                    jit "\"Mate, you a curry?\""
+                    sze "\"Whatever, let's just go there\""
+                    jit "\"K mate...\""
                     jump dead
                 "Toilets":
                     sze "\"What about the toilets?\""
+                    jit "\"Mate, that's pretty grot\""
                     jump dead
                 "Outside the school":
                     sze "\"Let's just go outside school\""
@@ -1709,6 +1713,10 @@ label recess1:
                 sze "\"whaa- can you not...geez\""
                 sze "I die of embarassment"
                 jump dead
+                
+label asszembly1shitstorm
+    jump dead
+    
 label dead:
     scene black
     sze "I dead"

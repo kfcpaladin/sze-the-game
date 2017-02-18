@@ -1549,7 +1549,7 @@ label asszemblyjigolo1_2:
     menu:
         "Look at the stuff on Gary's laptop":
             jit "\"This is quality anime\""
-            sze "\"Lol why is there a bunch of schoolgirls and a tentacle {nw}\""
+            sze "\"Lol why is there a bunch of schoolgirls and some tentacles {nw}\""
             sze "\"Oh\""
             call thirstgain from _asszemblyjigolo1_2thirstgaina
             jit "\"Oh ho ho ho\""

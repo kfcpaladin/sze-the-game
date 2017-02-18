@@ -1714,7 +1714,7 @@ label recess1:
                 sze "I die of embarassment"
                 jump dead
                 
-label asszembly1shitstorm
+label asszembly1shitstorm:
     jump dead
     
 label dead:

@@ -1659,20 +1659,25 @@ label asszemblyjigolo1_3:
             menu:
                 "Tennis courts":
                     sze "\"What about Tennis courts?\""
-                    jit "\"Mate, you a curry?\""
+                    jit "\"Mate, you a curry?Just kidding, not bad\""
                     sze "\"Whatever, let's just go there\""
-                    jit "\"K mate...\""
+                    jit "\"k\""
+                    call asszemblyjigolo1encounter
                     jump dead
                 "Toilets":
                     sze "\"What about the toilets?\""
                     jit "\"Mate, that's pretty grot\""
+                    call asszemblyjigolo1encounter
                     jump dead
                 "Outside the school":
                     sze "\"Let's just go outside school\""
+                    call asszemblyjigolo1encounter
                     jump dead
                 "Play with vices":
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
+                    call asszemblyjigolo1encounter
                     jump dead
+# remove jigolo1encounter for one of the above {reminder}
         "Go look":
             sze "\"Fine\""
 # will finish
@@ -1682,6 +1687,10 @@ label asszemblyjigolo1_3:
             jit "\"Oi, you can't just leave\""
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
             jump dead
+
+label asszemblyjigolo1encounter:
+    return
+
 label recess1:
     if $ metderek is true:
         sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""

@@ -1667,10 +1667,21 @@ label asszemblyjigolo1_3:
                 "Toilets":
                     sze "\"What about the toilets?\""
                     jit "\"Mate, that's pretty grot\""
+                    sze "\"You said I would probs have better ideas\""
+                    sze "\"This is my better idea\""
+                    jit "\"Still pretty crap\""
+                    jit "\"{cps=*0.2}...{/cps}See what I did there >.< EHHHHHHH???\""
+                    sze "\"fuk off\""
+                    jit "\"Fine let's go\""
                     call asszemblyjigolo1encounter
                     jump dead
                 "Outside the school":
                     sze "\"Let's just go outside school\""
+                    jit "\"Hmmmm {cps=*0.2}...{/cps} Interesting suggestion\""
+                    sze "\"Nothing but fence in the way\""
+                    jit "\"Whoa, whoa, Arthur is a badass, step back\""
+                    call fortianloss from asszembly1jigoloextrajigolofortloss
+                    jit "\"You lead, then\""
                     call asszemblyjigolo1encounter
                     jump dead
                 "Play with vices":
@@ -1689,6 +1700,7 @@ label asszemblyjigolo1_3:
             jump dead
 
 label asszemblyjigolo1encounter:
+    
     return
 
 label recess1:

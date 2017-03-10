@@ -1707,6 +1707,7 @@ label recess1:
     if $ metderek is true:
         sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
         jump dead
+#keep as placeholder or nah???idk
     else:
         "You go to Rowe Corner"
         sze "I sze Serena... I should talk"

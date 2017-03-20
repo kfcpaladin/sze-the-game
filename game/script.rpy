@@ -1682,10 +1682,16 @@ label asszemblyjigolo1_3:
                     jit "\"Whoa, whoa, Arthur is a badass, step back\""
                     call fortianloss from asszembly1jigoloextrajigolofortloss
                     jit "\"You lead, then\""
-                    call asszemblyjigolo1encounter
                     jump dead
                 "Play with vices":
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
+                    jit "\"Wow, are you gay for Mr. Grant?\""
+                    sze "\"No, I just think it is a good place to hide\""
+                    jit "\"Suuurre...\""
+                    sze "\"Got any idea for a less \"gay\" place to hide in then?\""
+                    jit "\"Your mum's pussy\""
+                    sze "\"...can you not\""
+                    jit "\"soz, you lead\""
                     call asszemblyjigolo1encounter
                     jump dead
 # remove jigolo1encounter for one of the above {reminder}
@@ -1700,7 +1706,7 @@ label asszemblyjigolo1_3:
             jump dead
 
 label asszemblyjigolo1encounter:
-    
+    sze "\"
     return
 
 label recess1:
@@ -1733,6 +1739,9 @@ label recess1:
                 drk "\"Wow, Arthur looks retarded frozen in mid-stride with his mouth wide open\""
                 sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
                 sze "\"whaa- can you not...geez\""
+                drk "\"hah, Sze you look like real tard\""
+                wil "\"Truue... don't know why I was friend with this idiot...\""
+                "Laughter erupts across the hall"
                 sze "I die of embarassment"
                 jump dead
                 

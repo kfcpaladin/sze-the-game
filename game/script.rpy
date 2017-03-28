@@ -101,6 +101,7 @@ label start:
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
     jump schoolday1
+    # considering adding Cavalleria Rusticana here...
     
 label schoolday1:
     scene bg school
@@ -1532,7 +1533,7 @@ label asszembly1_4:
     "20 minutes later"
     sze "\"Well that was fucking useless\""
     call fortiangain from _asszembly1_3fortiangain
-    wil "\"Pah, talking about helping the community; only I know of what must be done for the greater good\""
+    wil "\"Pah, all this talk of helping the community; only I know of what must be done for the greater good\""
     jump recess1
     
 label asszemblyjigolo1_2:
@@ -1706,7 +1707,7 @@ label asszemblyjigolo1_3:
             jump dead
 
 label asszemblyjigolo1encounter:
-    sze "\"
+    sze "\"oh\""
     return
 
 label recess1:

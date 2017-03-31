@@ -209,8 +209,8 @@ label Honestsze:
         with dissolve
         jump dead
 label Rektrusali:
-        sze "\"I was just going to talk to Rusali, who's trying to talk to her\""
-        sze "Dennis C. Rusali is friend to everyone. Why I dog him?"
+        sze "\"I was just going to talk to new kid Rusali, who's trying to talk to her\""
+        sze "Dennis C. Rusali is new kid and try to be friend to everyone. Why I dog him?"
         play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
         kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\"Argh... no really look\""
@@ -1403,6 +1403,9 @@ label asszembly1_3:
                             call fortiangain from _asszembly1_3_asdasdafortgain
                             "You sit back down, basking in the glory of your social justice-ness"
                             dik "\"Wow, you commie hippy bastard\""
+                            dik "\"I kid, that was some impressive bullshittery\""
+                            sze "\"what do you mean \"bullshittery\"?\""
+                            dik "\"{cps=*0.2}...{/cps}\""
                             call dikfriendshiploss from _asszembly1_3calldikfriendshiploss
                             drk "\"Lol calm down, nice one Sze, so u were just drooling out of social justice\""
                             "You dodged a bullet there"
@@ -1651,27 +1654,24 @@ label asszemblyjigolo1_3:
             jit "\"Oh tru...smart, Sze, good job\""
             call jitfriendshipgain from _calljitfriendshipgainasszemblyjigolo1_3
             "Everyone sneaks through the side door of the Rowe Dungeon just as the footsteps reach the stairwell"
+            "You hear the pursuers' voices in the room you just left"
             "\"{i} I thought I saw movement... {/i}\""
             "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
+            jump fugitivesfromasszembly1
+
+label fugitivesfromasszembly1:
             jit "\"Whew...Sze let's go, find somewhere to hide\""
             sze "\"k, you lead the way\""
             jit "\"Nah, you probs have better ideas as to what would be best place to go to\""
             sze "\"Whaa- fine\""
             menu:
-                "Tennis courts":
-                    sze "\"What about Tennis courts?\""
-                    jit "\"Mate, you a curry?Just kidding, not bad\""
-                    sze "\"Whatever, let's just go there\""
-                    jit "\"k\""
-                    call asszemblyjigolo1encounter
-                    jump dead
                 "Toilets":
                     sze "\"What about the toilets?\""
                     jit "\"Mate, that's pretty grot\""
                     sze "\"You said I would probs have better ideas\""
                     sze "\"This is my better idea\""
                     jit "\"Still pretty crap\""
-                    jit "\"{cps=*0.2}...{/cps}See what I did there >.< EHHHHHHH???\""
+                    jit "\"{cps=*0.2}...{/cps} See what I did there >.< EHHHHHHH???\""
                     sze "\"fuk off\""
                     jit "\"Fine let's go\""
                     call asszemblyjigolo1encounter
@@ -1683,6 +1683,7 @@ label asszemblyjigolo1_3:
                     jit "\"Whoa, whoa, Arthur is a badass, step back\""
                     call fortianloss from asszembly1jigoloextrajigolofortloss
                     jit "\"You lead, then\""
+                    call asszemblyjigolo1encounter
                     jump dead
                 "Play with vices":
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
@@ -1703,6 +1704,10 @@ label asszemblyjigolo1_3:
         "Dog the bois":
             sze "\"Fuck this shit, I'm out!\""
             jit "\"Oi, you can't just leave\""
+            sze "\"Really?\""
+            jit "\"errrr....\""
+#    to be continued...
+#    Dog the bois -> 2 options go back to assembly, run on for a long time -> go back to assembly -> dog bois again/ sneak back in// run on for a long time -> jit finds you, lose friendship, link to don't look just run
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
             jump dead
 

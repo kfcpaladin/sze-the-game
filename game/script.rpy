@@ -174,11 +174,11 @@ label TheKwokappears:
         kok "\"Were you tryna steal my girl just then\""
         "Oh shit, he would be furious if he found out i wanted to steal his girl"
         menu stealwillisgirl2:
-            "No, i was just going to ask her what next period is":
+            "\"No, i was just going to ask her what next period is\"":
                 jump Lyingsze
-            "Yea, so what??":
+            "\"Yea, so what??\"":
                 jump Honestsze
-            "I was just going to talk to Rusali; he's trying to talk to her":
+            "\"I was just going to talk to Rusali; he's trying to talk to her\"":
                 jump Rektrusali
 
     else:
@@ -337,7 +337,7 @@ label phys1answered:
     menu:
         "Say nothing":
             jump phys1answered_a
-        "Ok...":
+        "\"Ok...\"":
             jump phys1answered_b
 label phys1answered_a:
     sze "\"...\""
@@ -453,19 +453,19 @@ label phys1p2p2:
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
     menu:
-        "Yes":
+        "\"Yes\"":
             sze "\"Yes\""
             sze "\"actually want to kill myself\""
             cha "\"Arthur Sze, i deeply care about your mental health.\""
             cha "\"If you are having issues concering suicide please call Lifeline at 13 11 14\""
             jump phys1p3p3
-        "No":
+        "\"No\"":
             sze "\"No\""
             sze "\"no, pls dont kill me\""
             cha "\"Fuck you\""
             cha "\"I'll eat you for lunch!\"" with vpunch
             jump dead
-        "Ummmm...":
+        "\"Ummmm...\"":
             sze "\"Ummm...lolwut?\""
             cha "\"I'll take that as a {nw}\""
             sze "\"Lemme think\""
@@ -860,7 +860,7 @@ label eng1p1naughtycorner:
                         "And then you start to stir from your slumber, the first light of a school morning illuminating your eyes"
                         $ timetravelcount += 1
                         jump timetravel1
-                "Escape whilst you still can":
+                "Escape while you still can":
                     "You turn away from the corner, and take a step away from it"
                     "It tries to pull you back in, but you resist your feeble strength barely holding out against its immense pressure"
                     "But slowly you make an advancement, and manage to return to the world of the living"
@@ -926,11 +926,11 @@ label eng1p1p3:
     wil "\"When I achieve the Fourth Reich, dean shall be processed under the eugenics program\""
     wil "\"We cannot tolerate any non Band 6 students\""
     menu yangrant1:
-        "Heil the Fourth Reich!":
+        "\"Heil the Fourth Reich!\"":
             jump yangrantp1_1
-        "Heil Moxham!":
+        "\"Heil Moxham!\"":
             jump yangrantp1_2
-        "Indeed":
+        "\"Indeed\"":
             jump yangrantp1_3
 
 label yangrantp1_1:
@@ -953,13 +953,14 @@ label yangrantp1_2:
     wil "\"The question is... how? hmmmmm\""
     menu:
             "\"We pressure Sarah Desney\"":
+#   we do have picture of weeb sze don't we?
                 sze "\"We pressure Sarah Desney\""
                 wil "\"That's a brilliant idea\""
                 sze "\"Wow really? Senpai finally noticed me!\""
                 wil "\"For an amoebic brained cretinous slime without a sense of political intrigue\""
                 call wilfriendshiploss from _yangrantp1_2op1awilfriendshiploss
                 sze "\"Why is Senpai always so mean to me?\""
-                sze "\"Baka-senpai\""
+                sze "\"Baka-sempai\""
                 wil "\"Sze baka-desu\""
                 call wilfriendshiploss from _yangrantp1_2op1bwilfriendshiploss
                 wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
@@ -1015,7 +1016,7 @@ label eng1p2:
     wil "\"But-\""
     gra "\"Do whatever, just hand in these worksheets whenever\""
     menu:
-        "\"Do worksheets\"":
+        "Do worksheets":
             "You decide to do worksheets"
             "..."
             "..."
@@ -1027,7 +1028,7 @@ label eng1p2:
             call fortiangain from _eng1p2fortiangain
             "As you sit down, you see someone at the door"
             menu:
-                "\"Open door\"":
+                "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
                     dik "\"...\"" with hpunch
@@ -1053,7 +1054,7 @@ label eng1p2:
                     call dikfriendshipgain from _eng1p2dikfriendshipgain
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
-                "\"Don't open door\"":
+                "Don't open door":
                     "*Knock *knock\"" 
                     sze "\"...\""
                     sze "\"szeebs\""
@@ -1074,7 +1075,7 @@ label eng1p2:
                     gra "\"k\""
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
-        "\"Don't do worksheets\"":
+        "Don't do worksheets":
             sze "Ceebs to worksheet"
             sze "I'll just do maths..."
             dea "\"Whoa, are those maths questions?\""
@@ -1086,7 +1087,7 @@ label eng1p2:
             dea "\"shit you smart\""
             "Whilst basking in your glory, you hear knocking on the door"
             menu:
-                "\"Open door\"":
+                "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
                     dik "\"...\"" with hpunch
@@ -1112,7 +1113,7 @@ label eng1p2:
                     call dikfriendshipgain from _eng1p2dikfriendshipgain
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
-                "\"Don't open door\"":
+                "Don't open door":
                     "*Knock *knock\"" 
                     sze "\"...\""
                     sze "\"szeebs\""
@@ -1133,7 +1134,7 @@ label eng1p2:
                     gra "\"k\""
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
-        "\"Play with vices\"":
+        "Play with vices":
             "you are unable to contain yourself, your hands inexorably moving towards the vices"
             "with a swift movement, you gracefully turn the handle a half-revolution, the two plates inching closer"
             "your palm glide across its surface, each pore, each bump upon the slick steel surface"
@@ -1229,13 +1230,13 @@ label asszembly1jigolo:
     jit "\"Who's that?\""
     sze "\"Fuck\""
     menu:
-        "\"Run\"":
+        "Run":
             "You run to assembly like the chicken that you are"
             sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
             sze "That was a close call"
             call strengthloss from _asszemblyjigolostrengthloss
             jump asszembly1_2
-        "\"Sneak up on the source of the sound\"":
+        "Sneak up on the source of the sound":
             "You sneak up on the source of the sound"
             sze "\"...\""
             jit "\"Whoa, SHIT!\"" with vpunch
@@ -1246,7 +1247,7 @@ label asszembly1jigolo:
             jit "\"Can u not, like plz? I thought you were teacher\""
             sze "\"Soz, why you here?\""
             jump asszemblyjigolo2
-        "\"You confront the speaker\"":
+        "You confront the speaker":
             "You walk up to the speaker, without attempting to disguise your approach"
             jit "\"Oh, hi Arthur\""
             sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
@@ -1366,14 +1367,14 @@ label asszembly1_3:
     mox "\"I would like to acknowledge the traditional owners of the land...\""
     sze "Wow, this is boring"
     menu:
-        "\"Sleep\"":
+        "Sleep":
         #derk, leaving this part up to you
             sze "\"I sleep\""
             sze "{i}I dream {/i}"
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
             jump dead
-        "\"Talk\"":
+        "Talk":
             if quest1electionpromise is True:
                 call quest1electionpromise1_a
                 jump asszembly1_4
@@ -1449,13 +1450,13 @@ label asszembly1_3:
                             pra "\"Then I need assistance\""
                             "They disrupt your gazing at Serena by asking if you would render aid"
                             menu:
-                                "Szeebs":
+                                "\"Szeebs\"":
                                     sze "\"Szeebs tho\""
                                     call prafriendshiploss from _asszembly1_3callprafriendshiploosss
                                     wil "\"I had higher expectations for you, you are disappointment\""
                                     call wilfriendshiploss from _asszembly1_3wilfriendshiploss
                                     jump asszembly1_4
-                                "K":
+                                "\"K\"":
                                     sze "\"K\""
                                     "You talk more with them to discuss plans before Yang turns away"
                                     sze "I have idea...maybe Derek and Rick have better idea for this"
@@ -1475,7 +1476,7 @@ label asszembly1_3:
                             "You spend the next few minutes insisting that you weren't drooling"
                             jump asszembly1_4
                         
-        "\"Pay attention\"":
+        "Pay attention":
             "30 minutes later"
             mox "\"Michael Kirby is great, let us worship Michael Kirby\""
             "You worship Michael Kirby, allowing yourself to absorb the power of social justice"
@@ -1677,7 +1678,7 @@ label fugitivesfromasszembly1:
             jit "\"Nah, you probs have better ideas as to what would be best place to go to\""
             sze "\"Whaa- fine\""
             menu:
-                "Toilets":
+                "\"Toilets\"":
                     sze "\"What about the toilets?\""
                     jit "\"Mate, that's pretty grot\""
                     sze "\"You said I would probs have better ideas\""
@@ -1689,7 +1690,7 @@ label fugitivesfromasszembly1:
                     call asszemblyjigolo1encounter
                     jump asszemblyjigolokindagaytoilet
                     
-                "Outside the school":
+                "\"Outside the school\"":
                     sze "\"Let's just go outside school\""
                     jit "\"Hmmmm {cps=*0.2}...{/cps} Interesting suggestion\""
                     sze "\"Nothing but fence in the way\""
@@ -1699,7 +1700,7 @@ label fugitivesfromasszembly1:
                     call asszemblyjigolo1encounter
                     jump asszemblyjigolodiscoverthefood
                     
-                "Play with vices":
+                "\"Play with vices\"":
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
                     jit "\"Wow, are you gay for Mr. Grant?\""
                     sze "\"No, I just think it is a good place to hide\""
@@ -1717,8 +1718,26 @@ label fugitivesfromasszembly1:
             jump dead
 
 label asszemblyjigolo1encounter:
-    sze "\"oh\""
-    return
+    "You walk towards your destination"
+    "{cps=*0.2}...{/cps}" with vpunch
+    "{cps=*0.2}...{/cps}" with vpunch
+    jit "\"Wait...I think I hear some more teachers\""
+    sze "\"Shit, again?!\""
+    menu:
+        "\"I Surrender\"":
+            sze "\"I surrender\""
+            jit "\"wow\""
+            jump dead
+        
+        "\"Run\"":
+            sze "\"run\""
+            return
+        
+        "\"Fight\"":
+            sze "\"Let's fight\""
+            jit "\"wut\""
+            sze "\"by running\""
+            return
     
 label asszemblyjigolokindagaytoilet:
     show moxham happy
@@ -1767,7 +1786,7 @@ label recess1:
                "Foot + banana peel + concrete = dead"
                jump dead
                
-            "Do not talk":
+            "Ceebs talk":
                 "You stand on the spot trying to muster up some courage but find it futile"
                 sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
                 call strengthloss from _recess1chickenstrengthloss

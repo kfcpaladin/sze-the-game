@@ -1657,8 +1657,20 @@ label asszemblyjigolo1_3:
             "You hear the pursuers' voices in the room you just left"
             "\"{i} I thought I saw movement... {/i}\""
             "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
-            jump fugitivesfromasszembly1
-
+            jump fugitivesfromasszembly1            
+# remove jigolo1encounter for one of the above {reminder}
+        "Go look":
+            sze "\"Fine\""
+            jump dead
+            
+# will finish
+        "Dog the bois":
+            sze "\"Fuck this shit, I'm out!\""
+            jit "\"Oi, you can't just leave\""
+            sze "\"Really?\""
+            jit "\"errrr....\""
+            jump dead
+            
 label fugitivesfromasszembly1:
             jit "\"Whew...Sze let's go, find somewhere to hide\""
             sze "\"k, you lead the way\""
@@ -1675,7 +1687,8 @@ label fugitivesfromasszembly1:
                     sze "\"fuk off\""
                     jit "\"Fine let's go\""
                     call asszemblyjigolo1encounter
-                    jump dead
+                    jump asszemblyjigolokindagaytoilet
+                    
                 "Outside the school":
                     sze "\"Let's just go outside school\""
                     jit "\"Hmmmm {cps=*0.2}...{/cps} Interesting suggestion\""
@@ -1684,7 +1697,8 @@ label fugitivesfromasszembly1:
                     call fortianloss from asszembly1jigoloextrajigolofortloss
                     jit "\"You lead, then\""
                     call asszemblyjigolo1encounter
-                    jump dead
+                    jump asszemblyjigolodiscoverthefood
+                    
                 "Play with vices":
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
                     jit "\"Wow, are you gay for Mr. Grant?\""
@@ -1695,17 +1709,8 @@ label fugitivesfromasszembly1:
                     sze "\"...can you not\""
                     jit "\"soz, you lead\""
                     call asszemblyjigolo1encounter
-                    jump dead
-# remove jigolo1encounter for one of the above {reminder}
-        "Go look":
-            sze "\"Fine\""
-# will finish
-            jump dead
-        "Dog the bois":
-            sze "\"Fuck this shit, I'm out!\""
-            jit "\"Oi, you can't just leave\""
-            sze "\"Really?\""
-            jit "\"errrr....\""
+                    jump asszemblyjigoloviceland
+
 #    to be continued...
 #    Dog the bois -> 2 options go back to assembly, run on for a long time -> go back to assembly -> dog bois again/ sneak back in// run on for a long time -> jit finds you, lose friendship, link to don't look just run
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
@@ -1714,6 +1719,31 @@ label fugitivesfromasszembly1:
 label asszemblyjigolo1encounter:
     sze "\"oh\""
     return
+    
+label asszemblyjigolokindagaytoilet:
+    show moxham happy
+    sze "\"oh hon hon hon hon\""
+    jit "\"GAAAAAY!!\""
+    drk "\"Needless to say, this still needs work\""
+    jump dead
+    
+label asszemblyjigolodiscoverthefood:
+    sze "\"time to get fat\""
+    jit "\"as fat as the principa-\""
+    show moxham happy
+    jit "\"welp\""
+    drk "\"Needless to say, this still needs work\""
+    jump dead
+    
+label asszemblyjigoloviceland:
+    sze "\"whooo!!!vices!!!!\""
+    jit "\"k...\""
+    jit "\"wait a minute...vices can be used for bdsm, if you really think about it\""
+    show moxham happy
+    mox "\"did someone say \"bdsm\"\""
+    jit "\"welp\""
+    drk "\"Needless to say, this still needs work\""
+    jump dead
 
 label recess1:
     if $ metderek is true:

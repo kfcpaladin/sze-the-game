@@ -1718,25 +1718,38 @@ label fugitivesfromasszembly1:
             jump dead
 
 label asszemblyjigolo1encounter:
-    "You walk towards your destination"
+    "You move towards your destination"
     "{cps=*0.2}...{/cps}" with vpunch
     "{cps=*0.2}...{/cps}" with vpunch
     jit "\"Wait...I think I hear some more teachers\""
     sze "\"Shit, again?!\""
+# a bit of johnny cash could work here
     menu:
         "\"I Surrender\"":
-            sze "\"I surrender\""
+            sze "\"I reckon we should just surrender\""
+            call strengthloss from asszembly1szeebsrunning
             jit "\"wow\""
+            sze "\"Soz, but I just too szeebs\""
+            jit "\"Well, fuck\""
+            call jitfriendshiploss from asszembly1szeebsrunningdoggedjitian
+            jit "\"Cya, I ain't staying around for the teachers to catch up\""
+            sze "\"...\""
+            "\"{b}WELL WELL WELL... who do we 'ave 'ere? What's your reason for not being in assembly{/b}\""
             jump dead
         
         "\"Run\"":
+            sze "\"I am a human being\""
+            sze "\"capable of doing terrible things\""
+            jit "\"wot?\""
             sze "\"run\""
+            "\"...\""
             return
         
         "\"Fight\"":
             sze "\"Let's fight\""
             jit "\"wut\""
             sze "\"by running\""
+            jit "\"lol gud idea\""
             return
     
 label asszemblyjigolokindagaytoilet:

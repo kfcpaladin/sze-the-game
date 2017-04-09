@@ -1735,14 +1735,18 @@ label asszemblyjigolo1encounter:
             jit "\"Cya, I ain't staying around for the teachers to catch up\""
             sze "\"...\""
             "\"{b}WELL WELL WELL... who do we 'ave 'ere? What's your reason for not being in assembly{/b}\""
-            jump dead
+            asszembly1shitstorm
         
         "\"Run\"":
             sze "\"I am a human being\""
             sze "\"capable of doing terrible things\""
             jit "\"wot?\""
             sze "\"run\""
+            "\"Both you and Jitian bolt off across the school\""
+            "\"BAAM!!\"" with hpunch
             "\"...\""
+            "\"Right into a patrol of teachers\""
+            jit "\"Ohhhhhhhh FAARk\""
             return
         
         "\"Fight\"":

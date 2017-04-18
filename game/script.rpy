@@ -1735,7 +1735,7 @@ label asszemblyjigolo1encounter:
             jit "\"Cya, I ain't staying around for the teachers to catch up\""
             sze "\"...\""
             "\"{b}WELL WELL WELL... who do we 'ave 'ere? What's your reason for not being in assembly{/b}\""
-            asszembly1shitstorm
+            jump asszembly1shitstorm
         
         "\"Run\"":
             sze "\"I am a human being\""

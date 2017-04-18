@@ -1733,8 +1733,7 @@ label asszemblyjigolo1encounter:
             jit "\"Well, fuck\""
             call jitfriendshiploss from asszembly1szeebsrunningdoggedjitian
             jit "\"Cya, I ain't staying around for the teachers to catch up\""
-            sze "\"...\""
-            "\"{b}WELL WELL WELL... who do we 'ave 'ere? What's your reason for not being in assembly{/b}\""
+            sze "\"...\""            
             jump asszembly1shitstorm
         
         "\"Run\"":
@@ -1747,7 +1746,8 @@ label asszemblyjigolo1encounter:
             "\"...\""
             "\"Right into a patrol of teachers\""
             jit "\"Ohhhhhhhh FAARk\""
-            return
+            jump dead
+            
         
         "\"Fight\"":
             sze "\"Let's fight\""
@@ -1818,7 +1818,15 @@ label recess1:
                 jump dead
                 
 label asszembly1shitstorm:
+    "\"{b}WELL WELL WELL... 'oo do we 'ave 'ere? Woss yor reason for not bein' in assembly? {/b}\""
+    "\"{b} {color=#9400D3} Boss, I went around the building and guess what? {/color} {/b}\""
+    "\"{b}Don't want ter hear bleedin' anyfink unless it's ter do wiv the Most Wanted - {/b} {nw}"
+    "\"{b} {color=#9400D3} I got him right here... the \"Untouchable\" Jitian Chen {/color} {/b}\""
+    "\"{b} {cps=*0.25}. . .{/cps} {/b}\""
+    "\"{b} yer mean \"we\" got 'im, right? {/b}\""
+    "\"{b} {color=#9400D3} ... but of course... *sigh* {/color} {/b}\""
     jump dead
+# what if second person was wesley and this is intro to wesley
     
 label dead:
     scene black

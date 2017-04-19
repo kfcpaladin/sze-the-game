@@ -1746,8 +1746,22 @@ label asszemblyjigolo1encounter:
             "\"...\""
             "\"Right into a patrol of teachers\""
             jit "\"Ohhhhhhhh FAARk\""
-            jump dead
-            
+            menu:
+                "\"I Surrender\"":
+                    sze "\"I reckon we should just surrender\""
+                    call strengthloss from asszembly1szeebsrunning
+                    jit "\"wow\""
+                    jit "\"You were supposed to be the Chosen One... the Hero...\""
+                    sze "\"Soz, but I just too szeebs\""
+                    jit "\"Well, fuck\""
+                    call jitfriendshiploss from asszembly1szeebsrunningdoggedjitian
+                    jit "\"Cya, I ain't staying around for the teachers to catch up\""
+                    sze "\"...\""            
+                    jump asszembly1shitstorm
+                "\"Stand our ground\"":
+# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence
+                    sze "\"KABLOOEY!!!\""
+                    return
         
         "\"Fight\"":
             sze "\"Let's fight\""
@@ -1842,3 +1856,5 @@ label deadrestart:
 # HSPs +3 strength, -1 intel
 # fish and chips +2 intel
 # pho +1 strength +1 intel +1 thirst
+# pork rolls +2 charm
+# vegan shite = +3 fort -1 strength -1 dikfriendship

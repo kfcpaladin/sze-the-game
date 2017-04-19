@@ -1837,3 +1837,8 @@ label deadrestart:
     scene black
     sze "I dead"
     jump start
+    
+    
+# HSPs +3 strength, -1 intel
+# fish and chips +2 intel
+# pho +1 strength +1 intel +1 thirst

@@ -1759,8 +1759,26 @@ label asszemblyjigolo1encounter:
                     sze "\"...\""            
                     jump asszembly1shitstorm
                 "\"Stand our ground\"":
-# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence
-                    sze "\"KABLOOEY!!!\""
+                    jit "\"Shit, I'm out of here\""
+                    "\"Your courage fleetingly flees from you...\""
+                    "\"But then you realise that, if caught you will probably be suspended, if suspended you can no longer see Serena\""
+                    "\"You steel your heart\""
+                    sze "\"No Jitian...today we do not flee\""
+                    sze "\"Today we stand our ground\""
+                    jit "\"Mate, are you fucking munted? We're gonna get rekt- {nw}\""
+                    sze "\"I see in your eyes the same fear that would take the heart of me\""
+                    jit "\"Fuk off, I don't want to get sued for copying Aragorn on top of getting caught by Moxham's cronies\"" 
+                    if intelligence >=3:
+                        sze "\"If we fight good, we won't get caught\""
+                        sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
+                        sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
+                        jit "\"Let's fight then!!\""
+                        return
+                    elif:
+                        jump dead
+                    
+# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
+                    sze "\"KABLOOEY!!! -> currently just filler for an actual fight scene\""
                     return
         
         "\"Fight\"":

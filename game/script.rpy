@@ -1779,6 +1779,12 @@ label asszemblyjigolo1encounter:
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
                     sze "\"KABLOOEY!!! -> currently just filler for an actual fight scene\""
+                    # would some thing this work
+                    # $ random1to6 == renpy.random.int(0, 6)
+                    # if random1to6 + strength*2 + intelligence + jitfriendship >= 5
+                        # success
+                    # else
+                        # dead
                     return
         
         "\"Fight\"":

@@ -1242,7 +1242,7 @@ label asszembly1jigolo:
             jit "\"Whoa, SHIT!\"" with vpunch
             sze "\"Oh, it's just Gary\""
             sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
-            sze "Gary/Jitian is a great guy with a taste for questionable animes..."
+            sze "{s}Jitian{/s} is a great guy with a taste for questionable animes..."
             call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
             jit "\"Can u not, like plz? I thought you were teacher\""
             sze "\"Soz, why you here?\""
@@ -1435,7 +1435,7 @@ label asszembly1_3:
                         if intelligence >=2:
                             sze "\"I am merely salivating in anticipation of my recess which consists of leftover butter chicken\""
                             pra "\"Butter chicken is good but rogan josh is better\""
-                            sze "\"That was ordered from the restaurant the night before but it was all finished\""
+                            sze "\"That was ordered from the restaurant two days ago\""
                             drk "\"Wait why u even order from Indian restaurant?\""
                             sze "\"It was more Hong Kong/Indian/Italian/American fusion\""
                             pra "\"wtf\""
@@ -1670,7 +1670,14 @@ label asszemblyjigolo1_3:
             jit "\"Oi, you can't just leave\""
             sze "\"Really?\""
             jit "\"errrr....\""
-            jump dead
+            sze "\"cya\""
+            call jitfriendshiploss from _jitfriendshiplossjigolo1dogthebois
+            "You run on for a long time"
+            "\"Run on for a long time\""
+            "\"...sooner or later Moxham will cut you down\""
+            "\"!\"" with hpunch
+            sze "\"Fuck, who the hell are you?!\""
+            jump asszembly1shitstorm
             
 label fugitivesfromasszembly1:
             jit "\"Whew...Sze let's go, find somewhere to hide\""

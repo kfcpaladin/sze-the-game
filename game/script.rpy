@@ -269,7 +269,8 @@ label Rektrusali:
         kok "\"He was being dog and not very Fortian\""
         hide willis normal
         show moxham unhappy
-        mox "\"One year in this school and you are being loading dock?\""
+        mox "\"One morning in this school and you are being loading dock?\""
+        "You fail to understand the meaning of loading dock"
         mox "\"Bitch, you on detention. And you said you were going to truant? Double detention after school in my dungeon\""
         mox "\"Put that shit down in your diary\""
         hide moxham unhappy
@@ -1779,20 +1780,36 @@ label asszemblyjigolo1encounter:
                         sze "\"If we fight good, we won't get caught\""
                         sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
-                        jit "\"Let's fight then!!\""
-                        return
+                        jit "\"Let's fight then!!\""                   
+                        $ random1to6jig1fight1a == renpy.random.int(0, 6)
+                        $ jig1fight1a == ($ random1to6 + ($ strength)*2 + $ intelligence + $ jitfriendship) 
+                        if $ jig1fight1a >= 5:
+                            "With Jitian by your side, you stand your ground"
+                            "The teachers thunder towards you" with vpunch
+                            "They begin to wail on you" with vpunch
+                            "But your iron defence holds out"
+                            jit "\"You truly are the Chosen One\""
+                            "With one last co-ordinated push, you repel their attack"
+                            return
+                        elif:
+                        sze "\"fuck\""
+                        jump dead
                     elif:
+                        sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
+                        "You unleash what you think is a terrifying warcry" with hpunch
+                        "You succeed in scaring Jitian away"
+                        $ random1to6jig1fight1b == renpy.random.int(0, 6)
+                        $ jig1fight1b == ($ random1to6 + ($ strength)*2 + $ intelligence) 
+                        if $ jig1fight1b >= 5:
+                            sze "\"yas\""
+                            jit "\"good job\""
+                            return
+                        elif:
+                        sze "\"fuck\""
                         jump dead
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
-                    sze "\"KABLOOEY!!! -> currently just filler for an actual fight scene\""
-                    # would some thing this work
-                    # $ random1to6 == renpy.random.int(0, 6)
-                    # if random1to6 + strength*2 + intelligence + jitfriendship >= 5
-                        # success
-                    # else
-                        # dead
-                    return
+
         
         "\"Fight\"":
             sze "\"Let's fight\""

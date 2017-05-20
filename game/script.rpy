@@ -1791,10 +1791,10 @@ label asszemblyjigolo1encounter:
                             jit "\"You truly are the Chosen One\""
                             "With one last co-ordinated push, you repel their attack"
                             return
-                        elif:
+                        else:
                         sze "\"fuck\""
                         jump dead
-                    elif:
+                    else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
@@ -1804,7 +1804,7 @@ label asszemblyjigolo1encounter:
                             sze "\"yas\""
                             jit "\"good job\""
                             return
-                        elif:
+                        else:
                         sze "\"fuck\""
                         jump dead
                     

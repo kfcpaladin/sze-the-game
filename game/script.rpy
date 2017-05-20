@@ -1782,7 +1782,7 @@ label asszemblyjigolo1encounter:
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
                         jit "\"Let's fight then!!\""                   
                         $ random1to6jig1fight1a == renpy.random.int(0, 6)
-                        $ jig1fight1a == ($ random1to6jig1fight1a + ($ strength)*2 + $ intelligence + $ jitfriendship) 
+                        $ jig1fight1a == (($ random1to6jig1fight1a) + ($ strength)*2 + ($ intelligence) + ($ jitfriendship)) 
                         if $ jig1fight1a >= 5:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
@@ -1800,7 +1800,7 @@ label asszemblyjigolo1encounter:
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
                         $ random1to6jig1fight1b == renpy.random.int(0, 6)
-                        $ jig1fight1b == ($ random1to6jig1fight1b + ($ strength)*2 + $ intelligence) 
+                        $ jig1fight1b == (($ random1to6jig1fight1b) + ($ strength)*2 + ($ intelligence)) 
                         if $ jig1fight1b >= 5:
                             sze "\"yas\""
                             jit "\"good job\""

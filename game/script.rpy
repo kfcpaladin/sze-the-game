@@ -1792,8 +1792,9 @@ label asszemblyjigolo1encounter:
                             "With one last co-ordinated push, you repel their attack"
                             return
                         else:
-                        sze "\"fuck\""
-                        jump dead
+                            sze "\"fuck\""
+                            jump dead
+                        
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
                         "You unleash what you think is a terrifying warcry" with hpunch
@@ -1805,8 +1806,8 @@ label asszemblyjigolo1encounter:
                             jit "\"good job\""
                             return
                         else:
-                        sze "\"fuck\""
-                        jump dead
+                            sze "\"fuck\""
+                            jump dead
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
 

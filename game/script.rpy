@@ -36,7 +36,7 @@ define dng = Character('Steven', color="#FFFFFF", image="steven")
 #not sure if that's legit spelling, plz check
 style window:
     left_padding 150
-image side arthur ="arthurside.png"
+image side arthur = "arthurside.png"
 image willis normal = "willis1.png"
 image side willis = "willisside1"
 image rusali normal = "rusali"
@@ -48,6 +48,9 @@ image grant normal = "grant"
 image pragash normal = "pragashnormal.png"
 image pragash shocked = "pragash2.png"
 image yang normal = "yang1.png"
+image side chao = "chao2.png"
+image chao happy = "chaohappy.png"
+image side gary = "jitian.png"
 # The game starts here.
 
 label start:
@@ -1781,31 +1784,31 @@ label asszemblyjigolo1encounter:
                         sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
                         jit "\"Let's fight then!!\""                   
-#                        $ random1to6jig1fight1a == renpy.random.int(0, 6)
-#                        $ jig1fight1a = ($ random1to6jig1fight1a + ($ strength)*2 + ($ intelligence) + ($ jitfriendship)) 
-#                        if $ jig1fight1a >= 5:
-#                            "With Jitian by your side, you stand your ground"
-#                            "The teachers thunder towards you" with vpunch
-#                            "They begin to wail on you" with vpunch
-#                            "But your iron defence holds out"
-#                            jit "\"You truly are the Chosen One\""
-#                            "With one last co-ordinated push, you repel their attack"
-#                            return
-#                        else:
-#                            sze "\"fuck\""
+                        $ random1to6jig1fight1a = renpy.random.int(0, 6)
+                        $ jig1fight1a = ($ random1to6jig1fight1a + ($ strength)*2 + ($ intelligence) + ($ jitfriendship)) 
+                        if $ jig1fight1a >= 5:
+                            "With Jitian by your side, you stand your ground"
+                            "The teachers thunder towards you" with vpunch
+                            "They begin to wail on you" with vpunch
+                            "But your iron defence holds out"
+                            jit "\"You truly are the Chosen One\""
+                            "With one last co-ordinated push, you repel their attack"
+                            return
+                        else:
+                            sze "\"fuck\""
                         return
                         
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
-#                        $ random1to6jig1fight1b == renpy.random.int(0, 6)
-#                        $ jig1fight1b = ($ random1to6jig1fight1b + ($ strength)*2 + ($ intelligence)) 
-#                        if $ jig1fight1b >= 5:
-#                            sze "\"yas\""
-#                            jit "\"good job\""
-#                            return
-#                        else:
+                        $ random1to6jig1fight1b = renpy.random.int(0, 6)
+                        $ jig1fight1b = ($ random1to6jig1fight1b + ($ strength)*2 + ($ intelligence)) 
+                        if $ jig1fight1b >= 5:
+                            sze "\"yas\""
+                            jit "\"good job\""
+                            return
+                        else:
                         sze "\"fuck\""
                         jump dead
                     

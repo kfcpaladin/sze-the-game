@@ -1811,7 +1811,7 @@ label asszemblyjigolo1encounter:
                             jit "\"good job\""
                             return
                         else:
-                        sze "\"fuck\""
+                            sze "\"fuck\""
                         jump dead
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 

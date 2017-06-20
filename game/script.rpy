@@ -87,6 +87,8 @@ label start:
     $ timetravelcount = 0
     $ phys1p3p1chaopissed = False
     $ yangrant1_2eingutidee = False
+    $ metderek = False
+    $ quest1electionpromise = False
     scene black
     with fade
     scene bg intro

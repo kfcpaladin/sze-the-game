@@ -21,7 +21,7 @@ define flu = Character('FLUITSIE', color="#FFFFFF", image="fluitsma")
 define rus = Character('Rusali', color="#FFFFFF", image="rusali")
 define pra = Character('Pragash', color="#FFFFFF", image="pragash")
 define dea = Character('Dean', color="#FFFFFF", image="dean")
-define wil = Character('Will Yang', color="#FFFFFF", image="yang")
+define wil = Character('Will Yang', color="#ff0000", image="yang")
 define cha = Character('Chao', color="#FFFFFF", image="chao")
 define mox = Character('MOXHAM', color="#FFFFFF", image="moxham")
 define gra = Character('GRANT', color="#FFFFFF", image="grant")
@@ -30,6 +30,7 @@ define drk = Character('Derek', color="#FFFFFF", image="derek")
 define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
+define dng = Character('Steven', color="#FFFFFF", image="steven"
 # jenkins
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
 define dng = Character('Steven', color="#FFFFFF", image="steven")
@@ -1787,7 +1788,7 @@ label asszemblyjigolo1encounter:
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
                         jit "\"Let's fight then!!\""                   
                         $ random1to6jig1fight1a = renpy.random.int(0, 6)
-                        $ jig1fight1a = ($ random1to6jig1fight1a + ($ strength)*2 + ($ intelligence) + ($ jitfriendship)) 
+                        $ jig1fight1a = (int($ random1to6jig1fight1a) + int($ strength)*2 + int($ intelligence) + int($ jitfriendship)) 
                         if $ jig1fight1a >= 5:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
@@ -1805,7 +1806,7 @@ label asszemblyjigolo1encounter:
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
                         $ random1to6jig1fight1b = renpy.random.int(0, 6)
-                        $ jig1fight1b = ($ random1to6jig1fight1b + ($ strength)*2 + ($ intelligence)) 
+                        $ jig1fight1b = (int($ random1to6jig1fight1b) + int($ strength)*2 + int($ intelligence)) 
                         if $ jig1fight1b >= 5:
                             sze "\"yas\""
                             jit "\"good job\""

@@ -13,6 +13,7 @@ image bg hall = "hall"
 image bg hallentrance = "CZ2Yss_UAAAPRqz.jpg"
 image bg schoolfront = "91_big.jpg"
 image bg rowecorridor = "fortrowecorridor.jpg"
+image bg ded = "szeceded.jpg"
 # Declare characters used by this game.
 define sze = Character('Sze', color="#FCFCFC", image="arthur")
 define rin = Character('Rina', color="#007408", image="serena")
@@ -374,7 +375,7 @@ label phys1answered_a:
     sze "\"...Chao..\""
     cha "\"...\"" with vpunch
     cha "\"For teh watch\""
-    jump dead
+    jump deadrestart
 label phys1answered_b:
     sze "\"ok...\""
     flu "\"Anything you want, anytime...\""
@@ -1908,7 +1909,7 @@ label dead:
     return
 
 label deadrestart:
-    scene black
+    scene bg ded
     sze "I dead"
     jump start
     

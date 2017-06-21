@@ -49,7 +49,7 @@ image pragash normal = "pragashnormal.png"
 image pragash shocked = "pragash2.png"
 image yang normal = "yang1.png"
 image side chao = "chao2.png"
-image chao happy = "chaohappy.png"
+image chao normal = "chaohappy.png"
 image side gary = "jitian.png"
 # The game starts here.
 
@@ -462,9 +462,15 @@ label phys1p2p2:
         "\"Yes\"":
             sze "\"Yes\""
             sze "\"actually want to kill myself\""
-            cha "\"Arthur Sze, i deeply care about your mental health.\""
-            cha "\"If you are having issues concering suicide please call Lifeline at 13 11 14\""
-            jump phys1p3p3
+            if intelligence >1:
+                cha "\"Arthur Sze, i deeply care about your mental health.\""
+                cha "\"If you are having issues concering suicide please call Lifeline at 13 11 14\""
+                jump phys1p3p3
+            else:
+                cha "\"Wow, I actually don't want to eat depressed people - they upset my tummy\""
+                sze "\"So we good?\""
+                cha "\"No, I still fcking h8 u.\""
+                jump phys1p3p1
         "\"No\"":
             sze "\"No\""
             sze "\"no, pls dont kill me\""
@@ -1071,7 +1077,7 @@ label eng1p2:
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..." 
-                    "Richard left {cps=*3}leaving Dean cowering on the ground moaning in feverish pitch{/cps}"
+                    "Richard left leaving Dean cowering on the ground moaning in an unhealthy "
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""

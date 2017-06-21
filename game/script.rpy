@@ -797,7 +797,7 @@ label eng1p1naughtycorner:
     sze "\"ok\""
     gra "\"Bitches, do your work!!!!\""
     pra "\"Don't listen to him, the corner needs you.\""
-    gra "\"Aaaah, that's right: you two naughty-corner grunts, do nothing as punishment\""
+    gra "\"Aaaah, that's right: you two children in the naughty-corner, do nothing as punishment\""
     pra "\"The school's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
     menu:
         "Stay in the corner":
@@ -1013,7 +1013,7 @@ label yangrantp1_3:
 label eng1p2:
     show grant normal
     gra "\"AAAHH, MINGLE!!\"" with hpunch
-    gra "\"Gather around the front table, grunts\""
+    gra "\"Gather around the front table, children\""
     gra "\"Before we learn about planes, do these worksheets\""
     gra "\"Actually no, do these safety tests on doing work sheets before you can do the worksheets\""
     wil "\"But sir, We still havent learnt about Vapor cones and the Prandtl–Glauert singularity\""

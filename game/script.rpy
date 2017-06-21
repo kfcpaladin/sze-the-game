@@ -30,7 +30,6 @@ define drk = Character('Derek', color="#FFFFFF", image="derek")
 define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
-define dng = Character('Steven', color="#FFFFFF", image="steven"
 # jenkins
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
 define dng = Character('Steven', color="#FFFFFF", image="steven")

@@ -1798,7 +1798,7 @@ label asszemblyjigolo1encounter:
                             return
                         else:
                             sze "\"fuck\""
-                        return
+                            return
                         
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
@@ -1812,7 +1812,7 @@ label asszemblyjigolo1encounter:
                             return
                         else:
                             sze "\"fuck\""
-                        jump dead
+                            jump dead
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
 

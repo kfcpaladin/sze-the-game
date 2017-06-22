@@ -1811,7 +1811,7 @@ label asszemblyjigolo1encounter:
                         jit "\"Let's fight then!!\""                   
                         $ random1to6jig1fight1a = renpy.random.randint(0, 6)
                         $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship)) 
-                        if $ jig1fight1a >= 5:
+                        if jig1fight1a >= 5:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
                             "They begin to wail on you" with vpunch
@@ -1821,7 +1821,7 @@ label asszemblyjigolo1encounter:
                             return
                         else:
                             sze "\"fuck\""
-                            return
+                            jump dead
                         
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
@@ -1829,7 +1829,7 @@ label asszemblyjigolo1encounter:
                         "You succeed in scaring Jitian away"
                         $ random1to6jig1fight1b = renpy.random.randint(0, 6)
                         $ jig1fight1b = (int(random1to6jig1fight1b) + int(strength)*2 + int(intelligence)) 
-                        if $ jig1fight1b >= 5:
+                        if jig1fight1b >= 5:
                             sze "\"yas\""
                             jit "\"good job\""
                             return

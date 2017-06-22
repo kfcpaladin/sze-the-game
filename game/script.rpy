@@ -1274,7 +1274,7 @@ label asszembly1jigolo:
             call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
             jit "\"Can u not, like plz? I thought you were teacher\""
             sze "\"Soz, why you here?\""
-            jump asszemblyjigolo2
+            jump asszemblyjigolo1_2
         "You confront the speaker":
             "You walk up to the speaker, without attempting to disguise your approach"
             jit "\"Oh, hi Arthur\""

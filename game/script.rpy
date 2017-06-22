@@ -988,7 +988,7 @@ label yangrantp1_2:
                 sze "\"Wait, who is he again?\""
                 wil "\"Actually somewhat smart\""
                 wil "\"But since I thought of that, you still retarded...\""
-                gra "\"Now listen here, you little runts, gather around the front table\""
+                gra "\"Now listen here, little children, gather around the front table\""
                 sze "\"We should probs, like, go there {nw}\""
                 wil "\"Be quiet now, I need to talk to Pragash\""
                 jump eng1p2
@@ -1003,7 +1003,7 @@ label yangrantp1_2:
                 wil "\"Perhaps you do have your uses\""
                 call wilfriendshipgain from _yangrantp1_2op3wilfriendshipgain
                 "You see Grant waddling to the front"
-                gra "\"Now listen here, you little runts, gather around the front table\""
+                gra "\"Now listen here, little children, gather around the front table\""
                 sze "\"Yang, what's going on?\""
                 wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
                 jump eng1p2
@@ -1506,7 +1506,7 @@ label quest1electionpromise1_a:
                 dik "\"And retarded at the same time\""
                 pra "\"Hey, I heard that\""
                 drk "\"Well actually, we could probably make this work. First, identify likely opponents.\""
-                if metderek = true:
+                if metderek is True:
                     return
                 else:
                     sze "{cps=*3}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
@@ -1595,7 +1595,7 @@ label asszemblyjigolo1_2:
             jit "\"Don't need to be that try hard\""
             jump asszemblyjigolo1_3
         
-        "Talk to Gary" if quest1electionpromise = true:
+        "Talk to Gary" if quest1electionpromise is true:
             sze "\"Actually, I wanted to ask you something\""
             jit "\"Eh? I'm watching my pronz tho\""
             sze "\"...k...\""
@@ -1857,7 +1857,7 @@ label asszemblyjigoloviceland:
     jump dead
 
 label recess1:
-    if $ metderek is true:
+    if $ metderek is True:
         sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
         jump dead
 #keep as placeholder or nah???idk

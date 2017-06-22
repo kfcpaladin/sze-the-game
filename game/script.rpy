@@ -761,7 +761,7 @@ label eng1p1naughtycorner:
     hide grant normal
     show pragash normal
     pra "\"...\""
-    pra "\"You here as well? At least you weren't put here for life...\""
+    pra "\"You here as well? At least you weren't put here for every Engi lesson...\""
     sze "\"What? How\""
     stop music
     play music "The Room Soundtrack Main Theme - from YouTube.mp3"
@@ -819,6 +819,10 @@ label eng1p1naughtycorner:
                     "The edges of the classroom contort around you,\""
                     "One second ago, Pragash stood merely half a metre behind you"
                     "The next, Pragash was a mile away. Or is he closer...\""
+                    "You feel like you are dying because of the retardedness"
+                    scene bg ded
+                    with dissolve
+                    "The retardedness stab you like a dozen knife"
                     if timetravelcount >= 4:
                         scene bg black
                         "Yet again you step inside the corner, but this time it feels different"
@@ -996,7 +1000,7 @@ label yangrantp1_2:
                 $ yangrant1_2eingutidee = True
                 sze "\"Pragash Haran will be the figurehead\""
                 wil "\"Hmmmmm....\""
-                wil "\"A true stroke of genius\""
+                wil "\"A true stroke of genius, considering he was on the SRC previously\""
                 sze "\"...I'm waiting for you to say \"Just Joking\"...\""
                 wil "\"Why would I say that? It is a good idea, one for immediate implementation\""
                 call intelgain from _yangrantp1_2op3intelgain
@@ -1137,7 +1141,7 @@ label eng1p2:
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..."
-                    "Richard left {cps=*3}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
+                    "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
@@ -1178,7 +1182,7 @@ label asszembly1:
         pra "\"What kind?\""
         wil "\"One that might facilitate for such an enactment of revenge, in return for a minor favour\""
         sze "\"Aaah, yes, indeed\""
-        "Yang appreciates the backup, allowing Pragash to hear the proposal for his election onto the SRC"
+        "Yang appreciates the backup, allowing Pragash to hear the proposal for his re-election into the SRC"
         call wilfriendshipgain from _asszembly1wilfriendshipgain
         pra "\"Unfortunately, the SRC&PNC hate me, I will need something really hero from a PR team to pull this off\""
         pra "\"Otherwise, I would love to help\""
@@ -1245,7 +1249,7 @@ label asszembly1jigolo:
     menu:
         "Run":
             "You run to assembly like the chicken that you are"
-            sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
+            sze "{cps=*1.5}BOk BOk BOk BOk BOk{/cps}{nw}"
             sze "That was a close call"
             call strengthloss from _asszemblyjigolostrengthloss
             jump asszembly1_2
@@ -1254,7 +1258,7 @@ label asszembly1jigolo:
             sze "\"...\""
             jit "\"Whoa, SHIT!\"" with vpunch
             sze "\"Oh, it's just Gary\""
-            sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
+            sze "{cps=*1.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "{s}Jitian{/s} is a great guy with a taste for questionable animes..."
             call jitfriendshiploss from _asszemblyjigolojitfriendshiploss
             jit "\"Can u not, like plz? I thought you were teacher\""
@@ -1263,7 +1267,7 @@ label asszembly1jigolo:
         "You confront the speaker":
             "You walk up to the speaker, without attempting to disguise your approach"
             jit "\"Oh, hi Arthur\""
-            sze "{cps=*3}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
+            sze "{cps=*1.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             sze "\"lol, why you always so shifty?\""
             call strengthgain from _asszemblyjigolostrengthgain
@@ -1286,18 +1290,13 @@ label asszembly1_2:
     kok "\"Nice to see you all faggots\""
     kok "\"and Arthur, my friend, my rock, the Chosen One...\""
     sze "\"Eh?\""
-    kok "\"the Uberfaggot\""
+    kok "\"you are the Uberfaggot\""
     sze "\"...\""
     sze "\"...Willis\""
     pra "\"Willis, I thought we were friends, how could you forget me?\""
     kok "\"I haven't\""
     hide willis normal
     with dissolve
-    dea "\"Oh hey, fucktard\""
-    wil "\"Why you still following us?\""
-    dea "\"Looking for Mon and Pang\""
-    dea "\"Oh, they're there, cya suckaz\""
-    "Dean left"
     dik "\"Greetings and salutations to all and Willy la Willy\""
     kok "\"Fuck you\""
     dik "\"No thank you, I don't swing that way\""
@@ -1399,7 +1398,7 @@ label asszembly1_3:
                 "You notice Derek for the first time this year"
                 sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"  
                 sze "shit, I need to make a convincing lie or something"
-                $ metderek = true
+                $ metderek = True
                 menu:
                     "Stand up":
                         if intelligence >=4:
@@ -1509,9 +1508,9 @@ label quest1electionpromise1_a:
                 if metderek is True:
                     return
                 else:
-                    sze "{cps=*3}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
+                    sze "{cps=*1.5}Derkie Derk has high pitch wail like Willy and Chao{/cps}{nw}"
                     sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"
-                    $ metderek = true
+                    $ metderek = True
                     return
                 drk "\"There are many but we focus on getting him a nemesis and then lock on\""
                 dik "\"Then spin policy which will get him elected\""
@@ -1595,14 +1594,14 @@ label asszemblyjigolo1_2:
             jit "\"Don't need to be that try hard\""
             jump asszemblyjigolo1_3
         
-        "Talk to Gary" if quest1electionpromise is true:
+        "Talk to Gary" if quest1electionpromise is True:
             sze "\"Actually, I wanted to ask you something\""
             jit "\"Eh? I'm watching my pronz tho\""
             sze "\"...k...\""
             jit "\"Yeah, what is it?\""
-            sze "\"For some reason...Will wants Pragash to run for SRC\""
+            sze "\"For some reason...Will Yang wants Pragash to run for SRC\""
             jit "\"lol that would be funny, considering how they kicked him off\""
-            jit "\"But idk man, Will always has agenda...seems kinda shifty to me...\"" 
+            jit "\"But idk man, these days, Yang always has an agenda...seems kinda shifty to me...\"" 
             "The thought never occurred to you but Gary's warning has made you more alert...ish"
             call strengthgain from _asszemblyjigolo1_2callstrengthgainwarning
             sze "\"I'll leave you to your hentai then\""
@@ -1857,7 +1856,7 @@ label asszemblyjigoloviceland:
     jump dead
 
 label recess1:
-    if $ metderek is True:
+    if metderek is True:
         sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
         jump dead
 #keep as placeholder or nah???idk
@@ -1880,7 +1879,7 @@ label recess1:
                
             "Ceebs talk":
                 "You stand on the spot trying to muster up some courage but find it futile"
-                sze "{cps=*3}BOk BOk BOk BOk BOk{/cps}{nw}"
+                sze "{cps=*1.5}BOk BOk BOk BOk BOk{/cps}{nw}"
                 call strengthloss from _recess1chickenstrengthloss
                 "You notice you look retarded frozen in mid-stride with your mouth wide open"
                 drk "\"Wow, Arthur looks retarded frozen in mid-stride with his mouth wide open\""

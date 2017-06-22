@@ -107,13 +107,13 @@ label start:
     sze "I had always loved her, since she first graced my eyes in Year 7."
     show bg field
     with fade
-    sze "Her name is Serena, a name which evokes images of clear, running brooks and endless fields of wildflower meadows"
+    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
     hide bg field
     with dissolve
     show bg parisafremov
     with fade
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1"
+    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full, and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1 played softly in the background"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
     jump schoolday1
 

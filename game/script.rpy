@@ -1809,7 +1809,7 @@ label asszemblyjigolo1encounter:
                         sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
                         jit "\"Let's fight then!!\""                   
-                        $ random1to6jig1fight1a = renpy.random.int(0, 6)
+                        $ random1to6jig1fight1a = renpy.random.randint(0, 6)
                         $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship)) 
                         if $ jig1fight1a >= 5:
                             "With Jitian by your side, you stand your ground"
@@ -1827,7 +1827,7 @@ label asszemblyjigolo1encounter:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
-                        $ random1to6jig1fight1b = renpy.random.int(0, 6)
+                        $ random1to6jig1fight1b = renpy.random.randint(0, 6)
                         $ jig1fight1b = (int(random1to6jig1fight1b) + int(strength)*2 + int(intelligence)) 
                         if $ jig1fight1b >= 5:
                             sze "\"yas\""

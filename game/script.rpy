@@ -13,6 +13,7 @@ image bg hall = "hall"
 image bg hallentrance = "CZ2Yss_UAAAPRqz.jpg"
 image bg schoolfront = "91_big.jpg"
 image bg rowecorridor = "fortrowecorridor.jpg"
+image bg dream = "eoarchean.jpg"
 image bg ded = "szeceded.jpg"
 # Declare characters used by this game.
 define sze = Character('Sze', color="#FCFCFC", image="arthur")
@@ -843,6 +844,8 @@ label eng1p1naughtycorner:
                         sze "\"This is retarded, I'm going to go now...\""
                         "The past light cone is warping, you find yourself flashing through time and space to find..."
                         "Wow"
+                        scene bg dream
+                        "This place looks pretty neat, but no oxygen"
                         "Eoarchaen Era Earth is retardedly unsuitable for human life"
                         jump dead
                     elif timetravelcount >= 3:    
@@ -1311,6 +1314,7 @@ label asszembly1_2:
     cha "\"Fi\"" with vpunch
     cha "\"Fo\"" with vpunch
     cha "\"Fum\"" with vpunch
+    show chao normal
     cha "\"Imma fuck you up the bum\""
     if phys1p3p1chaopissed is True:
         "Chao is blocking me"
@@ -1336,6 +1340,7 @@ label asszembly1_2:
             dik "\"Don't make me make Chao Mein\""
             cha "\"...\""
             cha "\"Fuck off\""
+            hide chao normal
             "You observed how to some combat technique"
             call strengthgain from __asszembly1_2chaopisssedstrengthgain
             jump asszembly1_3
@@ -1357,6 +1362,8 @@ label asszembly1_2:
             "You faintly hear people shouting at Chao and through your blurred vision you can make out a crowd of people swarming Chao..."
             "The whities have heard you positively asserting yourself against Chao's desecration of your physical form, one is helping you up"
             "They praise the Fortianness of your actions"
+            hide chao normal
+            with dissolve
             call fortiangain from _asszembly1_2chaopisssedfortiangain
             "You proceed to weakly move your battered and bruised assemblage into asszembly"
             jump asszembly1_3
@@ -1371,6 +1378,7 @@ label asszembly1_2:
         cha "\"Let's go in\""
         pra "\"...Nooo...not again\""
         cha "\"I meant the hall...\""
+        hide chao normal
         jump asszembly1_3
 label asszembly1_3:
     scene bg hall
@@ -1383,8 +1391,9 @@ label asszembly1_3:
         #derk, leaving this part up to you
             sze "\"I sleep\""
             sze "{i}I dream {/i}"
+            show bg dream
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
-            drk "\"I will now finish the rest of this dream sequence later someday when I not ceebs\""
+            drk "\"I will finish the rest of this dream sequence later someday when I not ceebs\""
             jump dead
         "Talk":
             if quest1electionpromise is True:

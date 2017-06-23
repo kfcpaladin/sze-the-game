@@ -940,7 +940,7 @@ label eng1p1p2:
     wil "\"Only one way to find out\""
     wil "\"MWAHAHAHAHAHAHAHAHAHAHHA!!\""
     sze "\"You had two consecutive Hs in your laugh, therefore that was just a joke\""
-    wil "\"Ur a faggot; if I already unfriended you, I'll unfriend you again\""
+    wil "\"Ur a faggot; if I already unfriended you, I'll friend you just to unfriend you again\""
     call wilfriendshiploss from _eng1p1p2wilfriendshiploss
     sze "\"You are weird\""
     sze "\"I think sir is trying to say something\""
@@ -974,8 +974,9 @@ label yangrantp1_1:
     
 label yangrantp1_2:
     sze "\"Heil Moxham!\""
-    wil "The leader of my Sturmabeteilung- I mean the SRC and P&C - is deserving of praise, especially in regards to the art of special methods of questioning\""     
-    sze "\"Praise... Akuete\""
+    wil "The leader of {s}my Sturmabeteilung{/s} the SRC and P&C is deserving of praise, especially in regards to the art of special methods of investigating\""     
+    sze "\"Lol, since when did you have a hard on for our principal...?{nw}\""
+    wil "\"Silence\""
     wil "\"We must learn to blend in so that we may takeover the SRC/P&C and bring the 4th Reich into fruition\""
     call fortiangain from _yangrantp1_2fortiangain
     wil "\"The question is... how? hmmmmm\""
@@ -1691,7 +1692,9 @@ label asszemblyjigolo1_3:
 # remove jigolo1encounter for one of the above {reminder}
         "Go look":
             sze "\"Fine\""
-            jump dead
+            sze "Climbing stairs is pretty shitty"
+            sze "\"!\""
+            jump asszembly1shitstorm
             
 # will finish
         "Dog the bois":
@@ -1701,12 +1704,10 @@ label asszemblyjigolo1_3:
             jit "\"errrr....\""
             sze "\"cya\""
             call jitfriendshiploss from _jitfriendshiplossjigolo1dogthebois
-            "You run on for a long time"
-            "\"Run on for a long time\""
-            "\"...sooner or later Moxham will cut you down\""
-            "\"!\"" with hpunch
-            sze "\"Fuck, who the hell are you?!\""
-            jump asszembly1shitstorm
+            jit "\"not so fast, where you going?\""
+            sze "\"idk, eff this, I'm out\""
+            "You turn your head, seeing the chaos of a patrol of teachers hunting down the hopeless students of Rowe\""
+            jump fugitivesfromasszembly1
             
 label fugitivesfromasszembly1:
             jit "\"Whew...Sze let's go, find somewhere to hide\""
@@ -1778,8 +1779,7 @@ label asszemblyjigolo1encounter:
             jit "\"wot?\""
             sze "\"run\""
             "\"Both you and Jitian bolt off across the school\""
-            "\"BAAM!!\"" with hpunch
-            "\"...\""
+            "\"...\"" with hpunch
             "\"Right into a patrol of teachers\""
             jit "\"Ohhhhhhhh FAARk\""
             menu:
@@ -1804,14 +1804,14 @@ label asszemblyjigolo1encounter:
                     jit "\"Mate, are you fucking munted? We're gonna get rekt- {nw}\""
                     sze "\"I see in your eyes the same fear that would take the heart of me\""
                     jit "\"Fuk off, I don't want to get sued for copying Aragorn on top of getting caught by Moxham's cronies\"" 
-                    if intelligence >=3:
+                    if intelligence >=4:
                         sze "\"If we fight good, we won't get caught\""
                         sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
-                        jit "\"Let's fight then!!\""                   
+                        jit "\"Let's fight then!!\"" with hpunch  
                         $ random1to6jig1fight1a = renpy.random.randint(0, 6)
                         $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship)) 
-                        if jig1fight1a >= 5:
+                        if jig1fight1a >= 10:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
                             "They begin to wail on you" with vpunch
@@ -1820,7 +1820,7 @@ label asszemblyjigolo1encounter:
                             "With one last co-ordinated push, you repel their attack"
                             return
                         else:
-                            sze "\"fuck\""
+                            sze "\"
                             jump dead
                         
                     else:
@@ -1829,7 +1829,7 @@ label asszemblyjigolo1encounter:
                         "You succeed in scaring Jitian away"
                         $ random1to6jig1fight1b = renpy.random.randint(0, 6)
                         $ jig1fight1b = (int(random1to6jig1fight1b) + int(strength)*2 + int(intelligence)) 
-                        if jig1fight1b >= 5:
+                        if jig1fight1b >= 10:
                             sze "\"yas\""
                             jit "\"good job\""
                             return
@@ -1838,14 +1838,13 @@ label asszemblyjigolo1encounter:
                             jump dead
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
-
-        
-        "\"Fight\"":
-            sze "\"Let's fight\""
-            jit "\"wut\""
-            sze "\"by running\""
-            jit "\"lol gud idea\""
-            return
+            "\"Fight\"":
+                sze "\"Let's fight\""
+                jit "\"wut\""
+                sze "\"by running\""
+                call 
+                jit "\"lol gud idea\""
+                return
     
 label asszemblyjigolokindagaytoilet:
     show moxham happy

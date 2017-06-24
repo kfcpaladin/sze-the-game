@@ -1834,7 +1834,7 @@ label asszemblyjigolo1encounter:
                             "Both you and Jitian put up a valiant defence"
                             "But since the scripter couldn't be bothered finishing this part right now, you automatically lose"
                             "your life"
-                            RIP
+                            "RIP"
                             jump dead
                         
                     else:
@@ -1859,13 +1859,13 @@ label asszemblyjigolo1encounter:
                             jump dead
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
-            "\"Fight\"":
-                sze "\"Let's fight\""
-                jit "\"wut\""
-                sze "\"by running\""
-                call 
-                jit "\"lol gud idea\""
-                return
+                "\"Fight\"":
+                    sze "\"Let's fight\""
+                    jit "\"wut\""
+                    sze "\"by running\""
+# strengthloss                    
+                    jit "\"lol gud idea\""
+                    return
     
 label asszemblyjigolokindagaytoilet:
     show moxham happy

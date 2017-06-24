@@ -26,6 +26,7 @@ define rus = Character('Rusali', color="#FFFFFF", image="rusali")
 define pra = Character('Pragash', color="#FFFFFF", image="pragash")
 define dea = Character('Dean', color="#FFFFFF", image="dean")
 define wil = Character('Will Yang', color="#ff0000", image="yang")
+define tod = Character('Todd Treoir', color="#99ff99", image="todd")
 define cha = Character('Chao', color="#FFFFFF", image="chao")
 define mox = Character('MOXHAM', color="#FFFFFF", image="moxham")
 define gra = Character('GRANT', color="#FFFFFF", image="grant")
@@ -98,7 +99,7 @@ label start:
     scene bg intro
     with fade
     # remove this these things to enable music later
-    play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana - from YouTube.mp3"
+    play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.mp3"
     "The Year is 2015"
     scene black
     with fade
@@ -208,7 +209,7 @@ label TheKwokappears:
         jump phys1
 label Lyingsze:
         sze "\"N-No, I w-wwas going to ask her what n-next period is\""
-        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+        play music "VarienThroneOfRavens.mp3"
         kok "\"cool story bro\"" with vpunch
         kok "\"suck my dick\"" with vpunch
         kok "\"I'll wreck you\"" with vpunch
@@ -217,7 +218,7 @@ label Lyingsze:
         jump dead
 label Honestsze:
         sze "\"Yea, so what\""
-        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+        play music "VarienThroneOfRavens.mp3"
         kok "\"so imma fuck you up\"" with vpunch
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
@@ -226,7 +227,7 @@ label Honestsze:
 label Rektrusali:
         sze "\"I was just going to talk to new kid Rusali, who's trying to talk to her\""
         sze "Dennis C. Rusali is new kid and try to be friend to everyone. Why I dog him?"
-        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+        play music "VarienThroneOfRavens.mp3"
         kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\"Argh... no really look\""
         kok "\"Shit you're right\""
@@ -307,7 +308,7 @@ label Rektrusali:
         with dissolve
         rus "\"Waow Arthur, I was gonna hate you but you're a nice guy\""
         hide rusali normal
-        play music "Deemo - Paper Plane's Adventure - from YouTube.mp3" loop
+        play music "DeemoPaper Plane's Adventure.mp3" loop
         show willis normal
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
@@ -317,12 +318,13 @@ label Rektrusali:
 label phys1:
     scene bg physclass
     stop music
-    play music "Los Lobos - La Bamba (HQ,16-9) - from YouTube.mp3" loop
+    play music "PinkFloydAnotherBrickInTheWall.mp3" loop
     "You enter the classroom, and glance around. It seems that there is only 1 seat left, right next to willis"
     "To your left is Willis, to your right is Pragash"
     "You spot Serena sitting at the front of the class right in front the teacher, Ms. Fluitsma"
     show willis normal
     kok "\"We should be quiet, looks like class is starting soon.\""
+    kok "\"Just kidding, as if anyone actually cares.\""
     hide willis normal
     flu "\"Take your syllabuses out\""
     dea "\"We have not received syllables yet\""
@@ -360,7 +362,7 @@ label phys1answered_a:
     flu "\"What? No response?\""
     sze "\"...Wot?\""
     flu "\"I bet you go tutoring\""
-    play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+    play music "VarienThroneOfRavens.mp3"
     sze "\"...um\""
     flu "\"Stop reading so far ahead its not fair on everyone else\"" with vpunch
     flu "\"In fact I bet you are doing secret tutor-homework right now\"" with hpunch
@@ -377,6 +379,7 @@ label phys1answered_a:
     show rusali normal
     rus "\"For the watch\"" with hpunch
     hide rusali normal
+    show chao normal
     cha "\"...\""
     sze "\"hunh...\""
     sze "\"...urg...\""
@@ -384,6 +387,8 @@ label phys1answered_a:
     sze "\"...Chao..\""
     cha "\"...\"" with vpunch
     cha "\"For teh watch\""
+    hide chao normal
+    with fade
     jump deadrestart
 label phys1answered_b:
     sze "\"ok...\""
@@ -393,6 +398,7 @@ label phys1answered_b:
     jump phys1part2
     
 label phys1nothing:
+    "The class actually goes quiet"
     "No-one says anything"
     "..."
     "..."
@@ -446,7 +452,7 @@ label phys1p2p1:
     call phys1p2p4 from _phys1p2p1callphys1p2p4
     if phys1p2p4t is True:
         stop music
-        play music "Persona 4 - Like A Dream Come True - from YouTube.mp3" loop
+        play music "p4LikeADreamComeTrue.mp3" loop
         sze "\"I'm just observing the parabolic motion of a projectile with a specific focus on the horizontal component of motion\""
         sze "\"However, I had failed to take into account the effects of air resistance, which is outside of the syllabus\""
         rus "\"I was helping Arthur\""
@@ -465,7 +471,7 @@ label phys1p2p1:
         jump phys1p3principal1
         
 label phys1p2p2:
-    play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+    play music "VarienThroneOfRavens.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
     menu:
@@ -593,7 +599,7 @@ label phys1p3principal1:
     call dailymoxcounter from _phys1p3principal1acalldailymoxcounter
     if moxcounter2 > 1:
         mox "\"You two again?\""
-        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+        play music "VarienThroneOfRavens.mp3"
         mox "\"You're already in my shit books\""
         rus "\"Oh no...\""
         mox "\"I didn't say you could speak\"" with hpunch
@@ -630,7 +636,7 @@ label phys1p3principal2:
     if moxcounter2 > 1:
         show moxham unhappy
         mox "\"You again?\""
-        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+        play music "VarienThroneOfRavens.mp3"
         mox "\"Chao, I'll clear you of your dropkickness records if you beat the shit out of him\""
         cha "\"Yes ma'am\""
         sze "\"nope\""
@@ -639,7 +645,7 @@ label phys1p3principal2:
         show moxham unhappy
         call dailymoxcounter from _phys1p3principal2bdailymoxcounter
         mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
-        mox "\"Especially you Joshua, you have a history of being drop kick\""
+        mox "\"Especially you Joshua Chao Lin, you have a history of being drop kick\""
         mox "\"This behaviour is intolerable and unbefitting of the Fortian Race. I expect this from\""
         mox "\"You two are lucky you arent expelled\""
         mox "\"Instead you will be given after school detention...how merciful of me\""
@@ -684,9 +690,11 @@ label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop
     with dissolve
-    play music "Los Lobos - La Bamba (HQ,16-9) - from YouTube.mp3" loop
+    play music "CongressNeptune.mp3" loop
     show yang normal
-    wil "\"Heil hitler\""
+    wil "\"Heil Hitler\""
+    sze "\"...\""
+    sze "My apologies if you are German and the German thought police arrest you"
     wil "\"Are you ready for engineering?\""
     sze "\"uhh, not really\""
     wil "\"I love engineering, i think about constructing planes and bridges every day\""
@@ -773,7 +781,7 @@ label eng1p1naughtycorner:
     pra "\"You here as well? At least you weren't put here for every Engi lesson...\""
     sze "\"What? How\""
     stop music
-    play music "The Room Soundtrack Main Theme - from YouTube.mp3"
+    play music "TheRoomOSTMainTheme.mp3"
     pra "\"I thought this time I might get the Matrix brain plug for engi or maybe Grant might forgive me...\""
     sze "\"For what?\""
     pra "\"Idk\""
@@ -837,7 +845,7 @@ label eng1p1naughtycorner:
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
                         "...wrong"
-                        play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+                        play music "VarienThroneOfRavens.mp3"
                         "You wake up in bed next to...someone"
                         sze "\"Urgh, mornings are shit\""
                         sze "\"Wait what\"" with hpunch
@@ -903,7 +911,7 @@ label eng1p1naughtycorner:
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
             dea "\"Where you going?\""
             sze "\"Asszembly\""
-            play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+            play music "VarienThroneOfRavens.mp3"
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
@@ -1181,11 +1189,11 @@ label eng1p2:
 
 label asszembly1:
     stop music
-    play music "Persona 3 - Iwatodai Dorm - from YouTube.mp3" loop
+    play music "p4YouthfulLunch.mp3" loop
     scene bg rowecorridor
     with fade
     sze "\"Time for my first assembly of the year\""
-    wil "\"Indeed, I wonder whether Moxham will be here\""
+    wil "\"Indeed, I wonder whether Moxham will be here?\""
     pra "\"I'm finally free from the Engineering room...\""
     sze "\"Why not drop it?\""
     pra "\"Not just yet... I need to enact my revenge\""
@@ -1283,7 +1291,6 @@ label asszembly1jigolo:
             sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             sze "\"lol, why you always so shifty?\""
             call strengthgain from _asszemblyjigolostrengthgain
-            jit "\"Calm your tits, mate\""
             jit "\"Shut the fuck up, there might be teachers...\""
             sze "\"Well, I'm planning on ditching the assembly\""
             jump asszemblyjigolo1_2
@@ -1306,7 +1313,7 @@ label asszembly1_2:
     sze "\"...\""
     sze "\"...Willis\""
     pra "\"Willis, I thought we were friends, how could you forget me?\""
-    kok "\"I haven't\""
+    kok "\"I haven't, I just don't care\""
     hide willis normal
     with dissolve
     dik "\"Greetings and salutations to all and Willy la Willy\""
@@ -1453,7 +1460,7 @@ label asszembly1_3:
                             sze "Fuck that was awkward"
                             "you disappear into toilet for 20 minutes"
                         else:
-                            play music "[Dubstep] - Varien - Throne of Ravens [Monstercat Christmas Album] - from YouTube.mp3"
+                            play music "VarienThroneOfRavens.mp3"
                             "You stand rooted to the spot, even as Moxham noticed you and stopped speaking" with vpunch
                             "Your heartbeat starts irregularly racing" with vpunch
                             sze "shit shit {nw}" with vpunch
@@ -1689,14 +1696,13 @@ label asszemblyjigolo1_3:
             "\"{i} I thought I saw movement... {/i}\""
             "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
             jump fugitivesfromasszembly1            
-# remove jigolo1encounter for one of the above {reminder}
+
         "Go look":
             sze "\"Fine\""
             sze "Climbing stairs is pretty shitty"
             sze "\"!\""
             jump asszembly1shitstorm
             
-# will finish
         "Dog the bois":
             sze "\"Fuck this shit, I'm out!\""
             jit "\"Oi, you can't just leave\""
@@ -1780,8 +1786,11 @@ label asszemblyjigolo1encounter:
             sze "\"run\""
             "\"Both you and Jitian bolt off across the school\""
             "\"...\"" with hpunch
-            "\"Right into a patrol of teachers\""
+            play music "p3MassDestruction.mp3"
+            "\"Right into another patrol of teachers\""
             jit "\"Ohhhhhhhh FAARk\""
+            sze "3 teachers...assuming they have combat score of 3 each, I will require a combat score of greater than 9 to beat all of them..."
+            sze "lolwut, random thoughts..."
             menu:
                 "\"I Surrender\"":
                     sze "\"I reckon we should just surrender\""
@@ -1811,27 +1820,39 @@ label asszemblyjigolo1encounter:
                         jit "\"Let's fight then!!\"" with hpunch  
                         $ random1to6jig1fight1a = renpy.random.randint(0, 6)
                         $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship)) 
-                        if jig1fight1a >= 10:
+                        if jig1fight1a > 9:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
                             "They begin to wail on you" with vpunch
                             "But your iron defence holds out"
                             jit "\"You truly are the Chosen One\""
-                            "With one last co-ordinated push, you repel their attack"
+                            "With one last co-ordinated push, you repel their attack and knock them unconscious"
+#                           Will include Bill the Cleaner here later on when not not bothered
+                            call strengthgain
                             return
                         else:
-                            sze "\"
+                            "Both you and Jitian put up a valiant defence"
+                            "But since the scripter couldn't be bothered finishing this part right now, you automatically lose"
+                            "your life"
+                            RIP
                             jump dead
                         
                     else:
-                        sze "\" WOLOLOLOLOLOLOLOLOLOLO! \""
+                        sze "\" WOLOLOLOLOLOLOLOLOLOLO!\""
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
                         $ random1to6jig1fight1b = renpy.random.randint(0, 6)
                         $ jig1fight1b = (int(random1to6jig1fight1b) + int(strength)*2 + int(intelligence)) 
-                        if jig1fight1b >= 10:
-                            sze "\"yas\""
+                        if jig1fight1b > 9:
+                            "Picking up a stick, you steel yourself as the teachers charge"
+                            "jabby jabby"
+                            sze "\"one day I will finish this fight properly\""
+#                           finish him...
                             jit "\"good job\""
+                            jit "\"we sure did nail them, right?\""
+                            sze "\"...\""
+                            sze "\"who dafuq are you?\""
+                            jit "\"calm down mate\""
                             return
                         else:
                             sze "\"fuck\""

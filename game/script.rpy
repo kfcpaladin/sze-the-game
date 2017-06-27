@@ -38,6 +38,7 @@ define roy = Character('Roy', color="#FFFFFF", image="roy")
 # jenkins
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
 define dng = Character('Steven', color="#FFFFFF", image="steven")
+define bil = Character('Bill the Cleaner', color="747D7D", image="bill")
 #not sure if that's legit spelling, plz check
 style window:
     left_padding 150
@@ -53,9 +54,7 @@ image grant normal = "grant"
 image pragash normal = "pragashnormal.png"
 image pragash shocked = "pragash2.png"
 image yang normal = "yang1.png"
-image side chao = "chao2.png"
 image chao normal = "chaohappy.png"
-image side gary = "jitian.png"
 # The game starts here.
 
 label start:
@@ -1695,6 +1694,8 @@ label asszemblyjigolo1_3:
             "You hear the pursuers' voices in the room you just left"
             "\"{i} I thought I saw movement... {/i}\""
             "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
+            scene bg schoolfront
+            with fade
             jump fugitivesfromasszembly1            
 
         "Go look":
@@ -1710,6 +1711,7 @@ label asszemblyjigolo1_3:
             jit "\"errrr....\""
             sze "\"cya\""
             call jitfriendshiploss from _jitfriendshiplossjigolo1dogthebois
+            scene bg schoolfront
             jit "\"not so fast, where you going?\""
             sze "\"idk, eff this, I'm out\""
             "You turn your head, seeing the chaos of a patrol of teachers hunting down the hopeless students of Rowe\""
@@ -1722,6 +1724,7 @@ label fugitivesfromasszembly1:
             sze "\"Whaa- fine\""
             menu:
                 "\"Toilets\"":
+# Include scene change - toilet
                     sze "\"What about the toilets?\""
                     jit "\"Mate, that's pretty grot\""
                     sze "\"You said I would probs have better ideas\""
@@ -1734,6 +1737,7 @@ label fugitivesfromasszembly1:
                     jump asszemblyjigolokindagaytoilet
                     
                 "\"Outside the school\"":
+# scene change - norton st
                     sze "\"Let's just go outside school\""
                     jit "\"Hmmmm {cps=*0.2}...{/cps} Interesting suggestion\""
                     sze "\"Nothing but fence in the way\""
@@ -1744,6 +1748,7 @@ label fugitivesfromasszembly1:
                     jump asszemblyjigolodiscoverthefood
                     
                 "\"Play with vices\"":
+# scene change - darkened workshop
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
                     jit "\"Wow, are you gay for Mr. Grant?\""
                     sze "\"No, I just think it is a good place to hide\""
@@ -1827,10 +1832,40 @@ label asszemblyjigolo1encounter:
                             "But your iron defence holds out"
                             jit "\"You truly are the Chosen One\""
                             "With one last co-ordinated push, you repel their attack and knock them unconscious"
-#                           Will include Bill the Cleaner here later on when not not bothered
-                            call strengthgain
-                            return
+                            play music "p3_JikaNetTanaka.mp3"
+                            call strengthgain from _strengthgaincosbeatteacherpatrolasszemblyjigolo1
+                            "Exhausted, you both decide to take a breather, when suddenly you hear rustling"
+# include Bill the Cleaner
+                            bil "\"Well, now this is a proper mess\""
+                            sze "Oh no, the school janitor/cleaner. He must be here to clean us up"
+                            bil "\"Relax, I offer my cleaning services to all who require it, unless you're talking about the school toilets cos those are complicated.\""
+                            bil "\"And I see that you are in need of such services\""
+                            sze "\"Ok...but is there a catch, cos otherwise I ceebs?\""
+                            bil "\"Normally there is a fee, but current Fortians receive a 100% student discount\""
+                            jit "\"Still kinda too expensive though, considering we did the school a service\""
+                            "Bill the Cleaner begins to get to work on the unconscious teachers, injecting them with an unknown substance"
+                            menu:
+                                "\"Ask what he's doing\"":
+                                sze "\"What are you injecting them with?\""
+                                bil "\"...\""
+                                bil "\"Don't ask question you don't want answers to\""
+                                bil "\"Just kidding, Fort Street is a school of academic excellence and a house of learning\""
+                                bil "\"I'm injecting them with a solution of benzodiazepines and alcohol; the ratio and the specific benzo is a trade secret\""
+                                bil "\"This impacts their memory, inducing short-term amnesia. As for any side effects, they won't really be any. Kind of\""
+                                sze "Wow, I learnt some science; benzodiazepine and alcohol can make short term amnesia"
+# will be included in end of term chemistry
+                                call intelgain from _cleanerasszembly1jigolointelgain
+                                jit "\"Damn, I should try that some time\""
+                                bil "\"Move along and keep quiet, otherwise I may have to remove some of your short term memories\""
+                                "Unsure of his seriousness, you continue onwards with Gary"
+                                return
+                                "\"Let's keep moving\"":
+                                sze "\"I reckon we shouldn't ask too many questions, it seems dangerous\""
+                                jit "\"Yeah, that guy is kinda shift, bruh\""
+                                call jitfriendshipgain from _cleanerasszembly1jigolojitfriendshipgain
+                                return
                         else:
+# finish
                             "Both you and Jitian put up a valiant defence"
                             "But since the scripter couldn't be bothered finishing this part right now, you automatically lose"
                             "your life"

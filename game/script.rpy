@@ -55,6 +55,8 @@ image pragash normal = "pragashnormal.png"
 image pragash shocked = "pragash2.png"
 image yang normal = "yang1.png"
 image chao normal = "chaohappy.png"
+image side bill = "billthecleaner.png"
+image side dean = "deanside.png"
 # The game starts here.
 
 label start:

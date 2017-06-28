@@ -17,6 +17,9 @@ image bg dream = "eoarchean.jpg"
 image bg ded = "szeceded.jpg"
 image bg field = "fields_by_applesin.jpg"
 image bg parisafremov = "parisafremov.jpg"
+image bg norton = "NortonSt.png"
+image bg toilet = "toilet.png"
+image bg d_workshop = "Workshopdark.jpg"
 # Declare characters used by this game.
 define sze = Character('Sze', color="#FCFCFC", image="arthur")
 define rin = Character('Rina', color="#007408", image="serena")
@@ -55,8 +58,10 @@ image pragash normal = "pragashnormal.png"
 image pragash shocked = "pragash2.png"
 image yang normal = "yang1.png"
 image chao normal = "chaohappy.png"
+image side pragash = "pragash.png"
 image side bill = "billthecleaner.png"
 image side dean = "deanside.png"
+image side chao = "chaoport.png"
 # The game starts here.
 
 label start:
@@ -1411,7 +1416,9 @@ label asszembly1_3:
             show bg dream
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             drk "\"I will finish the rest of this dream sequence later someday when I not ceebs\""
-            jump dead
+            sze "I had a dream, and it had water"
+            call thirstgain _asszembly1dreamthirstgain
+            jump asszembly1_4
         "Talk":
             if quest1electionpromise is True:
                 call quest1electionpromise1_a
@@ -1837,7 +1844,6 @@ label asszemblyjigolo1encounter:
                             play music "p3_JikaNetTanaka.mp3"
                             call strengthgain from _strengthgaincosbeatteacherpatrolasszemblyjigolo1
                             "Exhausted, you both decide to take a breather, when suddenly you hear rustling"
-# include Bill the Cleaner
                             bil "\"Well, now this is a proper mess\""
                             sze "Oh no, the school janitor/cleaner. He must be here to clean us up"
                             bil "\"Relax, I offer my cleaning services to all who require it, unless you're talking about the school toilets cos those are complicated.\""
@@ -1870,9 +1876,8 @@ label asszemblyjigolo1encounter:
 # finish
                             "Both you and Jitian put up a valiant defence"
                             "But since the scripter couldn't be bothered finishing this part right now, you automatically lose"
-                            "your life"
-                            "RIP"
-                            jump dead
+                            "\"{b}RIP, bad luck for you and your buddy, kiddo {/b}\""
+                            jump asszembly1shitstorm
                         
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO!\""
@@ -1893,7 +1898,14 @@ label asszemblyjigolo1encounter:
                             return
                         else:
                             sze "\"fuck\""
-                            jump dead
+                            "\"{b}Tsk tsk tsk, you know this violence is an un-Fortian of ejaculating your emotions{/b}\""
+                            "\"Time to turn the tables and inject you with some re-education; all resistance will be penetrated, the same goes for your friend\""
+                            jit "\"Calm the fuck down, you don't need to grope my fuckin' arm off\""
+                            jit "\"Plus, I'm the master of re-education\""
+                            "\"{b}Not when we're through with properly... analysing you\""
+                            jit "\"awww hell no...\""
+                            sze "Resistance is futile, best to follow them"
+                            jump asszembly1shitstorm
                     
 # time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
                 "\"Fight\"":

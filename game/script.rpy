@@ -1743,6 +1743,7 @@ label fugitivesfromasszembly1:
                     sze "\"fuk off\""
                     jit "\"Fine let's go\""
                     call asszemblyjigolo1encounter
+                    jit "\"That was too fucking close\""
                     jump asszemblyjigolokindagaytoilet
                     
                 "\"Outside the school\"":
@@ -1864,6 +1865,8 @@ label asszemblyjigolo1encounter:
 # will be included in end of term chemistry
                                 call intelgain from _cleanerasszembly1jigolointelgain
                                 jit "\"Damn, I should try that some time\""
+                                sze "\"What for?\""
+                                jit "\"...you don't wanna know\""
                                 bil "\"Move along and keep quiet, otherwise I may have to remove some of your short term memories\""
                                 "Unsure of his seriousness, you continue onwards with Gary"
                                 return

@@ -1417,7 +1417,7 @@ label asszembly1_3:
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             drk "\"I will finish the rest of this dream sequence later someday when I not ceebs\""
             sze "I had a dream, and it had water"
-            call thirstgain _asszembly1dreamthirstgain
+            call thirstgain from _asszembly1dreamthirstgain
             jump asszembly1_4
         "Talk":
             if quest1electionpromise is True:
@@ -1855,26 +1855,26 @@ label asszemblyjigolo1encounter:
                             "Bill the Cleaner begins to get to work on the unconscious teachers, injecting them with an unknown substance"
                             menu:
                                 "\"Ask what he's doing\"":
-                                sze "\"What are you injecting them with?\""
-                                bil "\"...\""
-                                bil "\"Don't ask question you don't want answers to\""
-                                bil "\"Just kidding, Fort Street is a school of academic excellence and a house of learning\""
-                                bil "\"I'm injecting them with a solution of benzodiazepines and alcohol; the ratio and the specific benzo is a trade secret\""
-                                bil "\"This impacts their memory, inducing short-term amnesia. As for any side effects, they won't really be any. Kind of\""
-                                sze "Wow, I learnt some science; benzodiazepine and alcohol can make short term amnesia"
+                                    sze "\"What are you injecting them with?\""
+                                    bil "\"...\""
+                                    bil "\"Don't ask question you don't want answers to\""
+                                    bil "\"Just kidding, Fort Street is a school of academic excellence and a house of learning\""
+                                    bil "\"I'm injecting them with a solution of benzodiazepines and alcohol; the ratio and the specific benzo is a trade secret\""
+                                    bil "\"This impacts their memory, inducing short-term amnesia. As for any side effects, they won't really be any. Kind of\""
+                                    sze "Wow, I learnt some science; benzodiazepine and alcohol can make short term amnesia"
 # will be included in end of term chemistry
-                                call intelgain from _cleanerasszembly1jigolointelgain
-                                jit "\"Damn, I should try that some time\""
-                                sze "\"What for?\""
-                                jit "\"...you don't wanna know\""
-                                bil "\"Move along and keep quiet, otherwise I may have to remove some of your short term memories\""
-                                "Unsure of his seriousness, you continue onwards with Gary"
-                                return
+                                    call intelgain from _cleanerasszembly1jigolointelgain
+                                    jit "\"Damn, I should try that some time\""
+                                    sze "\"What for?\""
+                                    jit "\"...you don't wanna know\""
+                                    bil "\"Move along and keep quiet, otherwise I may have to remove some of your short term memories\""
+                                    "Unsure of his seriousness, you continue onwards with Gary"
+                                    return
                                 "\"Let's keep moving\"":
-                                sze "\"I reckon we shouldn't ask too many questions, it seems dangerous\""
-                                jit "\"Yeah, that guy is kinda shift, bruh\""
-                                call jitfriendshipgain from _cleanerasszembly1jigolojitfriendshipgain
-                                return
+                                    sze "\"I reckon we shouldn't ask too many questions, it seems dangerous\""
+                                    jit "\"Yeah, that guy is kinda shift, bruh\""
+                                    call jitfriendshipgain from _cleanerasszembly1jigolojitfriendshipgain
+                                    return
                         else:
 # finish
                             "Both you and Jitian put up a valiant defence"

@@ -709,7 +709,7 @@ screen statsscreen:
                 text "fort: [fort] points"
                 if fort > 100:
                     text "You are the epitome of the fort, with a Fortianness of [fort]"
-                    text "you are a proper protester, you call the police "pig dogs" and you are part of an anarcho-Maoist-libertarian artist collective"
+                    text "you are a proper protester, you call the police \"pig dogs\" and you are part of an anarcho-Maoist-libertarian artist collective"
                 elif fort > 75:
                     text "Michael Kirby looks up to you and your fortianness"
                 elif fort > 50:

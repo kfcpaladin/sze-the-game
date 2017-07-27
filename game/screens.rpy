@@ -612,7 +612,7 @@ screen statsscreen:
     tag menu
     # Include the navigation.
     use navigation
-    grid 2 1:
+    grid 5 6:
         style_group "prefs"
         xfill True
         vbox:
@@ -622,11 +622,12 @@ screen statsscreen:
                 if intelligence > 100:
                     text "You have surpassed even Justin Wu, dux of James Ruse"
                 elif intelligence > 75:
-                    text "Maybe you'll be able to impress Serena with your 99.95 predicted ATAR"
+                    text "Maybe you'll be able to impress Serena with your 99.95 ATAR"
                 elif intelligence > 50:
                     text "A bit more hard work and you will truly ACE TRIALS"
                 elif intelligence > 25:
-                    text "At marginally above average intelligence, you really shouldnt be celebrating yet"
+                    text "At marginally above average intelligence
+                    text "You really shouldnt be celebrating yet"
                 elif intelligence > 0:
                     text "With your remarkably average intelligence, your waifu will probably not be impressed"
                 elif intelligence > -25:
@@ -642,7 +643,8 @@ screen statsscreen:
                 has vbox
                 text "charm: [charm] points"
                 if charm > 100:
-                    text "You slay harder than St. George; you slay just by looking. Gaze upon the world, your dominion"
+                    text "You slay harder than Hugh Hefner"
+                    text "You slay just by looking. Gaze upon the world, your dominion"
                 elif charm > 75:
                     text "With that level of charm, you have probably slayed every LG in Sydney by now"
                 elif charm > 50:

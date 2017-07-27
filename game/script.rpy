@@ -1988,6 +1988,12 @@ label asszembly1shitstorm:
     "\"{b} {cps=*0.25}. . .{/cps} {/b}\""
     "\"{b} yer mean \"we\" got 'im, right? {/b}\""
     "\"{b} {color=#9400D3} ... but of course... *sigh* {/color} {/b}\""
+    "You barely remember the walk towards the Fountain Quad, at the head of a line of shame-faced students"
+    "All you remember is Gary behind everyone, surrounded by 4 teachers"
+    scene bg hallentrance
+    with dissolve
+    "..."
+    "You are amazed that you can hear the drone of Moxham from outside the hall"
     jump dead
 # what if second person was wesley and this is intro to wesley
     

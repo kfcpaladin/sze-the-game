@@ -2020,7 +2020,7 @@ label asszembly1shitstorm:
 # what if second person was wesley and this is intro to wesley
     
 label dead:
-    scene bg ded
+    scene black
     sze "I dead"
     menu:
         "Return to Last Choice":

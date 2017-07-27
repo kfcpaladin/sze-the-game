@@ -635,7 +635,7 @@ screen statsscreen:
                     text "Your test results are probably worse than Chao's tests for STDs"
                 elif intelligence > -75:
                     text "It's astonishing how you made it to Fort Street. How many dicks did you have to suck to get here?"
-                 elif intelligence > -100:
+                elif intelligence > -100:
                     text "With \"intelligence\" of [intelligence], the fact that your nervous system still works is a scientific anomaly. Hot tip: press the \"KMS\" button"                    
         vbox:
             frame:

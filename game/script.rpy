@@ -189,6 +189,7 @@ label postrollcall1:
             $ stealwillisgirl = False
 
 label TheKwokappears:
+    scene bg school
     if stealwillisgirl is True:
         call thirstgain from _thirstdayback
         # geddit?
@@ -483,6 +484,7 @@ label phys1p2p1:
         jump phys1p3principal1
         
 label phys1p2p2:
+    scene bg physclass
     play music "VarienThroneOfRavens.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
@@ -797,6 +799,7 @@ label eng1p1:
             jump eng1p1naughtycorner
             
 label eng1p1naughtycorner:
+    scene bg workshop
     hide grant normal
     show pragash normal
     pra "\"...\""
@@ -2023,9 +2026,6 @@ label dead:
         "Return to Last Choice":
             return
         "Return to start":
-            scene bg ded
-            with fade
-            "The Lord of Light has granted me another chance..."
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
             jump start
 
@@ -2036,9 +2036,6 @@ label deadrestart:
         "Return to Last Choice":
             return
         "Return to start":
-            scene bg ded
-            with fade
-            "The Lord of Light has granted me another chance..."
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
             jump start
     

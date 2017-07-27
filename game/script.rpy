@@ -2023,6 +2023,9 @@ label dead:
         "Return to Last Choice":
             return
         "Return to start":
+            scene bg ded
+            with fade
+            "The Lord of Light has granted me another chance..."
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
             jump start
 
@@ -2033,6 +2036,9 @@ label deadrestart:
         "Return to Last Choice":
             return
         "Return to start":
+            scene bg ded
+            with fade
+            "The Lord of Light has granted me another chance..."
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
             jump start
     

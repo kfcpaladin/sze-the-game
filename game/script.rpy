@@ -142,7 +142,9 @@ label schoolday1:
             mox "\"You're already causing trouble, planning on causing trouble a second time?\""
             mox "\"I'll fuck you over\""
             hide moxham unhappy
-            jump dead
+            call dead from _schoolday11
+            $ intelligence += 9
+            jump eng1p1naughtycorner
         else:
             hide moxham happy
             show moxham unhappy
@@ -187,6 +189,7 @@ label postrollcall1:
             $ stealwillisgirl = False
 
 label TheKwokappears:
+    scene bg school
     if stealwillisgirl is True:
         call thirstgain from _thirstdayback
         # geddit?
@@ -221,7 +224,8 @@ label Lyingsze:
         kok "\"I'll wreck you\"" with vpunch
         hide willis normal
         with dissolve
-        jump dead
+        call dead from _Lyingsze
+        jump TheKwokappears
 label Honestsze:
         sze "\"Yea, so what\""
         play music "VarienThroneOfRavens.mp3"
@@ -229,7 +233,8 @@ label Honestsze:
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
         with dissolve
-        jump dead
+        call dead from _Honestsze
+        jump TheKwokappears
 label Rektrusali:
         sze "\"I was just going to talk to new kid Rusali, who's trying to talk to her\""
         sze "Dennis C. Rusali is new kid and try to be friend to everyone. Why I dog him?"
@@ -395,7 +400,9 @@ label phys1answered_a:
     cha "\"For teh watch\""
     hide chao normal
     with fade
-    jump deadrestart
+    call dead from _phys1answered_a1
+    jump phys1answered
+    
 label phys1answered_b:
     sze "\"ok...\""
     flu "\"Anything you want, anytime...\""
@@ -477,6 +484,7 @@ label phys1p2p1:
         jump phys1p3principal1
         
 label phys1p2p2:
+    scene bg physclass
     play music "VarienThroneOfRavens.mp3"
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
@@ -498,7 +506,8 @@ label phys1p2p2:
             sze "\"no, pls dont kill me\""
             cha "\"Fuck you\""
             cha "\"I'll eat you for lunch!\"" with vpunch
-            jump dead
+            call dead
+            jump phys1p2p2
         "\"Ummmm...\"":
             sze "\"Ummm...lolwut?\""
             cha "\"I'll take that as a {nw}\""
@@ -617,7 +626,11 @@ label phys1p3principal1:
         show rusali normal
         rus "\Soz man. Need to ace trials\"" with vpunch
         sze "\"faarrrr\""
-        jump dead
+        call dead from _phys1p3principal1moxcountertoohigh
+        $ rusfriendship -= 1
+        $ moxcounter1 -= 1
+        $ moxcounter2 -= 1
+        jump phys1part2
     else:
         show moxham unhappy
         call dailymoxcounter from _phys1p3principal1bcalldailymoxcounter
@@ -646,7 +659,12 @@ label phys1p3principal2:
         mox "\"Chao, I'll clear you of your dropkickness records if you beat the shit out of him\""
         cha "\"Yes ma'am\""
         sze "\"nope\""
-        jump dead
+        call dead from _phys1p3principal2moxcountertoohigh
+        $ thirst -= 1
+        $ charm -= 1
+        $ moxcounter1 -= 1
+        $ moxcounter2 -= 1
+        jump phys1part2
     else:
         show moxham unhappy
         call dailymoxcounter from _phys1p3principal2bdailymoxcounter
@@ -781,6 +799,7 @@ label eng1p1:
             jump eng1p1naughtycorner
             
 label eng1p1naughtycorner:
+    scene bg workshop
     hide grant normal
     show pragash normal
     pra "\"...\""
@@ -798,31 +817,31 @@ label eng1p1naughtycorner:
     sze "\"wow\""
     pra "\"Here, in the naughty corner, time behaves differently and space warps\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycorneraintelloss
+    call intelloss from _eng1p1naughtycorneraintelloss1
     pra "\"In fact, the mass of the retardedness of this corner is such that it enhances Earth's warping of the space-time continuum\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornereintelloss
+    call intelloss from _eng1p1naughtycornereintelloss2
     pra "\"The massiveness of the retardedness of this corner draws you further into the retardedness\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornerbintelloss
+    call intelloss from _eng1p1naughtycornerbintelloss3
     pra "\"In fact, this corner seems to allow for, not just the interaction with past light from Minkowski's spacetime cones\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornerfintelloss
+    call intelloss from _eng1p1naughtycornerfintelloss4
     pra "\"It allows one to interact with the past light, to in fact, redo one's actions\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornergintelloss
+    call intelloss from _eng1p1naughtycornergintelloss5
     pra "\"However, unlike Harry Potter's time turner, instead of being simultaneously present with your previous self, you literally replace your previous self\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornerhintelloss
+    call intelloss from _eng1p1naughtycornerhintelloss6
     pra "\"Even at this distance, somehow, the mass of retardedness must be emitting some undiscovered form of radiation, spreading its influence\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycorneriintelloss
+    call intelloss from _eng1p1naughtycorneriintelloss7
     pra "\"Over time, I have adapted to this anomalous curvature in spacetime by studying economics and meditating\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornercintelloss
+    call intelloss from _eng1p1naughtycornercintelloss8
     pra "\"But this process takes many years of being in the corner\""
     sze "\"Wot\""
-    call intelloss from _eng1p1naughtycornerdintelloss 
+    call intelloss from _eng1p1naughtycornerdintelloss9
     pra "\"So, you are more likely to just become retarded and dropkick here\""
     sze "\"ok\""
     gra "\"Bitches, do your work!!!!\""
@@ -869,7 +888,9 @@ label eng1p1naughtycorner:
                         scene bg dream
                         "This place looks pretty neat, but no oxygen"
                         "Eoarchaen Era Earth is retardedly unsuitable for human life"
-                        jump dead
+                        call dead from _eng1p1naughtycornertimetravelcount4
+                        $ intelligence += 9
+                        jump eng1p1naughtycorner
                     elif timetravelcount >= 3:    
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"
@@ -921,9 +942,8 @@ label eng1p1naughtycorner:
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
-            #call loadingdockness?
-            jump dead
-        
+            jump asszembly1
+            
 label timetravel1:
     hide grant normal
     scene black
@@ -1475,7 +1495,9 @@ label asszembly1_3:
                             sze "shit shit {nw}" with vpunch
                             sze "shit shit {nw}" with vpunch
                             "Your heart finally gives up as you die of embarrassment"
-                            jump dead
+                            call dead from _asszembly1_3embarrasedasfuck
+                            $ metderek = False
+                            jump asszembly1_3
                     "Deny all charges":
                         if intelligence >=2:
                             sze "\"I am merely salivating in anticipation of my recess which consists of leftover butter chicken\""
@@ -2010,7 +2032,12 @@ label dead:
 label deadrestart:
     scene bg ded
     sze "I dead"
-    jump start
+    menu:
+        "Return to Last Choice":
+            return
+        "Return to start":
+            # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
+            jump start
     
     
 # HSPs +3 strength, -1 intel

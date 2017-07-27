@@ -2020,7 +2020,7 @@ label asszembly1shitstorm:
 # what if second person was wesley and this is intro to wesley
     
 label dead:
-    scene black
+    scene bg ded
     sze "I dead"
     menu:
         "Return to Last Choice":
@@ -2032,12 +2032,7 @@ label dead:
 label deadrestart:
     scene bg ded
     sze "I dead"
-    menu:
-        "Return to Last Choice":
-            return
-        "Return to start":
-            # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
-            jump start
+    jump start
     
     
 # HSPs +3 strength, -1 intel

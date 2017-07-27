@@ -143,8 +143,8 @@ label schoolday1:
             mox "\"I'll fuck you over\""
             hide moxham unhappy
             call dead from _schoolday11
-            "Cannot return to last choice"
-            jump start
+            $ intelligence += 9
+            jump eng1p1naughtycorner
         else:
             hide moxham happy
             show moxham unhappy

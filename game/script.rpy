@@ -2000,7 +2000,12 @@ label asszembly1shitstorm:
 label dead:
     scene black
     sze "I dead"
-    return
+    menu:
+        "Return to Last Choice":
+            return
+        "Return to start":
+            # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
+            jump start
 
 label deadrestart:
     scene bg ded

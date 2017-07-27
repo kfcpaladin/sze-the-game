@@ -1795,7 +1795,7 @@ label fugitivesfromasszembly1:
 #    to be continued...
 #    Dog the bois -> 2 options go back to assembly, run on for a long time -> go back to assembly -> dog bois again/ sneak back in// run on for a long time -> jit finds you, lose friendship, link to don't look just run
 #    Yang-kor Wat -> Yang's Ministry of Public Relations (e.g. Yang's Church of Yangology)
-            jump dead _fugitivesfromasszembly1unfinished
+            jump dead
 
 label asszemblyjigolo1encounter:
     "You move towards your destination"

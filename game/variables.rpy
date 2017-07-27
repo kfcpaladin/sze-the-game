@@ -633,7 +633,7 @@ label strengthloss:
         $ strength -= 1
         "Your combat propensity has increased."
         if strength > 100:
-            "Your combat propensity is at [strength], making you Level {\displaystyle \aleph _{0}} \aleph _{0} S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Knight Marshal Admiral, surpassing Saitama in skill."
+            "Your combat propensity is at [strength], making you Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Knight Marshal Admiral, surpassing Saitama in skill."
             return
         elif strength > 75:
             "With combat propensity at [strength], you probably ended 300 spartans with a single one-inch punch."
@@ -673,7 +673,7 @@ label strengthgain:
         $ strength += 1
         "Your combat propensity has increased."
         if strength > 100:
-            "Your combat propensity is at [strength], making you Level {\displaystyle \aleph _{0}} \aleph _{0} S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Knight Marshal Admiral, surpassing Saitama in skill."
+            "Your combat propensity is at [strength], making you Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Knight Marshal Admiral, surpassing Saitama in skill."
             return
         elif strength > 75:
             "With combat propensity at [strength], you probably ended 300 spartans with a single one-inch punch."

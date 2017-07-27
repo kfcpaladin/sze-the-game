@@ -619,10 +619,114 @@ screen statsscreen:
             frame:
                 has vbox
                 text "intelligence: [intelligence] points"
+                if intelligence > 100:
+                    text "You have surpassed even Justin Wu, dux of James Ruse"
+                elif intelligence > 75:
+                    text "Maybe you'll be able to impress Serena with your 99.95 predicted ATAR"
+                elif intelligence > 50:
+                    text "A bit more hard work and you will truly ACE TRIALS"
+                elif intelligence > 25:
+                    text "At marginally above average intelligence, you really shouldnt be celebrating yet"
+                elif intelligence > 0:
+                    text "With your remarkably average intelligence, your waifu will probably not be impressed"
+                elif intelligence > -25:
+                    text "You are a bit slow, should you even be in a selective school?"
+                elif intelligence > -50:
+                    text "Your test results are probably worse than Chao's tests for STDs"
+                elif intelligence > -75:
+                    text "It's astonishing how you made it to Fort Street. How many dicks did you have to suck to get here?"
+                 elif intelligence > -100:
+                    text "With \"intelligence\" of [intelligence], the fact that your nervous system still works is a scientific anomaly. Hot tip: press the \"KMS\" button"                    
+        vbox:
+            frame:
+                has vbox
                 text "charm: [charm] points"
+                if charm > 100:
+                    text "You slay harder than St. George; you slay just by looking. Gaze upon the world, your dominion"
+                elif charm > 75:
+                    text "With that level of charm, you have probably slayed every LG in Sydney by now"
+                elif charm > 50:
+                    text "You have surpassed even Chao in slaying ability; the teacher becomes the student"
+                elif charm > 25:
+                    text "You are just very slightly charming"
+                elif charm > 0:
+                    text "With such exceptionally average charm, its going to take a very long time for senpai to notice you."
+                elif charm > -25:
+                    text "With your charm, or lack thereof, there seems to be an invisible forcefield repelling girls from you"
+                elif charm > -50:
+                    text "With that much charm, you are often mistaken for a modern art piece"
+                elif charm > -75:
+                    text "The average gayness of every room you enter is increased by 100%, due to your charm"
+                elif charm > -100:
+                    text "You once tried to masturbate, your hand rejected you"
+        vbox:
+            frame:
+                has vbox
                 text "strength: [strength] points"
+                if strength > 100:
+                    text "You are Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Viking Knight Marshal Admiral, surpassing Saitama in skill"
+                elif strength > 75:
+                    text "With your combat propensity, you probably ended 300 spartans with a single one-inch punch."
+                elif strength > 50:
+                    text "Your skill in a fight would allow you to beat black-belt Aradhya and Jew-jitsu Steven."
+                elif strength > 25:
+                    text "With such strength, you can probs beat the average student."
+                elif strength > 0:
+                    text "At your level it is advised that you tactically retreat from your \"fights\"."
+                elif strength > -25:
+                    text "Your below average combat propensity suggests that you have a thing for being dominated."
+                elif strength > -50:
+                    text "At [strength] combat propensity, the only slaying you know is in Dungeons & Dragons..."
+                elif strength > -75:
+                    text "With that combat \"proficiency\" pussies slays you."
+                elif strength > -100:
+                    text "Don't fight; you will get rekt so hard, you will be reincarnated as an abortion."
+        vbox:
+            frame:
+                has vbox
                 text "thirst: [thirst] points"
+                if thirst > 100:
+                    text "At a thirst of [thirst], you rival Tiddalik"
+                elif thirst > 75:
+                    text "You're so thirsty, sometimes moxham appears in your {s}dreams{/s} hallucinations"
+                elif thirst > 50:
+                    text "With that much thirst, like Roy, you are willing to partake in sexual activities with robots for water"
+                elif thirst > 25:
+                    text "Even a can of SOLO cannot crush your thirst of [thirst]"
+                elif thirst > 0:
+                    text "With this much thirstiness, you have the standard healthy desires of a teenage boy of your age."
+                elif thirst > -25:
+                    text "You have been oft compared to LiXu due to your lack of thirst"
+                elif thirst > -50:
+                    text "The only thing you drink is mountain dew when playing WoW"                
+                elif thirst > -75:
+                    text "With your lack of desire for water, it is no surprise you have already taken a vow of celibacy."
+                elif thirst > -100:
+                    text "You elected to have a penectomy, your bladder being sufficient for your needs."
+        vbox:
+            frame:
+                has vbox
                 text "fort: [fort] points"
+                if fort > 100:
+                    text "You are the epitome of the fort, with a Fortianness of [fort]"
+                    text "you are a proper protester, you call the police "pig dogs" and you are part of an anarcho-Maoist-libertarian artist collective"
+                elif fort > 75:
+                    text "Michael Kirby looks up to you and your fortianness"
+                elif fort > 50:
+                    text "With that much Fortianness, you would be called in to give talks about social justice"
+                    text "But you don't have any white priviledge to acknowledge and you are still straight (you think), cis-gendered scum"
+                elif fort > 25:
+                    text "With that much Fortianness, you probably can make it into the SRC if you were bothered"
+                elif fort > 0:
+                    text "At [fort] Fortianness, you are merely a generic student"
+                elif fort > -25:
+                    text "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+                elif fort > -50:
+                    text "At [fort] fortianness, Moxham is willing to engage in the capitalist process of putting a bounty on your head to kill you"
+                elif fort > -75:
+                    text "With so little fortianness, you're probs a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+                elif fort > -100:
+                    text "With so little fortian- how are you not just expelled at this point?"
         vbox:
             frame:
                 has vbox

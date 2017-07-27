@@ -2029,7 +2029,12 @@ label dead:
 label deadrestart:
     scene bg ded
     sze "I dead"
-    jump start
+    menu:
+        "Return to Last Choice":
+            return
+        "Return to start":
+            # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
+            jump start
     
     
 # HSPs +3 strength, -1 intel

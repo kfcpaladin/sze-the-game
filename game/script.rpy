@@ -1522,6 +1522,7 @@ label asszembly1_3:
                             "Your heart finally gives up as you die of embarrassment"
                             call dead from _asszembly1_3embarrasedasfuck
                             $ metderek = False
+                            $ thirst -= 1
                             jump asszembly1_3
                     "Deny all charges":
                         if intelligence >=2:

@@ -792,8 +792,8 @@ label eng1p1:
             "you feel the pressure rising, resisting against you, soon to overwhelm you"
             "your mind fades away, replaced only by the words"
             "vice, Vice, VICE"
-            gra "\"Aaaaah\""
-            gra "\"STOP PLAYING WITH VICES\""
+            gra "\"Aaaaah\"" with vpunch
+            gra "\"STOP PLAYING WITH THE VICES\""
             gra "\"You're in trouble\""
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
@@ -1027,7 +1027,7 @@ label yangrantp1_2:
                 sze "\"Baka-sempai\""
                 wil "\"Sze baka-desu\""
                 call wilfriendshiploss from _yangrantp1_2op1bwilfriendshiploss
-                wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
+                wil "\"Be quiet now, I need to learn how to jet engine for strategic bomber development\""
                 jump eng1p2
             "\"We vote in Wesley Lai\"":
                 $ yangrant1_2eingutidee = True
@@ -1207,7 +1207,7 @@ label eng1p2:
             "you feel the pressure rising, resisting against you, soon to overwhelm you"
             "your mind fades away, replaced only by the words"
             "vice, Vice, VICE"
-            gra "\"Aaaaah\""
+            gra "\"Aaaaah\"" with vpunch
             gra "\"STOP PLAYING WITH VICES\""
             gra "\"You're in trouble\""
             sze "\"FUCK\""

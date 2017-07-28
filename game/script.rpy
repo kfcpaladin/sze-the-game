@@ -2025,7 +2025,7 @@ label econ1kahoot1:
     $ timer_range = 15
     $ timer_jump = 'econ1kahoot1slow'
     show screen countdown
-    "Which country is the best economy in the world"
+    "Which country has the longest uninterrupted economic growth?"
     menu:
         "Australia":
             hide screen countdown

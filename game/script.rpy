@@ -2013,6 +2013,15 @@ label asszembly1shitstorm:
     jump dead
 # what if second person was wesley and this is intro to wesley
     
+label english1:
+    "It's that time of the day, you know you want to die before you reach the doorsteps..."
+    "Of W23, the Schlam dunk"
+    menu:
+        "Fuck this im out":
+            jump dead
+        "Actually I need to pass":
+            jump dead
+
 label econ1:
     "time for kahoot"
     $ kahootpoints == 0
@@ -2052,7 +2061,6 @@ label econ1kahoot1slow1:
     sze "\"Fuck im too slow\""
     return
 
-    
 label dead:
     scene black
     sze "I dead"

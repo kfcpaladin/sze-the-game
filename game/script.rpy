@@ -66,6 +66,9 @@ image side chao = "chaoport.png"
 # The game starts here.
 
 label start:
+    $ kahootpoints = 0
+    $ timer_range = 0
+    $ timer_jump = 0
     $ intelligence = 0
     $ moxcounter1 = 0
     $ moxcounter2 = 0
@@ -2009,6 +2012,46 @@ label asszembly1shitstorm:
     "You are amazed that you can hear the drone of Moxham from outside the hall"
     jump dead
 # what if second person was wesley and this is intro to wesley
+    
+label econ1:
+    "time for kahoot"
+    $ kahootpoints == 0
+    call econ1kahoot1
+    "Score is [kahootpoints]"
+    jump dead
+
+label econ1kahoot1:
+    $ time = 15
+    $ timer_range = 15
+    $ timer_jump = 'econ1kahoot1slow'
+    show screen countdown
+    "Which country is the best economy in the world"
+    menu:
+        "Australia":
+            hide screen countdown
+            "Correct"
+            if time > 5:
+                $ kahootpoints += 2
+            else:
+                $ kahootpoints += 1
+            return
+        "US":
+            hide screen countdown
+            e "Wrong"
+            return
+        "China":
+            hide screen countdown
+            e "Wrong"
+            return
+        "Uganda":
+            hide screen countdown
+            e "Wrong"
+            return
+
+label econ1kahoot1slow1:
+    sze "\"Fuck im too slow\""
+    return
+
     
 label dead:
     scene black

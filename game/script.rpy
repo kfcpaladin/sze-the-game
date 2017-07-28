@@ -20,6 +20,7 @@ image bg parisafremov = "parisafremov.jpg"
 image bg norton = "NortonSt.png"
 image bg toilet = "toilet.png"
 image bg d_workshop = "Workshopdark.jpg"
+image bg dreamtree = "dreamtree"
 # Declare characters used by this game.
 define sze = Character('Sze', color="#FCFCFC", image="arthur")
 define rin = Character('Rina', color="#007408", image="serena")
@@ -1433,9 +1434,12 @@ label asszembly1_3:
         #derk, leaving this part up to you
             sze "\"I sleep\""
             sze "{i}I dream {/i}"
-            show bg dream
+            show bg dreamtree
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
-            drk "\"I will finish the rest of this dream sequence later someday when I not ceebs\""
+            sze "I still remember the day I first met her"
+            sze "It was the first school day of 2011, and I had just entered my dream high school, Fort Street High School"
+            sze "\"I can't wait for a diligent 6 years of study, and to hopefully get an high ATAR and become a lawyer/doctor in USYD\""
+            scene bg hall
             sze "I had a dream, and it had water"
             call thirstgain from _asszembly1dreamthirstgain
             jump asszembly1_4
@@ -1487,6 +1491,7 @@ label asszembly1_3:
                             sze "\"I need to go to toilet, wash hands\""
                             sze "Fuck that was awkward"
                             "you disappear into toilet for 20 minutes"
+                            jump asszembly1_4
                         else:
                             play music "VarienThroneOfRavens.mp3"
                             "You stand rooted to the spot, even as Moxham noticed you and stopped speaking" with vpunch

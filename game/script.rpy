@@ -637,7 +637,6 @@ label phys1p3principal1:
         jump phys1part2
     else:
         show moxham unhappy
-        call dailymoxcounter from _phys1p3principal1bcalldailymoxcounter
         mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
         mox "\"In this school we have a no tolerance policy on throwing balls (except in my dungeon *wink *wink)\""
         mox "\"Do you understand?\""

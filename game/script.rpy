@@ -2026,7 +2026,7 @@ label english1:
             "Captian's report, {s}February 4th, 2531{/s} first day of year 11"
             "{s}Five year, five long years.{/s} That's how long it took you to get {s}Harvest back{/s} what the fuck was going on."
             "At first it was going well...then setback after setback, {s}loss after loss...{/s} questions after questions..."
-            "Made what was going to be a {s}quick and decisive win{/s} walk in the woods..."
+            "Made what was going to be a {s}quick and decisive win{/s} just a read through of Richard III..."
             "Into fifty minutes of hell..."
             sze "\"Bullshittery at it's finest\""
             jump econ1

@@ -1991,41 +1991,6 @@ label asszemblyjigoloviceland:
     drk "\"Needless to say, this still needs work\""
     jump dead
 
-label recess1:
-    if metderek is True:
-        sze "\"Why does my raw fugu salmon green potato half-smoked beef roll make me feel funny?\""
-        jump dead
-#keep as placeholder or nah???idk
-    else:
-        "You go to Rowe Corner"
-        sze "I sze Serena... I should talk"
-        menu:
-            "Talk":
-               "You move like a panther, with slick moves and predatory focus"
-               "..." with vpunch
-               "Until you bump into Richard and Derek"
-               drk "\"Watch where you going, fgt\""
-               dik "\"Actually it's pronounced \"faggot\"\""
-               drk "\"Whatevs\""
-               sze "\"Wow soz...geez\""
-               sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
-               "You turn around continuing on your hunt for {nw}"
-               "Foot + banana peel + concrete = dead"
-               jump dead
-               
-            "Ceebs talk":
-                "You stand on the spot trying to muster up some courage but find it futile"
-                sze "{cps=*1.5}BOk BOk BOk BOk BOk{/cps}{nw}"
-                call strengthloss from _recess1chickenstrengthloss
-                "You notice you look retarded frozen in mid-stride with your mouth wide open"
-                drk "\"Wow, Arthur looks retarded frozen in mid-stride with his mouth wide open\""
-                sze "Derek is {s}a Machiavellian bastard{/s} a intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
-                sze "\"whaa- can you not...geez\""
-                drk "\"hah, Sze you look like real tard\""
-                wil "\"Truue... don't know why I was friend with this idiot...\""
-                "Laughter erupts across the hall"
-                sze "I die of embarassment"
-                jump dead
                 
 label asszembly1shitstorm:
     "\"{b}WELL WELL WELL... 'oo do we 'ave 'ere? Woss yor reason for not bein' in assembly? {/b}\""

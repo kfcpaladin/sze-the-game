@@ -626,7 +626,7 @@ screen statsscreen:
                 elif intelligence > 50:
                     text "A bit more hard work and you will truly ACE TRIALS"
                 elif intelligence > 25:
-                    text "At marginally above average intelligence
+                    text "At marginally above average intelligence"
                     text "You really shouldnt be celebrating yet"
                 elif intelligence > 0:
                     text "With your remarkably average intelligence, your waifu will probably not be impressed"

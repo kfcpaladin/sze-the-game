@@ -1434,14 +1434,34 @@ label asszembly1_3:
         #derk, leaving this part up to you
             sze "\"I sleep\""
             sze "{i}I dream {/i}"
-            show bg dreamtree
+            scene bg schoolfront
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             sze "I still remember the day I first met her"
             sze "It was the first school day of 2011, and I had just entered my dream high school, Fort Street High School"
             sze "\"I can't wait for a diligent 6 years of study, and to hopefully get an high ATAR and become a lawyer/doctor in USYD\""
+            sze "\"How would I world peace and high distinction average simultaneously.\""
+            sze "This thought confounds me, and compelled to Valley to commune with the spirits of Fortians past\""
+            scene bg field
+            with fade
+            "It is the duty of Fortians to protect indigenous rights"
+            "Transgender rights are the key to a prosperous society"
+            "Refugees will help propel Australia to a 0th World Country"
+            sze "\"I thank you for your sage wisdom, treasured spirits of Fortians Past\""
+            sze "\"I decide to linger in this serene enviroment a little longer to rest my weary soul\""
+            sze "And then I saw her"
+            scene bg dreamtree
+            sze "As she turned, the wind blew and her hair flowed around her"
+            sze "The falling cherry blossom petals danced around her figure"
+            sze "The twinkle in her eyes was as bright as Michael Kirby's ideals"
+            sze "I knew then her name was Serena"
             scene bg hall
             sze "I had a dream, and it had water"
+            sze "My pants are wet"
             call thirstgain from _asszembly1dreamthirstgain
+            mox "\"How dare you wet your pants, when transgendered women in Siberia lack access to basic water facilities\""
+            call dailymoxcounter
+            mox "\"Maybe a stint in detention will help you regain you Fortian Pride\""
+            mox "\"Continuing on from that distraction, let us think back to when Year of 1935 topped the HSC. I believe our current year has the potential to top James Ruse in both exit profile and academics\""
             jump asszembly1_4
         "Talk":
             if quest1electionpromise is True:

@@ -612,7 +612,7 @@ screen statsscreen:
     tag menu
     # Include the navigation.
     use navigation
-    grid 5 6:
+    grid 3 2:
         style_group "prefs"
         xfill True
         vbox:
@@ -637,7 +637,12 @@ screen statsscreen:
                 elif intelligence > -75:
                     text "It's astonishing how you made it to Fort Street. How many dicks did you have to suck to get here?"
                 elif intelligence > -100:
-                    text "With \"intelligence\" of [intelligence], the fact that your nervous system still works is a scientific anomaly. Hot tip: press the \"KMS\" button"                    
+                    text "With almost no brain activity, the fact that your nervous system still works is a scientific anomaly."
+                    text "Hot tip: press the 'KMS' button"                    
+
+    grid 3 2:
+        style_group "prefs"
+        xfill True        
         vbox:
             frame:
                 has vbox
@@ -661,12 +666,17 @@ screen statsscreen:
                     text "The average gayness of every room you enter is increased by 100%, due to your charm"
                 elif charm > -100:
                     text "You once tried to masturbate, your hand rejected you"
+
+    grid 3 2:
+        style_group "prefs"
+        xfill True        
         vbox:
             frame:
                 has vbox
                 text "strength: [strength] points"
                 if strength > 100:
-                    text "You are Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Viking Knight Marshal Admiral, surpassing Saitama in skill"
+                    text "You are Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Viking Knight Marshal Admiral"
+                    text "You surpass saitama in skill"
                 elif strength > 75:
                     text "With your combat propensity, you probably ended 300 spartans with a single one-inch punch."
                 elif strength > 50:
@@ -674,15 +684,18 @@ screen statsscreen:
                 elif strength > 25:
                     text "With such strength, you can probs beat the average student."
                 elif strength > 0:
-                    text "At your level it is advised that you tactically retreat from your \"fights\"."
+                    text "At your level it is advised that you tactically retreat from your fights."
                 elif strength > -25:
                     text "Your below average combat propensity suggests that you have a thing for being dominated."
                 elif strength > -50:
                     text "At [strength] combat propensity, the only slaying you know is in Dungeons & Dragons..."
                 elif strength > -75:
-                    text "With that combat \"proficiency\" pussies slays you."
+                    text "With that combat 'proficiency' pussies slays you."
                 elif strength > -100:
                     text "Don't fight; you will get rekt so hard, you will be reincarnated as an abortion."
+    grid 3 2:
+        style_group "prefs"
+        xfill True
         vbox:
             frame:
                 has vbox
@@ -705,13 +718,16 @@ screen statsscreen:
                     text "With your lack of desire for water, it is no surprise you have already taken a vow of celibacy."
                 elif thirst > -100:
                     text "You elected to have a penectomy, your bladder being sufficient for your needs."
+    grid 3 2:
+        style_group "prefs"
+        xfill True
         vbox:
             frame:
                 has vbox
                 text "fort: [fort] points"
                 if fort > 100:
                     text "You are the epitome of the fort, with a Fortianness of [fort]"
-                    text "you are a proper protester, you call the police \"pig dogs\" and you are part of an anarcho-Maoist-libertarian artist collective"
+                    text "you are a proper protester, you call the police 'pig dogs' and you are part of an anarcho-Maoist-libertarian artist collective"
                 elif fort > 75:
                     text "Michael Kirby looks up to you and your fortianness"
                 elif fort > 50:
@@ -729,6 +745,9 @@ screen statsscreen:
                     text "With so little fortianness, you're probs a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
                 elif fort > -100:
                     text "With so little fortian- how are you not just expelled at this point?"
+    grid 3 2:
+        style_group "prefs"
+        xfill True
         vbox:
             frame:
                 has vbox

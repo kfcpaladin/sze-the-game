@@ -1099,6 +1099,8 @@ label eng1p2:
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
+                    stop music
+                    play RaxlenSliceBG8bit.mp3
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"Whoops, that was for Dean\""
@@ -1119,6 +1121,7 @@ label eng1p2:
                     gra "\"Now those are leather shoes\""
                     dik "\"Sorry for strangling you earlier, I'll be sure to right my wongs later on\""
                     "Richard left"
+                    stop music
                     call dikfriendshipgain from _eng1p2dikfriendshipgain
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
@@ -1130,10 +1133,13 @@ label eng1p2:
                     "Sudden movement catches your peripheral vision"
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
+                    stop music
+                    play RaxlenSliceBG8bit.mp3
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..." 
                     "Richard left leaving Dean cowering on the ground moaning in an unhealthy "
+                    stop music
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""
@@ -1158,6 +1164,8 @@ label eng1p2:
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
+                    stop music
+                    play RaxlenSliceBG8bit.mp3
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"Whoops, that was for Dean\""
@@ -1179,6 +1187,7 @@ label eng1p2:
                     dik "\"Sorry for strangling you earlier, I'll be sure to right my wongs later on\""
                     "Richard left"
                     call dikfriendshipgain from _eng1p2dikfriendshipgain
+                    stop music
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
                 "Don't open door":
@@ -1189,10 +1198,13 @@ label eng1p2:
                     "Sudden movement catches your peripheral vision"
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
+                    stop music
+                    play RaxlenSliceBG8bit.mp3
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..."
                     "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
+                    stop music
                     dea "\"...fuck u arthur, ur a coward\""
                     call strengthloss from _eng1p2strengthloss
                     sze "\"What did I do?\""

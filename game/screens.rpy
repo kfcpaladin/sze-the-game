@@ -783,3 +783,53 @@ transform alpha_dissolve:
 screen countdown:
     timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
     bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 600 at alpha_dissolve # This is the timer bar.
+    
+    
+########################################################################################################################
+screen fortmap: #Preparing the imagemap
+    imagemap:
+        ground "map.png"
+        hover "Map selected.png"
+        idle "map unavailable.png"
+        if not rowe_unavailable:
+            hotspot (945, 85, 85, 75) clicked Return(1)
+        if not kilgour_unavailable:
+            hotspot (827, 175, 205, 37) clicked Return(2)
+        if not rquad_unavailable:
+            hotspot (840, 80, 100, 45) clicked Return(3)
+        if not library_unavailable:
+            hotspot (784, 123, 115, 33) clicked Return(4)
+        if not gym_unavailable:
+            hotspot (730, 104, 60, 83) clicked Return(5)
+        if not food_unavailable:
+            hotspot (650, 160, 90, 35) clicked Return(6)
+        if not valley_unavailable:
+            hotspot (350, 150, 250, 170) clicked Return(7)
+        if not oval_unavailable:
+            hotspot (320, 305, 350, 190) clicked Return(8)
+        if not currycourts_unavailable:
+            hotspot (225, 507, 203, 163) clicked Return(9)
+        if not bcourts_unavailable:
+            hotspot (500, 500, 200, 180) clicked Return(10)
+        if not carpark_unavailable:
+            hotspot (700, 480, 186, 202) clicked Return(11)
+        if not fortstreet_unavailable:
+            hotspot (890, 475, 72, 207) clicked Return(12)
+        if not bridge_unavailable:
+            hotspot (1225, 325, 126, 60) clicked Return(13)
+        if not place_unavailable:
+            hotspot (1080, 240, 108, 119) clicked Return(14)
+        if not wilkins_unavailable:
+            hotspot (966, 273, 95, 77) clicked Return(15)
+        if not quad_unavailable:
+            hotspot (910, 320, 62, 56) clicked Return(16)
+        if not cohen_unavailable:
+            hotspot (755, 405, 133, 54) clicked Return(17)
+        if not hall_unavailable:
+            hotspot (800, 305, 102, 88) clicked Return(18)
+        if not lquad_unavailable:
+            hotspot (775, 245, 103, 55) clicked Return(19)
+        if not lkilgour_unavailable:
+            hotspot (660, 225, 117, 67) clicked Return(20)
+        if not uquad_unavailable:
+            hotspot (890, 220, 108, 56) clicked Return(21)

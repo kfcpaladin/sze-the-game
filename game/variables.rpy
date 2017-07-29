@@ -481,7 +481,7 @@ label fortiangain:
         "You became more Michael Kirby.  , as your Fortianness is at [fort]"
         if fort > 100:
             "You are the epitome of the fort, with a fortianness of [fort]"
-            "you are a proper protester, you call the police "pig dogs" and you are part of an artist collective"
+            "you are a proper protester, you call the police \"pig dogs\" and you are part of an artist collective"
             return
         elif fort > 75:
             "Michael Kirby looks up to you and your fortianness of [fort]"

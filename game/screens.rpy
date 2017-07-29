@@ -613,6 +613,7 @@ screen statsscreen:
     tag menu
     # Include the navigation.
     use navigation
+    # grid 3 2:
     grid 2 1:
         style_group "prefs"
         xfill True
@@ -620,10 +621,135 @@ screen statsscreen:
             frame:
                 has vbox
                 text "intelligence: [intelligence] points"
+                # if intelligence > 100:
+                #    text "You have surpassed even Justin Wu, dux of James Ruse"
+                # elif intelligence > 75:
+                #    text "Maybe you'll be able to impress Serena with your 99.95 ATAR"
+                # elif intelligence > 50:
+                #    text "A bit more hard work and you will truly ACE TRIALS"
+                # elif intelligence > 25:
+                #    text "At marginally above average intelligence"
+                #    text "You really shouldnt be celebrating yet"
+                # elif intelligence > 0:
+                #    text "With your remarkably average intelligence, your waifu will probably not be impressed"
+                # elif intelligence > -25:
+                #    text "You are a bit slow, should you even be in a selective school?"
+                # elif intelligence > -50:
+                #    text "Your test results are probably worse than Chao's tests for STDs"
+                # elif intelligence > -75:
+                #    text "It's astonishing how you made it to Fort Street. How many dicks did you have to suck to get here?"
+                # elif intelligence > -100:
+                #    text "With almost no brain activity, the fact that your nervous system still works is a scientific anomaly."
+                #    text "Hot tip: press the 'KMS' button"                    
+
+    # grid 3 2:
+    #    style_group "prefs"
+    #    xfill True        
+    #    vbox:
+    #        frame:
+    #            has vbox
                 text "charm: [charm] points"
+    #            if charm > 100:
+    #                text "You slay harder than Hugh Hefner"
+    #                text "You slay just by looking. Gaze upon the world, your dominion"
+    #            elif charm > 75:
+    #                text "With that level of charm, you have probably slayed every LG in Sydney by now"
+    #            elif charm > 50:
+    #                text "You have surpassed even Chao in slaying ability; the teacher becomes the student"
+    #            elif charm > 25:
+    #                text "You are just very slightly charming"
+    #            elif charm > 0:
+    #                text "With such exceptionally average charm, its going to take a very long time for senpai to notice you."
+    #            elif charm > -25:
+    #                text "With your charm, or lack thereof, there seems to be an invisible forcefield repelling girls from you"
+    #            elif charm > -50:
+    #                text "With that much charm, you are often mistaken for a modern art piece"
+    #            elif charm > -75:
+    #                text "The average gayness of every room you enter is increased by 100%, due to your charm"
+    #            elif charm > -100:
+    #                text "You once tried to masturbate, your hand rejected you"
+    #
+    # grid 3 2:
+    #    style_group "prefs"
+    #    xfill True        
+    #    vbox:
+    #        frame:
+    #            has vbox
                 text "strength: [strength] points"
+    #            if strength > 100:
+    #                text "You are Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Viking Knight Marshal Admiral"
+    #                text "You surpass saitama in skill"
+    #            elif strength > 75:
+    #                text "With your combat propensity, you probably ended 300 spartans with a single one-inch punch."
+    #            elif strength > 50:
+    #                text "Your skill in a fight would allow you to beat black-belt Aradhya and Jew-jitsu Steven."
+    #            elif strength > 25:
+    #                text "With such strength, you can probs beat the average student."
+    #            elif strength > 0:
+    #                text "At your level it is advised that you tactically retreat from your fights."
+    #            elif strength > -25:
+    #                text "Your below average combat propensity suggests that you have a thing for being dominated."
+    #            elif strength > -50:
+    #                text "At [strength] combat propensity, the only slaying you know is in Dungeons & Dragons..."
+    #            elif strength > -75:
+    #                text "With that combat 'proficiency' pussies slays you."
+    #            elif strength > -100:
+    #                text "Don't fight; you will get rekt so hard, you will be reincarnated as an abortion."
+    # grid 3 2:
+    #    style_group "prefs"
+    #    xfill True
+    #    vbox:
+    #        frame:
+    #            has vbox
                 text "thirst: [thirst] points"
+    #            if thirst > 100:
+    #                text "At a thirst of [thirst], you rival Tiddalik"
+    #            elif thirst > 75:
+    #                text "You're so thirsty, sometimes moxham appears in your {s}dreams{/s} hallucinations"
+    #            elif thirst > 50:
+    #                text "With that much thirst, like Roy, you are willing to partake in sexual activities with robots for water"
+    #            elif thirst > 25:
+    #                text "Even a can of SOLO cannot crush your thirst of [thirst]"
+    #            elif thirst > 0:
+    #                text "With this much thirstiness, you have the standard healthy desires of a teenage boy of your age."
+    #            elif thirst > -25:
+    #                text "You have been oft compared to LiXu due to your lack of thirst"
+    #            elif thirst > -50:
+    #                text "The only thing you drink is mountain dew when playing WoW"                
+    #            elif thirst > -75:
+    #                text "With your lack of desire for water, it is no surprise you have already taken a vow of celibacy."
+    #            elif thirst > -100:
+    #                text "You elected to have a penectomy, your bladder being sufficient for your needs."
+    # grid 3 2:
+    #    style_group "prefs"
+    #    xfill True
+    #    vbox:
+    #        frame:
+    #            has vbox
                 text "fort: [fort] points"
+    #            if fort > 100:
+    #                text "You are the epitome of the fort, with a Fortianness of [fort]"
+    #                text "you are a proper protester, you call the police 'pig dogs' and you are part of an anarcho-Maoist-libertarian artist collective"
+    #            elif fort > 75:
+    #                text "Michael Kirby looks up to you and your fortianness"
+    #            elif fort > 50:
+    #                text "With that much Fortianness, you would be called in to give talks about social justice"
+    #                text "But you don't have any white priviledge to acknowledge and you are still straight (you think), cis-gendered scum"
+    #            elif fort > 25:
+    #                text "With that much Fortianness, you probably can make it into the SRC if you were bothered"
+    #            elif fort > 0:
+    #                text "At [fort] Fortianness, you are merely a generic student"
+    #            elif fort > -25:
+    #                text "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"
+    #            elif fort > -50:
+    #                text "At [fort] fortianness, Moxham is willing to engage in the capitalist process of putting a bounty on your head to kill you"
+    #            elif fort > -75:
+    #                text "With so little fortianness, you're probs a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"
+    #            elif fort > -100:
+    #                text "With so little fortian- how are you not just expelled at this point?"
+    grid 2 1:
+        style_group "prefs"
+        xfill True
         vbox:
             frame:
                 has vbox
@@ -644,3 +770,67 @@ screen statsscreen:
                 text "Andrew: [leefriendship] points"
                 text "Aradhya: [butfriendship] points"
                 text "Steven: [dngfriendship] points"
+
+#########################################################################################################################
+#timer bar
+
+transform alpha_dissolve:
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    on hide:
+        linear 0.5 alpha 0
+    # This is to fade the bar in and out, and is only required once in your script
+
+screen countdown:
+    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 600 at alpha_dissolve # This is the timer bar.
+    
+    
+########################################################################################################################
+screen fortmap: #Preparing the imagemap
+    imagemap:
+        ground "map.png"
+        hover "Map selected.png"
+        idle "map unavailable.png"
+        if "rowe" in allowedareas:
+            hotspot (945, 85, 85, 75) clicked Return(1)
+        if "kilgour" in allowedareas:
+            hotspot (827, 175, 205, 37) clicked Return(2)
+        if "rquad" in allowedareas:
+            hotspot (840, 80, 100, 45) clicked Return(3)
+        if "library" in allowedareas:
+            hotspot (784, 123, 115, 33) clicked Return(4)
+        if "gym" in allowedareas:
+            hotspot (730, 104, 60, 83) clicked Return(5)
+        if "food" in allowedareas:
+            hotspot (650, 160, 90, 35) clicked Return(6)
+        if "valley" in allowedareas:
+            hotspot (350, 150, 250, 170) clicked Return(7)
+        if "oval" in allowedareas:
+            hotspot (320, 305, 350, 190) clicked Return(8)
+        if "currycourts" in allowedareas:
+            hotspot (225, 507, 203, 163) clicked Return(9)
+        if "bcourts" in allowedareas:
+            hotspot (500, 500, 200, 180) clicked Return(10)
+        if "carpark" in allowedareas:
+            hotspot (700, 480, 186, 202) clicked Return(11)
+        if "fortstreet" in allowedareas:
+            hotspot (890, 475, 72, 207) clicked Return(12)
+        if "bridge" in allowedareas:
+            hotspot (1225, 325, 126, 60) clicked Return(13)
+        if "place" in allowedareas:
+            hotspot (1080, 240, 108, 119) clicked Return(14)
+        if "wilkins" in allowedareas:
+            hotspot (966, 273, 95, 77) clicked Return(15)
+        if "quad" in allowedareas:
+            hotspot (910, 320, 62, 56) clicked Return(16)
+        if "cohen" in allowedareas:
+            hotspot (755, 405, 133, 54) clicked Return(17)
+        if "hall" in allowedareas:
+            hotspot (800, 305, 102, 88) clicked Return(18)
+        if "lquad" in allowedareas:
+            hotspot (775, 245, 103, 55) clicked Return(19)
+        if "lkilgour" in allowedareas:
+            hotspot (660, 225, 117, 67) clicked Return(20)
+        if "uqad" in allowedareas:
+            hotspot (890, 220, 108, 56) clicked Return(21)

@@ -66,27 +66,8 @@ image side chao = "chaoport.png"
 # The game starts here.
 
 label start:
-    $ lkilgour_unavailable = False
-    $ uquad_unavailable = False
-    $ lquad_unavailable = False
-    $ hall_unavailable = False
-    $ cohen_unavailable = False
-    $ quad_unavailable = False
-    $ wilkins_unavailable = False
-    $ place_unavailable = False
-    $ bridge_unavailable = False
-    $ fortstreet_unavailable = False
-    $ carpark_unavailable = False
-    $ bcourts_unavailable = False
-    $ currycourts_unavailable = False
-    $ oval_unavailable = False
-    $ valley_unavailable = False
-    $ food_unavailable = False
-    $ gym_unavailable = False
-    $ library_unavailable = False
-    $ rquad_unavailable = False
-    $ rowe_unavailable = False
-    $ kilgour_unavailable = False
+# list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
+    $ allowedareas = {"lkilgour", "uquad", "lquad", "hall", "cohen", "quad", "wilkins", "place", "bridge", "fortstreet", "carpark", "bcourts", "currycourts", "oval", "valley", "food", "gym", "library", "rquad", "kilgour", "rowe"}
     $ kahootpoints = 0
     $ timer_range = 0
     $ timer_jump = 0

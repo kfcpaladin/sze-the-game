@@ -2014,7 +2014,7 @@ label asszembly1shitstorm:
     
 label english1:
     "It's that time of the day, you know you want to die before you reach them doorsteps..."
-    "Of W23, the lair of the Schlam dunk"
+    "Of W23, the lair of the Schlam dunk, a smaller sub-species of the English teachers race not often seen because of its weakness to deodorant."
     menu:
         "Fuck this im out":
             "You leave, but feel a prescence behind you."
@@ -2024,12 +2024,41 @@ label english1:
             jump dead
         "Actually I need to pass":
             "Captian's report, {s}February 4th, 2531{/s} first day of year 11"
-            "{s}Five year, five long years.{/s} That's how long it took you to get {s}Harvest back{/s} what the fuck was going on."
-            "At first it was going well...then setback after setback, {s}loss after loss...{/s} questions after questions..."
-            "Made what was going to be a {s}quick and decisive win{/s} just a read through of Richard III..."
+            "{s}Five year, five long years.{/s} 15 minutes, 15 long minutes. That's how long it took to get {s}Harvest back{/s} what the fuck was going on."
+            "At first it was going well...{s}then setback after setback, loss after loss...{/s} book after book,questions after questions..."
+            "Made what was going to be a {s}quick and decisive win{/s} a bludge lesson..."
             "Into fifty minutes of hell..."
             sze "\"Bullshittery at it's finest\""
-            jump econ1
+            jump mathext1day1
+
+label mthext1day1:
+    "Next class is Extension 1 maths, with Mr Barton."
+    "Rumors have it that even on the last day of school, Mr Barton won't let you celebrate."
+    "You grit your teeth as you prep urself for some hardcore maths."
+    "Perhaps you should kill yourself now, i mean, what do you think? I doubt i can think of any better dialogue after this scene."
+    "Or is the chance that kahoot is after this period worth living for?"
+    menu:
+        "kms":
+            "wow you suck at keeping yourself alive"
+            jump dead
+        "don't":
+            "You don't, killing urself means u might not be able to play kahoot later, and kahoot is always worth living for"
+            "In the first 15 minutes of maths class the drama starts."
+            "In the beginning it was quiet, then the tapping started, and it was clear that someone was doing some dodgy shit in class"
+            "You sze in the corner, Anthony Lin, a big but quiet kid, hunched over his laptop"
+            "It's not long before Barton szes this as well, and then the shit storm begins..."
+            jump mthext1shitstorm
+
+label mthext1shitstorm
+    "The Barton asks, Anthony what are you doing on your computer?"
+    "Geogebrah sir is the reply"
+    "No your not, bring your laptop over here"
+    "It's just geogebrah sir"
+    "No bring it here" with vpunch
+    "Anthony brings is computer to Barton and in a few moments gets sent to the principal's office, and is never seen again"
+    sze "lol"
+    "In your pencil case your calculator lights up"
+    jump econ1
 
 label econ1:
     "time for kahoot"

@@ -2011,7 +2011,8 @@ label asszembly1shitstorm:
     "You are amazed that you can hear the drone of Moxham from outside the hall"
     jump dead
 # what if second person was wesley and this is intro to wesley
-    
+
+# first english class testing
 label english1:
     "It's that time of the day, you know you want to die before you reach them doorsteps..."
     "Of W23, the lair of the Schlam dunk, a smaller sub-species of the English teachers race not often seen because of its weakness to deodorant."
@@ -2031,6 +2032,7 @@ label english1:
             sze "\"Bullshittery at it's finest\""
             jump mathext1day1
 
+# maths class
 label mthext1day1:
     "Next class is Extension 1 maths, with Mr Barton."
     "Rumors have it that even on the last day of school, Mr Barton won't let you celebrate."
@@ -2049,7 +2051,7 @@ label mthext1day1:
             "It's not long before Barton szes this as well, and then the shit storm begins..."
             jump mthext1shitstorm
 
-label mthext1shitstorm
+label mthext1shitstorm:
     "The Barton asks, Anthony what are you doing on your computer?"
     "Geogebrah sir is the reply"
     "No your not, bring your laptop over here"

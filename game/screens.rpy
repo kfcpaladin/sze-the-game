@@ -791,45 +791,45 @@ screen fortmap: #Preparing the imagemap
         ground "map.png"
         hover "Map selected.png"
         idle "map unavailable.png"
-        if not rowe_unavailable:
+        if "rowe" in allowedareas:
             hotspot (945, 85, 85, 75) clicked Return(1)
-        if not kilgour_unavailable:
+        if "kilgour" in allowedareas:
             hotspot (827, 175, 205, 37) clicked Return(2)
-        if not rquad_unavailable:
+        if "rquad" in allowedareas:
             hotspot (840, 80, 100, 45) clicked Return(3)
-        if not library_unavailable:
+        if "library" in allowedareas:
             hotspot (784, 123, 115, 33) clicked Return(4)
-        if not gym_unavailable:
+        if "gym" in allowedareas:
             hotspot (730, 104, 60, 83) clicked Return(5)
-        if not food_unavailable:
+        if "food" in allowedareas:
             hotspot (650, 160, 90, 35) clicked Return(6)
-        if not valley_unavailable:
+        if "valley" in allowedareas:
             hotspot (350, 150, 250, 170) clicked Return(7)
-        if not oval_unavailable:
+        if "oval" in allowedareas:
             hotspot (320, 305, 350, 190) clicked Return(8)
-        if not currycourts_unavailable:
+        if "currycourts" in allowedareas:
             hotspot (225, 507, 203, 163) clicked Return(9)
-        if not bcourts_unavailable:
+        if "bcourts" in allowedareas:
             hotspot (500, 500, 200, 180) clicked Return(10)
-        if not carpark_unavailable:
+        if "carpark" in allowedareas:
             hotspot (700, 480, 186, 202) clicked Return(11)
-        if not fortstreet_unavailable:
+        if "fortstreet" in allowedareas:
             hotspot (890, 475, 72, 207) clicked Return(12)
-        if not bridge_unavailable:
+        if "bridge" in allowedareas:
             hotspot (1225, 325, 126, 60) clicked Return(13)
-        if not place_unavailable:
+        if "place" in allowedareas:
             hotspot (1080, 240, 108, 119) clicked Return(14)
-        if not wilkins_unavailable:
+        if "wilkins" in allowedareas:
             hotspot (966, 273, 95, 77) clicked Return(15)
-        if not quad_unavailable:
+        if "quad" in allowedareas:
             hotspot (910, 320, 62, 56) clicked Return(16)
-        if not cohen_unavailable:
+        if "cohen" in allowedareas:
             hotspot (755, 405, 133, 54) clicked Return(17)
-        if not hall_unavailable:
+        if "hall" in allowedareas:
             hotspot (800, 305, 102, 88) clicked Return(18)
-        if not lquad_unavailable:
+        if "lquad" in allowedareas:
             hotspot (775, 245, 103, 55) clicked Return(19)
-        if not lkilgour_unavailable:
+        if "lkilgour" in allowedareas:
             hotspot (660, 225, 117, 67) clicked Return(20)
-        if not uquad_unavailable:
+        if "uqad" in allowedareas:
             hotspot (890, 220, 108, 56) clicked Return(21)

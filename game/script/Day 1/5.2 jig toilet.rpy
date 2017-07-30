@@ -13,7 +13,7 @@ label asszemblyjigolokindagaytoilet:
     "You seem to hear a sound coming from the stall at the very end"
     menu:
         "\"Investigate the sound\"":
-            sze "\"Oi Gary, back me up, yeah?\""
+            sze "\"Oi Gary, back me up, yeah?\"":
                 if jitfriendship >= 4:
                     sze "\"Oi Gary, back me up\""
                     jit "\"Nah mate, that's a bit disturbing\""

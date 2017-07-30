@@ -45,6 +45,7 @@ label start:
     with fade
     scene bg intro
     with fade
+    pause
     # remove this these things to enable music later
     play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.mp3"
     "The Year is 2015"

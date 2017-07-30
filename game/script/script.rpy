@@ -31,7 +31,7 @@ label start:
     $ moxfriendship = 0
     $ dikfriendship = 0
     $ drkfriendship = 0
-    $ jitfriendship = 0
+    $ jitfriendship = 5
     $ royfriendship = 0
     $ leefriendship = 0
     $ butfriendship = 0

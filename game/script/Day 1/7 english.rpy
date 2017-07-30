@@ -16,4 +16,4 @@ label english1:
             "Made what was going to be a {s}quick and decisive win{/s} a bludge lesson..."
             "Into fifty minutes of hell..."
             sze "\"Bullshittery at it's finest\""
-            jump mathext1day1
+            jump mthext1day1

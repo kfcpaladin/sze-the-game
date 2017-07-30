@@ -383,7 +383,7 @@ label eng1p2:
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music
-                    # play RaxlenSliceBG8bit.mp3
+                    play music "RaxlenSliceBG8bit.mp3"
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"Whoops, that was for Dean\""
@@ -417,7 +417,7 @@ label eng1p2:
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     stop music
-                    # play RaxlenSliceBG8bit.mp3
+                    play music "RaxlenSliceBG8bit.mp3"
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..." 
@@ -448,7 +448,7 @@ label eng1p2:
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music
-                    #play RaxlenSliceBG8bit.mp3
+                    play music "RaxlenSliceBG8bit.mp3"
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"Whoops, that was for Dean\""
@@ -482,7 +482,7 @@ label eng1p2:
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     stop music
-                    #play RaxlenSliceBG8bit.mp3
+                    play music "RaxlenSliceBG8bit.mp3"
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
                     "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..."

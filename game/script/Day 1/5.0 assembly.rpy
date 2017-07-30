@@ -116,7 +116,9 @@ label asszembly1_2:
         cha "\"Fuck your head? Ok\"" with hpunch
         sze "\"Nooo, raep, raep\""
         if dikfriendship > 0:
-            dik "\"Oi, fat ass, pick on people your own size, like Gabe Newell or someone of similar girth\""
+            stop music
+            play music "RaxlenSliceBG8bit.mp3"
+            dik "\"Oi, fat ass, pick on people your own size, like Gabe Newell\""
             cha "\"Lemme think...\""
             cha "\"Nah...\""
             dik "\"My apologies, then\""
@@ -128,6 +130,8 @@ label asszembly1_2:
             dik "\"Don't make me make Chao Mein\""
             cha "\"...\""
             cha "\"Fuck off\""
+            stop music
+            play music "p4YouthfulLunch.mp3" loop
             hide chao normal
             "You observed how to some combat technique"
             call strengthgain from __asszembly1_2chaopisssedstrengthgain

@@ -180,9 +180,8 @@ label asszembly1_3:
     sze "Wow, this is boring"
     menu:
         "Sleep":
-        #derk, leaving this part up to you
             sze "\"I sleep\""
-            sze "{i}I dream {/i}"
+            sze "\"{i}I dream {/i}\""
             scene bg schoolfront
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             sze "I still remember the day I first met her"
@@ -207,10 +206,12 @@ label asszembly1_3:
             sze "I had a dream, and it had water"
             sze "My pants are wet"
             call thirstgain from _asszembly1dreamthirstgain
-            mox "\"How dare you wet your pants, when transgendered women in Siberia lack access to basic water facilities\""
+            mox "\"How dare you wet your pants, when transgendered women in Siberia lack access to basic water facilities?\""
             call dailymoxcounter
+            call fortianloss from _fortlossasszembly1sleep
             mox "\"Maybe a stint in detention will help you regain you Fortian Pride\""
             mox "\"Continuing on from that distraction, let us think back to when Year of 1935 topped the HSC. I believe our current year has the potential to top James Ruse in both exit profile and academics\""
+            "You hear Richard cough loudly"
             jump asszembly1_4
         "Talk":
             if quest1electionpromise is True:
@@ -283,7 +284,7 @@ label asszembly1_3:
                             pra "\"wtf\""
                             sze "\"I am accepting to new ideas because of my Fortianness\""
                             call fortiangain from _asszembly1_3sadasdasdcalllfortiangain
-                            pra "\"That almost makes me as annoyed as Desney being on SRC\""
+                            pra "\"That almost makes annoys me as much as Desney being on SRC\""
                             "You see that this has caught the attention of Will Yang\""
                             wil "\"Perhaps you might be persuaded to run?\""
                             pra "\"But they hate me on the SRC\""

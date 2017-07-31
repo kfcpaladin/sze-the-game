@@ -79,6 +79,7 @@ label szemeettheleatgaytoilet:
     ale "\"I may sze you around then\""
     hide le calculetor
     with fade
+    "The calculetor disszepated..."
     sze "\"That was fucking trippy\""
     jit "\"What was?\""
     sze "\"Anthony Le in a calculetor\""

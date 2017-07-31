@@ -192,9 +192,9 @@ label asszembly1_3:
             sze "This thought confounds me, and compelled to Valley to commune with the spirits of Fortians past\""
             scene bg field
             with fade
-            "It is the duty of Fortians to protect indigenous rights"
-            "Transgender rights are the key to a prosperous society"
-            "Refugees will help propel Australia to a 0th World Country"
+            "\"{i}It is the duty of Fortians to protect indigenous rights {/i}\""
+            "\"{i}Transgender rights are the key to a prosperous society {/i}\""
+            "\"{i}Refugees will help propel Australia to a 0th World Country {/i}\""
             sze "\"I thank you for your sage wisdom, treasured spirits of Fortians Past\""
             sze "\"I decide to linger in this serene enviroment a little longer to rest my weary soul\""
             sze "And then I saw her"

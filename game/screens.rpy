@@ -628,7 +628,7 @@ screen statsscreen:
                 elif intelligence > 25:
                     text "At marginally above average intelligence"
                     text "You really shouldnt be celebrating yet"
-                elif intelligence > 0:
+                elif intelligence > -1:
                     text "With your remarkably average intelligence, your waifu will probably not be impressed"
                 elif intelligence > -25:
                     text "You are a bit slow, should you even be in a selective school?"
@@ -650,7 +650,7 @@ screen statsscreen:
                     text "You have surpassed even Chao in slaying ability; the teacher becomes the student"
                 elif charm > 25:
                     text "You are just very slightly charming"
-                elif charm > 0:
+                elif charm > -1:
                     text "With such exceptionally average charm, its going to take a very long time for senpai to notice you."
                 elif charm > -25:
                     text "With your charm, or lack thereof, there seems to be an invisible forcefield repelling girls from you"
@@ -671,7 +671,7 @@ screen statsscreen:
                     text "Your skill in a fight would allow you to beat black-belt Aradhya and Jew-jitsu Steven."
                 elif strength > 25:
                     text "With such strength, you can probs beat the average student."
-                elif strength > 0:
+                elif strength > -1:
                     text "At your level it is advised that you tactically retreat from your fights."
                 elif strength > -25:
                     text "Your below average combat propensity suggests that you have a thing for being dominated."
@@ -691,7 +691,7 @@ screen statsscreen:
                     text "With that much thirst, like Roy, you are willing to partake in sexual activities with robots for water"
                 elif thirst > 25:
                     text "Even a can of SOLO cannot crush your thirst of [thirst]"
-                elif thirst > 0:
+                elif thirst > -1:
                     text "With this much thirstiness, you have the standard healthy desires of a teenage boy of your age."
                 elif thirst > -25:
                     text "You have been oft compared to LiXu due to your lack of thirst"
@@ -713,7 +713,7 @@ screen statsscreen:
                     text "But you don't have any white priviledge to acknowledge and you are still straight (you think), cis-gendered scum"
                 elif fort > 25:
                     text "With that much Fortianness, you probably can make it into the SRC if you were bothered"
-                elif fort > 0:
+                elif fort > -1:
                     text "At [fort] Fortianness, you are merely a generic student"
                 elif fort > -25:
                     text "Your poor fortianness of [fort] suggests you might secretly be a James Ruse spy"

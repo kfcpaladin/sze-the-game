@@ -57,6 +57,33 @@ label szemeettheleatgaytoilet:
     jit "\"wtf...\""
     show le calculetor
     sze "\"what the actual fuck???\""
+    ale "\"I am Anthony of the CalcuLetor\""
+    ale "\"I am, in fact, an afterimage of the, I guess, real Anthony Le\""
+    jit "\"wtf is going on?\""
+    ale "\"Well, the real me was so advanced in accelerated maths that his skill surpassed physical limitations\""
+    ale "\"I am, essentially, a form of Cherenkov radiation, which animated this calculator with one touch\""
+    jit "\"whoa whoa whoa, wait. That doesn't make sense; Cherenkov Radiation should be blue and only happens in {nw}"
+    show pragash normal
+    with fade
+    pra "\"It is\""
+    jit "\"I don't think I should've bought the white powder from Winson...\""
+    sze "\"What's going on?\""
+    hide pragash normal
+    with fade
+    ale "\"He is another afterimage, caused by his economics and cricket skill.\""
+    jit "\"But he isn't in any accelerated course, like you\""
+    ale "\"His mastery of the distortion in the Naughty Corner has allowed him to leave afterimages\""
+    jit "\"Alright mate alright\""
+    ale "\"You must not allow anyone else to know of this\""
+    jit "\"I've already forgotten everything\""
+    ale "\"I may sze you around then\""
+    hide le calculetor
+    with fade
+    sze "\"That was fucking trippy\""
+    jit "\"What was?\""
+    sze "\"Anthony Le in a calculetor\""
+    jit "\"What? You high mate?\""
+    jit "\"Anthony Le in a calculator? Funny joke\""
+    sze "..."
+    sze "It seems only I remember this now"
     jump recess1a
-# will finish later cos it's 2am
-    pra "\"to be continued...\""

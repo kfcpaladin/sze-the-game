@@ -45,6 +45,9 @@ label schoolday1:
         hide moxham happy
         call fortiangain from _schoolday1fortiangain
         "3 hours later"
+        "I arrive at rollcall"
+        "But no roll call teacher"
+        "Ceebs waiting, I go to office to get timetable"
         "Got a new timetable"
         "I have Physics (Fluitsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
         scene bg school

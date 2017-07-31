@@ -737,7 +737,7 @@ screen statsscreen:
                 text "Chao: [chafriendship] points"
                 text "Grant: [grafriendship] points"
                 text "Moxham: [moxfriendship] points"
-                text "Richard Wang:[dikfriendship] points"
+                text "Richard:[dikfriendship] points"
                 text "Derek: [drkfriendship] points"
                 text "Jittian:[jitfriendship] points"
                 text "Roy: [royfriendship] points"

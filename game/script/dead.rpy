@@ -16,7 +16,11 @@ label deadrestart:
     sze "I dead"
     jump start
     
-    
+label actualded:
+    scene black
+    sze "I dead"
+    return
+
 # HSPs +3 strength, -1 intel
 # fish and chips +2 intel
 # pho +1 strength +1 intel +1 thirst

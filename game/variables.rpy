@@ -478,7 +478,7 @@ label charmloss:
 label fortiangain:
     if forttutorial is True:
         $ fort += 1
-        "You became more Michael Kirby.  , as your Fortianness is at [fort]"
+        "You became more Michael Kirby  , as your Fortianness is at [fort]"
         if fort > 100:
             "You are the epitome of the fort, with a fortianness of [fort]"
             "you are a proper protester, you call the police \"pig dogs\" and you are part of an artist collective"

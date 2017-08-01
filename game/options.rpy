@@ -36,29 +36,29 @@ init -1 python hide:
     theme.roundrect(
 
         ## The color of an idle widget face.
-        widget = "#003c78",
+        widget = "#ffe4e1",
 
         ## The color of a focused widget face.
-        widget_hover = "#000000",
+        widget_hover = "#b55d5d",
 
         ## The color of the text in a widget.
-        widget_text = "#c8ffff",
+        widget_text = "#800000",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#ffffc8",
+        widget_selected = "#404040",
 
         ## The color of a disabled widget face.
-        disabled = "#404040",
+        disabled = "#88001b",
 
         ## The color of disabled widget text.
-        disabled_text = "#c8c8c8",
+        disabled_text = "#220007",
 
         ## The color of informational labels.
-        label = "#ffffff",
+        label = "#ffe4e1",
 
         ## The color of a frame containing widgets.
-        frame = "#6496c8",
+        frame = "#800000",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.

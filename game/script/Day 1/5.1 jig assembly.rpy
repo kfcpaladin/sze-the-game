@@ -369,6 +369,6 @@ label asszemblyjigolo1encounter:
                     sze "\"Let's fight\""
                     jit "\"wut\""
                     sze "\"by running\""
-                    call strengthloss from _5.1jigasszemblystrengthloss
+                    call strengthloss from _5point1jigasszemblystrengthloss
                     jit "\"lol gud idea\""
                     return

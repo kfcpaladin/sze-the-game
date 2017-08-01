@@ -184,7 +184,7 @@ label recess1a:
                                 wil "\"{i}One among our number noted his intellectual prowess, noted how fast he blazed through the course content{/i}\""
                                 wil "\"{i}And he let jealousy into his heart.{/i}\""
                                 wil "\"{i}The one who was jealous of the Le was cunning in his own right. He knew many forgotten sciences{/i}\""
-                                wil "\"{i}and had acces to many arcane device{/i}\""
+                                wil "\"{i}and had access to many arcane device{/i}\""
                                 wil "\"{i}And it was he who noticed the Cherenkov radiation emitted by Anthony due to his speed{/i}\""
                                 wil "\"{i}So in an epiphany, he wondered what would happen if he could capture some of Anthony's radiant brilliance{/i}\""
                                 wil "\"{i}His afterimage{/i}\""

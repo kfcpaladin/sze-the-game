@@ -280,63 +280,63 @@ label recess1a:
                                     jump english1
     elif _return == 2:
         "Kilgour"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 3:
         "R Quad"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 4:
         "Library"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 5:
         "Gym"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 6:
         "Canteen"
-        "Recess is over, time for next class"
-        jump english1
-
+        "You ceebs walk that far though"
+        jump recess1
+        
     elif _return == 7:
         "Valley"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 8:
         "Oval"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 9:
         "Curry courts"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 10:
         "Basketball Courts"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 11:
         "Carpark"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 12:
         "Fort Street"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 13:
         "Bridge"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 14:
         "A random blob of green, popular with \romantic\" twinkies and other unimportant people"
@@ -346,35 +346,37 @@ label recess1a:
 
     elif _return == 15:
         "Wilkins"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 16:
         "Fountain Quad"
+        "You wait in fountain quad, long after the asszembly is ended, noting the mutilated Meleager..."
+# nek minute new quest to look for the statue's... y'know, gigglestick and mothballs
         "Recess is over, time for next class"
         jump english1
 
     elif _return == 17:
         "Cohen"
-        "Recess is over, time for next class"
-        jump english1
-
+        "You ceebs walk that far though"
+        jump recess1
+        
     elif _return == 18:
         "Hall"
-        "Recess is over, time for next class"
-        jump english1
+        "Why are you even staying here? Asszembly has ended"
+        jump recess1
 
     elif _return == 19:
         "Lower Kilgour Quad"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 20:
         "Lower Kilgour"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1
 
     elif _return == 21:
         "Upper Kilgour Quad"
-        "Recess is over, time for next class"
-        jump english1
+        "You ceebs walk that far though"
+        jump recess1

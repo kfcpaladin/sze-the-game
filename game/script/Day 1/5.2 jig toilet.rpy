@@ -4,7 +4,7 @@ label asszemblyjigolokindagaytoilet:
     sze "\"Looks like we're here\""
     call thirstgain from _toiletkindagaythereforethirstgained
     jit "\"...\""
-    stop music 
+    stop music
     play music "TheRoomOSTMainTheme.mp3" loop
     jit "\"Bruh, you just {b}had{/b} to pick the shiftiest place in school\""
     sze "\"stfu, you couldn't think of anywhere better\""
@@ -35,7 +35,7 @@ label asszemblyjigolokindagaytoilet:
                     jump toiletstudies1
         "\"Study\"":
             jump toiletstudies1
-            
+
 label toiletstudies1:
     sze "\"I guess I'll just try to be diligent Fortian and study...\""
     call fortiangain from _fortiangainattoiletswhichiskindagay
@@ -47,7 +47,7 @@ label toiletstudies1:
     call jitfriendshiploss from _jitianthinksyourgayinthegaytoilet
     "You ignore Jitian until recess arrives"
     jump recess1a
-    
+
 label szemeettheleatgaytoilet:
     "You cautiously walk towards the sound, faintly coming from behind the cubicle door"
     "You look behind you and notice Jitian raise an eyebrow"
@@ -79,12 +79,12 @@ label szemeettheleatgaytoilet:
     ale "\"I may sze you around then\""
     hide le calculetor
     with fade
-    "The calculetor disszepated..."
     sze "\"That was fucking trippy\""
     jit "\"What was?\""
     sze "\"Anthony Le in a calculetor\""
     jit "\"What? You high mate?\""
     jit "\"Anthony Le in a calculator? Funny joke\""
     sze "..."
+    jit "\"Mate, let's get out of this one cubicle, cos no homo\""
     sze "It seems only I remember this now"
     jump recess1a

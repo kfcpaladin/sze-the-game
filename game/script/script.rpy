@@ -48,9 +48,9 @@ label start:
     pause
     # remove this these things to enable music later
     play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.mp3"
-    "The Year is 2015"
     scene black
     with fade
+    "The Year is 2015"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
     sze "I had always loved her, since she first graced my eyes in Year 7."

@@ -39,8 +39,10 @@ label start:
     $ timetravelcount = 0
     $ phys1p3p1chaopissed = False
     $ yangrant1_2eingutidee = False
-    $ metderek = False
     $ quest1electionpromise = False
+    $ quest1electionpromise1 = False
+    $ discovernorton = False
+    $ quest2jintiandeliveryservicecofounder = False
     scene black
     with fade
     scene bg intro

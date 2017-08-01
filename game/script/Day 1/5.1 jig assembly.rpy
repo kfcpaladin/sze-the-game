@@ -256,7 +256,8 @@ label asszemblyjigolo1encounter:
             play music "p3MassDestruction.mp3"
             "\"Right into another patrol of teachers\""
             jit "\"Ohhhhhhhh FAARk\""
-            sze "3 teachers...assuming they have combat score of 3 each, I will require a combat score of greater than 9 to beat all of them..."
+            sze "3 teachers...assuming they have combat score of 3 each and a combined arms bonus of 3, I will require a combat score of greater than 12 to beat all of them..."
+            sze "For some reason, I think I should check my stats"
             sze "lolwut, random thoughts..."
             menu:
                 "\"I Surrender\"":
@@ -330,6 +331,7 @@ label asszemblyjigolo1encounter:
                         else:
 # finish
                             "Both you and Jitian put up a valiant defence"
+                            "THey slowly wear you down, causing the two of you to leave gaps"
                             "But since the scripter couldn't be bothered finishing this part right now, you automatically lose"
                             "\"{b}RIP, bad luck for you and your buddy, kiddo {/b}\""
                             jump asszembly1shitstorm
@@ -367,6 +369,6 @@ label asszemblyjigolo1encounter:
                     sze "\"Let's fight\""
                     jit "\"wut\""
                     sze "\"by running\""
-# strengthloss                    
+                    call strengthloss from _5.1jigasszemblystrengthloss
                     jit "\"lol gud idea\""
                     return

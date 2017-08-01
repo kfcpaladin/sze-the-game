@@ -281,62 +281,62 @@ label recess1a:
     elif _return == 2:
         "Kilgour"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 3:
         "R Quad"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 4:
         "Library"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 5:
         "Gym"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 6:
         "Canteen"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
         
     elif _return == 7:
         "Valley"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 8:
         "Oval"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 9:
         "Curry courts"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 10:
         "Basketball Courts"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 11:
         "Carpark"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 12:
         "Fort Street"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 13:
         "Bridge"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 14:
         "A random blob of green, popular with \romantic\" twinkies and other unimportant people"
@@ -347,7 +347,8 @@ label recess1a:
     elif _return == 15:
         "Wilkins"
         "You ceebs walk that far though"
-        jump recess1
+        "Even though that is right next to the Hall, sorta"
+        jump recess1a
 
     elif _return == 16:
         "Fountain Quad"
@@ -359,24 +360,24 @@ label recess1a:
     elif _return == 17:
         "Cohen"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
         
     elif _return == 18:
         "Hall"
         "Why are you even staying here? Asszembly has ended"
-        jump recess1
+        jump recess1a
 
     elif _return == 19:
         "Lower Kilgour Quad"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 20:
         "Lower Kilgour"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a
 
     elif _return == 21:
         "Upper Kilgour Quad"
         "You ceebs walk that far though"
-        jump recess1
+        jump recess1a

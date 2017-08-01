@@ -13,8 +13,7 @@ label recess1a:
         sze "\"Wow, it's Rowe\""
         if metderek is True:
             sze "Should I try to talk to anyone?"
-            menu:
-            "Talk to Derek" if quest1electionpromise is True:
+            if quest1electionpromise is True:
                 sze "\"Hey Derk\""
                 drk "\"Ey\""
                 sze "\"I have a couple of ideas regarding Pragga's political campaign that will take the SRC by storm and{nw}\""
@@ -35,6 +34,79 @@ label recess1a:
                 drk "\"Well, everyone has English at same time, so I'll follow you\""
                 call drkfriendshipgain from _recess1aderkfriendshipgained
                 jump english1
+            else:
+                sze "Maybe I should talk to Richard, since he's not really talking to anyone"
+                sze "\"Hey Rick\""
+                dik "\"Hey Arthur, anything you want to discuss in particular?\""
+                sze "\"Well, not really, but I just figured I might ask about {nw}\""
+                roy "\"Heeeeeeeyyyyyyyy, it's Arthur\""
+                dik "\"Hi Roy, butting into anything you can, as always ;)\""
+                sze "\"Hello Roy\""
+                sze "It's Roy. He's sorta the school clowm, a bit autistic, literally. He likes nerf guns, rants and loves humanoid robots {s}to an unhealthy extent{/s}}\""
+                sze "\"Is it true that you make ass burgers?\""
+                roy "\"Whenever I go to the toilet, I do. But I also do have Asperger's\""
+                roy "\"Oh yeah, Richard, I was gonna ask about the function of a pump action shotgun, in order to mod a nerf gun\""
+                dik "\"Hmm, seems cool, but I don't know anything about Nerf guns; all I know are wikipedia articles on actual guns\""
+                dik "\"But since Arthur is here, let us discuss something else\""
+                sze "\"Ok...like?\""
+                roy "\"Here's a fun hypothetical; if you get a robot gf, would you get one?\""
+                dik "\"*Sigh* This again...\""
+                menu:
+                    "\"No\"":
+                        sze "\"No, not everyone has a robot fetish\""
+                        sze "\"Just hire a person to give you hugs ;) ;)...\""
+                        roy "\"That's stupid, you'd have to pay money for prostitution services\""
+                        drk "\"Lol does Sze want to pay money for touches??\""
+                        if intelligence >=3:
+                            sze "\"No, Roy here wants to build robot fucktoys cos he says you need to pay money for human touches\""
+                            drk "\"But don't you need money for robot parts then?\""
+                            dik "\"Wot, Roy, why would you want a robot GF\""
+                            roy "\"I don't want one, just, if you had too, wouldn't you get one\""
+                            sze "\"But I won't need one cos I'd probably be able to get one\""
+                            "You have impressed everyone with your confidence in your ability to slay (eventually)"
+                            call charmgain from _recess1apissedroycharmgain
+                            roy "\"You people don't get it. This is because you are held back by your human limitations\""
+                            "You tune out"
+                            "Recess is over, time for next class"
+                            jump english1
+                        else:
+                            sze "\"N-no...\""
+                            drk "\"If you think about it, it's probably the only way you'll ever get anyone\""
+                            kok "\"Lel actually true, I at least have Serena\""
+                            sze "\"Just watch me\""
+                            sze "\"I will win her over\""
+                            sze "Let me reminisce of the sakura in full bloom in the Valley, as I first met her"
+                            show bg dreamtree
+                            with fade
+                            sze "For your raven hair"
+                            sze "My purpose has been twice bound"
+                            sze "For your love, my life"
+                            "You try poking yourself with a moderately sharp stick"
+                            "You faintly hear Richard shouting"
+                            dik "\"Oi, you fucking idiots, don't just stand there, stop him!\""
+                            "You barely have enough strength to register what is happening"
+                            sze "\"Ow, it wasn't meant to be like this\""
+                            sze "\"Oh, there's the descending aorta\""
+                            call dead from _recess1aRowesenpaifail
+                    "\"Vices\"":
+                        sze "\"If I had no gf, I would rather play with vices\""
+                        roy "\"Ok...\""
+                        roy "\"You have successfully out-weirded me\""
+                        "Recess is over, time for next class"
+                        jump english1
+# make variable for royfriendship
+                    "\"Yes\"":
+                        sze "\"Yes\""
+                        sze "\"I'd totes stick ma dick in the exhaust pipe of a car transformer\""
+                        roy "\"That's not what I meant\""
+                        sze "\"And then as they go vrrm vrrm, I go vrrm vrrm\""
+                        call thirstgain from _recess1atalkingtoroy
+                        dik "\"...\""
+                        dik "\"What the shit did I just hear?\""
+                        sze "\"Don't worry about it, recess is over, time for English\""
+                        jump english1
+
+
         else:
             "You go to Rowe Corner"
             sze "I sze Serena... I should talk"
@@ -109,7 +181,7 @@ label recess1a:
                                 with fade
                                 wil "\"{i}In ages past, when I was but a young student in the Woodhouse School of Accelerated Maths{/i}\""
                                 wil "\"{i}one of my most skilled peers was one Anthony Le {/i}\""
-                                wil "\"{i}One among our number noted his intellectual prowess, notied how fast he blazed through the course content{/i}\""
+                                wil "\"{i}One among our number noted his intellectual prowess, noted how fast he blazed through the course content{/i}\""
                                 wil "\"{i}And he let jealousy into his heart.{/i}\""
                                 wil "\"{i}The one who was jealous of the Le was cunning in his own right. He knew many forgotten sciences{/i}\""
                                 wil "\"{i}and had acces to many arcane device{/i}\""

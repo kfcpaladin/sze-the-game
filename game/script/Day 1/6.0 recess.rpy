@@ -2,18 +2,39 @@ label recess1:
     "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
     jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
     jump recess1a
-    
+
 label recess1a:
     "It is now recess, which has unfortunately been cut short to 10 minutes to due an extended assembly"
     sze "Hmm, what should I do today for recess"
     call screen fortmap
     if _return == 1:
         "Rowe"
+        scene bg rowecorridor
         sze "\"Wow, it's Rowe\""
         if metderek is True:
             sze "Should I try to talk to anyone?"
-            sze "Nah, ceebs now, finish later"
-            jump english1
+            menu:
+            "Talk to Derek" if quest1electionpromise is True:
+                sze "\"Hey Derk\""
+                drk "\"Ey\""
+                sze "\"I have a couple of ideas regarding Pragga's political campaign that will take the SRC by storm and{nw}\""
+                drk "\"Ceebs\""
+                sze "\"Eh?...\""
+                drk "\"I'm ceebs right now; let's talk about this later\""
+                sze "\"I guess...\""
+                sze "\"How did you arrive late? Didn't see you at roll call\""
+                drk "\"I was just ceebs with getting out of bed for ten minutes and was playing Kancolle\""
+                drk "\"You should try playing Idolm@ster\""
+                sze "\"But that's what Gary played, I thought\""
+                drk "\"No that's Idolm@lester"
+                sze "\"wtf\""
+                drk "\"Oh, looks like recess is ending, what class do you have?\""
+                sze "\"Check your own timetable\""
+                drk "\"ceebs\""
+                sze "\"Fine, I have English with Schlam\""
+                drk "\"Well, everyone has English at same time, so I'll follow you\""
+                call drkfriendshipgain from _recess1aderkfriendshipgained
+                jump english1
         else:
             "You go to Rowe Corner"
             sze "I sze Serena... I should talk"
@@ -50,6 +71,7 @@ label recess1a:
                             sze "\"Ow, it wasn't meant to be like this\""
                             sze "\"Oh, there's the descending aorta\""
                             call dead from _recess1aRowesenpaifail
+
                         "\"Give up\"":
                             sze "I must temper my heart with reason"
                             sze "I don't need to be so thirsty"
@@ -62,29 +84,6 @@ label recess1a:
                     "Instead you choose to turn your attention towards other people"
                     call charmgain from _recess1agoodchoicecharmgain
                     menu:
-                        "Talk to Derek" if quest1electionpromise is True:
-                            sze "\"Hey Derk\""
-                            sze "Derek is {s}a Machiavellian bastard{/s} an intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
-                            $ metderek = True
-                            drk "\"Ey\""
-                            sze "\"I have a couple of ideas regarding Pragga's political campaign that will take the SRC by storm and{nw}\""
-                            drk "\"Ceebs\""
-                            sze "\"Eh?...\""
-                            drk "\"I'm ceebs right now; let's talk about this later\""
-                            sze "\"I guess...\""
-                            sze "\"How did you arrive late? Didn't see you at roll call\""
-                            drk "\"I was just ceebs with getting out of bed for ten minutes and was playing Kancolle\""
-                            drk "\"You should try playing Idolm@ster\""
-                            sze "\"But that's what Gary played, I thought\""
-                            drk "\"No that's Idolm@lester"
-                            sze "\"wtf\""
-                            drk "\"Oh, looks like recess is ending, what class do you have?\""
-                            sze "\"Check your own timetable\""
-                            drk "\"ceebs\""
-                            sze "\"Fine, I have English with Schlam\""
-                            drk "\"Well, everyone has English at same time, so I'll follow you\""
-                            call drkfriendshipgain from _recess1aderkfriendshipgained
-                            jump english1
                         "Talk to Richard":
                             "You notice Richard is busy in conversation about something with some other people"
                             if charm >=5:
@@ -98,6 +97,9 @@ label recess1a:
                                 wil "\"Oh it's Arthur\""
                                 sze "\"Hi Will\""
                                 wil "\"Have you heard of this strange legend surrounding Anthony Le?\""
+                                drk "\"There's a legend about Anthony Le? I must hear of this\""
+                                sze "Derek is {s}a Machiavellian bastard{/s} an intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
+                                $ metderek = True
                                 sze "\"?\""
                                 wil "\"In ages past, when I was but a young student in accelerated maths\""
                                 sze "\"But he's in the same class as you were{nw}\""
@@ -135,7 +137,6 @@ label recess1a:
                                         call wilfriendshiploss from _recess1aRowefailedtobefriend
                                         wil "\"Whatever, let's just go English\""
                                         jump english1
-
                         "Talk to yourself":
                             sze "\"Hey man\""
                             sze "\"Hey, how's it goin'?\""
@@ -153,6 +154,8 @@ label recess1a:
                                     sze "\"Just hire a person to give you hugs ;) ;)...\""
                                     roy "\"That's stupid, you'd have to pay money for prostitution services\""
                                     drk "\"Lol does Sze want to pay money for touches??\""
+                                    sze "Derek is {s}a Machiavellian bastard{/s} an intelligent guy {s}whose morals are as fluid as his loyalties{/s}"
+                                    $ metderek = True
                                     if intelligence >=3:
                                         sze "\"No, Roy here wants to build robot fucktoys cos he says you need to pay money for human touches\""
                                         drk "\"But don't you need money for robot parts then?\""
@@ -201,44 +204,103 @@ label recess1a:
                                     dik "\"What the shit did I just hear?\""
                                     sze "\"Don't worry about it, recess is over, time for English\""
                                     jump english1
-
     elif _return == 2:
         "Kilgour"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 3:
         "R Quad"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 4:
         "Library"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 5:
         "Gym"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 6:
-        "Food"
+        "Canteen"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 7:
         "Valley"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 8:
         "Oval"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 9:
         "Curry courts"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 10:
-        "B-Courts"
+        "Basketball Courts"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 11:
         "Carpark"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 12:
         "Fort Street"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 13:
         "Bridge"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 14:
-        "Place"
+        "A random blob of green, popular with \romantic\" twinkies and other unimportant people"
+        "You loiter there pointlessly"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 15:
         "Wilkins"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 16:
         "Fountain Quad"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 17:
         "Cohen"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 18:
         "Hall"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 19:
         "Lower Kilgour Quad"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 20:
         "Lower Kilgour"
+        "Recess is over, time for next class"
+        jump english1
+
     elif _return == 21:
         "Upper Kilgour Quad"
+        "Recess is over, time for next class"
+        jump english1

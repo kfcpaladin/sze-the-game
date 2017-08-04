@@ -186,15 +186,20 @@ screen main_menu():
     # The main menu buttons.
     frame:
         style_group "mm"
-        xalign .98
-        yalign .98
+        xalign .5
+        yalign .8
 
         has vbox
 
-        textbutton _("Start Game") action Start()
+        add "logo.png"
+        textbutton _("Start Game") action Start() xminimum 400
+        null height 20
         textbutton _("Load Game") action ShowMenu("load")
+        null height 20
         textbutton _("Preferences") action ShowMenu("preferences")
+        null height 20
         textbutton _("Help") action Help()
+        null height 20
         textbutton _("Quit") action Quit(confirm=False)
 
 init -2:

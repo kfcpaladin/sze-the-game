@@ -1,5 +1,5 @@
 label econ1:
-    "It's time for some economics 101 with Garth Chapman, and u are ready to absorb this {s}bullshit{s} uh, i mean buitifool knowledges."
+    "It's time for some economics 101 with Garth Chapman, and u are ready to absorb this {s}bullshit{/s} uh, i mean buitifool knowledges."
     "Like sponges Chappo tells us he expects us to just be able to vomit back out what he tells us"
     "And as usual, the first class is underprepared with no content, so i guess it's time for a kahoot!"
     $ kahootpoints == 0

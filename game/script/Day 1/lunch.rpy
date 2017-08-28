@@ -1,14 +1,11 @@
 # lunch time
 # call map again with more places unlocked 
 
-label recess1:
-    "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
-    jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
-    jump recess1a
-
-label recess1a:
-    "It is now recess, which has unfortunately been cut short to 10 minutes to due an extended assembly"
-    sze "Hmm, what should I do today for recess?"
+label luncha:
+    "It is now lunch, which has also been cut short 10 minutes despite promises that it will not be. This is why Australian politics is so stupid. You vote based on shitty promises."
+    "Promises broken at the first sign of trouble and now what, we're stuck here talking about Very Fast train and second airport for 50 years."
+    "Anyways..."
+    sze "Hmm, what should I do today for lunch?"
     call screen fortmap
     if _return == 1:
         "Rowe"
@@ -27,7 +24,7 @@ label recess1a:
                     if intelligence > 5:
                         sze "\"But I thought you wanted to get rid of the SRC/PNC influence from the school\""
                         wil "\"Only someone as un-fortian as you could say that\""
-                        call fortianloss from _recess1atalkingtoyangfortianloss
+                        call fortianloss from _lunch1atalkingtoyangfortianloss
                         if wilfriendship > 40:
                             wil "\"But since you have proven your worth\""
                             wil "\"Indeed, I do. I foresee that Moxham will have outlived her usefulness by {nw}\""
@@ -36,14 +33,14 @@ label recess1a:
                             return
                         else:
                             wil "\"In fact, I should probably unfriend you for being such an un-fortian monster\""
-                            call wilfriendshiploss from _recess1atalktowilyangyoufkdup
+                            call wilfriendshiploss from _lunch1atalktowilyangyoufkdup
                             wil "\"But I shall ignore that interruption and return to the topic at hand\""
                             return
                         wil "\"You do raise an interesting and compelling point...\""
                         wil "\"Hypothetically...\""
                         wil "\"It is an uncharacteristically intelligent suggestion\""
                         sze "\"...\""
-                        call intelgain from _recess1aintelgainfrombeingintelligent
+                        call intelgain from _lunch1aintelgainfrombeingintelligent
                         sze "\"Why is senpai always so cruel?\""
                         return
                     else:
@@ -326,62 +323,62 @@ label recess1a:
     elif _return == 2:
         "Kilgour"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 3:
         "R Quad"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 4:
         "Library"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 5:
         "Gym"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 6:
         "Canteen"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 7:
         "Valley"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 8:
         "Oval"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 9:
         "Curry courts"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 10:
         "Basketball Courts"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 11:
         "Carpark"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 12:
         "Fort Street"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 13:
         "Bridge"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 14:
         "A random blob of green, popular with \romantic\" twinkies and other unimportant people"
@@ -393,7 +390,7 @@ label recess1a:
         "Wilkins"
         "You ceebs walk that far though"
         "Even though that is right next to the Hall, sorta"
-        jump recess1a
+        jump luncha
 
     elif _return == 16:
         "Fountain Quad"
@@ -405,24 +402,24 @@ label recess1a:
     elif _return == 17:
         "Cohen"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 18:
         "Hall"
         "Why are you even staying here? Asszembly has ended"
-        jump recess1a
+        jump luncha
 
     elif _return == 19:
         "Lower Kilgour Quad"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 20:
         "Lower Kilgour"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha
 
     elif _return == 21:
         "Upper Kilgour Quad"
         "You ceebs walk that far though"
-        jump recess1a
+        jump luncha

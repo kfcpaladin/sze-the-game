@@ -43,6 +43,7 @@ label start:
     $ quest1electionpromise1 = False
     $ discovernorton = False
     $ quest2jintiandeliveryservicecofounder = False
+    $ metderek = False
     scene black
     with fade
     scene bg intro

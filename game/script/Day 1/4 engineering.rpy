@@ -85,7 +85,7 @@ label eng1p1:
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
-            
+
 label eng1p1naughtycorner:
     scene bg workshop
     hide grant normal
@@ -179,7 +179,7 @@ label eng1p1naughtycorner:
                         call dead from _eng1p1naughtycornertimetravelcount4
                         $ intelligence += 9
                         jump eng1p1naughtycorner
-                    elif timetravelcount >= 3:    
+                    elif timetravelcount >= 3:
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"
                         "But in the distance you hear a voice calling to you"
@@ -231,7 +231,7 @@ label eng1p1naughtycorner:
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
             jump asszembly1
-            
+
 label timetravel1:
     hide grant normal
     scene black
@@ -252,7 +252,7 @@ label eng1p1p1:
     wil "\"Although it would be interesting if we could replace Moxham with a student...\""
     sze "\"lol Dean?\""
     jump eng1p1p3
-    
+
 label eng1p1p2:
     # answers wrong
     show yang normal
@@ -267,7 +267,7 @@ label eng1p1p2:
     sze "\"You are weird\""
     sze "\"I think sir is trying to say something\""
     jump eng1p2
-    
+
 label eng1p1p3:
     #doesnt talk
     show yang normal
@@ -293,10 +293,10 @@ label yangrantp1_1:
     sze "\"...\""
     wil "\"I kid, let's continue learning planes\""
     jump eng1p2
-    
+
 label yangrantp1_2:
     sze "\"Heil Moxham!\""
-    wil "The leader of {s}my Sturmabeteilung{/s} the SRC and P&C is deserving of praise, especially in regards to the art of special methods of investigating\""     
+    wil "\"The leader of {s}my Sturmabeteilung{/s} the SRC and P&C is deserving of praise, especially in regards to the art of special methods of investigating\""
     sze "\"Lol, since when did you have a hard on for our principal...?{nw}\""
     wil "\"Silence\""
     wil "\"We must learn to blend in so that we may takeover the SRC/P&C and bring the 4th Reich into fruition\""
@@ -346,7 +346,7 @@ label yangrantp1_2:
                 wil "\"Be quite now, I need to learn how to jet engine for strategic bomber development\""
                 jump eng1p2
     # Note to self: include refined interrogation techniques later on
-    
+
 label yangrantp1_3:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
@@ -354,7 +354,7 @@ label yangrantp1_3:
     wil "\"But all this talking is distracting me from my true joy, ENGINEERING!!\""
     wil "\"So without further ado let us learn more engineering\""
     jump eng1p2
-    
+
 label eng1p2:
     show grant normal
     gra "\"AAAHH, MINGLE!!\"" with hpunch
@@ -409,18 +409,19 @@ label eng1p2:
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
                 "Don't open door":
-                    "*Knock *knock\"" 
+                    "*Knock *knock\""
                     sze "\"...\""
                     sze "\"szeebs\""
                     dea "\"I'll get it\""
                     "Sudden movement catches your peripheral vision"
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
+                    call intelgain from _eng1p2youwereadicktodean
                     stop music
                     play music "RaxlenSliceBG8bit.mp3"
                     dik "\"Sorry, you had your back to me...\""
                     dik "\"Message for Mr. Grant\""
-                    "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..." 
+                    "Richard {s}is a dick{/s} is a quick-witted {s}bastard{/s} gentleman; etiquette and pron{s}o{/s}unciation are important to him..."
                     "Richard left leaving Dean cowering on the ground moaning in an unhealthy "
                     stop music
                     dea "\"...fuck u arthur, ur a coward\""
@@ -474,7 +475,7 @@ label eng1p2:
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
                 "Don't open door":
-                    "*Knock *knock\"" 
+                    "*Knock *knock\""
                     sze "\"...\""
                     sze "\"szeebs\""
                     dea "\"I'll get it\""

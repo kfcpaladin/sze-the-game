@@ -29,20 +29,26 @@ label recess1a:
                             wil "\"But since you have proven your worth\""
                             wil "\"Indeed, I do. I foresee that Moxham will have outlived her usefulness by {nw}\""
                             wil "\"Ahem\""
+                            wil "\"You do raise an interesting and compelling point...\""
+                            wil "\"Hypothetically...\""
+                            wil "\"It is an uncharacteristically intelligent suggestion\""
+                            sze "\"...\""
                             wil "\"But I digress\""
-                            return
+                            call intelgain from _recess1aintelgainfrombeingintelligent
+                            sze "\"Why is senpai always so cruel?\""
+                            wil "\"Quiet, I have just developed brilliant plan\""
+                            wil "\"I may require a certain someone to snoop around and try to infiltrate this secret society, this Illuminati\""
+# the illuminati is a council of halfies, who have infiltrated almost all the groups in the grade, besides one or two (one of which is Rowe)
+                            sze "\"...me?\""
+                            wil "\"Perhaps\""
+                            wil "\"Anyhow, enough of this for now\""
+                            wil "\"I do believe we have English\""
+                            jump english1
                         else:
                             wil "\"In fact, I should probably unfriend you for being such an un-fortian monster\""
                             call wilfriendshiploss from _recess1atalktowilyangyoufkdup
-                            wil "\"But I shall ignore that interruption and return to the topic at hand\""
-                            return
-                        wil "\"You do raise an interesting and compelling point...\""
-                        wil "\"Hypothetically...\""
-                        wil "\"It is an uncharacteristically intelligent suggestion\""
-                        sze "\"...\""
-                        call intelgain from _recess1aintelgainfrombeingintelligent
-                        sze "\"Why is senpai always so cruel?\""
-                        return
+                            wil "\"But I shall ignore that interruption and think on this later\""
+                            jump english1
                     else:
                         wil "\"Very well, I have a brilliant plan\""
                         wil "\"I may require a certain someone to snoop around and try to infiltrate this secret society, this Illuminati\""

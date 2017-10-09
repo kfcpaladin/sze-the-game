@@ -63,7 +63,7 @@ label asszemblyjigolo1_2:
             sze "\"...yea...is ok, i guess\""
             call jitfriendshipgain from _asszemblyjigolo1_2gazzafriendshipgaingaywanker
             jump asszemblyjigolo1_3
-        
+
         "Study":
             sze "\"No ty, I need to study for HSC\""
             jit "\"Relax it's still the first day of year 11\""
@@ -78,7 +78,7 @@ label asszemblyjigolo1_2:
             jit "\"Whoa ok chill calm down\""
             jit "\"Don't need to be that try hard\""
             jump asszemblyjigolo1_3
-        
+
         "Talk to Gary" if quest1electionpromise is True:
             sze "\"Actually, I wanted to ask you something\""
             jit "\"Eh? I'm watching my pronz tho\""
@@ -86,7 +86,7 @@ label asszemblyjigolo1_2:
             jit "\"Yeah, what is it?\""
             sze "\"For some reason...Will Yang wants Pragash to run for SRC\""
             jit "\"lol that would be funny, considering how they kicked him off\""
-            jit "\"But idk man, these days, Yang always has an agenda...seems kinda shifty to me...\"" 
+            jit "\"But idk man, these days, Yang always has an agenda...seems kinda shifty to me...\""
             "The thought never occurred to you but Gary's warning has made you more alert...ish"
             call strengthgain from _asszemblyjigolo1_2callstrengthgainwarning
             sze "\"I'll leave you to your hentai then\""
@@ -143,7 +143,7 @@ label asszemblyjigolo1_3:
 # need scene change {reminder}
             "You finally arrive at the Fountain quad in front of the school hall and wait for asszembly to end"
             jump asszembly1shitstorm
-# check mox counter, if >=1 = suspension, if <1 = detention after school 
+# check mox counter, if >=1 = suspension, if <1 = detention after school
         "Don't look just run" if intelligence >=3:
             sze "\"Wait...\""
             jit "\"?...\""
@@ -157,14 +157,14 @@ label asszemblyjigolo1_3:
             "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
             scene bg schoolfront
             with fade
-            jump fugitivesfromasszembly1            
+            jump fugitivesfromasszembly1
 
         "Go look":
             sze "\"Fine\""
             sze "Climbing stairs is pretty shitty"
             sze "\"!\""
             jump asszembly1shitstorm
-            
+
         "Dog the bois":
             sze "\"Fuck this shit, I'm out!\""
             jit "\"Oi, you can't just leave\""
@@ -177,7 +177,7 @@ label asszemblyjigolo1_3:
             sze "\"idk, eff this, I'm out\""
             "You turn your head, seeing the chaos of a patrol of teachers hunting down the hopeless students of Rowe\""
             jump fugitivesfromasszembly1
-            
+
 label fugitivesfromasszembly1:
             jit "\"Whew...Sze let's go, find somewhere to hide\""
             sze "\"k, you lead the way\""
@@ -197,7 +197,7 @@ label fugitivesfromasszembly1:
                     call asszemblyjigolo1encounter
                     jit "\"That was too fucking close\""
                     jump asszemblyjigolokindagaytoilet
-                    
+
                 "\"Outside the school\"":
 # scene change - norton st
                     sze "\"Let's just go outside school\""
@@ -208,7 +208,7 @@ label fugitivesfromasszembly1:
                     jit "\"You lead, then\""
                     call asszemblyjigolo1encounter
                     jump asszemblyjigolodiscoverthefood
-                    
+
                 "\"Play with vices\"":
 # scene change - darkened workshop
                     sze "\"{s}I wanna play with vices{/s} Let's go to a classroom, like the engineering workshop\""
@@ -243,9 +243,9 @@ label asszemblyjigolo1encounter:
             jit "\"Well, fuck\""
             call jitfriendshiploss from asszembly1szeebsrunningdoggedjitian
             jit "\"Cya, I ain't staying around for the teachers to catch up\""
-            sze "\"...\""            
+            sze "\"...\""
             jump asszembly1shitstorm
-        
+
         "\"Run\"":
             sze "\"I am a human being\""
             sze "\"capable of doing terrible things\""
@@ -269,7 +269,7 @@ label asszemblyjigolo1encounter:
                     jit "\"Well, fuck\""
                     call jitfriendshiploss from asszembly1szeebsrunningdoggedjitian
                     jit "\"Cya, I ain't staying around for the teachers to catch up\""
-                    sze "\"...\""            
+                    sze "\"...\""
                     jump asszembly1shitstorm
                 "\"Stand our ground\"":
                     jit "\"Shit, I'm out of here\""
@@ -280,14 +280,14 @@ label asszemblyjigolo1encounter:
                     sze "\"Today we stand our ground\""
                     jit "\"Mate, are you fucking munted? We're gonna get rekt- {nw}\""
                     sze "\"I see in your eyes the same fear that would take the heart of me\""
-                    jit "\"Fuk off, I don't want to get sued for copying Aragorn on top of getting caught by Moxham's cronies\"" 
+                    jit "\"Fuk off, I don't want to get sued for copying Aragorn on top of getting caught by Moxham's cronies\""
                     if intelligence >=4:
                         sze "\"If we fight good, we won't get caught\""
                         sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
-                        jit "\"Let's fight then!!\"" with hpunch  
+                        jit "\"Let's fight then!!\"" with hpunch
                         $ random1to6jig1fight1a = renpy.random.randint(0, 6)
-                        $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship)) 
+                        $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship))
                         if jig1fight1a > 12:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
@@ -303,7 +303,7 @@ label asszemblyjigolo1encounter:
                             bil "\"Relax, I offer my cleaning services to all who require it, unless you're talking about the school toilets cos those are complicated.\""
                             bil "\"And I see that you are in need of such services\""
                             sze "\"Ok...but is there a catch, cos otherwise I ceebs?\""
-                            bil "\"Normally there is a fee, but current Fortians receive a 100% student discount\""
+                            bil "\"Normally there is a fee, but current Fortians receive a 100 percent student discount\""
                             jit "\"Still kinda too expensive though, considering we did the school a service\""
                             "Bill the Cleaner begins to get to work on the unconscious teachers, injecting them with an unknown substance"
                             menu:
@@ -335,13 +335,13 @@ label asszemblyjigolo1encounter:
                             "But since the scripter couldn't be bothered finishing this part right now, you automatically lose"
                             "\"{b}RIP, bad luck for you and your buddy, kiddo {/b}\""
                             jump asszembly1shitstorm
-                        
+
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO!\""
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
                         $ random1to6jig1fight1b = renpy.random.randint(0, 6)
-                        $ jig1fight1b = (int(random1to6jig1fight1b) + int(strength)*2 + int(intelligence)) 
+                        $ jig1fight1b = (int(random1to6jig1fight1b) + int(strength)*2 + int(intelligence))
                         if jig1fight1b > 12:
                             "Picking up a stick, you steel yourself as the teachers charge"
                             "jabby jabby"
@@ -363,8 +363,8 @@ label asszemblyjigolo1encounter:
                             jit "\"awww hell no...\""
                             sze "Resistance is futile, best to follow them"
                             jump asszembly1shitstorm
-                    
-# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in... 
+
+# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in...
                 "\"Fight\"":
                     sze "\"Let's fight\""
                     jit "\"wut\""

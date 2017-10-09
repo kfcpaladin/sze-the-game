@@ -53,13 +53,13 @@ label asszembly1:
         wil "\"It is the greatest subject to have ever existed\""
         pra "\"...You will never understand\""
         jump asszembly1p1
-        
+
 label asszembly1p1:
     dea "\"Hey guys, looking forward to assembly?\""
     wil "\"It would be un-Fortian to skip it\""
     pra "\"I hear Gary might be...\""
     "The conversation gets you thinking about your options..."
-    #wil fuck you derek lol totes 
+    #wil fuck you derek lol totes
     #wow calm down wil, plus I wrote it not derk ;)
     menu:
         "\"I need to put some stuff in my locker\"":
@@ -166,7 +166,7 @@ label asszembly1_2:
         pra "\"No, fuck off...\""
         "You feel it best not to intervene" with hpunch
         "Despite Pragash's attempts to positively assert himself, the whites call him out for not accepting non-heterosexual practices"
-        "They must've really hated him being on the Student Representative Council..."
+        sze "They must've really hated him being on the Student Representative Council..."
         cha "\"Let's go in\""
         pra "\"...Nooo...not again\""
         cha "\"I meant the hall...\""
@@ -175,6 +175,8 @@ label asszembly1_2:
 label asszembly1_3:
     scene bg hall
     with fade
+    stop music
+    play music "EscortsGaudeamusDooWop.mp3" loop
     "Gaudeamus igitur...something something...venit mors velociter, rapit nos atrociter..."
     mox "\"I would like to acknowledge the traditional owners of the land...\""
     sze "Wow, this is boring"
@@ -184,6 +186,8 @@ label asszembly1_3:
             sze "\"{i}I dream {/i}\""
             scene bg schoolfront
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
+            stop music
+            play music "p4Traumerei.mp3" loop
             sze "I still remember the day I first met her"
             sze "It was the first school day of 2011, and I had just entered my dream high school, Fort Street High School"
             sze "\"I can't wait for a diligent 6 years of study, and to hopefully get an high ATAR and become a lawyer/doctor in USYD\""
@@ -210,6 +214,8 @@ label asszembly1_3:
             call dailymoxcounter
             call fortianloss from _fortlossasszembly1sleep
             mox "\"Maybe a stint in detention will help you regain you Fortian Pride\""
+            stop music
+            play music "EscortsGaudeamusDooWop.mp3" loop
             mox "\"Continuing on from that distraction, let us think back to when Year of 1935 topped the HSC. I believe our current year has the potential to top James Ruse in both exit profile and academics\""
             "You hear Richard cough loudly"
             jump asszembly1_4
@@ -223,7 +229,7 @@ label asszembly1_3:
                 call thirstgain from _asszembly1_3callthirstgain
                 drk "\"wtf, are u drooling Arthur?\""
                 "You notice Derek for the first time this year"
-                sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"  
+                sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"
                 sze "shit, I need to make a convincing lie or something"
                 $ metderek = True
                 menu:
@@ -318,7 +324,7 @@ label asszembly1_3:
                             call charmloss from _asszembly1_3callcharmlosslol
                             "You spend the next few minutes insisting that you weren't drooling"
                             jump asszembly1_4
-                        
+
         "Pay attention":
             "30 minutes later"
             mox "\"Michael Kirby is great, let us worship Michael Kirby\""
@@ -373,10 +379,10 @@ label quest1electionpromise1_a:
                 "You should relay this news to William Yang - he is currently engaged in conversation with his hand"
                 "You engage in mindless conversation with Richard, Derek and Pragash"
                 return
-                
+
 label asszembly1_4:
     mox "\"It's ok if half the previous year's Year 12 got band 3, Fortians are the epitome of social justice and exit profile\""
-    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo. There is more to high school than ATAR\""
+    mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.' There is more to high school than ATAR\""
     "20 minutes later"
     sze "\"Well that was fucking useless\""
     call fortiangain from _asszembly1_3fortiangain

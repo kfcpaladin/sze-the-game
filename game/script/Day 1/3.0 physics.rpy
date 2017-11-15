@@ -71,6 +71,7 @@ label phys1answered_a:
     cha "\"...\"" with vpunch
     cha "\"For teh watch\""
     hide chao normal
+    cha "\"Wow, your watch is crap, that wasn't worth the effort\""
     with fade
     call dead from _phys1answered_a1
     jump phys1answered

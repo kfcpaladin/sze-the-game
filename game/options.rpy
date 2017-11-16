@@ -165,17 +165,17 @@ init -1 python hide:
 
     ## Sounds that are used when button and imagemaps are clicked.
 
-    style.button.activate_sound = "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
-    style.imagemap.activate_sound = "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    style.button.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    style.imagemap.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
 
     ## Sounds that are used when entering and exiting the game menu.
 
-    config.enter_sound = "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
-    config.exit_sound = "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    config.enter_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    config.exit_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
 
     ## A sample sound that can be played to check the sound volume.
 
-    config.sample_sound = "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    config.sample_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
 
     ## Music that is played while the user is at the main menu.
 

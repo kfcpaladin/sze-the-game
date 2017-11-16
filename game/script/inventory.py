@@ -5,6 +5,7 @@ init -1 python:
 
     inv_page = 0 # initial page of teh inventory screen
     item = None
+    # i believe this is defining the player
     class Player(renpy.store.object):
         def __init__(self, name, max_hp=0, max_mp=0, element=None):
             self.name=name
@@ -14,7 +15,7 @@ init -1 python:
             self.mp=max_mp
             self.element=element
     player = Player("Sze", 100, 50)
-    
+    # defining an object
     class Item(store.object):
         def __init__(self, name, player=None, hp=0, mp=0, element="", image="", cost=0):
             self.name = name
@@ -37,7 +38,7 @@ init -1 python:
                 inventory.drop(self) # consumable item - drop after use
             else:
                 player.element=self.element #item to change elemental damage; we don't drop it, since it's not a consumable item
-
+    # defining inventory
     class Inventory(store.object):
         def __init__(self, money=10):
             self.money = money
@@ -87,7 +88,7 @@ init -1 python:
             # ui.text(inventory_show, color="#000")
     # config.overlay_functions.append(display_items_overlay)
     
-        
+# screens        
 screen inventory_button:
     textbutton "Show Inventory" action [ Show("inventory_screen"), Hide("inventory_button")] align (.95,.04)
             

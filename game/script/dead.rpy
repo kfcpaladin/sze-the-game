@@ -1,5 +1,7 @@
 label dead:
     scene black
+    stop music
+    play music "SFX/game_over.mp3" noloop
     sze "I dead"
     menu:
         "Return to Last Choice":
@@ -13,11 +15,15 @@ label dead:
 
 label deadrestart:
     scene bg ded
+    stop music
+    play music "SFX/game_over.mp3" noloop
     sze "I dead"
     jump start
     
 label actualded:
     scene black
+    stop music
+    play music "SFX/game_over.mp3" noloop
     sze "I dead"
     return
 

@@ -1,7 +1,7 @@
 # first english class testing
 label english1:
-    "It's that time of the day, you know you want to die before you reach them doorsteps..."
-    "Of W23, the lair of the Schlam dunk, a smaller sub-species of the English teachers race not often seen because of its weakness to deodorant."
+    "You arrive at {s}base camp{/s} ground floor of Wilkins"
+    "You look up at the stairs, into the gaping maws of the infinite abyss"
     menu:
         "Fuck this im out":
             "You leave, but feel a prescence behind you."

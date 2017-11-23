@@ -2,12 +2,10 @@
 label english1:
     "You arrive at {s}base camp{/s} ground floor of Wilkins"
     "You look up at the stairs, into the gaping maws of the infinite abyss"
+    sze "Am I even bothered enough for this?"
     menu:
-        "Fuck this im out":
-            "You leave, but feel a prescence behind you."
-            "You turn around..."
-            "It's Shakespeare's ghost."
-            sze "\"Well fuck\""
+        "Fuck this shit, I'm out":
+            sze "ded"
             jump dead
         "Actually I need to pass":
             "Captian's report, {s}February 4th, 2531{/s} first day of year 11"

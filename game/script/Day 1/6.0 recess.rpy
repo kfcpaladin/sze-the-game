@@ -280,8 +280,15 @@ label recess1a:
                                     jump english1
     elif _return == 2:
         "Kilgour"
-        "You ceebs walk that far though"
-        jump recess1a
+        "You decide to go to Kilgour"
+        "Do you want to visit lockers?"
+        menu:
+            "Yes":
+                show screen locker_screen
+                sze "\"Fuck the developers they suck, can't even do a locker, fuck you dean\""
+            "No":
+                sze "\"I can't stay here long, the Lauren squad will destroy me, fuck you dean\""
+        jump english1
 
     elif _return == 3:
         "R Quad"
@@ -290,7 +297,7 @@ label recess1a:
 
     elif _return == 4:
         "Library"
-        "You ceebs walk that far though"
+        "You must be the dragonborn to slay the dragonlady to enter this dungeon"
         jump recess1a
 
     elif _return == 5:
@@ -339,6 +346,7 @@ label recess1a:
         jump recess1a
 
     elif _return == 14:
+        "Garden"
         "A random blob of green, popular with \romantic\" twinkies and other unimportant people"
         "You loiter there pointlessly"
         "Recess is over, time for next class"

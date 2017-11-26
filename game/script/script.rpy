@@ -2,19 +2,19 @@
 
 label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
-    $ allowedareas = {"lkilgour", "uquad", "lquad", "hall", "cohen", "quad", "wilkins", "place", "bridge", "fortstreet", "carpark", "bcourts", "currycourts", "oval", "valley", "food", "gym", "library", "rquad", "kilgour", "rowe"}
+    $ allowedareas = {"lkilgour", "uquad", "lquad", "hall", "cohen", "quad", "wilkins", "garden", "bridge", "fortstreet", "carpark", "bcourts", "currycourts", "oval", "valley", "food", "gym", "library", "rquad", "kilgour", "rowe"}
     $ kahootpoints = 0
     $ timer_range = 0
     $ timer_jump = 0
-    $ intelligence = 0
     $ moxcounter1 = 0
     $ moxcounter2 = 0
+    $ intelligence = 0
     $ charm = 0
     $ strength = 0
-    $ strengthtutorial = False
-    $ inteltutorial = False
     $ thirst = 0
     $ fort = 0
+    $ strengthtutorial = False
+    $ inteltutorial = False
     $ friendshiptutorial = False
     $ charmtutorial = False
     $ thirsttutorial = False
@@ -37,17 +37,25 @@ label start:
     $ butfriendship = 0
     $ dngfriendship = 0
     $ timetravelcount = 0
+    $ metderek = False
     $ phys1p3p1chaopissed = False
     $ yangrant1_2eingutidee = False
     $ quest1electionpromise = False
     $ quest1electionpromise1 = False
     $ discovernorton = False
     $ quest2jintiandeliveryservicecofounder = False
+    
+
+    $ inventory = Inventory("Bag", 10)
+    $ inventory.add("ball", 1)
+    $ inventory.add("axe", 1)
+    $ inventory.add("monies", 1)
     scene black
     with fade
     scene bg intro
     with fade
     pause
+    show screen bag_button
     # remove this these things to enable music later
     play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.mp3"
     scene black

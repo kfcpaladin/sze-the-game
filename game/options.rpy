@@ -74,6 +74,7 @@ init -1 python hide:
         ## should take up the full height and width of the screen.
         gm_root = "#eedfcc",
 
+        ## eedfcc
         ## And we're done with the theme. The theme will customize
         ## various styles, so if we want to change them, we should
         ## do so below.
@@ -166,7 +167,7 @@ init -1 python hide:
     ## Sounds that are used when button and imagemaps are clicked.
 
     style.button.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
-    style.imagemap.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    #style.imagemap.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
 
     ## Sounds that are used when entering and exiting the game menu.
 

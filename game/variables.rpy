@@ -707,7 +707,7 @@ label strengthgain:
         "Your combat propensity has increased and can be improved by getting good. Currently you aren't very good."
         $ strengthtutorial = True
         return
-    
+
 label dailymoxcounter:
     $ moxcounter2 += 1
     $ moxcounter1 += 1

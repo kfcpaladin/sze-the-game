@@ -591,7 +591,7 @@ screen kms():
             yalign .5
             spacing 30
 
-        label _('Kill myself'):
+        label _('Kill myself?'):
             xalign 0.5
 
         hbox:
@@ -613,16 +613,25 @@ init -2:
         layout "subtitle"
 
 ###########################################################################
-screen statsscreen:
+screen statsscreen():
+
     tag menu
+
     # Include the navigation.
     use navigation
-    grid 2 1:
+    
+    #columns in a three-wide grid
+    grid 3 1:
         style_group "prefs"
         xfill True
+        
+        #left column
         vbox:
             frame:
+                style_group "pref"
                 has vbox
+
+                label _("Your stats")
                 text "intelligence: [intelligence] points"
                 if intelligence > 100:
                     text "You have surpassed even Justin Wu, dux of James Ruse"
@@ -731,7 +740,10 @@ screen statsscreen:
 
         vbox:
             frame:
+                style_group "pref"
                 has vbox
+
+                label _("Friendship is magic")
                 text "Serena: [rinfriendship] points"
                 text "Willis: [kokfriendship] points"
                 text "Fluitsma: [flufriendship] points"
@@ -750,6 +762,13 @@ screen statsscreen:
                 text "Aradhya: [butfriendship] points"
                 text "Steven: [dngfriendship] points"
 
+        vbox:
+            frame:
+                style_group "pref"
+                has vbox
+
+                text "Slay the demon"
+
 #########################################################################################################################
 #timer bar
 
@@ -761,9 +780,16 @@ transform alpha_dissolve:
     # This is to fade the bar in and out, and is only required once in your script
 
 screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 600 at alpha_dissolve # This is the timer bar.
-    
+    timer 1 repeat True action If(time > 0, true=SetVariable('time', time - 1), false=[Hide('countdown'), Jump(timer_jump)])
+     # This is the timer bar.
+     #timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+
+    if time <= 5:
+        #bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 600
+        text str(time) xpos .9 ypos .5 color "#FF0000"
+    else:
+        #bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 600 at alpha_dissolve
+        text str(time) xpos .9 ypos .5 at alpha_dissolve
     
 ########################################################################################################################
 screen fortmap: #Preparing the imagemap
@@ -797,7 +823,7 @@ screen fortmap: #Preparing the imagemap
             hotspot (890, 475, 72, 207) clicked Return(12)
         if "bridge" in allowedareas:
             hotspot (1225, 325, 126, 60) clicked Return(13)
-        if "place" in allowedareas:
+        if "garden" in allowedareas:
             hotspot (1080, 240, 108, 119) clicked Return(14)
         if "wilkins" in allowedareas:
             hotspot (966, 273, 95, 77) clicked Return(15)
@@ -813,3 +839,109 @@ screen fortmap: #Preparing the imagemap
             hotspot (660, 225, 117, 67) clicked Return(20)
         if "uqad" in allowedareas:
             hotspot (890, 220, 108, 56) clicked Return(21)
+
+########################################################################################################################
+# initialising inventory data structures
+
+# player 
+
+
+# objects in inventory = Items
+init python:
+    class Item(object):
+        def __init__(self, name, amount, stat):
+            self.name = name # name of item
+            self.amount = amount
+            self.stat = stat
+            #more things about item
+        # def use(self): # what happens when you use item
+            
+
+# inventory itself
+init python:
+    class Inventory(object):
+        def __init__(self, name, max_items):
+            self.inv = []  # initialise list to store items, first in is top of list
+            self.name = name #name of inventory i.e. locker or bag
+            self.max_items = max_items # maximum items it can hold, bag = 6, locker = infinte
+            # sorts
+            self.sort_by = self.sort_name #alphabetical
+            self.sort_order = True #ascending, descending
+            self.grid_view = True #grid or list
+        
+        def add(self, item, amount): #add an item +1
+            self.inv.append(item)
+            return ('success')
+        
+        def remove(self, item, amount=1): #remove an item -1
+            self.inv.remove(item)
+            return ('success')
+        
+        # sorts, figure out later
+        def sort_name(self):
+            self.inv.sort(key=lambda i: i[0].name, reverse=self.sort_order)
+            
+        def sort_qty(self):
+            self.inv.sort(key=lambda i: i[1], reverse=self.sort_order)
+                      
+        def sort_value(self):
+            self.inv.sort(key=lambda i: i[0].value, reverse=self.sort_order)
+
+############################## inventory screens ##############################################
+screen bag_button:
+    textbutton "Open Bag" action [ Show("bag_screen"), Hide("bag_button")] align (0.95, 0.04)
+
+screen bag_screen:
+    modal True
+    textbutton "Close Bag" action [ Hide("bag_screen"), Show("bag_button")] align (0.95, 0.04)
+    frame:
+        style_group "bagstyle"
+        hbox:
+            spacing 25
+            vbox:
+                align (0.1, 0.3)
+                spacing 25
+                
+                text "Bag:"
+                for item in inventory.inv:
+                    text ("[item]")
+
+screen locker_screen:
+    modal True
+    textbutton "Close Locker" action [ Hide("locker_screen")] align (0.5, 0.04)
+    frame:
+        style_group "lockstyle"
+        vbox:
+            align (0.1, 0.3)
+            spacing 25
+            
+            text "Bag:"
+            for item in inventory.inv:
+                text ("[item]")
+
+init -2: 
+    ## STYLES ##
+    # bag
+    style bagstyle_frame:
+        xalign 0.05
+        yalign 0.3
+    style bagstyle_label_text:
+        size 30
+    style bagstyle_label:
+        xalign 0.5
+    # lockers
+    style lockstyle_frame:
+        xalign 0.5
+        yalign 0.5
+    style lockstyle_label_text:
+        size 30
+    style lockstyle_label:
+        xalign 0.5  
+    style lockstyle_frame:
+        xalign 0.5
+        yalign 0.5
+    # quests
+    style queststyle_label_text:
+        size 30    
+    style queststyle_label:
+        xalign 0.5  

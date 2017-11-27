@@ -115,7 +115,7 @@ label asszembly1_2:
         call intelloss from _asszembly1_2chaopisssedintelloss1
         cha "\"Fuck your head? Ok\"" with hpunch
         sze "\"Nooo, raep, raep\""
-        if dikfriendship > 0:
+        if dik.friendship > 0:
             stop music
             play music "RaxlenSliceBG8bit.mp3"
             dik "\"Oi, fat ass, pick on people your own size, like Gabe Newell\""
@@ -136,7 +136,7 @@ label asszembly1_2:
             "You observed how to some combat technique"
             call strengthgain from __asszembly1_2chaopisssedstrengthgain
             jump asszembly1_3
-        elif dikfriendship < 1:
+        elif dik.friendship < 1:
             cha "\"I go full frontal\"" with vpunch
             call intelloss from _asszembly1_2chaopisssedintelloss2
             sze "\"Aaah, plz stop\""

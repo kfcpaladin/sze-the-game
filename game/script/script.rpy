@@ -45,11 +45,19 @@ label start:
     $ discovernorton = False
     $ quest2jintiandeliveryservicecofounder = False
     
-
+    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
+    $ axe = Item("axe", "weaponz", "strength", "images/axe.png")
+    $ money = Item("monies", "cash monies wads", "charisma", "images/bag.png")
+    $ fireaxe = Item("fireaxe", "weaponz", "strength", "images/axe.png")
+    $ calc = Item("calculator", "smarts + 1", "smart", "images/calc1.png")
     $ inventory = Inventory("Bag", 10)
-    $ inventory.add("ball", 1)
-    $ inventory.add("axe", 1)
-    $ inventory.add("monies", 1)
+    #$ inventory = Inventory("Locker", 10)
+    $ inventory.add(ball, 1)
+    $ inventory.add(axe, 1)
+    $ inventory.add(money, 1)
+    $ inventory.add(money, 1)
+    $ inventory.add(fireaxe, 1)
+    $ inventory.add(calc, 1)
     scene black
     with fade
     scene bg intro

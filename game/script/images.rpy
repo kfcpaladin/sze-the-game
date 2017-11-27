@@ -19,6 +19,8 @@ image bg norton = "NortonSt.png"
 image bg toilet = "toilet.png"
 image bg d_workshop = "Workshopdark.jpg"
 image bg dreamtree = "dreamtree"
+image bg econclass = "econclass"
+image bg time = "time"
 
 #not sure if that's legit spelling, plz check
 style window:
@@ -43,3 +45,5 @@ image side dean = "deanside.png"
 image side chao = "chaoport.png"
 image le calculetor = "calculetor.png"
 image side le = "lecalc.png"
+image side richard = "rick.png"
+image side roy = "RRRROOOOOOOYYYYYYYYYboi.png"

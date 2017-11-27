@@ -549,8 +549,9 @@ class ADVCharacter(object):
         self,
         name=NotSet,
         kind=None,
+		friendship=0,
         **properties):
-
+        self.friendship = friendship
         if kind is None:
             kind = renpy.store.adv
 
@@ -578,10 +579,8 @@ class ADVCharacter(object):
         self.who_suffix = v('who_suffix')
         self.what_prefix = v('what_prefix')
         self.what_suffix = v('what_suffix')
-
         self.show_function = v('show_function')
         self.predict_function = v('predict_function')
-
         self.condition = v('condition')
         self.dynamic = v('dynamic')
         self.screen = v('screen')
@@ -893,7 +892,7 @@ class ADVCharacter(object):
         return self.display_args['interact']
 
 
-def Character(name=NotSet, kind=None, **properties):
+def Character(name=NotSet, kind=None, friendship=0, **properties):
     """
     :doc: character
     :args: (name, kind=adv, **args)
@@ -1061,9 +1060,9 @@ def Character(name=NotSet, kind=None, **properties):
     if kind is None:
         kind = renpy.store.adv
 
-    return type(kind)(name, kind=kind, **properties)
+    return type(kind)(name, kind=kind, friendship=friendship, **properties)
 
 
 def DynamicCharacter(name_expr, **properties):
-    return Character(name_expr, dynamic=True, **properties)
+    return Character(name_expr, dynamic=True, friendship=friendship, **properties)
 

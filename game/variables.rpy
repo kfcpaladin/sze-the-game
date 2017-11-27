@@ -7,7 +7,7 @@ label tutorialfriendship:
     return
 
 label rusfriendshipgain:
-    $ rusfriendship += 1
+    $ rus.friendship += 1
     "You're Rusali's best friend. Not really, you have to be a girl but your friendship with him is currently at [rusfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -16,7 +16,7 @@ label rusfriendshipgain:
         return
     
 label rusfriendshiploss:
-    $ rusfriendship -= 1
+    $ rus.friendship -= 1
     "You dogged Rusali, thus your friendship level with him is currently at [rusfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -25,7 +25,7 @@ label rusfriendshiploss:
         return
         
 label kokfriendshipgain:
-    $ kokfriendship += 1
+    $ kok.friendship += 1
     "You have strategically gained friendship with Willis, hoping that he will divulge secrets to slaying Serena.
     It is currently at [kokfriendship]"
     if friendshiptutorial is False:
@@ -35,7 +35,7 @@ label kokfriendshipgain:
         return
         
 label kokfriendshiploss:
-    $ kokfriendship -= 1
+    $ kok.friendship -= 1
     "Fuck Willis. \"Friendship\" is currently at [kokfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -44,7 +44,7 @@ label kokfriendshiploss:
         return
         
 label wilfriendshipgain:
-    $ wilfriendship += 1
+    $ wil.friendship += 1
     "You have further proved to Yang that you belong in his 4th Reich, friendship is currently at [wilfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -53,7 +53,7 @@ label wilfriendshipgain:
         return
         
 label wilfriendshiploss:
-    $ wilfriendship -= 1
+    $ wil.friendship -= 1
     "Ur a fcktard and will, at this rate, fail Yang's eugenics program. Friendship with him is currently at [wilfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -62,7 +62,7 @@ label wilfriendshiploss:
         return
         
 label chafriendshipgain:
-    $ chafriendship += 1
+    $ cha.friendship += 1
     "If you were a LG, you would be one of Chao's gfs. Friendship with Chao is currently at [chafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -71,7 +71,7 @@ label chafriendshipgain:
         return
         
 label chafriendshiploss:
-    $ chafriendship -= 1
+    $ cha.friendship -= 1
     "You almost made Chao raep you, friendship with Chao is currently at [chafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -80,7 +80,7 @@ label chafriendshiploss:
         return
         
 label prafriendshipgain:
-    $ prafriendship += 1
+    $ pra.friendship += 1
     "If you continue this way, maybe Dynamite Black might mention you in a future song, as friendship with Pragash is currently at [prafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -89,7 +89,7 @@ label prafriendshipgain:
         return
     
 label prafriendshiploss:
-    $ prafriendship -= 1
+    $ pra.friendship -= 1
     "You weren't very cricket to Pragash, reducing your friendship with him to [prafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -98,7 +98,7 @@ label prafriendshiploss:
         return
     
 label deafriendshipgain:
-    $ deafriendship += 1
+    $ dea.friendship += 1
     "You have Arbitrarily become more Masterchief to Dean, causing your friendship with Dean to increase to [deafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -107,7 +107,7 @@ label deafriendshipgain:
         return
         
 label deafriendshiploss:
-    $ deafriendship -= 1
+    $ dea.friendship -= 1
     "You must've confused Masterchief with Masterchef cos he thinks you're a shit, resulting in friendship with Dean to drop to [deafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -116,7 +116,7 @@ label deafriendshiploss:
         return  
     
 label dikfriendshipgain:
-    $ dikfriendship += 1
+    $ dik.friendship += 1
     "You probably listened to some capitalist or historical or weapon related rant, increasing your friendship with Richard to [dikfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -125,7 +125,7 @@ label dikfriendshipgain:
         return
         
 label dikfriendshiploss:
-    $ dikfriendship -= 1
+    $ dik.friendship -= 1
     "You probably use wrong grammar or make rude joke, very annoy Rick Dick, Friendship now is [dikfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -134,7 +134,7 @@ label dikfriendshiploss:
         return
 
 label rinfriendshipgain:
-    $ rinfriendship += 1
+    $ rin.friendship += 1
     "You grew one step closer with Serena, your friendship with her is now at [rinfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -143,7 +143,7 @@ label rinfriendshipgain:
         return  
 
 label rinfriendshiploss:
-    $ rinfriendship -= 1
+    $ rin.friendship -= 1
     "Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rinfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -152,7 +152,7 @@ label rinfriendshiploss:
         return  
 
 label flufriendshipgain:
-    $ flufriendship += 1
+    $ flu.friendship += 1
     "Your phys rank is rapidly rising, as is your friendship with Fluitsma, now at [flufriendship]. Maybe soon you could get some \"private lessons\""
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -161,7 +161,7 @@ label flufriendshipgain:
         return  
 
 label flufriendshiploss:
-    $ flufriendship -= 1
+    $ flu.friendship -= 1
     "Something you did upset Ms Fluistma. Your current predicted Phys HSC mark is [flufriendship]. Just kidding, thats your friendship with her"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -170,7 +170,7 @@ label flufriendshiploss:
         return  
 
 label grafriendshipgain:
-    $ grafriendship += 1
+    $ gra.friendship += 1
     "You are probably one of the few students who actually try in engineering. This does not go unnoticed by Grant-senpai, and your friendship with him is now at [grafriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -179,7 +179,7 @@ label grafriendshipgain:
         return  
 
 label grafriendshiploss:
-    $ grafriendship -= 1
+    $ gra.friendship -= 1
     "Grant wasnt exactly pleased with your behaviour, resulting in friendship dropping to [grafriendship]. Looks like you might have to spend some more time in the naughty corner."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -188,7 +188,7 @@ label grafriendshiploss:
         return  
 
 label moxfriendshipgain:
-    $ moxfriendship += 1
+    $ mox.friendship += 1
     "Moxham has finally recognised you diligence and continued efforts to improve the school, resulting in your friendship rising to [moxfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -197,7 +197,7 @@ label moxfriendshipgain:
         return  
 
 label moxfriendshiploss:
-    $ moxfriendship -= 1
+    $ mox.friendship -= 1
     "Your friendship with Moxham dropped to [moxfriendship]. Looks like more afterschool detentions, suspensions or worse."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -206,7 +206,7 @@ label moxfriendshiploss:
         return  
 
 label drkfriendshipgain:
-    $ drkfriendship += 1
+    $ drk.friendship += 1
     "You probably had deep conversation with him about the Naziness of toilet paper or some shit, raising friendship with him to [drkfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -215,7 +215,7 @@ label drkfriendshipgain:
         return  
 
 label drkfriendshiploss:
-    $ drkfriendship -= 1
+    $ drk.friendship -= 1
     "You dirked Derk, causing friendship with him to fall to [drkfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -224,7 +224,7 @@ label drkfriendshiploss:
         return  
 
 label jitfriendshipgain:
-    $ jitfriendship += 1
+    $ jit.friendship += 1
     "Your friendship with Gary rose to [jitfriendship]. Maybe now he will allow you to access his secret hentai stash."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -233,7 +233,7 @@ label jitfriendshipgain:
         return  
 
 label jitfriendshiploss:
-    $ jitfriendship -= 1
+    $ jit.friendship -= 1
     "Your friendship with Gary dropped to [jitfriendship]. You probably criticized his interests in chinese \"cartoons\" or something."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -242,7 +242,7 @@ label jitfriendshiploss:
         return  
 
 label leefriendshipgain:
-    $ leefriendship += 1
+    $ lee.friendship += 1
     "You were lame but its ok coz your friendship with Billabong Lee is at [leefriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -251,7 +251,7 @@ label leefriendshipgain:
         return  
 
 label leefriendshiploss:
-    $ leefriendship -= 1
+    $ lee.friendship -= 1
     "You Gullible George, coz your friendship with him is lowered to [leefriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -260,7 +260,7 @@ label leefriendshiploss:
         return
 
 label royfriendshipgain:
-    $ royfriendship += 1
+    $ roy.friendship += 1
     "You improved your friendship with Roy, it is now at [royfriendship]. You might be safe from his gas attacks, for now."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -269,7 +269,7 @@ label royfriendshipgain:
         return  
 
 label royfriendshiploss:
-    $ royfriendship -= 1
+    $ roy.friendship -= 1
     "Your friendship with Roy dropped to [royfriendship]. It is strongly advised that you immediately evacuate the room."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -278,7 +278,7 @@ label royfriendshiploss:
         return
 
 label butfriendshipgain:
-    $ butfriendship += 1
+    $ but.friendship += 1
     "You probably had a deep philosophical debate about politics, increasing your friendship with Aradhya to [butfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -287,7 +287,7 @@ label butfriendshipgain:
         return  
 
 label butfriendshiploss:
-    $ butfriendship -= 1
+    $ but.friendship -= 1
     "You probably made a bad butter pun or mispelt Arradiia's name, causing friendship with him to drop to [butfriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -296,7 +296,7 @@ label butfriendshiploss:
         return  
 
 label dngfriendshipgain:
-    $ dngfriendship += 1
+    $ dng.friendship += 1
     "You were metal enough for Deng, resulting in friendship with him increasing to [dngfriendship]"
     if friendshiptutorial is False:
         call tutorialfriendship
@@ -305,7 +305,7 @@ label dngfriendshipgain:
         return  
 
 label dngfriendshiploss:
-    $ dngfriendship -= 1
+    $ dng.friendship -= 1
     "You probs made bad joke about a female friend of Deng's, or were just retard, lowering friendship with him to [dngfriendship]."
     if friendshiptutorial is False:
         call tutorialfriendship

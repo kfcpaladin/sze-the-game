@@ -13,7 +13,7 @@ label asszemblyjigolokindagaytoilet:
     "You seem to hear a sound coming from the stall at the very end"
     menu:
         "\"Investigate the sound\"":
-                if jitfriendship >= 4:
+                if jit.friendship >= 4:
                     sze "\"Oi Gary, back me up\""
                     jit "\"Nah mate, that's a bit disturbing\""
                     sze "\"C'mon, think of this as budget urbex\""

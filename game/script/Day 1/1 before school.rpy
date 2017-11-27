@@ -47,8 +47,11 @@ label schoolday1:
         "3 hours later"
         "I arrive at rollcall"
         "But no roll call teacher"
+        show screen diary_button
         "Ceebs waiting, I go to office to get timetable"
         "Got a new timetable"
+        scene bg time
+        with fade
         "I have Physics (Fluitsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
         scene bg school
         with fade

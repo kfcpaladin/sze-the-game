@@ -25,7 +25,7 @@ label phys1p3principal1:
         rus "\Soz man. Need to ace trials\"" with vpunch
         sze "\"faarrrr\""
         call dead from _phys1p3principal1moxcountertoohigh
-        $ rusfriendship -= 1
+        $ rus.friendship -= 1
         $ moxcounter1 -= 1
         $ moxcounter2 -= 1
         jump phys1part2

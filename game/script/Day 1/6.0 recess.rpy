@@ -25,7 +25,7 @@ label recess1a:
                         sze "\"But I thought you wanted to get rid of the SRC/PNC influence from the school\""
                         wil "\"Only someone as un-fortian as you could say that\""
                         call fortianloss from _recess1atalkingtoyangfortianloss
-                        if wilfriendship > 40:
+                        if wil.friendship > 40:
                             wil "\"But since you have proven your worth\""
                             wil "\"Indeed, I do. I foresee that Moxham will have outlived her usefulness by {nw}\""
                             wil "\"Ahem\""

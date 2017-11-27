@@ -114,7 +114,7 @@ label asszemblyjigolo1_3:
     jit "\"Go... go up and look\""
     sze "\"...\""
     menu:
-        "Continue arguing" if jitfriendship <=2:
+        "Continue arguing" if jit.friendship <=2:
             sze "\"Jitian, I really don't want to tho\""
             jit "\"...\""
             jit "\"omfg...Just\""
@@ -287,7 +287,7 @@ label asszemblyjigolo1encounter:
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
                         jit "\"Let's fight then!!\"" with hpunch
                         $ random1to6jig1fight1a = renpy.random.randint(0, 6)
-                        $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jitfriendship))
+                        $ jig1fight1a = (int(random1to6jig1fight1a) + int(strength)*2 + int(intelligence) + int(jit.friendship))
                         if jig1fight1a > 12:
                             "With Jitian by your side, you stand your ground"
                             "The teachers thunder towards you" with vpunch
@@ -364,7 +364,7 @@ label asszemblyjigolo1encounter:
                             sze "Resistance is futile, best to follow them"
                             jump asszembly1shitstorm
 
-# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jitfriendship if he joins in...
+# time for fight coding -> to succeed need total 5, dice roll 1-6 + strength*2 + intelligence + jit.friendship if he joins in...
                 "\"Fight\"":
                     sze "\"Let's fight\""
                     jit "\"wut\""

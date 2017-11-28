@@ -1,4 +1,5 @@
 label postrollcall1:
+    $ renpy.save("autosave")
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the classroom"
     menu stealwillisgirl:
@@ -42,8 +43,7 @@ label Lyingsze:
         kok "\"I'll wreck you\"" with vpunch
         hide willis normal
         with dissolve
-        call dead from _Lyingsze
-        jump TheKwokappears
+        jump dead
 label Honestsze:
         sze "\"Yea, so what\""
         play music "VarienThroneOfRavens.mp3"
@@ -51,8 +51,7 @@ label Honestsze:
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
         with dissolve
-        call dead from _Honestsze
-        jump TheKwokappears
+        jump dead
 label Rektrusali:
         sze "\"I was just going to talk to new kid Rusali, who's trying to talk to her\""
         sze "Dennis C. Rusali is new kid and try to be friend to everyone. Why I dog him?"
@@ -89,7 +88,7 @@ label Rektrusali:
         hide willis normal
         show rusali normal
         rus "\"waow arthur, why you do this?\""
-        rus "\"just watch me\"" with hpunch 
+        rus "\"just watch me\"" with hpunch
         hide rusali normal
         show willis normal
         kok "\"ow\""

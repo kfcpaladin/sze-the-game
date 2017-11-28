@@ -1,4 +1,5 @@
 label eng1p1:
+    $ renpy.save("autosave")
     "I should probably be heading to the next period then."
     scene bg workshop
     with dissolve
@@ -176,9 +177,7 @@ label eng1p1naughtycorner:
                         scene bg dream
                         "This place looks pretty neat, but no oxygen"
                         "Eoarchaen Era Earth is retardedly unsuitable for human life"
-                        call dead from _eng1p1naughtycornertimetravelcount4
-                        $ intelligence += 9
-                        jump eng1p1naughtycorner
+                        jump dead
                     elif timetravelcount >= 3:
                         "Yet again you step inside the corner"
                         "By now you are used to it, no longer disturbed by its seemingly illogical content"

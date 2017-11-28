@@ -24,11 +24,7 @@ label phys1p3principal1:
         show rusali normal
         rus "\Soz man. Need to ace trials\"" with vpunch
         sze "\"faarrrr\""
-        call dead from _phys1p3principal1moxcountertoohigh
-        $ rus.friendship -= 1
-        $ moxcounter1 -= 1
-        $ moxcounter2 -= 1
-        jump phys1part2
+        jump dead
     else:
         show moxham unhappy
         mox "\"I've been told you two have been disrupting the propogation of education by being dropkicks\""
@@ -56,12 +52,7 @@ label phys1p3principal2:
         mox "\"Chao, I'll clear you of your dropkickness records if you beat the shit out of him\""
         cha "\"Yes ma'am\""
         sze "\"nope\""
-        call dead from _phys1p3principal2moxcountertoohigh
-        $ thirst -= 1
-        $ charm -= 1
-        $ moxcounter1 -= 1
-        $ moxcounter2 -= 1
-        jump phys1part2
+        jump dead
     else:
         show moxham unhappy
         call dailymoxcounter from _phys1p3principal2bdailymoxcounter
@@ -72,7 +63,7 @@ label phys1p3principal2:
         mox "\"Instead you will be given after school detention...how merciful of me\""
         hide moxham unhappy
         jump eng1p1
-        
+
 label phys1p3principal3:
     # said yes
     sze "\"Yes\""
@@ -87,7 +78,7 @@ label phys1p3principal3:
     call rusfriendshiploss from _phys1p3principal3rusfriendshiploss
     hide rusali
     jump eng1p1
-    
+
 label phys1p3principal4:
     # said no
     sze "\"...No\""

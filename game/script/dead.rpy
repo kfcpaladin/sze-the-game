@@ -4,7 +4,8 @@ label dead:
     play music "SFX/game_over.mp3" noloop
     sze "I dead"
     menu:
-        "Return to Last Choice":
+        "Revert to latest autosave":
+            $ renpy.load("autosave")
             return
         "Return to start":
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
@@ -19,7 +20,7 @@ label deadrestart:
     play music "SFX/game_over.mp3" noloop
     sze "I dead"
     jump start
-    
+
 label actualded:
     scene black
     stop music

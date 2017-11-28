@@ -1,4 +1,5 @@
 label asszembly1:
+    $ renpy.save("autosave")
     stop music
     play music "p4YouthfulLunch.mp3" loop
     scene bg rowecorridor
@@ -276,10 +277,7 @@ label asszembly1_3:
                             sze "shit shit {nw}" with vpunch
                             sze "shit shit {nw}" with vpunch
                             "Your heart finally gives up as you die of embarrassment"
-                            call dead from _asszembly1_3embarrasedasfuck
-                            $ metderek = False
-                            $ thirst -= 1
-                            jump asszembly1_3
+                            jump dead
                     "Deny all charges":
                         if intelligence >=2:
                             sze "\"I am merely salivating in anticipation of my recess which consists of leftover butter chicken\""

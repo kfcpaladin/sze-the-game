@@ -1,4 +1,5 @@
 label phys1:
+    $ renpy.save("autosave")
     scene bg physclass
     stop music
     play music "PinkFloydAnotherBrickInTheWall.mp3" loop
@@ -73,16 +74,15 @@ label phys1answered_a:
     hide chao normal
     cha "\"Wow, your watch is crap, that wasn't worth the effort\""
     with fade
-    call dead from _phys1answered_a1
-    jump phys1answered
-    
+    jump dead
+
 label phys1answered_b:
     sze "\"ok...\""
     flu "\"Anything you want, anytime...\""
     kok "\"wow sugoi, you are a genius arthur\""
     pra "\"Whoa Arthur, too good\""
     jump phys1part2
-    
+
 label phys1nothing:
     "The class actually goes quiet"
     "No-one says anything"
@@ -95,7 +95,7 @@ label phys1nothing:
     flu "\"Not exactly, I think we need to revise the basics\""
     flu "\"Let's start by learning some stuff about the refraction of light\""
     jump phys1part2
-    
+
 label phys1talked:
     "you turn to your right, and start talking to your neighbour, Pragash"
     sze "Pragash is very...cricket and has grand ambitions"
@@ -107,7 +107,7 @@ label phys1talked:
     "you talk a bit more with Pragash before refocusing like electron beam from electron gun in cathode ray tube\""
     hide pragash normal
     jump phys1part2
-    
+
 label phys1part2:
     scene bg physclass
     "Suddenly a paper ball flies through the air, and hits you in the face from behind..."
@@ -120,7 +120,7 @@ label phys1part2:
             jump phys1p2p2
         "Do nothing":
             jump phys1p2p3
-            
+
 label phys1p2p1:
     show rusali normal
     with dissolve
@@ -155,7 +155,7 @@ label phys1p2p1:
     else:
         flu "\"Both of you go to the principal's office, NOW!\""
         jump phys1p3principal1
-        
+
 label phys1p2p2:
     scene bg physclass
     play music "VarienThroneOfRavens.mp3"
@@ -179,14 +179,13 @@ label phys1p2p2:
             sze "\"no, pls dont kill me\""
             cha "\"Fuck you\""
             cha "\"I'll eat you for lunch!\"" with vpunch
-            call dead
-            jump phys1p2p2
+            jump dead
         "\"Ummmm...\"":
             sze "\"Ummm...lolwut?\""
             cha "\"I'll take that as a {nw}\""
             sze "\"Lemme think\""
             jump phys1p2p3
-    
+
 label phys1p2p3:
     "You do nothing"
     flu "\"Why are there paper balls in front of you\""
@@ -210,7 +209,7 @@ label phys1p2p3:
         flu "\"Both of you go to the principles office, NOW\"" with hpunch
         sze "\"Wow Chao\""
         jump phys1p3principal2
-        
+
 label phys1p2p4:
     menu:
         "Use your physics knowledge to make a believable lie" if intelligence > 0:
@@ -252,7 +251,7 @@ label phys1p3p1:
     hide willis normal
     call kokfriendshipgain from _phys1p3p1callkokfriendshipgain
     jump eng1p1
-    
+
 label phys1p3p2:
     #No-one in trouble
     "The class continues without any further issues"
@@ -264,7 +263,7 @@ label phys1p3p2:
     hide rusali normal
     call rusfriendshipgain from _phys1p3p2callrusfriendshipgain
     jump eng1p1
-    
+
 label phys1p3p3:
     #No-one in trouble
     "The class continues without any further issues"

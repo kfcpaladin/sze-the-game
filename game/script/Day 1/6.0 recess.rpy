@@ -1,4 +1,5 @@
 label recess1:
+    $ renpy.save("autosave")
     "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
     jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
     jump recess1a
@@ -132,7 +133,7 @@ label recess1a:
                                 "You barely have enough strength to register what is happening"
                                 sze "\"Ow, it wasn't meant to be like this\""
                                 sze "\"Oh, there's the descending aorta\""
-                                call dead from _recess1aRowesenpaifail
+                                jump dead
                         "\"Vices\"":
                                 sze "\"If I had no gf, I would rather play with vices\""
                                 roy "\"Ok...\""
@@ -190,7 +191,7 @@ label recess1a:
                             "You try poking yourself with a moderately sharp stick"
                             sze "\"Ow, it wasn't meant to be like this\""
                             sze "\"Oh, there's the descending aorta\""
-                            call dead from _recess1aRowesenpaifail
+                            jump dead
 
                         "\"Give up\"":
                             sze "I must temper my heart with reason"
@@ -308,7 +309,7 @@ label recess1a:
                                         "You barely have enough strength to register what is happening"
                                         sze "\"Ow, it wasn't meant to be like this\""
                                         sze "\"Oh, there's the descending aorta\""
-                                        call dead from _recess1aRowesenpaifail
+                                        jump dead
                                 "\"Vices\"":
                                     sze "\"If I had no gf, I would rather play with vices\""
                                     roy "\"Ok...\""

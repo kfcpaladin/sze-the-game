@@ -15,9 +15,7 @@ label schoolday1:
             mox "\"You're already causing trouble, planning on causing trouble a second time?\""
             mox "\"I'll fuck you over\""
             hide moxham unhappy
-            call dead from _schoolday11
-            $ intelligence += 9
-            jump eng1p1naughtycorner
+            jump dead
         else:
             hide moxham happy
             show moxham unhappy

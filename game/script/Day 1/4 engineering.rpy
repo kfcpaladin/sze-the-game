@@ -27,6 +27,7 @@ label eng1p1:
     gra "\"Today we are going to learn about planes\""
     gra "\"What does a plane do?\""
     menu:
+        "What does a plane do?"
         "\"It flies\"":
             sze "\"Planes fly through the air\""
             sze "\"Wings can make lift because of air\""
@@ -137,6 +138,7 @@ label eng1p1naughtycorner:
     gra "\"Aaaah, that's right: you two children in the naughty-corner, do nothing as punishment\""
     pra "\"The school's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
     menu:
+        "Should I stay in the naughty corner?"
         "Stay in the corner":
             pra "\"Goood\""
             pra "\"Feel the corner's strength overwhelming your feeble mind\""
@@ -276,6 +278,7 @@ label eng1p1p3:
     wil "\"When I achieve the Fourth Reich, dean shall be processed under the eugenics program\""
     wil "\"We cannot tolerate any non Band 6 students\""
     menu yangrant1:
+        "Err..."
         "\"Heil the Fourth Reich!\"":
             jump yangrantp1_1
         "\"Heil Moxham!\"":
@@ -303,6 +306,7 @@ label yangrantp1_2:
     call fortiangain from _yangrantp1_2fortiangain
     wil "\"The question is... how? hmmmmm\""
     menu:
+            "How should we take over the SRC?"
             "\"We pressure Sarah Desney\"":
 #   we do have picture of weeb sze don't we?
                 sze "\"We pressure Sarah Desney\""
@@ -367,6 +371,7 @@ label eng1p2:
     wil "\"But-\""
     gra "\"Do whatever, just hand in these worksheets whenever\""
     menu:
+        "Should I do these worksheets?"
         "Do worksheets":
             "You decide to do worksheets"
             "..."
@@ -379,6 +384,7 @@ label eng1p2:
             call fortiangain from _eng1p2fortiangain
             "As you sit down, you see someone at the door"
             menu:
+                "Knock Knock"
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
@@ -446,6 +452,7 @@ label eng1p2:
             "Whilst basking in your glory, you hear knocking on the door"
             menu:
                 "Open door":
+                    "Knock Knock"
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music

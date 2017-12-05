@@ -29,6 +29,7 @@ label start:
     $ metderek = False
     
     scene bg disclaimer
+    with fade
     pause
     scene black
     with fade

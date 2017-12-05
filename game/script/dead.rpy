@@ -32,5 +32,3 @@ label actualded:
 # pho +1 strength +1 intel +1 thirst
 # pork rolls +2 charm
 # vegan shite = +3 fort -1 strength -1 dikfriendship
-# sandwich +1 strength + charm
-

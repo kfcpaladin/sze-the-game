@@ -17,8 +17,6 @@ define drk = Character('Derek', color="#FFFFFF", image="derek")
 define jit = Character('Gary', color="#FFFFFF", image="gary")
 define lee = Character('Andrew', color="#FFFFFF", image="andrew")
 define roy = Character('Roy', color="#FFFFFF", image="roy")
-define sch = Character('SCHLAM', color="#FFFFFF", image="schlam")
-define chp = Character('CHAPPO', color="FFFFFF", image="chappo")
 # jenkins
 define but = Character('Aradhya', color="#FFFFFF", image="aradhya")
 define dng = Character('Steven', color="#FFFFFF", image="steven")

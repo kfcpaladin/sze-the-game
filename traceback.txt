@@ -1,0 +1,23 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+ScriptError: Name u'start' is defined twice, at game/script/inventory.rpy:145 and game/script/script.rpy:3.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\DerX\Documents\GitHub\sze-the-game\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "C:\Users\DerX\Documents\GitHub\sze-the-game\renpy\main.py", line 354, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "C:\Users\DerX\Documents\GitHub\sze-the-game\renpy\script.py", line 259, in load_script
+    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
+  File "C:\Users\DerX\Documents\GitHub\sze-the-game\renpy\script.py", line 738, in load_appropriate_file
+    self.finish_load(stmts, initcode, filename=fn + source)
+  File "C:\Users\DerX\Documents\GitHub\sze-the-game\renpy\script.py", line 414, in finish_load
+    bad_node.filename, bad_node.linenumber))
+ScriptError: Name u'start' is defined twice, at game/script/inventory.rpy:145 and game/script/script.rpy:3.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.10.1227
+ 

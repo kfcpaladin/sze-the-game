@@ -27,6 +27,9 @@ label start:
     $ discovernorton = False
     $ quest2jintiandeliveryservicecofounder = False
     $ metderek = False
+    
+    scene bg disclaimer
+    pause
     scene black
     with fade
     scene bg intro

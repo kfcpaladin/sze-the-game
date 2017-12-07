@@ -34,6 +34,7 @@ label phys1:
 label phys1answered:
     scene bg physclass
     flu "\"Great answer Arthur. It's only the first day and you are already demonstrating why you are rank double one.\""
+    "You close Wikipedia"
     flu "\"You should stay after school for some private tutoring ;);)\""
     call intelgain from _phys1answeredintelgain
     menu:

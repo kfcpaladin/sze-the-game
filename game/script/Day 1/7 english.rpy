@@ -64,11 +64,157 @@ tag eng1ascension:
             jit "\"Phew, good thing I have Strauss for English. This is as high as I need to go; sucks to be everyone else\""
             sze "\"lucky\""
             "..."
-#           will continue from here next time, naruto online rn
-            "Captain's report, {s}February 4th, 2531{/s} January 28th, 2015"
-            "{s}Five year, five long years.{/s} 5 minutes, 5 long minutes. That's how long it took to get {s}Harvest back{/s} to the top."
-            "At first it was going well...{s}then setback after setback, loss after loss...{/s} book after book,questions after questions..."
-            "Made what was going to be a {s}quick and decisive win{/s} a bludge lesson..."
-            "Into fifty minutes of hell..."
-            sze "\"Bullshittery at it's finest\""
-            jump mthext1day1
+            "You pass by Chao, who, despite his girth, appears to be doing rather well"
+            if cha.friendship > 1:
+                cha "\"Hey Arthur, how's it going?\""
+                sze "\"im fking dying\""
+                cha "\"Y'know, since you had my back earlier on, I reckon I'll help you out. Aren't I a great guy?\""
+                menu:
+                    "\"im fking ded, halp me plz\"":
+                        cha "\"Alright then, hope on my back and I'll give you a ride outta here\""
+                        "Chao lets you piggyback up the rest of the stairs"
+                        call strengthloss from _eng1chaopiggyback
+                        sze "\"I don't know if I could've done the rest without a heart attack\""
+                        sze "\"Thanks Chao, you are truly a great man\""
+                        cha "\"Awww thanks Arthur\""
+                        sze "\"Your heart is as big as you are\""
+                        cha "\"...\""
+                        cha "\"k\""
+                        call chafriendshipgain from _eng1chaopiggybackfriends4life
+                        jump english1top
+                    "\"thanks but nah\"":
+                        sze "\"thanks for the offer\""
+                        sze "\"but nah\""
+                        sze "\"I\""
+                        sze "\"must\""
+                        sze "\"overcome\""
+                        call strengthgain from _eng1flight3
+                        cha "\"gotta respect\""
+                        cha "\"strength of body and of character\""
+                        cha "\"and strong of body odour too...\""
+                        call charmloss from _eng1fkingbo
+                        cha "\"anyway, cya\""
+                        jump english1flight3
+            else:
+                cha "\"Oh look who it is\""
+                sze "\"uhh...hi chao\""
+                cha "\"I'm tired\""
+                sze "\"...\""
+                sze "\"yeh so? aren't we all?\""
+                cha "\"So i think i'll ride you\""
+                "Before you can reply, he has hurled himself onto your back"
+                if strength >= 2:
+                    "Somehow you manage to stay upright"
+                    cha "\"giddyup horsie\""
+                    sze "\"Urghgerroffyoufuglypoofter\""
+                    cha "\"Save your energy, don't speak, just climb\""
+                    "..."
+                    "You get to the top of the third flight and decide to throw Chao off"
+                    cha "\"Oi slave, what do you think you're doing?!\""
+                    sze "\"You know you aren't cool doing that, right?\""
+                    cha "\"Oh, tell me, why not?\""
+                    menu:
+                        "Exacerbate his insecurities":
+                            sze "\"Cos all you're doing is proving that you're a chubby ass mofo\""
+                            "You notice Dean and Richard nearby"
+                            dea "\"Oh shit, good burn\""
+                            dik "\"I doth doff my hat at thee, twas a well placed blow\""
+                            call charmgain from _eng1charmgain
+                            cha "\"...\""
+                            cha "\"gotta admit that was a good burn\""
+                            cha "\"But perhaps you might be the one to help me make peace with my weight\""
+                            cha "\"mebe you truly are The Chosen One\""
+#                           include new quest - help chao lose his weight, pt.1 -> making peace with his weight
+                            cha "\"Until next time, cya\""
+                            call chafriendshipgain from _eng1chafriendz
+                            jump english1flight3
+                        "Destroy his dignity":
+                            if intelligence > 3:
+                                sze "\"Clearly, ur desire to make me carry u is due to a desire to dominate\""
+                                sze "\"This must be cos you get dominated by other people, but clearly not at school\""
+                                cha "\"...\""
+                                sze "\"Therefore, it must be in home environment\""
+                                sze "\"So either ur gf dominates you or ur family does\""
+                                sze "\"well?\""
+                                sze "\"r u getting dominated by a LG?\""
+                                sze "\"r u getting rekt by ur daddy?\""
+                                sze "\"or is mummy expressing her desire for Oedipus complex by whipping ur ass?\""
+                                cha "\"stfu, I'll remember this\""
+                                sze "\"All of the above?\""
+                                call chafriendshiploss from _eng1chafriendshiploss
+                                "The people around you go quiet"
+                                dea "\"That was fucking savage. Dunno, man, but you might've gone too far\""
+                                dea "\"Still, those are good burns\""
+                                call charmgain from _eng1charmgainbutchaomad
+                                jump english1flight3
+                else:
+                    "Unfortunately, your knees are weak, palms are sweaty"
+                    play "VarienThroneOfRavens.mp3"
+                    "You are instantly flattened"
+                    sze "\"gluuurrg-\""
+                    "Your breath is pushed out of you, but Chao's mass prevents you from taking another"
+                    "Your ribs are almost certainly shattered, your sternum faring no better"
+                    "Even if you could take a breath, both of your lungs have already collapsed due to the multiple punctures"
+                    "You feel blood filling your thoracic cavity, with each weakening pulse"
+                    "In some distant space, through the fading light, you can hear Chao"
+                    cha "\"Hey Arthur, cool prank, you can get up now\""
+                    sze "i would if i could you fking fgt"
+                    jump dead
+tag english1flight3:
+    sze "3 out of 4"
+    sze "75 percent"
+    sze "I can do this"
+    sze "\"arrggfuqtootired\""
+    sze "\"One foot\""
+    sze "\"in front\""
+    sze "\"of the\""
+    sze "\"other\""
+    "As you trudge along, you see her"
+    "Her radiant form inspires and stimulates you"
+    call thirstgain from _eng1thirstystair
+    "And gives you strength"
+    call strengthgain from _eng1nearthesummit
+    "Your heart is pumping, freshly oxygenated blood coursing through your body"
+    if thirst > 3:
+        "You surge forward, with surefooted and steady steps, despite your nausea"
+        "Your heart is racing"
+        "You reach out, hoping to say something, anything to her. You have a pressure in your chest that you just need to get rid of."
+        "The sound of your blood rapidly throbbing in your ears is all you hear"
+        "You know, in this moment, you are no longer paralyzed by fear. You can talk to her, tell her how you feel {nw}"
+        "Your heart rate, so fast, it simply quivers"
+        sze "\"gaaa-\""
+        "Your heart stops"
+        if wilfriendship > 40:
+            wil "\"lol, you idiot, you've overexerted yourself\""
+            wil "\"I still need you around, so I can't let you die of a heart attack\""
+            "Your consciousness is fading"
+            "You hear Will say something vaguely"
+            "There appears to be something going on in the background"
+            wil "\"Well, here goes\""
+            wil "\"Clear\""
+            with vpunch
+            sze "\"-aargh\""
+            wil "\"Surprised that worked\""
+            "Your blurry vision makes out a few battery shaped objects, connected to a big spring shaped thing"
+            "Wires join the otherwise disconnected bits and pieces, with two leading to two accupuncture needles sticking near your right shoulder and left armpit"
+#           can include random advanced quiz question
+            wil "\"Well, you should be good to go\""
+            wil "\"cya around\""
+#       will include other stuff going on
+        else:
+            wil "\"Lol, you look kinda funny\""
+            sze "\"-rgh\""
+            jump dead
+    else:
+        "But you control your heart, and decide to approach some other time"
+        call thirstgain from _eng1thirstinessisreal
+        jump english1top
+#       will continue
+tag english1top:
+    "Captain's report, {s}February 4th, 2531{/s} January 28th, 2015"
+    "{s}Five year, five long years.{/s} 5 minutes, 5 long minutes. That's how long it took to get {s}Harvest back{/s} to the top."
+    "At first it was going well...{s}then setback after setback, loss after loss...{/s} book after book,questions after questions..."
+    "Made what was going to be a {s}quick and decisive win{/s} a bludge lesson..."
+    "Into fifty minutes of hell..."
+    sze "\"Bullshittery at it's finest\""
+    jump mthext1day1

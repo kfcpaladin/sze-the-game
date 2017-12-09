@@ -34,7 +34,7 @@ label english1:
             sze "I need to be {b}smart{/b} about this and {b}strong{/b} enough to make it successfully"
             jump eng1ascension
             
-tag eng1ascension:
+label eng1ascension:
             sze "Can't be too hard, just put one foot in front of the other"
             "..."
             sze "\"Just keep swimmin'\""
@@ -215,7 +215,7 @@ tag eng1ascension:
                     cha "\"Hey Arthur, cool prank, you can get up now\""
                     sze "i would if i could you fking fgt"
                     jump dead
-tag english1flight3:
+label english1flight3:
     sze "3 out of 4"
     sze "75 percent"
     sze "I can do this"
@@ -295,7 +295,7 @@ tag english1flight3:
         call thirstgain from _eng1thirstinessisreal
         "..."
         jump english1top
-tag english1top:
+label english1top:
     "Captain's report, {s}February 4th, 2531{/s} January 28th, 2015"
     "{s}Five year, five long years.{/s} 5 minutes, 5 long minutes. That's how long it took to get {s}Harvest back{/s} to the top."
     "At first it was going well...{s}then setback after setback, loss after loss...{/s} step after step, sweat after sweat..."

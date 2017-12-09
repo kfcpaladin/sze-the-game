@@ -204,7 +204,7 @@ label eng1ascension:
                                 jump dead
                 else:
                     "Unfortunately, your knees are weak, palms are sweaty"
-                    play "VarienThroneOfRavens.mp3"
+                    play music "VarienThroneOfRavens.mp3"
                     "You are instantly flattened"
                     sze "\"gluuurrg-\""
                     "Your breath is pushed out of you, but Chao's mass prevents you from taking another"

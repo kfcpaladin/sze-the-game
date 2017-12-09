@@ -147,6 +147,61 @@ tag eng1ascension:
                                 dea "\"Still, those are good burns\""
                                 call charmgain from _eng1charmgainbutchaomad
                                 jump english1flight3
+                            elif strength > 2:
+                                sze "I would try something witty, but I'm probs not smart enough to do that this quickly"
+                                sze "Looks like all I can do is use my fists then"
+                                cha "\"Well?\""
+                                sze "\"i'll let my fist explain\""
+                                "You only have one shot at this"
+                                "You feel time slowing down as you pull your elbow back"
+                                sze "This is gonna be hard; I'll need to punch Chao for a combat score of 12, to do anything"
+                                $ randomenglish1stairspunchchao = renpy.random.randint(0, 6)
+                                $ english1stairspunchchao = (int(randomenglish1stairspunchchao) + int(strength)*2 + int(intelligence))
+                                "Your fist flies forward, with a combat score of [english1stairspunchchao]"
+                                if english1stairspunchchao > 11:
+                                    "!!!"
+                                    with hpunch
+                                    sze "shit"
+                                    "Chao has caught your fist"
+                                    sze "\"welp\""
+                                    sze "\"Do what you will\""
+                                    cha "\"You tried\""
+                                    cha "\"Gotta respect\""
+                                    "He releases your fist, and extends his hand"
+                                    sze "\"Ok\""
+                                    call chafriendshipgain from _eng1stairpunchchaoforfriendship
+                                    jump english1flight3
+                                else:
+                                    "!!!"
+                                    with hpunch
+                                    "Chao stumbles back, holding his jaw"
+                                    cha "\"You...\""
+                                    "He jabs you a few times"
+                                    cha "\"お前はもう死んでいる\""
+                                    sze "\"{i}N-Nani{/i}?!\""
+                                    "You explode"
+                                    jump dead
+                            else:
+                                sze "shit"
+                                sze "so...how am I supposed to destroy his dignity"
+                                sze "Would dignity even exist outside of society and social interaction?"
+                                sze "Why must we have the inalienable right to be valued and respected?"
+                                call intelgain from _eng1stairsuselessintelgain
+                                sze "Do we deserve it?"
+                                cha "\"Well?\""
+                                sze "\"umm\""
+                                sze "\"You're a dumbfuck\""
+                                cha "\"lol\""
+                                cha "\"Nice try\""
+                                cha "\"Pretty sure you're more lacking in the mental department\""
+                                sze "\"eh?\""
+                                cha "\"I think I should put you out of your misery\""
+                                sze "\"So you'll make me happy then?\""
+                                "He jabs you a few times"
+                                cha "\"お前はもう死んでいる\""
+                                sze "\"what?!\""
+                                "You explode"
+                                jump dead
                 else:
                     "Unfortunately, your knees are weak, palms are sweaty"
                     play "VarienThroneOfRavens.mp3"
@@ -200,21 +255,56 @@ tag english1flight3:
 #           can include random advanced quiz question
             wil "\"Well, you should be good to go\""
             wil "\"cya around\""
-#       will include other stuff going on
+            jump english1top
+        elif pra.friendship > 1:
+            pra "\"Whoa, Arthur are you dead?\""
+            sze "\"-aargh\""
+            pra "\"Is that a yes or a no?\""
+            sze "\"Huurgh\""
+            pra "\"I think that's a yes\""
+            "You aren't too sure what's going on, but you think you see Pragash deliberately prick his own finger"
+            pra "\"Ouch\""
+            pra "\"{i}Kuchiyose: Karegyangu{/i}\""
+            sze "I must be dreaming"
+            "{s}Curries{/s} People clearly of sub-continental descent appear around Pragash"
+            pra "\"Thanks for appearing on such short notice, my dudes\""
+            "Your consciousness fades"
+            "..."
+            sze "I'm taking a long time to die"
+            sze "But is this dying?"
+            sze "I feel too energetic"
+            "..."
+            "You can sense a form of life energy flowing into you"
+            sze "I blink"
+            sze "I sze"
+            sze "\"Errm...why is there a bunch of guys putting there hands on me?\""
+            pra "\"Brothers, it seems our work here is done\""
+            pra "\"{i}kai{/i}\""
+            "All the {s}Curries{/s} people of sub-continental descent disappear, as you blink"
+            pra "\"I'll explain some other time, for now, I do believe we have English\""
+            jump english1top
         else:
             wil "\"Lol, you look kinda funny\""
             sze "\"-rgh\""
+            pra "\"Whoa, shit it moved\""
+            pra "\"Dead bodies shouldn't move\""
+            pra "\"Kill it dead\""
             jump dead
     else:
         "But you control your heart, and decide to approach some other time"
         call thirstgain from _eng1thirstinessisreal
+        "..."
         jump english1top
-#       will continue
 tag english1top:
     "Captain's report, {s}February 4th, 2531{/s} January 28th, 2015"
     "{s}Five year, five long years.{/s} 5 minutes, 5 long minutes. That's how long it took to get {s}Harvest back{/s} to the top."
-    "At first it was going well...{s}then setback after setback, loss after loss...{/s} book after book,questions after questions..."
-    "Made what was going to be a {s}quick and decisive win{/s} a bludge lesson..."
-    "Into fifty minutes of hell..."
-    sze "\"Bullshittery at it's finest\""
+    "At first it was going well...{s}then setback after setback, loss after loss...{/s} step after step, sweat after sweat..."
+    "Made what was going to be a {s}quick and decisive win{/s} normal journey to class..."
+    "Into five minutes of hell..."
+    "..."
+    sze "I'm here"
+    sze "On time"
+    sze "Now who are my classmates?"
+    "You aren't too familiar with a lot of the people"
+    sze "\"Bullshittery at its finest\""
     jump mthext1day1

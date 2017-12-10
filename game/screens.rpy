@@ -537,12 +537,13 @@ screen quick_menu():
     # Add an in-game quick menu.
     hbox:
         style_group "quick"
-
+        
         xalign 1.0
         yalign 1.0
 
         textbutton _("Stats") action ShowMenu('statsscreen')
         textbutton _("kms") action ShowMenu('kms')
+        textbutton _("Roadmap") action ShowMenu('roadmap')
         textbutton _("Back") action Rollback()
         textbutton _("Save") action ShowMenu('save')
         textbutton _("Q.Save") action QuickSave()
@@ -832,3 +833,14 @@ screen fortmap: #Preparing the imagemap
 #                xfill True
 #                has hbox
 #                $ Buyresearch(exampleresearch)
+
+##########################
+# shows choices user has made
+screen roadmap:
+    # ensures other menu screens are replaced
+    tag menu
+
+    # Include the navigation menu
+    use navigation
+
+    text    "{color=#f00}{b}WIP    roadmap of choices made{/b}{/color}"

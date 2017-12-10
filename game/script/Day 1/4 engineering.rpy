@@ -394,7 +394,7 @@ label eng1p2:
             call fortiangain from _eng1p2fortiangain
             "As you sit down, you see someone at the door"
             menu:
-                "Knock Knock"
+                "*Knock *knock\""
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
@@ -425,7 +425,6 @@ label eng1p2:
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
                 "Don't open door":
-                    "*Knock *knock\""
                     sze "\"...\""
                     sze "\"szeebs\""
                     dea "\"I'll get it\""
@@ -460,7 +459,7 @@ label eng1p2:
             dea "\"shit you smart\""
             "Whilst basking in your glory, you hear knocking on the door"
             menu:
-                "Knock Knock"
+                "*Knock *knock\""
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""

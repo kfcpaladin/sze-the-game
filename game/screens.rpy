@@ -732,23 +732,23 @@ screen statsscreen:
         vbox:
             frame:
                 has vbox
-                text "Serena: [rinfriendship] points"
-                text "Willis: [kokfriendship] points"
-                text "Fluitsma: [flufriendship] points"
-                text "Rusali: [rusfriendship] points"
-                text "Pragash: [prafriendship] points"
-                text "Dean: [deafriendship] points"
-                text "William: [wilfriendship] points"
-                text "Chao: [chafriendship] points"
-                text "Grant: [grafriendship] points"
-                text "Moxham: [moxfriendship] points"
-                text "Richard:[dikfriendship] points"
-                text "Derek: [drkfriendship] points"
-                text "Jittian:[jitfriendship] points"
-                text "Roy: [royfriendship] points"
-                text "Andrew: [leefriendship] points"
-                text "Aradhya: [butfriendship] points"
-                text "Steven: [dngfriendship] points"
+                text "Serena: [rin.friendship] points"
+                text "Willis: [kok.friendship] points"
+                text "Fluitsma: [flu.friendship] points"
+                text "Rusali: [rus.friendship] points"
+                text "Pragash: [pra.friendship] points"
+                text "Dean: [dea.friendship] points"
+                text "William: [wil.friendship] points"
+                text "Chao: [cha.friendship] points"
+                text "Grant: [gra.friendship] points"
+                text "Moxham: [mox.friendship] points"
+                text "Richard:[dik.friendship] points"
+                text "Derek: [drk.friendship] points"
+                text "Jittian:[jit.friendship] points"
+                text "Roy: [roy.friendship] points"
+                text "Andrew: [lee.friendship] points"
+                text "Aradhya: [but.friendship] points"
+                text "Steven: [dng.friendship] points"
 
 #########################################################################################################################
 #timer bar
@@ -763,8 +763,8 @@ transform alpha_dissolve:
 screen countdown:
     timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
     bar value time range timer_range xalign 0.5 yalign 0.1 xmaximum 600 at alpha_dissolve # This is the timer bar.
-    
-    
+
+
 ########################################################################################################################
 screen fortmap: #Preparing the imagemap
     imagemap:
@@ -813,3 +813,22 @@ screen fortmap: #Preparing the imagemap
             hotspot (660, 225, 117, 67) clicked Return(20)
         if "uqad" in allowedareas:
             hotspot (890, 220, 108, 56) clicked Return(21)
+
+##############################################################################################################################
+screen szeclicker:
+    grid 3 1 #we have 1 column on left for producers, 1 on right for research, and the middle is for clicking/scores
+        vbox
+            button:
+                xfill True
+                has hbox
+                $ BuyProducer(szeproducer)
+        vbox
+            button:
+                xfill True
+                has hbox
+                $ Fortclick()
+        vbox
+            button:
+                xfill True
+                has hbox
+                $ Buyresearch(exampleresearch)

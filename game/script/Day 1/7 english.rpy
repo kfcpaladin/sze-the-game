@@ -33,7 +33,7 @@ label english1:
             "You take a deep breath and {s}gather your qi{/s} mentally prepare yourself for the brutal climb"
             sze "I need to be {b}smart{/b} about this and {b}strong{/b} enough to make it successfully"
             jump eng1ascension
-            
+
 label eng1ascension:
             sze "Can't be too hard, just put one foot in front of the other"
             "..."
@@ -49,14 +49,12 @@ label eng1ascension:
                 sze "\"If Pheidippides of Athens could run from Marathon to Greece, I can get up these steps\""
                 dik "\"Quite so, my good fellow! Persevere but a few seconds longer, then \"Joy to you, we've won\"!\""
                 call dikfriendshipgain from _eng1flight1dikfriendshipgain
-                return
             else:
                 "You notice Richard walk past you"
                 sze "\"if that greek guy could do that mara thing, then I can do these stairs too\""
                 "You notice Richard shaking his head"
                 dik "\"I almost pity thee. Thine incompetence is but a miracle beholden to few\""
                 call dikfriendshiploss from _eng1flight1dikfriendshiploss
-                return
             "..."
             "The second flight was down, half way"
             "You find yourself at the first floor, and allow yourself one second of respite"

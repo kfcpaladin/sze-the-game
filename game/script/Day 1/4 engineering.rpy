@@ -233,7 +233,7 @@ label eng1p1naughtycorner:
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
-            call dead from _deathbyrushofshittobraineng1
+            jump dead
 
 label timetravel1:
     hide grant normal
@@ -460,8 +460,8 @@ label eng1p2:
             dea "\"shit you smart\""
             "Whilst basking in your glory, you hear knocking on the door"
             menu:
+                "Knock Knock"
                 "Open door":
-                    "Knock Knock"
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music
@@ -491,7 +491,6 @@ label eng1p2:
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
                 "Don't open door":
-                    "*Knock *knock\""
                     sze "\"...\""
                     sze "\"szeebs\""
                     dea "\"I'll get it\""

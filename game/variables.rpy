@@ -320,7 +320,7 @@ label intelgain:
         $ intelligence += 1
         "Congratulations"
         if intelligence > 100:
-            "You have surpassed even Justin Wu, your intelligence is now at [intelligence]"
+            "You have surpassed even Justin Wu of James Ruse, your intelligence is now at [intelligence]"
             return
         elif intelligence > 75:
             "You just got smarter, maybe you'll be able to impress Serena with your 99.95 predicted ATAR, and your intelligence of [intelligence]"

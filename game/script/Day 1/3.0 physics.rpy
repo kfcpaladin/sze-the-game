@@ -21,6 +21,7 @@ label phys1:
     flu "\"Can someone explain what a superconductor is?\""
     flu "\"I know it's a year 12 topic and you kids are in year 11, but does anyone know?\""
     menu:
+        "What is a superconductor?"
         "\"Superconductivity is a phenomenon of exactly zero electrical resistance and expulsion of magnetic flux fields occurring in certain materials when cooled below a characteristic critical temperature.
          It was discovered by Dutch physicist Heike Kamerlingh Onnes on April 8, 1911 in Leiden.
          Like ferromagnetism and atomic spectral lines, superconductivity is a quantum mechanical phenomenon.
@@ -34,9 +35,11 @@ label phys1:
 label phys1answered:
     scene bg physclass
     flu "\"Great answer Arthur. It's only the first day and you are already demonstrating why you are rank double one.\""
+    "You close Wikipedia"
     flu "\"You should stay after school for some private tutoring ;);)\""
     call intelgain from _phys1answeredintelgain
     menu:
+        ";) private tutoring? ;)"
         "Say nothing":
             jump phys1answered_a
         "\"Ok...\"":
@@ -114,6 +117,7 @@ label phys1part2:
     cha "\"Oh, shit. Meant to hit rusali with it\""
     sze "Chao is {s}fat{/s} a rather large individual with a larger appetite"
     menu:
+        "What should I do with the paper ball?"
         "Throw it at rusali":
             jump phys1p2p1
         "Throw it at Chao":
@@ -162,6 +166,7 @@ label phys1p2p2:
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
     menu:
+        "Do I wanna die m8?"
         "\"Yes\"":
             sze "\"Yes\""
             sze "\"actually want to kill myself\""
@@ -212,6 +217,7 @@ label phys1p2p3:
 
 label phys1p2p4:
     menu:
+        "Why are there paper balls in front of me?"
         "Use your physics knowledge to make a believable lie" if intelligence > 0:
             sze "\"I was merely testing out the validity of the projectile motion formulas.\""
             flu "\"Fair enough, my number 1 student wouldnt never throw papers\""

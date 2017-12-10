@@ -3,6 +3,7 @@ label postrollcall1:
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the classroom"
     menu stealwillisgirl:
+        "Should I go talk to her?"
         "Go talk to her":
             $ stealwillisgirl = True
         "Ignore her, and continue walking to your next class":
@@ -16,8 +17,8 @@ label TheKwokappears:
         with dissolve
         sze "Oh dear, its Willis Lau Kwok. He is currently in a relationship with serena, but i will win her in the end."
         kok "\"Were you tryna steal my girl just then\""
-        "Oh shit, he would be furious if he found out i wanted to steal his girl"
         menu stealwillisgirl2:
+            "Oh shit, he would be furious if he found out i wanted to steal his girl"
             "\"No, i was just going to ask her what next period is\"":
                 jump Lyingsze
             "\"Yea, so what??\"":

@@ -1,6 +1,7 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 
+image bg disclaimer = "disclaimer.png"
 image bg intro = "arthur.jpg"
 image bg school = "Fort_Street_High_School_Memorial_Hall.JPG"
 image bg physclass = "physclass"

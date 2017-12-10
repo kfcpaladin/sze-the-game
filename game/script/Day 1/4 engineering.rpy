@@ -26,8 +26,10 @@ label eng1p1:
     hide yang normal
     gra "\"Thank you all, I would like to dedicate this new record to my friends and family for their continued support and their pies\""
     gra "\"Today we are going to learn about planes\""
+    gra "\"And we will {b}not{/b} be playing with vices\""
     gra "\"What does a plane do?\""
     menu:
+        "What does a plane do?"
         "\"It flies\"":
             sze "\"Planes fly through the air\""
             sze "\"Wings can make lift because of air\""
@@ -39,6 +41,7 @@ label eng1p1:
             hide yang normal
             call intelgain from _eng1p2intelgain
             call wilfriendshipgain from _eng1p2wilfriendshipgain
+            wil "\"Perhaps you may have a use after all\""
             jump eng1p1p1
         "\"It swims\"":
             sze "\"Everybody knows that planes swim on the water\""
@@ -138,6 +141,7 @@ label eng1p1naughtycorner:
     gra "\"Aaaah, that's right: you two children in the naughty-corner, do nothing as punishment\""
     pra "\"The school's fate and yours are entwined, like a changing magnetic field and a changing electric field\""
     menu:
+        "Should I stay in the naughty corner?"
         "Stay in the corner":
             pra "\"Goood\""
             pra "\"Feel the corner's strength overwhelming your feeble mind\""
@@ -229,7 +233,7 @@ label eng1p1naughtycorner:
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
-            jump asszembly1
+            call dead from _deathbyrushofshittobraineng1
 
 label timetravel1:
     hide grant normal
@@ -249,7 +253,11 @@ label eng1p1p1:
     wil "\"Yes...indeed what a joke\""
     sze "\"k.....\""
     wil "\"Although it would be interesting if we could replace Moxham with a student...\""
+    dea "\"Oh me, pick me!\""
     sze "\"lol Dean?\""
+    dea "\"Wut, i forget why i wanted to picked for something, lulz\""
+    "Will glares at Dean until he leaves"
+    dea "\"Uhhh yea, I might just go now and stuff, gud luck have fun or something\""
     jump eng1p1p3
 
 label eng1p1p2:
@@ -272,9 +280,11 @@ label eng1p1p3:
     show yang normal
     wil "\"Dean Hou is a dissapointment\""
     wil "\"Dean is a mess\""
-    wil "\"When I achieve the Fourth Reich, dean shall be processed under the eugenics program\""
+    wil "\"When I achieve the Fourth Reich, Dean shall be processed under the eugenics program\""
+    wil "\"Or perhaps he shall serve as the basis of a soylent green prototype\""
     wil "\"We cannot tolerate any non Band 6 students\""
     menu yangrant1:
+        "Err..."
         "\"Heil the Fourth Reich!\"":
             jump yangrantp1_1
         "\"Heil Moxham!\"":
@@ -302,6 +312,7 @@ label yangrantp1_2:
     call fortiangain from _yangrantp1_2fortiangain
     wil "\"The question is... how? hmmmmm\""
     menu:
+            "How should we take over the SRC?"
             "\"We pressure Sarah Desney\"":
 #   we do have picture of weeb sze don't we?
                 sze "\"We pressure Sarah Desney\""
@@ -360,24 +371,30 @@ label eng1p2:
     gra "\"Gather around the front table, children\""
     gra "\"Before we learn about planes, do these worksheets\""
     gra "\"Actually no, do these safety tests on doing work sheets before you can do the worksheets\""
-    wil "\"But sir, We still havent learnt about Vapor cones and the Prandtl–Glauert singularity\""
-    gra "\"...Whats that???\""
+    wil "\"But sir, We still havent learnt about Vapor cones and why the Prandtl–Glauert singularity doesn't {nw}\""
+    gra "\"Whats that???\""
     gra "\"If it's not chocolate, I don't want to hear about it\""
     wil "\"But-\""
     gra "\"Do whatever, just hand in these worksheets whenever\""
     menu:
+        "Should I do these worksheets?"
         "Do worksheets":
             "You decide to do worksheets"
             "..."
+            "Don't put your hand under a drill press"
+            "..."
+            "Should you tickle a band saw operator?"
             "..."
             sze "\"Sir, I have completed the worksheets\""
             gra "\"Hmmm...\""
-            gra "\"You are good Fortian, now just do whatever you want\""
+            gra "\"You are a good Fortian, now just do whatever you want, so long as it isn't playing with vices\""
             sze "These worksheets are fucking useless"
-            sze "I learnt all this stuff in primary school"
+            sze "A primary school student could easily do this"
+            sze "And no one has the right to tell me whether or not I am allowed to play with vices"
             call fortiangain from _eng1p2fortiangain
             "As you sit down, you see someone at the door"
             menu:
+                "Knock Knock"
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
@@ -444,6 +461,7 @@ label eng1p2:
             "Whilst basking in your glory, you hear knocking on the door"
             menu:
                 "Open door":
+                    "Knock Knock"
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music

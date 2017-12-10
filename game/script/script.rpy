@@ -27,7 +27,14 @@ label start:
     $ discovernorton = False
     $ quest2jintiandeliveryservicecofounder = False
     $ metderek = False
+<<<<<<< HEAD
     $ renpy.save("autosave")
+=======
+    
+    scene bg disclaimer
+    with fade
+    pause
+>>>>>>> origin/nub
     scene black
     with fade
     scene bg intro

@@ -532,11 +532,8 @@ init -2:
 #
 # A screen that's included by the default say screen, and adds quick access to
 # several useful functions.
-style quick_menu:
-     size 80
-     color "#fff"
-screen quick_menu():
 
+screen quick_menu():
     # Add an in-game quick menu.
     hbox:
         style_group "quick"

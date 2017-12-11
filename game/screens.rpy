@@ -532,12 +532,14 @@ init -2:
 #
 # A screen that's included by the default say screen, and adds quick access to
 # several useful functions.
+style quick_menu:
+     size 80
+     color "#fff"
 screen quick_menu():
 
     # Add an in-game quick menu.
     hbox:
         style_group "quick"
-        
         xalign 1.0
         yalign 1.0
 
@@ -561,7 +563,7 @@ init -2:
 
     style quick_button_text:
         is default
-        size 12
+        size 20
         idle_color "#8888"
         hover_color "#ccc"
         selected_idle_color "#cc08"

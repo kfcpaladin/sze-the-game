@@ -22,3 +22,4 @@ define but = Character('Aradhya', friendship=0, color="#FFFFFF", image="aradhya"
 define dng = Character('Steven', friendship=0, color="#FFFFFF", image="steven")
 define bil = Character('Bill the Cleaner', friendship=0, color="747D7D", image="bill")
 define ale = Character('Le Calculetor', friendship=0, color="#FFFFFF", image="le")
+define slm = Character('Schlam', friendship=0, color="#FFFFFF", image="shlam")

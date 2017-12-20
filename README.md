@@ -28,7 +28,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 
 | Class                                                                                                   | Description                                                                       |
 | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [ADVCharacter](https://github.com/kfcpaladin/sze-the-game/tree/orphan/renpy/character.py)               | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
+| [ADVCharacter](https://github.com/kfcpaladin/sze-the-game/tree/orphan/renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
 | [MainCharacter](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
 | [Friend](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
 | [Game](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |

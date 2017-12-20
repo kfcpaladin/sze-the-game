@@ -1,4 +1,4 @@
-Wed Dec 20 16:12:19 2017
+Wed Dec 20 16:14:28 2017
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -6,12 +6,12 @@ Ren'Py 6.99.13.2919
 Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.02s
-Loading script took 0.68s
+Loading error handling took 0.03s
+Loading script took 0.25s
 Loading persistent took 0.03s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.14s
+Running init code took 0.12s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -26,7 +26,7 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.08s
-Prepare screens took 0.07s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.04s
 Running _start took 0.00s
@@ -35,7 +35,7 @@ Interface start took 0.01s
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1279, 719) drawable=(1279, 719)
+Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
 Vendor: 'X.Org'
 Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
 Version: '3.0 Mesa 17.0.7'
@@ -295,13 +295,19 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.54961895943s
+Total time until interface ready: 1.1247150898s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.020490 seconds.
-- Frame drawn at 0.030476 seconds.
-- Frame drawn at 0.046816 seconds.
-- Frame drawn at 0.064562 seconds.
-- 0.064562 seconds to render 5 frames.
-The window was minimized.
-The window was restored.
+- Frame drawn at 0.021942 seconds.
+- Frame drawn at 0.031154 seconds.
+- Frame drawn at 0.048069 seconds.
+- Frame drawn at 0.064913 seconds.
+- 0.064913 seconds to render 5 frames.
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(958, 493) drawable=(958, 493)
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)

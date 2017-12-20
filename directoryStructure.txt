@@ -13,15 +13,6 @@
 │   │   ├── Game.rpyc
 │   │   ├── MainCharacter.rpy
 │   │   └── MainCharacter.rpyc
-│   ├── classesInit
-│   │   ├── characterDefinition.rpy
-│   │   ├── characterDefinition.rpyc
-│   │   ├── friends.rpy
-│   │   ├── friends.rpyc
-│   │   ├── game.rpy
-│   │   ├── game.rpyc
-│   │   ├── sze.rpy
-│   │   └── sze.rpyc
 │   ├── images
 │   │   ├── 91_big.jpg
 │   │   ├── arthur.jpg
@@ -85,6 +76,15 @@
 │   │   ├── Workshopdark.jpg
 │   │   ├── Workshop.jpg
 │   │   └── yang1.png
+│   ├── instances
+│   │   ├── characterDefinition.rpy
+│   │   ├── characterDefinition.rpyc
+│   │   ├── friends.rpy
+│   │   ├── friends.rpyc
+│   │   ├── game.rpy
+│   │   ├── game.rpyc
+│   │   ├── sze.rpy
+│   │   └── sze.rpyc
 │   ├── music
 │   │   ├── CongressNeptune.ogg
 │   │   ├── DeemoPaper Plane's Adventure.ogg

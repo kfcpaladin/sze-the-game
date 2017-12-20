@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/easterEggs/god.rpy", line 1: expected ':' not found.
-    python init:
-           ^
+File "game/story/dead.rpy", line 14: expected statement.
+    playmusic("SFX/respawn.ogg", loop=False)
+                                            ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -11,7 +11,7 @@ label dead:
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
             scene bg ded
             with fade
-            playmusic("SFX/respawn.ogg", loop=False)
+            $ playmusic("SFX/respawn.ogg", loop=False)
             "The Lord of Light has granted me another chance..."
             jump start
 

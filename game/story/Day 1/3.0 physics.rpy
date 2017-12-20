@@ -140,7 +140,7 @@ label phys1p2p1:
     hide rusali normal
     $ _phys1p2p1t = True
     $ _phys1p2p3t = False
-    call phys1p2p4 from _phys1p2p1callphys1p2p4
+    call phys1p2p4
     if phys1p2p4t is True:
         stop music
         play music "p4LikeADreamComeTrue.ogg" loop
@@ -197,7 +197,7 @@ label phys1p2p3:
     flu "\"Why are there paper balls in front of you\""
     $ _phys1p2p1t = False
     $ _phys1p2p3t = True
-    call phys1p2p4 from _call_phys1p2p4_1
+    call phys1p2p4
     if _phys1p2p4t is True:
         sze "\"...\""
         dea "\"Chao threw it at Arthur\""

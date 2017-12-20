@@ -13,7 +13,7 @@ label econ1:
     "But all was not well"
     "As usual, the first class was underprepared with no content, so i guess it's time for a kahoot!"
     $ game.kahoot = 0
-    call econ1kahoot1 from _call_econ1kahoot1
+    call econ1kahoot1
     "Score is [game.kahoot]"
     jump dead
 

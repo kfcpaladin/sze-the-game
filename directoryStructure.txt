@@ -8,8 +8,11 @@
 │   │   └── screens.rpyb
 │   ├── classes
 │   │   ├── Friend.rpy
+│   │   ├── Friend.rpyc
 │   │   ├── Game.rpy
-│   │   └── MainCharacter.rpy
+│   │   ├── Game.rpyc
+│   │   ├── MainCharacter.rpy
+│   │   └── MainCharacter.rpyc
 │   ├── classesInit
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
@@ -1381,4 +1384,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1286 files
+95 directories, 1289 files

@@ -194,7 +194,7 @@ label fugitivesfromasszembly1:
                     jit "\"{cps=*0.2}...{/cps} See what I did there >.< EHHHHHHH???\""
                     sze "\"fuk off\""
                     jit "\"Fine let's go\""
-                    call asszemblyjigolo1encounter from _call_asszemblyjigolo1encounter
+                    call asszemblyjigolo1encounter
                     jit "\"That was too fucking close\""
                     jump asszemblyjigolokindagaytoilet
 
@@ -206,7 +206,7 @@ label fugitivesfromasszembly1:
                     jit "\"Whoa, whoa, Arthur is a badass, step back\""
                     $ sze.loss("fort")
                     jit "\"You lead, then\""
-                    call asszemblyjigolo1encounter from _call_asszemblyjigolo1encounter_1
+                    call asszemblyjigolo1encounter 
                     jump asszemblyjigolodiscoverthefood
 
                 "\"Play with vices\"":
@@ -219,7 +219,7 @@ label fugitivesfromasszembly1:
                     jit "\"Your mum's pussy\""
                     sze "\"...can you not\""
                     jit "\"soz, you lead\""
-                    call asszemblyjigolo1encounter from _call_asszemblyjigolo1encounter_2
+                    call asszemblyjigolo1encounter
                     jump asszemblyjigoloviceland
 
 #    to be continued...

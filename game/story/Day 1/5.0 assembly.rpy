@@ -222,7 +222,7 @@ label asszembly1_3:
             jump asszembly1_4
         "Talk":
             if game.electionPromise is True:
-                call quest1electionpromise1_a from _call_quest1electionpromise1_a
+                call quest1electionpromise1_a
                 jump asszembly1_4
             else:
                 "But the silhouette of Serena, seated four rows ahead, catches your eye"
@@ -308,7 +308,7 @@ label asszembly1_3:
                                     "You talk more with them to discuss plans before Yang turns away"
                                     sze "I have idea...maybe Derek and Rick have better idea for this"
                                     $ game.electionPromise = True
-                                    call quest1electionpromise1_a from _call_quest1electionpromise1_a_1
+                                    call quest1electionpromise1_a
                                     jump asszembly1_4
                         else:
                             sze "\"I wasn't drooling tho\""

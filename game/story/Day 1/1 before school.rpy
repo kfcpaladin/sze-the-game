@@ -35,7 +35,7 @@ label schoolday1:
         sze "\"She passes through the quad in 5 minutes, time to hide\""
         sze "\"...\""
         sze "\"I safe now\""
-        call postrollcall1 from _call_postrollcall1
+        call postrollcall1
     else:
         "Oh shit, the Principal..."
         mox "\"Wow, you are a good Fortian\""

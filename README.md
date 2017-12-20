@@ -38,7 +38,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | Class         | Instance names  |
 | ------------- | --------------- |
 | MainCharacter | [sze](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/sze.rpy)  |
-| Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/CharacterDefinition.rpy) |
+| Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/friends.rpy) |
 | Game          | [game](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/game.rpy)|
 
 ### Usage inside renpy script

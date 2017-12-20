@@ -16,8 +16,8 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 
 ## Game directory layout
 
-| Folder                                 | Description                                                       |
-| -------------------------------------- | ----------------------------------------------------------------- |
+| Folder                         | Description                                                       |
+| ------------------------------ | ----------------------------------------------------------------- |
 | [classes](./game/classes)      | Stores python scripts containing the classes                      |
 | [images](./game/images)        | Stores the images declared by default in renpy                    |
 | [instances](./game/instances)  | Stores pythons scripts which initialise all the instances         |
@@ -28,8 +28,8 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 ## New classes and instances
 ### Class descriptions
 
-| Class                                                      | Description                                                                       |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Class                                              | Description                                                                       |
+| -------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [ADVCharacter](./renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
 | [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
 | [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |

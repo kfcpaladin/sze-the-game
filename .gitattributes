@@ -2,7 +2,9 @@
 * text=auto
 
 # Custom for Visual Studio
-*.cs     diff=csharp
+*rpy   diff=renpy 
+*.cs   diff=csharp
+*.py   diff=python
 
 # Standard to msysgit
 *.doc	 diff=astextplain

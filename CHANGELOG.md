@@ -7,6 +7,8 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Completed initial draft of new version
 * Fixed incorrect variable names that occurred during conversion to new format
 * Added a readme
+* Changed implementation of configurable music directories to preserve core renpy files so that Travis autotest can be done
+* Added playmusic() and stopmusic() functions to replace *play music* and *stop music* so that directory of audio files can be configurable
 
 **21/12/2017**
 * Added a change log

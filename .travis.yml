@@ -1,0 +1,13 @@
+language: python
+python:
+ - "2.7"
+# command to install dependencies
+install:
+  - cd ..
+  - wget http://www.renpy.org/dl/6.99.1/renpy-6.99.1-sdk.tar.bz2
+  - tar xf renpy-6.99.1-sdk.tar.bz2
+  - rm renpy-6.99.1-sdk.tar.bz2
+  - mv renpy-6.99.1-sdk renpy
+  - cd renpy
+# command to run tests
+script: ./renpy.sh "../sze-the-game/" lint && ./renpy.sh launcher distribute "../sze-the-game/"

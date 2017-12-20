@@ -11,7 +11,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 
 1. Restructures the /game directory so that it is easier to manage  
 2. Introduces subclasses to the ADVCharacter used in master/nub to offer specialisation
-3. Uses an updated renpy engine *(20/12/2017)*
+3. Uses an updated renpy engine to [*renpy-6.99.13*](https://www.renpy.org/dl/6.99.13/)
 4. Added redirectable music directory
 
 ## Game directory layout

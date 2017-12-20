@@ -1,0 +1,9 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/easterEggs/god.rpy", line 1: expected ':' not found.
+    python init:
+           ^
+
+Ren'Py Version: Ren'Py 6.99.13.2919

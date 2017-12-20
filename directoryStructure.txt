@@ -1,0 +1,1387 @@
+.
+├── directoryStructure.txt
+├── errors.txt
+├── game
+│   ├── cache
+│   │   ├── bytecode.rpyb
+│   │   ├── pyanalysis.rpyb
+│   │   └── screens.rpyb
+│   ├── classes
+│   │   ├── friend.rpy
+│   │   ├── friend.rpyc
+│   │   ├── game.rpy
+│   │   ├── game.rpyc
+│   │   ├── mainCharacter.rpy
+│   │   └── mainCharacter.rpyc
+│   ├── classesInit
+│   │   ├── characterDefinition.rpy
+│   │   ├── characterDefinition.rpyc
+│   │   ├── friends.rpy
+│   │   ├── friends.rpyc
+│   │   ├── game.rpy
+│   │   ├── game.rpyc
+│   │   ├── sze.rpy
+│   │   └── sze.rpyc
+│   ├── images
+│   │   ├── 91_big.jpg
+│   │   ├── arthur.jpg
+│   │   ├── arthurside.png
+│   │   ├── billthecleaner.png
+│   │   ├── calculetor.png
+│   │   ├── chao2.png
+│   │   ├── chaohappy.png
+│   │   ├── chaoport.png
+│   │   ├── CmEdPF6UgAAQQgF.jpg
+│   │   ├── CTf1fsBUwAAIe9a.jpg
+│   │   ├── CWY6FxMUsAIfDuO.jpg
+│   │   ├── CZ2Yss_UAAAPRqz.jpg
+│   │   ├── darkstreet.jpg
+│   │   ├── deanside.png
+│   │   ├── derkiederkside.png
+│   │   ├── disclaimer.png
+│   │   ├── dreamtree.png
+│   │   ├── eoarchean.jpg
+│   │   ├── fields_by_applesin_mod.jpg
+│   │   ├── forthandballarea.jpg
+│   │   ├── fortrowecorridor.jpg
+│   │   ├── Fort_Street_High_School_Memorial_Hall.JPG
+│   │   ├── garry.png
+│   │   ├── grant1.jpg
+│   │   ├── grant.png
+│   │   ├── hall.jpg
+│   │   ├── jitian.png
+│   │   ├── kirby.png
+│   │   ├── lecalc.png
+│   │   ├── logo.png
+│   │   ├── map.png
+│   │   ├── Map selected.png
+│   │   ├── map unavailable.png
+│   │   ├── moxhamhappy.png
+│   │   ├── moxhamside.png
+│   │   ├── moxhamunhappy.png
+│   │   ├── NortonSt.png
+│   │   ├── parisafremov.jpg
+│   │   ├── physclass.png
+│   │   ├── pragash2.png
+│   │   ├── pragashnormal.png
+│   │   ├── pragash.png
+│   │   ├── principalofficedoor.jpg
+│   │   ├── principaloffice.jpg
+│   │   ├── rick.png
+│   │   ├── RRRROOOOOOOYYYYYYYYYboi.png
+│   │   ├── rusalidropkick.png
+│   │   ├── rusali.png
+│   │   ├── rusali_side.png
+│   │   ├── strathloadingdock.jpg
+│   │   ├── strathloadingdocksign.jpg
+│   │   ├── sze1.png
+│   │   ├── szeceded.jpg
+│   │   ├── toddside.png
+│   │   ├── toilet.png
+│   │   ├── willis1.png
+│   │   ├── willisside1.png
+│   │   ├── willisside.png
+│   │   ├── willyin.png
+│   │   ├── Workshopdark.jpg
+│   │   ├── Workshop.jpg
+│   │   └── yang1.png
+│   ├── music
+│   │   ├── CongressNeptune.mp3
+│   │   ├── DeemoPaper Plane's Adventure.mp3
+│   │   ├── Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.mp3
+│   │   ├── LeCastleVaniaLEDSpiralsJW.mp3
+│   │   ├── ManuelGasGasGas(InitialD).mp3
+│   │   ├── p3IwatodaiDorm.mp3
+│   │   ├── p3_JikaNetTanaka.mp3
+│   │   ├── p3MassDestruction.mp3
+│   │   ├── p3WhenTheMoon'sReachingOutStars.mp3
+│   │   ├── p4LikeADreamComeTrue.mp3
+│   │   ├── p4Reasoning.mp3
+│   │   ├── p4Traumerei.mp3
+│   │   ├── p4YouthfulLunch.mp3
+│   │   ├── p5BeneathTheMaskInstrumental.mp3
+│   │   ├── PinkFloydAnotherBrickInTheWall.mp3
+│   │   ├── RaxlenSliceBG8bit.mp3
+│   │   ├── rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.mp3
+│   │   ├── SFX
+│   │   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3
+│   │   │   ├── game_over.mp3
+│   │   │   ├── kahoot.mp3
+│   │   │   ├── respawn.mp3
+│   │   │   ├── slayer.mp3
+│   │   │   └── test.txt
+│   │   ├── terroristyterroristsong.mp3
+│   │   ├── TheRoomOSTMainTheme.mp3
+│   │   └── VarienThroneOfRavens.mp3
+│   ├── saves
+│   │   ├── auto-10-LT1.save
+│   │   ├── auto-1-LT1.save
+│   │   ├── auto-2-LT1.save
+│   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
+│   │   ├── autosave-LT1.save
+│   │   └── persistent
+│   ├── scripts
+│   │   ├── easterEggs.rpy
+│   │   ├── easterEggs.rpyc
+│   │   ├── images.rpy
+│   │   ├── images.rpyc
+│   │   ├── options.rpy
+│   │   ├── options.rpyc
+│   │   ├── screens.rpy
+│   │   └── screens.rpyc
+│   ├── script_version.txt
+│   └── story
+│       ├── Day 1
+│       │   ├── 1 before school.rpy
+│       │   ├── 1 before school.rpyc
+│       │   ├── 2 after rollcall.rpy
+│       │   ├── 2 after rollcall.rpyc
+│       │   ├── 3.0 physics.rpy
+│       │   ├── 3.0 physics.rpyc
+│       │   ├── 3.1 office.rpy
+│       │   ├── 3.1 office.rpyc
+│       │   ├── 4 engineering.rpy
+│       │   ├── 4 engineering.rpyc
+│       │   ├── 5.0 assembly.rpy
+│       │   ├── 5.0 assembly.rpyc
+│       │   ├── 5.1 jig assembly.rpy
+│       │   ├── 5.1 jig assembly.rpyc
+│       │   ├── 5.2 jig toilet.rpy
+│       │   ├── 5.2 jig toilet.rpyc
+│       │   ├── 5.3 jig food.rpy
+│       │   ├── 5.3 jig food.rpyc
+│       │   ├── 5.4 jig vices.rpy
+│       │   ├── 5.4 jig vices.rpyc
+│       │   ├── 5.5 assembly shitstorm.rpy
+│       │   ├── 5.5 assembly shitstorm.rpyc
+│       │   ├── 6.0 recess.rpy
+│       │   ├── 6.0 recess.rpyc
+│       │   ├── 7 english.rpy
+│       │   ├── 7 english.rpyc
+│       │   ├── 8 maths.rpy
+│       │   ├── 8 maths.rpyc
+│       │   ├── 9 economics.rpy
+│       │   └── 9 economics.rpyc
+│       ├── dead.rpy
+│       ├── dead.rpyc
+│       ├── script.rpy
+│       └── script.rpyc
+├── lib
+│   ├── linux-i686
+│   │   ├── eggs
+│   │   │   ├── pyasn1-0.1.7-py2.7.egg
+│   │   │   └── rsa-3.1.4-py2.7.egg
+│   │   ├── lib
+│   │   │   └── python2.7
+│   │   │       ├── _abcoll.pyo
+│   │   │       ├── abc.pyo
+│   │   │       ├── array.so
+│   │   │       ├── binascii.so
+│   │   │       ├── _bisect.so
+│   │   │       ├── bz2.so
+│   │   │       ├── _collections.so
+│   │   │       ├── copy_reg.pyo
+│   │   │       ├── cPickle.so
+│   │   │       ├── cStringIO.so
+│   │   │       ├── _ctypes.so
+│   │   │       ├── datetime.so
+│   │   │       ├── fcntl.so
+│   │   │       ├── _functools.so
+│   │   │       ├── genericpath.pyo
+│   │   │       ├── grp.so
+│   │   │       ├── _heapq.so
+│   │   │       ├── _io.so
+│   │   │       ├── itertools.so
+│   │   │       ├── _json.so
+│   │   │       ├── lib-dynload
+│   │   │       │   └── dynload.txt
+│   │   │       ├── linecache.pyo
+│   │   │       ├── _locale.so
+│   │   │       ├── _lsprof.so
+│   │   │       ├── math.so
+│   │   │       ├── _md5.so
+│   │   │       ├── operator.so
+│   │   │       ├── os.pyo
+│   │   │       ├── posixpath.pyo
+│   │   │       ├── pyexpat.so
+│   │   │       ├── pygame_sdl2
+│   │   │       │   ├── color.so
+│   │   │       │   ├── compat.pyo
+│   │   │       │   ├── controller.so
+│   │   │       │   ├── display.so
+│   │   │       │   ├── draw.so
+│   │   │       │   ├── error.so
+│   │   │       │   ├── event.so
+│   │   │       │   ├── font.so
+│   │   │       │   ├── gfxdraw.so
+│   │   │       │   ├── image.so
+│   │   │       │   ├── __init__.pyo
+│   │   │       │   ├── joystick.so
+│   │   │       │   ├── key.so
+│   │   │       │   ├── locals.so
+│   │   │       │   ├── mouse.so
+│   │   │       │   ├── pygame_time.so
+│   │   │       │   ├── rect.so
+│   │   │       │   ├── rwobject.so
+│   │   │       │   ├── scrap.so
+│   │   │       │   ├── sprite.pyo
+│   │   │       │   ├── surface.so
+│   │   │       │   ├── sysfont.pyo
+│   │   │       │   ├── time.pyo
+│   │   │       │   ├── transform.so
+│   │   │       │   └── version.pyo
+│   │   │       ├── _random.so
+│   │   │       ├── renpy
+│   │   │       │   ├── audio
+│   │   │       │   │   └── renpysound.so
+│   │   │       │   ├── display
+│   │   │       │   │   ├── accelerator.so
+│   │   │       │   │   └── render.so
+│   │   │       │   ├── gl
+│   │   │       │   │   ├── gl1.so
+│   │   │       │   │   ├── gldraw.so
+│   │   │       │   │   ├── glenviron_fixed.so
+│   │   │       │   │   ├── glenviron_limited.so
+│   │   │       │   │   ├── glenviron_shader.so
+│   │   │       │   │   ├── glrtt_copy.so
+│   │   │       │   │   ├── glrtt_fbo.so
+│   │   │       │   │   ├── gl.so
+│   │   │       │   │   └── gltexture.so
+│   │   │       │   ├── __init__.pyo
+│   │   │       │   ├── parsersupport.so
+│   │   │       │   ├── styledata
+│   │   │       │   │   ├── style_activate_functions.so
+│   │   │       │   │   ├── styleclass.so
+│   │   │       │   │   ├── style_functions.so
+│   │   │       │   │   ├── style_hover_functions.so
+│   │   │       │   │   ├── style_idle_functions.so
+│   │   │       │   │   ├── style_insensitive_functions.so
+│   │   │       │   │   ├── style_selected_activate_functions.so
+│   │   │       │   │   ├── style_selected_functions.so
+│   │   │       │   │   ├── style_selected_hover_functions.so
+│   │   │       │   │   ├── style_selected_idle_functions.so
+│   │   │       │   │   ├── style_selected_insensitive_functions.so
+│   │   │       │   │   └── stylesets.so
+│   │   │       │   ├── style.so
+│   │   │       │   └── text
+│   │   │       │       ├── ftfont.so
+│   │   │       │       ├── textsupport.so
+│   │   │       │       └── texwrap.so
+│   │   │       ├── _renpybidi.so
+│   │   │       ├── _renpy.so
+│   │   │       ├── select.so
+│   │   │       ├── _sha256.so
+│   │   │       ├── _sha512.so
+│   │   │       ├── _sha.so
+│   │   │       ├── site.pyo
+│   │   │       ├── _socket.so
+│   │   │       ├── stat.pyo
+│   │   │       ├── strop.so
+│   │   │       ├── _struct.so
+│   │   │       ├── time.so
+│   │   │       ├── types.pyo
+│   │   │       ├── unicodedata.so
+│   │   │       ├── UserDict.pyo
+│   │   │       ├── warnings.pyo
+│   │   │       ├── _weakrefset.pyo
+│   │   │       └── zlib.so
+│   │   ├── libavcodec.so.57
+│   │   ├── libavformat.so.57
+│   │   ├── libavresample.so.3
+│   │   ├── libavutil.so.55
+│   │   ├── libfreetype.so.6
+│   │   ├── libGLEW.so.1.7
+│   │   ├── libjpeg.so.62
+│   │   ├── libpng12.so.0
+│   │   ├── libpython2.7.so.1.0
+│   │   ├── libSDL2-2.0.so.0
+│   │   ├── libSDL2_image-2.0.so.0
+│   │   ├── libSDL2_ttf-2.0.so.0
+│   │   ├── libswresample.so.2
+│   │   ├── libswscale.so.4
+│   │   ├── libz.so.1
+│   │   ├── python
+│   │   ├── pythonw
+│   │   ├── sze-the-game
+│   │   ├── zsync
+│   │   └── zsyncmake
+│   ├── linux-x86_64
+│   │   ├── eggs
+│   │   │   ├── pyasn1-0.1.7-py2.7.egg
+│   │   │   └── rsa-3.1.4-py2.7.egg
+│   │   ├── lib
+│   │   │   └── python2.7
+│   │   │       ├── _abcoll.pyo
+│   │   │       ├── abc.pyo
+│   │   │       ├── array.so
+│   │   │       ├── binascii.so
+│   │   │       ├── _bisect.so
+│   │   │       ├── bz2.so
+│   │   │       ├── _collections.so
+│   │   │       ├── copy_reg.pyo
+│   │   │       ├── cPickle.so
+│   │   │       ├── cStringIO.so
+│   │   │       ├── _ctypes.so
+│   │   │       ├── datetime.so
+│   │   │       ├── fcntl.so
+│   │   │       ├── _functools.so
+│   │   │       ├── genericpath.pyo
+│   │   │       ├── grp.so
+│   │   │       ├── _heapq.so
+│   │   │       ├── _io.so
+│   │   │       ├── itertools.so
+│   │   │       ├── _json.so
+│   │   │       ├── lib-dynload
+│   │   │       │   └── dynload.txt
+│   │   │       ├── linecache.pyo
+│   │   │       ├── _locale.so
+│   │   │       ├── _lsprof.so
+│   │   │       ├── math.so
+│   │   │       ├── _md5.so
+│   │   │       ├── operator.so
+│   │   │       ├── os.pyo
+│   │   │       ├── posixpath.pyo
+│   │   │       ├── pyexpat.so
+│   │   │       ├── pygame_sdl2
+│   │   │       │   ├── color.so
+│   │   │       │   ├── compat.pyo
+│   │   │       │   ├── controller.so
+│   │   │       │   ├── display.so
+│   │   │       │   ├── draw.so
+│   │   │       │   ├── error.so
+│   │   │       │   ├── event.so
+│   │   │       │   ├── font.so
+│   │   │       │   ├── gfxdraw.so
+│   │   │       │   ├── image.so
+│   │   │       │   ├── __init__.pyo
+│   │   │       │   ├── joystick.so
+│   │   │       │   ├── key.so
+│   │   │       │   ├── locals.so
+│   │   │       │   ├── mouse.so
+│   │   │       │   ├── pygame_time.so
+│   │   │       │   ├── rect.so
+│   │   │       │   ├── rwobject.so
+│   │   │       │   ├── scrap.so
+│   │   │       │   ├── sprite.pyo
+│   │   │       │   ├── surface.so
+│   │   │       │   ├── sysfont.pyo
+│   │   │       │   ├── time.pyo
+│   │   │       │   ├── transform.so
+│   │   │       │   └── version.pyo
+│   │   │       ├── _random.so
+│   │   │       ├── renpy
+│   │   │       │   ├── audio
+│   │   │       │   │   └── renpysound.so
+│   │   │       │   ├── display
+│   │   │       │   │   ├── accelerator.so
+│   │   │       │   │   └── render.so
+│   │   │       │   ├── gl
+│   │   │       │   │   ├── gl1.so
+│   │   │       │   │   ├── gldraw.so
+│   │   │       │   │   ├── glenviron_fixed.so
+│   │   │       │   │   ├── glenviron_limited.so
+│   │   │       │   │   ├── glenviron_shader.so
+│   │   │       │   │   ├── glrtt_copy.so
+│   │   │       │   │   ├── glrtt_fbo.so
+│   │   │       │   │   ├── gl.so
+│   │   │       │   │   └── gltexture.so
+│   │   │       │   ├── __init__.pyo
+│   │   │       │   ├── parsersupport.so
+│   │   │       │   ├── styledata
+│   │   │       │   │   ├── style_activate_functions.so
+│   │   │       │   │   ├── styleclass.so
+│   │   │       │   │   ├── style_functions.so
+│   │   │       │   │   ├── style_hover_functions.so
+│   │   │       │   │   ├── style_idle_functions.so
+│   │   │       │   │   ├── style_insensitive_functions.so
+│   │   │       │   │   ├── style_selected_activate_functions.so
+│   │   │       │   │   ├── style_selected_functions.so
+│   │   │       │   │   ├── style_selected_hover_functions.so
+│   │   │       │   │   ├── style_selected_idle_functions.so
+│   │   │       │   │   ├── style_selected_insensitive_functions.so
+│   │   │       │   │   └── stylesets.so
+│   │   │       │   ├── style.so
+│   │   │       │   └── text
+│   │   │       │       ├── ftfont.so
+│   │   │       │       ├── textsupport.so
+│   │   │       │       └── texwrap.so
+│   │   │       ├── _renpybidi.so
+│   │   │       ├── _renpy.so
+│   │   │       ├── select.so
+│   │   │       ├── _sha256.so
+│   │   │       ├── _sha512.so
+│   │   │       ├── _sha.so
+│   │   │       ├── site.pyo
+│   │   │       ├── _socket.so
+│   │   │       ├── stat.pyo
+│   │   │       ├── strop.so
+│   │   │       ├── _struct.so
+│   │   │       ├── time.so
+│   │   │       ├── types.pyo
+│   │   │       ├── unicodedata.so
+│   │   │       ├── UserDict.pyo
+│   │   │       ├── warnings.pyo
+│   │   │       ├── _weakrefset.pyo
+│   │   │       └── zlib.so
+│   │   ├── libavcodec.so.57
+│   │   ├── libavformat.so.57
+│   │   ├── libavresample.so.3
+│   │   ├── libavutil.so.55
+│   │   ├── libfreetype.so.6
+│   │   ├── libGLEW.so.1.7
+│   │   ├── libjpeg.so.62
+│   │   ├── libpng12.so.0
+│   │   ├── libpython2.7.so.1.0
+│   │   ├── libSDL2-2.0.so.0
+│   │   ├── libSDL2_image-2.0.so.0
+│   │   ├── libSDL2_ttf-2.0.so.0
+│   │   ├── libswresample.so.2
+│   │   ├── libswscale.so.4
+│   │   ├── libz.so.1
+│   │   ├── python
+│   │   ├── pythonw
+│   │   ├── sze-the-game
+│   │   ├── zsync
+│   │   └── zsyncmake
+│   ├── pythonlib2.7
+│   │   ├── argparse.pyo
+│   │   ├── ast.pyo
+│   │   ├── atexit.pyo
+│   │   ├── base64.pyo
+│   │   ├── bisect.pyo
+│   │   ├── calendar.pyo
+│   │   ├── Carbon
+│   │   │   ├── File.pyo
+│   │   │   ├── Files.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   └── Res.pyo
+│   │   ├── cmd.pyo
+│   │   ├── codecs.pyo
+│   │   ├── collections.pyo
+│   │   ├── colorsys.pyo
+│   │   ├── compileall.pyo
+│   │   ├── contextlib.pyo
+│   │   ├── cookielib.pyo
+│   │   ├── copy.pyo
+│   │   ├── cProfile.pyo
+│   │   ├── ctypes
+│   │   │   ├── _endian.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   └── wintypes.pyo
+│   │   ├── decimal.pyo
+│   │   ├── difflib.pyo
+│   │   ├── dis.pyo
+│   │   ├── dummy_threading.pyo
+│   │   ├── dummy_thread.pyo
+│   │   ├── email
+│   │   │   ├── base64mime.pyo
+│   │   │   ├── charset.pyo
+│   │   │   ├── encoders.pyo
+│   │   │   ├── errors.pyo
+│   │   │   ├── feedparser.pyo
+│   │   │   ├── generator.pyo
+│   │   │   ├── header.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   ├── iterators.pyo
+│   │   │   ├── message.pyo
+│   │   │   ├── mime
+│   │   │   │   ├── audio.pyo
+│   │   │   │   ├── base.pyo
+│   │   │   │   ├── image.pyo
+│   │   │   │   ├── __init__.pyo
+│   │   │   │   ├── message.pyo
+│   │   │   │   ├── multipart.pyo
+│   │   │   │   ├── nonmultipart.pyo
+│   │   │   │   └── text.pyo
+│   │   │   ├── _parseaddr.pyo
+│   │   │   ├── parser.pyo
+│   │   │   ├── quoprimime.pyo
+│   │   │   └── utils.pyo
+│   │   ├── encodings
+│   │   │   ├── aliases.pyo
+│   │   │   ├── ascii.pyo
+│   │   │   ├── base64_codec.pyo
+│   │   │   ├── hex_codec.pyo
+│   │   │   ├── idna.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   ├── latin_1.pyo
+│   │   │   ├── mbcs.pyo
+│   │   │   ├── raw_unicode_escape.pyo
+│   │   │   ├── string_escape.pyo
+│   │   │   ├── unicode_escape.pyo
+│   │   │   ├── utf_16_be.pyo
+│   │   │   ├── utf_16_le.pyo
+│   │   │   ├── utf_16.pyo
+│   │   │   ├── utf_32_be.pyo
+│   │   │   ├── utf_8.pyo
+│   │   │   └── zlib_codec.pyo
+│   │   ├── fnmatch.pyo
+│   │   ├── ftplib.pyo
+│   │   ├── functools.pyo
+│   │   ├── __future__.pyo
+│   │   ├── getopt.pyo
+│   │   ├── gettext.pyo
+│   │   ├── glob.pyo
+│   │   ├── gzip.pyo
+│   │   ├── hashlib.pyo
+│   │   ├── heapq.pyo
+│   │   ├── httplib.pyo
+│   │   ├── imghdr.pyo
+│   │   ├── importlib
+│   │   │   └── __init__.pyo
+│   │   ├── inspect.pyo
+│   │   ├── io.pyo
+│   │   ├── json
+│   │   │   ├── decoder.pyo
+│   │   │   ├── encoder.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   └── scanner.pyo
+│   │   ├── keyword.pyo
+│   │   ├── locale.pyo
+│   │   ├── logging
+│   │   │   └── __init__.pyo
+│   │   ├── _LWPCookieJar.pyo
+│   │   ├── mimetools.pyo
+│   │   ├── mimetypes.pyo
+│   │   ├── _MozillaCookieJar.pyo
+│   │   ├── nturl2path.pyo
+│   │   ├── numbers.pyo
+│   │   ├── opcode.pyo
+│   │   ├── optparse.pyo
+│   │   ├── pickle.pyo
+│   │   ├── platform.pyo
+│   │   ├── plistlib.pyo
+│   │   ├── pstats.pyo
+│   │   ├── pyasn1
+│   │   │   ├── codec
+│   │   │   │   ├── ber
+│   │   │   │   │   ├── decoder.pyo
+│   │   │   │   │   ├── encoder.pyo
+│   │   │   │   │   ├── eoo.pyo
+│   │   │   │   │   └── __init__.pyo
+│   │   │   │   ├── cer
+│   │   │   │   │   ├── decoder.pyo
+│   │   │   │   │   ├── encoder.pyo
+│   │   │   │   │   └── __init__.pyo
+│   │   │   │   ├── der
+│   │   │   │   │   ├── decoder.pyo
+│   │   │   │   │   ├── encoder.pyo
+│   │   │   │   │   └── __init__.pyo
+│   │   │   │   └── __init__.pyo
+│   │   │   ├── compat
+│   │   │   │   ├── __init__.pyo
+│   │   │   │   └── octets.pyo
+│   │   │   ├── debug.pyo
+│   │   │   ├── error.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   └── type
+│   │   │       ├── base.pyo
+│   │   │       ├── char.pyo
+│   │   │       ├── constraint.pyo
+│   │   │       ├── error.pyo
+│   │   │       ├── __init__.pyo
+│   │   │       ├── namedtype.pyo
+│   │   │       ├── namedval.pyo
+│   │   │       ├── tagmap.pyo
+│   │   │       ├── tag.pyo
+│   │   │       ├── univ.pyo
+│   │   │       └── useful.pyo
+│   │   ├── py_compile.pyo
+│   │   ├── quopri.pyo
+│   │   ├── random.pyo
+│   │   ├── repr.pyo
+│   │   ├── re.pyo
+│   │   ├── rfc822.pyo
+│   │   ├── rsa
+│   │   │   ├── asn1.pyo
+│   │   │   ├── common.pyo
+│   │   │   ├── _compat.pyo
+│   │   │   ├── core.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   ├── key.pyo
+│   │   │   ├── parallel.pyo
+│   │   │   ├── pem.pyo
+│   │   │   ├── pkcs1.pyo
+│   │   │   ├── prime.pyo
+│   │   │   ├── randnum.pyo
+│   │   │   ├── transform.pyo
+│   │   │   └── varblock.pyo
+│   │   ├── shlex.pyo
+│   │   ├── shutil.pyo
+│   │   ├── socket.pyo
+│   │   ├── sre_compile.pyo
+│   │   ├── sre_constants.pyo
+│   │   ├── sre_parse.pyo
+│   │   ├── StringIO.pyo
+│   │   ├── stringprep.pyo
+│   │   ├── string.pyo
+│   │   ├── _strptime.pyo
+│   │   ├── struct.pyo
+│   │   ├── subprocess.pyo
+│   │   ├── tarfile.pyo
+│   │   ├── tempfile.pyo
+│   │   ├── textwrap.pyo
+│   │   ├── _threading_local.pyo
+│   │   ├── threading.pyo
+│   │   ├── tokenize.pyo
+│   │   ├── token.pyo
+│   │   ├── traceback.pyo
+│   │   ├── urllib2.pyo
+│   │   ├── urllib.pyo
+│   │   ├── urlparse.pyo
+│   │   ├── uu.pyo
+│   │   ├── weakref.pyo
+│   │   ├── webbrowser.pyo
+│   │   ├── win32con.pyo
+│   │   ├── xml
+│   │   │   ├── etree
+│   │   │   │   ├── ElementPath.pyo
+│   │   │   │   ├── ElementTree.pyo
+│   │   │   │   └── __init__.pyo
+│   │   │   ├── __init__.pyo
+│   │   │   └── parsers
+│   │   │       ├── expat.pyo
+│   │   │       └── __init__.pyo
+│   │   └── zipfile.pyo
+│   └── windows-i686
+│       ├── avcodec-57.dll
+│       ├── avformat-57.dll
+│       ├── avutil-55.dll
+│       ├── dxwebsetup.exe
+│       ├── glew32.dll
+│       ├── Lib
+│       │   ├── _abcoll.pyo
+│       │   ├── abc.pyo
+│       │   ├── bz2.pyd
+│       │   ├── copy_reg.pyo
+│       │   ├── _ctypes.pyd
+│       │   ├── genericpath.pyo
+│       │   ├── _hashlib.pyd
+│       │   ├── lib-dynload
+│       │   │   └── dynload.txt
+│       │   ├── linecache.pyo
+│       │   ├── ntpath.pyo
+│       │   ├── os.pyo
+│       │   ├── posixpath.pyo
+│       │   ├── pyexpat.pyd
+│       │   ├── pygame_sdl2
+│       │   │   ├── color.pyd
+│       │   │   ├── compat.pyo
+│       │   │   ├── controller.pyd
+│       │   │   ├── display.pyd
+│       │   │   ├── draw.pyd
+│       │   │   ├── error.pyd
+│       │   │   ├── event.pyd
+│       │   │   ├── font.pyd
+│       │   │   ├── gfxdraw.pyd
+│       │   │   ├── image.pyd
+│       │   │   ├── __init__.pyo
+│       │   │   ├── joystick.pyd
+│       │   │   ├── key.pyd
+│       │   │   ├── locals.pyd
+│       │   │   ├── mouse.pyd
+│       │   │   ├── pygame_time.pyd
+│       │   │   ├── rect.pyd
+│       │   │   ├── rwobject.pyd
+│       │   │   ├── scrap.pyd
+│       │   │   ├── sprite.pyo
+│       │   │   ├── surface.pyd
+│       │   │   ├── sysfont.pyo
+│       │   │   ├── time.pyo
+│       │   │   ├── transform.pyd
+│       │   │   └── version.pyo
+│       │   ├── renpy
+│       │   │   ├── angle
+│       │   │   │   ├── gldraw.pyd
+│       │   │   │   ├── glenviron_shader.pyd
+│       │   │   │   ├── gl.pyd
+│       │   │   │   ├── glrtt_copy.pyd
+│       │   │   │   ├── glrtt_fbo.pyd
+│       │   │   │   └── gltexture.pyd
+│       │   │   ├── audio
+│       │   │   │   └── renpysound.pyd
+│       │   │   ├── display
+│       │   │   │   ├── accelerator.pyd
+│       │   │   │   └── render.pyd
+│       │   │   ├── gl
+│       │   │   │   ├── gl1.pyd
+│       │   │   │   ├── gldraw.pyd
+│       │   │   │   ├── glenviron_fixed.pyd
+│       │   │   │   ├── glenviron_limited.pyd
+│       │   │   │   ├── glenviron_shader.pyd
+│       │   │   │   ├── gl.pyd
+│       │   │   │   ├── glrtt_copy.pyd
+│       │   │   │   ├── glrtt_fbo.pyd
+│       │   │   │   └── gltexture.pyd
+│       │   │   ├── __init__.pyo
+│       │   │   ├── parsersupport.pyd
+│       │   │   ├── styledata
+│       │   │   │   ├── style_activate_functions.pyd
+│       │   │   │   ├── styleclass.pyd
+│       │   │   │   ├── style_functions.pyd
+│       │   │   │   ├── style_hover_functions.pyd
+│       │   │   │   ├── style_idle_functions.pyd
+│       │   │   │   ├── style_insensitive_functions.pyd
+│       │   │   │   ├── style_selected_activate_functions.pyd
+│       │   │   │   ├── style_selected_functions.pyd
+│       │   │   │   ├── style_selected_hover_functions.pyd
+│       │   │   │   ├── style_selected_idle_functions.pyd
+│       │   │   │   ├── style_selected_insensitive_functions.pyd
+│       │   │   │   └── stylesets.pyd
+│       │   │   ├── style.pyd
+│       │   │   └── text
+│       │   │       ├── ftfont.pyd
+│       │   │       ├── textsupport.pyd
+│       │   │       └── texwrap.pyd
+│       │   ├── _renpybidi.pyd
+│       │   ├── _renpy.pyd
+│       │   ├── select.pyd
+│       │   ├── site.pyo
+│       │   ├── _socket.pyd
+│       │   ├── stat.pyo
+│       │   ├── types.pyo
+│       │   ├── unicodedata.pyd
+│       │   ├── UserDict.pyo
+│       │   ├── warnings.pyo
+│       │   └── _weakrefset.pyo
+│       ├── libEGL.dll
+│       ├── libfreetype-6.dll
+│       ├── libgcc_s_sjlj-1.dll
+│       ├── libGLESv2.dll
+│       ├── libjpeg-62.dll
+│       ├── libpng-3.dll
+│       ├── libwinpthread-1.dll
+│       ├── Microsoft.VC90.CRT.manifest
+│       ├── msvcr90.dll
+│       ├── python27.dll
+│       ├── python.exe
+│       ├── pythonw.exe
+│       ├── say.vbs
+│       ├── SDL2.dll
+│       ├── SDL2_image.dll
+│       ├── SDL2_ttf.dll
+│       ├── swresample-2.dll
+│       ├── swscale-4.dll
+│       ├── sze-the-game.exe
+│       ├── zlib1.dll
+│       ├── zsync.exe
+│       └── zsyncmake.exe
+├── log.txt
+├── README.html
+├── renpy
+│   ├── add_from.py
+│   ├── add_from.pyo
+│   ├── angle
+│   │   ├── glblacklist.py
+│   │   ├── glblacklist.pyo
+│   │   ├── gldraw.pxd
+│   │   ├── gldraw.pyx
+│   │   ├── glenviron_shader.pyx
+│   │   ├── gl.pxd
+│   │   ├── gl.pyx
+│   │   ├── glrtt_copy.pyx
+│   │   ├── glrtt_fbo.pyx
+│   │   ├── gltexture.pxd
+│   │   ├── gltexture.pyx
+│   │   ├── __init__.py
+│   │   └── __init__.pyo
+│   ├── arguments.py
+│   ├── arguments.pyo
+│   ├── ast.py
+│   ├── ast.pyo
+│   ├── atl.py
+│   ├── atl.pyo
+│   ├── audio
+│   │   ├── androidhw.py
+│   │   ├── androidhw.pyo
+│   │   ├── audio.py
+│   │   ├── audio.pyo
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── ioshw.py
+│   │   ├── ioshw.pyo
+│   │   ├── music.py
+│   │   ├── music.pyo
+│   │   ├── renpysound.pyx
+│   │   ├── sound.py
+│   │   └── sound.pyo
+│   ├── bootstrap.py
+│   ├── bootstrap.pyo
+│   ├── character.py
+│   ├── character.pyo
+│   ├── color.py
+│   ├── color.pyo
+│   ├── common
+│   │   ├── 000atl.rpy
+│   │   ├── 000atl.rpyc
+│   │   ├── 000namespaces.rpy
+│   │   ├── 000namespaces.rpyc
+│   │   ├── 000statements.rpy
+│   │   ├── 000statements.rpyc
+│   │   ├── 000window.rpy
+│   │   ├── 000window.rpyc
+│   │   ├── 00achievement.rpy
+│   │   ├── 00achievement.rpyc
+│   │   ├── 00action_audio.rpy
+│   │   ├── 00action_audio.rpyc
+│   │   ├── 00action_control.rpy
+│   │   ├── 00action_control.rpyc
+│   │   ├── 00action_data.rpy
+│   │   ├── 00action_data.rpyc
+│   │   ├── 00action_file.rpy
+│   │   ├── 00action_file.rpyc
+│   │   ├── 00action_menu.rpy
+│   │   ├── 00action_menu.rpyc
+│   │   ├── 00action_other.rpy
+│   │   ├── 00action_other.rpyc
+│   │   ├── 00barvalues.rpy
+│   │   ├── 00barvalues.rpyc
+│   │   ├── 00build.rpy
+│   │   ├── 00build.rpyc
+│   │   ├── 00compat.rpy
+│   │   ├── 00compat.rpyc
+│   │   ├── 00console.rpy
+│   │   ├── 00console.rpyc
+│   │   ├── 00defaults.rpy
+│   │   ├── 00defaults.rpyc
+│   │   ├── 00definitions.rpy
+│   │   ├── 00definitions.rpyc
+│   │   ├── 00director.rpy
+│   │   ├── 00director.rpyc
+│   │   ├── 00gallery.rpy
+│   │   ├── 00gallery.rpyc
+│   │   ├── 00gamemenu.rpy
+│   │   ├── 00gamemenu.rpyc
+│   │   ├── 00gamepad.rpy
+│   │   ├── 00gamepad.rpyc
+│   │   ├── 00gltest.rpy
+│   │   ├── 00gltest.rpyc
+│   │   ├── 00gui.rpy
+│   │   ├── 00gui.rpyc
+│   │   ├── 00iap.rpy
+│   │   ├── 00iap.rpyc
+│   │   ├── 00iconbutton.rpy
+│   │   ├── 00iconbutton.rpyc
+│   │   ├── 00icon.rpy
+│   │   ├── 00icon.rpyc
+│   │   ├── 00images.rpy
+│   │   ├── 00images.rpyc
+│   │   ├── 00inputvalues.rpy
+│   │   ├── 00inputvalues.rpyc
+│   │   ├── 00keymap.rpy
+│   │   ├── 00keymap.rpyc
+│   │   ├── 00layout.rpy
+│   │   ├── 00layout.rpyc
+│   │   ├── 00library.rpy
+│   │   ├── 00library.rpyc
+│   │   ├── 00mixers.rpy
+│   │   ├── 00mixers.rpyc
+│   │   ├── 00musicroom.rpy
+│   │   ├── 00musicroom.rpyc
+│   │   ├── 00nvl_mode.rpy
+│   │   ├── 00nvl_mode.rpyc
+│   │   ├── 00obsolete.rpy
+│   │   ├── 00obsolete.rpyc
+│   │   ├── 00placeholder.rpy
+│   │   ├── 00placeholder.rpyc
+│   │   ├── 00preferences.rpy
+│   │   ├── 00preferences.rpyc
+│   │   ├── 00sideimage.rpy
+│   │   ├── 00sideimage.rpyc
+│   │   ├── 00splines.rpy
+│   │   ├── 00splines.rpyc
+│   │   ├── 00start.rpy
+│   │   ├── 00start.rpyc
+│   │   ├── 00stylepreferences.rpy
+│   │   ├── 00stylepreferences.rpyc
+│   │   ├── 00style.rpy
+│   │   ├── 00style.rpyc
+│   │   ├── 00themes.rpy
+│   │   ├── 00themes.rpyc
+│   │   ├── 00updater.rpy
+│   │   ├── 00updater.rpyc
+│   │   ├── 00voice.rpy
+│   │   ├── 00voice.rpyc
+│   │   ├── blindstile.png
+│   │   ├── _compat
+│   │   │   ├── gamemenu.rpym
+│   │   │   ├── gamemenu.rpymc
+│   │   │   ├── library.rpym
+│   │   │   ├── library.rpymc
+│   │   │   ├── mainmenu.rpym
+│   │   │   ├── mainmenu.rpymc
+│   │   │   ├── preferences.rpym
+│   │   │   ├── preferences.rpymc
+│   │   │   ├── styles.rpym
+│   │   │   ├── styles.rpymc
+│   │   │   ├── themes.rpym
+│   │   │   └── themes.rpymc
+│   │   ├── DejaVuSans-Bold.ttf
+│   │   ├── DejaVuSans.ttf
+│   │   ├── DejaVuSans.txt
+│   │   ├── _developer
+│   │   │   ├── developer.rpym
+│   │   │   ├── developer.rpymc
+│   │   │   ├── inspector.rpym
+│   │   │   └── inspector.rpymc
+│   │   ├── _developer.rpymc
+│   │   ├── _errorhandling.rpym
+│   │   ├── _errorhandling.rpymc
+│   │   ├── gamecontrollerdb.txt
+│   │   ├── _layout
+│   │   │   ├── classic_joystick_preferences.rpym
+│   │   │   ├── classic_joystick_preferences.rpymc
+│   │   │   ├── classic_load_save.rpym
+│   │   │   ├── classic_load_save.rpymc
+│   │   │   ├── classic_main_menu.rpym
+│   │   │   ├── classic_main_menu.rpymc
+│   │   │   ├── classic_navigation.rpym
+│   │   │   ├── classic_navigation.rpymc
+│   │   │   ├── classic_preferences_common.rpym
+│   │   │   ├── classic_preferences_common.rpymc
+│   │   │   ├── classic_preferences.rpym
+│   │   │   ├── classic_preferences.rpymc
+│   │   │   ├── classic_yesno_prompt.rpym
+│   │   │   ├── classic_yesno_prompt.rpymc
+│   │   │   ├── grouped_main_menu.rpym
+│   │   │   ├── grouped_navigation.rpym
+│   │   │   ├── imagemap_common.rpym
+│   │   │   ├── imagemap_common.rpymc
+│   │   │   ├── imagemap_load_save.rpym
+│   │   │   ├── imagemap_load_save.rpymc
+│   │   │   ├── imagemap_main_menu.rpym
+│   │   │   ├── imagemap_main_menu.rpymc
+│   │   │   ├── imagemap_navigation.rpym
+│   │   │   ├── imagemap_navigation.rpymc
+│   │   │   ├── imagemap_preferences.rpym
+│   │   │   ├── imagemap_preferences.rpymc
+│   │   │   ├── imagemap_yesno_prompt.rpym
+│   │   │   ├── imagemap_yesno_prompt.rpymc
+│   │   │   ├── one_column_preferences.rpym
+│   │   │   ├── screen_joystick_preferences.rpym
+│   │   │   ├── screen_joystick_preferences.rpymc
+│   │   │   ├── screen_load_save.rpym
+│   │   │   ├── screen_load_save.rpymc
+│   │   │   ├── screen_main_menu.rpym
+│   │   │   ├── screen_main_menu.rpymc
+│   │   │   ├── screen_preferences.rpym
+│   │   │   ├── screen_preferences.rpymc
+│   │   │   ├── screen_yesno_prompt.rpym
+│   │   │   ├── screen_yesno_prompt.rpymc
+│   │   │   ├── scrolling_load_save.rpym
+│   │   │   ├── scrolling_load_save.rpymc
+│   │   │   ├── two_column_preferences.rpym
+│   │   │   └── two_column_preferences.rpymc
+│   │   ├── _outline
+│   │   │   ├── bar.png
+│   │   │   ├── circle.png
+│   │   │   └── vbar.png
+│   │   ├── _placeholder
+│   │   │   ├── boy.png
+│   │   │   └── girl.png
+│   │   ├── _roundrect
+│   │   │   ├── rr12g.png
+│   │   │   ├── rr12.png
+│   │   │   ├── rr6g.png
+│   │   │   ├── rr6.png
+│   │   │   ├── rrscrollbar.png
+│   │   │   ├── rrscrollbar_thumb.png
+│   │   │   ├── rrslider_empty.png
+│   │   │   ├── rrslider_full.png
+│   │   │   ├── rrslider_thumb.png
+│   │   │   ├── rrvscrollbar.png
+│   │   │   ├── rrvscrollbar_thumb.png
+│   │   │   ├── rrvslider_empty.png
+│   │   │   ├── rrvslider_full.png
+│   │   │   └── rrvslider_thumb.png
+│   │   ├── _silence.ogg
+│   │   ├── squarestile.png
+│   │   ├── _theme_amie2
+│   │   │   ├── bar.png
+│   │   │   ├── button_hover.png
+│   │   │   ├── button.png
+│   │   │   ├── frame.png
+│   │   │   ├── hover_bar.png
+│   │   │   └── hover_frame.png
+│   │   ├── _theme_austen
+│   │   │   ├── au_box.png
+│   │   │   ├── auscrollbar.png
+│   │   │   ├── auscrollbar_thumb.png
+│   │   │   ├── auslider_empty.png
+│   │   │   ├── auslider_full.png
+│   │   │   ├── auslider_thumb.png
+│   │   │   ├── auvscrollbar.png
+│   │   │   ├── auvscrollbar_thumb.png
+│   │   │   ├── auvslider_empty.png
+│   │   │   ├── auvslider_full.png
+│   │   │   └── auvslider_thumb.png
+│   │   ├── _theme_awt
+│   │   │   ├── bar_full_overlay.png
+│   │   │   ├── bar_full.png
+│   │   │   ├── bar_thumb.gif
+│   │   │   ├── bar_thumb_overlay.png
+│   │   │   ├── bar_thumb.png
+│   │   │   ├── button_disabled_overlay.png
+│   │   │   ├── button_overlay_highlight.png
+│   │   │   ├── button_overlay.png
+│   │   │   ├── button.png
+│   │   │   ├── button_selected_overlay_highlight.png
+│   │   │   ├── button_selected_overlay.png
+│   │   │   ├── button_selected.png
+│   │   │   ├── frame_overlay.png
+│   │   │   ├── frame.png
+│   │   │   ├── OFL.txt
+│   │   │   ├── Quicksand-Bold.ttf
+│   │   │   ├── Quicksand-Regular.ttf
+│   │   │   ├── radio_base_overlay.png
+│   │   │   ├── radio_base.png
+│   │   │   ├── radio_selected_hover.png
+│   │   │   ├── radio_unselected_hover.png
+│   │   │   ├── radio_unselected.png
+│   │   │   ├── scroller_overlay.png
+│   │   │   ├── scroller.png
+│   │   │   ├── slider_empty_all.png
+│   │   │   ├── slider_empty_overlay.png
+│   │   │   ├── slider_full_overlay.png
+│   │   │   ├── slider_full.png
+│   │   │   ├── v_bar_full_overlay.png
+│   │   │   ├── v_bar_full.png
+│   │   │   ├── v_bar_thumb_overlay.png
+│   │   │   ├── v_bar_thumb.png
+│   │   │   ├── vscroller_overlay.png
+│   │   │   ├── vscroller.png
+│   │   │   ├── vslider_empty_all.png
+│   │   │   ├── vslider_full_overlay.png
+│   │   │   ├── vslider_full.png
+│   │   │   ├── vthumb_overlay.png
+│   │   │   └── vthumb.png
+│   │   ├── _theme_bordered
+│   │   │   ├── br_box.png
+│   │   │   ├── brscrollbar.png
+│   │   │   ├── brscrollbar_thumb.png
+│   │   │   ├── brslider_empty.png
+│   │   │   ├── brslider_full.png
+│   │   │   ├── brslider_thumb.png
+│   │   │   ├── brvscrollbar.png
+│   │   │   ├── brvscrollbar_thumb.png
+│   │   │   ├── brvslider_empty.png
+│   │   │   ├── brvslider_full.png
+│   │   │   └── brvslider_thumb.png
+│   │   ├── _theme_crayon
+│   │   │   ├── cry_box2.png
+│   │   │   ├── cry_box.png
+│   │   │   ├── cryscrollbar.png
+│   │   │   ├── cryscrollbar_thumb.png
+│   │   │   ├── cryslider_empty.png
+│   │   │   ├── cryslider_full.png
+│   │   │   ├── cryslider_thumb.png
+│   │   │   ├── cryvscrollbar.png
+│   │   │   ├── cryvscrollbar_thumb.png
+│   │   │   ├── cryvslider_empty.png
+│   │   │   ├── cryvslider_full.png
+│   │   │   ├── cryvslider_thumb.png
+│   │   │   └── rr12g.png
+│   │   ├── _theme_diamond
+│   │   │   ├── d_box.png
+│   │   │   ├── dscrollbar.png
+│   │   │   ├── dscrollbar_thumb.png
+│   │   │   ├── dslider_empty.png
+│   │   │   ├── dslider_full.png
+│   │   │   ├── dslider_thumb.png
+│   │   │   ├── dvscrollbar.png
+│   │   │   ├── dvscrollbar_thumb.png
+│   │   │   ├── dvslider_empty.png
+│   │   │   ├── dvslider_full.png
+│   │   │   └── dvslider_thumb.png
+│   │   ├── _theme_glow
+│   │   │   ├── g_box.png
+│   │   │   ├── g_outline.png
+│   │   │   ├── gscrollbar.png
+│   │   │   ├── gscrollbar_thumb.png
+│   │   │   ├── gslider_empty.png
+│   │   │   ├── gslider_full.png
+│   │   │   ├── gslider_thumb.png
+│   │   │   ├── gvscrollbar.png
+│   │   │   ├── gvscrollbar_thumb.png
+│   │   │   ├── gvslider_empty.png
+│   │   │   ├── gvslider_full.png
+│   │   │   └── gvslider_thumb.png
+│   │   ├── _theme_marker
+│   │   │   ├── ink_box.png
+│   │   │   ├── inkscrollbar.png
+│   │   │   ├── inkscrollbar_thumb.png
+│   │   │   ├── inkslider_empty.png
+│   │   │   ├── inkslider_full.png
+│   │   │   ├── inkslider_thumb.png
+│   │   │   ├── inkvscrollbar.png
+│   │   │   ├── inkvscrollbar_thumb.png
+│   │   │   ├── inkvslider_empty.png
+│   │   │   ├── inkvslider_full.png
+│   │   │   └── inkvslider_thumb.png
+│   │   ├── _theme_regal
+│   │   │   ├── re_box.png
+│   │   │   ├── rescrollbar.png
+│   │   │   ├── rescrollbar_thumb.png
+│   │   │   ├── reslider_empty.png
+│   │   │   ├── reslider_full.png
+│   │   │   ├── reslider_thumb.png
+│   │   │   ├── revscrollbar.png
+│   │   │   ├── revscrollbar_thumb.png
+│   │   │   ├── revslider_empty.png
+│   │   │   ├── revslider_full.png
+│   │   │   └── revslider_thumb.png
+│   │   ├── _theme_threeD
+│   │   │   ├── th_box.png
+│   │   │   ├── thscrollbar.png
+│   │   │   ├── thscrollbar_thumb.png
+│   │   │   ├── thslider_empty.png
+│   │   │   ├── thslider_full.png
+│   │   │   ├── thslider_thumb.png
+│   │   │   ├── thvscrollbar.png
+│   │   │   ├── thvscrollbar_thumb.png
+│   │   │   ├── thvslider_empty.png
+│   │   │   ├── thvslider_full.png
+│   │   │   └── thvslider_thumb.png
+│   │   ├── _theme_tv
+│   │   │   ├── t_box.png
+│   │   │   ├── tscrollbar.png
+│   │   │   ├── tscrollbar_thumb.png
+│   │   │   ├── tslider_empty.png
+│   │   │   ├── tslider_full.png
+│   │   │   ├── tslider_thumb.png
+│   │   │   ├── tvscrollbar.png
+│   │   │   ├── tvscrollbar_thumb.png
+│   │   │   ├── tvslider_empty.png
+│   │   │   ├── tvslider_full.png
+│   │   │   └── tvslider_thumb.png
+│   │   ├── _transparent_tile.png
+│   │   └── _tv_unsafe.png
+│   ├── config.py
+│   ├── config.pyo
+│   ├── curry.py
+│   ├── curry.pyo
+│   ├── debug.py
+│   ├── debug.pyo
+│   ├── defaultstore.py
+│   ├── defaultstore.pyo
+│   ├── display
+│   │   ├── accelerator.pyx
+│   │   ├── anim.py
+│   │   ├── anim.pyo
+│   │   ├── behavior.py
+│   │   ├── behavior.pyo
+│   │   ├── controller.py
+│   │   ├── controller.pyo
+│   │   ├── core.py
+│   │   ├── core.pyo
+│   │   ├── dragdrop.py
+│   │   ├── dragdrop.pyo
+│   │   ├── emulator.py
+│   │   ├── emulator.pyo
+│   │   ├── error.py
+│   │   ├── error.pyo
+│   │   ├── focus.py
+│   │   ├── focus.pyo
+│   │   ├── gesture.py
+│   │   ├── gesture.pyo
+│   │   ├── imagelike.py
+│   │   ├── imagelike.pyo
+│   │   ├── imagemap.py
+│   │   ├── imagemap.pyo
+│   │   ├── image.py
+│   │   ├── image.pyo
+│   │   ├── im.py
+│   │   ├── im.pyo
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── joystick.py
+│   │   ├── joystick.pyo
+│   │   ├── layout.py
+│   │   ├── layout.pyo
+│   │   ├── minigame.py
+│   │   ├── minigame.pyo
+│   │   ├── module.py
+│   │   ├── module.pyo
+│   │   ├── motion.py
+│   │   ├── motion.pyo
+│   │   ├── movetransition.py
+│   │   ├── movetransition.pyo
+│   │   ├── particle.py
+│   │   ├── particle.pyo
+│   │   ├── pgrender.py
+│   │   ├── pgrender.pyo
+│   │   ├── predict.py
+│   │   ├── predict.pyo
+│   │   ├── presplash.py
+│   │   ├── presplash.pyo
+│   │   ├── render.pxd
+│   │   ├── render.pyx
+│   │   ├── scale.py
+│   │   ├── scale.pyo
+│   │   ├── screen.py
+│   │   ├── screen.pyo
+│   │   ├── swdraw.py
+│   │   ├── swdraw.pyo
+│   │   ├── transform.py
+│   │   ├── transform.pyo
+│   │   ├── transition.py
+│   │   ├── transition.pyo
+│   │   ├── tts.py
+│   │   ├── tts.pyo
+│   │   ├── video.py
+│   │   ├── video.pyo
+│   │   ├── viewport.py
+│   │   └── viewport.pyo
+│   ├── dump.py
+│   ├── dump.pyo
+│   ├── easy.py
+│   ├── easy.pyo
+│   ├── editor.py
+│   ├── editor.pyo
+│   ├── error.py
+│   ├── error.pyo
+│   ├── execution.py
+│   ├── execution.pyo
+│   ├── exports.py
+│   ├── exports.pyo
+│   ├── game.py
+│   ├── game.pyo
+│   ├── gl
+│   │   ├── gl1.pxd
+│   │   ├── gl1.pyx
+│   │   ├── glblacklist.py
+│   │   ├── glblacklist.pyo
+│   │   ├── gldraw.pxd
+│   │   ├── gldraw.pyx
+│   │   ├── glenviron_fixed.pyx
+│   │   ├── glenviron_limited.pyx
+│   │   ├── glenviron_shader.pyx
+│   │   ├── gl.pxd
+│   │   ├── gl.pyx
+│   │   ├── glrtt_copy.pyx
+│   │   ├── glrtt_fbo.pyx
+│   │   ├── gltexture.pxd
+│   │   ├── gltexture.pyx
+│   │   ├── __init__.py
+│   │   └── __init__.pyo
+│   ├── __init__.py
+│   ├── __init__.pyo
+│   ├── LICENSE.txt
+│   ├── lint.py
+│   ├── lint.pyo
+│   ├── loader.py
+│   ├── loader.pyo
+│   ├── loadsave.py
+│   ├── loadsave.pyo
+│   ├── log.py
+│   ├── log.pyo
+│   ├── main.py
+│   ├── main.pyo
+│   ├── memory.py
+│   ├── memory.pyo
+│   ├── minstore.py
+│   ├── minstore.pyo
+│   ├── object.py
+│   ├── object.pyo
+│   ├── parser.py
+│   ├── parser.pyo
+│   ├── parsersupport.pyx
+│   ├── persistent.py
+│   ├── persistent.pyo
+│   ├── preferences.py
+│   ├── preferences.pyo
+│   ├── pyanalysis.py
+│   ├── pyanalysis.pyo
+│   ├── python.py
+│   ├── python.pyo
+│   ├── savelocation.py
+│   ├── savelocation.pyo
+│   ├── screenlang.py
+│   ├── screenlang.pyo
+│   ├── scriptedit.py
+│   ├── scriptedit.pyo
+│   ├── script.py
+│   ├── script.pyo
+│   ├── sl2
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── slast.py
+│   │   ├── slast.pyo
+│   │   ├── sldisplayables.py
+│   │   ├── sldisplayables.pyo
+│   │   ├── slparser.py
+│   │   ├── slparser.pyo
+│   │   ├── slproperties.py
+│   │   └── slproperties.pyo
+│   ├── statements.py
+│   ├── statements.pyo
+│   ├── styledata
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── styleclass.pyx
+│   │   ├── stylesets.pyx
+│   │   ├── styleutil.py
+│   │   └── styleutil.pyo
+│   ├── style.pxd
+│   ├── style.pyx
+│   ├── substitutions.py
+│   ├── substitutions.pyo
+│   ├── test
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── testast.py
+│   │   ├── testast.pyo
+│   │   ├── testexecution.py
+│   │   ├── testexecution.pyo
+│   │   ├── testfocus.py
+│   │   ├── testfocus.pyo
+│   │   ├── testkey.py
+│   │   ├── testkey.pyo
+│   │   ├── testmouse.py
+│   │   ├── testmouse.pyo
+│   │   ├── testparser.py
+│   │   └── testparser.pyo
+│   ├── text
+│   │   ├── extras.py
+│   │   ├── extras.pyo
+│   │   ├── font.py
+│   │   ├── font.pyo
+│   │   ├── ftfont.pyx
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── linebreak.pxi
+│   │   ├── text.py
+│   │   ├── text.pyo
+│   │   ├── textsupport.pxd
+│   │   ├── textsupport.pyx
+│   │   └── texwrap.pyx
+│   ├── translation
+│   │   ├── dialogue.py
+│   │   ├── dialogue.pyo
+│   │   ├── extract.py
+│   │   ├── extract.pyo
+│   │   ├── generation.py
+│   │   ├── generation.pyo
+│   │   ├── __init__.py
+│   │   ├── __init__.pyo
+│   │   ├── merge.py
+│   │   ├── merge.pyo
+│   │   ├── scanstrings.py
+│   │   └── scanstrings.pyo
+│   ├── ui.py
+│   ├── ui.pyo
+│   ├── vc_version.py
+│   ├── vc_version.pyo
+│   ├── warp.py
+│   └── warp.pyo
+├── sze-the-game.exe
+├── sze-the-game.py
+├── sze-the-game.sh
+└── traceback.txt
+
+95 directories, 1289 files

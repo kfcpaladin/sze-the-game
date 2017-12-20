@@ -1,0 +1,25 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script/Day 1/6.0 recess.rpy", line 362, in script
+    $ easterEggValley(rin)
+  File "game/script/Day 1/6.0 recess.rpy", line 362, in <module>
+    $ easterEggValley(rin)
+NameError: name 'easterEggValley' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script/Day 1/6.0 recess.rpy", line 362, in script
+    $ easterEggValley(rin)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script/Day 1/6.0 recess.rpy", line 362, in <module>
+    $ easterEggValley(rin)
+NameError: name 'easterEggValley' is not defined
+
+Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
+Ren'Py 6.99.13.2919
+sze-the game 0.0

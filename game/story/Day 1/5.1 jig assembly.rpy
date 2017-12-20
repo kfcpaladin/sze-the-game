@@ -359,7 +359,7 @@ label asszemblyjigolo1encounter:
                             "\"Time to turn the tables and inject you with some re-education; all resistance will be penetrated, the same goes for your friend\""
                             jit "\"Calm the fuck down, you don't need to grope my fuckin' arm off\""
                             jit "\"Plus, I'm the master of re-education\""
-                            "\"{b}Not when we're through with properly... analysing you\""
+                            "\"{b}Not when we're through with properly... analysing you{/b}\""
                             jit "\"awww hell no...\""
                             sze "Resistance is futile, best to follow them"
                             jump asszembly1shitstorm

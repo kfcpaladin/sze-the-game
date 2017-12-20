@@ -4,6 +4,7 @@ This version of "Sze the Game" aims to improve the syntax of the code, to make s
 Since this is essentially a new version of the game, don't attempt to merge it with any of the other branches.
 
 **Autotest**: [*Click here for the Travis autotest*](https://travis-ci.org/kfcpaladin/sze-the-game/branches)
+**Changelog**: [*Any changes should be noted in the changelog*](./CHANGELOG.md)
 
 ## Changes
 
@@ -14,32 +15,32 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 
 ## Game directory layout
 
-| Folder                                                                              | Description                                                       |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [classes](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes)      | Stores python scripts containing the classes                      |
-| [images](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/images)        | Stores the images declared by default in renpy                    |
-| [instances](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances)  | Stores pythons scripts which initialise all the instances         |
-| [music](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/music)          | Custom directory declarable through options.rpy in /game/scripts  |
-| [scripts](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/scripts)      | Where you place renpy scripts not related to story                |
-| [story](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/story)          | Specialised directory used to store all the narratives            |
+| Folder                                 | Description                                                       |
+| -------------------------------------- | ----------------------------------------------------------------- |
+| [classes](./game/classes)      | Stores python scripts containing the classes                      |
+| [images](./game/images)        | Stores the images declared by default in renpy                    |
+| [instances](./game/instances)  | Stores pythons scripts which initialise all the instances         |
+| [music](./game/music)          | Custom directory declarable through options.rpy in /game/scripts  |
+| [scripts](./game/scripts)      | Where you place renpy scripts not related to story                |
+| [story](./game/story)          | Specialised directory used to store all the narratives            |
 
 ## New classes and instances
 ### Class descriptions
 
-| Class                                                                                                   | Description                                                                       |
-| ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [ADVCharacter](https://github.com/kfcpaladin/sze-the-game/tree/orphan/renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
-| [MainCharacter](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
-| [Friend](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
-| [Game](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
+| Class                                                      | Description                                                                       |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [ADVCharacter](./renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
+| [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
+| [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
+| [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
 
 ### Instances
 
 | Class         | Instance names  |
 | ------------- | --------------- |
-| MainCharacter | [sze](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/sze.rpy)  |
-| Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/friends.rpy) |
-| Game          | [game](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances/game.rpy)|
+| MainCharacter | [sze](./game/instances/sze.rpy)  |
+| Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
+| Game          | [game](./game/instances/game.rpy)|
 
 ### Usage inside renpy script
 
@@ -62,7 +63,7 @@ The master/nub branches used global variables to keep track of game states, such
 * **accessing gamestate variable**: $ game.moxCounter, $ game.timeTravelCounter, *etc*
 * **debug the current gamestate**: $ game.describe() *(information is printed to console)*
 
-*Note*: For more information check out [**game/instances/**](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances) to see how all of this is implemented
+*Note*: For more information check out [**game/instances/**](./game/instances) to see how all of this is implemented
 
 ## Updated renpy engine
 
@@ -77,6 +78,4 @@ The master/nub branches used global variables to keep track of game states, such
 Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it or keep it in game/.
 Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**
 
-*Note*: The settings for audio are located in [game/scripts/sound.rpy](https://github.com/kfcpaladin/sze-the-game/blob/orphan/game/scripts/sound.rpy)
-
-
+*Note*: The settings for audio are located in [game/scripts/sound.rpy](./game/scripts/sound.rpy)

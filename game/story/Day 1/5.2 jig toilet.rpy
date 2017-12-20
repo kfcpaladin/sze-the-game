@@ -5,7 +5,7 @@ label asszemblyjigolokindagaytoilet:
     $ sze.gain("thirst")
     jit "\"...\""
     stop music
-    play music "TheRoomOSTMainTheme.mp3" loop
+    play music "TheRoomOSTMainTheme.ogg" loop
     jit "\"Bruh, you just {b}had{/b} to pick the shiftiest place in school\""
     sze "\"stfu, you couldn't think of anywhere better\""
     sze "How is this place so dodgy"

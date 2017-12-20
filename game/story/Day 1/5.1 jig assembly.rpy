@@ -253,7 +253,7 @@ label asszemblyjigolo1encounter:
             sze "\"run\""
             "\"Both you and Jitian bolt off across the school\""
             "\"...\"" with hpunch
-            play music "p3MassDestruction.mp3"
+            play music "p3MassDestruction.ogg"
             "\"Right into another patrol of teachers\""
             jit "\"Ohhhhhhhh FAARk\""
             sze "3 teachers...assuming they have combat score of 3 each and a combined arms bonus of 3, I will require a combat score of greater than 12 to beat all of them..."
@@ -295,7 +295,7 @@ label asszemblyjigolo1encounter:
                             "But your iron defence holds out"
                             jit "\"You truly are the Chosen One\""
                             "With one last co-ordinated push, you repel their attack and knock them unconscious"
-                            play music "p3_JikaNetTanaka.mp3"
+                            play music "p3_JikaNetTanaka.ogg"
                             $ sze.gain("strength")
                             "Exhausted, you both decide to take a breather, when suddenly you hear rustling"
                             bil "\"Well, now this is a proper mess\""

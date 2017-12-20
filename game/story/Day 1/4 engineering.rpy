@@ -3,7 +3,7 @@ label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop
     with dissolve
-    play music "CongressNeptune.mp3" loop
+    play music "CongressNeptune.ogg" loop
     show yang normal
     wil "\"Heil Hitler\""
     sze "\"...\""
@@ -98,7 +98,7 @@ label eng1p1naughtycorner:
     pra "\"You here as well? At least you weren't put here for every Engi lesson...\""
     sze "\"What? How\""
     stop music
-    play music "TheRoomOSTMainTheme.mp3"
+    play music "TheRoomOSTMainTheme.ogg"
     pra "\"I thought this time I might get the Matrix brain plug for engi or maybe Grant might forgive me...\""
     sze "\"For what?\""
     pra "\"Idk\""
@@ -163,7 +163,7 @@ label eng1p1naughtycorner:
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
                         "...wrong"
-                        play music "VarienThroneOfRavens.mp3"
+                        play music "VarienThroneOfRavens.ogg"
                         "You wake up in bed next to...someone"
                         sze "\"Urgh, mornings are shit\""
                         sze "\"Wait what\"" with hpunch
@@ -229,7 +229,7 @@ label eng1p1naughtycorner:
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
             dea "\"Where you going?\""
             sze "\"Asszembly\""
-            play music "VarienThroneOfRavens.mp3"
+            play music "VarienThroneOfRavens.ogg"
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
@@ -399,7 +399,7 @@ label eng1p2:
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music
-                    play music "RaxlenSliceBG8bit.mp3"
+                    play music "RaxlenSliceBG8bit.ogg"
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
@@ -433,7 +433,7 @@ label eng1p2:
                     dea "\"heeelllllppppp\""
                     $ sze.gain("intellect")
                     stop music
-                    play music "RaxlenSliceBG8bit.mp3"
+                    play music "RaxlenSliceBG8bit.ogg"
                     dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
                     dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
                     "Richard left leaving Dean cowering on the ground moaning in an unhealthy "
@@ -464,7 +464,7 @@ label eng1p2:
                     "You open the door"
                     sze "\"Sir, someon-\""
                     stop music
-                    play music "RaxlenSliceBG8bit.mp3"
+                    play music "RaxlenSliceBG8bit.ogg"
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
@@ -497,7 +497,7 @@ label eng1p2:
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     stop music
-                    play music "RaxlenSliceBG8bit.mp3"
+                    play music "RaxlenSliceBG8bit.ogg"
                     dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
                     dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
                     "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"

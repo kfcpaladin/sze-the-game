@@ -1,7 +1,7 @@
 label asszembly1:
     $ renpy.save("autosave")
     stop music
-    play music "p4YouthfulLunch.mp3" loop
+    play music "p4YouthfulLunch.ogg" loop
     scene bg rowecorridor
     with fade
     sze "\"Time for my first assembly of the year\""
@@ -118,7 +118,7 @@ label asszembly1_2:
         sze "\"Nooo, raep, raep\""
         if dik.friendship > 0:
             stop music
-            play music "RaxlenSliceBG8bit.mp3"
+            play music "RaxlenSliceBG8bit.ogg"
             dik "\"Oi, fat ass, pick on people your own size, like Gabe Newell\""
             cha "\"Lemme think...\""
             cha "\"Nah...\""
@@ -132,7 +132,7 @@ label asszembly1_2:
             cha "\"...\""
             cha "\"Fuck off\""
             stop music
-            play music "p4YouthfulLunch.mp3" loop
+            play music "p4YouthfulLunch.ogg" loop
             hide chao normal
             "You observed how to some combat technique"
             $ sze.gain("strength")
@@ -177,7 +177,7 @@ label asszembly1_3:
     scene bg hall
     with fade
     stop music
-    play music "EscortsGaudeamusDooWop.mp3" loop
+    play music "EscortsGaudeamusDooWop.ogg" loop
     "Gaudeamus igitur...something something...venit mors velociter, rapit nos atrociter..."
     mox "\"I would like to acknowledge the traditional owners of the land...\""
     sze "Wow, this is boring"
@@ -188,7 +188,7 @@ label asszembly1_3:
             scene bg schoolfront
             sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
             stop music
-            play music "p4Traumerei.mp3" loop
+            play music "p4Traumerei.ogg" loop
             sze "I still remember the day I first met her"
             sze "It was the first school day of 2011, and I had just entered my dream high school, Fort Street High School"
             sze "\"I can't wait for a diligent 6 years of study, and to hopefully get an high ATAR and become a lawyer/doctor in USYD\""
@@ -216,7 +216,7 @@ label asszembly1_3:
             $ sze.loss("fort")
             mox "\"Maybe a stint in detention will help you regain you Fortian Pride\""
             stop music
-            play music "EscortsGaudeamusDooWop.mp3" loop
+            play music "EscortsGaudeamusDooWop.ogg" loop
             mox "\"Continuing on from that distraction, let us think back to when Year of 1935 topped the HSC. I believe our current year has the potential to top James Ruse in both exit profile and academics\""
             "You hear Richard cough loudly"
             jump asszembly1_4
@@ -270,7 +270,7 @@ label asszembly1_3:
                             "you disappear into toilet for 20 minutes"
                             jump asszembly1_4
                         else:
-                            play music "VarienThroneOfRavens.mp3"
+                            play music "VarienThroneOfRavens.ogg"
                             "You stand rooted to the spot, even as Moxham noticed you and stopped speaking" with vpunch
                             "Your heartbeat starts irregularly racing" with vpunch
                             sze "shit shit {nw}" with vpunch

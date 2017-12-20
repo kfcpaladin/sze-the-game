@@ -15,18 +15,18 @@ init -1 python hide:
     config.musicdir = "./music/"  
 
     ## Sounds that are used when button and imagemaps are clicked.
-    style.button.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
-    style.imagemap.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    style.button.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
+    style.imagemap.activate_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
 
     ## Sounds that are used when entering and exiting the game menu.
-    config.enter_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
-    config.exit_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    config.enter_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
+    config.exit_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
 
     ## A sample sound that can be played to check the sound volume.
-    config.sample_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.mp3"
+    config.sample_sound = "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
 
     ## Music that is played while the user is at the main menu.
-    config.main_menu_music = "p3IwatodaiDorm.mp3"
+    config.main_menu_music = "p3IwatodaiDorm.ogg"
 
 
     ## These control the width and height of the screen.

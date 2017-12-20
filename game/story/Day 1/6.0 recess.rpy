@@ -229,7 +229,7 @@ label recess1a:
                                 scene bg dream
                                 with fade
                                 stop music
-                                play music "TheRoomOSTMainTheme.mp3" loop
+                                play music "TheRoomOSTMainTheme.ogg" loop
                                 wil "\"{i}In ages past, when I was but a young student in the Woodhouse School of Accelerated Maths{/i}\""
                                 wil "\"{i}one of my most skilled peers was one Anthony Le {/i}\""
                                 wil "\"{i}One among our number noted his intellectual prowess, noted how fast he blazed through the course content{/i}\""

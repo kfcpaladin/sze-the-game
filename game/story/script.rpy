@@ -11,16 +11,16 @@ label start:
     scene bg intro
     with fade
     pause
-    # remove this these things to enable music later
-    play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.mp3"
     scene black
     with fade
     "The Year is 2015"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
+    stop music 
     sze "I had always loved her, since she first graced my eyes in Year 7."
     show bg field
     with fade
+    play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg"
     sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
     hide bg field
     with dissolve

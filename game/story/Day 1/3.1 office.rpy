@@ -12,7 +12,7 @@ label phys1p3principal1:
     $ game.gain("moxCounter")
     if game.moxCounter > 1:
         mox "\"You two again?\""
-        play music "VarienThroneOfRavens.mp3"
+        play music "VarienThroneOfRavens.ogg"
         mox "\"You're already in my shit books\""
         rus "\"Oh no...\""
         mox "\"I didn't say you could speak\"" with hpunch
@@ -48,7 +48,7 @@ label phys1p3principal2:
     if game.moxCounter > 1:
         show moxham unhappy
         mox "\"You again?\""
-        play music "VarienThroneOfRavens.mp3"
+        play music "VarienThroneOfRavens.ogg"
         mox "\"Chao, I'll clear you of your dropkickness records if you beat the shit out of him\""
         cha "\"Yes ma'am\""
         sze "\"nope\""

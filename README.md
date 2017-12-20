@@ -49,7 +49,7 @@ For sze, his attributes were stored in global python variables, and his messages
 * **setting introductory attribute messages**: $ sze.setAttributeIntroMessages(*dict*)
 * **setting attribute status messages**: $ sze.setAttributeMessages(*dict*)
 
-For more information check out **game/instances/** to see how all of this is implemented
+For more information check out [**game/instances/**](https://github.com/kfcpaladin/sze-the-game/tree/orphan/game/instances) to see how all of this is implemented
 
 ## Updated renpy engine
 

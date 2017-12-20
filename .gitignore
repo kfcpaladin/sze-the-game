@@ -1,3 +1,10 @@
+# Ignore autosaves and caches
+./game/cache/
+./game/saves/
+
+# Ignore python byte code (takes up extra space)
+*.rpyc
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

@@ -34,15 +34,15 @@ label econ1kahoot1:
             return
         "US":
             hide screen countdown
-            e "Wrong"
+            "Wrong"
             return
         "China":
             hide screen countdown
-            e "Wrong"
+            "Wrong"
             return
         "Uganda":
             hide screen countdown
-            e "Wrong"
+            "Wrong"
             return
 
 label econ1kahoot1slow1:

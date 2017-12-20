@@ -1,5 +1,6 @@
+# Customising sze through the MainCharacter class
 init python:
-    ## Customising sze through the MainCharacter class
+    # Reads dictionary of attribute values
     sze.setAttributes({
         "charm": 0,
         "fort": 0,
@@ -7,6 +8,7 @@ init python:
         "strength": 0,
         "thirst": 0,
     })
+    # Set the messages you get when the tutorial is enable - Activated when your attribute changes for the first time
     sze.setTutorials({
         "charm": {
             "show": True, 
@@ -34,6 +36,7 @@ init python:
             "msgLoss": "Thirst is a measure of desperately you want to drink water.",
         },
     })
+    # Whenever your attribute changes, a message will be provided depending on whether it increased or decreased
     sze.setAttributeIntroMessages({
         "charm": {
             "msgGain": "Your charm increased",
@@ -56,6 +59,7 @@ init python:
             "msgLoss": "You start zipping your pants back up",
         },
     })
+    # This will determine what message you will get depending on the attribute value
     sze.setAttributeMessages({
         "charm": [
             {"min": 100, "msg": "With a charm of [sze.charm], you slay just by looking. Gaze upon the world, your dominion."},

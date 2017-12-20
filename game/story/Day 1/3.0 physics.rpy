@@ -141,7 +141,7 @@ label phys1p2p1:
     $ _phys1p2p1t = True
     $ _phys1p2p3t = False
     call phys1p2p4
-    if phys1p2p4t is True:
+    if _phys1p2p4t is True:
         $ stopmusic()
         $ playmusic("p4LikeADreamComeTrue.ogg", loop=True)
         sze "\"I'm just observing the parabolic motion of a projectile with a specific focus on the horizontal component of motion\""

@@ -4,8 +4,8 @@ label asszemblyjigolokindagaytoilet:
     sze "\"Looks like we're here\""
     $ sze.gain("thirst")
     jit "\"...\""
-    stop music
-    play music "TheRoomOSTMainTheme.ogg" loop
+    $ stopmusic()
+    $ playmusic("TheRoomOSTMainTheme.ogg", loop=True)
     jit "\"Bruh, you just {b}had{/b} to pick the shiftiest place in school\""
     sze "\"stfu, you couldn't think of anywhere better\""
     sze "How is this place so dodgy"

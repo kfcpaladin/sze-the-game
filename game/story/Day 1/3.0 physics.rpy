@@ -1,8 +1,8 @@
 label phys1:
     $ renpy.save("autosave")
     scene bg physclass
-    stop music
-    play music "PinkFloydAnotherBrickInTheWall.ogg" loop
+    $ stopmusic()
+    $ playmusic("PinkFloydAnotherBrickInTheWall.ogg", loop=True)
     "You enter the classroom, and glance around. It seems that there is only 1 seat left, right next to willis"
     "To your left is Willis, to your right is Pragash"
     "You spot Serena sitting at the front of the class right in front the teacher, Ms. Fluitsma"
@@ -49,7 +49,7 @@ label phys1answered_a:
     flu "\"What? No response?\""
     sze "\"...Wot?\""
     flu "\"I bet you go tutoring\""
-    play music "VarienThroneOfRavens.ogg"
+    $ playmusic("VarienThroneOfRavens.ogg")
     sze "\"...um\""
     flu "\"Stop reading so far ahead its not fair on everyone else\"" with vpunch
     flu "\"In fact I bet you are doing secret tutor-homework right now\"" with hpunch
@@ -142,8 +142,8 @@ label phys1p2p1:
     $ _phys1p2p3t = False
     call phys1p2p4
     if phys1p2p4t is True:
-        stop music
-        play music "p4LikeADreamComeTrue.ogg" loop
+        $ stopmusic()
+        $ playmusic("p4LikeADreamComeTrue.ogg", loop=True)
         sze "\"I'm just observing the parabolic motion of a projectile with a specific focus on the horizontal component of motion\""
         sze "\"However, I had failed to take into account the effects of air resistance, which is outside of the syllabus\""
         rus "\"I was helping Arthur\""
@@ -163,7 +163,7 @@ label phys1p2p1:
 
 label phys1p2p2:
     scene bg physclass
-    play music "VarienThroneOfRavens.ogg"
+    $ playmusic("VarienThroneOfRavens.ogg")
     "you pick up the paper and throw it at chao"
     cha "\"WHAT THE HELL. DO YOU WANNA DIE M8\""
     menu:

@@ -133,7 +133,9 @@
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
 │   │   ├── screens.rpy
-│   │   └── screens.rpyc
+│   │   ├── screens.rpyc
+│   │   ├── sound.rpy
+│   │   └── sound.rpyc
 │   ├── script_version.txt
 │   └── story
 │       ├── Day 1
@@ -772,7 +774,7 @@
 │       ├── zsync.exe
 │       └── zsyncmake.exe
 ├── log.txt
-├── README.html
+├── README.md
 ├── renpy
 │   ├── add_from.py
 │   ├── add_from.pyo
@@ -1384,4 +1386,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1289 files
+95 directories, 1291 files

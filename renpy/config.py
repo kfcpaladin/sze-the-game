@@ -384,7 +384,6 @@ basedir = None
 renpy_base = None
 commondir = None
 logdir = None  # Where log and error files go.
-musicdir = None
 
 # Should we enable OpenGL mode?
 gl_enable = True

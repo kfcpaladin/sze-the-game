@@ -22,7 +22,6 @@
 # The public API for music in games.
 
 import renpy.audio
-import renpy.config 
 
 from renpy.audio.audio import get_channel, get_serial
 
@@ -85,11 +84,8 @@ def play(filenames, channel="music", loop=None, fadeout=None, synchro_start=Fals
     if isinstance(filenames, basestring):   # if string convert to array of one
         filenames = [ filenames ]
 
-    if renpy.config.musicdir is None:
-        renpy.config.musicdir = ""
-
     for i in xrange(len(filenames)):
-        filenames[i] = renpy.config.musicdir + filenames[i]
+        filenames[i] = filenames[i]
 
     with renpy.audio.audio.lock:
 

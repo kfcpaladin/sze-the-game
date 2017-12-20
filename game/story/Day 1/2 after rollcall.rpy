@@ -37,7 +37,7 @@ label TheKwokappears:
         jump phys1
 label Lyingsze:
         sze "\"N-No, I w-wwas going to ask her what n-next period is\""
-        play music "VarienThroneOfRavens.ogg"
+        $ playmusic("VarienThroneOfRavens.ogg")
         kok "\"cool story bro\"" with vpunch
         kok "\"suck my dick\"" with vpunch
         kok "\"I'll wreck you\"" with vpunch
@@ -46,7 +46,7 @@ label Lyingsze:
         jump dead
 label Honestsze:
         sze "\"Yea, so what\""
-        play music "VarienThroneOfRavens.ogg"
+        $ playmusic("VarienThroneOfRavens.ogg")
         kok "\"so imma fuck you up\"" with vpunch
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
@@ -55,7 +55,7 @@ label Honestsze:
 label Rektrusali:
         sze "\"I was just going to talk to new kid Rusali, who's trying to talk to her\""
         sze "Dennis C. Rusali is new kid and try to be friend to everyone. Why I dog him?"
-        play music "VarienThroneOfRavens.ogg"
+        $ playmusic("VarienThroneOfRavens.ogg")
         kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\"Argh... no really look\""
         kok "\"Shit you're right\""
@@ -136,7 +136,7 @@ label Rektrusali:
         with dissolve
         rus "\"Waow Arthur, I was gonna hate you but you're a nice guy\""
         hide rusali normal
-        play music "DeemoPaper Plane's Adventure.ogg" loop
+        $ playmusic("DeemoPaper Plane's Adventure.ogg", loop=True)
         show willis normal
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""

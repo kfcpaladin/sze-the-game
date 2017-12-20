@@ -7,6 +7,7 @@ This version of "Sze the Game" aims to improve the syntax of the code, to make s
 1. Restructures the /game directory so that it is easier to manage  
 2. Introduces subclasses to the ADVCharacter used in master/nub to offer specialisation
 3. Uses an updated renpy engine *(20/12/2017)*
+4. Added redirectable music directory
 
 ## Game directory layout
 
@@ -66,5 +67,13 @@ The master/nub branches used global variables to keep track of game states, such
 * Able to use the *call* function without needing the *from* sub-statement
 
 **Features that were added**:
+
+
+## Configurable music directory
+
+Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it.
+Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**
+
+*Note*: The settings for audio are located in [game/scripts/sound.rpy](https://github.com/kfcpaladin/sze-the-game/blob/master/game/scripts/sound.rpy)
 
 

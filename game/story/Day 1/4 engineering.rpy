@@ -3,7 +3,7 @@ label eng1p1:
     "I should probably be heading to the next period then."
     scene bg workshop
     with dissolve
-    play music "CongressNeptune.ogg" loop
+    $ playmusic("CongressNeptune.ogg", loop=True)
     show yang normal
     wil "\"Heil Hitler\""
     sze "\"...\""
@@ -97,8 +97,8 @@ label eng1p1naughtycorner:
     pra "\"...\""
     pra "\"You here as well? At least you weren't put here for every Engi lesson...\""
     sze "\"What? How\""
-    stop music
-    play music "TheRoomOSTMainTheme.ogg"
+    $ stopmusic()
+    $ playmusic("TheRoomOSTMainTheme.ogg")
     pra "\"I thought this time I might get the Matrix brain plug for engi or maybe Grant might forgive me...\""
     sze "\"For what?\""
     pra "\"Idk\""
@@ -163,7 +163,7 @@ label eng1p1naughtycorner:
                         "Yet again you step inside the corner, but this time it feels different"
                         "...It feels"
                         "...wrong"
-                        play music "VarienThroneOfRavens.ogg"
+                        $ playmusic("VarienThroneOfRavens.ogg")
                         "You wake up in bed next to...someone"
                         sze "\"Urgh, mornings are shit\""
                         sze "\"Wait what\"" with hpunch
@@ -229,7 +229,7 @@ label eng1p1naughtycorner:
             "You hurriedly leave, avoiding eye contact with the madman on your way to assembly"
             dea "\"Where you going?\""
             sze "\"Asszembly\""
-            play music "VarienThroneOfRavens.ogg"
+            $ playmusic("VarienThroneOfRavens.ogg")
             dea "\"Wtf? It's at the end of the period\""
             sze "Wow, after that I feel so retarded and loading dock"
             sze "Wow, I thikn I ded becuz of rtrdednesszes"
@@ -398,8 +398,8 @@ label eng1p2:
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
-                    stop music
-                    play music "RaxlenSliceBG8bit.ogg"
+                    $ stopmusic()
+                    $ playmusic("RaxlenSliceBG8bit.ogg")
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
@@ -420,7 +420,7 @@ label eng1p2:
                     gra "\"Now those are leather shoes\""
                     dik "\"Once more, I must apologise for my trangressions; If god wills it I'll be sure to right my wongs later on\""
                     "Richard left"
-                    stop music
+                    $ stopmusic()
                     $ dik.gain()
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
@@ -432,12 +432,12 @@ label eng1p2:
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     $ sze.gain("intellect")
-                    stop music
-                    play music "RaxlenSliceBG8bit.ogg"
+                    $ stopmusic()
+                    $ playmusic("RaxlenSliceBG8bit.ogg")
                     dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
                     dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
                     "Richard left leaving Dean cowering on the ground moaning in an unhealthy "
-                    stop music
+                    $ stopmusic()
                     dea "\"...fuck u arthur, ur a coward\""
                     $ sze.loss("strength")
                     sze "\"What did I do?\""
@@ -463,8 +463,8 @@ label eng1p2:
                 "Open door":
                     "You open the door"
                     sze "\"Sir, someon-\""
-                    stop music
-                    play music "RaxlenSliceBG8bit.ogg"
+                    $ stopmusic()
+                    $ playmusic("RaxlenSliceBG8bit.ogg")
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
@@ -486,7 +486,7 @@ label eng1p2:
                     dik "\"Once more, I must apologise for my trangressions; If god wills it I'll be sure to right my wongs later on\""
                     "Richard left"
                     $ dik.gain()
-                    stop music
+                    $ stopmusic()
                     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
                     jump asszembly1
                 "Don't open door":
@@ -496,12 +496,12 @@ label eng1p2:
                     "Sudden movement catches your peripheral vision"
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
-                    stop music
-                    play music "RaxlenSliceBG8bit.ogg"
+                    $ stopmusic()
+                    $ playmusic("RaxlenSliceBG8bit.ogg")
                     dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
                     dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
                     "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
-                    stop music
+                    $ stopmusic()
                     dea "\"...fuck u arthur, ur a coward\""
                     $ sze.loss("strength")
                     sze "\"What did I do?\""

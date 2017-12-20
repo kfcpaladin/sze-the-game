@@ -20,7 +20,7 @@ label start:
     sze "I had always loved her, since she first graced my eyes in Year 7."
     show bg field
     with fade
-    play music "Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg"
+    $ playmusic("Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg")
     sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
     hide bg field
     with dissolve

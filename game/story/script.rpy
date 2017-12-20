@@ -2,6 +2,12 @@
 
 label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
+    call _test_label
+    $ renpy.say(centered, "Successful return on first pass")
+    call _test_label
+    $ renpy.say(centered, "Successful return on second pass")
+    call _test_label
+    $ renpy.say(centered, "Successful return on third pass")
     $ renpy.save("autosave")
     scene bg disclaimer
     with fade
@@ -30,3 +36,9 @@ label start:
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full, and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1 played softly in the background"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
     jump schoolday1
+
+label _test_label:
+    $ renpy.say(centered, "Called to test label")
+    sze "This is a test label"
+    sze "It will be used to guage wether the call back works properly"
+    return

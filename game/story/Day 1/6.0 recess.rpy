@@ -363,7 +363,7 @@ label recess1a:
         if rin.friendship >= 100:
             sze "I think I can now finally die happy"
             "..."
-            jump dead
+            call dead
         else:
             sze "Well I suck shit"
             "Even with the power of god within his physical body he still cannot slay Serena"

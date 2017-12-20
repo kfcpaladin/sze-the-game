@@ -7,12 +7,9 @@
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
 │   ├── classes
-│   │   ├── friend.rpy
-│   │   ├── friend.rpyc
-│   │   ├── game.rpy
-│   │   ├── game.rpyc
-│   │   ├── mainCharacter.rpy
-│   │   └── mainCharacter.rpyc
+│   │   ├── Friend.rpy
+│   │   ├── Game.rpy
+│   │   └── MainCharacter.rpy
 │   ├── classesInit
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
@@ -113,12 +110,16 @@
 │   │   ├── TheRoomOSTMainTheme.ogg
 │   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
+│   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
 │   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   └── persistent
 │   ├── scripts
@@ -1380,4 +1381,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1285 files
+95 directories, 1286 files

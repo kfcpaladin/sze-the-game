@@ -2,15 +2,25 @@ python early:
     class MainCharacter(ADVCharacter):
         def __init__(self, name, kind=None, **properties):
             ADVCharacter.__init__(self, name, kind=kind, **properties)
-            defaultAttributes = {
-                "intellect": 0, 
-                "strength": 0
+            self._default = {
+                "attributes": {
+                    "intellect": 0,
+                    "strength": 0,
+                },
+                "tutorialMessage": {
+                    "show": False,
+                    "msgGain": None,
+                    "msgLoss": None,
+                },
+                "attributeIntroMessage": {
+                    "msgGain": None,
+                    "msgLoss": None,
+                },
+                "attributeMessage": [
+                    {"min": 0, "msg": None},
+                ],
             }
-            self.setAttributes(defaultAttributes)
-
-        """
-            Methods used to set main character dialogue and popup
-        """
+            self.setAttributes(self._default["attributes"])
 
         ## Update character attributes and generate default tutorial
         def setAttributes(self, attributes):
@@ -56,11 +66,7 @@ python early:
                 if attribute in tutorials:
                     self.tutorials[attribute] = tutorials[attribute]
                 else:
-                    self.tutorials[attribute] = {   # DEFAULT CASE
-                        "show": True,
-                        "msgGain": None,
-                        "msgLoss": None,
-                    }
+                    self.tutorials[attribute] = self._default["tutorialMessage"]
 
         ## Set initial message for the loss or gain of an attribute
         def setAttributeIntroMessages(self, msgDict={}):
@@ -80,10 +86,7 @@ python early:
                 if attribute in msgDict:
                     self.introMessages[attribute] = msgDict[attribute]
                 else:
-                    self.introMessages[attribute] = {   # DEFAULT CASE
-                        "msgGain": None,
-                        "msgLoss": None,
-                    }
+                    self.introMessages[attribute] = self._default["attributeIntroMessage"]
 
 
         ## Set attribute status messages
@@ -109,9 +112,7 @@ python early:
                     sortedList = sorted(msgDict[attribute], key=lambda k: k["min"], reverse=True)
                     self.attributeMessages[attribute] = sortedList
                 else:
-                    self.attributeMessages[attribute] = [   # DEFAULT CASE
-                        {"min": 0, "msg": None}
-                    ]
+                    self.attributeMessages[attribute] = self._default["attributeMessage"]
 
         """
             Methods used during the parsing of the renpy scripts
@@ -157,7 +158,8 @@ python early:
         # For an attribute, display the intro message
         def sayIntro(self, attribute, msgType="msgLoss"):
             self._checkAttribute(attribute)
-            self._say(self.introMessages[attribute][msgType])
+            message = self.introMessages[attribute][msgType]
+            self._say(message)
 
         # For an attribute, display the status message    
         def sayStatus(self, attribute):
@@ -171,14 +173,7 @@ python early:
                     break
             else:
                 message = msgList[-1]["msg"]
-            if not self._say(message):
-                self._say(self._defaultStatus)
-
-        # default status function
-        def _defaultStatus(self, attribute):
-            self._checkAttribute(attribute)
-            attributeValue = getattr(self, attribute)
-            return "{0} is currently at {1}.".format(attribute, attributeValue)
+            self._say(message)
 
         # validate attribute is valid
         def _checkAttribute(self, attribute):  
@@ -191,10 +186,14 @@ python early:
             if actualType is not dict:
                 raise TypeError("Expected a dict, instead got {0}".format(actualType))
 
-        # used to produce an output from an attribute string if not None
+        # says dialog for the character
         def _say(self, message):
-            if message is not None:
-                renpy.say(self, message)
-                return True
-            return False
+            if message is None:
+                return
+            if type(message) not in [str, basestring, list]:
+                raise TypeError("Expected string or list, instead got {0}".format(type(message)))
+            if type(message) in [str, basestring]:
+                message = [message]
+            for line in message:
+                renpy.say(self, line)
             

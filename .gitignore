@@ -5,6 +5,9 @@
 # Ignore python byte code (takes up extra space)
 *.rpyc
 
+# Linux files
+.directory
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

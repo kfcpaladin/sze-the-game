@@ -1,6 +1,9 @@
 # Optimised Sze the Game
 
 This version of "Sze the Game" aims to improve the syntax of the code, to make scripting in the renpy language much easier and more maintainable. 
+Since this is essentially a new version of the game, don't attempt to merge it with any of the other branches.
+
+**Autotest**: ["Click here for the Travis autotest"](https://travis-ci.org/kfcpaladin/sze-the-game/branches)
 
 ## Changes
 

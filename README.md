@@ -74,6 +74,6 @@ The master/nub branches used global variables to keep track of game states, such
 Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it.
 Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**
 
-*Note*: The settings for audio are located in [game/scripts/sound.rpy](https://github.com/kfcpaladin/sze-the-game/blob/master/game/scripts/sound.rpy)
+*Note*: The settings for audio are located in [game/scripts/sound.rpy](https://github.com/kfcpaladin/sze-the-game/blob/orphan/game/scripts/sound.rpy)
 
 

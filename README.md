@@ -4,6 +4,7 @@ This version of "Sze the Game" aims to improve the syntax of the code, to make s
 Since this is essentially a new version of the game, don't attempt to merge it with any of the other branches.
 
 **Autotest**: [*Click here for the Travis autotest*](https://travis-ci.org/kfcpaladin/sze-the-game/branches)
+
 **Changelog**: [*Any changes should be noted in the changelog*](./CHANGELOG.md)
 
 ## Changes

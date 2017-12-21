@@ -76,9 +76,14 @@ The master/nub branches used global variables to keep track of game states, such
 
 ## Configurable music directory
 
-Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it or keep it in game/.
-Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**
+| Sound type            | Channel | Description                                                                   |
+| --------------------- | ------- | ----------------------------------------------------------------------------- |
+| [Music](./game/music) | music   | Plays music from configured directory. Loops by default.                      |
+| [SFX](./game/sfx)     | sound   | Plays sfx sounds from selected directory. Doesn't loop and cannot be stopped. |
+
+Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it or keep it in game.
+
+Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**.
 For special effect sounds, use **playsfx()** to play a short audio clip. Note that there is no **stopsfx()** function, as it is intended for short audio clips.
-Using renpy's built in audio channels, music will be played through **music**, and sfx sounds will be played through **sound**
 
 *Note*: The settings for audio are located in [game/scripts/sound.rpy](./game/scripts/sound.rpy)

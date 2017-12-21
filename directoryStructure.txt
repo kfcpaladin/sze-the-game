@@ -104,12 +104,6 @@
 │   │   ├── PinkFloydAnotherBrickInTheWall.ogg
 │   │   ├── RaxlenSliceBG8bit.ogg
 │   │   ├── rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg
-│   │   ├── SFX
-│   │   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
-│   │   │   ├── game_over.ogg
-│   │   │   ├── kahoot.ogg
-│   │   │   ├── respawn.ogg
-│   │   │   └── slayer.ogg
 │   │   ├── terroristyterroristsong.ogg
 │   │   ├── TheRoomOSTMainTheme.ogg
 │   │   └── VarienThroneOfRavens.ogg
@@ -138,6 +132,12 @@
 │   │   ├── sound.rpy
 │   │   └── sound.rpyc
 │   ├── script_version.txt
+│   ├── sfx
+│   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
+│   │   ├── game_over.ogg
+│   │   ├── kahoot.ogg
+│   │   ├── respawn.ogg
+│   │   └── slayer.ogg
 │   └── story
 │       ├── Day 1
 │       │   ├── 1 before school.rpy

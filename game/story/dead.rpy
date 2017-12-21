@@ -1,7 +1,7 @@
 label dead:
     scene black
     $ stopmusic()
-    $ playmusic("SFX/game_over.ogg", loop=False)
+    $ playsfx("game_over.ogg")
     sze "I dead"
     menu:
         "Revert to latest autosave":
@@ -11,21 +11,21 @@ label dead:
             # theoretically if you died like 5000 times, you will run out of ram and your pc is die.
             scene bg ded
             with fade
-            $ playmusic("SFX/respawn.ogg", loop=False)
+            $ playsfx("respawn.ogg")
             "The Lord of Light has granted me another chance..."
             jump start
 
 label deadrestart:
     scene bg ded
     $ stopmusic()
-    $ playmusic("SFX/game_over.ogg", loop=False)
+    $ playsfx("game_over.ogg")
     sze "I dead"
     jump start
 
 label actualded:
     scene black
     $ stopmusic()
-    $ playmusic("SFX/game_over.ogg", loop=False)
+    $ playsfx("game_over.ogg")
     sze "I dead"
     return
 

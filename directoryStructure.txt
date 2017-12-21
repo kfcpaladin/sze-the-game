@@ -90,6 +90,7 @@
 │   │   ├── CongressNeptune.ogg
 │   │   ├── DeemoPaper Plane's Adventure.ogg
 │   │   ├── Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
+│   │   ├── kahoot.ogg
 │   │   ├── LeCastleVaniaLEDSpiralsJW.ogg
 │   │   ├── ManuelGasGasGas(InitialD).ogg
 │   │   ├── p3IwatodaiDorm.ogg
@@ -135,9 +136,11 @@
 │   ├── sfx
 │   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
 │   │   ├── game_over.ogg
-│   │   ├── kahoot.ogg
+│   │   ├── hpunch.ogg
+│   │   ├── mlady.ogg
 │   │   ├── respawn.ogg
-│   │   └── slayer.ogg
+│   │   ├── slayer.ogg
+│   │   └── vpunch.ogg
 │   └── story
 │       ├── Day 1
 │       │   ├── 1 before school.rpy
@@ -1387,4 +1390,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1292 files
+95 directories, 1295 files

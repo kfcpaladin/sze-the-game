@@ -229,8 +229,10 @@ label fugitivesfromasszembly1:
 
 label asszemblyjigolo1encounter:
     "You move towards your destination"
+    $ playsfx("vpunch.ogg")
     "{cps=*0.2}...{/cps}" with vpunch
-    "{cps=*0.2}...{/cps}" with vpunch
+    $ playsfx("hpunch.ogg")
+    "{cps=*0.2}...{/cps}" with hpunch
     jit "\"Wait...I think I hear some more teachers\""
     sze "\"Shit, again?!\""
 # a bit of johnny cash could work here
@@ -252,6 +254,7 @@ label asszemblyjigolo1encounter:
             jit "\"wot?\""
             sze "\"run\""
             "\"Both you and Jitian bolt off across the school\""
+            $ playsfx("hpunch.ogg")
             "\"...\"" with hpunch
             $ playmusic("p3MassDestruction.ogg")
             "\"Right into another patrol of teachers\""
@@ -285,11 +288,14 @@ label asszemblyjigolo1encounter:
                         sze "\"If we fight good, we won't get caught\""
                         sze "\"If we get caught we will face a fate worse than death by the minions of Sauron\""
                         sze "\"{s}I will not be able to sze Serena{/s} We will have to face the wrath of Moxham\""
+                        $ playsfx("hpunch.ogg")
                         jit "\"Let's fight then!!\"" with hpunch
                         $ _jig1fight1a = renpy.random.randint(0, 6) + int(sze.strength)*2 + int(sze.intellect) + int(jit.friendship)
                         if _jig1fight1a > 12:
                             "With Jitian by your side, you stand your ground"
+                            $ playsfx("vpunch.ogg")
                             "The teachers thunder towards you" with vpunch
+                            $ playsfx("vpunch.ogg")
                             "They begin to wail on you" with vpunch
                             "But your iron defence holds out"
                             jit "\"You truly are the Chosen One\""
@@ -337,6 +343,7 @@ label asszemblyjigolo1encounter:
 
                     else:
                         sze "\" WOLOLOLOLOLOLOLOLOLOLO!\""
+                        $ playsfx("hpunch.ogg")
                         "You unleash what you think is a terrifying warcry" with hpunch
                         "You succeed in scaring Jitian away"
                         $ _jig1fight1b = renpy.random.randint(0, 6) + int(sze.strength)*2 + int(sze.intellect)

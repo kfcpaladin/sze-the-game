@@ -21,10 +21,12 @@ label econ1kahoot1:
     $ time = 15
     $ timer_range = 15
     $ timer_jump = 'econ1kahoot1slow'
+    $ playmusic("kahoot.ogg")
     show screen countdown
     "Which country has the longest uninterrupted economic growth?"
     menu:
         "Australia":
+            $ stopmusic()
             hide screen countdown
             "Correct"
             if time > 5:
@@ -33,14 +35,17 @@ label econ1kahoot1:
                 $ game.gain("kahoot", 2)
             return
         "US":
+            $ stopmusic()
             hide screen countdown
             "Wrong"
             return
         "China":
+            $ stopmusic()
             hide screen countdown
             "Wrong"
             return
         "Uganda":
+            $ stopmusic()
             hide screen countdown
             "Wrong"
             return

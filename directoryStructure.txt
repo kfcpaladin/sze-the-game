@@ -13,12 +13,18 @@
 │   │   ├── Game.rpy
 │   │   ├── Game.rpyc
 │   │   ├── MainCharacter.rpy
-│   │   └── MainCharacter.rpyc
+│   │   ├── MainCharacter.rpyc
+│   │   ├── Quest.rpy
+│   │   └── Quest.rpyc
 │   ├── images
 │   │   ├── 91_big.jpg
 │   │   ├── arthur.jpg
 │   │   ├── arthurside.png
+│   │   ├── axe.png
+│   │   ├── bag.png
+│   │   ├── ball.png
 │   │   ├── billthecleaner.png
+│   │   ├── calc1.png
 │   │   ├── calculetor.png
 │   │   ├── chao2.png
 │   │   ├── chaohappy.png
@@ -1391,4 +1397,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1296 files
+95 directories, 1302 files

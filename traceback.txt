@@ -1,38 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-ScriptError: could not find label 'fortmap'.
+  File "game/story/script.rpy", line 7, in script
+    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
+  File "game/story/script.rpy", line 7, in <module>
+    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
+NameError: name 'Item' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
-    renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
-    run(restart)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
-    renpy.execution.run_context(True)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
-    context.run()
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 861, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'fortmap'.
+  File "game/story/script.rpy", line 7, in script
+    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/story/script.rpy", line 7, in <module>
+    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
+NameError: name 'Item' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

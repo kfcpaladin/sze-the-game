@@ -1,6 +1,6 @@
 python early:
     class Quests:
-        def __init__(self):
+        def __init__(self, screenName):
             self.quests = []
             self.questDetail = {
                 "title": None,

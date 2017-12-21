@@ -1,4 +1,4 @@
-Thu Dec 21 14:45:58 2017
+Fri Dec 22 00:53:29 2017
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -6,27 +6,27 @@ Ren'Py 6.99.13.2919
 Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.02s
+Loading error handling took 0.03s
 Loading script took 0.18s
 Loading persistent took 0.03s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.14s
-Loading analysis data took 0.02s
+Running init code took 0.13s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 0.15s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
 Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.07s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
@@ -295,16 +295,14 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.02210402489s
+Total time until interface ready: 0.95307302475s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.023171 seconds.
-- Frame drawn at 0.032188 seconds.
-- Frame drawn at 0.048587 seconds.
-- Frame drawn at 0.065502 seconds.
-- 0.065502 seconds to render 5 frames.
-The window was minimized.
-The window was restored.
+- Frame drawn at 0.019939 seconds.
+- Frame drawn at 0.031828 seconds.
+- Frame drawn at 0.048350 seconds.
+- Frame drawn at 0.065754 seconds.
+- 0.065754 seconds to render 5 frames.
 Traceback (most recent call last):
   File "renpy/common/00console.rpy", line 426, in run
     result = renpy.python.py_eval(code)
@@ -313,6 +311,34 @@ Traceback (most recent call last):
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
     return eval(bytecode, globals, locals)
   File "<none>", line 1, in <module>
-TypeError: 'int' object is not callable
-The window was minimized.
-The window was restored.
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 1022, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen titledwindow is not known.
+
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 426, in run
+    result = renpy.python.py_eval(code)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'screen'
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 426, in run
+    result = renpy.python.py_eval(code)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'Screen'
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 426, in run
+    result = renpy.python.py_eval(code)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+TypeError: 'module' object is not callable

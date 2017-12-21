@@ -5,7 +5,23 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 173, in <module>
     $ ui.interact()
-Exception: Grid not completely full.
+  File "game/screens/questscreen.rpy", line 1, in execute
+    screen questscreen:
+  File "game/screens/questscreen.rpy", line 1, in execute
+    screen questscreen:
+  File "game/screens/questscreen.rpy", line 6, in execute
+    grid 2 1:
+  File "game/screens/questscreen.rpy", line 19, in execute
+    vbox:
+  File "game/screens/questscreen.rpy", line 20, in execute
+    frame:
+  File "game/screens/questscreen.rpy", line 21, in execute
+    has vbox
+  File "game/screens/questscreen.rpy", line 23, in execute
+    for index, quest in enumerate(quests.completed):
+  File "game/screens/questscreen.rpy", line 25, in execute
+    text "Title: {0}".format(quest["title"])
+TypeError: 'int' object has no attribute '__getitem__'
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -22,53 +38,42 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2916, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1980, in draw_screen
-    renpy.config.screen_height,
-  File "renpy/display/render.pyx", line 430, in renpy.display.render.render_screen (gen/renpy.display.render.c:6938)
-    rv = render(root, width, height, 0, 0)
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 361, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 625, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 414, in render
-    raise Exception("Grid not completely full.")
-Exception: Grid not completely full.
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/questscreen.rpy", line 1, in execute
+    screen questscreen:
+  File "game/screens/questscreen.rpy", line 1, in execute
+    screen questscreen:
+  File "game/screens/questscreen.rpy", line 6, in execute
+    grid 2 1:
+  File "game/screens/questscreen.rpy", line 19, in execute
+    vbox:
+  File "game/screens/questscreen.rpy", line 20, in execute
+    frame:
+  File "game/screens/questscreen.rpy", line 21, in execute
+    has vbox
+  File "game/screens/questscreen.rpy", line 23, in execute
+    for index, quest in enumerate(quests.completed):
+  File "game/screens/questscreen.rpy", line 25, in execute
+    text "Title: {0}".format(quest["title"])
+  File "<screen language>", line 25, in <module>
+TypeError: 'int' object has no attribute '__getitem__'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

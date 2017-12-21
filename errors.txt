@@ -2,8 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/scripts/screens/questscreen.rpy", line 9: vbox expects a non-empty block.
-    vbox:
-         ^
+File "game/screens/questscreen.rpy", line 13: u'call' is not a keyword argument or valid child for the vbox statement.
+    call _showQuests quests.ongoing
+        ^
+
+File "game/screens/questscreen.rpy", line 21: expected statement.
+    for index, quest in enumerate(quests):
+             ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

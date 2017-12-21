@@ -72,7 +72,7 @@ This is a class used to store the relevant quests used throughout the story.
 It will contain methods to add and remove quests, and will be used as the backend for a frontend gui written in renpy.
 
 * **Adding a quest**: $ quests.addQuests(*dict* or *list*)
-* **Removing a quest**: $ quests.removeQuest(*index*)
+* **Removing a quest**: $ quests.completeQuest(*index*)
 * **Debugging current quests**: $ quests.debugQuests()  *(information is printed to console)*  
 
 *Note*: For more information check out [**game/instances/**](./game/instances) to see how all of this is implemented

@@ -90,6 +90,8 @@
 │   │   ├── friends.rpyc
 │   │   ├── game.rpy
 │   │   ├── game.rpyc
+│   │   ├── quests.rpy
+│   │   ├── quests.rpyc
 │   │   ├── sze.rpy
 │   │   └── sze.rpyc
 │   ├── music
@@ -134,8 +136,27 @@
 │   │   ├── images.rpyc
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
-│   │   ├── screens.rpy
-│   │   ├── screens.rpyc
+│   │   ├── screens
+│   │   │   ├── countdown.rpy
+│   │   │   ├── countdown.rpyc
+│   │   │   ├── default.rpy
+│   │   │   ├── default.rpyc
+│   │   │   ├── fortmap.rpy
+│   │   │   ├── fortmap.rpyc
+│   │   │   ├── inventory.rpy
+│   │   │   ├── inventory.rpyc
+│   │   │   ├── kms.rpy
+│   │   │   ├── kms.rpyc
+│   │   │   ├── questscreen.rpy
+│   │   │   ├── questscreen.rpyc
+│   │   │   ├── quickmenu.rpy
+│   │   │   ├── quickmenu.rpyc
+│   │   │   ├── roadmap.rpy
+│   │   │   ├── roadmap.rpyc
+│   │   │   ├── statscreen.rpy
+│   │   │   ├── statscreen.rpyc
+│   │   │   ├── szeclicker.rpy
+│   │   │   └── szeclicker.rpyc
 │   │   ├── sound.rpy
 │   │   └── sound.rpyc
 │   ├── script_version.txt
@@ -1397,4 +1418,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1302 files
+96 directories, 1322 files

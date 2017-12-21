@@ -1,24 +1,74 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 7, in script
-    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
-  File "game/story/script.rpy", line 7, in <module>
-    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
-NameError: name 'Item' is not defined
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+Exception: Grid not completely full.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 7, in script
-    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/story/script.rpy", line 7, in <module>
-    $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
-NameError: name 'Item' is not defined
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2916, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1980, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 430, in renpy.display.render.render_screen (gen/renpy.display.render.c:6938)
+    rv = render(root, width, height, 0, 0)
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 361, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 625, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 414, in render
+    raise Exception("Grid not completely full.")
+Exception: Grid not completely full.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

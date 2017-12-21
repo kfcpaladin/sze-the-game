@@ -2,13 +2,13 @@ python early:
     class Quests:
         def __init__(self):
             self.quests = []
-            self.questDetail = {
+            self._emptyQuest = {
                 "title": None,
                 "shortMsg": None,
                 "longMsg": None,
             }
 
-        def addQuest(self, quests):
+        def addQuests(self, quests):
             if type(quests) not in [dict, list]:
                 raise TypeError("Expected dict/list for quest, not {0}".format(type(quests)))
             if type(quests) is dict:

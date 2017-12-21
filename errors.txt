@@ -2,6 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/story/Day 1/5.1 jig assembly.rpy", line 342: indentation mismatch.
+File "game/scripts/screens/questscreen.rpy", line 9: vbox expects a non-empty block.
+    vbox:
+         ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

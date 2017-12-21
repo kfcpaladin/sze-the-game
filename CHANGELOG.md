@@ -18,3 +18,8 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Included vpunch.ogg and hpunch.ogg in game/sfx for fight scenes
 * Added stopsfx() to stop sfx sounds on the "sound" channel
 * Added more features to the Valley easter egg
+* Added the WIP inventory system to the game
+* Started adding quest support
+
+**22/12/2017**
+* Broke down the large screens.rpy file into multiple .rpy files and stored them under scripts/

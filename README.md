@@ -22,6 +22,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [images](./game/images)        | Stores the images declared by default in renpy                    |
 | [instances](./game/instances)  | Stores pythons scripts which initialise all the instances         |
 | [music](./game/music)          | Custom directory declarable through options.rpy in /game/scripts  |
+| [screens](./game/screens)      | Folder dedicated for gui renpy script files                       |
 | [scripts](./game/scripts)      | Where you place renpy scripts not related to story                |
 | [story](./game/story)          | Specialised directory used to store all the narratives            |
 
@@ -34,14 +35,16 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
 | [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
 | [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
+| [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
 
 ### Instances
 
 | Class         | Instance names  |
 | ------------- | --------------- |
-| MainCharacter | [sze](./game/instances/sze.rpy)  |
+| MainCharacter | [sze](./game/instances/sze.rpy)       |
 | Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
-| Game          | [game](./game/instances/game.rpy)|
+| Game          | [game](./game/instances/game.rpy)     |
+| Quest         | [quests](./game/instances/quests.rpy) |
 
 ### Usage inside renpy script
 
@@ -63,6 +66,14 @@ The master/nub branches used global variables to keep track of game states, such
 * **setting gamestate varaible**: $ game = Game(*dict*)
 * **accessing gamestate variable**: $ game.moxCounter, $ game.timeTravelCounter, *etc*
 * **debug the current gamestate**: $ game.describe() *(information is printed to console)*
+
+#### Quest
+This is a class used to store the relevant quests used throughout the story. 
+It will contain methods to add and remove quests, and will be used as the backend for a frontend gui written in renpy.
+
+* **Adding a quest**: $ quests.addQuests(*dict* or *list*)
+* **Removing a quest**: $ quests.removeQuest(*index*)
+* **Debugging current quests**: $ quests.debugQuests()  *(information is printed to console)*  
 
 *Note*: For more information check out [**game/instances/**](./game/instances) to see how all of this is implemented
 

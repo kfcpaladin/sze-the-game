@@ -99,21 +99,28 @@ label asszembly1_2:
     pra "\"Teach me William, show me the way to your greatness...\""
     wil "\"Relax, just do 20,000 tests.\""
     kok "\"Tests? I think Chao should get one of his LGs to do one, make sure- {nw}\""
+    $ playsfx("vpunch.ogg")
     cha "\"Fee\"" with vpunch
-    cha "\"Fi\"" with vpunch
+    $ playsfx("hpunch.ogg")
+    cha "\"Fi\"" with hpunch
+    $ playsfx("vpunch.ogg")
     cha "\"Fo\"" with vpunch
-    cha "\"Fum\"" with vpunch
+    $ playsfx("hpunch.ogg")
+    cha "\"Fum\"" with hpunch
     show chao normal
     cha "\"Imma fuck you up the bum\""
     if game.chaoPissed is True:
         "Chao is blocking me"
+        $ playsfx("vpunch.ogg")
         cha "\"I promised I would have my revenge...\"" with vpunch
         sze "\"Shit\""
         "You try to run but the crowd blocks you and Chao grabs you"
         sze "\"Aarrgh, fuck off, don't touch me\""
+        $ playsfx("hpunch.ogg")
         cha "\"Huehue\"" with hpunch
         sze "\"Ow, fuck, my head...\""
         $ sze.loss("intellect")
+        $ playsfx("hpunch.ogg")
         cha "\"Fuck your head? Ok\"" with hpunch
         sze "\"Nooo, raep, raep\""
         if dik.friendship > 0:
@@ -124,6 +131,7 @@ label asszembly1_2:
             cha "\"Nah...\""
             dik "\"My apologies, then\""
             cha "\"?\""
+            $ playsfx("hpunch.ogg")
             dik "\"For {b}this{/b}\"" with hpunch
             cha "\"FUUUUUUCCCCKKKKK, what the shit was that?!?!?!\""
             dik "\"Steel cap work boots, bitch\""
@@ -138,6 +146,7 @@ label asszembly1_2:
             $ sze.gain("strength")
             jump asszembly1_3
         elif dik.friendship < 1:
+            $ playsfx("vpunch.ogg")
             cha "\"I go full frontal\"" with vpunch
             $ sze.loss("intellect")
             sze "\"Aaah, plz stop\""
@@ -145,6 +154,7 @@ label asszembly1_2:
             $ sze.loss("intellect")
             sze "\"No... No means no\""
             "Chao slams you down onto the ground"
+            $ playsfx("vpunch.ogg")
             cha "\"I will ravage you to Chaoder\"" with vpunch
             $ sze.loss("intellect")
             $ sze.loss("intellect")
@@ -165,6 +175,7 @@ label asszembly1_2:
         rus "\"Oi, don't roast me\""
         cha "\"Chill, I'm just here to raep Pragga\""
         pra "\"No, fuck off...\""
+        $ playsfx("hpunch.ogg")
         "You feel it best not to intervene" with hpunch
         "Despite Pragash's attempts to positively assert himself, the whites call him out for not accepting non-heterosexual practices"
         sze "They must've really hated him being on the Student Representative Council..."
@@ -271,10 +282,15 @@ label asszembly1_3:
                             jump asszembly1_4
                         else:
                             $ playmusic("VarienThroneOfRavens.ogg")
+                            $ playsfx("vpunch.ogg")
                             "You stand rooted to the spot, even as Moxham noticed you and stopped speaking" with vpunch
+                            $ playsfx("vpunch.ogg")
                             "Your heartbeat starts irregularly racing" with vpunch
+                            $ playsfx("vpunch.ogg")
                             sze "shit shit {nw}" with vpunch
+                            $ playsfx("vpunch.ogg")
                             sze "shit shit {nw}" with vpunch
+                            $ playsfx("vpunch.ogg")
                             sze "shit shit {nw}" with vpunch
                             "Your heart finally gives up as you die of embarrassment"
                             jump dead

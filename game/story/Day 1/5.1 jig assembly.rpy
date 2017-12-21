@@ -18,6 +18,7 @@ label asszembly1jigolo:
         "Sneak up on the source of the sound":
             "You sneak up on the source of the sound"
             sze "\"...\""
+            $ playsfx("vpunch.ogg")
             jit "\"Whoa, SHIT!\"" with vpunch
             sze "\"Oh, it's just Gary\""
             sze "{cps=*1.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"

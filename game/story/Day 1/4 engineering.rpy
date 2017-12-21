@@ -83,6 +83,7 @@ label eng1p1:
             "you feel the pressure rising, resisting against you, soon to overwhelm you"
             "your mind fades away, replaced only by the words"
             "vice, Vice, VICE"
+            $ playsfx("vpunch.ogg")
             gra "\"Aaaaah\"" with vpunch
             gra "\"STOP PLAYING WITH THE VICES\""
             gra "\"You're in trouble\""
@@ -166,7 +167,9 @@ label eng1p1naughtycorner:
                         $ playmusic("VarienThroneOfRavens.ogg")
                         "You wake up in bed next to...someone"
                         sze "\"Urgh, mornings are shit\""
+                        $ playsfx("hpunch.ogg")
                         sze "\"Wait what\"" with hpunch
+                        $ playsfx("vpunch.ogg")
                         sze "\"Wha- what the fuck are you\"" with vpunch
                         sze "\"Huh? You\""
                         sze "\"No, I'm me, you're...\""
@@ -367,6 +370,7 @@ label yangrantp1_3:
 
 label eng1p2:
     show grant normal
+    $ playsfx("hpunch.ogg")
     gra "\"AAAHH, MINGLE!!\"" with hpunch
     gra "\"Gather around the front table, children\""
     gra "\"Before we learn about planes, do these worksheets\""
@@ -400,6 +404,7 @@ label eng1p2:
                     sze "\"Sir, someon-\""
                     $ stopmusic()
                     $ playmusic("RaxlenSliceBG8bit.ogg")
+                    $ playsfx("hpunch.ogg")
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
@@ -429,6 +434,7 @@ label eng1p2:
                     sze "\"szeebs\""
                     dea "\"I'll get it\""
                     "Sudden movement catches your peripheral vision"
+                    $ playsfx("hpunch.ogg")
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     $ sze.gain("intellect")
@@ -465,6 +471,7 @@ label eng1p2:
                     sze "\"Sir, someon-\""
                     $ stopmusic()
                     $ playmusic("RaxlenSliceBG8bit.ogg")
+                    $ playsfx("hpunch.ogg")
                     dik "\"...\"" with hpunch
                     "You find yourself being garotted by earphones"
                     dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
@@ -494,6 +501,7 @@ label eng1p2:
                     sze "\"szeebs\""
                     dea "\"I'll get it\""
                     "Sudden movement catches your peripheral vision"
+                    $ playsfx("hpunch.ogg")
                     dea "\"Gaaaafuuuuccc\"" with hpunch
                     dea "\"heeelllllppppp\""
                     $ stopmusic()
@@ -520,6 +528,7 @@ label eng1p2:
             "you feel the pressure rising, resisting against you, soon to overwhelm you"
             "your mind fades away, replaced only by the words"
             "vice, Vice, VICE"
+            $ playsfx("vpunch.ogg")
             gra "\"Aaaaah\"" with vpunch
             gra "\"STOP PLAYING WITH VICES\""
             gra "\"You're in trouble\""

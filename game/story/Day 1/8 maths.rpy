@@ -22,6 +22,7 @@ label mthext1shitstorm:
     "Geogebrah sir is the reply"
     "No your not, bring your laptop over here"
     "It's just geogebrah sir"
+    $ playsfx("vpunch.ogg")
     "No bring it here" with vpunch
     "Anthony brings is computer to Barton and in a few moments gets sent to the principal's office, and is never seen again"
     sze "lol"

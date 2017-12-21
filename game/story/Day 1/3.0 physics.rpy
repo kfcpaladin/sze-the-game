@@ -51,19 +51,25 @@ label phys1answered_a:
     flu "\"I bet you go tutoring\""
     $ playmusic("VarienThroneOfRavens.ogg")
     sze "\"...um\""
+    $ playsfx("vpunch.ogg")
     flu "\"Stop reading so far ahead its not fair on everyone else\"" with vpunch
+    $ playsfx("hpunch.ogg")
     flu "\"In fact I bet you are doing secret tutor-homework right now\"" with hpunch
     sze "\"Wot, Ms-\""
+    $ playsfx("vpunch.ogg")
     flu "\"Everyone, kill the heretic\"" with vpunch
     show pragash normal
     pra "\"Sorry Arthur\""
+    $ playsfx("hpunch.ogg")
     pra "\"For the watch\"" with hpunch
     pra "\"Ow my hand\""
     hide pragash normal
     show willis normal
+    $ playsfx("vpunch.ogg")
     kok "\"For the watch\"" with vpunch
     hide willis normal
     show rusali normal
+    $ playsfx("hpunch.ogg")
     rus "\"For the watch\"" with hpunch
     hide rusali normal
     show chao normal
@@ -72,6 +78,7 @@ label phys1answered_a:
     sze "\"...urg...\""
     cha "\"...\""
     sze "\"...Chao..\""
+    $ playsfx("vpunch.ogg")
     cha "\"...\"" with vpunch
     cha "\"For teh watch\""
     hide chao normal
@@ -130,6 +137,7 @@ label phys1p2p1:
     show rusali normal
     with dissolve
     rus "\"gotta ace trials ... gotta ace trials ... gotta ace trials\""
+    $ playsfx("vpunch.ogg")
     "You pick up the paper and throw it at rusali" with vpunch
     rus "\"Waow, what was that for.\""
     $ rus.loss()
@@ -184,6 +192,7 @@ label phys1p2p2:
             sze "\"No\""
             sze "\"no, pls dont kill me\""
             cha "\"Fuck you\""
+            $ playsfx("vpunch.ogg")
             cha "\"I'll eat you for lunch!\"" with vpunch
             jump dead
         "\"Ummmm...\"":
@@ -212,6 +221,7 @@ label phys1p2p3:
         dea "\"It was all Chao's fault\""
         flu "\"Both of you should stop playing around\""
         sze "\"But-\""
+        $ playsfx("hpunch.ogg")
         flu "\"Both of you go to the principles office, NOW\"" with hpunch
         sze "\"Wow Chao\""
         jump phys1p3principal2

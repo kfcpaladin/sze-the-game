@@ -155,11 +155,11 @@ label eng1ascension:
                                 "You only have one shot at this"
                                 "You feel time slowing down as you pull your elbow back"
                                 sze "This is gonna be hard; I'll need to punch Chao for a combat score of 12, to do anything"
-                                $ _randomenglish1stairspunchchao = renpy.random.randint(0, 6)
-                                $ _english1stairspunchchao = (int(_randomenglish1stairspunchchao) + int(sze.strength)*2 + int(sze.intellect))
+                                $ _english1stairspunchchao = renpy.random.randint(0, 6) + int(sze.strength)*2 + int(sze.intellect)
                                 "Your fist flies forward, with a combat score of [_english1stairspunchchao]"
                                 if _english1stairspunchchao > 11:
                                     "!!!"
+                                    $ playsfx("hpunch.ogg")
                                     with hpunch
                                     sze "shit"
                                     "Chao has caught your fist"
@@ -173,6 +173,7 @@ label eng1ascension:
                                     jump english1flight3
                                 else:
                                     "!!!"
+                                    $ playsfx("hpunch.ogg")
                                     with hpunch
                                     "Chao stumbles back, holding his jaw"
                                     cha "\"You...\""
@@ -247,6 +248,7 @@ label english1flight3:
             "There appears to be something going on in the background"
             wil "\"Well, here goes\""
             wil "\"Clear\""
+            $ playsfx("vpunch.ogg")
             with vpunch
             sze "\"-aargh\""
             wil "\"Surprised that worked\""

@@ -38,8 +38,11 @@ label TheKwokappears:
 label Lyingsze:
         sze "\"N-No, I w-wwas going to ask her what n-next period is\""
         $ playmusic("VarienThroneOfRavens.ogg")
+        $ playsfx("vpunch.ogg")
         kok "\"cool story bro\"" with vpunch
+        $ playsfx("vpunch.ogg")
         kok "\"suck my dick\"" with vpunch
+        $ playsfx("vpunch.ogg")
         kok "\"I'll wreck you\"" with vpunch
         hide willis normal
         with dissolve
@@ -47,7 +50,9 @@ label Lyingsze:
 label Honestsze:
         sze "\"Yea, so what\""
         $ playmusic("VarienThroneOfRavens.ogg")
+        $ playsfx("vpunch.ogg")
         kok "\"so imma fuck you up\"" with vpunch
+        $ playsfx("vpunch.ogg")
         kok "\"Die motherfucker\"" with vpunch
         hide willis normal
         with dissolve
@@ -56,6 +61,7 @@ label Rektrusali:
         sze "\"I was just going to talk to new kid Rusali, who's trying to talk to her\""
         sze "Dennis C. Rusali is new kid and try to be friend to everyone. Why I dog him?"
         $ playmusic("VarienThroneOfRavens.ogg")
+        $ playsfx("vpunch.ogg")
         kok "\"Hah, funny joke mate, go suck a dick\"" with vpunch
         sze "\"Argh... no really look\""
         kok "\"Shit you're right\""
@@ -69,38 +75,49 @@ label Rektrusali:
         with dissolve
         show willis normal
         with dissolve
+        $ playsfx("vpunch.ogg")
         kok "\"Sure bro, let's see how long u last before i make you tell teh truth.\"" with vpunch
         hide willis normal
         show rusali normal
         rus "\"Plz stop\""
         hide rusali normal
         show willis normal
+        $ playsfx("vpunch.ogg")
         kok "\"Nah brah\"" with vpunch
         hide willis normal
         show rusali normal
+        $ playsfx("vpunch.ogg")
         rus "\"Waah\"" with hpunch
         hide rusali normal
         show willis normal
+        $ playsfx("vpunch.ogg")
         kok "\"u wot m8, trying to hit meh!?!\"" with vpunch
+        $ playsfx("vpunch.ogg")
         kok "\"git rekt m8, gg ez kill\"" with vpunch
+        $ playsfx("vpunch.ogg")
         kok "\"lol imma get gaz to re-educate you with 1000 years of pain after im done\"" with vpunch
+        $ playsfx("vpunch.ogg")
         kok "\"thanks arthur\"" with vpunch
         hide willis normal
         show rusali normal
         rus "\"waow arthur, why you do this?\""
+        $ playsfx("hpunch.ogg")
         rus "\"just watch me\"" with hpunch
         hide rusali normal
         show willis normal
         kok "\"ow\""
+        $ playsfx("vpunch.ogg")
         kok "\"jks lol weak, more weak than lemon to face\"" with vpunch
         hide willis normal
         show rusali normal
+        $ playsfx("hpunch.ogg")
         rus "\"waow just watch me\"" with hpunch
         hide rusali normal
         show willis normal
         kok "\"Weak\""
         hide willis normal
         show rusali normal
+        $ playsfx("hpunch.ogg")
         rus "\"Screw you guys. I'm going home\"" with hpunch
         hide rusali normal
         show moxham unhappy

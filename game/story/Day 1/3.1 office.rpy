@@ -15,13 +15,16 @@ label phys1p3principal1:
         $ playmusic("VarienThroneOfRavens.ogg")
         mox "\"You're already in my shit books\""
         rus "\"Oh no...\""
+        $ playsfx("hpunch.ogg")
         mox "\"I didn't say you could speak\"" with hpunch
         rus "\"Aowwww\""
         sze "\"Oh shit\""
+        $ playsfx("vpunch.ogg")
         mox "\"You're both dead\"" with vpunch
         rus "\"Run, ru-\""
         mox "\"I'll clear all your records of loading dockness if you rek Arthur and spend afternoon of re-education with me\""
         show rusali normal
+        $ playsfx("vpunch.ogg")
         rus "\Soz man. Need to ace trials\"" with vpunch
         sze "\"faarrrr\""
         jump dead

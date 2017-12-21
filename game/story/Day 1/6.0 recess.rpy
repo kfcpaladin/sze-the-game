@@ -163,6 +163,7 @@ label recess1a:
                 "Talk":
                    "You move like a panther, with slick moves and predatory focus"
                    "The coast is clear; she is not with anyone and you are in optimal position to engage"
+                   $ playsfx("vpunch.ogg")
                    "..." with vpunch
                    "Until you bump into Richard and Derek"
                    drk "\"Watch where you going, fgt\""

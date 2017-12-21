@@ -1,35 +1,71 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While parsing /home/fiendchain/Downloads/sze-the-game/game/scripts/sound.rpy.
-  File "game/scripts/sound.rpy", line 8, in <module>
-    style.button.activate_sound = musicdir + "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
-Exception: Style 'button' does not exist.
+While running game code:
+  File "renpy/common/00start.rpy", line 266, in script
+    python:
+  File "renpy/common/00start.rpy", line 270, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "renpy/common/00console.rpy", line 478, in enter
+    renpy.call_in_new_context("_console")
+  File "renpy/common/00console.rpy", line 765, in script
+    python in _console:
+ScriptError: could not find label 'assemblyjigolo1encounter'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
     renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 365, in main
-    renpy.game.script.load_script()  # sets renpy.game.script.
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 265, in load_script
-    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 756, in load_appropriate_file
-    self.finish_load(stmts, initcode, filename=lastfn)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 448, in finish_load
-    node.early_execute()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 878, in early_execute
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
+    renpy.execution.run_context(True)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 266, in script
+    python:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/scripts/sound.rpy", line 8, in <module>
-    style.button.activate_sound = musicdir + "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
-  File "renpy/style.pyx", line 214, in renpy.style.StyleManager.__getattr__ (gen/renpy.style.c:3560)
-    return get_style(name)
-  File "renpy/style.pyx", line 81, in renpy.style.get_style (gen/renpy.style.c:1682)
-    raise Exception("Style %r does not exist." % name)
-Exception: Style 'button' does not exist.
+  File "renpy/common/00start.rpy", line 270, in <module>
+    renpy.call_in_new_context("_main_menu")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/game.py", line 336, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in <module>
+    ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 430, in event
+    rv = run(action)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 306, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00console.rpy", line 478, in enter
+    renpy.call_in_new_context("_console")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/game.py", line 336, in call_in_new_context
+    return renpy.execution.run_context(False)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "renpy/common/00console.rpy", line 765, in script
+    python in _console:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 861, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'assemblyjigolo1encounter'.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
- 
+sze-the game 0.0

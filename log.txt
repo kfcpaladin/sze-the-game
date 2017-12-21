@@ -1,4 +1,4 @@
-Wed Dec 20 19:02:40 2017
+Thu Dec 21 12:08:29 2017
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -7,11 +7,11 @@ Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.25s
+Loading script took 0.17s
 Loading persistent took 0.03s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.11s
+Running init code took 0.13s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -19,16 +19,16 @@ Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 0.15s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.01s
@@ -295,65 +295,35 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.1816380024s
+Total time until interface ready: 0.909921169281s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.023724 seconds.
-- Frame drawn at 0.032706 seconds.
-- Frame drawn at 0.049252 seconds.
-- Frame drawn at 0.066618 seconds.
-- 0.066618 seconds to render 5 frames.
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'countdown' is not defined
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'countdown' is not defined
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'screen' is not defined
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-AttributeError: 'module' object has no attribute 'screen'
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-AttributeError: 'function' object has no attribute 'screen'
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-TypeError: show() takes at least 1 argument (0 given)
+- Frame drawn at 0.024229 seconds.
+- Frame drawn at 0.032471 seconds.
+- Frame drawn at 0.049361 seconds.
+- Frame drawn at 0.065850 seconds.
+- 0.065850 seconds to render 5 frames.
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1918, 1011) drawable=(1918, 1011)
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1920, 1013) drawable=(1920, 1013)
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1742, 980) drawable=(1742, 980)
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1918, 1011) drawable=(1918, 1011)
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1920, 1013) drawable=(1920, 1013)

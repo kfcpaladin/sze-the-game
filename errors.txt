@@ -2,8 +2,14 @@
 errors listed below, and try again.
 
 
-File "game/story/dead.rpy", line 14: expected statement.
-    playmusic("SFX/respawn.ogg", loop=False)
-                                            ^
+File "game/story/Day 1/5.1 jig assembly.rpy", line 289: invalid syntax
+    _jig1fight1a = renpy.random.randint(0, 6) + int(sze.strength)*2 + int(sze.intellect) + int(jit.friendship))
+                                                                                                               ^
+    
+
+File "game/story/Day 1/5.1 jig assembly.rpy", line 342: invalid syntax
+    _jig1fight1b = renpy.random.randint(0, 6) + int(sze.strength)*2 + int(sze.intellect))
+                                                                                         ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

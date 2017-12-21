@@ -1,4 +1,5 @@
 .
+├── CHANGELOG.md
 ├── directoryStructure.txt
 ├── errors.txt
 ├── game
@@ -1386,4 +1387,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1291 files
+95 directories, 1292 files

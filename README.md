@@ -12,7 +12,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 1. Restructures the /game directory so that it is easier to manage  
 2. Introduces subclasses to the ADVCharacter used in master/nub to offer specialisation
 3. Uses an updated renpy engine to [*renpy-6.99.13*](https://www.renpy.org/dl/6.99.13/)
-4. Added redirectable music directory
+4. Added redirectable music and sfx directories
 
 ## Game directory layout
 
@@ -78,5 +78,7 @@ The master/nub branches used global variables to keep track of game states, such
 
 Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it or keep it in game/.
 Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**
+For special effect sounds, use **playsfx()** to play a short audio clip. Note that there is no **stopsfx()** function, as it is intended for short audio clips.
+Using renpy's built in audio channels, music will be played through **music**, and sfx sounds will be played through **sound**
 
 *Note*: The settings for audio are located in [game/scripts/sound.rpy](./game/scripts/sound.rpy)

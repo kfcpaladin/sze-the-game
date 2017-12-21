@@ -12,3 +12,7 @@ The standard format for a changelog is the date as a title, followed by bullet p
 
 **21/12/2017**
 * Added a change log
+* Increased the complexity of the Friend class to add support for multiple attributes and messages
+* Created a new directory for sfx files
+* Added support for sfx files
+* Included vpunch.ogg and hpunch.ogg in game/sfx for fight scenes

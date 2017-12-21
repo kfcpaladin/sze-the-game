@@ -34,8 +34,8 @@ init -1 python hide:
     # Audio
     
     ## Sounds that are used when button and imagemaps are clicked.
-    style.button.activate_sound = musicdir + "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
-    style.imagemap.activate_sound = musicdir + "SFX/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
+    style.button.activate_sound = sfxdir + "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
+    style.imagemap.activate_sound = sfxdir + "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"
 
     ## Sounds that are used when entering and exiting the game menu.
     config.enter_sound = sfxdir + "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"

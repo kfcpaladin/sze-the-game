@@ -84,6 +84,6 @@ The master/nub branches used global variables to keep track of game states, such
 Previously you were not able to define the directory in which all your audio files were. As a result, you either had to directly enter the full path of the audio file when playing it or keep it in game.
 
 Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**.
-For special effect sounds, use **playsfx()** to play a short audio clip. Note that there is no **stopsfx()** function, as it is intended for short audio clips.
+For special effect sounds, use **playsfx()** to play a short audio clip and **stopsfx()** to stop it.
 
 *Note*: The settings for audio are located in [game/scripts/sound.rpy](./game/scripts/sound.rpy)

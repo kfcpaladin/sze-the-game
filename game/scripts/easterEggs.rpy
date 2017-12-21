@@ -13,6 +13,6 @@ init python:
                     continue
                 break
         if(total >= 0):
-            friend.gain(total)
+            friend.gain("friendship", total)
         else:
-            friend.loss(-total)
+            friend.loss("friendship", -total)

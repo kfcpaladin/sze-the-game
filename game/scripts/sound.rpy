@@ -9,8 +9,8 @@ python early:
             raise TypeError("Music filename needs to be a string, not {0}".format(type(filename)))
         renpy.music.play((musicdir + filename), channel=channel, **options)
 
-    def stopmusic():
-        renpy.music.stop()
+    def stopmusic(channel="music"):
+        renpy.music.stop(channel=channel)
 
     # SFX directory
     sfxdir = "./sfx/"
@@ -19,6 +19,9 @@ python early:
         if type(filename) not in [str, basestring, unicode]:
             raise TypeError("SFX filename needs to be a string, not {0}".format(type(filename)))
         renpy.music.play((sfxdir + filename), channel=channel, loop=loop, **options)
+
+    def stopsfx(channel="sound"):
+        renpy.music.stop(channel=channel)
 
 
 init -1 python hide:

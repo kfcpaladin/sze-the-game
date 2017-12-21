@@ -140,7 +140,8 @@
 │   │   ├── mlady.ogg
 │   │   ├── respawn.ogg
 │   │   ├── slayer.ogg
-│   │   └── vpunch.ogg
+│   │   ├── vpunch.ogg
+│   │   └── wind.ogg
 │   └── story
 │       ├── Day 1
 │       │   ├── 1 before school.rpy
@@ -1390,4 +1391,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1295 files
+95 directories, 1296 files

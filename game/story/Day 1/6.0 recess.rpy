@@ -354,9 +354,18 @@ label recess1a:
         jump recess1a
 
     elif _return == 7:
+        scene bg dreamtree
+        $ playmusic("p4Traumerei.ogg")
         "Valley"
-        "There you meet her, the one and only..."
-        "John Cena"
+        $ playsfx("wind.ogg", loop=True)
+        "As you begin walking you can feel the breeze blowing up against your butthole"
+        "While you enjoy yourself for a moment you bump into someone"
+        $ playsfx("vpunch.ogg")
+        "..." with vpunch
+        "There you meet her, the one and only"
+        "..."
+        $ playsfx("mlady.ogg")
+        "John Cena" 
         "..."
         "Not really its actually her"
         "Using your powers you are able to manipulate the fabric of reality"
@@ -366,6 +375,7 @@ label recess1a:
             "..."
             call dead
         else:
+            $ stopmusic()
             sze "Well I suck shit"
             "Even with the power of god within his physical body he still cannot slay Serena"
             "Your friendship with her is currently at [rin.friendship]"

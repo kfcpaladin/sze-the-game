@@ -1,32 +1,32 @@
-Thu Dec 21 13:20:44 2017
+Thu Dec 21 13:39:14 2017
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
 
-Bootstrap to the start of init.init took 0.10s
+Bootstrap to the start of init.init took 0.12s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
-Loading script took 0.34s
+Loading script took 1.13s
 Loading persistent took 0.04s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.11s
+Running init code took 0.12s
 Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
+Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 0.16s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
 Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.08s
-Prepare screens took 0.07s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.04s
 Running _start took 0.00s
@@ -35,7 +35,7 @@ Interface start took 0.01s
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
+Screen sizes: virtual=(1366, 768) physical=(1151, 647) drawable=(1151, 647)
 Vendor: 'X.Org'
 Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
 Version: '3.0 Mesa 17.0.7'
@@ -295,67 +295,95 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.28052902222s
+Total time until interface ready: 2.01459002495s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.021877 seconds.
-- Frame drawn at 0.032344 seconds.
-- Frame drawn at 0.049154 seconds.
-- Frame drawn at 0.065969 seconds.
-- 0.065969 seconds to render 5 frames.
+- Frame drawn at 0.021379 seconds.
+- Frame drawn at 0.032257 seconds.
+- Frame drawn at 0.049153 seconds.
+- Frame drawn at 0.066510 seconds.
+- 0.066510 seconds to render 5 frames.
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1740, 974) drawable=(1740, 974)
+Screen sizes: virtual=(1366, 768) physical=(1920, 1013) drawable=(1920, 1013)
 
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1614, 862) drawable=(1614, 862)
+Full traceback:
+  File "game/story/Day 1/3.0 physics.rpy", line 2, in script call
+    $ renpy.save("autosave")
+  File "renpy/common/00start.rpy", line 83, in script
+    label _after_load:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 768, in execute
+    statement_name("label")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 42, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
 
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1409, 724) drawable=(1409, 724)
+While running game code:
+  File "game/story/Day 1/3.0 physics.rpy", line 2, in script call
+    $ renpy.save("autosave")
+  File "renpy/common/00start.rpy", line 83, in script
+    label _after_load:
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
+Traceback (most recent call last):
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 468, in run
+    node.execute()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 768, in execute
+    statement_name("label")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 42, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
 
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1362, 686) drawable=(1362, 686)
+Full traceback:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
+    renpy.execution.run_context(True)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "game/story/Day 1/3.0 physics.rpy", line 2, in script call
+    $ renpy.save("autosave")
+  File "renpy/common/00start.rpy", line 83, in script
+    label _after_load:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 768, in execute
+    statement_name("label")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 42, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
 
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1359, 671) drawable=(1359, 671)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1356, 672) drawable=(1356, 672)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1308, 660) drawable=(1308, 660)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1225, 661) drawable=(1225, 661)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1147, 661) drawable=(1147, 661)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1108, 661) drawable=(1108, 661)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1109, 661) drawable=(1109, 661)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1119, 660) drawable=(1119, 660)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1134, 660) drawable=(1134, 660)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1151, 658) drawable=(1151, 658)
+While running game code:
+  File "game/story/Day 1/3.0 physics.rpy", line 2, in script call
+    $ renpy.save("autosave")
+  File "renpy/common/00start.rpy", line 83, in script
+    label _after_load:
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
+Traceback (most recent call last):
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
+    renpy.execution.run_context(True)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 468, in run
+    node.execute()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 768, in execute
+    statement_name("label")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 42, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined

@@ -1,15 +1,13 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 266, in script
-    python:
-  File "renpy/common/00start.rpy", line 270, in <module>
-    renpy.call_in_new_context("_main_menu")
-  File "renpy/common/00console.rpy", line 478, in enter
-    renpy.call_in_new_context("_console")
-  File "renpy/common/00console.rpy", line 765, in script
-    python in _console:
-ScriptError: could not find label 'assemblyjigolo1encounter'.
+  File "game/story/Day 1/3.0 physics.rpy", line 2, in script call
+    $ renpy.save("autosave")
+  File "renpy/common/00start.rpy", line 83, in script
+    label _after_load:
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -22,49 +20,17 @@ Full traceback:
     renpy.execution.run_context(True)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
     context.run()
-  File "renpy/common/00start.rpy", line 266, in script
-    python:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00start.rpy", line 270, in <module>
-    renpy.call_in_new_context("_main_menu")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/game.py", line 336, in call_in_new_context
-    return renpy.execution.run_context(False)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
-    context.run()
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in <module>
-    ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 430, in event
-    rv = run(action)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 306, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00console.rpy", line 478, in enter
-    renpy.call_in_new_context("_console")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/game.py", line 336, in call_in_new_context
-    return renpy.execution.run_context(False)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
-    context.run()
-  File "renpy/common/00console.rpy", line 765, in script
-    python in _console:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 861, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'assemblyjigolo1encounter'.
+  File "game/story/Day 1/3.0 physics.rpy", line 2, in script call
+    $ renpy.save("autosave")
+  File "renpy/common/00start.rpy", line 83, in script
+    label _after_load:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 768, in execute
+    statement_name("label")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 42, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 91, in _window_auto_callback
+    if not store._window_auto:
+NameError: global name 'store' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

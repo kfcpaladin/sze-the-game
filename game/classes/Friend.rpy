@@ -93,7 +93,7 @@ python early:
             if type(message) in [str, basestring, unicode]:
                 message = [message]
             for line in message:
-                renpy.say(self, line)
+                renpy.say(adv, line)
 
         # Used to get iterable attributes from properties
         def _getIterableAttributes(self, properties):

@@ -195,5 +195,5 @@ python early:
             if type(message) in [str, basestring, unicode]:
                 message = [message]
             for line in message:
-                renpy.say(self, line)
+                renpy.say(adv, line)
             

@@ -36,6 +36,7 @@
 │   │   ├── darkstreet.jpg
 │   │   ├── deanside.png
 │   │   ├── derkiederkside.png
+│   │   ├── Diary.jpg
 │   │   ├── disclaimer.png
 │   │   ├── dreamtree.png
 │   │   ├── economics.png
@@ -121,6 +122,13 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
+│   │   ├── auto-3-LT1.save
+│   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   └── persistent
 │   ├── screens
@@ -802,6 +810,7 @@
 │       ├── zsync.exe
 │       └── zsyncmake.exe
 ├── log.txt
+├── OGLdpf.log
 ├── README.md
 ├── renpy
 │   ├── add_from.py
@@ -938,6 +947,10 @@
 │   │   ├── 00voice.rpy
 │   │   ├── 00voice.rpyc
 │   │   ├── blindstile.png
+│   │   ├── comicbd.ttf
+│   │   ├── comici.ttf
+│   │   ├── comic.ttf
+│   │   ├── comicz.ttf
 │   │   ├── _compat
 │   │   │   ├── gamemenu.rpym
 │   │   │   ├── gamemenu.rpymc
@@ -1189,8 +1202,13 @@
 │   │   │   ├── tvslider_empty.png
 │   │   │   ├── tvslider_full.png
 │   │   │   └── tvslider_thumb.png
+│   │   ├── timesbd.ttf
+│   │   ├── timesbi.ttf
+│   │   ├── timesi.ttf
+│   │   ├── times.ttf
 │   │   ├── _transparent_tile.png
-│   │   └── _tv_unsafe.png
+│   │   ├── _tv_unsafe.png
+│   │   └── VLADIMIR.TTF
 │   ├── config.py
 │   ├── config.pyo
 │   ├── curry.py
@@ -1414,4 +1432,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-96 directories, 1318 files
+96 directories, 1336 files

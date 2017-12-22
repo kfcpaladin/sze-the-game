@@ -1,26 +1,30 @@
 ##############################################
 style quest_entry:  # Used for easy quest entry in the list
     xsize 650
-    ysize 80
+    ysize 40
 
-style quest_panel:  # Used for the right and left columns
+style quest_panel:  # Used for the top quests
     xsize 650
-    ysize 650
+    ysize 450
+
+style quest_info:  # Used for the quests info
+    xsize 650
+    ysize 20
 
 style quest_grid:   # Used to describe the 2x1 grid which stores the columns
-    xsize 1400
-    xoffset 50
+    xsize 1000
+    xoffset 720
     yoffset 95
 
 style quest_vpgrid: # Used to display a list of quests
     xsize 600
-    ysize 600
+    ysize 415
 
 style quest_select: # Used to describe the quest type selection menu
     xoffset 700
     ysize 20
     yoffset 45
-
+# alpha = transparency for images
 
 ##############################################
 screen questscreen(quests=quests):
@@ -57,7 +61,7 @@ screen questscreen(quests=quests):
                             SetScreenVariable("currentQuestID", None),            # Reset the current quest to show
                            ]
     # Create quest displayO
-    grid 2 1:
+    grid 1 2:
         style "quest_grid"
         # Left vertical box for ongoing quests
         vbox:
@@ -114,8 +118,8 @@ screen questscreen(quests=quests):
 
         # Right vertical box for longer description
         vbox:
-            xoffset 20
-            style "quest_panel"
+            yoffset 20
+            style "quest_info"
             frame:          # The frame window is used for dialogue, which has a maroon color
                 has vbox    # Give it the size of the vbox
                 if currentQuestID not in currentQuests:

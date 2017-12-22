@@ -5,21 +5,27 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 173, in <module>
     $ ui.interact()
-  File "game/screens/questscreen.rpy", line 7, in execute
+  File "game/screens/questscreen.rpy", line 25, in execute
     screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 7, in execute
+  File "game/screens/questscreen.rpy", line 25, in execute
     screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 26, in execute
+  File "game/screens/questscreen.rpy", line 56, in execute
     grid 2 1:
-  File "game/screens/questscreen.rpy", line 33, in execute
+  File "game/screens/questscreen.rpy", line 112, in execute
     vbox:
-  File "game/screens/questscreen.rpy", line 35, in execute
-    frame:  # The frame window is used for dialogue, which has a maroon color
-  File "game/screens/questscreen.rpy", line 36, in execute
+  File "game/screens/questscreen.rpy", line 115, in execute
+    frame:          # The frame window is used for dialogue, which has a maroon color
+  File "game/screens/questscreen.rpy", line 116, in execute
     has vbox    # Give it the size of the vbox
-  File "game/screens/questscreen.rpy", line 37, in execute
-    text "{b}" + "{0} quests".format(str.title(current_display)) + "{/b}"
-TypeError: descriptor 'title' requires a 'str' object but received a 'unicode'
+  File "game/screens/questscreen.rpy", line 117, in execute
+    if currentQuestID not in currentQuests:
+  File "game/screens/questscreen.rpy", line 122, in execute
+    for infoKey in longQuestInfo:
+  File "game/screens/questscreen.rpy", line 124, in execute
+    if currentQuest[infoKey]:
+  File "game/screens/questscreen.rpy", line 125, in execute
+    if infokey != "dependencies":
+NameError: name 'infokey' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -54,22 +60,28 @@ Full traceback:
     self.update()
   File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
     self.screen.function(**self.scope)
-  File "game/screens/questscreen.rpy", line 7, in execute
+  File "game/screens/questscreen.rpy", line 25, in execute
     screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 7, in execute
+  File "game/screens/questscreen.rpy", line 25, in execute
     screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 26, in execute
+  File "game/screens/questscreen.rpy", line 56, in execute
     grid 2 1:
-  File "game/screens/questscreen.rpy", line 33, in execute
+  File "game/screens/questscreen.rpy", line 112, in execute
     vbox:
-  File "game/screens/questscreen.rpy", line 35, in execute
-    frame:  # The frame window is used for dialogue, which has a maroon color
-  File "game/screens/questscreen.rpy", line 36, in execute
+  File "game/screens/questscreen.rpy", line 115, in execute
+    frame:          # The frame window is used for dialogue, which has a maroon color
+  File "game/screens/questscreen.rpy", line 116, in execute
     has vbox    # Give it the size of the vbox
-  File "game/screens/questscreen.rpy", line 37, in execute
-    text "{b}" + "{0} quests".format(str.title(current_display)) + "{/b}"
-  File "<screen language>", line 37, in <module>
-TypeError: descriptor 'title' requires a 'str' object but received a 'unicode'
+  File "game/screens/questscreen.rpy", line 117, in execute
+    if currentQuestID not in currentQuests:
+  File "game/screens/questscreen.rpy", line 122, in execute
+    for infoKey in longQuestInfo:
+  File "game/screens/questscreen.rpy", line 124, in execute
+    if currentQuest[infoKey]:
+  File "game/screens/questscreen.rpy", line 125, in execute
+    if infokey != "dependencies":
+  File "<screen language>", line 125, in <module>
+NameError: name 'infokey' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

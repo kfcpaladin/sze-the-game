@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/questscreen.rpy", line 4: expected statement.
-    style_group quest_panel:
-                           ^
+File "game/classes/Quest.rpy", line 127: invalid syntax
+            if type(dependencies) is in self._stringType:
+                                       ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

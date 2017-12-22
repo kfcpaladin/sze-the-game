@@ -1,4 +1,5 @@
 label econ1:
+    scene bg economics
     "It's time for some economics 101 with Garth Chapman, and u are ready to absorb this {s}bullshit{/s} uh, i mean buitifool knowledges."
     "Like sponges Chappo tells us he expects us to just be able to vomit back out what he tells us"
     pra "\"Arthur, how many past papers have you done?\""
@@ -12,44 +13,34 @@ label econ1:
     pra "\"now that i am here, where i belong, be prepared to cower down i fear of my intellectual might, for when Pragash is in economics, all is well!!!!!\""
     "But all was not well"
     "As usual, the first class was underprepared with no content, so i guess it's time for a kahoot!"
-    $ game.kahoot = 0
     call econ1kahoot1
-    "Score is [game.kahoot]"
-    jump dead
+    call dead
 
 label econ1kahoot1:
-    $ time = 15
-    $ timer_range = 15
-    $ timer_jump = 'econ1kahoot1slow'
-    $ playmusic("kahoot.ogg")
-    show screen countdown
-    "Which country has the longest uninterrupted economic growth?"
-    menu:
-        "Australia":
-            $ stopmusic()
-            hide screen countdown
-            "Correct"
-            if time > 5:
-                $ game.gain("kahoot", 1)
+    call kahootGame(question=kahoot["econ1"], time_range=10)
+    if _choice is not None:
+        if _points > 0:
+            "You got the answer correct"
+            pra "This is very impressive Arthur"
+            if _time_remain > 8:
+                pra "Your performance was incredibly impressive"
+                pra "But now that you have beaten me, I'm afraid that you are going to have to die"
             else:
-                $ game.gain("kahoot", 2)
-            return
-        "US":
-            $ stopmusic()
-            hide screen countdown
-            "Wrong"
-            return
-        "China":
-            $ stopmusic()
-            hide screen countdown
-            "Wrong"
-            return
-        "Uganda":
-            $ stopmusic()
-            hide screen countdown
-            "Wrong"
-            return
-
-label econ1kahoot1slow1:
-    sze "\"Fuck im too slow\""
-    return
+                pra "I guess I win"
+                sze "That was a fun game"
+                pra "But since you were able to get the question right, I'm afraid you posed too much of a risk"
+                sze "Wait what???"
+                "???"
+        else:
+            "You got the answer incorrect"
+            pra "Disappointing arthur"
+            sze "Wait give me another change senpai"
+            pra "I'm sorry, but I'm afraid I can't let you live anymore"
+            sze "Wait, PLEASE NOOO.."
+            "..."
+    else:
+        pra "A man who doesn't try will never succeed"
+        sze "I forgot how to use a mouse"
+        pra "That is irrelevant, your life is meaningless isnt it?"
+        sze "I guess so?"
+        pra "I'll spare you the trouble"

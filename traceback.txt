@@ -1,87 +1,63 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "game/screens/questscreen.rpy", line 25, in execute
-    screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 25, in execute
-    screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 56, in execute
-    grid 2 1:
-  File "game/screens/questscreen.rpy", line 112, in execute
-    vbox:
-  File "game/screens/questscreen.rpy", line 115, in execute
-    frame:          # The frame window is used for dialogue, which has a maroon color
-  File "game/screens/questscreen.rpy", line 116, in execute
-    has vbox    # Give it the size of the vbox
-  File "game/screens/questscreen.rpy", line 117, in execute
-    if currentQuestID not in currentQuests:
-  File "game/screens/questscreen.rpy", line 122, in execute
-    for infoKey in longQuestInfo:
-  File "game/screens/questscreen.rpy", line 124, in execute
-    if currentQuest[infoKey]:
-  File "game/screens/questscreen.rpy", line 125, in execute
-    if infokey != "dependencies":
-NameError: name 'infokey' is not defined
+  File "game/story/Day 1/9 economics.rpy", line 21, in script call
+    call kahootGame(**kahoot["econ1"], time_range=10)
+  File "game/screens/countdown.rpy", line 18, in script
+    call screen countdown(**options)
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/screens/countdown.rpy", line 28, in execute
+    screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
+  File "game/screens/countdown.rpy", line 28, in execute
+    screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
+  File "game/screens/countdown.rpy", line 34, in execute
+    timer speed:
+  File "game/screens/countdown.rpy", line 34, in keywords
+    timer speed:
+NameError: name 'time_remain' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
+  File "game/story/Day 1/9 economics.rpy", line 21, in script call
+    call kahootGame(**kahoot["econ1"], time_range=10)
+  File "game/screens/countdown.rpy", line 18, in script
+    call screen countdown(**options)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
+    self.call("execute")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
+    scene_lists.replace_transient()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
+    self.remove(layer, tag)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
+    self.hide_or_replace(layer, remove_index, "hide")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
+    d = oldsle.displayable._hide(now - st, now - at, prefix)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
     self.update()
   File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
     self.screen.function(**self.scope)
-  File "game/screens/questscreen.rpy", line 25, in execute
-    screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 25, in execute
-    screen questscreen(quests=quests):
-  File "game/screens/questscreen.rpy", line 56, in execute
-    grid 2 1:
-  File "game/screens/questscreen.rpy", line 112, in execute
-    vbox:
-  File "game/screens/questscreen.rpy", line 115, in execute
-    frame:          # The frame window is used for dialogue, which has a maroon color
-  File "game/screens/questscreen.rpy", line 116, in execute
-    has vbox    # Give it the size of the vbox
-  File "game/screens/questscreen.rpy", line 117, in execute
-    if currentQuestID not in currentQuests:
-  File "game/screens/questscreen.rpy", line 122, in execute
-    for infoKey in longQuestInfo:
-  File "game/screens/questscreen.rpy", line 124, in execute
-    if currentQuest[infoKey]:
-  File "game/screens/questscreen.rpy", line 125, in execute
-    if infokey != "dependencies":
-  File "<screen language>", line 125, in <module>
-NameError: name 'infokey' is not defined
+  File "game/screens/countdown.rpy", line 28, in execute
+    screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
+  File "game/screens/countdown.rpy", line 28, in execute
+    screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
+  File "game/screens/countdown.rpy", line 34, in execute
+    timer speed:
+  File "game/screens/countdown.rpy", line 34, in keywords
+    timer speed:
+  File "<screen language>", line 36, in <module>
+NameError: name 'time_remain' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

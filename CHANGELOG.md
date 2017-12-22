@@ -25,3 +25,5 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Broke down the large screens.rpy file into multiple .rpy files and stored them under scripts/
 * Made massive changes to the quest system, and features 4 distinct quest branches *(unavailable, available, ongoing, completed)*
 * Made massive changes to the quest screen, and can now accept available quests, and complete ongoing quests
+* Finished the kahoot gamemode in */game/scripts/countdown.rpy*
+* Added temporary placeholder dialogue for "econ1"

@@ -38,6 +38,7 @@
 │   │   ├── derkiederkside.png
 │   │   ├── disclaimer.png
 │   │   ├── dreamtree.png
+│   │   ├── economics.png
 │   │   ├── eoarchean.jpg
 │   │   ├── fields_by_applesin_mod.jpg
 │   │   ├── forthandballarea.jpg
@@ -120,13 +121,6 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
-│   │   ├── auto-3-LT1.save
-│   │   ├── auto-4-LT1.save
-│   │   ├── auto-5-LT1.save
-│   │   ├── auto-6-LT1.save
-│   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
-│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   └── persistent
 │   ├── screens
@@ -155,6 +149,8 @@
 │   │   ├── easterEggs.rpyc
 │   │   ├── images.rpy
 │   │   ├── images.rpyc
+│   │   ├── kahootQuestions.rpy
+│   │   ├── kahootQuestions.rpyc
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
 │   │   ├── sound.rpy
@@ -1418,4 +1414,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-96 directories, 1322 files
+96 directories, 1318 files

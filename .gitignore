@@ -4,6 +4,7 @@
 
 # Ignore python byte code (takes up extra space)
 *.rpyc
+*.pyo
 
 # Linux files
 .directory

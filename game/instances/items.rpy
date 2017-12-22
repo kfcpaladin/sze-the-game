@@ -4,9 +4,9 @@ init -1 python:
             "name": "ball", 
             "desc": "bouncy thing", 
             "stat": {
-                "strength": 1,
-                "intellect": -1,
                 "charm": -1,
+                "intellect": -1,
+                "strength": 1,
             }, 
             "icon": "images/ball.png",
         }),
@@ -14,9 +14,9 @@ init -1 python:
             "name": "axe", 
             "desc": "weaponz", 
             "stat": {
-                "strength": 10,
-                "intellect": -10,
                 "charm": 2,
+                "intellect": -10,
+                "strength": 10,
             }, 
             "icon": "images/axe.png",
         }),
@@ -34,9 +34,9 @@ init -1 python:
             "name": "fireaxe", 
             "desc": "weaponz", 
             "stat": {
-                "strength": 15,
-                "intellect": -20,
                 "charm": 5,
+                "intellect": -20,
+                "strength": 15,
             }, 
             "icon": "images/axe.png",
         }),
@@ -44,10 +44,22 @@ init -1 python:
             "name": "calculator", 
             "desc": "smarts + 1", 
             "stat": {
+                "charm": -10,
                 "intellect": 20,
                 "strength": -10,
-                "charm": -10,
             }, 
             "icon": "images/calc1.png",
         }),
+        "god": Item(**{
+            "name": "The god particle",
+            "desc": "Turns you into michael kirby",
+            "stat": {
+                "charm": 1000,
+                "fort": 1000,
+                "intellect": 1000,
+                "strength": 1000,
+                "thirst": -1000,
+            },
+            "icon": "images/kirby.png",
+        })
     }

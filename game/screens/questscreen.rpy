@@ -55,11 +55,12 @@ screen questscreen(quests=quests):
             has hbox
             for questType in quests.displayableQuestTypes:
                 textbutton unicode.title(questType):
-                    action [SetScreenVariable("currentQuestType", questType),   # Local copy for easier access
-                            SetField(quests, "currentQuestType", questType),    # Object field which will retain value over intialisations
-                            SetScreenVariable("currentQuests", getattr(quests, questType)),
-                            SetScreenVariable("currentQuestID", None),            # Reset the current quest to show
-                           ]
+                    action [
+                        SetScreenVariable("currentQuestType", questType),   # Local copy for easier access
+                        SetField(quests, "currentQuestType", questType),    # Object field which will retain value over intialisations
+                        SetScreenVariable("currentQuests", getattr(quests, questType)),
+                        SetScreenVariable("currentQuestID", None),            # Reset the current quest to show
+                    ]
     # Create quest displayO
     grid 1 2:
         style "quest_grid"
@@ -104,7 +105,10 @@ screen questscreen(quests=quests):
                                         # Depending on the quest type, have different options
                                         if currentQuestType == "available":
                                             textbutton "Start quest":
-                                                action Function(quests.startQuest, questID)
+                                                action [
+                                                    Hide("questscreen"),
+                                                    Function(quests.startQuest, questID),
+                                                ]
                         # Add scrollbar
                         vbar value YScrollValue(_vpgrid_name)
                 # If there are no quests, show a message

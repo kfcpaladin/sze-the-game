@@ -231,7 +231,7 @@ label english1flight3:
     "And gives you strength"
     $ sze.gain("strength")
     "Your heart is pumping, freshly oxygenated blood coursing through your body"
-    if thirst > 3:
+    if sze.thirst > 3:
         "You surge forward, with surefooted and steady steps, despite your nausea"
         "Your heart is racing"
         "You reach out, hoping to say something, anything to her. You have a pressure in your chest that you just need to get rid of."
@@ -240,7 +240,7 @@ label english1flight3:
         "Your heart rate, so fast, it simply quivers"
         sze "\"gaaa-\""
         "Your heart stops"
-        if wilfriendship > 40:
+        if wil.friendship > 40:
             wil "\"lol, you idiot, you've overexerted yourself\""
             wil "\"I still need you around, so I can't let you die of a heart attack\""
             "Your consciousness is fading"

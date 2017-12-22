@@ -27,4 +27,25 @@ init python:
             "dependencies": "garythirst1",
             "label": "garyreeducation2",
         },
+        "garythirst3": {
+            "title": "Gary's reeducation program",
+            "brief": "Gary will help Arthur slay Serena",
+            "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
+            "dependencies": "garythirst2",
+            "label": "garyreeducation3",
+        },
+        "garythirst4": {
+            "title": "Gary's reeducation program",
+            "brief": "Gary will help Arthur slay Serena",
+            "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
+            "dependencies": "garythirst3",
+            "label": "garyreeducation4",
+        },
+        "garythirst5": {
+            "title": "Gary's reeducation program",
+            "brief": "Gary will help Arthur slay Serena",
+            "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
+            "dependencies": "garythirst4",
+            "label": "garyreeducation5",
+        },
     })

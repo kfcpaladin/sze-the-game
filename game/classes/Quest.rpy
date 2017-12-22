@@ -6,7 +6,8 @@ python early:
             for baseParam in self._baseParams:
                 if baseParam not in self.questParams:
                     self.questParams.append(baseParam)
-            self.questTypes = ["unavailable", "available", "ongoing", "completed"]
+            self.questTypes = ["unavailable", "available", "completed"]
+            self.displayableQuestTypes = ["available", "completed"]
             self.currentQuestType = self.questTypes[2]  # this is used by the screen
             self._stringType = [unicode, str, basestring]
             for questType in self.questTypes:
@@ -56,6 +57,7 @@ python early:
             # since removing a quest during iteration results in an error
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
+            renpy.show_screen("popup", ["Unlocked quest: {0}".format(questID) for questID in questsMadeAvailable])
 
         def unlockQuest(self, questID):
             """
@@ -66,26 +68,7 @@ python early:
             if questID in self.unavailable:
                 self.available[questID] = self.unavailable[questID]
                 self.unavailable.pop(questID)
-
-
-        def acceptQuest(self, questID):
-            """
-                If a quest is available, it will accept it and push into ongoing quests
-            """
-            self._checkQuestID(questID)
-            if questID in self.available:
-                self.ongoing[questID] = self.available[questID]
-                self.available.pop(questID)
-
-        def cancelQuest(self, questID):
-            """
-                If a quest is ongoing, but a user wants to cancel it, they can
-                push it back into the available category
-            """
-            self._checkQuestID(questID)
-            if questID in self.ongoing:
-                self.available[questID] = self.ongoing[questID]
-                self.ongoing.pop(questID)
+                renpy.show_screen("popup", "Unlocked quest: {0}".format(questID))
 
         def startQuest(self, questID):
             """
@@ -93,28 +76,29 @@ python early:
                 the appropriate label
             """
             self._checkQuestID(questID)
-            if questID in self.ongoing:
-                label = self.ongoing[questID]["label"]
-                if label in self._stringType:
+            if questID in self.available:
+                label = self.available[questID]["label"]
+                if type(label) in self._stringType:
+                    renpy.hide_screen("questscreen")
                     renpy.call(label)
                 else:
                     playsfx("vpunch.ogg")
 
         def completeQuest(self, questID):
             """
-                Will set an ongoing quest as completed, depending on which
+                Will set an available quest as completed, depending on which
                 questID is provided. This can be done through the frontend
                 gui, written in renpy.
             """
             self._checkQuestID(questID)
-            if questID in self.ongoing:
-                self.completed[questID] = self.ongoing[questID]
-                self.ongoing.pop(questID)
+            if questID in self.available:
+                self.completed[questID] = self.available[questID]
+                self.available.pop(questID)
                 self.updateQuests()
 
         def debugQuests(self):
             """
-                Will print to console, the ongoing and completed quests.
+                Will print to console, the quests.
                 Useful for debugging the state of the game.
             """
             for questType in self.questTypes:

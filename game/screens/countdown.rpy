@@ -47,7 +47,6 @@ screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
     default time_remain = time_range
     if game.kahootStarted is False:
         $ game.kahootStarted = True
-        $ print("Status: {0}".format(started))
         
     timer speed:
         repeat True
@@ -85,12 +84,7 @@ screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
                 xalign 0.5
                 action [
                     Hide('countdown'), 
-                    SetField(game, 'kahootScore', {
-                                                    "points": answers[answer], 
-                                                    "time_remain": time_remain,
-                                                    "choice": answer
-                                                  }
-                            ),
+                    SetField(game, 'kahootScore', {"points": answers[answer], "time_remain": time_remain, "choice": answer}),
                     Return(0)
                 ]
     vbar value YScrollValue("answers_vpgrid")

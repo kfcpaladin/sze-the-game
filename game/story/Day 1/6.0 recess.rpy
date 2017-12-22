@@ -208,7 +208,7 @@ label recess1a:
                     menu:
                         "Talk to Richard":
                             "You notice Richard is busy in conversation about something with some other people"
-                            if charm >=5:
+                            if sze.charm >=5:
                                 sze "\"Hi!\""
                                 dik "\"Hi Arthur!\""
                                 dik "\"I see you've broken the game; you aren't meant to be able to have the stats to see this\""

@@ -19,7 +19,7 @@ image bg parisafremov = "parisafremov.jpg"
 image bg norton = "NortonSt.png"
 image bg toilet = "toilet.png"
 image bg d_workshop = "Workshopdark.jpg"
-image bg dreamtree = "dreamtree.jpg"
+image bg dreamtree = "dreamtree.png"
 image bg economics = "economics.png"
 
 #not sure if that's legit spelling, plz check

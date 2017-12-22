@@ -63,28 +63,52 @@ label garyreeducation:
     $ quests.unlockQuest("garythirst1")
     "You have unlocked Gary's reeducation program"
     "Check your achievements to start Gary's reeducation quests"
+    return
 
 label garyreeducation1:
     jit "\"Touching the peepee makes white stuff come out\""
     $ sze.gain("thirst")
+    $ quests.completeQuest("garythirst1")
+    return
+
 label garyreeducation2:
     jit "\"Through the power of the internet one can access websites showcasing images of naked women\""
     $ sze.gain("thirst", 2)
+    $ quests.completeQuest("garythirst2")
+    return 
+
 label garyreeducation3:
     jit "\"The penis can be inserted into the vagina achieve a pleasurable sensation\""
     $ sze.gain("thirst", 3)
+    $ quests.completeQuest("garythirst3")
+    return
+
 label garyreeducation4:
     jit "\"In certain areas known as Brothels, one may exchange currency for sex\""
     $ sze.gain("thirst", 4)
+    $ quests.completeQuest("garythirst4")
+    return
+
 label garyreeducation5:
     jit "\"When one grows tired of watching porn, they graduate to viewing 2-dimensional substitutes. This art form is known as Hentai.\""
     $ sze.gain("thirst", 5)
+    $ quests.completeQuest("garythirst5")
+    return
+
 label garyreeducation6:
     jit "\"Contrary to popular belief Traps are not gay\""
     $ sze.gain("thirst", 6)
+    $ quests.completeQuest("garythirst6")
+    return
+
 label garyreeducation7:
     jit "\"It is said that upon remaining a virgin for 30 years, one will gain wizardly powers.\""
     $ sze.gain("thirst", 7)
+    $ quests.completeQuest("garythirst7")
+    return
+
 label garyreeducation8:
     jit "\"Autofellatio is a sacred technique, known to only the most skilled perverts.\""
     $ sze.gain("thirst", 8)
+    $ quests.completeQuest("garythirst8")
+    return

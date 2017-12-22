@@ -13,6 +13,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 2. Introduces subclasses to the ADVCharacter used in master/nub to offer specialisation
 3. Uses an updated renpy engine to [*renpy-6.99.13*](https://www.renpy.org/dl/6.99.13/)
 4. Added redirectable music and sfx directories
+5. Added quests, inventory, items and a diary
 
 ## Game directory layout
 
@@ -24,6 +25,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [music](./game/music)          | Custom directory declarable through options.rpy in /game/scripts  |
 | [screens](./game/screens)      | Folder dedicated for gui renpy script files                       |
 | [scripts](./game/scripts)      | Where you place renpy scripts not related to story                |
+| [sfx](./game/scripts)          | Where sfx sounds effects are stored                               |
 | [story](./game/story)          | Specialised directory used to store all the narratives            |
 
 ## New classes and instances
@@ -36,6 +38,8 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
 | [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
 | [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
+| [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
+| [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
 
 ### Instances
 
@@ -45,6 +49,8 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
 | Game          | [game](./game/instances/game.rpy)     |
 | Quest         | [quests](./game/instances/quests.rpy) |
+| Inventory     | [inventory](./game/instances/inventory.rpy) |
+| Item          | [{itemList}](./game/instances/items.rpy)|
 
 ### Usage inside renpy script
 
@@ -74,6 +80,17 @@ It will contain methods to add and remove quests, and will be used as the backen
 * **Adding a quest**: $ quests.addQuests(*dict* or *list*)
 * **Removing a quest**: $ quests.completeQuest(*index*)
 * **Debugging current quests**: $ quests.debugQuests()  *(information is printed to console)*  
+
+#### Inventory
+This will be intended to be used to store **Item** instances, and manage them during the game.
+The **inventory** screen will communicate with the inventory instance, to display and equip particular
+items that are selected
+
+#### Item
+Possesses information about an item, including its *statistics*, *icon*, and *etc*.
+
+* **Equiping an item**: $ item.equip()
+* **Unequpping an item**: $ item.unequip()
 
 *Note*: For more information check out [**game/instances/**](./game/instances) to see how all of this is implemented
 

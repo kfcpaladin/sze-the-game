@@ -41,7 +41,6 @@ screen questscreen(quests=quests):
     default questColour = {
         "unavailable":  "#b30000",
         "available":    "#e6ac00",
-        "ongoing":      "#ff9900",
         "completed":    "#009933"
     }
     # Used to determine what info gets displayed on the left and right panels
@@ -53,7 +52,7 @@ screen questscreen(quests=quests):
         style "quest_select"
         frame:
             has hbox
-            for questType in quests.questTypes:
+            for questType in quests.displayableQuestTypes:
                 textbutton unicode.title(questType):
                     action [SetScreenVariable("currentQuestType", questType),   # Local copy for easier access
                             SetField(quests, "currentQuestType", questType),    # Object field which will retain value over intialisations
@@ -102,14 +101,9 @@ screen questscreen(quests=quests):
                                         textbutton "Show description":
                                             action SetScreenVariable("currentQuestID", questID)
                                         # Depending on the quest type, have different options
-                                        if currentQuestType == "ongoing":
-                                            textbutton "Cancel quest":
-                                                action Function(quests.cancelQuest, questID)
+                                        if currentQuestType == "available":
                                             textbutton "Start quest":
                                                 action Function(quests.startQuest, questID)
-                                        elif currentQuestType == "available":
-                                            textbutton "Accept quest":
-                                                action Function(quests.acceptQuest, questID)
                         # Add scrollbar
                         vbar value YScrollValue(_vpgrid_name)
                 # If there are no quests, show a message
@@ -137,16 +131,3 @@ screen questscreen(quests=quests):
                         else:
                             text "None"
                         text ""
-
-
-###########################################################################################################################################################
-screen diary_button:
-    textbutton "Open Diary" action [ Show("diary_screen"), Hide("diary_button")] align (0.84, 0.04)
-
-screen diary_screen:
-    modal True
-    textbutton "Close Diary" action [ Hide("diary_screen"), Show("diary_button")] align (0.84, 0.04)
-    add "Diary.jpg"
-    text "Timetable" size 65 align (0.02, 0.03) font "times.ttf"
-    text "To-Do" size 65 align (0.98, 0.03) font "times.ttf"
-    key "game_menu" action [Hide("diary_screen"), Show("diary_button")]

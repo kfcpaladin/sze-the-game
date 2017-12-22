@@ -88,7 +88,7 @@ python early:
         def _say(self, message):
             if message is None:
                 return
-            if type(message) not in [str, basestring, unicode,list]:
+            if type(message) not in [str, basestring, unicode, list]:
                 raise TypeError("Expected string or list, instead got {0}".format(type(message)))
             if type(message) in [str, basestring, unicode]:
                 message = [message]

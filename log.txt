@@ -1,4 +1,4 @@
-Fri Dec 22 16:35:51 2017
+Fri Dec 22 16:43:06 2017
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -8,10 +8,10 @@ Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
 Loading script took 0.23s
-Loading persistent took 0.04s
+Loading persistent took 0.03s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.11s
+Running init code took 0.12s
 Loading analysis data took 0.06s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -26,7 +26,7 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.09s
-Prepare screens took 0.11s
+Prepare screens took 0.12s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.05s
 Running _start took 0.00s
@@ -295,11 +295,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.15148997307s
+Total time until interface ready: 1.16583204269s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.021436 seconds.
-- Frame drawn at 0.031283 seconds.
-- Frame drawn at 0.048339 seconds.
-- Frame drawn at 0.065417 seconds.
-- 0.065417 seconds to render 5 frames.
+- Frame drawn at 0.022643 seconds.
+- Frame drawn at 0.033279 seconds.
+- Frame drawn at 0.048950 seconds.
+- Frame drawn at 0.066822 seconds.
+- 0.066822 seconds to render 5 frames.

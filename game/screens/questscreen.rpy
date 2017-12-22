@@ -1,16 +1,24 @@
-style quest_entry:
+##############################################
+style quest_entry:  # Used for easy quest entry in the list
+    xsize 650
     ysize 80
-    xsize 650
 
-style quest_panel:
+style quest_panel:  # Used for the right and left columns
     xsize 650
-    yminimum 200
     ymaximum 650
+    yminimum 200
 
-style quest_grid:
-    yoffset 40
+style quest_grid:   # Used to describe the 2x1 grid which stores the columns
     xmaximum 1300
+    xoffset 20
+    yoffset 60
 
+style quest_select: # Used to describe the quest type selection menu 
+    xoffset 20
+    ymaximum 20
+    yoffset 20
+
+##############################################
 screen questscreen(quests=quests):
     tag menu
     use navigation # Include the navigation.
@@ -20,9 +28,9 @@ screen questscreen(quests=quests):
     default current_quests = getattr(quests, current_display)
     # Create hbox to select quest type to display
     hbox:
+        style "quest_select"
         frame:
             has hbox
-            ymaximum 20
             for display in displays:
                 textbutton unicode.title(display):
                     action [SetScreenVariable("current_display", display),              

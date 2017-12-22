@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/countdown.rpy", line 30: end of line expected.
-    menu:
-    ^
+File "game/classes/Quest.rpy", line 88: invalid syntax
+                if label is in self._stringType:
+                              ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

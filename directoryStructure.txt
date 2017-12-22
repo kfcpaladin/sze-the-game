@@ -67,6 +67,7 @@
 │   │   ├── pragash.png
 │   │   ├── principalofficedoor.jpg
 │   │   ├── principaloffice.jpg
+│   │   ├── Quests.jpg
 │   │   ├── rick.png
 │   │   ├── RRRROOOOOOOYYYYYYYYYboi.png
 │   │   ├── rusalidropkick.png
@@ -1432,4 +1433,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-96 directories, 1336 files
+96 directories, 1337 files

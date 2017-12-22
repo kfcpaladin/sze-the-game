@@ -57,6 +57,16 @@ python early:
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
 
+        def unlockQuest(self, questID):
+            """
+                If a quest is unavailable due to a lock, allow
+                for a direct unlock given a questID
+            """
+            self._checkQuestID(questID)
+            if questID in self.unavailable:
+                self.available[questID] = self.unavailable[questID]
+                self.unavailable.pop(questID)
+
 
         def acceptQuest(self, questID):
             """
@@ -85,10 +95,10 @@ python early:
             self._checkQuestID(questID)
             if questID in self.ongoing:
                 label = self.ongoing[questID]["label"]
-                if label is in self._stringType:
+                if label in self._stringType:
                     renpy.call(label)
                 else:
-                    renpy.say(adv, "This quest doesn't seem possible...")
+                    playsfx("vpunch.ogg")
 
         def completeQuest(self, questID):
             """

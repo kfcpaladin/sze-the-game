@@ -13,28 +13,18 @@ init python:
             "description": "In order to acquire all 9 pokeballs, he must conquer Kevin Spacey",
             "dependencies": None,
         },
-        "test1": {
-            "title": "I am not a person 1",
-            "brief": "I enjoy touching kids",
-            "description": "Every since I was a young lad, I had always dreamt about touching the undersides of children. But then I got Harvey Weinstein'd",
-            "dependencies": None,
+        "garythirst1": {
+            "title": "Gary's reeducation program",
+            "brief": "Gary will help Arthur slay Serena",
+            "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
+            "dependencies": "locked",
+            "label": "garyreeducation1",
         },
-        "test2": {
-            "title": "I am not a person 2",
-            "brief": "I enjoy touching kids",
-            "description": "Every since I was a young lad, I had always dreamt about touching the undersides of children. But then I got Harvey Weinstein'd",
-            "dependencies": None,
-        },
-        "test3": {
-            "title": "I am not a person 3",
-            "brief": "I enjoy touching kids",
-            "description": "Every since I was a young lad, I had always dreamt about touching the undersides of children. But then I got Harvey Weinstein'd",
-            "dependencies": ["test1", "test2"],
-        },
-        "emptyQuest": {
-            "title": None,
-            "brief": None,
-            "description": None,
-            "dependencies": ["radniw", "dwaidnawn"],
+        "garythirst2": {
+            "title": "Gary's reeducation program",
+            "brief": "Gary will help Arthur slay Serena",
+            "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
+            "dependencies": "garythirst1",
+            "label": "garyreeducation2",
         },
     })

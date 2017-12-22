@@ -2,7 +2,7 @@ label asszemblyjigoloviceland:
     sze "\"whooo!!!vices!!!!\""
     jit "\"k...\""
     jit "\"wait a minute...vices can be used for bdsm, if you really think about it\""
-    if thirst > 1:
+    if sze.thirst > 1:
         sze "\"Gotta admit, every now and then I do enjoy to engage in some more aggressive play\""
         jit "\"I see you are a man of culture as well.\""
         jit "\"May I interest you in a few of my own Re-education lessons\""
@@ -57,6 +57,12 @@ label asszemblyjigoloviceland:
                 $ jit.loss()
                 call garyreeducation
                 jump recess1
+
+label garyreeducation:
+    jit "\"Welcome to my reeducation program my young Arthur!\""
+    $ quests.unlockQuest("garythirst1")
+    "You have unlocked Gary's reeducation program"
+    "Check your achievements to start Gary's reeducation quests"
 
 label garyreeducation1:
     jit "\"Touching the peepee makes white stuff come out\""

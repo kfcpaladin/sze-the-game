@@ -101,8 +101,8 @@ screen questscreen(quests=quests):
                                         if currentQuestType == "ongoing":
                                             textbutton "Cancel quest":
                                                 action Function(quests.cancelQuest, questID)
-                                            textbutton "Complete quest":
-                                                action Function(quests.completeQuest, questID)
+                                            textbutton "Start quest":
+                                                action Function(quests.startQuest, questID)
                                         elif currentQuestType == "available":
                                             textbutton "Accept quest":
                                                 action Function(quests.acceptQuest, questID)

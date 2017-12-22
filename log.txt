@@ -1,4 +1,4 @@
-Fri Dec 22 23:32:24 2017
+Sat Dec 23 00:26:24 2017
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -6,14 +6,14 @@ Ren'Py 6.99.13.2919
 Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.32s
-Loading persistent took 0.09s
+Loading error handling took 0.02s
+Loading script took 0.24s
+Loading persistent took 0.05s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
 Running init code took 0.12s
 Loading analysis data took 0.09s
-Analyze and compile ATL took 0.01s
+Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
@@ -21,13 +21,13 @@ Making clean stores took 0.00s
 DPI scale factor: 1.000000
 Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.13s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.40s
+Analyze screens took 0.06s
+Save screen analysis took 0.09s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -295,11 +295,13 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.03951001167s
+Total time until interface ready: 1.26343584061s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.022116 seconds.
-- Frame drawn at 0.032240 seconds.
-- Frame drawn at 0.049233 seconds.
-- Frame drawn at 0.066350 seconds.
-- 0.066350 seconds to render 5 frames.
+- Frame drawn at 0.022459 seconds.
+- Frame drawn at 0.032752 seconds.
+- Frame drawn at 0.049534 seconds.
+- Frame drawn at 0.066831 seconds.
+- 0.066831 seconds to render 5 frames.
+The window was minimized.
+The window was restored.

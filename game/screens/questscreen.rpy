@@ -8,18 +8,19 @@ style quest_panel:  # Used for the right and left columns
     ysize 650
 
 style quest_grid:   # Used to describe the 2x1 grid which stores the columns
-    xsize 1300
-    xoffset 20
-    yoffset 60
+    xsize 1400
+    xoffset 50
+    yoffset 95
 
 style quest_vpgrid: # Used to display a list of quests
     xsize 600
     ysize 600
 
 style quest_select: # Used to describe the quest type selection menu
-    xoffset 20
+    xoffset 700
     ysize 20
-    yoffset 20
+    yoffset 45
+
 
 ##############################################
 screen questscreen(quests=quests):
@@ -30,6 +31,9 @@ screen questscreen(quests=quests):
     default currentQuests = getattr(quests, currentQuestType)
     default currentQuestID = None
     # Used for decoration of the quest menu
+    
+    add "Quests.jpg"
+
     default questColour = {
         "unavailable":  "#b30000",
         "available":    "#e6ac00",

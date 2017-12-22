@@ -16,7 +16,9 @@ screen bag_screen:
                 #text "Bag:"
                 #for item in inventory.inv:
                     #text ("[item]")
-screen inventory_view:
+screen inventory_view(inventory=inventory):
+    tag menu
+    use navigation # Include the navigation.
     frame:
         style_group "bagstyle"
         area (0, 0, 500, 50)
@@ -32,34 +34,71 @@ screen inventory_view:
                     vpgrid id ("vp"+inventory.name):
                         draggable True
                         mousewheel True
-                        xsize 300 ysize 400
+                        xsize 250 ysize 475
                         cols 1 spacing 25
                         for item in inventory.inv:
                             $ name = item.name
                             $ desc = item.desc
-                            hbox:
-                                if item.icon:
-                                    $ icon = item.icon
-                                    $ hover_icon = im.Sepia(icon)
-                                    imagebutton:
-                                        idle icon
-                                        hover hover_icon
-                                        action [Hide("gui_tooltip"), Show("bag_button"), Hide("bag_screen")]
-                                        hovered [ Play ("sound", "sfx/click.wav"), Show("gui_tooltip",item=item) ]
-                                        unhovered Hide("gui_tooltip")
-                                text name
+                            # Create an item element in the list
+                            frame:
+                                if item.used:
+                                    background Solid("#009933")
+                                else:
+                                    background Solid("#e6ac00") 
+                                hbox:
+                                    if item.icon:
+                                        $ icon = item.icon
+                                        $ hover_icon = im.Sepia(icon)
+                                        imagebutton:
+                                            idle icon
+                                            hover hover_icon
+                                            action [
+                                                Show("bag_button"), 
+                                                Hide("bag_screen"),
+                                                Play ("sound", "sfx/vpunch.ogg"),
+                                                Function(item.toggle, inventory.who),
+                                            ]
+                                            hovered [ 
+                                                Play("sound", "sfx/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"),
+                                                Show("gui_tooltip",item=item) 
+                                            ]
+                                            unhovered Hide("gui_tooltip")
+                                    text name
 
                         #if len(inventory.inv) == 0:
                             #add Null(height=100,width=100)
                     vbar value YScrollValue("vp"+inventory.name)
+    # Yo dean this is just for stats, debugging mostly
+    vbox:
+        spacing 0
+        area (750, 100, 1300, 650)
+        xsize 550
+        frame:
+            has vbox
+            $ person = inventory.who
+            text "{b}" + "Stats of {0}".format(unicode.title(person.name)) + "{/b}"
+            for attribute in person.attributes:
+                text "{b}" + "{0}: ".format(attribute) + "{/b}" + "{0}".format(getattr(person, attribute))
+            
         #hbox:
             #area (0, 0, 200, 200)
 
 screen gui_tooltip(item=False):
     if item:
-        hbox:
-            xalign 0.3 yalign 0.3
-            text "[item.desc]"
+        vbox:
+            xoffset 350
+            yalign 0.3
+            spacing 0
+            frame:
+                has vbox
+                text "{b}Description: {/b}" + item.desc
+                text "{b}Statistics{/b}"
+                for stat, value in item.stat.iteritems():
+                    if value > 0:
+                        text "+{0} {1}".format(value, stat)
+                    else:
+                        text "{0} {1}".format(value, stat)
+                text "{b}Equipped: {/b}" + "{0}".format(item.used)
 
 
 screen locker_screen:

@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens/popup.rpy", line 11: u'message' is not a keyword argument or valid child for the screen statement.
-    message = [message]
-           ^
+File "game/screens/inventory.rpy", line 49: The has statement may not be given after a child has been supplied.
+    has hbox
+       ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

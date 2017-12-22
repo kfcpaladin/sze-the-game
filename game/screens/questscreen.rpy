@@ -21,6 +21,7 @@ style quest_vpgrid: # Used to display a list of quests
     ysize 415
 
 style quest_select: # Used to describe the quest type selection menu
+    xmaximum 625
     xoffset 700
     ysize 20
     yoffset 45

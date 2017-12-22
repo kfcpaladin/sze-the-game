@@ -4,8 +4,9 @@ python early:
     import renpy.store as store
 
     class Inventory(store.object):
-        def __init__(self, name, max_items, grid_view):
+        def __init__(self, who, name, max_items, grid_view):
             self.inv = []  # initialise list to store items, first in is top of list
+            self.who = who
             self.name = name #name of inventory i.e. locker or bag
             self.max_items = max_items # maximum items it can hold, bag = 6, locker = infinte
             self.grid_view = grid_view

@@ -8,7 +8,7 @@ python early:
                     self.questParams.append(baseParam)
             self.questTypes = ["unavailable", "available", "completed"]
             self.displayableQuestTypes = ["available", "completed"]
-            self.currentQuestType = self.questTypes[2]  # this is used by the screen
+            self.currentQuestType = self.questTypes[1]  # this is used by the screen by default
             self._stringType = [unicode, str, basestring]
             for questType in self.questTypes:
                 setattr(self, questType, {})

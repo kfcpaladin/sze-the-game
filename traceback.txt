@@ -5,27 +5,17 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 173, in <module>
     $ ui.interact()
-  File "game/screens/inventory.rpy", line 19, in execute
-    screen inventory_view:
-  File "game/screens/inventory.rpy", line 19, in execute
-    screen inventory_view:
-  File "game/screens/inventory.rpy", line 24, in execute
-    frame:
-  File "game/screens/inventory.rpy", line 26, in execute
-    hbox:
-  File "game/screens/inventory.rpy", line 28, in execute
+  File "game/screens/inventory.rpy", line 65, in execute
+    screen gui_tooltip(item=False):
+  File "game/screens/inventory.rpy", line 65, in execute
+    screen gui_tooltip(item=False):
+  File "game/screens/inventory.rpy", line 66, in execute
+    if item:
+  File "game/screens/inventory.rpy", line 67, in execute
     vbox:
-  File "game/screens/inventory.rpy", line 29, in execute
-    side "c r":
-  File "game/screens/inventory.rpy", line 32, in execute
-    vpgrid id ("vp"+inventory.name):
-  File "game/screens/inventory.rpy", line 37, in execute
-    for item in inventory.inv:
-  File "game/screens/inventory.rpy", line 38, in execute
-    $ name = item.name
-  File "game/screens/inventory.rpy", line 38, in <module>
-    $ name = item.name
-AttributeError: 'unicode' object has no attribute 'name'
+  File "game/screens/inventory.rpy", line 71, in execute
+    for stat, value in item.stat.iteritems():
+AttributeError: 'RevertableSet' object has no attribute 'iteritems'
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -60,27 +50,18 @@ Full traceback:
     self.update()
   File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
     self.screen.function(**self.scope)
-  File "game/screens/inventory.rpy", line 19, in execute
-    screen inventory_view:
-  File "game/screens/inventory.rpy", line 19, in execute
-    screen inventory_view:
-  File "game/screens/inventory.rpy", line 24, in execute
-    frame:
-  File "game/screens/inventory.rpy", line 26, in execute
-    hbox:
-  File "game/screens/inventory.rpy", line 28, in execute
+  File "game/screens/inventory.rpy", line 65, in execute
+    screen gui_tooltip(item=False):
+  File "game/screens/inventory.rpy", line 65, in execute
+    screen gui_tooltip(item=False):
+  File "game/screens/inventory.rpy", line 66, in execute
+    if item:
+  File "game/screens/inventory.rpy", line 67, in execute
     vbox:
-  File "game/screens/inventory.rpy", line 29, in execute
-    side "c r":
-  File "game/screens/inventory.rpy", line 32, in execute
-    vpgrid id ("vp"+inventory.name):
-  File "game/screens/inventory.rpy", line 37, in execute
-    for item in inventory.inv:
-  File "game/screens/inventory.rpy", line 38, in execute
-    $ name = item.name
-  File "game/screens/inventory.rpy", line 38, in <module>
-    $ name = item.name
-AttributeError: 'unicode' object has no attribute 'name'
+  File "game/screens/inventory.rpy", line 71, in execute
+    for stat, value in item.stat.iteritems():
+  File "<screen language>", line 71, in <module>
+AttributeError: 'RevertableSet' object has no attribute 'iteritems'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

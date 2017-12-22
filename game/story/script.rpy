@@ -3,7 +3,7 @@
 label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
     $ renpy.save("autosave")
-    
+    show screen diary_button
     $ ball = Item("ball", "bouncy thing", "strength", "images/ball.png")
     $ axe = Item("axe", "weaponz", "strength", "images/axe.png")
     $ money = Item("monies", "cash monies wads", "charisma", "images/bag.png")
@@ -17,7 +17,7 @@ label start:
     $ inventory.add(money, 1)
     $ inventory.add(fireaxe, 1)
     $ inventory.add(calc, 1)
-    
+
     scene bg disclaimer
     with fade
     pause
@@ -31,7 +31,7 @@ label start:
     "The Year is 2015"
     "It is the first day of school and you do not look forward to another miserable year of Fort Street."
     "But nevertheless, you pack your bags, and get ready, resigned to another year of mediocrity."
-    stop music 
+    stop music
     sze "I had always loved her, since she first graced my eyes in Year 7."
     show bg field
     with fade

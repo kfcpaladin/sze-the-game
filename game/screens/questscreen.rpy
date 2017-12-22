@@ -16,7 +16,7 @@ style quest_vpgrid: # Used to display a list of quests
     xsize 600
     ysize 600
 
-style quest_select: # Used to describe the quest type selection menu 
+style quest_select: # Used to describe the quest type selection menu
     xoffset 20
     ysize 20
     yoffset 20
@@ -26,14 +26,14 @@ screen questscreen(quests=quests):
     tag menu
     use navigation # Include the navigation.
     # Used to keep track of the quest types, and which one to show
-    default currentQuestType = quests.currentQuestType 
+    default currentQuestType = quests.currentQuestType
     default currentQuests = getattr(quests, currentQuestType)
-    default currentQuestID = None  
+    default currentQuestID = None
     # Used for decoration of the quest menu
     default questColour = {
-        "unavailable":  "#b30000", 
-        "available":    "#e6ac00", 
-        "ongoing":      "#ff9900", 
+        "unavailable":  "#b30000",
+        "available":    "#e6ac00",
+        "ongoing":      "#ff9900",
         "completed":    "#009933"
     }
     # Used to determine what info gets displayed on the left and right panels
@@ -52,14 +52,14 @@ screen questscreen(quests=quests):
                             SetScreenVariable("currentQuests", getattr(quests, questType)),
                             SetScreenVariable("currentQuestID", None),            # Reset the current quest to show
                            ]
-    # Create quest display
+    # Create quest displayO
     grid 2 1:
         style "quest_grid"
         # Left vertical box for ongoing quests
         vbox:
             style "quest_panel"
             frame:          # The frame window is used for dialogue, which has a maroon color
-                has vbox    # Give it the size of the vbox 
+                has vbox    # Give it the size of the vbox
                 text "{b}" + "{0} quests".format(unicode.title(currentQuestType)) + "{/b}"
                 if currentQuests:
                     # Grid and scroll bar
@@ -78,7 +78,7 @@ screen questscreen(quests=quests):
                                 frame:
                                     style "quest_entry"
                                     background Solid(questColour[currentQuestType])
-                                    vbox:    
+                                    vbox:
                                         # Description of the quest
                                         $ currentQuest = currentQuests[questID]
                                         text "{b}" + "Quest: {0}".format(questID) + "{/b}"
@@ -91,9 +91,9 @@ screen questscreen(quests=quests):
                                                 $ _info_string += "None"
                                             text _info_string
                                         # Show the description when clicked upon
-                                        textbutton "Show description": 
+                                        textbutton "Show description":
                                             action SetScreenVariable("currentQuestID", questID)
-                                        # Depending on the quest type, have different options 
+                                        # Depending on the quest type, have different options
                                         if currentQuestType == "ongoing":
                                             textbutton "Cancel quest":
                                                 action Function(quests.cancelQuest, questID)
@@ -107,7 +107,7 @@ screen questscreen(quests=quests):
                 # If there are no quests, show a message
                 else:
                     text "No quests are currently {0}".format(currentQuestType)
-                    
+
         # Right vertical box for longer description
         vbox:
             xoffset 20
@@ -130,5 +130,15 @@ screen questscreen(quests=quests):
                             text "None"
                         text ""
 
-    
-                
+
+###########################################################################################################################################################
+screen diary_button:
+    textbutton "Open Diary" action [ Show("diary_screen"), Hide("diary_button")] align (0.84, 0.04)
+
+screen diary_screen:
+    modal True
+    textbutton "Close Diary" action [ Hide("diary_screen"), Show("diary_button")] align (0.84, 0.04)
+    add "Diary.jpg"
+    text "Timetable" size 65 align (0.02, 0.03) font "times.ttf"
+    text "To-Do" size 65 align (0.98, 0.03) font "times.ttf"
+    key "game_menu" action [Hide("diary_screen"), Show("diary_button")]

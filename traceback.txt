@@ -1,38 +1,87 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-ScriptError: could not find label 'fortmap'.
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "game/screens/questscreen.rpy", line 25, in execute
+    screen questscreen(quests=quests):
+  File "game/screens/questscreen.rpy", line 25, in execute
+    screen questscreen(quests=quests):
+  File "game/screens/questscreen.rpy", line 56, in execute
+    grid 2 1:
+  File "game/screens/questscreen.rpy", line 112, in execute
+    vbox:
+  File "game/screens/questscreen.rpy", line 115, in execute
+    frame:          # The frame window is used for dialogue, which has a maroon color
+  File "game/screens/questscreen.rpy", line 116, in execute
+    has vbox    # Give it the size of the vbox
+  File "game/screens/questscreen.rpy", line 117, in execute
+    if currentQuestID not in currentQuests:
+  File "game/screens/questscreen.rpy", line 122, in execute
+    for infoKey in longQuestInfo:
+  File "game/screens/questscreen.rpy", line 124, in execute
+    if currentQuest[infoKey]:
+  File "game/screens/questscreen.rpy", line 125, in execute
+    if infokey != "dependencies":
+NameError: name 'infokey' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
-    renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
-    run(restart)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
-    renpy.execution.run_context(True)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
-    context.run()
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/1 before school.rpy", line 53, in script call
-    sze "My life feels empty without her, like a photoelectric cell without UV rays"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 861, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'fortmap'.
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/questscreen.rpy", line 25, in execute
+    screen questscreen(quests=quests):
+  File "game/screens/questscreen.rpy", line 25, in execute
+    screen questscreen(quests=quests):
+  File "game/screens/questscreen.rpy", line 56, in execute
+    grid 2 1:
+  File "game/screens/questscreen.rpy", line 112, in execute
+    vbox:
+  File "game/screens/questscreen.rpy", line 115, in execute
+    frame:          # The frame window is used for dialogue, which has a maroon color
+  File "game/screens/questscreen.rpy", line 116, in execute
+    has vbox    # Give it the size of the vbox
+  File "game/screens/questscreen.rpy", line 117, in execute
+    if currentQuestID not in currentQuests:
+  File "game/screens/questscreen.rpy", line 122, in execute
+    for infoKey in longQuestInfo:
+  File "game/screens/questscreen.rpy", line 124, in execute
+    if currentQuest[infoKey]:
+  File "game/screens/questscreen.rpy", line 125, in execute
+    if infokey != "dependencies":
+  File "<screen language>", line 125, in <module>
+NameError: name 'infokey' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

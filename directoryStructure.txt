@@ -13,12 +13,18 @@
 │   │   ├── Game.rpy
 │   │   ├── Game.rpyc
 │   │   ├── MainCharacter.rpy
-│   │   └── MainCharacter.rpyc
+│   │   ├── MainCharacter.rpyc
+│   │   ├── Quest.rpy
+│   │   └── Quest.rpyc
 │   ├── images
 │   │   ├── 91_big.jpg
 │   │   ├── arthur.jpg
 │   │   ├── arthurside.png
+│   │   ├── axe.png
+│   │   ├── bag.png
+│   │   ├── ball.png
 │   │   ├── billthecleaner.png
+│   │   ├── calc1.png
 │   │   ├── calculetor.png
 │   │   ├── chao2.png
 │   │   ├── chaohappy.png
@@ -84,6 +90,8 @@
 │   │   ├── friends.rpyc
 │   │   ├── game.rpy
 │   │   ├── game.rpyc
+│   │   ├── quests.rpy
+│   │   ├── quests.rpyc
 │   │   ├── sze.rpy
 │   │   └── sze.rpyc
 │   ├── music
@@ -121,6 +129,27 @@
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   └── persistent
+│   ├── screens
+│   │   ├── countdown.rpy
+│   │   ├── countdown.rpyc
+│   │   ├── default.rpy
+│   │   ├── default.rpyc
+│   │   ├── fortmap.rpy
+│   │   ├── fortmap.rpyc
+│   │   ├── inventory.rpy
+│   │   ├── inventory.rpyc
+│   │   ├── kms.rpy
+│   │   ├── kms.rpyc
+│   │   ├── questscreen.rpy
+│   │   ├── questscreen.rpyc
+│   │   ├── quickmenu.rpy
+│   │   ├── quickmenu.rpyc
+│   │   ├── roadmap.rpy
+│   │   ├── roadmap.rpyc
+│   │   ├── statscreen.rpy
+│   │   ├── statscreen.rpyc
+│   │   ├── szeclicker.rpy
+│   │   └── szeclicker.rpyc
 │   ├── scripts
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
@@ -128,8 +157,6 @@
 │   │   ├── images.rpyc
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
-│   │   ├── screens.rpy
-│   │   ├── screens.rpyc
 │   │   ├── sound.rpy
 │   │   └── sound.rpyc
 │   ├── script_version.txt
@@ -1391,4 +1418,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-95 directories, 1296 files
+96 directories, 1322 files

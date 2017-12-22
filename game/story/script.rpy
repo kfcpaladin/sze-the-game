@@ -17,7 +17,7 @@ label start:
     $ inventory.add(money, 1)
     $ inventory.add(fireaxe, 1)
     $ inventory.add(calc, 1)
-
+    $ garylevel = 1
     scene bg disclaimer
     with fade
     pause

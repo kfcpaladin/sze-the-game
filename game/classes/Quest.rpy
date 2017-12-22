@@ -2,6 +2,10 @@ python early:
     class Quests:
         def __init__(self, questParams):
             self.questParams = questParams
+            self._baseParams = ["title", "brief", "description", "dependencies", "label"]
+            for baseParam in self._baseParams:
+                if baseParam not in self.questParams:
+                    self.questParams.append(baseParam)
             self.questTypes = ["unavailable", "available", "ongoing", "completed"]
             self.currentQuestType = self.questTypes[2]  # this is used by the screen
             self._stringType = [unicode, str, basestring]
@@ -72,6 +76,19 @@ python early:
             if questID in self.ongoing:
                 self.available[questID] = self.ongoing[questID]
                 self.ongoing.pop(questID)
+
+        def startQuest(self, questID):
+            """
+                If a quest is ongoing, and a user wants to start it, make a call to
+                the appropriate label
+            """
+            self._checkQuestID(questID)
+            if questID in self.ongoing:
+                label = self.ongoing[questID]["label"]
+                if label is in self._stringType:
+                    renpy.call(label)
+                else:
+                    renpy.say(adv, "This quest doesn't seem possible...")
 
         def completeQuest(self, questID):
             """

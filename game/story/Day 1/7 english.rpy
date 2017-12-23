@@ -73,7 +73,7 @@ label eng1ascension:
                     "\"im fking ded, halp me plz\"":
                         cha "\"Alright then, just stay put and I'll get you to the top in no time.\""
                         "Chao suddenly grabs you by the back of your shirt and gets into a shotput pose"
-                        $ sze.loss("strength)
+                        $ sze.loss("strength")
                         sze "\"Wait stop, let me down!!!!!\""
                         cha "\"3\""
                         cha "\"2\""

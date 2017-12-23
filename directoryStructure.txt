@@ -32,6 +32,7 @@
 │   │   ├── billthecleaner.png
 │   │   ├── calc1.png
 │   │   ├── calculetor.png
+│   │   ├── cannon.png
 │   │   ├── chao2.png
 │   │   ├── chaohappy.png
 │   │   ├── chaoport.png
@@ -135,13 +136,15 @@
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
-│   │   ├── auto-7-LT1.save
+│   │   ├── auto-5-LT1.save
 │   │   ├── auto-8-LT1.save
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
 │   ├── screens
+│   │   ├── bag.rpy
+│   │   ├── bag.rpyc
 │   │   ├── countdown.rpy
 │   │   ├── countdown.rpyc
 │   │   ├── default.rpy
@@ -150,8 +153,6 @@
 │   │   ├── diary.rpyc
 │   │   ├── fortmap.rpy
 │   │   ├── fortmap.rpyc
-│   │   ├── inventory.rpy
-│   │   ├── inventory.rpyc
 │   │   ├── kms.rpy
 │   │   ├── kms.rpyc
 │   │   ├── popup.rpy
@@ -1448,4 +1449,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-96 directories, 1352 files
+96 directories, 1353 files

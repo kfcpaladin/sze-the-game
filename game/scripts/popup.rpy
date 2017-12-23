@@ -1,6 +1,6 @@
 # Used to manage popups
 python early:
-    def popup(messages, **options):
+    def popup(messages,**options):
         if type(messages) in [str, unicode, basestring]:
             messages = [messages]
         elif type(messages) is not list:

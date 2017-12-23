@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/bag.rpy", line 53: u'size' is not a keyword argument or valid child for the frame statement.
-    size grid["size"]
-        ^
+File "game/instances/quests.rpy", line 20: invalid syntax
+                        "function": lambda: game.timeTravelCounter >= 4:
+                                                                        ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

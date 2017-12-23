@@ -1,24 +1,83 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/instances/inventory.rpy", line 1, in script
-    init python:
-  File "game/instances/inventory.rpy", line 12, in <module>
-    bag.add(newItem, 1)
-TypeError: add() takes exactly 2 arguments (3 given)
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "game/screens/bag.rpy", line 3, in execute
+    screen bag_view(bag=bag):
+  File "game/screens/bag.rpy", line 3, in execute
+    screen bag_view(bag=bag):
+  File "game/screens/bag.rpy", line 27, in execute
+    frame:
+  File "game/screens/bag.rpy", line 31, in execute
+    hbox:
+  File "game/screens/bag.rpy", line 34, in execute
+    vpgrid id (_grid_name):
+  File "game/screens/bag.rpy", line 42, in execute
+    for index, item in enumerate(bag.inv):
+  File "game/screens/bag.rpy", line 44, in execute
+    frame:
+  File "game/screens/bag.rpy", line 44, in keywords
+    frame:
+  File "game/screens/bag.rpy", line 47, in keywords
+    if item.used:
+AttributeError: 'unicode' object has no attribute 'used'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/instances/inventory.rpy", line 1, in script
-    init python:
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/instances/inventory.rpy", line 12, in <module>
-    bag.add(newItem, 1)
-TypeError: add() takes exactly 2 arguments (3 given)
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/bag.rpy", line 3, in execute
+    screen bag_view(bag=bag):
+  File "game/screens/bag.rpy", line 3, in execute
+    screen bag_view(bag=bag):
+  File "game/screens/bag.rpy", line 27, in execute
+    frame:
+  File "game/screens/bag.rpy", line 31, in execute
+    hbox:
+  File "game/screens/bag.rpy", line 34, in execute
+    vpgrid id (_grid_name):
+  File "game/screens/bag.rpy", line 42, in execute
+    for index, item in enumerate(bag.inv):
+  File "game/screens/bag.rpy", line 44, in execute
+    frame:
+  File "game/screens/bag.rpy", line 44, in keywords
+    frame:
+  File "game/screens/bag.rpy", line 47, in keywords
+    if item.used:
+  File "<screen language>", line 47, in <module>
+AttributeError: 'unicode' object has no attribute 'used'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

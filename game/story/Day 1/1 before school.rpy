@@ -1,6 +1,7 @@
 label schoolday1:
     scene bg school
     with fade
+    $ game.setTime("morning")
     "Wednesday Morning"
     sze "I arrived at school 3 hours early to show my dedication to the system"
     sze "One day she will notice"

@@ -5,6 +5,8 @@
 ├── game
 │   ├── cache
 │   │   ├── bytecode.rpyb
+│   │   ├── im-8a73c074683b032f8d44bc027f212036-12f674c.png
+│   │   ├── im-ae30380b7717974ad4127e95a590f855-47a4f943.png
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
 │   ├── classes
@@ -132,14 +134,13 @@
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
-│   │   ├── auto-4-LT1.save
-│   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
 │   │   ├── auto-7-LT1.save
 │   │   ├── auto-8-LT1.save
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
-│   │   └── persistent
+│   │   ├── persistent
+│   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── countdown.rpy
 │   │   ├── countdown.rpyc
@@ -174,6 +175,8 @@
 │   │   ├── kahootQuestions.rpyc
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
+│   │   ├── popup.rpy
+│   │   ├── popup.rpyc
 │   │   ├── sound.rpy
 │   │   └── sound.rpyc
 │   ├── script_version.txt
@@ -1445,4 +1448,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-96 directories, 1349 files
+96 directories, 1352 files

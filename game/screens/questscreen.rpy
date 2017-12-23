@@ -8,7 +8,7 @@ style quest_panel:  # Used for the top quests
     ysize 450
 
 style quest_info:  # Used for the quests info
-    xsize 650
+    xsize 625
     ysize 20
 
 style quest_grid:   # Used to describe the 2x1 grid which stores the columns
@@ -29,16 +29,14 @@ style quest_select: # Used to describe the quest type selection menu
 
 ##############################################
 screen questscreen(quests=quests):
-    tag menu
     use navigation # Include the navigation.
+    tag menu
+    add "Quests.jpg"
     # Used to keep track of the quest types, and which one to show
     default currentQuestType = quests.currentQuestType
     default currentQuests = getattr(quests, currentQuestType)
     default currentQuestID = None
     # Used for decoration of the quest menu
-    
-    add "Quests.jpg"
-
     default questColour = {
         "unavailable":  "#b30000",
         "available":    "#e6ac00",
@@ -106,7 +104,6 @@ screen questscreen(quests=quests):
                                         if currentQuestType == "available":
                                             textbutton "Start quest":
                                                 action [
-                                                    Hide("questscreen"),
                                                     Function(quests.startQuest, questID),
                                                 ]
                         # Add scrollbar
@@ -118,8 +115,9 @@ screen questscreen(quests=quests):
         # Right vertical box for longer description
         vbox:
             yoffset 20
-            style "quest_info"
             frame:          # The frame window is used for dialogue, which has a maroon color
+                xsize 625
+                ymaximum 200
                 has vbox    # Give it the size of the vbox
                 if currentQuestID not in currentQuests:
                     text "{b}A quest has not been selected{/b}"
@@ -135,4 +133,3 @@ screen questscreen(quests=quests):
                                 text quests._getDependencyString(currentQuestID)
                         else:
                             text "None"
-                        text ""

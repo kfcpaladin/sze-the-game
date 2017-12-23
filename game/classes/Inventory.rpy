@@ -31,3 +31,7 @@ python early:
 
         #def sort_value(self):
         #    self.inv.sort(key=lambda i: i[0].value, reverse=self.sort_order)
+
+        def debugItems(self):
+            for index, item in enumerate(self.inv):
+                print("Item {0}: {1}".format(index, item.name))

@@ -43,6 +43,7 @@ python early:
                 cause some performance drops
             """
             questsMadeAvailable = []
+            questUnlockMessages = []
             for questID in self.unavailable:
                 dependencies = self.unavailable[questID]["dependencies"]
                 if type(dependencies) in self._stringType:
@@ -53,11 +54,12 @@ python early:
                 else:
                     self.available[questID] = self.unavailable[questID]
                     questsMadeAvailable.append(questID)
+                    questUnlockMessages.append("Unlocked quest: {0}".format(questID))
             # Remove the quests that were made available after looping through dict,
             # since removing a quest during iteration results in an error
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
-            renpy.show_screen("popup", ["Unlocked quest: {0}".format(questID) for questID in questsMadeAvailable])
+            popup(questUnlockMessages)
 
         def unlockQuest(self, questID):
             """
@@ -68,7 +70,7 @@ python early:
             if questID in self.unavailable:
                 self.available[questID] = self.unavailable[questID]
                 self.unavailable.pop(questID)
-                renpy.show_screen("popup", "Unlocked quest: {0}".format(questID))
+                popup("Unlocked quest: {0}".format(questID))
 
         def startQuest(self, questID):
             """

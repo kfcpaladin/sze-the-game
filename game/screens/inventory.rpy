@@ -1,147 +1,137 @@
 ############################## inventory screens ##############################################
+style bag_inventory:
+    xoffset 44
+    yoffset 132
+
+style bag_item_frame:
+    xsize 112
+    ysize 112
+
+style bag_item_box:
+    xmaximum 112
+    ymaximum 112
 
 # currently inefficent, can probably optimise
-screen bag_button:
-    textbutton "Open Bag" action [ Show("bag_screen"), Hide("bag_button")] align (0.95, 0.04)
-
-screen bag_screen:
-    modal True
-    textbutton "Close Bag" action [ Hide("bag_screen"), Show("bag_button")] align (0.95, 0.04)
-    frame:
-        style_group "bagstyle"
-        vbox:
-            spacing 25
-            vbox:
-                use inventory_view
-                #text "Bag:"
-                #for item in inventory.inv:
-                    #text ("[item]")
 screen inventory_view(inventory=inventory):
-    tag menu
-    use navigation # Include the navigation.
+    add "Diary.jpg"
+    use inventory_stats(inventory.who)
+    # Variables
+    $ colours = {
+        "item_used": "#00993371",
+        "item_not_used": "#e6ac0071",
+        "tooltip": "#00000071",
+        "background": "#00000000",
+    }
+    $ grid = {
+        "size": (112, 112),
+        "spacing": 5,
+        "offset": (44, 132),
+        "dimensions": (580, 580),
+        "matrix": (5, int((len(inventory.inv)-1)/5)+1),
+    }
     frame:
-        style_group "bagstyle"
         area (0, 0, 500, 50)
-        label _("Bag")
+        text "{0}".format(unicode.title(inventory.name)): 
+            size 45
+            xoffset 30
+            yoffset 10
+            font "DejaVuSans.ttf"
     frame:
-        style_group "bagstyle"
+        background Color(colours["background"])
+        style "bag_inventory"
         hbox:
-            spacing 25
-            vbox:
-                side "c r":
-                    style_group "bagstyle"
-                    area (0, 0, 250, 500)
-                    vpgrid id ("vp"+inventory.name):
-                        draggable True
-                        mousewheel True
-                        xsize 250 ysize 475
-                        cols 1 spacing 25
-                        for item in inventory.inv:
-                            $ name = item.name
-                            $ desc = item.desc
-                            # Create an item element in the list
-                            frame:
-                                if item.used:
-                                    background Solid("#009933")
-                                else:
-                                    background Solid("#e6ac00") 
-                                hbox:
-                                    if item.icon:
-                                        $ icon = item.icon
-                                        $ hover_icon = im.Sepia(icon)
-                                        imagebutton:
-                                            idle icon
-                                            hover hover_icon
-                                            action [
-                                                Show("bag_button"), 
-                                                Hide("bag_screen"),
-                                                Play ("sound", "sfx/vpunch.ogg"),
-                                                Function(item.toggle, inventory.who),
-                                            ]
-                                            hovered [ 
-                                                Play("sound", "sfx/8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg"),
-                                                Show("gui_tooltip",item=item) 
-                                            ]
-                                            unhovered Hide("gui_tooltip")
-                                    text name
-
-                        #if len(inventory.inv) == 0:
-                            #add Null(height=100,width=100)
-                    vbar value YScrollValue("vp"+inventory.name)
-    # Yo dean this is just for stats, debugging mostly
-    vbox:
-        spacing 0
-        area (750, 100, 1300, 650)
-        xsize 550
-        frame:
-            has vbox
-            $ person = inventory.who
-            text "{b}" + "Stats of {0}".format(unicode.title(person.name)) + "{/b}"
-            for attribute in person.attributes:
-                text "{b}" + "{0}: ".format(attribute) + "{/b}" + "{0}".format(getattr(person, attribute))
-            
-        #hbox:
-            #area (0, 0, 200, 200)
+            ysize 580
+            $ _grid_name = inventory.name
+            vpgrid id (_grid_name):
+                xsize grid["dimensions"][0] 
+                ysize grid["dimensions"][1] 
+                spacing 5
+                cols grid["matrix"][0] 
+                rows grid["matrix"][1] 
+                draggable False
+                mousewheel True
+                for index, item in enumerate(inventory.inv):
+                    # Create an item element in the list
+                    frame:
+                        style "bag_item_frame"
+                        if item.used:
+                            background Color(colours["item_used"])
+                        else:
+                            background Color(colours["item_not_used"]) 
+                        hbox:
+                            style "bag_item_box"
+                            imagebutton:
+                                style "bag_item_box"
+                                idle Frame(item.icon, grid["size"][0], grid["size"][1], grid["size"][0], grid["size"][1])
+                                hover Frame(im.Sepia(item.icon), grid["size"][0], grid["size"][1], grid["size"][0], grid["size"][1])
+                                action [
+                                    Play ("sound", "sfx/vpunch.ogg"),
+                                    Function(item.toggle, inventory.who),
+                                ]
+                                hovered [ 
+                                    Show("gui_tooltip",item=item) 
+                                ]
+                                unhovered Show("gui_tooltip")
+            if grid["matrix"][1] > grid["matrix"][0]:
+                frame:
+                    vbar:
+                        value YScrollValue(_grid_name)
 
 screen gui_tooltip(item=False):
-    if item:
-        vbox:
-            xoffset 350
-            yalign 0.3
-            spacing 0
-            frame:
-                has vbox
-                text "{b}Description: {/b}" + item.desc
-                text "{b}Statistics{/b}"
-                for stat, value in item.stat.iteritems():
-                    if value > 0:
-                        text "+{0} {1}".format(value, stat)
-                    else:
-                        text "{0} {1}".format(value, stat)
-                text "{b}Equipped: {/b}" + "{0}".format(item.used)
-
-
-screen locker_screen:
-    modal True
-    textbutton "Close Locker" action [ Hide("locker_screen")] align (0.5, 0.04)
+    $ desc_box = {
+        "offset": (703, 95),
+        "size": (646, 429),
+    }
+    $ colours = {
+        "not_used": "#e6ac00",
+        "used": "#009933",
+    }
+    # Description box
     frame:
-        style_group "lockstyle"
-
+        xoffset desc_box["offset"][0]
+        yoffset desc_box["offset"][1]
+        xsize   desc_box["size"][0]
         vbox:
-            align (0.1, 0.3)
-            spacing 25
+            ymaximum desc_box["size"][1]
+            # Give an item description if there is one
+            if item:
+                text "{b}Name: {/b}" + "{0}".format(item.name)
+                frame:
+                    xsize desc_box["size"][0]
+                    if item.used:
+                        background Solid(colours["used"])
+                    else:
+                        background Solid(colours["not_used"])
+                    vbox:
+                        xmaximum desc_box["size"][0]
+                        text "{b}Brief: {/b}" + "{0}".format(item.desc)
+                        text "{b}Stats: {/b}"
+                        for stat, value in item.stat.iteritems():
+                            if value > 0:
+                                text "+{0} {1}".format(value, stat)
+                            else:
+                                text "{0} {1}".format(value, stat)
+            # Indicate user to hover over item
+            else:
+                text "{b}Description{/b}"
+                text "Hover over an item for description"
 
-            text "Lockers: and this shouldn't be the same as the bag, need to change..."
-            for item in inventory.inv:
-                $ name = item.name
-                text name
+    # Statistics box
 
-init -2:
-    ## STYLES ##
-    # bag
-    style bagstyle_frame:
-        xalign 0.05
-        yalign 0.35
-    style bagstyle_label_text:
-        size 30
-    style bagstyle_label:
-        xalign 0.5
-    # lockers
-    style lockstyle_frame:
-        xalign 0.5
-        yalign 0.5
-    style lockstyle_label_text:
-        size 30
-    style lockstyle_label:
-        xalign 0.5
-    style lockstyle_frame:
-        xalign 0.5
-        yalign 0.5
-    # quests
-    style queststyle_frame:
-        xalign 0.5
-        yalign 0.5
-    style queststyle_label_text:
-        size 30
-    style queststyle_label:
-        xalign 0.5
+screen inventory_stats(person=False):
+    $ stat_box = {
+        "offset": (703, 577),
+        "size": (646, 75),
+    }
+    frame:
+        xoffset stat_box["offset"][0]
+        yoffset stat_box["offset"][1]
+        xsize   stat_box["size"][0]
+        vbox:
+            ymaximum stat_box["size"][1]
+            if person:
+                text "{b}" + "{0}'s statistics".format(unicode.title(person.name)) + "{/b}"
+                for stat in person.attributes:
+                    text "{0}: {1}".format(unicode.title(stat), getattr(person, stat))
+            else:
+                text "{b}Error: No user assigned to inventory{/b}"

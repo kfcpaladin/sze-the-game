@@ -1,4 +1,5 @@
 init python:
+    import copy
     inventory = Inventory(**{
         "who": sze,
         "name": "Bag", 
@@ -7,4 +8,6 @@ init python:
     })
     #$ inventory = Inventory("Locker", 10)
     for item in itemList:
-        inventory.add(itemList[item], 1)
+        for amount in xrange(2):
+            newItem = copy.deepcopy(itemList[item])
+            inventory.add(newItem, 1)

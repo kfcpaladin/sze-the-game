@@ -3,7 +3,6 @@
 label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
     $ renpy.save("autosave")
-    show screen diary_button
     scene bg disclaimer
     with fade
     pause
@@ -30,5 +29,4 @@ label start:
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full, and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1 played softly in the background"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
-    show screen bag_button
     jump schoolday1

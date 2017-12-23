@@ -1,8 +1,4 @@
 ############################## inventory screens ##############################################
-style bag_inventory:
-    xoffset 44
-    yoffset 132
-
 style bag_item_frame:
     xsize 112
     ysize 112
@@ -12,36 +8,37 @@ style bag_item_box:
     ymaximum 112
 
 # currently inefficent, can probably optimise
-screen inventory_view(inventory=inventory):
+screen bag_view(bag=bag):
     add "Diary.jpg"
-    use inventory_stats(inventory.who)
+    use bag_stats(bag.who)
     # Variables
     $ colours = {
-        "item_used": "#00993371",
-        "item_not_used": "#e6ac0071",
-        "tooltip": "#00000071",
-        "background": "#00000000",
+        "item_used": "#00993371",       # Green
+        "item_not_used": "#e6ac0071",   # Orange
+        "item_blocked": "#b30000",      # Red
+        "background": "#00000000",      # Transparent
     }
     $ grid = {
         "size": (112, 112),
         "spacing": 5,
-        "offset": (44, 132),
+        "offset": (44, 131),
         "dimensions": (580, 580),
-        "matrix": (5, int((len(inventory.inv)-1)/5)+1),
+        "matrix": (5, int((len(bag.inv)-1)/5)+1),
     }
     frame:
         area (0, 0, 500, 50)
-        text "{0}".format(unicode.title(inventory.name)): 
+        text "{0}".format(unicode.title(bag.name)): 
             size 45
             xoffset 30
             yoffset 10
             font "DejaVuSans.ttf"
     frame:
         background Color(colours["background"])
-        style "bag_inventory"
+        xoffset grid["offset"][0]-grid["spacing"]
+        yoffset grid["offset"][1]-grid["spacing"]
         hbox:
             ysize 580
-            $ _grid_name = inventory.name
+            $ _grid_name = bag.name
             vpgrid id (_grid_name):
                 xsize grid["dimensions"][0] 
                 ysize grid["dimensions"][1] 
@@ -50,34 +47,37 @@ screen inventory_view(inventory=inventory):
                 rows grid["matrix"][1] 
                 draggable False
                 mousewheel True
-                for index, item in enumerate(inventory.inv):
+                for index, item in enumerate(bag.inv):
                     # Create an item element in the list
                     frame:
-                        style "bag_item_frame"
+                        xsize grid["size"][0]
+                        ysize grid["size"][1]
                         if item.used:
                             background Color(colours["item_used"])
                         else:
                             background Color(colours["item_not_used"]) 
                         hbox:
-                            style "bag_item_box"
+                            xmaximum grid["size"][0]
+                            ymaximum grid["size"][1]
                             imagebutton:
-                                style "bag_item_box"
+                                xmaximum grid["size"][0]
+                                ymaximum grid["size"][1]
                                 idle Frame(item.icon, grid["size"][0], grid["size"][1], grid["size"][0], grid["size"][1])
                                 hover Frame(im.Sepia(item.icon), grid["size"][0], grid["size"][1], grid["size"][0], grid["size"][1])
                                 action [
                                     Play ("sound", "sfx/vpunch.ogg"),
-                                    Function(item.toggle, inventory.who),
+                                    Function(item.toggle, bag.who),
                                 ]
                                 hovered [ 
-                                    Show("gui_tooltip",item=item) 
+                                    Show("bag_tooltip",item=item) 
                                 ]
-                                unhovered Show("gui_tooltip")
+                                unhovered Show("bag_tooltip")
             if grid["matrix"][1] > grid["matrix"][0]:
                 frame:
                     vbar:
                         value YScrollValue(_grid_name)
 
-screen gui_tooltip(item=False):
+screen bag_tooltip(item=False):
     $ desc_box = {
         "offset": (703, 95),
         "size": (646, 429),
@@ -118,7 +118,7 @@ screen gui_tooltip(item=False):
 
     # Statistics box
 
-screen inventory_stats(person=False):
+screen bag_stats(person=False):
     $ stat_box = {
         "offset": (703, 577),
         "size": (646, 75),

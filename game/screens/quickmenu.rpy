@@ -11,7 +11,7 @@ screen quick_menu():
         xalign 1.0
         yalign 1.0
 
-        textbutton _("Inventory")   action ShowMenu('inventory_view')
+        textbutton _("Bag")         action ShowMenu('bag_view', bag)
         textbutton _("Quests")      action ShowMenu('questscreen')
         textbutton _("Stats")       action ShowMenu('statsscreen')
         textbutton _("kms")         action ShowMenu('kms')

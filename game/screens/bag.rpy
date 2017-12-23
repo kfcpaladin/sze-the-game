@@ -1,12 +1,4 @@
 ############################## inventory screens ##############################################
-style bag_item_frame:
-    xsize 112
-    ysize 112
-
-style bag_item_box:
-    xmaximum 112
-    ymaximum 112
-
 # currently inefficent, can probably optimise
 screen bag_view(bag=bag):
     add "Diary.jpg"
@@ -21,7 +13,7 @@ screen bag_view(bag=bag):
     $ grid = {
         "size": (112, 112),
         "spacing": 5,
-        "offset": (44, 131),
+        "offset": (43, 131),
         "dimensions": (580, 580),
         "matrix": (5, int((len(bag.inv)-1)/5)+1),
     }

@@ -9,7 +9,6 @@ label asszemblyjigoloviceland:
         jit "\"Willis Lau can attest to their quality\""
         sze "\"Why of course, how could one refuse such a marvellous offer\""
         jit "\"Well then, if you desire, please follow me\""
-        $ garylevel += 2
         call garyreeducation
         jump recess1
     elif sze.intellect > 5:

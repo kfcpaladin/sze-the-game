@@ -2,10 +2,25 @@ python early:
     class Quests:
         def __init__(self, questParams):
             self.questParams = questParams
-            self._baseParams = ["title", "brief", "description", "dependencies", "label"]
+            self._baseParams = {
+                "title": None, 
+                "brief": None,
+                "description": None, 
+                "dependencies": None, 
+                "label": None,
+                "icon": None,
+                "conditions": [
+                    {
+                        "function": None,
+                        "msg": None,
+                    },
+                ],
+            }
+            # Add in basic parameters
             for baseParam in self._baseParams:
                 if baseParam not in self.questParams:
                     self.questParams.append(baseParam)
+            # Quest types
             self.questTypes = ["unavailable", "available", "completed"]
             self.displayableQuestTypes = ["available", "completed"]
             self.currentQuestType = self.questTypes[1]  # this is used by the screen by default
@@ -79,12 +94,9 @@ python early:
             """
             self._checkQuestID(questID)
             if questID in self.available:
-                label = self.available[questID]["label"]
-                if type(label) in self._stringType:
-                    renpy.hide_screen("questscreen")
-                    renpy.call(label)
-                else:
-                    playsfx("vpunch.ogg")
+                quest = self.available[questID]
+                if self._checkQuestCondition(quest["conditions"]):
+                    self._gotoLabel(quest["label"])
 
         def completeQuest(self, questID):
             """
@@ -126,7 +138,7 @@ python early:
                 raise TypeError("A quest should be a dict, not a {0}".format(type(quest)))
             for param in self.questParams:
                 if param not in quest:
-                    quest[param] = None
+                    quest[param] = self._baseParams[param]
                     
         def _getDependencyString(self, questID):
             """
@@ -165,6 +177,43 @@ python early:
             else:
                 raise NameError("{0} is not a valid quest ID".format(questID))
 
+        def _checkQuestCondition(self, conditions):
+            """
+                Check all lists of conditions and sees if they are all verified
+                If not return False, otherwise True
+            """
+            if type(conditions) is dict:
+                conditions = [conditions]
+            elif type(conditions) is not list:
+                raise TypeError("Quest conditions must be either a list or dict")
+            failMessages = []
+            for condition in conditions:
+                if condition["function"]:
+                    if not callable(condition["function"]):
+                        raise TypeError("Expected a function for a condition")
+                    if not condition["function"]():
+                        failMessages.append(condition["msg"])
+            if len(failMessages) > 0:
+                playsfx("vpunch.ogg")
+                popup(failMessages)
+                return False
+            else:
+                return True
+
+
+        def _gotoLabel(self, label):
+            """
+                Goto a label for a particular quest
+            """
+            if type(label) in self._stringType:
+                try:
+                    renpy.call(label)
+                except:
+                    popup("Error: Label points nowhere")
+                    playsfx("vpunch.ogg")
+            else:
+                popup("This quest does not go anywhere!")
+                playsfx("vpunch.ogg")
 
         def _debugQuestType(self, questType):
             quests = getattr(self, questType)

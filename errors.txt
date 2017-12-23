@@ -2,8 +2,16 @@
 errors listed below, and try again.
 
 
-File "game/screens/bag.rpy", line 53: u'size' is not a keyword argument or valid child for the frame statement.
-    size grid["size"]
-        ^
+File "game/instances/inventory.rpy", line 9: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/instances/inventory.rpy", line 12: expected statement.
+    =======
+          ^
+
+File "game/instances/inventory.rpy", line 15: expected statement.
+    >>>>>>> f1a7bf902dfba3408c2ae10ff84f599f00f82a80
+                                                    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

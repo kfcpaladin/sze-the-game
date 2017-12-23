@@ -5,9 +5,9 @@ init python:
         "name": "Bag", 
         "max_items": 10, 
     })
-    #$ inventory = Inventory("Locker", 10)
-    #for item in itemList:
-        #bag.add(newItem)
+    
+    for key, item in itemList.iteritems():
+        bag.add(item)
 
     locker = Inventory(**{
         "who": sze,

@@ -39,7 +39,7 @@ screen bag_view(bag=bag):
                 rows grid["matrix"][1] 
                 draggable False
                 mousewheel True
-                for index, item in enumerate(bag.inv):
+                for item in bag.inv:
                     # Create an item element in the list
                     frame:
                         xsize grid["size"][0]

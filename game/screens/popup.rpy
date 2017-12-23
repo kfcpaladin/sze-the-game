@@ -3,7 +3,7 @@ style popup_vpgrid:
     xalign 0.5
     yoffset 100
 
-screen popup(messages=[], duration=2, speed=0.5):
+screen popup(messages=[], icons=[], duration=2, speed=0.5):
     default time_remain = duration
     timer speed:
         repeat True
@@ -22,4 +22,7 @@ screen popup(messages=[], duration=2, speed=0.5):
                 frame:
                     xalign 0.5
                     has hbox
+                    if not message:
+                        $ message = "No message"    
                     text "{b}" + message + "{/b}"
+                    

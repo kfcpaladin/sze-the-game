@@ -1,8 +1,17 @@
 python early:
     class Game:
         def __init__(self, options):
+            self.currentTime = {}   
             self.iterableOptions = []
             self.options = []
+            self._baseOptions = ["currentTime"]
+            # Adding base options
+            for option in self._baseOptions:
+                val = getattr(self, option)
+                self.options.append(option)
+                if type(val) in (int, float):
+                    self.iterableOptions.append(option)
+            # Adding user options
             for option in options:
                 val = options[option]
                 setattr(self, option, val)
@@ -10,6 +19,34 @@ python early:
                 if type(val) in (int, float):
                     self.iterableOptions.append(option)
 
+        """
+            Methods to handle adding, checking and modifying gamestates
+        """
+        def addTimes(self, times):
+            if type(times) is not dict:
+                raise TypeError("Expected a dict for times, not {0}".format(type(timeStates)))
+            for key, time in times.iteritems():
+                self.currentTime[key] = time 
+
+        def checkTime(self, time):
+            if time in self.currentTime:
+                return self.currentTime[time]
+            else:
+                return False
+
+        # Toggle desired time to true
+        def setTime(self, desiredTime):
+            if desiredTime in self.currentTime:
+                for time in self.currentTime:
+                    self.currentTime[time] = False
+                self.currentTime[desiredTime] = True
+            else:
+                raise AttributeError("{0} is not a valid timestate".format(desiredTime))
+
+        """
+            Allow for the modification of iterable game state variables
+            These options will be checked to see if they are in self.iterableOptions
+        """
         # Modify game state variables safely
         def gain(self, option, count=1):
             self._checkIterableOption(option)

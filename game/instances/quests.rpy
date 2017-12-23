@@ -51,8 +51,8 @@ init python:
             "dependencies": "locked",
             "label": "garyreeducation1",
             "conditions": {
-                "function": lambda: sze.strength > 10,
-                "msg": "You are not strong enough", 
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
             },
         },
         "garythirst2": {
@@ -61,6 +61,10 @@ init python:
             "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
             "dependencies": "garythirst1",
             "label": "garyreeducation2",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         },
         "garythirst3": {
             "title": "Gary's reeducation program",
@@ -68,6 +72,10 @@ init python:
             "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
             "dependencies": "garythirst2",
             "label": "garyreeducation3",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         },
         "garythirst4": {
             "title": "Gary's reeducation program",
@@ -75,6 +83,10 @@ init python:
             "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
             "dependencies": "garythirst3",
             "label": "garyreeducation4",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         },
         "garythirst5": {
             "title": "Gary's reeducation program",
@@ -82,6 +94,10 @@ init python:
             "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
             "dependencies": "garythirst4",
             "label": "garyreeducation5",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         },
         "garythirst6": {
             "title": "Gary's reeducation program",
@@ -89,6 +105,10 @@ init python:
             "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
             "dependencies": "garythirst5",
             "label": "garyreeducation6",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         },
         "garythirst7": {
             "title": "Gary's reeducation program",
@@ -96,6 +116,10 @@ init python:
             "description": "Not only are his expertise in slaying unparalleled, he also offers free condoms",
             "dependencies": "garythirst6",
             "label": "garyreeducation7",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         },
         "garythirst8": {
             "title": "The final problem",
@@ -103,5 +127,9 @@ init python:
             "description": "If you complete this, you will become the most sexy man alive",
             "dependencies": "garythirst7",
             "label": "garyreeducation8",
+            "conditions": {
+                "function": lambda: game.checkTime("recess"),
+                "msg": "You can only go to Gary for reeducation during recess", 
+            },
         }
     })

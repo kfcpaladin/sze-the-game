@@ -206,11 +206,9 @@ python early:
                 Goto a label for a particular quest
             """
             if type(label) in self._stringType:
-                try:
-                    renpy.call(label)
-                except:
-                    popup("Error: Label points nowhere")
-                    playsfx("vpunch.ogg")
+                renpy.hide_screen("questscreen")
+                renpy.call(label)
+                playsfx("vpunch.ogg")
             else:
                 popup("This quest does not go anywhere!")
                 playsfx("vpunch.ogg")

@@ -49,14 +49,14 @@ label eng1ascension:
                 sze "\"If Pheidippides of Athens could run from Marathon to Greece, I can get up these steps\""
                 dik "\"Quite so, my good fellow! Persevere but a few seconds longer, then \"Joy to you, we've won\"!\""
                 $ dik.gain()
-                
+
             else:
                 "You notice Richard walk past you"
                 sze "\"if that greek guy could do that mara thing, then I can do these stairs too\""
                 "You notice Richard shaking his head"
                 dik "\"I almost pity thee. Thine incompetence is but a miracle beholden to few\""
                 $ dik.loss()
-                
+
             "..."
             "The second flight was down, half way"
             "You find yourself at the first floor, and allow yourself one second of respite"
@@ -71,9 +71,16 @@ label eng1ascension:
                 cha "\"Y'know, since you had my back earlier on, I reckon I'll help you out. Aren't I a great guy?\""
                 menu:
                     "\"im fking ded, halp me plz\"":
-                        cha "\"Alright then, hope on my back and I'll give you a ride outta here\""
-                        "Chao lets you piggyback up the rest of the stairs"
-                        $ sze.loss("strength")
+                        cha "\"Alright then, just stay put and I'll get you to the top in no time.\""
+                        "Chao suddenly grabs you by the back of your shirt and gets into a shotput pose"
+                        $ sze.loss("strength)
+                        sze "\"Wait stop, let me down!!!!!\""
+                        cha "\"3\""
+                        cha "\"2\""
+                        cha "\"1\""
+                        "You get launched through the air, rapidly reaching the top floor of the stairs" with vpunch
+                        "Despite the unusual and potentially dangerous method of travel, you do feel quite thankful to Chao."
+                        "You lean over the edge and shout a few words to him"
                         sze "\"I don't know if I could've done the rest without a heart attack\""
                         sze "\"Thanks Chao, you are truly a great man\""
                         cha "\"Awww thanks Arthur\""

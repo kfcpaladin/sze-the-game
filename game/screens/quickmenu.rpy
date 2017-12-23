@@ -13,6 +13,7 @@ screen quick_menu():
 
         textbutton _("Bag")         action ShowMenu('bag_view', bag)
         textbutton _("Quests")      action ShowMenu('questscreen')
+        textbutton _("Achievements") action ShowMenu('achievement')
         textbutton _("Stats")       action ShowMenu('statsscreen')
         textbutton _("kms")         action ShowMenu('kms')
         textbutton _("Roadmap")     action ShowMenu('roadmap')

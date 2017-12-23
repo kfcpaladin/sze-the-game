@@ -2,6 +2,7 @@
 
 label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
+    $ popup("Autosaving")
     $ renpy.save("autosave")
     show screen diary_button
     image blank = im.Recolor("arthur.jpg", 255, 255, 255, 0)

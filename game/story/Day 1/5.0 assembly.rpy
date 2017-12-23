@@ -1,4 +1,5 @@
 label asszembly1:
+    $ popup("Autosaving")
     $ renpy.save("autosave")
     $ stopmusic()
     $ playmusic("p4YouthfulLunch.ogg", loop=True)

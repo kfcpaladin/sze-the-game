@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/classes/Game.rpy", line 12: expected an indented block
-            for option in options:
-               ^
-    
+File "game/story/script.rpy", line 6: expected 'name' not found.
+    show screen "diary_button"
+                ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

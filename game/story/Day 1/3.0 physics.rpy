@@ -1,4 +1,5 @@
 label phys1:
+    $ popup("Autosaving")
     $ renpy.save("autosave")
     scene bg physclass
     $ stopmusic()

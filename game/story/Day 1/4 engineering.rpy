@@ -1,4 +1,5 @@
 label eng1p1:
+    $ popup("Autosaving")
     $ renpy.save("autosave")
     "I should probably be heading to the next period then."
     scene bg workshop

@@ -27,3 +27,9 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Made massive changes to the quest screen, and can now accept available quests, and complete ongoing quests
 * Finished the kahoot gamemode in */game/scripts/countdown.rpy*
 * Added temporary placeholder dialogue for "econ1"
+
+**23/12/2017**
+* Made massive changes to the inventory system, now it uses the diary as the background
+* Added support for 5x5 grid as the inventory system
+* Change inventory.rpy to bag.rpy since a bag and locker will have significantly different layouts
+* Items can now be equipped and unequipped, and will provide stats

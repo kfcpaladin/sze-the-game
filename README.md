@@ -49,7 +49,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
 | Game          | [game](./game/instances/game.rpy)     |
 | Quest         | [quests](./game/instances/quests.rpy) |
-| Inventory     | [inventory](./game/instances/inventory.rpy) |
+| Inventory     | [bag](./game/instances/inventory.rpy) |
 | Item          | [{itemList}](./game/instances/items.rpy)|
 
 ### Usage inside renpy script
@@ -114,4 +114,22 @@ Previously you were not able to define the directory in which all your audio fil
 Using the new **playmusic()** and **stopmusic()** functions you should be able to play music from a user defined directory stored in **musicdir**.
 For special effect sounds, use **playsfx()** to play a short audio clip and **stopsfx()** to stop it.
 
-*Note*: The settings for audio are located in [game/scripts/sound.rpy](./game/scripts/sound.rpy)
+*Note*: The settings for audio are located in [**game/scripts/sound.rpy**](./game/scripts/sound.rpy)
+
+## Multiple screens
+
+| Screen name                                     | Description                                                               |
+| ----------------------------------------------- | ------------------------------------------------------------------------- |
+| [default](./game/screens/default.rpy)           | Has the default screens used for the menu                                 |
+| [bag](./game/screens/bag.rpy)                   | Used for the bag inventory, and used the diary grid                       |
+| [countdown](./game/screens/countdown.rpy)       | Kahoot uses this for the countdown, questions and answers                 |
+| [diary](./game/screens/diary.rpy)               | Used for the index of the diary                                           |
+| [fortmap](./game/screens/fortmap.rpy)           | Has a map of the school used to navigate to different locations           |
+| [kms](./game/screens/kms.rpy)                   | Arthur uses this to kill himself                                          |
+| [popup](./game/screens/popup.rpy)               | Will display a popup message/s, useful for achievements and quest unlocks |
+| [questscreen](./game/screens/questscreen.rpy)   | Shows the available and completed quests, and allows user to start quests |
+| [roadmap](./game/screens/roadmap.rpy)           | Will be used to display a graph of choices made by the user               |
+| [statscreen](./game/screens/statscreen.rpy)     | Shows the status you have with your friends, and your statistics          |
+| [szeclicker.rpy](./game/screens/szeclicker.rpy) | *A cookie clicker minigame?*                                            |
+
+*Note*: For more information about the structure and implementation of screens, check out [**game/screens/**](./game/screens)

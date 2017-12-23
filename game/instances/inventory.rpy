@@ -5,7 +5,7 @@ init python:
         "name": "Bag", 
         "max_items": 10, 
     })
-    #$ inventory = Inventory("Locker", 10)
+    
     for key, item in itemList.iteritems():
         bag.add(item)
 

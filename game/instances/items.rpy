@@ -61,5 +61,17 @@ init -1 python:
                 "thirst": -1000,
             },
             "icon": "images/kirby.png",
+        }),
+        "neo armstrong cyclone jet armstrong cannon": Item(**{
+            "name": "neo armstrong cyclone jet armstrong cannon",
+            "desc": "The most powerful weapon used by an alien civilization, able to destroy wipe out entire species (sunrise don;t sue us)",
+            "stat": {
+                "charm": 1000,
+                "fort": -100,
+                "intellect": -1000,
+                "strength": 1000,
+                "thirst": 1000,
+            },
+            "icon": "images/cannon.png",
         })
     }

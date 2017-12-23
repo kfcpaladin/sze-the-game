@@ -6,4 +6,5 @@ python early:
         elif type(messages) is not list:
             raise TypeError("Popup message should be list or string, not {0}".format(type(messages)))
         renpy.show_screen("popup", messages, **options)
-        renpy.say(adv, "")
+        ## WARNING 
+        ## You should not call after calling a popup, since it will cancel it

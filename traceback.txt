@@ -1,58 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/6.0 recess.rpy", line 162, in script call
-    sze "I sze Serena... I should talk"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/9 economics.rpy", line 16, in script call
-    call econ1kahoot1
-  File "game/story/Day 1/9 economics.rpy", line 20, in script call
-    call kahootGame(question=kahoot["econ1"], time_range=10)
-  File "game/screens/countdown.rpy", line 31, in script
-    call screen countdown(question=question["question"], answers=question["answers"], **options)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-TypeError: 'unicode' object is not callable
+  File "game/story/Day 1/5.4 jig vices.rpy", line 12, in script
+    $ garylevel += 2
+  File "game/story/Day 1/5.4 jig vices.rpy", line 12, in <module>
+    $ garylevel += 2
+NameError: name 'garylevel' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/6.0 recess.rpy", line 162, in script call
-    sze "I sze Serena... I should talk"
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/9 economics.rpy", line 16, in script call
-    call econ1kahoot1
-  File "game/story/Day 1/9 economics.rpy", line 20, in script call
-    call kahootGame(question=kahoot["econ1"], time_range=10)
-  File "game/screens/countdown.rpy", line 31, in script
-    call screen countdown(question=question["question"], answers=question["answers"], **options)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3234, in interact_core
-    rv = renpy.display.focus.mouse_handler(ev, x, y)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/focus.py", line 343, in mouse_handler
-    return change_focus(new_focus, default=default)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/focus.py", line 305, in change_focus
-    rv = widget.focus(default=default)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 760, in focus
-    rv = run(self.hovered)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 306, in run
-    return action(*args, **kwargs)
-TypeError: 'unicode' object is not callable
+  File "game/story/Day 1/5.4 jig vices.rpy", line 12, in script
+    $ garylevel += 2
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/story/Day 1/5.4 jig vices.rpy", line 12, in <module>
+    $ garylevel += 2
+NameError: name 'garylevel' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

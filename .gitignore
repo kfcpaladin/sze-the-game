@@ -5,6 +5,8 @@
 # Ignore python byte code (takes up extra space)
 *.rpyc
 *.pyo
+*.rpyb
+*.save
 
 # Linux files
 .directory
@@ -56,3 +58,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# More files
+log.txt
+traceback.txt
+persistent

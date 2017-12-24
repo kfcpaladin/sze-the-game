@@ -152,12 +152,8 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
-│   │   ├── auto-3-LT1.save
-│   │   ├── auto-4-LT1.save
-│   │   ├── auto-6-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
-│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── achievement.rpy
@@ -1468,4 +1464,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1369 files
+99 directories, 1365 files

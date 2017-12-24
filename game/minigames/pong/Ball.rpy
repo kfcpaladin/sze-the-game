@@ -37,10 +37,12 @@ python early:
                     paddle._checkYInside(self.pos.y - self.radius)):
                 # Left side
                 if paddle._checkXInside(self.pos.x + self.radius):
+                    playsfx("vpunch.ogg")
                     self.vel.x = -abs(self.vel.x)
                     self.vel.add(paddle.vel)
                 # Right side
                 elif paddle._checkXInside(self.pos.x - self.radius):
+                    playsfx("vpunch.ogg")
                     self.vel.x = abs(self.vel.x)
                     self.vel.add(paddle.vel)
 

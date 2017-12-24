@@ -33,6 +33,7 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Added support for 5x5 grid as the inventory system
 * Change inventory.rpy to bag.rpy since a bag and locker will have significantly different layouts
 * Items can now be equipped and unequipped, and will provide stats
+* Added the greatest item in the history of the future of man
 
 **24/12/2017**
 * Added pong to the game

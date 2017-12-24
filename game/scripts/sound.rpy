@@ -22,6 +22,8 @@ python early:
 
     def stopsfx(channel="sound"):
         renpy.music.stop(channel=channel)
+        
+            
 
 
 init -1 python hide:

@@ -12,10 +12,10 @@ python early:
             self.attributeMessages = {}
             self._getIterableAttributes(properties)
 
-            for baseAttribute in self._baseAttributes:
-                if not hasattr(self, baseAttribute):
-                    setattr(self, baseAttribute, 0)
-                    self.attributes.append(baseAttribute)
+            for attribute, value in self._baseAttributes.iteritems():
+                if not hasattr(self, attribute):
+                    setattr(self, attribute, value)
+                    self.attributes.append(attribute)
 
         """
             Used to add attributes to a character, and set messages
@@ -26,16 +26,16 @@ python early:
                 attributes = self._getDictFromList(attribute)
             if type(attributes) is not dict:
                 raise TypeError("Expected list or dict for attributes, instead got {0}".format(type(attributes)))
-            for attribute in attributes:
+            for attribute, value in attributes.iteritems():
                 if attribute not in self.attributes:
                     self.attributes.append(attribute)
-                setattr(self, attribute, attributes[attribute])
+                setattr(self, attribute, value)
 
         # Set the messages for each attribute
         def setMessages(self, msgDict):
-            for attribute in msgDict:
+            for attribute, value in msgDict.iteritems():
                 self._checkAttribute(attribute)
-                self.attributeMessages[attribute] = msgDict[attribute]
+                self.attributeMessages[attribute] = value
 
         """
             Methods used to provide messages based on which attribute was modified
@@ -97,8 +97,8 @@ python early:
 
         # Used to get iterable attributes from properties
         def _getIterableAttributes(self, properties):
-            for attribute in properties:
-                if type(properties[attribute]) in [int, float]:
+            for attribute, value in properties.iteritems():
+                if type(value) in [int, float]:
                     self.attributes.append(attribute)
 
         # Get a dictionary of default values from a list

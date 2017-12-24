@@ -74,6 +74,7 @@ python early:
             # since removing a quest during iteration results in an error
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
+            playsfx("xbox.ogg")
             popup(questUnlockMessages)
 
         def unlockQuest(self, questID):
@@ -85,6 +86,7 @@ python early:
             if questID in self.unavailable:
                 self.available[questID] = self.unavailable[questID]
                 self.unavailable.pop(questID)
+                playsfx("xbox.ogg")
                 popup("Unlocked quest: {0}".format(questID))
 
         def startQuest(self, questID):

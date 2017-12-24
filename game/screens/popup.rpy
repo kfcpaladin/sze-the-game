@@ -7,7 +7,11 @@ screen popup(messages=[], icons=[], duration=2, speed=0.5):
     default time_remain = duration
     timer speed:
         repeat True
-        action If(time_remain > 0, true=[SetScreenVariable('time_remain', time_remain-speed)], false=[Hide('popup')])
+        action If(
+            time_remain > 0, 
+            true=[SetScreenVariable('time_remain', time_remain-speed)], 
+            false=[Hide('popup', dissolve)]
+        )
     vpgrid:
         cols 1
         spacing 10

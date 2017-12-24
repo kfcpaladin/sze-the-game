@@ -11,7 +11,7 @@ label playPong(**options):
 
 screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
                 leftPaddleBot=None, rightPaddleBot=rightPaddleBot,
-                rate=1.0/30.0, duration=10):
+                rate=1.0/30.0, duration=60):
     use navigation # Include the navigation.
     tag menu
     add "pong.jpg" 

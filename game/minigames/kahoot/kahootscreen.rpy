@@ -78,12 +78,12 @@ screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.0
         vbox:
             style "kahoot_answers"
             spacing 10
-            for answer in answers:
+            for answer, points in answers.iteritems():
                 textbutton answer:
                     xalign 0.5
                     action [
                         Hide('kahootscreen', dissolve),
-                        Return({"points": answers[answer], "time_remain": time_remain, "choice": answer})
+                        Return({"points": points, "time_remain": time_remain, "choice": answer})
                     ]
 
 

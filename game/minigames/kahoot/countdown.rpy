@@ -9,7 +9,7 @@ transform alpha_dissolve:
 
 style kahoot_answers:
     xalign 0.5
-    yalign 0.7
+    yalign 0.4
 
 ######################################################################################
 # kahootGame will play a game of kahoot, given a dictionary of answers and questions
@@ -30,12 +30,11 @@ label kahootGame(question, show_result=True, **options):
             $ playmusic("kahoot.ogg")
             call screen countdown(question=question["question"], answers=question["answers"], **options)
             $ stopmusic()
-            $ _points = game.kahootScore["points"]
-            $ _time_remain = game.kahootScore["time_remain"]
-            $ _choice = game.kahootScore["choice"]
-            $ game.kahootStarted = False
-            $ game.kahootScore = {"points": 0, "time_remain": 0, "choice": None}
+            $ _points = _return["points"]
+            $ _time_remain = _return["time_remain"]
+            $ _choice = _return["choice"]
             if show_result:
+                "You chose [_choice]"
                 "You got [_points] points with [_time_remain] seconds remaining"
             return
         "Pussy out":
@@ -45,8 +44,9 @@ label kahootGame(question, show_result=True, **options):
 
 screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
     default time_remain = time_range
-    if game.kahootStarted is False:
-        $ game.kahootStarted = True
+    default started = False
+    if started is False:
+        $ started = True
         
     timer speed:
         repeat True
@@ -56,8 +56,7 @@ screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
                     ], 
                     false=[
                         Hide('countdown'),
-                        SetField(game, 'kahootScore', {"points": 0, "time_remain": 0, "choice": None}),
-                        Return(0)
+                        Return({"points": 0, "time_remain": 0, "choice": None})
                     ]
         )
     # Bar will have a value proportional to the time remaining
@@ -73,21 +72,19 @@ screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
         frame:
             has hbox
             text question
-    vpgrid id ("answers_vpgrid"):
-        cols 1
-        spacing 20
-        draggable True
-        mousewheel True
+    frame:
+        background Color("#ffffff00")
         style "kahoot_answers"
-        for answer in answers:
-            textbutton answer:
-                xalign 0.5
-                action [
-                    Hide('countdown'), 
-                    SetField(game, 'kahootScore', {"points": answers[answer], "time_remain": time_remain, "choice": answer}),
-                    Return(0)
-                ]
-    vbar value YScrollValue("answers_vpgrid")
+        vbox:
+            style "kahoot_answers"
+            spacing 10
+            for answer in answers:
+                textbutton answer:
+                    xalign 0.5
+                    action [
+                        Hide('countdown'),
+                        Return({"points": answers[answer], "time_remain": time_remain, "choice": answer})
+                    ]
 
 
 

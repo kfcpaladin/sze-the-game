@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens/pong.rpy", line 91: unexpected indent
-            if pressed[pygame.K_UP]:
-            ^
-    
+File "game/minigames/kahoot/countdown.rpy", line 76: u'cols' is not a keyword argument or valid child for the frame statement.
+    cols 1
+        ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

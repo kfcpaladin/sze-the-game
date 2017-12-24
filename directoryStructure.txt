@@ -20,15 +20,6 @@
 │   │   ├── Item.rpyc
 │   │   ├── MainCharacter.rpy
 │   │   ├── MainCharacter.rpyc
-│   │   ├── Pong
-│   │   │   ├── Ball.rpy
-│   │   │   ├── Ball.rpyc
-│   │   │   ├── PaddleBot.rpy
-│   │   │   ├── PaddleBot.rpyc
-│   │   │   ├── Paddle.rpy
-│   │   │   ├── Paddle.rpyc
-│   │   │   ├── Vector.rpy
-│   │   │   └── Vector.rpyc
 │   │   ├── Quest.rpy
 │   │   └── Quest.rpyc
 │   ├── images
@@ -114,13 +105,27 @@
 │   │   ├── inventory.rpyc
 │   │   ├── items.rpy
 │   │   ├── items.rpyc
-│   │   ├── pong
-│   │   │   ├── pong.rpy
-│   │   │   └── pong.rpyc
 │   │   ├── quests.rpy
 │   │   ├── quests.rpyc
 │   │   ├── sze.rpy
 │   │   └── sze.rpyc
+│   ├── minigames
+│   │   ├── kahoot
+│   │   │   ├── countdown.rpy
+│   │   │   └── countdown.rpyc
+│   │   └── pong
+│   │       ├── Ball.rpy
+│   │       ├── Ball.rpyc
+│   │       ├── PaddleBot.rpy
+│   │       ├── PaddleBot.rpyc
+│   │       ├── Paddle.rpy
+│   │       ├── Paddle.rpyc
+│   │       ├── pong.rpy
+│   │       ├── pong.rpyc
+│   │       ├── pongscreen.rpy
+│   │       ├── pongscreen.rpyc
+│   │       ├── Vector.rpy
+│   │       └── Vector.rpyc
 │   ├── music
 │   │   ├── CongressNeptune.ogg
 │   │   ├── DeemoPaper Plane's Adventure.ogg
@@ -147,18 +152,18 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
-│   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
+│   │   ├── auto-3-LT1.save
+│   │   ├── auto-4-LT1.save
+│   │   ├── auto-6-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
+│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── achievement.rpy
 │   │   ├── achievement.rpyc
 │   │   ├── bag.rpy
 │   │   ├── bag.rpyc
-│   │   ├── countdown.rpy
-│   │   ├── countdown.rpyc
 │   │   ├── default.rpy
 │   │   ├── default.rpyc
 │   │   ├── diary.rpy
@@ -167,8 +172,6 @@
 │   │   ├── fortmap.rpyc
 │   │   ├── kms.rpy
 │   │   ├── kms.rpyc
-│   │   ├── pong.rpy
-│   │   ├── pong.rpyc
 │   │   ├── popup.rpy
 │   │   ├── popup.rpyc
 │   │   ├── questscreen.rpy
@@ -237,6 +240,7 @@
 │       │   ├── 9 economics.rpy
 │       │   └── 9 economics.rpyc
 │       ├── dead.rpy
+│       ├── dead.rpyc
 │       ├── script.rpy
 │       └── script.rpyc
 ├── lib
@@ -1464,4 +1468,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-98 directories, 1366 files
+99 directories, 1369 files

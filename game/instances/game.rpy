@@ -10,12 +10,6 @@ init python:
         "chaoPissed": False,
         "delivery": False,
         "electionPromise": False,
-        "kahootStarted": False, # Keep track of intialisation for kahoot game
-        "kahootScore": {        # Keep track of the score
-            "points": 0, 
-            "time_remain": 0, 
-            "choice": None
-        },    
         "metDerek": False,
         "norton": False,
         "stealWillisGirl": False,

@@ -1,7 +1,7 @@
 python early:
     import random
     class Ball:
-        def __init__(self, pos, radius=10, speed=10, bounds=(0,0,1366,768)):
+        def __init__(self, pos, radius=10, speed=20, bounds=(0,0,1366,768)):
             self.pos = pos
             self.vel = Vector(0, 0)
             self.speed = speed
@@ -14,6 +14,7 @@ python early:
             self._start()
 
         def update(self):
+            self._limitSpeed()
             self.pos.add(self.vel)
             self.checkBounds()
 
@@ -65,6 +66,14 @@ python early:
                 "left": 0,
                 "right": 0
             }
+            self.reset("left")
+
+        # Cap the velocity if it goes above the maximum limit
+        def _limitSpeed(self):
+            if self.vel.x > self.speed:
+                self.vel.x = self.speed
+            if self.vel.y > self.speed:
+                self.vel.y = self.speed
 
         # This will start the ball moving at a random direction
         def _start(self):

@@ -23,7 +23,7 @@ screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
         action If(
             time_remain > 0, 
             true=[SetScreenVariable('time_remain', time_remain-rate)], 
-            false=[Function(ball.resetScore), Hide('pong'),Return(score)]
+            false=[Function(ball.resetScore), Hide('pong', dissolve),Return(score)]
         )
     
     $ colours = {

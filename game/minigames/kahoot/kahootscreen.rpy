@@ -28,7 +28,7 @@ label kahootGame(question, show_result=True, **options):
     menu:
         "Start Kahoot?":
             $ playmusic("kahoot.ogg")
-            call screen countdown(question=question["question"], answers=question["answers"], **options)
+            call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
             $ stopmusic()
             $ _points = _return["points"]
             $ _time_remain = _return["time_remain"]
@@ -42,7 +42,7 @@ label kahootGame(question, show_result=True, **options):
             "Finally you give up on the game of Kahoot"
             return
 
-screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
+screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.01):
     default time_remain = time_range
     default started = False
     if started is False:
@@ -55,7 +55,7 @@ screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
                         SetScreenVariable('time_remain', time_remain-speed),
                     ], 
                     false=[
-                        Hide('countdown'),
+                        Hide('kahootscreen', dissolve),
                         Return({"points": 0, "time_remain": 0, "choice": None})
                     ]
         )
@@ -82,7 +82,7 @@ screen countdown(question="No question?", answers={}, time_range=10,speed=0.01):
                 textbutton answer:
                     xalign 0.5
                     action [
-                        Hide('countdown'),
+                        Hide('kahootscreen', dissolve),
                         Return({"points": answers[answer], "time_remain": time_remain, "choice": answer})
                     ]
 

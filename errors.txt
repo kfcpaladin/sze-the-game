@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/minigames/kahoot/countdown.rpy", line 76: u'cols' is not a keyword argument or valid child for the frame statement.
-    cols 1
-        ^
+The label kahootGame is defined twice, at
+  File "game/minigames/kahoot/countdown.rpyc", line 27 and
+  File "game/minigames/kahoot/kahootscreen.rpy", line 27.
 
 Ren'Py Version: Ren'Py 6.99.13.2919

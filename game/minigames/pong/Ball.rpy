@@ -63,12 +63,13 @@ python early:
                     -self.speed - random.randint(0, 2)
                 )
         
+        # Resets the ball position and nulls the score
         def resetScore(self):
+            self.reset("left")
             self.score = {
                 "left": 0,
                 "right": 0
             }
-            self.reset("left")
 
         # Cap the velocity if it goes above the maximum limit
         def _limitSpeed(self):

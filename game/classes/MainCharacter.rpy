@@ -36,8 +36,8 @@ python early:
 
             """
             self.attributes = []
-            for attribute in attributes:
-                setattr(self, attribute, attributes[attribute])
+            for attribute, value in attributes.iteritems():
+                setattr(self, attribute, value)
                 self.attributes.append(attribute)
             self.setTutorials()
             self.setAttributeIntroMessages()
@@ -120,7 +120,6 @@ python early:
 
         # Lose n points for a specified attribute
         def loss(self, attribute, amount=1):
-            self._checkAttribute(attribute)
             self._changeAttribute(attribute, -amount)
             self.sayIntro(attribute, "msgLoss")
             self.showTutorial(attribute, "msgLoss")
@@ -128,7 +127,6 @@ python early:
 
         # Gain n points for a specified attribute
         def gain(self, attribute, amount=1):
-            self._checkAttribute(attribute)
             self._changeAttribute(attribute, amount)
             self.sayIntro(attribute, "msgGain")
             self.showTutorial(attribute, "msgGain")

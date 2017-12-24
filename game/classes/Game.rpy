@@ -1,26 +1,27 @@
 python early:
     class Game:
         def __init__(self, options):
-            self.currentTime = {}   
-            self.iterableOptions = []
             self.options = []
-            self._baseOptions = ["currentTime"]
+            self._baseOptions = {
+                "currentTime": {}
+            }
             # Adding base options
-            for option in self._baseOptions:
-                val = getattr(self, option)
-                self.options.append(option)
-                if type(val) in (int, float):
-                    self.iterableOptions.append(option)
-            # Adding user options
-            for option in options:
-                val = options[option]
-                setattr(self, option, val)
-                self.options.append(option)
-                if type(val) in (int, float):
-                    self.iterableOptions.append(option)
+            self.addOptions(self._baseOptions)
+            self.addOptions(options)
 
         """
-            Methods to handle adding, checking and modifying gamestates
+            Used to handle adding options to the game
+        """
+        # Add a dictionary of options with values to the game
+        def addOptions(self, options):
+            if type(options) is not dict:
+                raise TypeError("Expected dict for game options")
+            for option, value in options.iteritems():
+                setattr(self, option, value)
+                self.options.append(option)
+
+        """
+            Methods to handle adding, checking and modifying the game time
         """
         def addTimes(self, times):
             if type(times) is not dict:
@@ -45,7 +46,7 @@ python early:
 
         """
             Allow for the modification of iterable game state variables
-            These options will be checked to see if they are in self.iterableOptions
+            These options will be checked to see if they can be done
         """
         # Modify game state variables safely
         def gain(self, option, count=1):
@@ -57,45 +58,49 @@ python early:
             self._changeIterableOption(option, -count)
 
         def set(self, option, value):
-            self._checkIterableOption(option)
             setattr(self, option, value)
 
+        """
+            Used to increment game state variables if they are iterable,
+            and check if the attribute is iterable
+        """
         def _changeIterableOption(self, option, count):
             self._checkIterableOption(option)
-            optionValue = getattr(self, option)
-            setattr(self, option, optionValue + count)
+            value = getattr(self, option)
+            setattr(self, option, value + count)
 
         def _checkIterableOption(self, option):
-            if option not in self.iterableOptions:
-                raise AttributeError("{0} is not a valid option in {1}".format(option, self))
-
+            if option not in self.options:
+                raise AttributeError("{0} is not a game option".format(option))
+            if type(getattr(self, option)) not in (int, float):
+                raise TypeError("{0} is not an iterable game option".format(option))
+            return True
 
         """
             Used to debug the game state during execution
         """
         # describes the progress of the game
         def describe(self):
-            sortedOptions = self._sortOptions()
+            options = self._sortOptions()
             print("[Game Status]")
-            for category in sortedOptions:
+            for category, option in options.iteritems():
                 print("{0}:".format(category))
-                options = sortedOptions[category]
-                for option in options:
-                    print(" -{0}: {1}".format(option, options[option]))
-            
-        
+                for option, value in options.iteritems():
+                    print(" -{0}: {1}".format(option, value))
+
+        # Sorts a dictionary into distinct catergories
         def _sortOptions(self):
             iterable = {}   # temporary dicts to categorise game variables
             boolean = {}
             other = {}
             for option in self.options:
-                optionValue = getattr(self, option)
-                valueType = type(optionValue)
+                value = getattr(self, option)
+                valueType = type(value)
                 if valueType in (int, float):
-                    iterable[option] = optionValue
+                    iterable[option] = value
                 elif valueType is bool:
-                    boolean[option] = optionValue
+                    boolean[option] = value
                 else:
-                    other[option] = optionValue
+                    other[option] = value
             return {"Iterable": iterable, "Boolean": boolean, "Other": other}
         

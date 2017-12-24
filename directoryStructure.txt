@@ -20,6 +20,15 @@
 │   │   ├── Item.rpyc
 │   │   ├── MainCharacter.rpy
 │   │   ├── MainCharacter.rpyc
+│   │   ├── Pong
+│   │   │   ├── Ball.rpy
+│   │   │   ├── Ball.rpyc
+│   │   │   ├── PaddleBot.rpy
+│   │   │   ├── PaddleBot.rpyc
+│   │   │   ├── Paddle.rpy
+│   │   │   ├── Paddle.rpyc
+│   │   │   ├── Vector.rpy
+│   │   │   └── Vector.rpyc
 │   │   ├── Quest.rpy
 │   │   └── Quest.rpyc
 │   ├── images
@@ -69,6 +78,7 @@
 │   │   ├── NortonSt.png
 │   │   ├── parisafremov.jpg
 │   │   ├── physclass.png
+│   │   ├── pong.jpg
 │   │   ├── pragash2.png
 │   │   ├── pragashnormal.png
 │   │   ├── pragash.png
@@ -104,6 +114,9 @@
 │   │   ├── inventory.rpyc
 │   │   ├── items.rpy
 │   │   ├── items.rpyc
+│   │   ├── pong
+│   │   │   ├── pong.rpy
+│   │   │   └── pong.rpyc
 │   │   ├── quests.rpy
 │   │   ├── quests.rpyc
 │   │   ├── sze.rpy
@@ -136,11 +149,6 @@
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
-│   │   ├── auto-5-LT1.save
-│   │   ├── auto-6-LT1.save
-│   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
-│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -159,6 +167,8 @@
 │   │   ├── fortmap.rpyc
 │   │   ├── kms.rpy
 │   │   ├── kms.rpyc
+│   │   ├── pong.rpy
+│   │   ├── pong.rpyc
 │   │   ├── popup.rpy
 │   │   ├── popup.rpyc
 │   │   ├── questscreen.rpy
@@ -1339,6 +1349,7 @@
 │   │   ├── __init__.py
 │   │   └── __init__.pyo
 │   ├── __init__.py
+│   ├── __init__.pyc
 │   ├── __init__.pyo
 │   ├── LICENSE.txt
 │   ├── lint.py
@@ -1445,6 +1456,7 @@
 │   ├── ui.py
 │   ├── ui.pyo
 │   ├── vc_version.py
+│   ├── vc_version.pyc
 │   ├── vc_version.pyo
 │   ├── warp.py
 │   └── warp.pyo
@@ -1453,4 +1465,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-96 directories, 1357 files
+98 directories, 1367 files

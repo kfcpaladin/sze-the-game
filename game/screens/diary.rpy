@@ -1,6 +1,7 @@
 ###########################################################################################################################################################
 screen diary_button:
     textbutton "Open Diary" action [ Show("diary_page_1"), Hide("diary_button")] align (0.84, 0.04)
+    textbutton "Pong" action [ Function(renpy.call, "playPong"), Hide("diary_button")] align (0.64, 0.04)
 
 screen diary_page_1:
     modal True

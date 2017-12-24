@@ -14,6 +14,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 3. Uses an updated renpy engine to [*renpy-6.99.13*](https://www.renpy.org/dl/6.99.13/)
 4. Added redirectable music and sfx directories
 5. Added quests, inventory, items and a diary
+6. Added minigames, including *pong, kahoot*
 
 ## Game directory layout
 
@@ -22,6 +23,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [classes](./game/classes)      | Stores python scripts containing the classes                      |
 | [images](./game/images)        | Stores the images declared by default in renpy                    |
 | [instances](./game/instances)  | Stores pythons scripts which initialise all the instances         |
+| [minigames](./game/minigames)  | Stores all minigames used inside the game                         |
 | [music](./game/music)          | Custom directory declarable through options.rpy in /game/scripts  |
 | [screens](./game/screens)      | Folder dedicated for gui renpy script files                       |
 | [scripts](./game/scripts)      | Where you place renpy scripts not related to story                |
@@ -133,3 +135,10 @@ For special effect sounds, use **playsfx()** to play a short audio clip and **st
 | [szeclicker.rpy](./game/screens/szeclicker.rpy) | *A cookie clicker minigame?*                                            |
 
 *Note*: For more information about the structure and implementation of screens, check out [**game/screens/**](./game/screens)
+
+## Minigames
+
+| Minigame name                       | Description                                           |
+| ----------------------------------- | ----------------------------------------------------- |
+| [Pong](./game/minigames/pong)       | This will be played in the tennis courts, rowe, etc   |
+| [Kahoot](./game/minigames/kahoot)   | This will play kahoot                                 |

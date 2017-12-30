@@ -72,23 +72,53 @@ label eng1ascension:
                 menu:
                     "\"im fking ded, halp me plz\"":
                         cha "\"Alright then, just stay put and I'll get you to the top in no time.\""
-                        "Chao suddenly grabs you by the back of your shirt and gets into a shotput pose"
+                        "Chao suddenly grabs you by the back of your shirt and dangles you over the edge of the building"
+                        "He gets into a lopsided shotput pose"
                         $ sze.loss("strength")
-                        sze "\"Wait stop, let me down!!!!!\""
                         cha "\"3\""
                         cha "\"2\""
                         cha "\"1\""
-                        "You get launched through the air, rapidly reaching the top floor of the stairs" with vpunch
-                        "Despite the unusual and potentially dangerous method of travel, you do feel quite thankful to Chao."
-                        "You lean over the edge and shout a few words to him"
-                        sze "\"I don't know if I could've done the rest without a heart attack\""
-                        sze "\"Thanks Chao, you are truly a great man\""
-                        cha "\"Awww thanks Arthur\""
-                        sze "\"Your heart is as big as you are\""
-                        cha "\"...\""
-                        cha "\"k\""
-                        $ cha.gain()
-                        jump english1top
+                        $ _englishstairs1rngthrow = renpy.random.randint(0, 6)
+                        if _englishstairs1rngthrow > 4:
+                            sze "\"Wait stop, let me down!!!!!\""
+                            "You get launched through the air, rapidly reaching the top floor of the stairs" with vpunch
+                            "However, you find yourself shooting past it"
+                            "You continue going upwards"
+                            "..."
+                            "You have already expelled your bowel and bladder contents"
+                            "..."
+                            "The air is becoming rather thin, making it less easy to constantly scream"
+                            "..."
+                            "You are unsure if you are starting to drop or still continuing into the infinite blue expanse"
+                            "..."
+                            "You close your eyes and give up on life"
+                            jump dead
+                        elif _englishstairs1rngthrow >2:
+                            sze "\"Wait stop, let me down!!!!!\""
+                            "You get launched through the air, rapidly reaching the top floor of the stairs" with vpunch
+                            "Despite the unusual and potentially dangerous method of travel, you do feel quite thankful to Chao."
+                            "You lean over the edge and shout a few words to him"
+                            sze "\"I don't know if I could've done the rest without a heart attack\""
+                            cha "\"Oops I didn't let you down\""
+                            sze "\"Thanks Chao, you are truly a great man\""
+                            cha "\"Awww thanks Arthur\""
+                            sze "\"Your heart is as big as you are\""
+                            cha "\"...\""
+                            cha "\"k\""
+                            $ cha.gain()
+                            jump english1top
+                        elif _englishstairs1rngthrow <= 2:
+                            "You get launched through the air, rapidly reaching the top floor of the stairs{nw}"
+                            "But Chao didn't throw hard enough"
+                            "Your fingers desperately grasp at, first, the metal railings, then, the concrete wall beneath it, then, anything at all"
+                            "But your flailing attempts, like your chances with Serena, slip from your failing hands"
+                            sze "\"Fuuuuuuuuuuuuuuucccckkk yooooooouuuuuuuuu chhaaaaaaaaaaaaoooooooo\""
+                            cha "\"Fuuuuuuuuuuuuuuucccckkk yooooooouuuuuuuuu toooooooooooooooooooooo\""
+                            rik "\"{i}He hit the ground, the sound was "SPLAT", his blood went spurting high{/i}\""
+                            rik "\"{i}His comrades, they were heard to say "A HELL OF A WAY TO DIE!"{/i}\""
+                            rik "\"{i}He lay there, rolling 'round in the welter of his gore,{/i}\""
+                            rik "\"{i}And he ain't gonna jump no more.{/i}\""
+                            jump dead
                     "\"thanks but nah\"":
                         sze "\"thanks for the offer\""
                         sze "\"but nah\""
@@ -185,7 +215,7 @@ label eng1ascension:
                                     "Chao stumbles back, holding his jaw"
                                     cha "\"You...\""
                                     "He jabs you a few times"
-                                    cha "\"お前はもう死んでいる\""
+                                    cha "\"Omae Wa Mou Shindeiru\""
                                     sze "\"{i}N-Nani{/i}?!\""
                                     "You explode"
                                     jump dead
@@ -206,7 +236,7 @@ label eng1ascension:
                                 cha "\"I think I should put you out of your misery\""
                                 sze "\"So you'll make me happy then?\""
                                 "He jabs you a few times"
-                                cha "\"お前はもう死んでいる\""
+                                cha "\"Omae Wa Mou Shindeiru\""
                                 sze "\"what?!\""
                                 "You explode"
                                 jump dead
@@ -315,5 +345,22 @@ label english1top:
     sze "On time"
     sze "Now who are my classmates?"
     "You aren't too familiar with a lot of the people"
+    "However there are some who you do recognise"
+    sze "Roy is pulling off fancy tricks with his yoyo, occasionally messing up"
+    sze "Andrew is talking to someone you remember from a while ago..."
+    sze "whatshisname?"
+    sze "crap"
+    sze "I think he's waving to me?"
+    sze "\"Hi...uh...?\""
+    menu:
+        "Stefan":
+            sze "\"Hi Stefan\""
+            dng "\"lol, when did you get a lisp?\""
+        "Steven":
+            sze "\"Hi Steven\""
+            dng "\"Hey Arthur\""
+        "Stevo":
+            sze "\"G'day Stevo\""
+            dng "\"lmao when did you get so ozzie?\""
     sze "\"Bullshittery at its finest\""
     jump mthext1day1

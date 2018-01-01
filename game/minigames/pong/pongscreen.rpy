@@ -101,5 +101,9 @@ init python:
             return "up"
         elif pressed[pygame.K_DOWN]:
             return "down"
+        elif pressed[pygame.K_LEFT]:
+            return "left"
+        elif pressed[pygame.K_RIGHT]:
+            return "right"
         else:
             return None

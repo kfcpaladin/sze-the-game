@@ -150,6 +150,7 @@
 │   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
 │   │   ├── auto-10-LT1.save
+│   │   ├── auto-1-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -235,6 +236,7 @@
 │       │   ├── 9 economics.rpy
 │       │   └── 9 economics.rpyc
 │       ├── dead.rpy
+│       ├── dead.rpyc
 │       ├── script.rpy
 │       └── script.rpyc
 ├── lib
@@ -1462,4 +1464,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1363 files
+99 directories, 1365 files

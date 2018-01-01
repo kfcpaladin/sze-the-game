@@ -15,9 +15,8 @@ python early:
         
         def predictCollision(self):
             # if ball is not moving horizontally, just match y-pos
-            if(self.ball.vel.x == 0) {
-                return self.ball.pos.y;
-            }
+            if(self.ball.vel.x == 0):
+                return self.ball.pos.y
             # equation variables
             m = self.ball.vel.y / self.ball.vel.x
             b = self.ball.pos.y - m*self.ball.pos.x

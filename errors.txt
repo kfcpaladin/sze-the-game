@@ -2,12 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/Day 1/7 english.rpy", line 117: end of line expected.
-    rik "\"{i}He hit the ground, the sound was "SPLAT", his blood went spurting high{/i}\""
-                                                ^
-
-File "game/story/Day 1/7 english.rpy", line 118: end of line expected.
-    rik "\"{i}His comrades, they were heard to say "A HELL OF A WAY TO DIE!"{/i}\""
-                                                    ^
+File "game/minigames/pong/PaddleBot.rpy", line 18: invalid syntax
+            if(self.ball.vel.x == 0) {
+                                      ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

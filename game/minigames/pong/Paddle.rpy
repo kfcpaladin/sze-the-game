@@ -4,7 +4,6 @@ python early:
             self.pos = pos
             self.vel = Vector(0, 0)
             self.speed = speed
-            self.player = player
             self.width = size[0]
             self.height = size[1]
             self.bounds = bounds
@@ -16,26 +15,19 @@ python early:
             # Top edge
             if self.pos.y - self.height/2 < self.bounds[1]:
                 self.pos.y = self.bounds[1] + self.height/2
+                self.vel.y = 0
             # Bottom edge
             if self.pos.y + self.height/2 > self.bounds[3]:
                 self.pos.y = self.bounds[3] - self.height/2
-            
-            if self.player == 1:
-                # For human
-                # Left edge
-                if self.pos.x - self.width/2 < self.bounds[0]:
-                    self.pos.x = self.bounds[0] + self.width/2
-                # Right edge
-                if self.pos.x + self.width/2 > self.bounds[2]/2:
-                    self.pos.x = self.bounds[2]/2 - self.width/2
-            else:
-                # for Bot
-                # Left edge
-                if self.pos.x - self.width/2 < self.bounds[2]/2:
-                    self.pos.x = self.bounds[2]/2 + self.width/2
-                # Right edge
-                if self.pos.x + self.width/2 > self.bounds[2]:
-                    self.pos.x = self.bounds[2] - self.width/2
+                self.vel.y = 0
+            # Left edge
+            if self.pos.x - self.width/2 < self.bounds[0]:
+                self.pos.x = self.bounds[0] + self.width/2
+                self.vel.x = 0
+            # Right edge
+            if self.pos.x + self.width/2 > self.bounds[2]:
+                self.pos.x = self.bounds[2] - self.width/2
+                self.vel.x = 0
 
         """
             Used to move the paddle

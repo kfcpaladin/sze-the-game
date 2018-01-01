@@ -150,9 +150,6 @@
 │   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
 │   │   ├── auto-10-LT1.save
-│   │   ├── auto-1-LT1.save
-│   │   ├── auto-2-LT1.save
-│   │   ├── auto-3-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -1466,4 +1463,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1367 files
+99 directories, 1364 files

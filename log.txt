@@ -1,4 +1,4 @@
-Sun Dec 24 20:44:26 2017
+Mon Jan  1 23:34:36 2018
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -7,342 +7,312 @@ Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
-Loading script took 0.20s
-Loading persistent took 0.06s
+Loading script took 0.45s
+Loading persistent took 0.11s
+
+File "game/story/Day 1/7 english.rpy", line 117: end of line expected.
+    rik "\"{i}He hit the ground, the sound was "SPLAT", his blood went spurting high{/i}\""
+                                                ^
+
+File "game/story/Day 1/7 english.rpy", line 118: end of line expected.
+    rik "\"{i}His comrades, they were heard to say "A HELL OF A WAY TO DIE!"{/i}\""
+                                                    ^
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
+Vendor: 'X.Org'
+Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
+Version: '3.0 Mesa 17.0.7'
+Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
+Extensions:
+    
+    GL_AMD_conservative_depth
+    GL_AMD_draw_buffers_blend
+    GL_AMD_performance_monitor
+    GL_AMD_pinned_memory
+    GL_AMD_seamless_cubemap_per_texture
+    GL_AMD_shader_stencil_export
+    GL_AMD_shader_trinary_minmax
+    GL_ANGLE_texture_compression_dxt3
+    GL_ANGLE_texture_compression_dxt5
+    GL_APPLE_packed_pixels
+    GL_APPLE_vertex_array_object
+    GL_ARB_ES2_compatibility
+    GL_ARB_ES3_compatibility
+    GL_ARB_arrays_of_arrays
+    GL_ARB_base_instance
+    GL_ARB_blend_func_extended
+    GL_ARB_buffer_storage
+    GL_ARB_clear_buffer_object
+    GL_ARB_clear_texture
+    GL_ARB_clip_control
+    GL_ARB_color_buffer_float
+    GL_ARB_compressed_texture_pixel_storage
+    GL_ARB_compute_shader
+    GL_ARB_compute_variable_group_size
+    GL_ARB_conditional_render_inverted
+    GL_ARB_conservative_depth
+    GL_ARB_copy_buffer
+    GL_ARB_copy_image
+    GL_ARB_cull_distance
+    GL_ARB_debug_output
+    GL_ARB_depth_buffer_float
+    GL_ARB_depth_clamp
+    GL_ARB_depth_texture
+    GL_ARB_derivative_control
+    GL_ARB_draw_buffers
+    GL_ARB_draw_buffers_blend
+    GL_ARB_draw_elements_base_vertex
+    GL_ARB_draw_instanced
+    GL_ARB_explicit_attrib_location
+    GL_ARB_explicit_uniform_location
+    GL_ARB_fragment_coord_conventions
+    GL_ARB_fragment_program
+    GL_ARB_fragment_program_shadow
+    GL_ARB_fragment_shader
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_framebuffer_object
+    GL_ARB_framebuffer_sRGB
+    GL_ARB_get_program_binary
+    GL_ARB_get_texture_sub_image
+    GL_ARB_half_float_pixel
+    GL_ARB_half_float_vertex
+    GL_ARB_instanced_arrays
+    GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
+    GL_ARB_invalidate_subdata
+    GL_ARB_map_buffer_alignment
+    GL_ARB_map_buffer_range
+    GL_ARB_multi_bind
+    GL_ARB_multisample
+    GL_ARB_multitexture
+    GL_ARB_occlusion_query
+    GL_ARB_occlusion_query2
+    GL_ARB_pipeline_statistics_query
+    GL_ARB_pixel_buffer_object
+    GL_ARB_point_parameters
+    GL_ARB_point_sprite
+    GL_ARB_program_interface_query
+    GL_ARB_provoking_vertex
+    GL_ARB_query_buffer_object
+    GL_ARB_robust_buffer_access_behavior
+    GL_ARB_robustness
+    GL_ARB_sample_shading
+    GL_ARB_sampler_objects
+    GL_ARB_seamless_cube_map
+    GL_ARB_seamless_cubemap_per_texture
+    GL_ARB_separate_shader_objects
+    GL_ARB_shader_atomic_counter_ops
+    GL_ARB_shader_atomic_counters
+    GL_ARB_shader_bit_encoding
+    GL_ARB_shader_image_load_store
+    GL_ARB_shader_image_size
+    GL_ARB_shader_objects
+    GL_ARB_shader_precision
+    GL_ARB_shader_stencil_export
+    GL_ARB_shader_storage_buffer_object
+    GL_ARB_shader_texture_image_samples
+    GL_ARB_shader_texture_lod
+    GL_ARB_shading_language_100
+    GL_ARB_shading_language_420pack
+    GL_ARB_shading_language_packing
+    GL_ARB_shadow
+    GL_ARB_stencil_texturing
+    GL_ARB_sync
+    GL_ARB_texture_barrier
+    GL_ARB_texture_border_clamp
+    GL_ARB_texture_compression
+    GL_ARB_texture_compression_bptc
+    GL_ARB_texture_compression_rgtc
+    GL_ARB_texture_cube_map
+    GL_ARB_texture_cube_map_array
+    GL_ARB_texture_env_add
+    GL_ARB_texture_env_combine
+    GL_ARB_texture_env_crossbar
+    GL_ARB_texture_env_dot3
+    GL_ARB_texture_float
+    GL_ARB_texture_gather
+    GL_ARB_texture_mirror_clamp_to_edge
+    GL_ARB_texture_mirrored_repeat
+    GL_ARB_texture_multisample
+    GL_ARB_texture_non_power_of_two
+    GL_ARB_texture_query_levels
+    GL_ARB_texture_query_lod
+    GL_ARB_texture_rectangle
+    GL_ARB_texture_rg
+    GL_ARB_texture_rgb10_a2ui
+    GL_ARB_texture_stencil8
+    GL_ARB_texture_storage
+    GL_ARB_texture_storage_multisample
+    GL_ARB_texture_swizzle
+    GL_ARB_texture_view
+    GL_ARB_timer_query
+    GL_ARB_transform_feedback2
+    GL_ARB_transform_feedback3
+    GL_ARB_transform_feedback_instanced
+    GL_ARB_transpose_matrix
+    GL_ARB_uniform_buffer_object
+    GL_ARB_vertex_array_bgra
+    GL_ARB_vertex_array_object
+    GL_ARB_vertex_attrib_binding
+    GL_ARB_vertex_buffer_object
+    GL_ARB_vertex_program
+    GL_ARB_vertex_shader
+    GL_ARB_vertex_type_10f_11f_11f_rev
+    GL_ARB_vertex_type_2_10_10_10_rev
+    GL_ARB_window_pos
+    GL_ATI_blend_equation_separate
+    GL_ATI_draw_buffers
+    GL_ATI_fragment_shader
+    GL_ATI_meminfo
+    GL_ATI_separate_stencil
+    GL_ATI_texture_compression_3dc
+    GL_ATI_texture_env_combine3
+    GL_ATI_texture_float
+    GL_ATI_texture_mirror_once
+    GL_EXT_abgr
+    GL_EXT_bgra
+    GL_EXT_blend_color
+    GL_EXT_blend_equation_separate
+    GL_EXT_blend_func_separate
+    GL_EXT_blend_minmax
+    GL_EXT_blend_subtract
+    GL_EXT_compiled_vertex_array
+    GL_EXT_copy_texture
+    GL_EXT_depth_bounds_test
+    GL_EXT_draw_buffers2
+    GL_EXT_draw_instanced
+    GL_EXT_draw_range_elements
+    GL_EXT_fog_coord
+    GL_EXT_framebuffer_blit
+    GL_EXT_framebuffer_multisample
+    GL_EXT_framebuffer_multisample_blit_scaled
+    GL_EXT_framebuffer_object
+    GL_EXT_framebuffer_sRGB
+    GL_EXT_gpu_program_parameters
+    GL_EXT_multi_draw_arrays
+    GL_EXT_packed_depth_stencil
+    GL_EXT_packed_float
+    GL_EXT_packed_pixels
+    GL_EXT_pixel_buffer_object
+    GL_EXT_point_parameters
+    GL_EXT_polygon_offset
+    GL_EXT_polygon_offset_clamp
+    GL_EXT_provoking_vertex
+    GL_EXT_rescale_normal
+    GL_EXT_secondary_color
+    GL_EXT_separate_specular_color
+    GL_EXT_shader_integer_mix
+    GL_EXT_shadow_funcs
+    GL_EXT_stencil_two_side
+    GL_EXT_stencil_wrap
+    GL_EXT_subtexture
+    GL_EXT_texture
+    GL_EXT_texture3D
+    GL_EXT_texture_array
+    GL_EXT_texture_compression_dxt1
+    GL_EXT_texture_compression_latc
+    GL_EXT_texture_compression_rgtc
+    GL_EXT_texture_compression_s3tc
+    GL_EXT_texture_cube_map
+    GL_EXT_texture_edge_clamp
+    GL_EXT_texture_env_add
+    GL_EXT_texture_env_combine
+    GL_EXT_texture_env_dot3
+    GL_EXT_texture_filter_anisotropic
+    GL_EXT_texture_integer
+    GL_EXT_texture_lod_bias
+    GL_EXT_texture_mirror_clamp
+    GL_EXT_texture_object
+    GL_EXT_texture_rectangle
+    GL_EXT_texture_sRGB
+    GL_EXT_texture_sRGB_decode
+    GL_EXT_texture_shared_exponent
+    GL_EXT_texture_snorm
+    GL_EXT_texture_swizzle
+    GL_EXT_timer_query
+    GL_EXT_transform_feedback
+    GL_EXT_vertex_array
+    GL_EXT_vertex_array_bgra
+    GL_IBM_multimode_draw_arrays
+    GL_IBM_rasterpos_clip
+    GL_IBM_texture_mirrored_repeat
+    GL_INGR_blend_func_separate
+    GL_KHR_context_flush_control
+    GL_KHR_debug
+    GL_KHR_robust_buffer_access_behavior
+    GL_KHR_robustness
+    GL_MESA_pack_invert
+    GL_MESA_shader_integer_functions
+    GL_MESA_texture_signed_rgba
+    GL_MESA_window_pos
+    GL_NVX_gpu_memory_info
+    GL_NV_blend_square
+    GL_NV_conditional_render
+    GL_NV_depth_clamp
+    GL_NV_fog_distance
+    GL_NV_light_max_exponent
+    GL_NV_packed_depth_stencil
+    GL_NV_primitive_restart
+    GL_NV_texgen_reflection
+    GL_NV_texture_barrier
+    GL_NV_texture_env_combine4
+    GL_NV_texture_rectangle
+    GL_NV_vdpau_interop
+    GL_OES_EGL_image
+    GL_OES_read_format
+    GL_S3_s3tc
+    GL_SGIS_generate_mipmap
+    GL_SGIS_texture_border_clamp
+    GL_SGIS_texture_edge_clamp
+    GL_SGIS_texture_lod
+    GL_SUN_multi_draw_arrays
+Number of texture units: 8
+Using shader environment.
+Using copy RTT.
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Total time until interface ready: 1.0029540062s
+The window was minimized.
+The window was restored.
+The window was minimized.
+The window was restored.
+Resetting cache.
+Bootstrap to the start of init.init took 180.50s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.45s
+Loading persistent took 0.11s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
 Running init code took 0.15s
-Loading analysis data took 0.24s
+Loading analysis data took 0.25s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 0.06s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.18s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.01s
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-Vendor: 'X.Org'
-Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
-Version: '3.0 Mesa 17.0.7'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
-Extensions:
-    
-    GL_AMD_conservative_depth
-    GL_AMD_draw_buffers_blend
-    GL_AMD_performance_monitor
-    GL_AMD_pinned_memory
-    GL_AMD_seamless_cubemap_per_texture
-    GL_AMD_shader_stencil_export
-    GL_AMD_shader_trinary_minmax
-    GL_ANGLE_texture_compression_dxt3
-    GL_ANGLE_texture_compression_dxt5
-    GL_APPLE_packed_pixels
-    GL_APPLE_vertex_array_object
-    GL_ARB_ES2_compatibility
-    GL_ARB_ES3_compatibility
-    GL_ARB_arrays_of_arrays
-    GL_ARB_base_instance
-    GL_ARB_blend_func_extended
-    GL_ARB_buffer_storage
-    GL_ARB_clear_buffer_object
-    GL_ARB_clear_texture
-    GL_ARB_clip_control
-    GL_ARB_color_buffer_float
-    GL_ARB_compressed_texture_pixel_storage
-    GL_ARB_compute_shader
-    GL_ARB_compute_variable_group_size
-    GL_ARB_conditional_render_inverted
-    GL_ARB_conservative_depth
-    GL_ARB_copy_buffer
-    GL_ARB_copy_image
-    GL_ARB_cull_distance
-    GL_ARB_debug_output
-    GL_ARB_depth_buffer_float
-    GL_ARB_depth_clamp
-    GL_ARB_depth_texture
-    GL_ARB_derivative_control
-    GL_ARB_draw_buffers
-    GL_ARB_draw_buffers_blend
-    GL_ARB_draw_elements_base_vertex
-    GL_ARB_draw_instanced
-    GL_ARB_explicit_attrib_location
-    GL_ARB_explicit_uniform_location
-    GL_ARB_fragment_coord_conventions
-    GL_ARB_fragment_program
-    GL_ARB_fragment_program_shadow
-    GL_ARB_fragment_shader
-    GL_ARB_framebuffer_no_attachments
-    GL_ARB_framebuffer_object
-    GL_ARB_framebuffer_sRGB
-    GL_ARB_get_program_binary
-    GL_ARB_get_texture_sub_image
-    GL_ARB_half_float_pixel
-    GL_ARB_half_float_vertex
-    GL_ARB_instanced_arrays
-    GL_ARB_internalformat_query
-    GL_ARB_internalformat_query2
-    GL_ARB_invalidate_subdata
-    GL_ARB_map_buffer_alignment
-    GL_ARB_map_buffer_range
-    GL_ARB_multi_bind
-    GL_ARB_multisample
-    GL_ARB_multitexture
-    GL_ARB_occlusion_query
-    GL_ARB_occlusion_query2
-    GL_ARB_pipeline_statistics_query
-    GL_ARB_pixel_buffer_object
-    GL_ARB_point_parameters
-    GL_ARB_point_sprite
-    GL_ARB_program_interface_query
-    GL_ARB_provoking_vertex
-    GL_ARB_query_buffer_object
-    GL_ARB_robust_buffer_access_behavior
-    GL_ARB_robustness
-    GL_ARB_sample_shading
-    GL_ARB_sampler_objects
-    GL_ARB_seamless_cube_map
-    GL_ARB_seamless_cubemap_per_texture
-    GL_ARB_separate_shader_objects
-    GL_ARB_shader_atomic_counter_ops
-    GL_ARB_shader_atomic_counters
-    GL_ARB_shader_bit_encoding
-    GL_ARB_shader_image_load_store
-    GL_ARB_shader_image_size
-    GL_ARB_shader_objects
-    GL_ARB_shader_precision
-    GL_ARB_shader_stencil_export
-    GL_ARB_shader_storage_buffer_object
-    GL_ARB_shader_texture_image_samples
-    GL_ARB_shader_texture_lod
-    GL_ARB_shading_language_100
-    GL_ARB_shading_language_420pack
-    GL_ARB_shading_language_packing
-    GL_ARB_shadow
-    GL_ARB_stencil_texturing
-    GL_ARB_sync
-    GL_ARB_texture_barrier
-    GL_ARB_texture_border_clamp
-    GL_ARB_texture_compression
-    GL_ARB_texture_compression_bptc
-    GL_ARB_texture_compression_rgtc
-    GL_ARB_texture_cube_map
-    GL_ARB_texture_cube_map_array
-    GL_ARB_texture_env_add
-    GL_ARB_texture_env_combine
-    GL_ARB_texture_env_crossbar
-    GL_ARB_texture_env_dot3
-    GL_ARB_texture_float
-    GL_ARB_texture_gather
-    GL_ARB_texture_mirror_clamp_to_edge
-    GL_ARB_texture_mirrored_repeat
-    GL_ARB_texture_multisample
-    GL_ARB_texture_non_power_of_two
-    GL_ARB_texture_query_levels
-    GL_ARB_texture_query_lod
-    GL_ARB_texture_rectangle
-    GL_ARB_texture_rg
-    GL_ARB_texture_rgb10_a2ui
-    GL_ARB_texture_stencil8
-    GL_ARB_texture_storage
-    GL_ARB_texture_storage_multisample
-    GL_ARB_texture_swizzle
-    GL_ARB_texture_view
-    GL_ARB_timer_query
-    GL_ARB_transform_feedback2
-    GL_ARB_transform_feedback3
-    GL_ARB_transform_feedback_instanced
-    GL_ARB_transpose_matrix
-    GL_ARB_uniform_buffer_object
-    GL_ARB_vertex_array_bgra
-    GL_ARB_vertex_array_object
-    GL_ARB_vertex_attrib_binding
-    GL_ARB_vertex_buffer_object
-    GL_ARB_vertex_program
-    GL_ARB_vertex_shader
-    GL_ARB_vertex_type_10f_11f_11f_rev
-    GL_ARB_vertex_type_2_10_10_10_rev
-    GL_ARB_window_pos
-    GL_ATI_blend_equation_separate
-    GL_ATI_draw_buffers
-    GL_ATI_fragment_shader
-    GL_ATI_meminfo
-    GL_ATI_separate_stencil
-    GL_ATI_texture_compression_3dc
-    GL_ATI_texture_env_combine3
-    GL_ATI_texture_float
-    GL_ATI_texture_mirror_once
-    GL_EXT_abgr
-    GL_EXT_bgra
-    GL_EXT_blend_color
-    GL_EXT_blend_equation_separate
-    GL_EXT_blend_func_separate
-    GL_EXT_blend_minmax
-    GL_EXT_blend_subtract
-    GL_EXT_compiled_vertex_array
-    GL_EXT_copy_texture
-    GL_EXT_depth_bounds_test
-    GL_EXT_draw_buffers2
-    GL_EXT_draw_instanced
-    GL_EXT_draw_range_elements
-    GL_EXT_fog_coord
-    GL_EXT_framebuffer_blit
-    GL_EXT_framebuffer_multisample
-    GL_EXT_framebuffer_multisample_blit_scaled
-    GL_EXT_framebuffer_object
-    GL_EXT_framebuffer_sRGB
-    GL_EXT_gpu_program_parameters
-    GL_EXT_multi_draw_arrays
-    GL_EXT_packed_depth_stencil
-    GL_EXT_packed_float
-    GL_EXT_packed_pixels
-    GL_EXT_pixel_buffer_object
-    GL_EXT_point_parameters
-    GL_EXT_polygon_offset
-    GL_EXT_polygon_offset_clamp
-    GL_EXT_provoking_vertex
-    GL_EXT_rescale_normal
-    GL_EXT_secondary_color
-    GL_EXT_separate_specular_color
-    GL_EXT_shader_integer_mix
-    GL_EXT_shadow_funcs
-    GL_EXT_stencil_two_side
-    GL_EXT_stencil_wrap
-    GL_EXT_subtexture
-    GL_EXT_texture
-    GL_EXT_texture3D
-    GL_EXT_texture_array
-    GL_EXT_texture_compression_dxt1
-    GL_EXT_texture_compression_latc
-    GL_EXT_texture_compression_rgtc
-    GL_EXT_texture_compression_s3tc
-    GL_EXT_texture_cube_map
-    GL_EXT_texture_edge_clamp
-    GL_EXT_texture_env_add
-    GL_EXT_texture_env_combine
-    GL_EXT_texture_env_dot3
-    GL_EXT_texture_filter_anisotropic
-    GL_EXT_texture_integer
-    GL_EXT_texture_lod_bias
-    GL_EXT_texture_mirror_clamp
-    GL_EXT_texture_object
-    GL_EXT_texture_rectangle
-    GL_EXT_texture_sRGB
-    GL_EXT_texture_sRGB_decode
-    GL_EXT_texture_shared_exponent
-    GL_EXT_texture_snorm
-    GL_EXT_texture_swizzle
-    GL_EXT_timer_query
-    GL_EXT_transform_feedback
-    GL_EXT_vertex_array
-    GL_EXT_vertex_array_bgra
-    GL_IBM_multimode_draw_arrays
-    GL_IBM_rasterpos_clip
-    GL_IBM_texture_mirrored_repeat
-    GL_INGR_blend_func_separate
-    GL_KHR_context_flush_control
-    GL_KHR_debug
-    GL_KHR_robust_buffer_access_behavior
-    GL_KHR_robustness
-    GL_MESA_pack_invert
-    GL_MESA_shader_integer_functions
-    GL_MESA_texture_signed_rgba
-    GL_MESA_window_pos
-    GL_NVX_gpu_memory_info
-    GL_NV_blend_square
-    GL_NV_conditional_render
-    GL_NV_depth_clamp
-    GL_NV_fog_distance
-    GL_NV_light_max_exponent
-    GL_NV_packed_depth_stencil
-    GL_NV_primitive_restart
-    GL_NV_texgen_reflection
-    GL_NV_texture_barrier
-    GL_NV_texture_env_combine4
-    GL_NV_texture_rectangle
-    GL_NV_vdpau_interop
-    GL_OES_EGL_image
-    GL_OES_read_format
-    GL_S3_s3tc
-    GL_SGIS_generate_mipmap
-    GL_SGIS_texture_border_clamp
-    GL_SGIS_texture_edge_clamp
-    GL_SGIS_texture_lod
-    GL_SUN_multi_draw_arrays
-Number of texture units: 8
-Using shader environment.
-Using copy RTT.
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Total time until interface ready: 1.34545898438s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.021437 seconds.
-- Frame drawn at 0.032077 seconds.
-- Frame drawn at 0.048958 seconds.
-- Frame drawn at 0.065766 seconds.
-- 0.065766 seconds to render 5 frames.
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1918, 1011) drawable=(1918, 1011)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1920, 1013) drawable=(1920, 1013)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-The window was minimized.
-The window was restored.
-Resetting cache.
-Bootstrap to the start of init.init took 286.42s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.24s
-Loading persistent took 0.07s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-Running init code took 0.09s
-Loading analysis data took 0.23s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.18s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.98s
+Analyze screens took 0.02s
+Save screen analysis took 0.10s
+Prepare screens took 0.09s
+Save pyanalysis. took 1.07s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -350,7 +320,7 @@ Interface start took 0.01s
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
+Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
 Vendor: 'X.Org'
 Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
 Version: '3.0 Mesa 17.0.7'
@@ -610,1496 +580,117 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 288.594428062s
+Total time until interface ready: 183.015487909s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.015868 seconds.
-- Frame drawn at 0.034450 seconds.
-- Frame drawn at 0.053578 seconds.
-- Frame drawn at 0.073584 seconds.
-- 0.073584 seconds to render 5 frames.
-Resetting cache.
-Bootstrap to the start of init.init took 324.24s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.26s
-Loading persistent took 0.06s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-Running init code took 0.10s
-Loading analysis data took 0.23s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.01s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.18s
-Prepare screens took 0.10s
-Save pyanalysis. took 0.98s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.01s
+- Frame drawn at 0.018710 seconds.
+- Frame drawn at 0.030850 seconds.
+- Frame drawn at 0.047700 seconds.
+- Frame drawn at 0.068362 seconds.
+- 0.068362 seconds to render 5 frames.
 
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-Vendor: 'X.Org'
-Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
-Version: '3.0 Mesa 17.0.7'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
-Extensions:
-    
-    GL_AMD_conservative_depth
-    GL_AMD_draw_buffers_blend
-    GL_AMD_performance_monitor
-    GL_AMD_pinned_memory
-    GL_AMD_seamless_cubemap_per_texture
-    GL_AMD_shader_stencil_export
-    GL_AMD_shader_trinary_minmax
-    GL_ANGLE_texture_compression_dxt3
-    GL_ANGLE_texture_compression_dxt5
-    GL_APPLE_packed_pixels
-    GL_APPLE_vertex_array_object
-    GL_ARB_ES2_compatibility
-    GL_ARB_ES3_compatibility
-    GL_ARB_arrays_of_arrays
-    GL_ARB_base_instance
-    GL_ARB_blend_func_extended
-    GL_ARB_buffer_storage
-    GL_ARB_clear_buffer_object
-    GL_ARB_clear_texture
-    GL_ARB_clip_control
-    GL_ARB_color_buffer_float
-    GL_ARB_compressed_texture_pixel_storage
-    GL_ARB_compute_shader
-    GL_ARB_compute_variable_group_size
-    GL_ARB_conditional_render_inverted
-    GL_ARB_conservative_depth
-    GL_ARB_copy_buffer
-    GL_ARB_copy_image
-    GL_ARB_cull_distance
-    GL_ARB_debug_output
-    GL_ARB_depth_buffer_float
-    GL_ARB_depth_clamp
-    GL_ARB_depth_texture
-    GL_ARB_derivative_control
-    GL_ARB_draw_buffers
-    GL_ARB_draw_buffers_blend
-    GL_ARB_draw_elements_base_vertex
-    GL_ARB_draw_instanced
-    GL_ARB_explicit_attrib_location
-    GL_ARB_explicit_uniform_location
-    GL_ARB_fragment_coord_conventions
-    GL_ARB_fragment_program
-    GL_ARB_fragment_program_shadow
-    GL_ARB_fragment_shader
-    GL_ARB_framebuffer_no_attachments
-    GL_ARB_framebuffer_object
-    GL_ARB_framebuffer_sRGB
-    GL_ARB_get_program_binary
-    GL_ARB_get_texture_sub_image
-    GL_ARB_half_float_pixel
-    GL_ARB_half_float_vertex
-    GL_ARB_instanced_arrays
-    GL_ARB_internalformat_query
-    GL_ARB_internalformat_query2
-    GL_ARB_invalidate_subdata
-    GL_ARB_map_buffer_alignment
-    GL_ARB_map_buffer_range
-    GL_ARB_multi_bind
-    GL_ARB_multisample
-    GL_ARB_multitexture
-    GL_ARB_occlusion_query
-    GL_ARB_occlusion_query2
-    GL_ARB_pipeline_statistics_query
-    GL_ARB_pixel_buffer_object
-    GL_ARB_point_parameters
-    GL_ARB_point_sprite
-    GL_ARB_program_interface_query
-    GL_ARB_provoking_vertex
-    GL_ARB_query_buffer_object
-    GL_ARB_robust_buffer_access_behavior
-    GL_ARB_robustness
-    GL_ARB_sample_shading
-    GL_ARB_sampler_objects
-    GL_ARB_seamless_cube_map
-    GL_ARB_seamless_cubemap_per_texture
-    GL_ARB_separate_shader_objects
-    GL_ARB_shader_atomic_counter_ops
-    GL_ARB_shader_atomic_counters
-    GL_ARB_shader_bit_encoding
-    GL_ARB_shader_image_load_store
-    GL_ARB_shader_image_size
-    GL_ARB_shader_objects
-    GL_ARB_shader_precision
-    GL_ARB_shader_stencil_export
-    GL_ARB_shader_storage_buffer_object
-    GL_ARB_shader_texture_image_samples
-    GL_ARB_shader_texture_lod
-    GL_ARB_shading_language_100
-    GL_ARB_shading_language_420pack
-    GL_ARB_shading_language_packing
-    GL_ARB_shadow
-    GL_ARB_stencil_texturing
-    GL_ARB_sync
-    GL_ARB_texture_barrier
-    GL_ARB_texture_border_clamp
-    GL_ARB_texture_compression
-    GL_ARB_texture_compression_bptc
-    GL_ARB_texture_compression_rgtc
-    GL_ARB_texture_cube_map
-    GL_ARB_texture_cube_map_array
-    GL_ARB_texture_env_add
-    GL_ARB_texture_env_combine
-    GL_ARB_texture_env_crossbar
-    GL_ARB_texture_env_dot3
-    GL_ARB_texture_float
-    GL_ARB_texture_gather
-    GL_ARB_texture_mirror_clamp_to_edge
-    GL_ARB_texture_mirrored_repeat
-    GL_ARB_texture_multisample
-    GL_ARB_texture_non_power_of_two
-    GL_ARB_texture_query_levels
-    GL_ARB_texture_query_lod
-    GL_ARB_texture_rectangle
-    GL_ARB_texture_rg
-    GL_ARB_texture_rgb10_a2ui
-    GL_ARB_texture_stencil8
-    GL_ARB_texture_storage
-    GL_ARB_texture_storage_multisample
-    GL_ARB_texture_swizzle
-    GL_ARB_texture_view
-    GL_ARB_timer_query
-    GL_ARB_transform_feedback2
-    GL_ARB_transform_feedback3
-    GL_ARB_transform_feedback_instanced
-    GL_ARB_transpose_matrix
-    GL_ARB_uniform_buffer_object
-    GL_ARB_vertex_array_bgra
-    GL_ARB_vertex_array_object
-    GL_ARB_vertex_attrib_binding
-    GL_ARB_vertex_buffer_object
-    GL_ARB_vertex_program
-    GL_ARB_vertex_shader
-    GL_ARB_vertex_type_10f_11f_11f_rev
-    GL_ARB_vertex_type_2_10_10_10_rev
-    GL_ARB_window_pos
-    GL_ATI_blend_equation_separate
-    GL_ATI_draw_buffers
-    GL_ATI_fragment_shader
-    GL_ATI_meminfo
-    GL_ATI_separate_stencil
-    GL_ATI_texture_compression_3dc
-    GL_ATI_texture_env_combine3
-    GL_ATI_texture_float
-    GL_ATI_texture_mirror_once
-    GL_EXT_abgr
-    GL_EXT_bgra
-    GL_EXT_blend_color
-    GL_EXT_blend_equation_separate
-    GL_EXT_blend_func_separate
-    GL_EXT_blend_minmax
-    GL_EXT_blend_subtract
-    GL_EXT_compiled_vertex_array
-    GL_EXT_copy_texture
-    GL_EXT_depth_bounds_test
-    GL_EXT_draw_buffers2
-    GL_EXT_draw_instanced
-    GL_EXT_draw_range_elements
-    GL_EXT_fog_coord
-    GL_EXT_framebuffer_blit
-    GL_EXT_framebuffer_multisample
-    GL_EXT_framebuffer_multisample_blit_scaled
-    GL_EXT_framebuffer_object
-    GL_EXT_framebuffer_sRGB
-    GL_EXT_gpu_program_parameters
-    GL_EXT_multi_draw_arrays
-    GL_EXT_packed_depth_stencil
-    GL_EXT_packed_float
-    GL_EXT_packed_pixels
-    GL_EXT_pixel_buffer_object
-    GL_EXT_point_parameters
-    GL_EXT_polygon_offset
-    GL_EXT_polygon_offset_clamp
-    GL_EXT_provoking_vertex
-    GL_EXT_rescale_normal
-    GL_EXT_secondary_color
-    GL_EXT_separate_specular_color
-    GL_EXT_shader_integer_mix
-    GL_EXT_shadow_funcs
-    GL_EXT_stencil_two_side
-    GL_EXT_stencil_wrap
-    GL_EXT_subtexture
-    GL_EXT_texture
-    GL_EXT_texture3D
-    GL_EXT_texture_array
-    GL_EXT_texture_compression_dxt1
-    GL_EXT_texture_compression_latc
-    GL_EXT_texture_compression_rgtc
-    GL_EXT_texture_compression_s3tc
-    GL_EXT_texture_cube_map
-    GL_EXT_texture_edge_clamp
-    GL_EXT_texture_env_add
-    GL_EXT_texture_env_combine
-    GL_EXT_texture_env_dot3
-    GL_EXT_texture_filter_anisotropic
-    GL_EXT_texture_integer
-    GL_EXT_texture_lod_bias
-    GL_EXT_texture_mirror_clamp
-    GL_EXT_texture_object
-    GL_EXT_texture_rectangle
-    GL_EXT_texture_sRGB
-    GL_EXT_texture_sRGB_decode
-    GL_EXT_texture_shared_exponent
-    GL_EXT_texture_snorm
-    GL_EXT_texture_swizzle
-    GL_EXT_timer_query
-    GL_EXT_transform_feedback
-    GL_EXT_vertex_array
-    GL_EXT_vertex_array_bgra
-    GL_IBM_multimode_draw_arrays
-    GL_IBM_rasterpos_clip
-    GL_IBM_texture_mirrored_repeat
-    GL_INGR_blend_func_separate
-    GL_KHR_context_flush_control
-    GL_KHR_debug
-    GL_KHR_robust_buffer_access_behavior
-    GL_KHR_robustness
-    GL_MESA_pack_invert
-    GL_MESA_shader_integer_functions
-    GL_MESA_texture_signed_rgba
-    GL_MESA_window_pos
-    GL_NVX_gpu_memory_info
-    GL_NV_blend_square
-    GL_NV_conditional_render
-    GL_NV_depth_clamp
-    GL_NV_fog_distance
-    GL_NV_light_max_exponent
-    GL_NV_packed_depth_stencil
-    GL_NV_primitive_restart
-    GL_NV_texgen_reflection
-    GL_NV_texture_barrier
-    GL_NV_texture_env_combine4
-    GL_NV_texture_rectangle
-    GL_NV_vdpau_interop
-    GL_OES_EGL_image
-    GL_OES_read_format
-    GL_S3_s3tc
-    GL_SGIS_generate_mipmap
-    GL_SGIS_texture_border_clamp
-    GL_SGIS_texture_edge_clamp
-    GL_SGIS_texture_lod
-    GL_SUN_multi_draw_arrays
-Number of texture units: 8
-Using shader environment.
-Using copy RTT.
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Total time until interface ready: 326.453145027s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016493 seconds.
-- Frame drawn at 0.032661 seconds.
-- Frame drawn at 0.048962 seconds.
-- Frame drawn at 0.065414 seconds.
-- 0.065414 seconds to render 5 frames.
-The window was minimized.
-The window was restored.
-Resetting cache.
-Bootstrap to the start of init.init took 470.73s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.03s
-Loading script took 0.26s
-Loading persistent took 0.06s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-Running init code took 0.10s
-Loading analysis data took 0.30s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.01s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.11s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.99s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.01s
+Full traceback:
+  File "game/story/script.rpy", line 11, in script call
+    pause
+  File "game/minigames/pong/pongscreen.rpy", line 4, in script
+    call screen pong(**options)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
+    self.call("execute")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
+    scene_lists.replace_transient()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
+    self.remove(layer, tag)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
+    self.hide_or_replace(layer, remove_index, "hide")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
+    d = oldsle.displayable._hide(now - st, now - at, prefix)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
+    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
+  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
+    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
+  File "game/minigames/pong/pongscreen.rpy", line 87, in execute
+    $ rightPaddleBot.movePaddle()
+  File "game/minigames/pong/pongscreen.rpy", line 87, in <module>
+    $ rightPaddleBot.movePaddle()
+  File "game/minigames/pong/PaddleBot.rpy", line 51, in movePaddle
+    y = self.predictCollision()
+  File "game/minigames/pong/PaddleBot.rpy", line 18, in predictCollision
+    m = self.ball.vel.y / self.ball.vel.x
+ZeroDivisionError: integer division or modulo by zero
 
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-Vendor: 'X.Org'
-Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
-Version: '3.0 Mesa 17.0.7'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
-Extensions:
-    
-    GL_AMD_conservative_depth
-    GL_AMD_draw_buffers_blend
-    GL_AMD_performance_monitor
-    GL_AMD_pinned_memory
-    GL_AMD_seamless_cubemap_per_texture
-    GL_AMD_shader_stencil_export
-    GL_AMD_shader_trinary_minmax
-    GL_ANGLE_texture_compression_dxt3
-    GL_ANGLE_texture_compression_dxt5
-    GL_APPLE_packed_pixels
-    GL_APPLE_vertex_array_object
-    GL_ARB_ES2_compatibility
-    GL_ARB_ES3_compatibility
-    GL_ARB_arrays_of_arrays
-    GL_ARB_base_instance
-    GL_ARB_blend_func_extended
-    GL_ARB_buffer_storage
-    GL_ARB_clear_buffer_object
-    GL_ARB_clear_texture
-    GL_ARB_clip_control
-    GL_ARB_color_buffer_float
-    GL_ARB_compressed_texture_pixel_storage
-    GL_ARB_compute_shader
-    GL_ARB_compute_variable_group_size
-    GL_ARB_conditional_render_inverted
-    GL_ARB_conservative_depth
-    GL_ARB_copy_buffer
-    GL_ARB_copy_image
-    GL_ARB_cull_distance
-    GL_ARB_debug_output
-    GL_ARB_depth_buffer_float
-    GL_ARB_depth_clamp
-    GL_ARB_depth_texture
-    GL_ARB_derivative_control
-    GL_ARB_draw_buffers
-    GL_ARB_draw_buffers_blend
-    GL_ARB_draw_elements_base_vertex
-    GL_ARB_draw_instanced
-    GL_ARB_explicit_attrib_location
-    GL_ARB_explicit_uniform_location
-    GL_ARB_fragment_coord_conventions
-    GL_ARB_fragment_program
-    GL_ARB_fragment_program_shadow
-    GL_ARB_fragment_shader
-    GL_ARB_framebuffer_no_attachments
-    GL_ARB_framebuffer_object
-    GL_ARB_framebuffer_sRGB
-    GL_ARB_get_program_binary
-    GL_ARB_get_texture_sub_image
-    GL_ARB_half_float_pixel
-    GL_ARB_half_float_vertex
-    GL_ARB_instanced_arrays
-    GL_ARB_internalformat_query
-    GL_ARB_internalformat_query2
-    GL_ARB_invalidate_subdata
-    GL_ARB_map_buffer_alignment
-    GL_ARB_map_buffer_range
-    GL_ARB_multi_bind
-    GL_ARB_multisample
-    GL_ARB_multitexture
-    GL_ARB_occlusion_query
-    GL_ARB_occlusion_query2
-    GL_ARB_pipeline_statistics_query
-    GL_ARB_pixel_buffer_object
-    GL_ARB_point_parameters
-    GL_ARB_point_sprite
-    GL_ARB_program_interface_query
-    GL_ARB_provoking_vertex
-    GL_ARB_query_buffer_object
-    GL_ARB_robust_buffer_access_behavior
-    GL_ARB_robustness
-    GL_ARB_sample_shading
-    GL_ARB_sampler_objects
-    GL_ARB_seamless_cube_map
-    GL_ARB_seamless_cubemap_per_texture
-    GL_ARB_separate_shader_objects
-    GL_ARB_shader_atomic_counter_ops
-    GL_ARB_shader_atomic_counters
-    GL_ARB_shader_bit_encoding
-    GL_ARB_shader_image_load_store
-    GL_ARB_shader_image_size
-    GL_ARB_shader_objects
-    GL_ARB_shader_precision
-    GL_ARB_shader_stencil_export
-    GL_ARB_shader_storage_buffer_object
-    GL_ARB_shader_texture_image_samples
-    GL_ARB_shader_texture_lod
-    GL_ARB_shading_language_100
-    GL_ARB_shading_language_420pack
-    GL_ARB_shading_language_packing
-    GL_ARB_shadow
-    GL_ARB_stencil_texturing
-    GL_ARB_sync
-    GL_ARB_texture_barrier
-    GL_ARB_texture_border_clamp
-    GL_ARB_texture_compression
-    GL_ARB_texture_compression_bptc
-    GL_ARB_texture_compression_rgtc
-    GL_ARB_texture_cube_map
-    GL_ARB_texture_cube_map_array
-    GL_ARB_texture_env_add
-    GL_ARB_texture_env_combine
-    GL_ARB_texture_env_crossbar
-    GL_ARB_texture_env_dot3
-    GL_ARB_texture_float
-    GL_ARB_texture_gather
-    GL_ARB_texture_mirror_clamp_to_edge
-    GL_ARB_texture_mirrored_repeat
-    GL_ARB_texture_multisample
-    GL_ARB_texture_non_power_of_two
-    GL_ARB_texture_query_levels
-    GL_ARB_texture_query_lod
-    GL_ARB_texture_rectangle
-    GL_ARB_texture_rg
-    GL_ARB_texture_rgb10_a2ui
-    GL_ARB_texture_stencil8
-    GL_ARB_texture_storage
-    GL_ARB_texture_storage_multisample
-    GL_ARB_texture_swizzle
-    GL_ARB_texture_view
-    GL_ARB_timer_query
-    GL_ARB_transform_feedback2
-    GL_ARB_transform_feedback3
-    GL_ARB_transform_feedback_instanced
-    GL_ARB_transpose_matrix
-    GL_ARB_uniform_buffer_object
-    GL_ARB_vertex_array_bgra
-    GL_ARB_vertex_array_object
-    GL_ARB_vertex_attrib_binding
-    GL_ARB_vertex_buffer_object
-    GL_ARB_vertex_program
-    GL_ARB_vertex_shader
-    GL_ARB_vertex_type_10f_11f_11f_rev
-    GL_ARB_vertex_type_2_10_10_10_rev
-    GL_ARB_window_pos
-    GL_ATI_blend_equation_separate
-    GL_ATI_draw_buffers
-    GL_ATI_fragment_shader
-    GL_ATI_meminfo
-    GL_ATI_separate_stencil
-    GL_ATI_texture_compression_3dc
-    GL_ATI_texture_env_combine3
-    GL_ATI_texture_float
-    GL_ATI_texture_mirror_once
-    GL_EXT_abgr
-    GL_EXT_bgra
-    GL_EXT_blend_color
-    GL_EXT_blend_equation_separate
-    GL_EXT_blend_func_separate
-    GL_EXT_blend_minmax
-    GL_EXT_blend_subtract
-    GL_EXT_compiled_vertex_array
-    GL_EXT_copy_texture
-    GL_EXT_depth_bounds_test
-    GL_EXT_draw_buffers2
-    GL_EXT_draw_instanced
-    GL_EXT_draw_range_elements
-    GL_EXT_fog_coord
-    GL_EXT_framebuffer_blit
-    GL_EXT_framebuffer_multisample
-    GL_EXT_framebuffer_multisample_blit_scaled
-    GL_EXT_framebuffer_object
-    GL_EXT_framebuffer_sRGB
-    GL_EXT_gpu_program_parameters
-    GL_EXT_multi_draw_arrays
-    GL_EXT_packed_depth_stencil
-    GL_EXT_packed_float
-    GL_EXT_packed_pixels
-    GL_EXT_pixel_buffer_object
-    GL_EXT_point_parameters
-    GL_EXT_polygon_offset
-    GL_EXT_polygon_offset_clamp
-    GL_EXT_provoking_vertex
-    GL_EXT_rescale_normal
-    GL_EXT_secondary_color
-    GL_EXT_separate_specular_color
-    GL_EXT_shader_integer_mix
-    GL_EXT_shadow_funcs
-    GL_EXT_stencil_two_side
-    GL_EXT_stencil_wrap
-    GL_EXT_subtexture
-    GL_EXT_texture
-    GL_EXT_texture3D
-    GL_EXT_texture_array
-    GL_EXT_texture_compression_dxt1
-    GL_EXT_texture_compression_latc
-    GL_EXT_texture_compression_rgtc
-    GL_EXT_texture_compression_s3tc
-    GL_EXT_texture_cube_map
-    GL_EXT_texture_edge_clamp
-    GL_EXT_texture_env_add
-    GL_EXT_texture_env_combine
-    GL_EXT_texture_env_dot3
-    GL_EXT_texture_filter_anisotropic
-    GL_EXT_texture_integer
-    GL_EXT_texture_lod_bias
-    GL_EXT_texture_mirror_clamp
-    GL_EXT_texture_object
-    GL_EXT_texture_rectangle
-    GL_EXT_texture_sRGB
-    GL_EXT_texture_sRGB_decode
-    GL_EXT_texture_shared_exponent
-    GL_EXT_texture_snorm
-    GL_EXT_texture_swizzle
-    GL_EXT_timer_query
-    GL_EXT_transform_feedback
-    GL_EXT_vertex_array
-    GL_EXT_vertex_array_bgra
-    GL_IBM_multimode_draw_arrays
-    GL_IBM_rasterpos_clip
-    GL_IBM_texture_mirrored_repeat
-    GL_INGR_blend_func_separate
-    GL_KHR_context_flush_control
-    GL_KHR_debug
-    GL_KHR_robust_buffer_access_behavior
-    GL_KHR_robustness
-    GL_MESA_pack_invert
-    GL_MESA_shader_integer_functions
-    GL_MESA_texture_signed_rgba
-    GL_MESA_window_pos
-    GL_NVX_gpu_memory_info
-    GL_NV_blend_square
-    GL_NV_conditional_render
-    GL_NV_depth_clamp
-    GL_NV_fog_distance
-    GL_NV_light_max_exponent
-    GL_NV_packed_depth_stencil
-    GL_NV_primitive_restart
-    GL_NV_texgen_reflection
-    GL_NV_texture_barrier
-    GL_NV_texture_env_combine4
-    GL_NV_texture_rectangle
-    GL_NV_vdpau_interop
-    GL_OES_EGL_image
-    GL_OES_read_format
-    GL_S3_s3tc
-    GL_SGIS_generate_mipmap
-    GL_SGIS_texture_border_clamp
-    GL_SGIS_texture_edge_clamp
-    GL_SGIS_texture_lod
-    GL_SUN_multi_draw_arrays
-Number of texture units: 8
-Using shader environment.
-Using copy RTT.
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Total time until interface ready: 472.949232101s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.023542 seconds.
-- Frame drawn at 0.031865 seconds.
-- Frame drawn at 0.048667 seconds.
-- Frame drawn at 0.065384 seconds.
-- 0.065384 seconds to render 5 frames.
-Resetting cache.
-Bootstrap to the start of init.init took 487.60s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.26s
-Loading persistent took 0.06s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-
-The label kahootGame is defined twice, at
-  File "game/minigames/kahoot/countdown.rpyc", line 27 and
-  File "game/minigames/kahoot/kahootscreen.rpy", line 27.
-DPI scale factor: 1.000000
-Interface start took 0.09s
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-Vendor: 'X.Org'
-Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
-Version: '3.0 Mesa 17.0.7'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
-Extensions:
-    
-    GL_AMD_conservative_depth
-    GL_AMD_draw_buffers_blend
-    GL_AMD_performance_monitor
-    GL_AMD_pinned_memory
-    GL_AMD_seamless_cubemap_per_texture
-    GL_AMD_shader_stencil_export
-    GL_AMD_shader_trinary_minmax
-    GL_ANGLE_texture_compression_dxt3
-    GL_ANGLE_texture_compression_dxt5
-    GL_APPLE_packed_pixels
-    GL_APPLE_vertex_array_object
-    GL_ARB_ES2_compatibility
-    GL_ARB_ES3_compatibility
-    GL_ARB_arrays_of_arrays
-    GL_ARB_base_instance
-    GL_ARB_blend_func_extended
-    GL_ARB_buffer_storage
-    GL_ARB_clear_buffer_object
-    GL_ARB_clear_texture
-    GL_ARB_clip_control
-    GL_ARB_color_buffer_float
-    GL_ARB_compressed_texture_pixel_storage
-    GL_ARB_compute_shader
-    GL_ARB_compute_variable_group_size
-    GL_ARB_conditional_render_inverted
-    GL_ARB_conservative_depth
-    GL_ARB_copy_buffer
-    GL_ARB_copy_image
-    GL_ARB_cull_distance
-    GL_ARB_debug_output
-    GL_ARB_depth_buffer_float
-    GL_ARB_depth_clamp
-    GL_ARB_depth_texture
-    GL_ARB_derivative_control
-    GL_ARB_draw_buffers
-    GL_ARB_draw_buffers_blend
-    GL_ARB_draw_elements_base_vertex
-    GL_ARB_draw_instanced
-    GL_ARB_explicit_attrib_location
-    GL_ARB_explicit_uniform_location
-    GL_ARB_fragment_coord_conventions
-    GL_ARB_fragment_program
-    GL_ARB_fragment_program_shadow
-    GL_ARB_fragment_shader
-    GL_ARB_framebuffer_no_attachments
-    GL_ARB_framebuffer_object
-    GL_ARB_framebuffer_sRGB
-    GL_ARB_get_program_binary
-    GL_ARB_get_texture_sub_image
-    GL_ARB_half_float_pixel
-    GL_ARB_half_float_vertex
-    GL_ARB_instanced_arrays
-    GL_ARB_internalformat_query
-    GL_ARB_internalformat_query2
-    GL_ARB_invalidate_subdata
-    GL_ARB_map_buffer_alignment
-    GL_ARB_map_buffer_range
-    GL_ARB_multi_bind
-    GL_ARB_multisample
-    GL_ARB_multitexture
-    GL_ARB_occlusion_query
-    GL_ARB_occlusion_query2
-    GL_ARB_pipeline_statistics_query
-    GL_ARB_pixel_buffer_object
-    GL_ARB_point_parameters
-    GL_ARB_point_sprite
-    GL_ARB_program_interface_query
-    GL_ARB_provoking_vertex
-    GL_ARB_query_buffer_object
-    GL_ARB_robust_buffer_access_behavior
-    GL_ARB_robustness
-    GL_ARB_sample_shading
-    GL_ARB_sampler_objects
-    GL_ARB_seamless_cube_map
-    GL_ARB_seamless_cubemap_per_texture
-    GL_ARB_separate_shader_objects
-    GL_ARB_shader_atomic_counter_ops
-    GL_ARB_shader_atomic_counters
-    GL_ARB_shader_bit_encoding
-    GL_ARB_shader_image_load_store
-    GL_ARB_shader_image_size
-    GL_ARB_shader_objects
-    GL_ARB_shader_precision
-    GL_ARB_shader_stencil_export
-    GL_ARB_shader_storage_buffer_object
-    GL_ARB_shader_texture_image_samples
-    GL_ARB_shader_texture_lod
-    GL_ARB_shading_language_100
-    GL_ARB_shading_language_420pack
-    GL_ARB_shading_language_packing
-    GL_ARB_shadow
-    GL_ARB_stencil_texturing
-    GL_ARB_sync
-    GL_ARB_texture_barrier
-    GL_ARB_texture_border_clamp
-    GL_ARB_texture_compression
-    GL_ARB_texture_compression_bptc
-    GL_ARB_texture_compression_rgtc
-    GL_ARB_texture_cube_map
-    GL_ARB_texture_cube_map_array
-    GL_ARB_texture_env_add
-    GL_ARB_texture_env_combine
-    GL_ARB_texture_env_crossbar
-    GL_ARB_texture_env_dot3
-    GL_ARB_texture_float
-    GL_ARB_texture_gather
-    GL_ARB_texture_mirror_clamp_to_edge
-    GL_ARB_texture_mirrored_repeat
-    GL_ARB_texture_multisample
-    GL_ARB_texture_non_power_of_two
-    GL_ARB_texture_query_levels
-    GL_ARB_texture_query_lod
-    GL_ARB_texture_rectangle
-    GL_ARB_texture_rg
-    GL_ARB_texture_rgb10_a2ui
-    GL_ARB_texture_stencil8
-    GL_ARB_texture_storage
-    GL_ARB_texture_storage_multisample
-    GL_ARB_texture_swizzle
-    GL_ARB_texture_view
-    GL_ARB_timer_query
-    GL_ARB_transform_feedback2
-    GL_ARB_transform_feedback3
-    GL_ARB_transform_feedback_instanced
-    GL_ARB_transpose_matrix
-    GL_ARB_uniform_buffer_object
-    GL_ARB_vertex_array_bgra
-    GL_ARB_vertex_array_object
-    GL_ARB_vertex_attrib_binding
-    GL_ARB_vertex_buffer_object
-    GL_ARB_vertex_program
-    GL_ARB_vertex_shader
-    GL_ARB_vertex_type_10f_11f_11f_rev
-    GL_ARB_vertex_type_2_10_10_10_rev
-    GL_ARB_window_pos
-    GL_ATI_blend_equation_separate
-    GL_ATI_draw_buffers
-    GL_ATI_fragment_shader
-    GL_ATI_meminfo
-    GL_ATI_separate_stencil
-    GL_ATI_texture_compression_3dc
-    GL_ATI_texture_env_combine3
-    GL_ATI_texture_float
-    GL_ATI_texture_mirror_once
-    GL_EXT_abgr
-    GL_EXT_bgra
-    GL_EXT_blend_color
-    GL_EXT_blend_equation_separate
-    GL_EXT_blend_func_separate
-    GL_EXT_blend_minmax
-    GL_EXT_blend_subtract
-    GL_EXT_compiled_vertex_array
-    GL_EXT_copy_texture
-    GL_EXT_depth_bounds_test
-    GL_EXT_draw_buffers2
-    GL_EXT_draw_instanced
-    GL_EXT_draw_range_elements
-    GL_EXT_fog_coord
-    GL_EXT_framebuffer_blit
-    GL_EXT_framebuffer_multisample
-    GL_EXT_framebuffer_multisample_blit_scaled
-    GL_EXT_framebuffer_object
-    GL_EXT_framebuffer_sRGB
-    GL_EXT_gpu_program_parameters
-    GL_EXT_multi_draw_arrays
-    GL_EXT_packed_depth_stencil
-    GL_EXT_packed_float
-    GL_EXT_packed_pixels
-    GL_EXT_pixel_buffer_object
-    GL_EXT_point_parameters
-    GL_EXT_polygon_offset
-    GL_EXT_polygon_offset_clamp
-    GL_EXT_provoking_vertex
-    GL_EXT_rescale_normal
-    GL_EXT_secondary_color
-    GL_EXT_separate_specular_color
-    GL_EXT_shader_integer_mix
-    GL_EXT_shadow_funcs
-    GL_EXT_stencil_two_side
-    GL_EXT_stencil_wrap
-    GL_EXT_subtexture
-    GL_EXT_texture
-    GL_EXT_texture3D
-    GL_EXT_texture_array
-    GL_EXT_texture_compression_dxt1
-    GL_EXT_texture_compression_latc
-    GL_EXT_texture_compression_rgtc
-    GL_EXT_texture_compression_s3tc
-    GL_EXT_texture_cube_map
-    GL_EXT_texture_edge_clamp
-    GL_EXT_texture_env_add
-    GL_EXT_texture_env_combine
-    GL_EXT_texture_env_dot3
-    GL_EXT_texture_filter_anisotropic
-    GL_EXT_texture_integer
-    GL_EXT_texture_lod_bias
-    GL_EXT_texture_mirror_clamp
-    GL_EXT_texture_object
-    GL_EXT_texture_rectangle
-    GL_EXT_texture_sRGB
-    GL_EXT_texture_sRGB_decode
-    GL_EXT_texture_shared_exponent
-    GL_EXT_texture_snorm
-    GL_EXT_texture_swizzle
-    GL_EXT_timer_query
-    GL_EXT_transform_feedback
-    GL_EXT_vertex_array
-    GL_EXT_vertex_array_bgra
-    GL_IBM_multimode_draw_arrays
-    GL_IBM_rasterpos_clip
-    GL_IBM_texture_mirrored_repeat
-    GL_INGR_blend_func_separate
-    GL_KHR_context_flush_control
-    GL_KHR_debug
-    GL_KHR_robust_buffer_access_behavior
-    GL_KHR_robustness
-    GL_MESA_pack_invert
-    GL_MESA_shader_integer_functions
-    GL_MESA_texture_signed_rgba
-    GL_MESA_window_pos
-    GL_NVX_gpu_memory_info
-    GL_NV_blend_square
-    GL_NV_conditional_render
-    GL_NV_depth_clamp
-    GL_NV_fog_distance
-    GL_NV_light_max_exponent
-    GL_NV_packed_depth_stencil
-    GL_NV_primitive_restart
-    GL_NV_texgen_reflection
-    GL_NV_texture_barrier
-    GL_NV_texture_env_combine4
-    GL_NV_texture_rectangle
-    GL_NV_vdpau_interop
-    GL_OES_EGL_image
-    GL_OES_read_format
-    GL_S3_s3tc
-    GL_SGIS_generate_mipmap
-    GL_SGIS_texture_border_clamp
-    GL_SGIS_texture_edge_clamp
-    GL_SGIS_texture_lod
-    GL_SUN_multi_draw_arrays
-Number of texture units: 8
-Using shader environment.
-Using copy RTT.
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Total time until interface ready: 488.188025951s
-Resetting cache.
-Bootstrap to the start of init.init took 534.27s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.21s
-Loading persistent took 0.06s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-Running init code took 0.09s
-Loading analysis data took 0.32s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.01s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.11s
-Prepare screens took 0.11s
-Save pyanalysis. took 1.02s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.01s
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-Vendor: 'X.Org'
-Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
-Version: '3.0 Mesa 17.0.7'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
-Extensions:
-    
-    GL_AMD_conservative_depth
-    GL_AMD_draw_buffers_blend
-    GL_AMD_performance_monitor
-    GL_AMD_pinned_memory
-    GL_AMD_seamless_cubemap_per_texture
-    GL_AMD_shader_stencil_export
-    GL_AMD_shader_trinary_minmax
-    GL_ANGLE_texture_compression_dxt3
-    GL_ANGLE_texture_compression_dxt5
-    GL_APPLE_packed_pixels
-    GL_APPLE_vertex_array_object
-    GL_ARB_ES2_compatibility
-    GL_ARB_ES3_compatibility
-    GL_ARB_arrays_of_arrays
-    GL_ARB_base_instance
-    GL_ARB_blend_func_extended
-    GL_ARB_buffer_storage
-    GL_ARB_clear_buffer_object
-    GL_ARB_clear_texture
-    GL_ARB_clip_control
-    GL_ARB_color_buffer_float
-    GL_ARB_compressed_texture_pixel_storage
-    GL_ARB_compute_shader
-    GL_ARB_compute_variable_group_size
-    GL_ARB_conditional_render_inverted
-    GL_ARB_conservative_depth
-    GL_ARB_copy_buffer
-    GL_ARB_copy_image
-    GL_ARB_cull_distance
-    GL_ARB_debug_output
-    GL_ARB_depth_buffer_float
-    GL_ARB_depth_clamp
-    GL_ARB_depth_texture
-    GL_ARB_derivative_control
-    GL_ARB_draw_buffers
-    GL_ARB_draw_buffers_blend
-    GL_ARB_draw_elements_base_vertex
-    GL_ARB_draw_instanced
-    GL_ARB_explicit_attrib_location
-    GL_ARB_explicit_uniform_location
-    GL_ARB_fragment_coord_conventions
-    GL_ARB_fragment_program
-    GL_ARB_fragment_program_shadow
-    GL_ARB_fragment_shader
-    GL_ARB_framebuffer_no_attachments
-    GL_ARB_framebuffer_object
-    GL_ARB_framebuffer_sRGB
-    GL_ARB_get_program_binary
-    GL_ARB_get_texture_sub_image
-    GL_ARB_half_float_pixel
-    GL_ARB_half_float_vertex
-    GL_ARB_instanced_arrays
-    GL_ARB_internalformat_query
-    GL_ARB_internalformat_query2
-    GL_ARB_invalidate_subdata
-    GL_ARB_map_buffer_alignment
-    GL_ARB_map_buffer_range
-    GL_ARB_multi_bind
-    GL_ARB_multisample
-    GL_ARB_multitexture
-    GL_ARB_occlusion_query
-    GL_ARB_occlusion_query2
-    GL_ARB_pipeline_statistics_query
-    GL_ARB_pixel_buffer_object
-    GL_ARB_point_parameters
-    GL_ARB_point_sprite
-    GL_ARB_program_interface_query
-    GL_ARB_provoking_vertex
-    GL_ARB_query_buffer_object
-    GL_ARB_robust_buffer_access_behavior
-    GL_ARB_robustness
-    GL_ARB_sample_shading
-    GL_ARB_sampler_objects
-    GL_ARB_seamless_cube_map
-    GL_ARB_seamless_cubemap_per_texture
-    GL_ARB_separate_shader_objects
-    GL_ARB_shader_atomic_counter_ops
-    GL_ARB_shader_atomic_counters
-    GL_ARB_shader_bit_encoding
-    GL_ARB_shader_image_load_store
-    GL_ARB_shader_image_size
-    GL_ARB_shader_objects
-    GL_ARB_shader_precision
-    GL_ARB_shader_stencil_export
-    GL_ARB_shader_storage_buffer_object
-    GL_ARB_shader_texture_image_samples
-    GL_ARB_shader_texture_lod
-    GL_ARB_shading_language_100
-    GL_ARB_shading_language_420pack
-    GL_ARB_shading_language_packing
-    GL_ARB_shadow
-    GL_ARB_stencil_texturing
-    GL_ARB_sync
-    GL_ARB_texture_barrier
-    GL_ARB_texture_border_clamp
-    GL_ARB_texture_compression
-    GL_ARB_texture_compression_bptc
-    GL_ARB_texture_compression_rgtc
-    GL_ARB_texture_cube_map
-    GL_ARB_texture_cube_map_array
-    GL_ARB_texture_env_add
-    GL_ARB_texture_env_combine
-    GL_ARB_texture_env_crossbar
-    GL_ARB_texture_env_dot3
-    GL_ARB_texture_float
-    GL_ARB_texture_gather
-    GL_ARB_texture_mirror_clamp_to_edge
-    GL_ARB_texture_mirrored_repeat
-    GL_ARB_texture_multisample
-    GL_ARB_texture_non_power_of_two
-    GL_ARB_texture_query_levels
-    GL_ARB_texture_query_lod
-    GL_ARB_texture_rectangle
-    GL_ARB_texture_rg
-    GL_ARB_texture_rgb10_a2ui
-    GL_ARB_texture_stencil8
-    GL_ARB_texture_storage
-    GL_ARB_texture_storage_multisample
-    GL_ARB_texture_swizzle
-    GL_ARB_texture_view
-    GL_ARB_timer_query
-    GL_ARB_transform_feedback2
-    GL_ARB_transform_feedback3
-    GL_ARB_transform_feedback_instanced
-    GL_ARB_transpose_matrix
-    GL_ARB_uniform_buffer_object
-    GL_ARB_vertex_array_bgra
-    GL_ARB_vertex_array_object
-    GL_ARB_vertex_attrib_binding
-    GL_ARB_vertex_buffer_object
-    GL_ARB_vertex_program
-    GL_ARB_vertex_shader
-    GL_ARB_vertex_type_10f_11f_11f_rev
-    GL_ARB_vertex_type_2_10_10_10_rev
-    GL_ARB_window_pos
-    GL_ATI_blend_equation_separate
-    GL_ATI_draw_buffers
-    GL_ATI_fragment_shader
-    GL_ATI_meminfo
-    GL_ATI_separate_stencil
-    GL_ATI_texture_compression_3dc
-    GL_ATI_texture_env_combine3
-    GL_ATI_texture_float
-    GL_ATI_texture_mirror_once
-    GL_EXT_abgr
-    GL_EXT_bgra
-    GL_EXT_blend_color
-    GL_EXT_blend_equation_separate
-    GL_EXT_blend_func_separate
-    GL_EXT_blend_minmax
-    GL_EXT_blend_subtract
-    GL_EXT_compiled_vertex_array
-    GL_EXT_copy_texture
-    GL_EXT_depth_bounds_test
-    GL_EXT_draw_buffers2
-    GL_EXT_draw_instanced
-    GL_EXT_draw_range_elements
-    GL_EXT_fog_coord
-    GL_EXT_framebuffer_blit
-    GL_EXT_framebuffer_multisample
-    GL_EXT_framebuffer_multisample_blit_scaled
-    GL_EXT_framebuffer_object
-    GL_EXT_framebuffer_sRGB
-    GL_EXT_gpu_program_parameters
-    GL_EXT_multi_draw_arrays
-    GL_EXT_packed_depth_stencil
-    GL_EXT_packed_float
-    GL_EXT_packed_pixels
-    GL_EXT_pixel_buffer_object
-    GL_EXT_point_parameters
-    GL_EXT_polygon_offset
-    GL_EXT_polygon_offset_clamp
-    GL_EXT_provoking_vertex
-    GL_EXT_rescale_normal
-    GL_EXT_secondary_color
-    GL_EXT_separate_specular_color
-    GL_EXT_shader_integer_mix
-    GL_EXT_shadow_funcs
-    GL_EXT_stencil_two_side
-    GL_EXT_stencil_wrap
-    GL_EXT_subtexture
-    GL_EXT_texture
-    GL_EXT_texture3D
-    GL_EXT_texture_array
-    GL_EXT_texture_compression_dxt1
-    GL_EXT_texture_compression_latc
-    GL_EXT_texture_compression_rgtc
-    GL_EXT_texture_compression_s3tc
-    GL_EXT_texture_cube_map
-    GL_EXT_texture_edge_clamp
-    GL_EXT_texture_env_add
-    GL_EXT_texture_env_combine
-    GL_EXT_texture_env_dot3
-    GL_EXT_texture_filter_anisotropic
-    GL_EXT_texture_integer
-    GL_EXT_texture_lod_bias
-    GL_EXT_texture_mirror_clamp
-    GL_EXT_texture_object
-    GL_EXT_texture_rectangle
-    GL_EXT_texture_sRGB
-    GL_EXT_texture_sRGB_decode
-    GL_EXT_texture_shared_exponent
-    GL_EXT_texture_snorm
-    GL_EXT_texture_swizzle
-    GL_EXT_timer_query
-    GL_EXT_transform_feedback
-    GL_EXT_vertex_array
-    GL_EXT_vertex_array_bgra
-    GL_IBM_multimode_draw_arrays
-    GL_IBM_rasterpos_clip
-    GL_IBM_texture_mirrored_repeat
-    GL_INGR_blend_func_separate
-    GL_KHR_context_flush_control
-    GL_KHR_debug
-    GL_KHR_robust_buffer_access_behavior
-    GL_KHR_robustness
-    GL_MESA_pack_invert
-    GL_MESA_shader_integer_functions
-    GL_MESA_texture_signed_rgba
-    GL_MESA_window_pos
-    GL_NVX_gpu_memory_info
-    GL_NV_blend_square
-    GL_NV_conditional_render
-    GL_NV_depth_clamp
-    GL_NV_fog_distance
-    GL_NV_light_max_exponent
-    GL_NV_packed_depth_stencil
-    GL_NV_primitive_restart
-    GL_NV_texgen_reflection
-    GL_NV_texture_barrier
-    GL_NV_texture_env_combine4
-    GL_NV_texture_rectangle
-    GL_NV_vdpau_interop
-    GL_OES_EGL_image
-    GL_OES_read_format
-    GL_S3_s3tc
-    GL_SGIS_generate_mipmap
-    GL_SGIS_texture_border_clamp
-    GL_SGIS_texture_edge_clamp
-    GL_SGIS_texture_lod
-    GL_SUN_multi_draw_arrays
-Number of texture units: 8
-Using shader environment.
-Using copy RTT.
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Total time until interface ready: 536.478853941s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016921 seconds.
-- Frame drawn at 0.032462 seconds.
-- Frame drawn at 0.050567 seconds.
-- Frame drawn at 0.071141 seconds.
-- 0.071141 seconds to render 5 frames.
-Resetting cache.
-Bootstrap to the start of init.init took 545.12s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.26s
-Loading persistent took 0.06s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-Running init code took 0.09s
-Loading analysis data took 0.23s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.01s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.18s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.99s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.01s
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(964, 542) drawable=(964, 542)
-Vendor: 'X.Org'
-Renderer: 'Gallium 0.4 on AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 4.0.0)'
-Version: '3.0 Mesa 17.0.7'
-Display Info: <Info({'blit_sw_CC': False, 'refresh_rate': 0, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680, 65280, 255, 0), 'current_h': 1080, 'current_w': 1920, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
-Extensions:
-    
-    GL_AMD_conservative_depth
-    GL_AMD_draw_buffers_blend
-    GL_AMD_performance_monitor
-    GL_AMD_pinned_memory
-    GL_AMD_seamless_cubemap_per_texture
-    GL_AMD_shader_stencil_export
-    GL_AMD_shader_trinary_minmax
-    GL_ANGLE_texture_compression_dxt3
-    GL_ANGLE_texture_compression_dxt5
-    GL_APPLE_packed_pixels
-    GL_APPLE_vertex_array_object
-    GL_ARB_ES2_compatibility
-    GL_ARB_ES3_compatibility
-    GL_ARB_arrays_of_arrays
-    GL_ARB_base_instance
-    GL_ARB_blend_func_extended
-    GL_ARB_buffer_storage
-    GL_ARB_clear_buffer_object
-    GL_ARB_clear_texture
-    GL_ARB_clip_control
-    GL_ARB_color_buffer_float
-    GL_ARB_compressed_texture_pixel_storage
-    GL_ARB_compute_shader
-    GL_ARB_compute_variable_group_size
-    GL_ARB_conditional_render_inverted
-    GL_ARB_conservative_depth
-    GL_ARB_copy_buffer
-    GL_ARB_copy_image
-    GL_ARB_cull_distance
-    GL_ARB_debug_output
-    GL_ARB_depth_buffer_float
-    GL_ARB_depth_clamp
-    GL_ARB_depth_texture
-    GL_ARB_derivative_control
-    GL_ARB_draw_buffers
-    GL_ARB_draw_buffers_blend
-    GL_ARB_draw_elements_base_vertex
-    GL_ARB_draw_instanced
-    GL_ARB_explicit_attrib_location
-    GL_ARB_explicit_uniform_location
-    GL_ARB_fragment_coord_conventions
-    GL_ARB_fragment_program
-    GL_ARB_fragment_program_shadow
-    GL_ARB_fragment_shader
-    GL_ARB_framebuffer_no_attachments
-    GL_ARB_framebuffer_object
-    GL_ARB_framebuffer_sRGB
-    GL_ARB_get_program_binary
-    GL_ARB_get_texture_sub_image
-    GL_ARB_half_float_pixel
-    GL_ARB_half_float_vertex
-    GL_ARB_instanced_arrays
-    GL_ARB_internalformat_query
-    GL_ARB_internalformat_query2
-    GL_ARB_invalidate_subdata
-    GL_ARB_map_buffer_alignment
-    GL_ARB_map_buffer_range
-    GL_ARB_multi_bind
-    GL_ARB_multisample
-    GL_ARB_multitexture
-    GL_ARB_occlusion_query
-    GL_ARB_occlusion_query2
-    GL_ARB_pipeline_statistics_query
-    GL_ARB_pixel_buffer_object
-    GL_ARB_point_parameters
-    GL_ARB_point_sprite
-    GL_ARB_program_interface_query
-    GL_ARB_provoking_vertex
-    GL_ARB_query_buffer_object
-    GL_ARB_robust_buffer_access_behavior
-    GL_ARB_robustness
-    GL_ARB_sample_shading
-    GL_ARB_sampler_objects
-    GL_ARB_seamless_cube_map
-    GL_ARB_seamless_cubemap_per_texture
-    GL_ARB_separate_shader_objects
-    GL_ARB_shader_atomic_counter_ops
-    GL_ARB_shader_atomic_counters
-    GL_ARB_shader_bit_encoding
-    GL_ARB_shader_image_load_store
-    GL_ARB_shader_image_size
-    GL_ARB_shader_objects
-    GL_ARB_shader_precision
-    GL_ARB_shader_stencil_export
-    GL_ARB_shader_storage_buffer_object
-    GL_ARB_shader_texture_image_samples
-    GL_ARB_shader_texture_lod
-    GL_ARB_shading_language_100
-    GL_ARB_shading_language_420pack
-    GL_ARB_shading_language_packing
-    GL_ARB_shadow
-    GL_ARB_stencil_texturing
-    GL_ARB_sync
-    GL_ARB_texture_barrier
-    GL_ARB_texture_border_clamp
-    GL_ARB_texture_compression
-    GL_ARB_texture_compression_bptc
-    GL_ARB_texture_compression_rgtc
-    GL_ARB_texture_cube_map
-    GL_ARB_texture_cube_map_array
-    GL_ARB_texture_env_add
-    GL_ARB_texture_env_combine
-    GL_ARB_texture_env_crossbar
-    GL_ARB_texture_env_dot3
-    GL_ARB_texture_float
-    GL_ARB_texture_gather
-    GL_ARB_texture_mirror_clamp_to_edge
-    GL_ARB_texture_mirrored_repeat
-    GL_ARB_texture_multisample
-    GL_ARB_texture_non_power_of_two
-    GL_ARB_texture_query_levels
-    GL_ARB_texture_query_lod
-    GL_ARB_texture_rectangle
-    GL_ARB_texture_rg
-    GL_ARB_texture_rgb10_a2ui
-    GL_ARB_texture_stencil8
-    GL_ARB_texture_storage
-    GL_ARB_texture_storage_multisample
-    GL_ARB_texture_swizzle
-    GL_ARB_texture_view
-    GL_ARB_timer_query
-    GL_ARB_transform_feedback2
-    GL_ARB_transform_feedback3
-    GL_ARB_transform_feedback_instanced
-    GL_ARB_transpose_matrix
-    GL_ARB_uniform_buffer_object
-    GL_ARB_vertex_array_bgra
-    GL_ARB_vertex_array_object
-    GL_ARB_vertex_attrib_binding
-    GL_ARB_vertex_buffer_object
-    GL_ARB_vertex_program
-    GL_ARB_vertex_shader
-    GL_ARB_vertex_type_10f_11f_11f_rev
-    GL_ARB_vertex_type_2_10_10_10_rev
-    GL_ARB_window_pos
-    GL_ATI_blend_equation_separate
-    GL_ATI_draw_buffers
-    GL_ATI_fragment_shader
-    GL_ATI_meminfo
-    GL_ATI_separate_stencil
-    GL_ATI_texture_compression_3dc
-    GL_ATI_texture_env_combine3
-    GL_ATI_texture_float
-    GL_ATI_texture_mirror_once
-    GL_EXT_abgr
-    GL_EXT_bgra
-    GL_EXT_blend_color
-    GL_EXT_blend_equation_separate
-    GL_EXT_blend_func_separate
-    GL_EXT_blend_minmax
-    GL_EXT_blend_subtract
-    GL_EXT_compiled_vertex_array
-    GL_EXT_copy_texture
-    GL_EXT_depth_bounds_test
-    GL_EXT_draw_buffers2
-    GL_EXT_draw_instanced
-    GL_EXT_draw_range_elements
-    GL_EXT_fog_coord
-    GL_EXT_framebuffer_blit
-    GL_EXT_framebuffer_multisample
-    GL_EXT_framebuffer_multisample_blit_scaled
-    GL_EXT_framebuffer_object
-    GL_EXT_framebuffer_sRGB
-    GL_EXT_gpu_program_parameters
-    GL_EXT_multi_draw_arrays
-    GL_EXT_packed_depth_stencil
-    GL_EXT_packed_float
-    GL_EXT_packed_pixels
-    GL_EXT_pixel_buffer_object
-    GL_EXT_point_parameters
-    GL_EXT_polygon_offset
-    GL_EXT_polygon_offset_clamp
-    GL_EXT_provoking_vertex
-    GL_EXT_rescale_normal
-    GL_EXT_secondary_color
-    GL_EXT_separate_specular_color
-    GL_EXT_shader_integer_mix
-    GL_EXT_shadow_funcs
-    GL_EXT_stencil_two_side
-    GL_EXT_stencil_wrap
-    GL_EXT_subtexture
-    GL_EXT_texture
-    GL_EXT_texture3D
-    GL_EXT_texture_array
-    GL_EXT_texture_compression_dxt1
-    GL_EXT_texture_compression_latc
-    GL_EXT_texture_compression_rgtc
-    GL_EXT_texture_compression_s3tc
-    GL_EXT_texture_cube_map
-    GL_EXT_texture_edge_clamp
-    GL_EXT_texture_env_add
-    GL_EXT_texture_env_combine
-    GL_EXT_texture_env_dot3
-    GL_EXT_texture_filter_anisotropic
-    GL_EXT_texture_integer
-    GL_EXT_texture_lod_bias
-    GL_EXT_texture_mirror_clamp
-    GL_EXT_texture_object
-    GL_EXT_texture_rectangle
-    GL_EXT_texture_sRGB
-    GL_EXT_texture_sRGB_decode
-    GL_EXT_texture_shared_exponent
-    GL_EXT_texture_snorm
-    GL_EXT_texture_swizzle
-    GL_EXT_timer_query
-    GL_EXT_transform_feedback
-    GL_EXT_vertex_array
-    GL_EXT_vertex_array_bgra
-    GL_IBM_multimode_draw_arrays
-    GL_IBM_rasterpos_clip
-    GL_IBM_texture_mirrored_repeat
-    GL_INGR_blend_func_separate
-    GL_KHR_context_flush_control
-    GL_KHR_debug
-    GL_KHR_robust_buffer_access_behavior
-    GL_KHR_robustness
-    GL_MESA_pack_invert
-    GL_MESA_shader_integer_functions
-    GL_MESA_texture_signed_rgba
-    GL_MESA_window_pos
-    GL_NVX_gpu_memory_info
-    GL_NV_blend_square
-    GL_NV_conditional_render
-    GL_NV_depth_clamp
-    GL_NV_fog_distance
-    GL_NV_light_max_exponent
-    GL_NV_packed_depth_stencil
-    GL_NV_primitive_restart
-    GL_NV_texgen_reflection
-    GL_NV_texture_barrier
-    GL_NV_texture_env_combine4
-    GL_NV_texture_rectangle
-    GL_NV_vdpau_interop
-    GL_OES_EGL_image
-    GL_OES_read_format
-    GL_S3_s3tc
-    GL_SGIS_generate_mipmap
-    GL_SGIS_texture_border_clamp
-    GL_SGIS_texture_edge_clamp
-    GL_SGIS_texture_lod
-    GL_SUN_multi_draw_arrays
-Number of texture units: 8
-Using shader environment.
-Using copy RTT.
-Using gl renderer.
-Texture testing:
-- Hardware max texture size: 16384
-- 64px textures work.
-- 128px textures work.
-- 256px textures work.
-- 512px textures work.
-- 1024px textures work.
-- 2048px textures work.
-Total time until interface ready: 547.337263107s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016346 seconds.
-- Frame drawn at 0.027659 seconds.
-- Frame drawn at 0.044995 seconds.
-- Frame drawn at 0.062832 seconds.
-- 0.062832 seconds to render 5 frames.
+While running game code:
+  File "game/story/script.rpy", line 11, in script call
+    pause
+  File "game/minigames/pong/pongscreen.rpy", line 4, in script
+    call screen pong(**options)
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
+    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
+  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
+    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
+  File "game/minigames/pong/pongscreen.rpy", line 87, in execute
+    $ rightPaddleBot.movePaddle()
+  File "game/minigames/pong/pongscreen.rpy", line 87, in <module>
+    $ rightPaddleBot.movePaddle()
+  File "game/minigames/pong/PaddleBot.rpy", line 51, in movePaddle
+    y = self.predictCollision()
+  File "game/minigames/pong/PaddleBot.rpy", line 18, in predictCollision
+    m = self.ball.vel.y / self.ball.vel.x
+ZeroDivisionError: integer division or modulo by zero
+Traceback (most recent call last):
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 468, in run
+    node.execute()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
+    self.call("execute")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
+    scene_lists.replace_transient()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
+    self.remove(layer, tag)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
+    self.hide_or_replace(layer, remove_index, "hide")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
+    d = oldsle.displayable._hide(now - st, now - at, prefix)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/sl2/slast.py", line 1998, in __call__
+    self.const_ast.execute(context)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/sl2/slast.py", line 1949, in execute
+    SLBlock.execute(self, context)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/sl2/slast.py", line 381, in execute
+    i.execute(context)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/sl2/slast.py", line 1458, in execute
+    exec self.code.bytecode in context.globals, context.scope
+  File "game/minigames/pong/pongscreen.rpy", line 87, in <module>
+    $ rightPaddleBot.movePaddle()
+  File "game/minigames/pong/PaddleBot.rpy", line 51, in movePaddle
+    y = self.predictCollision()
+  File "game/minigames/pong/PaddleBot.rpy", line 18, in predictCollision
+    m = self.ball.vel.y / self.ball.vel.x
+ZeroDivisionError: integer division or modulo by zero

@@ -14,6 +14,10 @@ python early:
                 return True
         
         def predictCollision(self):
+            # if ball is not moving horizontally, just match y-pos
+            if(self.ball.vel.x == 0) {
+                return self.ball.pos.y;
+            }
             # equation variables
             m = self.ball.vel.y / self.ball.vel.x
             b = self.ball.pos.y - m*self.ball.pos.x
@@ -36,9 +40,9 @@ python early:
                 if(y < bounds[3] and y > bounds[1]):
                     break
                 if m*direction >= 0:
-                    b = bounds[3]-radius-b
+                    b = 2*(bounds[3]-radius)-b
                 else:
-                    b = bounds[1]+radius-b
+                    b = 2*(bounds[1]+radius)-b
                 m *= -1
             # If prediction is out of bounds
             if(y > bounds[3] or y < bounds[1]):

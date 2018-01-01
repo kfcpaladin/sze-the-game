@@ -114,8 +114,8 @@ label eng1ascension:
                             "But your flailing attempts, like your chances with Serena, slip from your failing hands"
                             sze "\"Fuuuuuuuuuuuuuuucccckkk yooooooouuuuuuuuu chhaaaaaaaaaaaaoooooooo\""
                             cha "\"Fuuuuuuuuuuuuuuucccckkk yooooooouuuuuuuuu toooooooooooooooooooooo\""
-                            rik "\"{i}He hit the ground, the sound was "SPLAT", his blood went spurting high{/i}\""
-                            rik "\"{i}His comrades, they were heard to say "A HELL OF A WAY TO DIE!"{/i}\""
+                            rik "\"{i}He hit the ground, the sound was \"SPLAT\", his blood went spurting high{/i}\""
+                            rik "\"{i}His comrades, they were heard to say \"A HELL OF A WAY TO DIE!\"{/i}\""
                             rik "\"{i}He lay there, rolling 'round in the welter of his gore,{/i}\""
                             rik "\"{i}And he ain't gonna jump no more.{/i}\""
                             jump dead

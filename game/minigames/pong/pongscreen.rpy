@@ -83,7 +83,7 @@ screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
         text "{0}".format(ball.score["right"]):
             font "DejaVuSans.ttf"
             size 60
-    $ leftPaddle.move(getKeyPress())
+    $ getKeyPress(leftPaddle)
     $ rightPaddleBot.movePaddle()
 
     # Update the game
@@ -95,15 +95,20 @@ screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
 
 init python:
     import pygame
-    def getKeyPress():
+    def getKeyPress(paddle):
         pressed = pygame.key.get_pressed()
+        keyPressed = False
         if pressed[pygame.K_UP]:
-            return "up"
-        elif pressed[pygame.K_DOWN]:
-            return "down"
-        elif pressed[pygame.K_LEFT]:
-            return "left"
-        elif pressed[pygame.K_RIGHT]:
-            return "right"
-        else:
-            return None
+            paddle.move("up")
+            keyPressed = True
+        if pressed[pygame.K_DOWN]:
+            paddle.move("down")
+            keyPressed = True
+        if pressed[pygame.K_LEFT]:
+            paddle.move("left")
+            keyPressed = True
+        if pressed[pygame.K_RIGHT]:
+            paddle.move("right")
+            keyPressed = True
+        if not keyPressed:
+            paddle.move(None)

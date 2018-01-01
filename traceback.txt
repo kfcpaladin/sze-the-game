@@ -1,8 +1,8 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 11, in script call
-    pause
+  File "game/story/script.rpy", line 27, in script call
+    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
   File "game/minigames/pong/pongscreen.rpy", line 4, in script
     call screen pong(**options)
   File "renpy/common/000statements.rpy", line 485, in execute_call_screen
@@ -11,21 +11,19 @@ While running game code:
     screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
   File "game/minigames/pong/pongscreen.rpy", line 12, in execute
     screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 87, in execute
-    $ rightPaddleBot.movePaddle()
-  File "game/minigames/pong/pongscreen.rpy", line 87, in <module>
-    $ rightPaddleBot.movePaddle()
-  File "game/minigames/pong/PaddleBot.rpy", line 51, in movePaddle
-    y = self.predictCollision()
-  File "game/minigames/pong/PaddleBot.rpy", line 18, in predictCollision
-    m = self.ball.vel.y / self.ball.vel.x
-ZeroDivisionError: integer division or modulo by zero
+  File "game/minigames/pong/pongscreen.rpy", line 86, in execute
+    $ getKeyPress(leftPaddle)
+  File "game/minigames/pong/pongscreen.rpy", line 86, in <module>
+    $ getKeyPress(leftPaddle)
+  File "game/minigames/pong/pongscreen.rpy", line 100, in getKeyPress
+    keyPressed = false
+NameError: global name 'false' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 11, in script call
-    pause
+  File "game/story/script.rpy", line 27, in script call
+    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
   File "game/minigames/pong/pongscreen.rpy", line 4, in script
     call screen pong(**options)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
@@ -56,15 +54,13 @@ Full traceback:
     screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
   File "game/minigames/pong/pongscreen.rpy", line 12, in execute
     screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 87, in execute
-    $ rightPaddleBot.movePaddle()
-  File "game/minigames/pong/pongscreen.rpy", line 87, in <module>
-    $ rightPaddleBot.movePaddle()
-  File "game/minigames/pong/PaddleBot.rpy", line 51, in movePaddle
-    y = self.predictCollision()
-  File "game/minigames/pong/PaddleBot.rpy", line 18, in predictCollision
-    m = self.ball.vel.y / self.ball.vel.x
-ZeroDivisionError: integer division or modulo by zero
+  File "game/minigames/pong/pongscreen.rpy", line 86, in execute
+    $ getKeyPress(leftPaddle)
+  File "game/minigames/pong/pongscreen.rpy", line 86, in <module>
+    $ getKeyPress(leftPaddle)
+  File "game/minigames/pong/pongscreen.rpy", line 100, in getKeyPress
+    keyPressed = false
+NameError: global name 'false' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

@@ -45,6 +45,17 @@ python early:
                     playsfx("vpunch.ogg")
                     self.vel.x = abs(self.vel.x)
                     self.vel.add(paddle.vel)
+            # Bounce if collide up and down
+            if(paddle._checkXInside(self.pos.x + self.radius) or
+                    paddle._checkXInside(self.pos.x - self.radius)):
+                # Top edge
+                if paddle._checkYInside(self.pos.y + self.radius):
+                    playsfx("vpunch.ogg");
+                    self.vel.y = -abs(self.vel.y)
+                # Bottom edge
+                elif paddle._checkYInside(self.pos.y - self.radius):
+                    playsfx("vpunch.ogg")
+                    self.vel.y = abs(self.vel.y)
 
 
         def reset(self, side):    

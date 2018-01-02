@@ -323,4 +323,5 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+    config.mouse = { 'default' : [ ('cursor.png', 0, 0)] }
     

@@ -303,7 +303,7 @@ label english1flight3:
             pra "\"I think that's a yes\""
             "You aren't too sure what's going on, but you think you see Pragash deliberately prick his own finger"
             pra "\"Ouch\""
-            pra "\"{i}Kuchiyose: Karegyangu{/i}\""
+            pra "\"{i}Kuchiyose: Karesenshu{/i}\""
             sze "I must be dreaming"
             "{s}Curries{/s} People clearly of sub-continental descent appear around Pragash"
             pra "\"Thanks for appearing on such short notice, my dudes\""
@@ -353,14 +353,162 @@ label english1top:
     sze "I think he's waving to me?"
     sze "\"Hi...uh...?\""
     menu:
+        "Stevie" if sze.fort > 3:
+            sze "\"G'day Stevie\""
+            dng "\"lol when did you get so ozzie?\""
+            sze "\"I dunno, sometimes, I just feel like a videogame character being manipulated into saying random things{nw}\""
+            sze "\"Ahem\""
+            sze "\"What I meant is, sometimes, I just feel a bit weird in the head\""
+            dng "\"lol, as expected\""
+            jump eng1pt1
         "Stefan":
             sze "\"Hi Stefan\""
             dng "\"lol, when did you get a lisp?\""
-        "Steven":
+            sze "Wow, I feel like I am mentally handicapped, but in a social sense"
+            $ sze.loss("charm")
+            sze "\"erm, ahem\""
+            sze "\"anyhow\""
+            sze "\"How were your holidays?\""
+            dng "\"maths and metal\""
+            lee "\"typical\""
+            return    
+        "Steven" if sze.intellect > 3:
             sze "\"Hi Steven\""
             dng "\"Hey Arthur\""
-        "Stevo":
-            sze "\"G'day Stevo\""
-            dng "\"lmao when did you get so ozzie?\""
+            sze "I have sucessfully navigated the treacherous waters of social conduct"
+            sze "Surely I deserve to have an extra charisma point?"
+            "Does sze deserve an extra charm point for remembering an acquaintance's name?"
+            menu:
+                "Yeah, sure":
+                    "But he {i}was{/i} an acquaintance to begin with"
+                    "So will you reconsider?"
+                    menu:
+                        "He still deserves it":
+                            "Aah, sticking to your guns"
+                            "Very well"
+                            $ sze.gain("charm")
+                            "But know this; true Fortians hate guns"
+                            $ sze.loss("fort")
+                            sze "Can I have my headspace back, mr. narrator, and mr. random-other-observer?"
+                            sze "thanks"
+                            sze "wait..."
+                            sze "I gained charm?"
+                            sze "\"YES!\""
+                            dng "\"eh?\""
+                            sze "\"errr...\""
+                            sze "\"I was just pumped for English\""
+                            dng "\"lmao\""
+                            return
+                        "Maybe...idk":
+                            "Maybe?"
+                            "Fuck you, I don't want to pick for you"
+                            $ sze.loss("fort")
+                            $ sze.loss("charm")
+                            $ sze.gain("thirst")
+                            "Next time be more decisive"
+                            "Now continuing on with the Life of Sze"
+                            sze "Oh what the hell?"
+                            sze "Oi, you what?"
+                            sze "please give me my mental space back"
+                            sze "before you screw me over even more"
+                            sze "\"Anyhow, Steven, what were we talking about again?\""
+                            dng "\"err...bruh, we just said hello\""
+                            sze "\"oh...\""
+                            dng "\"lmao\""
+                            return
+                        "No, he's scum":
+                            "I'd say that's a bit harsh, whether or not he ends up that way is dependent on your guidance"
+                            "Nonetheless, such adherence to social justice is an aspect of the Fortianness"
+                            $ sze.gain("fort")
+                            "But since you agree to him being penalised"
+                            $ sze.loss("charm")
+                            $ sze.loss("thirst")
+                            sze "Oi, you what?"
+                            sze "please give me my mental space back"
+                            "Ok"
+                            dng "\"Why do you look like you were talking with someone?\""
+                            sze "\"errrrrr...\""
+                            lee "\"It's fine, I do it all the time\""
+                            lee "\"Really brings out the \"mental\" in mental conversation\""
+                            sze "\"N-n-no, I was just getting myself psyched up for English\""
+                            lee "\"See? Sze really is loopy\""
+                            return
+                "Maybe":
+                    "Maybe?"
+                    "Fuck you, I don't want to pick for you"
+                    $ sze.loss("fort")
+                    $ sze.loss("charm")
+                    $ sze.gain("thirst")
+                    "Next time be more decisive"
+                    "Now continuing on with the Life of Sze"
+                    sze "Oi, you what?"
+                    sze "please give me my mental space back"
+                    sze "before you screw me over even more"
+                    sze "\"Anyhow, Steven, what were we talking about again?\""
+                    dng "\"err...bruh, we just said hello\""
+                    sze "\"oh...\""
+                    dng "\"lmao\""
+                    dng "\"Anyways, how were your holidays?\""
+                    return
+                "Honestly, no":
+                    "I'm glad that you have picked the Fortian choice"
+                    $ sze.gain("fort")
+                    "But since you're so sure of penalising Arthur"
+                    $ sze.loss("charm")
+                    sze "Seems fair, but I'd rather charisma over fortianness for now"
+                    sze "After all, it looks more useful when trying to win over Serena"
+                    "Sounds like someone is thirsty"
+                    $ sze.gain("thirst")
+                    sze "\"fuck\""
+                    dng "\"eh?\""
+                    dng "\"Did I fuck up your name?\""
+                    dng "\"Oh shit, I thought it was Arthur\""
+                    dng "\"err..Arnold, was it? Or is it Adam? Aaron? no, that's not it{nw}\""
+                    sze "\"Nah, you were right first time\""
+                    dng "\"Oh...so why say \"fuck\"?\""
+                    dng "\"It's not like I swing that way, I'm straight as a walking cane\""    
+                    lee "\"Obviously, he was thinking about how he feels like a puppet on the strings of Fate\""
+                    dng "\"Wow, so deep\""
+                    dng "\"That's the way I like it\""
+                    return
+        "Esteban":
+            sze "\"Hola Esteban\""
+            dng "\"lmao when did you get so Spanish?\""
+            sze "\"(inverted ?)que pasa con hablar en espanol, cholo?\""
+            dng "\"I don't understand, but you called me gangster\""
+            dng "\"Thanks, bruh\""
+            $ dng.gain()
+            sze "\"no hay problema\""
+            dng "\"So...you're a farmer now?\""
+            sze "\"eh?\""
+            dng "\"what was that about problems with hay?\""
+            sze "\"idk, I don't Spanish\""
+            dng "\"What? But you were clearly{nw}\""
+            lee "\"Clearly, the French language is better than Spanish\""
+            sze "\"Errr...do you even speak French?\""
+            lee "\"{i}Aide-de-camp in lieu de double entendre{/i}\""
+            sze "\"Seems legit\""
+            lee "\"{i}Je suis exhausted{/i}\""
+            return
+    "You find yourself engrossed in idle banter with Andrew Lee and Steven Deng"
+    sze "\"huh...is it just me or is our teacher late?\""
+    dng "\"nah, you're right, dunno what Schlam is doing\""
+    lee "\"Probably listening to a German band dressed as Mongolians singing about Russia\""
+    dng "\"Eh? Is it metal?\""
+    lee "\"Nah, who even listens to metal?\""
+    dng "\"Oi mate wanna go?\""
+    "How to prevent this escalation to total war?"
+    menu:
+        "With calm and reason":
+            return
+        "By redirecting their anger towards yourself":
+            return
+        "Look for the nearest teacher":
+            return
+        "Blame Roy for everything":
+            return
+    sze "\"Uhhhh\""
+    slm "\"Stop blocking the way, moving quickly now\""
+    "You are nearly bowled over by a short, anthropomorphic tornado"
     sze "\"Bullshittery at its finest\""
     jump mthext1day1

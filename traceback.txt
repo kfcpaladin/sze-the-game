@@ -1,67 +1,41 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 27, in script call
-    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
-  File "game/minigames/pong/pongscreen.rpy", line 4, in script
-    call screen pong(**options)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 86, in execute
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 86, in <module>
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 100, in getKeyPress
-    keyPressed = false
-NameError: global name 'false' is not defined
+  File "game/story/script.rpy", line 11, in script call
+    pause
+  File "renpy/common/00console.rpy", line 765, in script call
+    python in _console:
+  File "renpy/common/00console.rpy", line 765, in script call
+    python in _console:
+  File "renpy/common/00console.rpy", line 765, in script call
+    python in _console:
+  File "game/story/Day 1/7 english.rpy", line 355, in script
+    menu:
+SyntaxError: invalid syntax (game/story/Day 1/7 english.rpy, line 375)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 27, in script call
-    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
-  File "game/minigames/pong/pongscreen.rpy", line 4, in script
-    call screen pong(**options)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
-    scene_lists.replace_transient()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
-    self.remove(layer, tag)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
-    self.hide_or_replace(layer, remove_index, "hide")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
-    d = oldsle.displayable._hide(now - st, now - at, prefix)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 86, in execute
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 86, in <module>
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 100, in getKeyPress
-    keyPressed = false
-NameError: global name 'false' is not defined
+  File "game/story/script.rpy", line 11, in script call
+    pause
+  File "renpy/common/00console.rpy", line 765, in script call
+    python in _console:
+  File "renpy/common/00console.rpy", line 765, in script call
+    python in _console:
+  File "renpy/common/00console.rpy", line 765, in script call
+    python in _console:
+  File "game/story/Day 1/7 english.rpy", line 355, in script
+    menu:
+  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\ast.py", line 1482, in execute
+    choice = renpy.exports.menu(choices, self.set)
+  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\exports.py", line 849, in menu
+    if renpy.python.py_eval(condition) ]
+  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\python.py", line 1793, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\python.py", line 597, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/story/Day 1/7 english.rpy, line 375)
 
-Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
+Windows-8-6.2.9200
 Ren'Py 6.99.13.2919
 sze-the game 0.0

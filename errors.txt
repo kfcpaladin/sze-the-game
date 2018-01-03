@@ -2,9 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/PaddleBot.rpy", line 18: invalid syntax
-            if(self.ball.vel.x == 0) {
-                                      ^
-    
+File "game/story/Day 1/7 english.rpy", line 373: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    lee "\"typical
+                return    
+            "Steven" if sze.intellect ==> 3:
+               ^
+                sze "\"Hi Steven\""
 
 Ren'Py Version: Ren'Py 6.99.13.2919

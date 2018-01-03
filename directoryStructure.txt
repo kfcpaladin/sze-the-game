@@ -38,6 +38,7 @@
 │   │   ├── chaoport.png
 │   │   ├── CmEdPF6UgAAQQgF.jpg
 │   │   ├── CTf1fsBUwAAIe9a.jpg
+│   │   ├── cursor.png
 │   │   ├── CWY6FxMUsAIfDuO.jpg
 │   │   ├── CZ2Yss_UAAAPRqz.jpg
 │   │   ├── darkstreet.jpg
@@ -150,6 +151,10 @@
 │   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
 │   │   ├── auto-10-LT1.save
+│   │   ├── auto-1-LT1.save
+│   │   ├── auto-2-LT1.save
+│   │   ├── auto-3-LT1.save
+│   │   ├── auto-4-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -1463,4 +1468,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1364 files
+99 directories, 1369 files

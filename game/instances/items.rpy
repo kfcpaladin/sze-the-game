@@ -50,6 +50,9 @@ init -1 python:
             }, 
             "icon": "images/calc1.png",
         }),
+    }
+
+    unlockableItems = {
         "god": Item(**{
             "name": "The god particle",
             "desc": "Turns you into michael kirby",
@@ -62,7 +65,7 @@ init -1 python:
             },
             "icon": "images/kirby.png",
         }),
-        "neo armstrong cyclone jet armstrong cannon": Item(**{
+        "neo armstrong": Item(**{
             "name": "neo armstrong cyclone jet armstrong cannon",
             "desc": "The most powerful weapon used by an alien civilization, able to destroy wipe out entire species (sunrise don;t sue us)",
             "stat": {

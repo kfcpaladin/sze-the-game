@@ -1,66 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 27, in script call
-    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
-  File "game/minigames/pong/pongscreen.rpy", line 4, in script
-    call screen pong(**options)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 86, in execute
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 86, in <module>
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 100, in getKeyPress
-    keyPressed = false
-NameError: global name 'false' is not defined
+  File "game/story/Day 1/1 before school.rpy", line 42, in script
+    mox "\"Wow, you are a good Fortian\""
+  File "game/scripts/easterEggs.rpy", line 43, in event
+    self.unlock()
+  File "game/scripts/easterEggs.rpy", line 55, in konamiCodeUnlock
+    renpy.end_interaction()
+TypeError: end_interaction() takes exactly 1 argument (0 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 27, in script call
-    sze "Her name is Serena, a name which evokes images of clear, running brooks, and endless fields of wildflower meadows"
-  File "game/minigames/pong/pongscreen.rpy", line 4, in script
-    call screen pong(**options)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "game/story/Day 1/1 before school.rpy", line 42, in script
+    mox "\"Wow, you are a good Fortian\""
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
-    scene_lists.replace_transient()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
-    self.remove(layer, tag)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
-    self.hide_or_replace(layer, remove_index, "hide")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
-    d = oldsle.displayable._hide(now - st, now - at, prefix)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-  File "game/minigames/pong/pongscreen.rpy", line 86, in execute
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 86, in <module>
-    $ getKeyPress(leftPaddle)
-  File "game/minigames/pong/pongscreen.rpy", line 100, in getKeyPress
-    keyPressed = false
-NameError: global name 'false' is not defined
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 45, in event
+    return self.new_widget.event(ev, x, y, st)  # E1101
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "game/scripts/easterEggs.rpy", line 43, in event
+    self.unlock()
+  File "game/scripts/easterEggs.rpy", line 55, in konamiCodeUnlock
+    renpy.end_interaction()
+TypeError: end_interaction() takes exactly 1 argument (0 given)
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

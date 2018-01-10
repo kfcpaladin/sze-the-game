@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/PaddleBot.rpy", line 18: invalid syntax
-            if(self.ball.vel.x == 0) {
-                                      ^
+File "game/scripts/easterEggs.rpy", line 62: invalid syntax
+                popup("Unlocked item: Neo armstrong")
+                     ^
     
 
 Ren'Py Version: Ren'Py 6.99.13.2919

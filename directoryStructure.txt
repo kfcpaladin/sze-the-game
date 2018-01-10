@@ -150,11 +150,17 @@
 │   │   ├── TheRoomOSTMainTheme.ogg
 │   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
+│   │   ├── 1-1-LT1.save
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -844,6 +850,7 @@
 │       ├── zsync.exe
 │       └── zsyncmake.exe
 ├── log.txt
+├── makeVideo.sh
 ├── OGLdpf.log
 ├── README.md
 ├── renpy
@@ -1468,4 +1475,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1369 files
+99 directories, 1376 files

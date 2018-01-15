@@ -37,25 +37,35 @@ python early:
                     paddle._checkYInside(self.pos.y - self.radius)):
                 # Left side
                 if paddle._checkXInside(self.pos.x + self.radius):
-                    playsfx("vpunch.ogg")
-                    self.vel.x = -abs(self.vel.x)
-                    self.vel.add(paddle.vel)
+                    self.bounceUsingVector(paddle)
                 # Right side
                 elif paddle._checkXInside(self.pos.x - self.radius):
-                    playsfx("vpunch.ogg")
-                    self.vel.x = abs(self.vel.x)
-                    self.vel.add(paddle.vel)
+                    self.bounceUsingVector(paddle)
             # Bounce if collide up and down
             if(paddle._checkXInside(self.pos.x + self.radius) or
                     paddle._checkXInside(self.pos.x - self.radius)):
                 # Top edge
                 if paddle._checkYInside(self.pos.y + self.radius):
-                    playsfx("vpunch.ogg");
-                    self.vel.y = -abs(self.vel.y)
+                    self.bounceUsingVector(paddle)
                 # Bottom edge
                 elif paddle._checkYInside(self.pos.y - self.radius):
-                    playsfx("vpunch.ogg")
-                    self.vel.y = abs(self.vel.y)
+                    self.bounceUsingVector(paddle)
+
+        def bounceUsingVector(self, paddle):
+            playsfx("vpunch.ogg")
+            diff = self.pos.getSub(paddle.pos)
+            diff.y /= (paddle.height/2.0)
+            diff.x /= (paddle.width/2.0)
+            # bounce horizontal
+            if diff.x > 0.5:
+                self.vel.x = self.speed
+            elif diff.x < -0.5:
+                self.vel.x = -self.speed
+            # bounce vertical
+            if diff.y > 0.5:
+                self.vel.y = self.speed
+            elif diff.y < -0.5:
+                self.vel.y = -self.speed
 
 
         def reset(self, side):    

@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/developer.rpy", line 48: u'background' is not a keyword argument or valid child for the vbox statement.
-    background Solid(colour)
-              ^
+File "game/minigames/pong/Ball.rpy", line 57: invalid syntax
+            diff.x /= (paddle.height / (float)paddle.width)
+                                                    ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

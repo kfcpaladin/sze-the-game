@@ -37,3 +37,14 @@ The standard format for a changelog is the date as a title, followed by bullet p
 
 **24/12/2017**
 * Added pong to the game
+
+**10/01/2018**
+* Added custom floating Arthur head cursor
+
+**16/01/2018**
+* Added stat screen for attributes and friends
+* Added achievement system
+* Added achievement screen
+* Change kms screen to interactive gun suicide
+* Fixed pong physics and added custom physics timescale for smoother gameplay
+* Fixed incorrect image dimensions

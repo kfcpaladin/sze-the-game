@@ -40,6 +40,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
 | [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
 | [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
+| [Achievements](./game/classes/Achievement.rpy)     | Used to store, add and update achievements in realtime using the gameloop         |
 | [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
 | [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
 
@@ -51,6 +52,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
 | Game          | [game](./game/instances/game.rpy)     |
 | Quest         | [quests](./game/instances/quests.rpy) |
+| Achievements  | [achievements](./game/instances/achievements.rpy) |
 | Inventory     | [bag](./game/instances/inventory.rpy) |
 | Item          | [{itemList}](./game/instances/items.rpy)|
 
@@ -82,6 +84,14 @@ It will contain methods to add and remove quests, and will be used as the backen
 * **Adding a quest**: $ quests.addQuests(*dict* or *list*)
 * **Removing a quest**: $ quests.completeQuest(*index*)
 * **Debugging current quests**: $ quests.debugQuests()  *(information is printed to console)*  
+
+#### Achievement
+Class that is similar to the Quest class, but is designed specifically for an achievement system.
+It contains methods to add achievements, and to check all achievements to see if their requirements have been met.
+
+* **Adding an achievement**: $ achievements.addAchievements(*dict* or *list*)
+* **Updating all quests**: $ achievements.updateAchievements()
+* **Debugging all achievements**: $ achievements.debugAchievements()  *(information is printed to console)*
 
 #### Inventory
 This will be intended to be used to store **Item** instances, and manage them during the game.
@@ -123,6 +133,7 @@ For special effect sounds, use **playsfx()** to play a short audio clip and **st
 | Screen name                                     | Description                                                               |
 | ----------------------------------------------- | ------------------------------------------------------------------------- |
 | [default](./game/screens/default.rpy)           | Has the default screens used for the menu                                 |
+| [achievementscreen](./game/screens/achievementscreen.rpy) | Used to display all achievements                                |
 | [bag](./game/screens/bag.rpy)                   | Used for the bag inventory, and used the diary grid                       |
 | [countdown](./game/screens/countdown.rpy)       | Kahoot uses this for the countdown, questions and answers                 |
 | [diary](./game/screens/diary.rpy)               | Used for the index of the diary                                           |
@@ -132,7 +143,7 @@ For special effect sounds, use **playsfx()** to play a short audio clip and **st
 | [questscreen](./game/screens/questscreen.rpy)   | Shows the available and completed quests, and allows user to start quests |
 | [roadmap](./game/screens/roadmap.rpy)           | Will be used to display a graph of choices made by the user               |
 | [statscreen](./game/screens/statscreen.rpy)     | Shows the status you have with your friends, and your statistics          |
-| [szeclicker.rpy](./game/screens/szeclicker.rpy) | *A cookie clicker minigame?*                                            |
+| [szeclicker.rpy](./game/screens/szeclicker.rpy) | *A cookie clicker minigame?*                                              |
 
 *Note*: For more information about the structure and implementation of screens, check out [**game/screens/**](./game/screens)
 

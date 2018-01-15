@@ -31,6 +31,7 @@
 │   │   ├── axe.png
 │   │   ├── bag.png
 │   │   ├── ball.png
+│   │   ├── bedroom.jpg
 │   │   ├── billthecleaner.png
 │   │   ├── calc1.png
 │   │   ├── calculetor.png
@@ -56,8 +57,10 @@
 │   │   ├── fortrowecorridor.jpg
 │   │   ├── Fort_Street_High_School_Memorial_Hall.JPG
 │   │   ├── garry.png
+│   │   ├── glockNoTrigger.png
 │   │   ├── grant1.jpg
 │   │   ├── grant.png
+│   │   ├── gunSuicide.jpg
 │   │   ├── hall.jpg
 │   │   ├── jitian.png
 │   │   ├── kirby.png
@@ -158,18 +161,10 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
-│   │   ├── auto-3-LT1.save
-│   │   ├── auto-5-LT1.save
-│   │   ├── auto-6-LT1.save
-│   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
-│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
-│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
-│   │   ├── achievement.rpyc
 │   │   ├── achievementscreen.rpy
 │   │   ├── achievementscreen.rpyc
 │   │   ├── bag.rpy
@@ -248,6 +243,8 @@
 │   ├── sfx
 │   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
 │   │   ├── game_over.ogg
+│   │   ├── gunClick.ogg
+│   │   ├── gunSound.ogg
 │   │   ├── hpunch.ogg
 │   │   ├── mlady.ogg
 │   │   ├── respawn.ogg
@@ -1517,4 +1514,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-100 directories, 1417 files
+100 directories, 1414 files

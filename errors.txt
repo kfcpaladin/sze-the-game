@@ -2,12 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/screens/achievementscreen.rpy", line 60: for expects a non-empty block.
-    for achievement in achievements:
-                                    ^
-
-File "game/screens/achievementscreen.rpy", line 69: screen expects a non-empty block.
-    screen achieve_entry(achievement):
-                                      ^
+File "game/screens/kms.rpy", line 28: Line is indented, but the preceding timer statement does not expect a block. Please check this line's indentation.
+    action [
+    ^
+                Hide("gunDeath", dissolve),
+                Start("deadrestart")
+            ]
 
 Ren'Py Version: Ren'Py 6.99.13.2919

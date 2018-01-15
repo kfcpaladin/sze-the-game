@@ -1,42 +1,32 @@
 ##############################################################################
-screen kms():
+screen kms:
+    add "bedroom.jpg"
+    imagebutton:
+        idle Frame("arthurside.png")
+        xsize 200
+        ysize 300
+        xoffset 200
+        yoffset 200
+    imagebutton:
+        idle Frame("glockNoTrigger.png")
+        xsize 200
+        ysize 150
+        xoffset 600
+        yoffset 300
+        action [
+            Function(playsfx, "gunSound.ogg"),
+            Hide("kms", Fade(2.0,0.0,1.0)),
+            Show("gunDeath"),
+        ],
+        hovered [
+            Function(playsfx, "gunClick.ogg"),
+        ]
 
-    modal True
+screen gunDeath(delay=2):
+    timer delay:
+        action [
+            Hide("gunDeath", dissolve),
+            Start("deadrestart")
+        ]
 
-    window:
-        style "gm_root"
-
-    frame:
-        style_group "yesno"
-
-        xfill True
-        xmargin .05
-        ypos .1
-        yanchor 0
-        ypadding .05
-
-        has vbox:
-            xalign .5
-            yalign .5
-            spacing 30
-
-        label _('Kill myself'):
-            xalign 0.5
-
-        hbox:
-            xalign 0.5
-            spacing 100
-
-            textbutton _("Yes") action Start('deadrestart')
-            textbutton _("No") action Return()
-
-    # Right-click and escape answer "no".
-    key "game_menu" action Return()
-
-init -2:
-    style yesno_button:
-        size_group "yesno"
-
-    style yesno_label_text:
-        text_align 0.5
-        layout "subtitle"
+    

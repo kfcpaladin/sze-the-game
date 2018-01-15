@@ -20,3 +20,6 @@ python early:
             v = Vector(self.x, self.y)
             v.sub(vector)
             return v
+        
+        def getMult(self, scalar):
+            return Vector(self.x*scalar, self.y*scalar)

@@ -109,6 +109,7 @@ screen friend_info_entry(friend):
         "neutral": "#e6ac00",
         "positive": "#009933",
     }
+    default iconSize = 100
     frame:
         style "friend_info_entry"
         if friend.friendship > 0:
@@ -117,14 +118,19 @@ screen friend_info_entry(friend):
             background Solid(friendColour["neutral"])
         else:
             background Solid(friendColour["negative"])
-        vbox:
+        hbox:
             xsize 600
-            text "{b}" + " {0} ({1})".format(unicode.title(friend.name), friend.friendship) + "{/b}"
-            use bar_graph_widget(friend.friendship)
-            textbutton "Show description":
-                action [
-                    Show("friend_info_description", friend=friend),
-                ]
+            # imagebutton:
+            #     idle Frame(friend.image)
+            #     xmaximum iconSize
+            #     ymaximum iconSize
+            vbox:
+                text "{b}" + " {0} ({1})".format(unicode.title(friend.name), friend.friendship) + "{/b}"
+                use bar_graph_widget(friend.friendship)
+                textbutton "Show description":
+                    action [
+                        Show("friend_info_description", friend=friend),
+                    ]
 
 # Show description for friend
 screen friend_info_description(friend=None):

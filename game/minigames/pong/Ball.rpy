@@ -13,9 +13,9 @@ python early:
             }
             self._start()
 
-        def update(self):
+        def update(self, dt=1.0):
             self._limitSpeed()
-            self.pos.add(self.vel)
+            self.pos.add(self.vel.getMult(dt))
             self.checkBounds()
 
         def checkBounds(self):
@@ -57,14 +57,14 @@ python early:
             diff.y /= (paddle.height/2.0)
             diff.x /= (paddle.width/2.0)
             # bounce horizontal
-            if diff.x > 0.5:
+            if diff.x > 0.8:
                 self.vel.x = self.speed
-            elif diff.x < -0.5:
+            elif diff.x < -0.8:
                 self.vel.x = -self.speed
             # bounce vertical
-            if diff.y > 0.5:
+            if diff.y > 0.8:
                 self.vel.y = self.speed
-            elif diff.y < -0.5:
+            elif diff.y < -0.8:
                 self.vel.y = -self.speed
 
 

@@ -11,10 +11,11 @@ label playPong(**options):
 
 screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
                 leftPaddleBot=None, rightPaddleBot=rightPaddleBot,
-                rate=1.0/30.0, duration=60):
-    use navigation # Include the navigation.
-    tag menu
+                fps=60, duration=60):
     add "pong.jpg" 
+    default rate = 1/float(fps)
+    default tickrate = 50
+    default dt = tickrate/float(fps)
     default time_remain = duration
     $ score = ball.score["left"] - ball.score["right"]
     # Timer
@@ -87,9 +88,9 @@ screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
     $ rightPaddleBot.movePaddle()
 
     # Update the game
-    $ ball.update()
-    $ leftPaddle.update()
-    $ rightPaddle.update()
+    $ ball.update(dt)
+    $ leftPaddle.update(dt)
+    $ rightPaddle.update(dt)
     $ ball.bounce(leftPaddle)
     $ ball.bounce(rightPaddle)
 

@@ -46,8 +46,8 @@ python early:
                 self.vel.x = 0
         
         # updates game info on the position of paddle
-        def update(self):
-            self.pos.add(self.vel)
+        def update(self, dt=1.0):
+            self.pos.add(self.vel.getMult(dt))
             self.checkBounds()
 
         """

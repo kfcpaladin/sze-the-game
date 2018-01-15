@@ -34,7 +34,7 @@ screen achievementscreen(achievements=achievements):
     
 
 
-# Quest info
+# Achievement info
 screen achieve_info(achieveType, achievements):
     default achieveColour = {
         "hidden":       "#b30000",
@@ -69,7 +69,7 @@ screen achieve_info(achieveType, achievements):
             else:
                 text "No achievements are currently {0}".format(achieveType)
 
-#Quest entry
+# Achievement entry
 screen achieve_entry(achieveID, achievement, colour):
     default achieveInfo = ["title", "brief"]
     vbox:
@@ -92,7 +92,7 @@ screen achieve_entry(achieveID, achievement, colour):
                     Show("achieve_description", achievement=achievement)
                 ]
 
-# Longer description
+# Longer description of achievement
 screen achieve_description(achievement=None):
     default achieveInfo = ["description", "dependencies"]
     vbox:
@@ -115,27 +115,27 @@ screen achieve_description(achievement=None):
 ##############################################
 
 
-style achieve_info:  # Used for the quests info
+style achieve_info:  
     xsize 625
     ysize 450
     xoffset 720
     yoffset 95
 
-style achieve_vpgrid: # Used to display a list of quests
+style achieve_vpgrid: 
     xsize 600
     ysize 415
 
-style achieve_entry:  # Used for easy quest entry in the list
+style achieve_entry:  
     xsize 600
     ysize 40
 
-style achieve_description:  # Used for the quests info
+style achieve_description:  
     xsize 625
     ysize 200
     xoffset 720
     yoffset 565
     
-style achieve_select: # Used to describe the quest type selection menu
+style achieve_select:
     xmaximum 625
     xoffset 700
     ysize 20

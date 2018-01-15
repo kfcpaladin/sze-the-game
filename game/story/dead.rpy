@@ -13,6 +13,7 @@ label dead:
             with fade
             $ playsfx("respawn.ogg")
             "The Lord of Light has granted me another chance..."
+            $ playmusic("p3IwatodaiDorm.ogg")
             jump start
 
 label deadrestart:
@@ -20,6 +21,7 @@ label deadrestart:
     $ stopmusic()
     $ playsfx("game_over.ogg")
     sze "I dead"
+    $ playmusic("p3IwatodaiDorm.ogg")    
     jump start
 
 label actualded:

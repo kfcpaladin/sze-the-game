@@ -15,14 +15,14 @@ screen kms:
         yoffset 300
         action [
             Function(playsfx, "gunSound.ogg"),
-            Hide("kms", Fade(2.0,0.0,1.0)),
+            Hide("kms", Fade(2.5,0.0,1.0)),
             Show("gunDeath"),
         ],
         hovered [
             Function(playsfx, "gunClick.ogg"),
         ]
 
-screen gunDeath(delay=2):
+screen gunDeath(delay=2.5):
     timer delay:
         action [
             Hide("gunDeath", dissolve),

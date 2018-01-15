@@ -25,7 +25,6 @@ screen kms:
 screen gunDeath(delay=2.5):
     timer delay:
         action [
-            Hide("gunDeath", dissolve),
             Start("deadrestart")
         ]
 

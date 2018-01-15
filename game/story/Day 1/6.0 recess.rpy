@@ -143,7 +143,7 @@ label recess1a:
                                 "Recess is over, time for next class"
                                 jump english1
 
-# make variable for royfriendship
+# make variable for royfriendship --> its roy.friendship
                         "\"Yes\"":
                             sze "\"Yes\""
                             sze "\"I'd totes stick ma dick in the exhaust pipe of a car transformer\""

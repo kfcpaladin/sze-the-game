@@ -18,6 +18,7 @@ init python:
         "moxCounter": 0,
         "timeTravelCounter": 0,
         "currentDay": 1,
+        "suicideCount": 0,
     })
 
     game.addTimes({

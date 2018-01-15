@@ -39,3 +39,16 @@ init python:
             },
         },
     })
+
+    achievements.addAchievements({
+        "suicide": {
+            "title": "Become suicidal",
+            "brief": "Kill yourself at least 5 times",
+            "description": "You are as suicidal as ISIS",
+            "hidden": True,
+            "conditions":{
+                "function": lambda: game.suicideCount >= 5,
+                "msg": "Stop killing yourself",
+            },
+        },
+    })

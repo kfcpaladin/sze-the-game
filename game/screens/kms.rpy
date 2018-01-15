@@ -15,6 +15,7 @@ screen kms:
         yoffset 300
         action [
             Function(playsfx, "gunSound.ogg"),
+            Function(game.gain, "suicideCount", 1),
             Hide("kms", Fade(2.5,0.0,1.0)),
             Show("gunDeath"),
         ],

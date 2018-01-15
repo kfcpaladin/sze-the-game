@@ -1,64 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "game/screens/kms.rpy", line 23, in execute
-    screen blackDeath:
-  File "game/screens/kms.rpy", line 23, in execute
-    screen blackDeath:
-  File "game/screens/kms.rpy", line 24, in execute
-    imagebutton:
-Exception: Imagebutton does not have a idle image.
+  File "game/story/Day 1/1 before school.rpy", line 45, in script
+    $ sze.gain("fort")
+ScriptError: could not find label 'fortmap'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/kms.rpy", line 23, in execute
-    screen blackDeath:
-  File "game/screens/kms.rpy", line 23, in execute
-    screen blackDeath:
-  File "game/screens/kms.rpy", line 24, in execute
-    imagebutton:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 926, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 922, in choice
-    raise Exception("Imagebutton does not have a %s image." % (name, ))
-Exception: Imagebutton does not have a idle image.
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
+    renpy.execution.run_context(True)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "game/story/Day 1/1 before school.rpy", line 45, in script
+    $ sze.gain("fort")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 861, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'fortmap'.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

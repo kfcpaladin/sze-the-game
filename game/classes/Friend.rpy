@@ -1,5 +1,10 @@
 python early:
     class Friend(ADVCharacter):
+        """
+            self.attributes = all attributes
+            self.attributeMessages = all messages for losing and gaining attributes
+            self.description = description used for friend
+        """
         def __init__(self, name, kind=None, **properties):
             ADVCharacter.__init__(self, name, kind=kind, **properties)
             self._baseAttributes = {    # these are attributes which must exist
@@ -10,12 +15,16 @@ python early:
             }
             self.attributes = []
             self.attributeMessages = {}
+            self.description = None
             self._getIterableAttributes(properties)
+            self._stringType = (str, basestring, unicode)
 
             for attribute, value in self._baseAttributes.iteritems():
                 if not hasattr(self, attribute):
                     setattr(self, attribute, value)
                     self.attributes.append(attribute)
+            
+            friendList.append(self)
 
         """
             Used to add attributes to a character, and set messages
@@ -36,6 +45,11 @@ python early:
             for attribute, value in msgDict.iteritems():
                 self._checkAttribute(attribute)
                 self.attributeMessages[attribute] = value
+
+        def setDescription(self, msg):
+            if type(msg) not in self._stringType:
+                raise TypeError("Expected string for friend description")
+            self.description = msg
 
         """
             Methods used to provide messages based on which attribute was modified

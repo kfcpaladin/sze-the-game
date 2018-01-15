@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/scripts/easterEggs.rpy", line 62: invalid syntax
-                popup("Unlocked item: Neo armstrong")
-                     ^
-    
+File "game/screens/developer.rpy", line 48: u'background' is not a keyword argument or valid child for the vbox statement.
+    background Solid(colour)
+              ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

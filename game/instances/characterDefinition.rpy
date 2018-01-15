@@ -22,3 +22,7 @@ define slm = Friend('Schlam', friendship=0, color="#FFFFFF", image="shlam")
 define tod = Friend('Todd Treoir', friendship=0, color="#99ff99", image="todd")
 define wil = Friend('Will Yin', friendship=40, color="#ff0000", image="yin")
 define wiy = Friend('Will Yang', friendship=40, color="#FFFFFF", image="will")
+
+init -1 python:
+    friendList = []
+

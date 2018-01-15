@@ -4,13 +4,13 @@ screen bag_view(bag=bag):
     add "Diary.jpg"
     use bag_stats(bag.who)
     # Variables
-    $ colours = {
+    default colours = {
         "item_used": "#00993371",       # Green
         "item_not_used": "#e6ac0071",   # Orange
         "item_blocked": "#b30000",      # Red
         "background": "#00000000",      # Transparent
     }
-    $ grid = {
+    default grid = {
         "size": (112, 112),
         "spacing": 5,
         "offset": (43, 131),
@@ -70,11 +70,11 @@ screen bag_view(bag=bag):
                         value YScrollValue(_grid_name)
 
 screen bag_tooltip(item=False):
-    $ desc_box = {
+    default desc_box = {
         "offset": (703, 95),
         "size": (646, 429),
     }
-    $ colours = {
+    default colours = {
         "not_used": "#e6ac00",
         "used": "#009933",
     }
@@ -111,7 +111,7 @@ screen bag_tooltip(item=False):
     # Statistics box
 
 screen bag_stats(person=False):
-    $ stat_box = {
+    default stat_box = {
         "offset": (703, 577),
         "size": (646, 75),
     }

@@ -4,5 +4,13 @@ screen achievement:
 
     # Include the navigation menu
     use navigation
+    add "Quests.jpg"
 
-    text    "{color=#f00}{b}achievemnt screen{/b}{/color}"
+    # Give title of page
+    frame:
+        area (0, 0, 500, 50)
+        text "Achievements": 
+            size 45
+            xoffset 30
+            yoffset 10
+            font "DejaVuSans.ttf"

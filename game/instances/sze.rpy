@@ -120,6 +120,64 @@ init python:
             {"min":-100, "msg": "You are disgusted by the concept of sexual relations, even with Serena."},
         ],
     })
+    # set stat messages
+    sze.setStatMessages({
+        "charm": [
+            {"min": 100, "msg": "You slay just by looking. Gaze upon the world, your dominion"},
+            {"min": 75,  "msg": "With that level of charm, you have probably slayed every LG in Sydney by now"},
+            {"min": 50,  "msg": "You have surpassed even Chao in slaying ability; the teacher becomes the student"},
+            {"min": 25,  "msg": "You are just very slightly charming"},
+            {"min": 0,   "msg": "With such exceptionally average charm, its going to take a very long time for senpai to notice you."},
+            {"min":-25,  "msg": "With your charm, or lack thereof, there seems to be an invisible forcefield repelling girls from you"},
+            {"min":-50,  "msg": "With that much charm, you are often mistaken for a modern art piece"},
+            {"min":-75,  "msg": "The average gayness of every room you enter is increased by 100%, due to your charm"},
+            {"min":-100, "msg": "You once tried to masturbate, your hand rejected you"},
+        ],
+        "fort": [
+            {"min": 100, "msg": "You are a proper protester, you call the police 'pig dogs' and you are part of an anarcho-Maoist-libertarian artist collective"},
+            {"min": 75,  "msg": "Michael Kirby looks up to you and your fortianness"},
+            {"min": 50,  "msg": "With that much Fortianness, you would be called in to give talks about social justice, but you don't have any white priviledge to acknowledge and you are still straight (you think), cis-gendered scum"},
+            {"min": 25,  "msg": "With that much Fortianness, you probably can make it into the SRC if you were bothered"},
+            {"min": 0,   "msg": "At [sze.fort] Fortianness, you are merely a generic student"},
+            {"min":-25,  "msg": "Your poor fortianness of [sze.fort] suggests you might secretly be a James Ruse spy"},
+            {"min":-50,  "msg": "At [sze.fort] fortianness, Moxham is willing to engage in the capitalist process of putting a bounty on your head to kill you"},
+            {"min":-75,  "msg": "With so little fortianness, you're probs a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"},
+            {"min":-100, "msg": "With so little fortian- how are you not just expelled at this point?"},
+        ],
+        "intellect": [
+            {"min": 100, "msg": "You have surpassed even Justin Wu, dux of James Ruse"},
+            {"min": 75,  "msg": "Maybe you'll be able to impress Serena with your 99.95 ATAR"},
+            {"min": 50,  "msg": "A bit more hard work and you will truly ACE TRIALS"},
+            {"min": 25,  "msg": "At marginally above average intellect you really shouldnt be celebrating yet"},
+            {"min": 0,   "msg": "With your remarkably average intellect, your waifu will probably not be impressed"},
+            {"min":-25,  "msg": "You are a bit slow, should you even be in a selective school?"},
+            {"min":-50,  "msg": "Your test results are probably worse than Chao's tests for STDs"},
+            {"min":-75,  "msg": "It's astonishing how you made it to Fort Street. How many dicks did you have to suck to get here?"},
+            {"min":-100, "msg": "With almost no brain activity, the fact that your nervous system still works is a scientific anomaly."},
+        ],
+        "strength": [
+            {"min": 100, "msg": "You are Level S-Class 11th-dan Golden Jade Dragon Jedi Master Ninja Samurai Viking Knight Marshal Admiral"},
+            {"min": 75,  "msg": "With your combat propensity, you probably ended 300 spartans with a single one-inch punch."},
+            {"min": 50,  "msg": "Your skill in a fight would allow you to beat black-belt Aradhya and Jew-jitsu Steven."},
+            {"min": 25,  "msg": "With such strength, you can probs beat the average student."},
+            {"min": 0,   "msg": "At your level it is advised that you tactically retreat from your fights."},
+            {"min":-25,  "msg": "Your below average combat propensity suggests that you have a thing for being dominated."},
+            {"min":-50,  "msg": "At [sze.strength] combat propensity, the only slaying you know is in Dungeons & Dragons..."},
+            {"min":-75,  "msg": "With that combat 'proficiency' pussies slays you."},
+            {"min":-100, "msg": "Don't fight; you will get rekt so hard, you will be reincarnated as an abortion."},
+        ],
+        "thirst": [
+            {"min": 100, "msg": "At a thirst of [sze.thirst], you rival Tiddalik"},
+            {"min": 75,  "msg": "You're so thirsty, sometimes moxham appears in your {s}dreams{/s} hallucinations"},
+            {"min": 50,  "msg": "With that much thirst, like Roy, you are willing to partake in sexual activities with robots for water"},
+            {"min": 25,  "msg": "Even a can of SOLO cannot crush your thirst of [sze.thirst]"},
+            {"min": 0,   "msg": "With this much thirstiness, you have the standard healthy desires of a teenage boy of your age."},
+            {"min":-25,  "msg": "You have been oft compared to LiXu due to your lack of thirst"},
+            {"min":-50,  "msg": "The only thing you drink is mountain dew when playing WoW"},
+            {"min":-75,  "msg": "With your lack of desire for water, it is no surprise you have already taken a vow of celibacy."},
+            {"min":-100, "msg": "You elected to have a penectomy, your bladder being sufficient for your needs."},
+        ]
+    })
 
 
 

@@ -154,7 +154,6 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
-│   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
 │   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
@@ -163,6 +162,7 @@
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
+│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── achievement.rpy
@@ -171,6 +171,8 @@
 │   │   ├── bag.rpyc
 │   │   ├── default.rpy
 │   │   ├── default.rpyc
+│   │   ├── developer.rpy
+│   │   ├── developer.rpyc
 │   │   ├── diary.rpy
 │   │   ├── diary.rpyc
 │   │   ├── fortmap.rpy
@@ -196,6 +198,39 @@
 │   │   ├── images.rpyc
 │   │   ├── kahootQuestions.rpy
 │   │   ├── kahootQuestions.rpyc
+│   │   ├── labels
+│   │   │   ├── after_rollcall.rpy
+│   │   │   ├── after_rollcall.rpyc
+│   │   │   ├── assembly.rpy
+│   │   │   ├── assembly.rpyc
+│   │   │   ├── before_school.rpy
+│   │   │   ├── before_school.rpyc
+│   │   │   ├── economics.rpy
+│   │   │   ├── economics.rpyc
+│   │   │   ├── engineering.rpy
+│   │   │   ├── engineering.rpyc
+│   │   │   ├── english.rpy
+│   │   │   ├── english.rpyc
+│   │   │   ├── jigassembly.rpy
+│   │   │   ├── jigassembly.rpyc
+│   │   │   ├── labels.rpy
+│   │   │   ├── labels.rpyc
+│   │   │   ├── maths.rpy
+│   │   │   ├── maths.rpyc
+│   │   │   ├── office.rpy
+│   │   │   ├── office.rpyc
+│   │   │   ├── physics.rpy
+│   │   │   ├── physics.rpyc
+│   │   │   ├── quest_garyreeducation.rpy
+│   │   │   ├── quest_garyreeducation.rpyc
+│   │   │   ├── recess.rpy
+│   │   │   ├── recess.rpyc
+│   │   │   ├── screens.rpy
+│   │   │   ├── screens.rpyc
+│   │   │   ├── start_dead.rpy
+│   │   │   └── start_dead.rpyc
+│   │   ├── mousePosition.rpy
+│   │   ├── mousePosition.rpyc
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
 │   │   ├── popup.rpy
@@ -1475,4 +1510,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1376 files
+100 directories, 1410 files

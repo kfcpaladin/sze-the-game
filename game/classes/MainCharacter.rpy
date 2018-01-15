@@ -1,5 +1,12 @@
 python early:
     class MainCharacter(ADVCharacter):
+        """
+            self.attributes = all attributes
+            self.tutorials = all tutorial messages
+            self.introMessages = all intro messages for attributes
+            self.attributeMessages = all jokes for attributes
+            self.statMessages = all messages for statscreen
+        """
         def __init__(self, name, kind=None, **properties):
             ADVCharacter.__init__(self, name, kind=kind, **properties)
             self._default = {
@@ -19,10 +26,16 @@ python early:
                 "attributeMessage": [
                     {"min": 0, "msg": None},
                 ],
+                "statMessage": [
+                    {"min": 0, "msg": None},
+                ]
             }
             self.setAttributes(self._default["attributes"])
 
-        ## Update character attributes and generate default tutorial
+        """
+            Define all character attributes here
+        """
+        # Update character attributes and generate default tutorial
         def setAttributes(self, attributes):
             """
                 attributes = {
@@ -42,7 +55,15 @@ python early:
             self.setTutorials()
             self.setAttributeIntroMessages()
             self.setAttributeMessages()
+            self.setStatMessages()
 
+        """
+            Setup all the messages here
+            setTutorials = give a dictionary of tutorial messages
+            setAttributeIntroMessages = An intro to each attribute before the joke
+            setAttributeMessages = Give a joke for each attribute
+            setStatMessages = A message for the statscreen (DEAN)
+        """
         # Set the tutorial messages and status for character
         def setTutorials(self, tutorials={}):
             """
@@ -68,7 +89,7 @@ python early:
                 else:
                     self.tutorials[attribute] = self._default["tutorialMessage"]
 
-        ## Set initial message for the loss or gain of an attribute
+        # Set initial message for the loss or gain of an attribute
         def setAttributeIntroMessages(self, msgDict={}):
             """
                 msgDict = {
@@ -89,7 +110,7 @@ python early:
                     self.introMessages[attribute] = self._default["attributeIntroMessage"]
 
 
-        ## Set attribute status messages
+        # Set attribute status messages
         def setAttributeMessages(self, msgDict={}):
             """ 
                 msgDict = {
@@ -114,8 +135,25 @@ python early:
                 else:
                     self.attributeMessages[attribute] = self._default["attributeMessage"]
 
+        # Set attribute messages for statscreen
+        def setStatMessages(self, msgDict={}):
+            """
+                msgDict is the same a setAttributeMessages() above
+            """
+            self._checkDict(msgDict)
+            self.statMessages = {}
+            for attribute in self.attributes:
+                if attribute in msgDict:
+                    sortedList = sorted(msgDict[attribute], key=lambda k: k["min"], reverse=True)
+                    self.statMessages[attribute] = sortedList
+                else:
+                    self.statMessages[attribute] = self._default["statMessage"]
+
         """
             Methods used during the parsing of the renpy scripts
+            loss = decrease attribute and give the appropriate message
+            gain = increase attribute and give the appropriate message
+            _changeAttribute = directly sets the attribute (Should not be used by writers)
         """
 
         # Lose n points for a specified attribute
@@ -139,6 +177,11 @@ python early:
 
         """
             Methods used by loss/gain functions
+            showTutorial = will deactivate tutorial message when called, and call sayTutorialMessage
+            sayTutorialMessage = will say the message
+            sayIntro = Gives intro to losing or gaining an attribute
+            sayStatus = Gives the joke for an attribute
+            getStatMessage = Gets the appropriate joke for statscreen
         """
         # Show a tutorial if true, then toggle off
         def showTutorial(self, attribute, msgType="msgLoss"):
@@ -172,6 +215,38 @@ python early:
             else:
                 message = msgList[-1]["msg"]
             self._say(message)
+
+        # For an attribute, display the status message    
+        def getStatMessage(self, attribute):
+            self._checkAttribute(attribute)
+            msgList = self.statMessages[attribute]
+            attributeValue = getattr(self, attribute)
+            message = None
+            for msgEntry in msgList:
+                if attributeValue >= msgEntry["min"]:
+                    message = msgEntry["msg"]
+                    break
+            else:
+                message = msgList[-1]["msg"]
+            if message is None:
+                message = "You have a {0} of {1}".format(attribute, attributeValue)
+            return message
+
+        # Get tutorial message
+        def getTutorialMessage(self, attribute, msgType="msgGain"):
+            self._checkAttribute(attribute)
+            message = self.tutorials[attribute][msgType]
+            if message is None:
+                message = "No tutorial"
+            return message
+
+        
+        """
+            Validation functions used to check if parameters are correct
+            _checkAttribute = checks if attribute is part of base attributes
+            _checkDict = checks if a msgDict is a dictionary of something else
+            _say = wraps message into a list before calling each one sequentially
+        """
 
         # validate attribute is valid
         def _checkAttribute(self, attribute):  

@@ -42,7 +42,7 @@ label kahootGame(question, show_result=True, **options):
             "Finally you give up on the game of Kahoot"
             return
 
-screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.01):
+screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.1):
     default time_remain = time_range
     default started = False
     if started is False:
@@ -84,6 +84,9 @@ screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.0
                     action [
                         Hide('kahootscreen', dissolve),
                         Return({"points": points, "time_remain": time_remain, "choice": answer})
+                    ]
+                    hovered [
+                        Function(playsfx, "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
                     ]
 
 

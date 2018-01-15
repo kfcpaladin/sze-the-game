@@ -1,48 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/story/Day 1/1 before school.rpy", line 42, in script
-    mox "\"Wow, you are a good Fortian\""
-  File "game/scripts/easterEggs.rpy", line 43, in event
-    self.unlock()
-  File "game/scripts/easterEggs.rpy", line 55, in konamiCodeUnlock
-    renpy.end_interaction()
-TypeError: end_interaction() takes exactly 1 argument (0 given)
+After initialization, but before game start.
+  File "game/screens/developer.rpy", line 4, in prepare_screen
+    screen developerScreen:
+  File "game/screens/developer.rpy", line 4, in prepare
+    screen developerScreen:
+Exception: A screen named label_description does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/1 before school.rpy", line 42, in script
-    mox "\"Wow, you are a good Fortian\""
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
-    **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 45, in event
-    return self.new_widget.event(ev, x, y, st)  # E1101
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "game/scripts/easterEggs.rpy", line 43, in event
-    self.unlock()
-  File "game/scripts/easterEggs.rpy", line 55, in konamiCodeUnlock
-    renpy.end_interaction()
-TypeError: end_interaction() takes exactly 1 argument (0 given)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 88, in run
+    renpy.display.screen.prepare_screens()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 859, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens/developer.rpy", line 4, in prepare_screen
+    screen developerScreen:
+  File "game/screens/developer.rpy", line 4, in prepare
+    screen developerScreen:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/sl2/slast.py", line 1583, in prepare
+    raise Exception("A screen named {} does not exist.".format(self.target))
+Exception: A screen named label_description does not exist.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

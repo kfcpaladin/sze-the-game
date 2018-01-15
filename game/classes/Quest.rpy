@@ -53,7 +53,8 @@ python early:
             """
                 Will iterate through the dictionary of unavailable quests, and check
                 if they dependencies have been satisified. This occurs when the 
-                dependent quests are in the available section.
+                dependent quests are in the available section.Then it will add them
+                to available quests
                 This method will be called whenever a quest is completed, and may
                 cause some performance drops
             """
@@ -74,8 +75,9 @@ python early:
             # since removing a quest during iteration results in an error
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
-            playsfx("xbox.ogg")
-            popup(questUnlockMessages)
+            if len(questUnlockMessages) > 0:
+                playsfx("xbox.ogg")
+                popup(questUnlockMessages)
 
         def unlockQuest(self, questID):
             """

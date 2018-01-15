@@ -59,13 +59,17 @@ python early:
             # bounce horizontal
             if diff.x > 0.8:
                 self.vel.x = self.speed
+                self.vel.y += paddle.vel.y
             elif diff.x < -0.8:
                 self.vel.x = -self.speed
+                self.vel.y += paddle.vel.y
             # bounce vertical
             if diff.y > 0.8:
                 self.vel.y = self.speed
+                self.vel.x += paddle.vel.x
             elif diff.y < -0.8:
                 self.vel.y = -self.speed
+                self.vel.x += paddle.vel.x
 
 
         def reset(self, side):    

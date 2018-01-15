@@ -10,6 +10,8 @@
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
 │   ├── classes
+│   │   ├── Achievement.rpy
+│   │   ├── Achievement.rpyc
 │   │   ├── Friend.rpy
 │   │   ├── Friend.rpyc
 │   │   ├── Game.rpy
@@ -96,6 +98,8 @@
 │   │   ├── Workshop.jpg
 │   │   └── yang1.png
 │   ├── instances
+│   │   ├── achievements.rpy
+│   │   ├── achievements.rpyc
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
 │   │   ├── friends.rpy
@@ -155,12 +159,19 @@
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
+│   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
+│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
-│   │   ├── achievement.rpy
 │   │   ├── achievement.rpyc
+│   │   ├── achievementscreen.rpy
+│   │   ├── achievementscreen.rpyc
 │   │   ├── bag.rpy
 │   │   ├── bag.rpyc
 │   │   ├── default.rpy
@@ -171,6 +182,8 @@
 │   │   ├── diary.rpyc
 │   │   ├── fortmap.rpy
 │   │   ├── fortmap.rpyc
+│   │   ├── gameLoop.rpy
+│   │   ├── gameLoop.rpyc
 │   │   ├── kms.rpy
 │   │   ├── kms.rpyc
 │   │   ├── popup.rpy
@@ -1504,4 +1517,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-100 directories, 1404 files
+100 directories, 1417 files

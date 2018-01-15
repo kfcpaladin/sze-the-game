@@ -2,9 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/Ball.rpy", line 57: invalid syntax
-            diff.x /= (paddle.height / (float)paddle.width)
-                                                    ^
-    
+File "game/screens/achievementscreen.rpy", line 60: for expects a non-empty block.
+    for achievement in achievements:
+                                    ^
+
+File "game/screens/achievementscreen.rpy", line 69: screen expects a non-empty block.
+    screen achieve_entry(achievement):
+                                      ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -14,7 +14,7 @@ python early:
             self._start()
 
         def update(self, dt=1.0):
-            self._limitSpeed()
+            # self._limitSpeed() # hardcore handball
             self.pos.add(self.vel.getMult(dt))
             self.checkBounds()
 

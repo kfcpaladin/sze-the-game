@@ -7,24 +7,41 @@ python early:
         """
         def __init__(self, name, kind=None, **properties):
             ADVCharacter.__init__(self, name, kind=kind, **properties)
-            self._baseAttributes = {    # these are attributes which must exist
+            # Add default options
+            self.defaultOptions = {
+                "attributes": [],
+                "attributeMessages": {},
+                "description": None,
+                "icon": None,
+            }
+            self.addDefaultOptions()
+            # these are attributes which must exist 
+            self._baseAttributes = {    
                 "friendship": 0,
                 "intellect": 0,
                 "strength": 0,
                 "thirst": 0,
             }
-            self.attributes = []
-            self.attributeMessages = {}
-            self.description = None
+            self.addBaseAttributes()
+            # Get iterable properties 
             self._getIterableAttributes(properties)
             self._stringType = (str, basestring, unicode)
+            # append to global friend list
+            friendList.append(self)
 
+        """ 
+            Add default options and attributes
+        """
+        def addDefaultOptions(self):
+            for key, value in self.defaultOptions.iteritems():
+                if not hasattr(self, key):
+                    setattr(self, key, value)
+
+        def addBaseAttributes(self):
             for attribute, value in self._baseAttributes.iteritems():
                 if not hasattr(self, attribute):
                     setattr(self, attribute, value)
                     self.attributes.append(attribute)
-            
-            friendList.append(self)
 
         """
             Used to add attributes to a character, and set messages
@@ -33,19 +50,25 @@ python early:
         def addAttributes(self, attributes):
             if type(attributes) is list:
                 attributes = self._getDictFromList(attribute)
-            if type(attributes) is not dict:
+            elif type(attributes) is not dict:
                 raise TypeError("Expected list or dict for attributes, instead got {0}".format(type(attributes)))
             for attribute, value in attributes.iteritems():
                 if attribute not in self.attributes:
                     self.attributes.append(attribute)
                 setattr(self, attribute, value)
 
+        """
+            Set a message for an attribute loss/gain
+        """
         # Set the messages for each attribute
         def setMessages(self, msgDict):
             for attribute, value in msgDict.iteritems():
                 self._checkAttribute(attribute)
                 self.attributeMessages[attribute] = value
 
+        """
+            Set a description to be used by statscreen
+        """
         def setDescription(self, msg):
             if type(msg) not in self._stringType:
                 raise TypeError("Expected string for friend description")
@@ -109,6 +132,9 @@ python early:
             for line in message:
                 renpy.say(adv, line)
 
+        """
+            Get all properties that are iterable for loss/gain functions
+        """
         # Used to get iterable attributes from properties
         def _getIterableAttributes(self, properties):
             for attribute, value in properties.iteritems():

@@ -67,7 +67,7 @@ init -1 python hide:
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "Fort_Street_High_School_Memorial_Hall.JPG",
+        mm_root = backgroundDir + "memorial_hall.jpg",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
@@ -323,5 +323,5 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-    config.mouse = { 'default' : [ ('cursor.png', 0, 0)] }
+    config.mouse = { 'default' : [ (iconDir + 'cursor.png', 0, 0)] }
     

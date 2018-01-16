@@ -1,6 +1,6 @@
 ##############################################
 screen questscreen(quests=quests):
-    add "Quests.jpg"
+    add screenBackgroundDir + "diaryNormal.jpg"
     use diary_nav
     use diary_title("Quests")
     # Used to keep track of the quest types, and which one to show

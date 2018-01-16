@@ -2,15 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens/developer.rpy", line 136: reached end of line when expecting ')'.
-    action If(
-                            showKahoot is False,
-                            true = [
-                                SetScreenVariable("showKahoot", True)
-                            ],
-                            false = [
-                                SetScreenVariable("showKahoot", False)
-                            ]
-                        }
+File "game/screens/bag.rpy", line 5: expected a keyword argument, colon, or end of line.
+    add add "screenBackgrounds/diaryGrid.jpg"
+            ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

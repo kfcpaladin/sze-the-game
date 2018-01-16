@@ -1,7 +1,7 @@
 ##########################
 # shows choices user has made
 screen roadmap:
-    add "Quests.jpg"
+    add screenBackgroundDir + "diaryNormal.jpg"
     use diary_nav
     use diary_title("Roadmap")
 

@@ -1,5 +1,5 @@
 screen achievementscreen(achievements=achievements):
-    add "Quests.jpg"
+    add screenBackgroundDir + "diaryNormal.jpg"
     use diary_nav
     use diary_title("Achievements")
     default currentAchieveType = achievements.currentAchieveType

@@ -8,7 +8,7 @@ init -1 python:
                 "intellect": -1,
                 "strength": 1,
             }, 
-            "icon": "images/ball.png",
+            "icon": itemDir + "ball.png",
         }),
         "axe": Item(**{
             "name": "axe", 
@@ -18,7 +18,7 @@ init -1 python:
                 "intellect": -10,
                 "strength": 10,
             }, 
-            "icon": "images/axe.png",
+            "icon": itemDir + "axe.png",
         }),
         "money": Item(**{
             "name": "monies", 
@@ -28,7 +28,7 @@ init -1 python:
                 "intellect": 4,
                 "strength": -3,
             }, 
-            "icon": "images/bag.png",
+            "icon": itemDir + "bag.png",
         }),
         "fireaxe": Item(**{
             "name": "fireaxe", 
@@ -38,7 +38,7 @@ init -1 python:
                 "intellect": -20,
                 "strength": 15,
             }, 
-            "icon": "images/axe.png",
+            "icon": itemDir + "axe.png",
         }),
         "calc": Item(**{
             "name": "calculator", 
@@ -48,11 +48,11 @@ init -1 python:
                 "intellect": 20,
                 "strength": -10,
             }, 
-            "icon": "images/calc1.png",
+            "icon": itemDir + "calc1.png",
         }),
     }
 
-    unlockableItems = {
+    unlockableItems= {
         "god": Item(**{
             "name": "The god particle",
             "desc": "Turns you into michael kirby",
@@ -63,7 +63,7 @@ init -1 python:
                 "strength": 1000,
                 "thirst": -1000,
             },
-            "icon": "images/kirby.png",
+            "icon": itemDir + "kirby.png",
         }),
         "neo armstrong": Item(**{
             "name": "neo armstrong cyclone jet armstrong cannon",
@@ -75,6 +75,6 @@ init -1 python:
                 "strength": 1000,
                 "thirst": 1000,
             },
-            "icon": "images/cannon.png",
+            "icon": itemDir + "cannon.png",
         })
     }

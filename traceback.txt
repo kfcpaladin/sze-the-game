@@ -1,74 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens/developer.rpy", line 121, in prepare_screen
-    screen minigames_screen:
-  File "game/screens/developer.rpy", line 121, in prepare
-    screen minigames_screen:
-  File "game/screens/developer.rpy", line 123, in prepare
-    vbox:
-  File "game/screens/developer.rpy", line 123, in prepare
-    vbox:
-  File "game/screens/developer.rpy", line 125, in prepare
-    frame:
-  File "game/screens/developer.rpy", line 125, in prepare
-    frame:
-  File "game/screens/developer.rpy", line 126, in prepare
-    has vbox
-  File "game/screens/developer.rpy", line 126, in prepare
-    has vbox
-  File "game/screens/developer.rpy", line 128, in prepare
-    hbox:
-  File "game/screens/developer.rpy", line 128, in prepare
-    hbox:
-  File "game/screens/developer.rpy", line 135, in prepare
-    textbutton "Kahoot":
-  File "game/screens/developer.rpy", line 135, in prepare
-    textbutton "Kahoot":
-SyntaxError: invalid syntax (developer.rpy, line 137)
+While running game code:
+  File "game/story/Day 1/5.0 assembly.rpy", line 233, in script
+    "You hear Richard cough loudly"
+IOError: Couldn't find file './music/EscortsGaudeamusDooWop.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
-    renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
-    run(restart)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 88, in run
-    renpy.display.screen.prepare_screens()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 859, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens/developer.rpy", line 121, in prepare_screen
-    screen minigames_screen:
-  File "game/screens/developer.rpy", line 121, in prepare
-    screen minigames_screen:
-  File "game/screens/developer.rpy", line 123, in prepare
-    vbox:
-  File "game/screens/developer.rpy", line 123, in prepare
-    vbox:
-  File "game/screens/developer.rpy", line 125, in prepare
-    frame:
-  File "game/screens/developer.rpy", line 125, in prepare
-    frame:
-  File "game/screens/developer.rpy", line 126, in prepare
-    has vbox
-  File "game/screens/developer.rpy", line 126, in prepare
-    has vbox
-  File "game/screens/developer.rpy", line 128, in prepare
-    hbox:
-  File "game/screens/developer.rpy", line 128, in prepare
-    hbox:
-  File "game/screens/developer.rpy", line 135, in prepare
-    textbutton "Kahoot":
-  File "game/screens/developer.rpy", line 135, in prepare
-    textbutton "Kahoot":
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/pyanalysis.py", line 699, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/pyanalysis.py", line 683, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 597, in py_compile
-    raise e
-SyntaxError: invalid syntax (developer.rpy, line 137)
+  File "game/story/Day 1/5.0 assembly.rpy", line 233, in script
+    "You hear Richard cough loudly"
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2858, in interact_core
+    renpy.audio.audio.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 1027, in interact
+    periodic()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 960, in periodic_thread_main
+    periodic_pass()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 917, in periodic_pass
+    c.periodic()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 409, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/loader.py", line 548, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file './music/EscortsGaudeamusDooWop.ogg'.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

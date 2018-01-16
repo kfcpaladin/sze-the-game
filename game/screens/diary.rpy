@@ -15,17 +15,6 @@ screen float_menu:
                 ShowMenu("kms"),
             ] 
             xalign 0.5
-        
-
-# screen diary_nav:
-#     mousearea:
-#         area (400, 0, 566, 100)
-#         hovered [
-#             Show("diary_nav_buttons")
-#         ]
-#         unhovered [
-#             Hide("diary_nav_buttons")
-#         ]
 
 # navigation for all diary pages
 screen diary_nav:

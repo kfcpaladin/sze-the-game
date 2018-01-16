@@ -1,14 +1,14 @@
 ##############################################################################
 screen kms:
-    add "bedroom.jpg"
+    add screenBackgroundDir + "bedroom.jpg"
     imagebutton:
-        idle Frame("arthurside.png")
+        idle Frame(screenIconDir + "arthurside.png")
         xsize 200
         ysize 300
         xoffset 200
         yoffset 200
     imagebutton:
-        idle Frame("glockNoTrigger.png")
+        idle Frame(screenIconDir + "glockNoTrigger.png")
         xsize 200
         ysize 150
         xoffset 600

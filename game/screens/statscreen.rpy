@@ -1,7 +1,7 @@
 ###########################################################################
 screen statsscreen(who=sze):
     # Include the navigation.
-    add "Quests.jpg"
+    add screenBackgroundDir + "diaryNormal.jpg"
     use diary_nav
     use diary_title("Statistics")
     # display info
@@ -36,6 +36,7 @@ screen attribute_info_entry(attribute, who):
         "neutral": "#e6ac00",
         "positive": "#009933",
     }
+    default iconSize = 80
     $ attributeValue = getattr(who, attribute)
     frame:
         style "attribute_info_entry"
@@ -45,13 +46,26 @@ screen attribute_info_entry(attribute, who):
             background Solid(attributeColour["neutral"])
         else:
             background Solid(attributeColour["negative"])
-        vbox:
-            text "{b}" + " {0} ({1})".format(unicode.title(attribute), attributeValue) + "{/b}"
-            use bar_graph_widget(attributeValue)
-            textbutton "Show description":
-                action [
-                    Show("attribute_info_description", None, attribute, who)
-                ]
+        hbox:
+            xsize 600
+            ysize iconSize
+            spacing 5
+            # creating friend icon
+            frame:
+                xsize iconSize
+                ysize iconSize
+                background Solid("#ffffff")
+                imagebutton:
+                    xmaximum iconSize
+                    ymaximum iconSize
+                    idle Frame("icons/{0}.jpg".format(attribute))
+            vbox:
+                text "{b}" + " {0} ({1})".format(unicode.title(attribute), attributeValue) + "{/b}"
+                use bar_graph_widget(attributeValue)
+                textbutton "Show description":
+                    action [
+                        Show("attribute_info_description", None, attribute, who)
+                    ]
 
 # show attribute descrition
 screen attribute_info_description(attribute=None, who=None):
@@ -100,7 +114,7 @@ screen friend_info_entry(friend):
         "neutral": "#e6ac00",
         "positive": "#009933",
     }
-    default iconSize = 100
+    default iconSize = 80
     frame:
         style "friend_info_entry"
         if friend.friendship > 0:
@@ -111,10 +125,21 @@ screen friend_info_entry(friend):
             background Solid(friendColour["negative"])
         hbox:
             xsize 600
-            # imagebutton:
-            #     idle Frame(friend.image)
-            #     xmaximum iconSize
-            #     ymaximum iconSize
+            ysize iconSize
+            spacing 5
+            # creating friend icon
+            frame:
+                xsize iconSize
+                ysize iconSize
+                background Solid("#ffffff")
+                imagebutton:
+                    xmaximum iconSize
+                    ymaximum iconSize
+                    if friend.icon:
+                        idle Frame(friend.icon)
+                    else:
+                        idle Frame("icons/default.jpg")
+            # friend info
             vbox:
                 text "{b}" + " {0} ({1})".format(unicode.title(friend.name), friend.friendship) + "{/b}"
                 use bar_graph_widget(friend.friendship)

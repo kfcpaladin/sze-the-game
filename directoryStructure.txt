@@ -7,6 +7,8 @@
 │   │   ├── bytecode.rpyb
 │   │   ├── im-8a73c074683b032f8d44bc027f212036-12f674c.png
 │   │   ├── im-ae30380b7717974ad4127e95a590f855-47a4f943.png
+│   │   ├── im-af78cec1cdc09080b83ca2d5cb74bbde-12f674c.png
+│   │   ├── im-b3e0a6d556792e4afa8d638980eb8566-47a4f943.png
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
 │   ├── classes
@@ -27,81 +29,110 @@
 │   │   ├── Quest.rpy
 │   │   └── Quest.rpyc
 │   ├── images
-│   │   ├── 91_big.jpg
-│   │   ├── arthur.jpg
-│   │   ├── arthurside.png
-│   │   ├── axe.png
-│   │   ├── bag.png
-│   │   ├── ball.png
-│   │   ├── bedroom.jpg
-│   │   ├── billthecleaner.png
-│   │   ├── calc1.png
-│   │   ├── calculetor.png
-│   │   ├── cannon.png
-│   │   ├── chao2.png
-│   │   ├── chaohappy.png
-│   │   ├── chaoport.png
-│   │   ├── CmEdPF6UgAAQQgF.jpg
-│   │   ├── CTf1fsBUwAAIe9a.jpg
-│   │   ├── cursor.png
-│   │   ├── CWY6FxMUsAIfDuO.jpg
-│   │   ├── CZ2Yss_UAAAPRqz.jpg
-│   │   ├── darkstreet.jpg
-│   │   ├── deanside.png
-│   │   ├── derkiederkside.png
-│   │   ├── Diary.jpg
-│   │   ├── disclaimer.png
-│   │   ├── dreamtree.png
-│   │   ├── economics.png
-│   │   ├── eoarchean.jpg
-│   │   ├── fields_by_applesin_mod.jpg
-│   │   ├── forthandballarea.jpg
-│   │   ├── fortrowecorridor.jpg
-│   │   ├── Fort_Street_High_School_Memorial_Hall.JPG
-│   │   ├── garry.png
-│   │   ├── glockNoTrigger.png
-│   │   ├── grant1.jpg
-│   │   ├── grant.png
-│   │   ├── gunSuicide.jpg
-│   │   ├── hall.jpg
-│   │   ├── jitian.png
-│   │   ├── kirby.png
-│   │   ├── lecalc.png
-│   │   ├── logo.png
-│   │   ├── map.png
-│   │   ├── Map selected.png
-│   │   ├── map unavailable.png
-│   │   ├── moxhamhappy.png
-│   │   ├── moxhamside.png
-│   │   ├── moxhamunhappy.png
-│   │   ├── NortonSt.png
-│   │   ├── parisafremov.jpg
-│   │   ├── physclass.png
-│   │   ├── pong.jpg
-│   │   ├── pragash2.png
-│   │   ├── pragashnormal.png
-│   │   ├── pragash.png
-│   │   ├── principalofficedoor.jpg
-│   │   ├── principaloffice.jpg
-│   │   ├── Quests.jpg
-│   │   ├── rick.png
-│   │   ├── RRRROOOOOOOYYYYYYYYYboi.png
-│   │   ├── rusalidropkick.png
-│   │   ├── rusali.png
-│   │   ├── rusali_side.png
-│   │   ├── strathloadingdock.jpg
-│   │   ├── strathloadingdocksign.jpg
-│   │   ├── sze1.png
-│   │   ├── szeceded.jpg
-│   │   ├── toddside.png
-│   │   ├── toilet.png
-│   │   ├── willis1.png
-│   │   ├── willisside1.png
-│   │   ├── willisside.png
-│   │   ├── willyin.png
-│   │   ├── Workshopdark.jpg
-│   │   ├── Workshop.jpg
-│   │   └── yang1.png
+│   │   ├── backgrounds
+│   │   │   ├── arthur.jpg
+│   │   │   ├── bedroom.jpg
+│   │   │   ├── CmEdPF6UgAAQQgF.jpg
+│   │   │   ├── CWY6FxMUsAIfDuO.jpg
+│   │   │   ├── disclaimer.png
+│   │   │   ├── dreamtree.png
+│   │   │   ├── economics.png
+│   │   │   ├── eoarchean.jpg
+│   │   │   ├── fields_by_applesin_mod.jpg
+│   │   │   ├── forthandballarea.jpg
+│   │   │   ├── fortrowecorridor.jpg
+│   │   │   ├── grant1.jpg
+│   │   │   ├── hallentrance.jpg
+│   │   │   ├── hall.jpg
+│   │   │   ├── memorial_hall.jpg
+│   │   │   ├── NortonSt.png
+│   │   │   ├── parisafremov.jpg
+│   │   │   ├── physclass.png
+│   │   │   ├── principalofficedoor.jpg
+│   │   │   ├── principaloffice.jpg
+│   │   │   ├── strathloadingdock.jpg
+│   │   │   ├── strathloadingdocksign.jpg
+│   │   │   ├── szeceded.jpg
+│   │   │   ├── toilet.png
+│   │   │   ├── wilkins_side.jpg
+│   │   │   ├── Workshopdark.jpg
+│   │   │   └── Workshop.jpg
+│   │   ├── characterImages
+│   │   │   ├── arthurside.png
+│   │   │   ├── billthecleaner.png
+│   │   │   ├── calculetor.png
+│   │   │   ├── chao2.png
+│   │   │   ├── chaohappy.png
+│   │   │   ├── chaoport.png
+│   │   │   ├── CTf1fsBUwAAIe9a.jpg
+│   │   │   ├── darkstreet.jpg
+│   │   │   ├── deanside.png
+│   │   │   ├── derkiederkside.png
+│   │   │   ├── garry.png
+│   │   │   ├── grant.png
+│   │   │   ├── jitian.png
+│   │   │   ├── kirby.png
+│   │   │   ├── lecalc.png
+│   │   │   ├── logo.png
+│   │   │   ├── moxhamhappy.png
+│   │   │   ├── moxhamside.png
+│   │   │   ├── moxhamunhappy.png
+│   │   │   ├── pragash2.png
+│   │   │   ├── pragashnormal.png
+│   │   │   ├── pragash.png
+│   │   │   ├── rick.png
+│   │   │   ├── RRRROOOOOOOYYYYYYYYYboi.png
+│   │   │   ├── rusalidropkick.png
+│   │   │   ├── rusali.png
+│   │   │   ├── rusali_side.png
+│   │   │   ├── sze1.png
+│   │   │   ├── toddside.png
+│   │   │   ├── willis1.png
+│   │   │   ├── willisside1.png
+│   │   │   ├── willisside.png
+│   │   │   ├── willyin.png
+│   │   │   └── yang1.png
+│   │   ├── icons
+│   │   │   ├── anthonyle.png
+│   │   │   ├── billthecleaner.png
+│   │   │   ├── chao.png
+│   │   │   ├── charm.jpg
+│   │   │   ├── cursor.png
+│   │   │   ├── dean.png
+│   │   │   ├── default.jpg
+│   │   │   ├── derek.png
+│   │   │   ├── fort.jpg
+│   │   │   ├── gary.png
+│   │   │   ├── grant.png
+│   │   │   ├── intellect.jpg
+│   │   │   ├── moxham.png
+│   │   │   ├── pragash.png
+│   │   │   ├── richard.png
+│   │   │   ├── roy.jpg
+│   │   │   ├── rusali.png
+│   │   │   ├── strength.jpg
+│   │   │   ├── thirst.jpg
+│   │   │   ├── todd.png
+│   │   │   ├── willis.png
+│   │   │   ├── willyang.png
+│   │   │   └── willyin.png
+│   │   ├── items
+│   │   │   ├── axe.png
+│   │   │   ├── bag.png
+│   │   │   ├── ball.png
+│   │   │   ├── calc1.png
+│   │   │   ├── cannon.png
+│   │   │   └── kirby.png
+│   │   ├── screenBackgrounds
+│   │   │   ├── diaryGrid.jpg
+│   │   │   ├── diaryNormal.jpg
+│   │   │   ├── gunSuicide.jpg
+│   │   │   ├── map.png
+│   │   │   ├── Map selected.png
+│   │   │   ├── map unavailable.png
+│   │   │   └── pong.jpg
+│   │   └── screenIcons
+│   │       └── glockNoTrigger.png
 │   ├── instances
 │   │   ├── achievements.rpy
 │   │   ├── achievements.rpyc
@@ -174,7 +205,6 @@
 │   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
 │   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
@@ -1525,4 +1555,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-100 directories, 1425 files
+106 directories, 1449 files

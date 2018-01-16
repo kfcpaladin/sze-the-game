@@ -2,7 +2,7 @@
 # Developer console
 
 screen developerScreen:
-    add "Quests.jpg"
+    add screenBackgroundDir + "diaryNormal.jpg"
     use diary_nav
     # Give title of page
     frame:

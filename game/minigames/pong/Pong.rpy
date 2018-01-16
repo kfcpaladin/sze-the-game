@@ -11,7 +11,7 @@ init python:
                 colour = "#c2d12a",
                 pos = Vector(1366/2, 768/2),
                 radius = 10,
-                speed = 15,
+                speed = 25,
             )
             # left paddle
             self.paddles["leftPaddle"] = Paddle(

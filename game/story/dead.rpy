@@ -2,6 +2,7 @@ label dead:
     scene black
     $ stopmusic()
     $ playsfx("game_over.ogg")
+    $ renpy.hide_screen("float_menu")
     sze "I dead"
     menu:
         "Revert to latest autosave":
@@ -20,6 +21,7 @@ label deadrestart:
     scene bg ded
     $ stopmusic()
     $ playsfx("game_over.ogg")
+    $ renpy.hide_screen("float_menu")
     sze "I dead"
     $ playmusic("p3IwatodaiDorm.ogg")    
     jump start
@@ -28,6 +30,7 @@ label actualded:
     scene black
     $ stopmusic()
     $ playsfx("game_over.ogg")
+    $ renpy.hide_screen("float_menu")
     sze "I dead"
     return
 

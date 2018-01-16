@@ -57,12 +57,14 @@ screen label_screen_entry(label):
                 textbutton "Jump":
                     action [
                         Function(hideDeveloperScreen),
-                        Function(renpy.jump, label["name"])
+                        Function(renpy.jump, label["name"]),
+                        Show("float_menu")
                     ]
                 textbutton "Call":
                     action [
                         Function(hideDeveloperScreen),
-                        Function(renpy.call, label["name"])
+                        Function(renpy.call, label["name"]),
+                        Show("float_menu")
                     ]
                 textbutton "Show description":
                     action [

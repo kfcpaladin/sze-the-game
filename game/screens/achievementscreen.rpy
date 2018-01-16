@@ -1,7 +1,7 @@
 screen achievementscreen(achievements=achievements):
     add "Quests.jpg"
     use diary_nav
-    use diary_title("Quests")
+    use diary_title("Achievements")
     
     default currentAchieveType = achievements.currentAchieveType
     

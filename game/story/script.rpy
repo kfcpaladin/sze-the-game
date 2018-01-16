@@ -5,7 +5,7 @@ label start:
     $ popup("Autosaving")
     $ renpy.save("autosave")
     show screen gameLoop
-    show screen diary_button
+    show screen float_menu
     image blank = im.Recolor("arthur.jpg", 255, 255, 255, 0)
     scene bg disclaimer
     with fade

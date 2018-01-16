@@ -11,7 +11,6 @@ screen quick_menu():
         xalign 1.0
         yalign 1.0
 
-        textbutton _("kms")         action ShowMenu('kms')
         textbutton _("Back")        action Rollback()
         textbutton _("Save")        action ShowMenu('save')
         textbutton _("Q.Save")      action QuickSave()

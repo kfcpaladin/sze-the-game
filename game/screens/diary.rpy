@@ -1,10 +1,21 @@
 ###########################################################################################################################################################
-screen diary_button(diary=diary):
-    textbutton "Open Diary":
-        action [
-            ShowMenu(diary.getCurrentPage()), 
-        ] 
+screen float_menu:
+    frame:
+        background Solid("#ffffff00")
         align (0.84, 0.04)
+        has vbox
+        spacing 10
+        textbutton "Open Diary":
+            action [
+                ShowMenu(diary.getCurrentPage()), 
+            ]
+            xalign 0.5
+        textbutton "kms":
+            action [
+                ShowMenu("kms"),
+            ] 
+            xalign 0.5
+        
 
 # screen diary_nav:
 #     mousearea:
@@ -22,9 +33,9 @@ screen diary_nav:
         for index, screenName in enumerate(diary.screenNames):
             textbutton _(str(index)):
                 action [
-                    ShowMenu(diary.getPage(index)),
-                    Hide(diary.getCurrentPage()),
                     Hide("diary_nav_buttons"),
+                    Hide(diary.getCurrentPage()),
+                    ShowMenu(diary.getPage(index)),
                     Function(diary.setPage, index),
                 ]                    
 
@@ -39,35 +50,4 @@ screen diary_title(title="Undefined"):
             font "DejaVuSans.ttf"
 
 
-init -1 python:
-    class Diary:
-        def __init__(self, *screenNames):
-            self.screenNames = screenNames
-            self.currentPage = 0
-        
-        def getCurrentPage(self):
-            return self.screenNames[self.currentPage]
-        
-        def setPage(self, index):
-            index = self.constrain(index)
-            self.currentPage = index
 
-        def getPage(self, index):
-            index = self.constrain(index)
-            return self.screenNames[index]
-
-        def constrain(self, index):
-            if index >= len(self.screenNames):
-                index = len(self.screenNames)-1
-            elif index < 0:
-                index = 0
-            return index
-
-    diary = Diary(
-        "developerScreen",
-        "bag_view",
-        "questscreen",
-        "achievementscreen",
-        "statsscreen",
-        "roadmap"
-    )

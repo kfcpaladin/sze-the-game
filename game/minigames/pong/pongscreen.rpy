@@ -1,7 +1,7 @@
-label playPong(**options):
+label playPong(pong=pong):
     menu:
         "Play pong":
-            call screen pong(**options)
+            call screen pong(pong)
             "You finished playing pong!"
             "You got a net score of [_return]"
             return
@@ -9,34 +9,38 @@ label playPong(**options):
             "You pussy out"
             return
 
-screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
-                leftPaddleBot=None, rightPaddleBot=rightPaddleBot,
-                fps=60, duration=60):
+screen pong(pong, fps=60, tickrate=50, duration=60):
     add "pong.jpg" 
+    # default variables
     default rate = 1/float(fps)
-    default tickrate = 50
     default dt = tickrate/float(fps)
     default time_remain = duration
+    # score
+    $ ball = pong.balls["ball"]
     $ score = ball.score["left"] - ball.score["right"]
     # Timer
     timer rate:
         repeat True
         action If(
             time_remain > 0, 
-            true=[SetScreenVariable('time_remain', time_remain-rate)], 
-            false=[Function(ball.resetScore), Hide('pong', dissolve),Return(score)]
+            true = [
+                SetScreenVariable('time_remain', time_remain-rate)
+            ], 
+            false = [
+                Function(ball.resetScore), 
+                Hide('pong', dissolve),
+                Return(score)
+            ]
         )
-    
-    $ colours = {
-        "ball": "#ffffffff",
-        "leftPaddle": "#ffffffff",
-        "rightPaddle": "#ffffffff",
-        "score": "#ffffff00",
-    }
-    $ scorePos = {
-        "left": (1366/4, 50),
-        "right": (3*1366/4, 50),
-    }
+    # update and render objects
+    $ pong.update(dt)
+    use render_pong_objects(pong)
+    # Render timer and score
+    use pong_timer(time_remain, duration)
+    use pong_score(ball.score["left"], ball.score["right"])
+
+# pong timer
+screen pong_timer(time_remain, duration):
     # Bar will have a value proportional to the time remaining
     bar:
         value time_remain 
@@ -44,72 +48,48 @@ screen pong(ball=ball, leftPaddle=leftPaddle, rightPaddle=rightPaddle,
         xalign 0.5 
         yoffset 68 
         xmaximum 300 at alpha_dissolve # This is the timer bar.
-    # Draw the ball
-    frame:
-        xoffset ball.pos.x - ball.radius
-        yoffset ball.pos.y - ball.radius
-        xsize 2*ball.radius
-        ysize 2*ball.radius
-        background Color(colours["ball"])
-    
-    # Draw and control the left paddle
-    frame:
-        xoffset leftPaddle.pos.x - leftPaddle.width/2
-        yoffset leftPaddle.pos.y - leftPaddle.height/2
-        xsize leftPaddle.width
-        ysize leftPaddle.height
-        background Color(colours["leftPaddle"])
 
-    # Draw the right paddle
-    frame:
-        xoffset rightPaddle.pos.x - rightPaddle.width/2
-        yoffset rightPaddle.pos.y - rightPaddle.height/2
-        xsize rightPaddle.width
-        ysize rightPaddle.height
-        background Color(colours["rightPaddle"])
-    
-    # Draw the left score
+
+# display pong score
+screen pong_score(left, right):
+    default scorePos = {
+        "left":  (1366/4, 50),
+        "right": (3*1366/4, 50),
+    }
+    default clearColour = "#ffffff00"
+    default font = {
+        "size": 60,
+        "name": "DejaVuSans.ttf",
+    }
+    # Left score
     frame:
         xoffset scorePos["left"][0]
         yoffset scorePos["left"][1]
-        background Color(colours["score"])
-        text "{0}".format(ball.score["left"]):
-            font "DejaVuSans.ttf"
-            size 60
+        background Color(clearColour)
+        text "{0}".format(left):
+            font font["name"]
+            size font["size"]
     # Draw the right score
     frame:
         xoffset scorePos["right"][0]
         yoffset scorePos["right"][1]
-        background Color(colours["score"])
-        text "{0}".format(ball.score["right"]):
-            font "DejaVuSans.ttf"
-            size 60
-    $ getKeyPress(leftPaddle)
-    $ rightPaddleBot.movePaddle()
+        background Color(clearColour)
+        text "{0}".format(right):
+            font font["name"]
+            size font["size"]
 
-    # Update the game
-    $ ball.update(dt)
-    $ leftPaddle.update(dt)
-    $ rightPaddle.update(dt)
-    $ ball.bounce(leftPaddle)
-    $ ball.bounce(rightPaddle)
+# render all pong objects
+screen render_pong_objects(pong):
+    for name, ball in pong.balls.iteritems():
+        use pong_object(ball.pos.x, ball.pos.y, 2*ball.radius, 2*ball.radius, ball.colour)
+    for name, paddle in pong.paddles.iteritems():
+        use pong_object(paddle.pos.x, paddle.pos.y, paddle.width, paddle.height, paddle.colour)
 
-init python:
-    import pygame
-    def getKeyPress(paddle):
-        pressed = pygame.key.get_pressed()
-        keyPressed = False
-        if pressed[pygame.K_UP]:
-            paddle.move("up")
-            keyPressed = True
-        if pressed[pygame.K_DOWN]:
-            paddle.move("down")
-            keyPressed = True
-        if pressed[pygame.K_LEFT]:
-            paddle.move("left")
-            keyPressed = True
-        if pressed[pygame.K_RIGHT]:
-            paddle.move("right")
-            keyPressed = True
-        if not keyPressed:
-            paddle.move(None)
+# display pong object
+screen pong_object(x, y, width, height, colour="#ffffff"):
+    frame:
+        xoffset (x - width/2.0)
+        yoffset (y - height/2.0)
+        xsize width
+        ysize height
+        background Color(colour)

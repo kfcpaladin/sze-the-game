@@ -49,7 +49,7 @@ python early:
             
             return y
         
-        def movePaddle(self):
+        def update(self):
             if self.checkDirection():
                 y = self.predictCollision()
                 # If the bot is not in a position where it can hit the ball

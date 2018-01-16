@@ -1,13 +1,13 @@
-Tue Jan 16 02:06:55 2018
+Tue Jan 16 14:38:50 2018
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
 
-Bootstrap to the start of init.init took 0.11s
+Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
-Loading script took 0.25s
+Loading script took 0.26s
 Loading persistent took 0.06s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
@@ -21,13 +21,13 @@ Making clean stores took 0.00s
 DPI scale factor: 1.000000
 Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
+Analyze screens took 0.02s
 Save screen analysis took 0.11s
 Prepare screens took 0.10s
-Save pyanalysis. took 1.34s
+Save pyanalysis. took 1.36s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -35,7 +35,7 @@ Interface start took 0.01s
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1511, 850) drawable=(1511, 850)
+Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
 Vendor: 'X.Org'
 Renderer: 'AMD PITCAIRN (DRM 2.49.0 / 4.10.0-35-generic, LLVM 5.0.0)'
 Version: '3.0 Mesa 17.2.4'
@@ -299,24 +299,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.86781597137s
+Total time until interface ready: 2.8899269104s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.007947 seconds.
-- Frame drawn at 0.020239 seconds.
-- Frame drawn at 0.036929 seconds.
-- Frame drawn at 0.054722 seconds.
-- 0.054722 seconds to render 5 frames.
-[Game Status]
-Boolean:
- -Boolean: {u'stealWillisGirl': False, u'metDerek': False, u'delivery': False, u'electionPromise': False, u'chaoPissed': False, u'yangRant': False, u'norton': False}
- -Other: {u'allowedAreas': [u'bcourts', u'bridge', u'carpark', u'cohen', u'currycourts', u'food', u'fortstreet', u'gym', u'hall', u'kilgour', u'library', u'lkilgour', u'lquad', u'oval', u'place', u'quad', u'rowe', u'rquad', u'uquad', u'valley', u'wilkins'], u'currentTime': {u'lunch': False, u'recess': False, u'afternoon': False, u'night': False, u'morning': True}}
- -Iterable: {u'timeTravelCounter': 0, u'suicideCount': 0, u'moxCounter': 0, u'currentDay': 1}
-Other:
- -Boolean: {u'stealWillisGirl': False, u'metDerek': False, u'delivery': False, u'electionPromise': False, u'chaoPissed': False, u'yangRant': False, u'norton': False}
- -Other: {u'allowedAreas': [u'bcourts', u'bridge', u'carpark', u'cohen', u'currycourts', u'food', u'fortstreet', u'gym', u'hall', u'kilgour', u'library', u'lkilgour', u'lquad', u'oval', u'place', u'quad', u'rowe', u'rquad', u'uquad', u'valley', u'wilkins'], u'currentTime': {u'lunch': False, u'recess': False, u'afternoon': False, u'night': False, u'morning': True}}
- -Iterable: {u'timeTravelCounter': 0, u'suicideCount': 0, u'moxCounter': 0, u'currentDay': 1}
-Iterable:
- -Boolean: {u'stealWillisGirl': False, u'metDerek': False, u'delivery': False, u'electionPromise': False, u'chaoPissed': False, u'yangRant': False, u'norton': False}
- -Other: {u'allowedAreas': [u'bcourts', u'bridge', u'carpark', u'cohen', u'currycourts', u'food', u'fortstreet', u'gym', u'hall', u'kilgour', u'library', u'lkilgour', u'lquad', u'oval', u'place', u'quad', u'rowe', u'rquad', u'uquad', u'valley', u'wilkins'], u'currentTime': {u'lunch': False, u'recess': False, u'afternoon': False, u'night': False, u'morning': True}}
- -Iterable: {u'timeTravelCounter': 0, u'suicideCount': 0, u'moxCounter': 0, u'currentDay': 1}
+- Frame drawn at 0.021224 seconds.
+- Frame drawn at 0.035929 seconds.
+- Frame drawn at 0.049912 seconds.
+- Frame drawn at 0.066337 seconds.
+- 0.066337 seconds to render 5 frames.

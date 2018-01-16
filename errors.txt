@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/kms.rpy", line 28: Line is indented, but the preceding timer statement does not expect a block. Please check this line's indentation.
-    action [
-    ^
-                Hide("gunDeath", dissolve),
-                Start("deadrestart")
-            ]
+File "game/minigames/pong/Pong.rpy", line 12: invalid syntax
+                    pos = Vector(1366/2, 768/2),
+                       ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

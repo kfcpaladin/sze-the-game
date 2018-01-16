@@ -31,7 +31,6 @@
 │   ├── images
 │   │   ├── backgrounds
 │   │   │   ├── arthur.jpg
-│   │   │   ├── bedroom.jpg
 │   │   │   ├── CmEdPF6UgAAQQgF.jpg
 │   │   │   ├── CWY6FxMUsAIfDuO.jpg
 │   │   │   ├── disclaimer.png
@@ -73,7 +72,6 @@
 │   │   │   ├── jitian.png
 │   │   │   ├── kirby.png
 │   │   │   ├── lecalc.png
-│   │   │   ├── logo.png
 │   │   │   ├── moxhamhappy.png
 │   │   │   ├── moxhamside.png
 │   │   │   ├── moxhamunhappy.png
@@ -123,7 +121,9 @@
 │   │   │   ├── calc1.png
 │   │   │   ├── cannon.png
 │   │   │   └── kirby.png
+│   │   ├── logo.png
 │   │   ├── screenBackgrounds
+│   │   │   ├── bedroom.jpg
 │   │   │   ├── diaryGrid.jpg
 │   │   │   ├── diaryNormal.jpg
 │   │   │   ├── gunSuicide.jpg
@@ -205,6 +205,7 @@
 │   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
 │   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
@@ -1555,4 +1556,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-106 directories, 1449 files
+106 directories, 1450 files

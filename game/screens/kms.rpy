@@ -2,7 +2,7 @@
 screen kms:
     add screenBackgroundDir + "bedroom.jpg"
     imagebutton:
-        idle Frame(screenIconDir + "arthurside.png")
+        idle Frame(characterDir + "arthurside.png")
         xsize 200
         ysize 300
         xoffset 200

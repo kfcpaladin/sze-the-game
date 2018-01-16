@@ -1,28 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 404, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 423, in <module>
-    renpy.save("_reload-1", "reload save game")
-PicklingError: Can't pickle <type 'module'>: attribute lookup __builtin__.module failed
+  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in script
+    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
+  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
+    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
+NameError: name 'question' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 404, in script
-    python hide:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00keymap.rpy", line 423, in <module>
-    renpy.save("_reload-1", "reload save game")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/loadsave.py", line 300, in save
-    dump((roots, renpy.game.log), logf)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/loadsave.py", line 45, in dump
-    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
-PicklingError: Can't pickle <type 'module'>: attribute lookup __builtin__.module failed
+  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in script
+    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
+    self.call("execute")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
+    args, kwargs = a.evaluate()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 181, in evaluate
+    kwargs[k] = renpy.python.py_eval(v, locals=scope)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
+    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
+NameError: name 'question' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

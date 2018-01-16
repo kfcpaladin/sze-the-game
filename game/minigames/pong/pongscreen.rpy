@@ -1,3 +1,4 @@
+# give dialog for the pong game
 label playPong(pong=pong):
     menu:
         "Play pong":
@@ -9,7 +10,8 @@ label playPong(pong=pong):
             "You pussy out"
             return
 
-screen pong(pong, fps=60, tickrate=50, duration=60):
+# run the pong game
+screen pong(pong, fps=70, tickrate=50, duration=60):
     add "pong.jpg" 
     # default variables
     default rate = 1/float(fps)
@@ -85,7 +87,7 @@ screen render_pong_objects(pong):
     for name, paddle in pong.paddles.iteritems():
         use pong_object(paddle.pos.x, paddle.pos.y, paddle.width, paddle.height, paddle.colour)
 
-# display pong object
+# display a pong object
 screen pong_object(x, y, width, height, colour="#ffffff"):
     frame:
         xoffset (x - width/2.0)

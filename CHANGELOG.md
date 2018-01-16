@@ -48,3 +48,7 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Change kms screen to interactive gun suicide
 * Fixed pong physics and added custom physics timescale for smoother gameplay
 * Fixed incorrect image dimensions
+* Added better minigame support to the developer console page
+* Made significant changes to pong game, including a new Pong class for better abstraction
+* Integrated all pages of the diary into the diary button available during gameplay
+* Restructed the game/images/ folder for better expandability in the future

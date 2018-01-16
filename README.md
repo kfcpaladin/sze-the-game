@@ -13,8 +13,9 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 2. Introduces subclasses to the ADVCharacter used in master/nub to offer specialisation
 3. Uses an updated renpy engine to [*renpy-6.99.13*](https://www.renpy.org/dl/6.99.13/)
 4. Added redirectable music and sfx directories
-5. Added quests, inventory, items and a diary
-6. Added minigames, including *pong, kahoot*
+5. Added redirectable image subdirectories for better global image classification (*prevents image clashing between images with same name*)
+6. Added achievements, quests, inventory, items, statistics screen, and a diary
+7. Added minigames, including *pong, kahoot*
 
 ## Game directory layout
 
@@ -39,6 +40,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
 | [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
 | [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
+| [Diary](./game/classes/Diary.rpy)                  | Class used to store and manage all diary pages                                    |
 | [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
 | [Achievements](./game/classes/Achievement.rpy)     | Used to store, add and update achievements in realtime using the gameloop         |
 | [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
@@ -51,6 +53,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | MainCharacter | [sze](./game/instances/sze.rpy)       |
 | Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
 | Game          | [game](./game/instances/game.rpy)     |
+| Diary         | [diary](./game/instances/diary.rpy)   |
 | Quest         | [quests](./game/instances/quests.rpy) |
 | Achievements  | [achievements](./game/instances/achievements.rpy) |
 | Inventory     | [bag](./game/instances/inventory.rpy) |
@@ -76,6 +79,12 @@ The master/nub branches used global variables to keep track of game states, such
 * **setting gamestate varaible**: $ game = Game(*dict*)
 * **accessing gamestate variable**: $ game.moxCounter, $ game.timeTravelCounter, *etc*
 * **debug the current gamestate**: $ game.describe() *(information is printed to console)*
+
+#### Diary
+The Diary class is used to keep track and store information about the current diary configuration. 
+In the future, more complex behaviour can be added to the diary, such as page lockouts and conditional unlocking of pages.
+
+* **Initialising a diary**: $ diary = Diary(*dict*)
 
 #### Quest
 This is a class used to store the relevant quests used throughout the story. 
@@ -136,11 +145,15 @@ For special effect sounds, use **playsfx()** to play a short audio clip and **st
 | [achievementscreen](./game/screens/achievementscreen.rpy) | Used to display all achievements                                |
 | [bag](./game/screens/bag.rpy)                   | Used for the bag inventory, and used the diary grid                       |
 | [countdown](./game/screens/countdown.rpy)       | Kahoot uses this for the countdown, questions and answers                 |
+| [default](./game/screens/default.rpy)           | The default configuration file for all renpy menus (*customizable*)       |
+| [developer](./game/screens/developer.rpy)       | Houses the developer page which allows access to all labels, times and minigames |
 | [diary](./game/screens/diary.rpy)               | Used for the index of the diary                                           |
 | [fortmap](./game/screens/fortmap.rpy)           | Has a map of the school used to navigate to different locations           |
+| [gameLoop](./game/screens/gameLoop.rpy)         | Updates every few seconds, and calls the gameLoop function                |
 | [kms](./game/screens/kms.rpy)                   | Arthur uses this to kill himself                                          |
 | [popup](./game/screens/popup.rpy)               | Will display a popup message/s, useful for achievements and quest unlocks |
 | [questscreen](./game/screens/questscreen.rpy)   | Shows the available and completed quests, and allows user to start quests |
+| [quickmenu](./game/screens/quickmenu.rpy)       | Configures the bottom menu that is present during normal interaction      |
 | [roadmap](./game/screens/roadmap.rpy)           | Will be used to display a graph of choices made by the user               |
 | [statscreen](./game/screens/statscreen.rpy)     | Shows the status you have with your friends, and your statistics          |
 | [szeclicker.rpy](./game/screens/szeclicker.rpy) | *A cookie clicker minigame?*                                              |

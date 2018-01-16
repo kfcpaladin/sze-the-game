@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens/bag.rpy", line 5: expected a keyword argument, colon, or end of line.
-    add add "screenBackgrounds/diaryGrid.jpg"
-            ^
+File "game/screens/kms.rpy", line 6: expected 'word' not found.
+    use "kmsGun"
+        ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

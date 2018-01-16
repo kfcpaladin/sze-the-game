@@ -1,30 +1,59 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/9 economics.rpy", line 16, in script call
-    call econ1kahoot1
-  File "game/story/Day 1/9 economics.rpy", line 20, in script call
-    call kahootGame(question=kahoot["econ1"], time_range=10)
-  File "game/minigames/kahoot/kahootscreen.rpy", line 14, in script
-    label kahootGame(kahoot, show_result=True, **options):
-Exception: Required parameter kahoot has no value.
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "game/screens/kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/kms.rpy", line 3, in execute
+    default suicideScreens = [kmsGun]
+NameError: name 'kmsGun' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/9 economics.rpy", line 16, in script call
-    call econ1kahoot1
-  File "game/story/Day 1/9 economics.rpy", line 20, in script call
-    call kahootGame(question=kahoot["econ1"], time_range=10)
-  File "game/minigames/kahoot/kahootscreen.rpy", line 14, in script
-    label kahootGame(kahoot, show_result=True, **options):
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 772, in execute
-    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 151, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter kahoot has no value.
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/kms.rpy", line 3, in execute
+    default suicideScreens = [kmsGun]
+  File "<screen language>", line 3, in <module>
+NameError: name 'kmsGun' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

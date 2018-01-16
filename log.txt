@@ -1,4 +1,4 @@
-Tue Jan 16 17:15:42 2018
+Tue Jan 16 18:17:05 2018
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -7,31 +7,21 @@ Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
-Loading script took 0.30s
-Loading persistent took 0.07s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Set script version to: (6, 99, 10)
-Running init code took 0.14s
-Loading analysis data took 0.43s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
+Loading script took 0.27s
+Loading persistent took 0.06s
+
+File "game/screens/developer.rpy", line 136: reached end of line when expecting ')'.
+    action If(
+                            showKahoot is False,
+                            true = [
+                                SetScreenVariable("showKahoot", True)
+                            ],
+                            false = [
+                                SetScreenVariable("showKahoot", False)
+                            ]
+                        }
 DPI scale factor: 1.000000
-Creating interface object took 0.08s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.13s
-Prepare screens took 0.20s
-Save pyanalysis. took 1.48s
-Save bytecode. took 0.05s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.01s
+Interface start took 0.07s
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
@@ -299,110 +289,19 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 3.27598500252s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.019298 seconds.
-- Frame drawn at 0.029069 seconds.
-- Frame drawn at 0.046284 seconds.
-- Frame drawn at 0.065113 seconds.
-- 0.065113 seconds to render 5 frames.
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1918, 1011) drawable=(1918, 1011)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1920, 1013) drawable=(1920, 1013)
-
-Full traceback:
-  File "game/minigames/kahoot/kahootscreen.rpy", line 27, in script
-    label kahootGame(question, show_result=True, **options):
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 772, in execute
-    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 151, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter question has no value.
-
-While running game code:
-  File "game/minigames/kahoot/kahootscreen.rpy", line 27, in script
-    label kahootGame(question, show_result=True, **options):
-Exception: Required parameter question has no value.
-Traceback (most recent call last):
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 468, in run
-    node.execute()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 772, in execute
-    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 151, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter question has no value.
-
-Full traceback:
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in script
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
-    args, kwargs = a.evaluate()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 181, in evaluate
-    kwargs[k] = renpy.python.py_eval(v, locals=scope)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-NameError: name 'question' is not defined
-
-While running game code:
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in script
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
-    args, kwargs = a.evaluate()
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-NameError: name 'question' is not defined
-Traceback (most recent call last):
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 468, in run
-    node.execute()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
-    args, kwargs = a.evaluate()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 181, in evaluate
-    kwargs[k] = renpy.python.py_eval(v, locals=scope)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-NameError: name 'question' is not defined
+Total time until interface ready: 0.745077133179s
 Resetting cache.
-Bootstrap to the start of init.init took 481.84s
+Bootstrap to the start of init.init took 8.77s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
 Loading script took 0.23s
-Loading persistent took 0.07s
+Loading persistent took 0.06s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.11s
-Loading analysis data took 0.40s
-Analyze and compile ATL took 0.01s
+Running init code took 0.15s
+Loading analysis data took 0.46s
+Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
@@ -413,10 +312,10 @@ Cleaning stores took 0.00s
 Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.12s
+Analyze screens took 0.03s
 Save screen analysis took 0.12s
-Prepare screens took 0.11s
-Save pyanalysis. took 1.59s
+Prepare screens took 0.10s
+Save pyanalysis. took 1.56s
 Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
@@ -688,27 +587,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 484.849719048s
+Total time until interface ready: 11.7342641354s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.014964 seconds.
-- Frame drawn at 0.031794 seconds.
-- Frame drawn at 0.047950 seconds.
-- Frame drawn at 0.064327 seconds.
-- 0.064327 seconds to render 5 frames.
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1742, 980) drawable=(1742, 980)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1740, 978) drawable=(1740, 978)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1918, 1011) drawable=(1918, 1011)
-
-primary display bounds: (0, 0, 1920, 1080)
-Windowed mode.
-Screen sizes: virtual=(1366, 768) physical=(1920, 1013) drawable=(1920, 1013)
+- Frame drawn at 0.020317 seconds.
+- Frame drawn at 0.034079 seconds.
+- Frame drawn at 0.049288 seconds.
+- Frame drawn at 0.065931 seconds.
+- 0.065931 seconds to render 5 frames.

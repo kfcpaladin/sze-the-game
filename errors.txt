@@ -2,8 +2,15 @@
 errors listed below, and try again.
 
 
-File "game/screens/diary.rpy", line 44: u'title' is not a keyword argument or valid child for the screen statement.
-    title = unicode.title(title)
-         ^
+File "game/screens/developer.rpy", line 136: reached end of line when expecting ')'.
+    action If(
+                            showKahoot is False,
+                            true = [
+                                SetScreenVariable("showKahoot", True)
+                            ],
+                            false = [
+                                SetScreenVariable("showKahoot", False)
+                            ]
+                        }
 
 Ren'Py Version: Ren'Py 6.99.13.2919

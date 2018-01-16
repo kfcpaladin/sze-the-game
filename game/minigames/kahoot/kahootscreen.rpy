@@ -1,19 +1,6 @@
-#################################################################################
-#timer bar
-transform alpha_dissolve:
-    alpha 0.0
-    linear 0.5 alpha 1.0
-    on hide:
-        linear 0.5 alpha 0
-    # This is to fade the bar in and out, and is only required once in your script
-
-style kahoot_answers:
-    xalign 0.5
-    yalign 0.4
-
 ######################################################################################
 # kahootGame will play a game of kahoot, given a dictionary of answers and questions
-# question = {
+# kahoot = {
 #     "question": "the question?",
 #     "answers": {
 #         "answer1": score1,
@@ -24,11 +11,11 @@ style kahoot_answers:
 #     _points = Points from the game of kahoot
 #     _time_remain = Time that was remaining when finished
 #     _choice = The choice that was made (None if time ran out) 
-label kahootGame(question, show_result=True, **options):
+label kahootGame(kahoot, show_result=True, **options):
     menu:
         "Start Kahoot?":
             $ playmusic("kahoot.ogg")
-            call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
+            call screen kahootscreen(question=kahoot["question"], answers=kahoot["answers"], **options)
             $ stopmusic()
             $ _points = _return["points"]
             $ _time_remain = _return["time_remain"]
@@ -42,22 +29,19 @@ label kahootGame(question, show_result=True, **options):
             "Finally you give up on the game of Kahoot"
             return
 
-screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.1):
+screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.25):
     default time_remain = time_range
-    default started = False
-    if started is False:
-        $ started = True
-        
     timer speed:
         repeat True
-        action If(time_remain > 0,
-                    true=[
-                        SetScreenVariable('time_remain', time_remain-speed),
-                    ], 
-                    false=[
-                        Hide('kahootscreen', dissolve),
-                        Return({"points": 0, "time_remain": 0, "choice": None})
-                    ]
+        action If(
+            time_remain > 0,
+            true=[
+                SetScreenVariable('time_remain', time_remain-speed),
+            ], 
+            false=[
+                Hide('kahootscreen', dissolve),
+                Return({"points": 0, "time_remain": 0, "choice": None})
+            ]
         )
     # Bar will have a value proportional to the time remaining
     bar:
@@ -66,12 +50,16 @@ screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.1
         xalign 0.5 
         yalign 0.1 
         xmaximum 600 at alpha_dissolve # This is the timer bar.
+    
+    # show question
     hbox:
         xalign 0.5
         yalign 0.2
         frame:
             has hbox
             text question
+
+    # show all answers
     frame:
         background Color("#ffffff00")
         style "kahoot_answers"
@@ -88,6 +76,18 @@ screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.1
                     hovered [
                         Function(playsfx, "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
                     ]
+
+#################################################################################
+#timer bar
+transform alpha_dissolve:
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    on hide:
+        linear 0.5 alpha 0
+
+style kahoot_answers:
+    xalign 0.5
+    yalign 0.4
 
 
 

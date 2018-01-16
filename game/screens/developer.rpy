@@ -119,7 +119,7 @@ screen time_screen:
 
 # minigames
 screen minigames_screen:
-    default minigames = ["playPong", "kahootGame"]
+    default showKahoot = False
     vbox:
         style "minigames_screen"
         frame:
@@ -127,12 +127,42 @@ screen minigames_screen:
             text "{b}Minigames{/b}"
             hbox:
                 spacing 5
-                for minigame in minigames:
-                    textbutton minigame:
-                        action [
-                            Hide("developerScreen"),
-                            Jump(minigame),
+                textbutton "Pong":
+                    action [
+                        Hide("developerScreen"),
+                        Jump("playPong"),
+                    ]
+                textbutton "Kahoot":
+                    action If(
+                        showKahoot is False,
+                        true = [
+                            SetScreenVariable("showKahoot", True)
+                        ],
+                        false = [
+                            SetScreenVariable("showKahoot", False)
                         ]
+                    )
+    # toggle kahoot screen
+    if showKahoot:
+        use minigames_screen_kahoot(kahoot)
+
+screen minigames_screen_kahoot(kahootQuestions):
+    vbox:
+        style "minigames_screen_kahoot"
+        frame:
+            has vbox
+            text "{b}Questions{/b}"
+            for name, kahootQuestion in kahootQuestions.iteritems():
+                textbutton name:
+                    xalign 0.5
+                    action [
+                        Hide("developerScreen"),
+                        Hide("minigames_screen_kahoot"),
+                        Function(renpy.call, "kahootGame", kahootQuestion)
+                    ]
+
+ 
+                
 
 # convert list of strings to properly formatted
 init python:
@@ -182,3 +212,8 @@ style minigames_screen:
     xoffset 720
     xsize 625
     yoffset 275
+
+style minigames_screen_kahoot:
+    xoffset 900
+    xsize 100
+    yoffset 250

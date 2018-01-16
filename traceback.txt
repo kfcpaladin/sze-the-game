@@ -1,36 +1,74 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in script
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
-    args, kwargs = a.evaluate()
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-NameError: name 'question' is not defined
+After initialization, but before game start.
+  File "game/screens/developer.rpy", line 121, in prepare_screen
+    screen minigames_screen:
+  File "game/screens/developer.rpy", line 121, in prepare
+    screen minigames_screen:
+  File "game/screens/developer.rpy", line 123, in prepare
+    vbox:
+  File "game/screens/developer.rpy", line 123, in prepare
+    vbox:
+  File "game/screens/developer.rpy", line 125, in prepare
+    frame:
+  File "game/screens/developer.rpy", line 125, in prepare
+    frame:
+  File "game/screens/developer.rpy", line 126, in prepare
+    has vbox
+  File "game/screens/developer.rpy", line 126, in prepare
+    has vbox
+  File "game/screens/developer.rpy", line 128, in prepare
+    hbox:
+  File "game/screens/developer.rpy", line 128, in prepare
+    hbox:
+  File "game/screens/developer.rpy", line 135, in prepare
+    textbutton "Kahoot":
+  File "game/screens/developer.rpy", line 135, in prepare
+    textbutton "Kahoot":
+SyntaxError: invalid syntax (developer.rpy, line 137)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in script
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 480, in execute_call_screen
-    args, kwargs = a.evaluate()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 181, in evaluate
-    kwargs[k] = renpy.python.py_eval(v, locals=scope)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/minigames/kahoot/kahootscreen.rpy", line 31, in <module>
-    call screen kahootscreen(question=question["question"], answers=question["answers"], **options)
-NameError: name 'question' is not defined
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 88, in run
+    renpy.display.screen.prepare_screens()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 859, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens/developer.rpy", line 121, in prepare_screen
+    screen minigames_screen:
+  File "game/screens/developer.rpy", line 121, in prepare
+    screen minigames_screen:
+  File "game/screens/developer.rpy", line 123, in prepare
+    vbox:
+  File "game/screens/developer.rpy", line 123, in prepare
+    vbox:
+  File "game/screens/developer.rpy", line 125, in prepare
+    frame:
+  File "game/screens/developer.rpy", line 125, in prepare
+    frame:
+  File "game/screens/developer.rpy", line 126, in prepare
+    has vbox
+  File "game/screens/developer.rpy", line 126, in prepare
+    has vbox
+  File "game/screens/developer.rpy", line 128, in prepare
+    hbox:
+  File "game/screens/developer.rpy", line 128, in prepare
+    hbox:
+  File "game/screens/developer.rpy", line 135, in prepare
+    textbutton "Kahoot":
+  File "game/screens/developer.rpy", line 135, in prepare
+    textbutton "Kahoot":
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/pyanalysis.py", line 699, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/pyanalysis.py", line 683, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 597, in py_compile
+    raise e
+SyntaxError: invalid syntax (developer.rpy, line 137)
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

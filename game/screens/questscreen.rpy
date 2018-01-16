@@ -1,7 +1,7 @@
 ##############################################
 screen questscreen(quests=quests):
-    use navigation 
     add "Quests.jpg"
+    use diary_nav
     # Used to keep track of the quest types, and which one to show
     default currentQuestType = quests.currentQuestType
     default currentQuests = getattr(quests, currentQuestType)

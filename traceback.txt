@@ -1,62 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 24, in script call
-    sze "I had always loved her, since she first graced my eyes in Year 7."
-  File "game/minigames/pong/pongscreen.rpy", line 4, in script
-    call screen pong(pong)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(pong, fps=50, duration=60):
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(pong, fps=50, duration=60):
-  File "game/minigames/pong/pongscreen.rpy", line 51, in execute
-    $ pong_paddle_control(pong.paddles["leftPaddle"], leftPaddleControls)
-  File "game/minigames/pong/pongscreen.rpy", line 51, in <module>
-    $ pong_paddle_control(pong.paddles["leftPaddle"], leftPaddleControls)
-NameError: name 'pong_paddle_control' is not defined
+  File "game/story/Day 1/2 after rollcall.rpy", line 3, in script
+    $ renpy.save("autosave")
+  File "game/story/Day 1/2 after rollcall.rpy", line 3, in <module>
+    $ renpy.save("autosave")
+PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 24, in script call
-    sze "I had always loved her, since she first graced my eyes in Year 7."
-  File "game/minigames/pong/pongscreen.rpy", line 4, in script
-    call screen pong(pong)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
-    scene_lists.replace_transient()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
-    self.remove(layer, tag)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
-    self.hide_or_replace(layer, remove_index, "hide")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
-    d = oldsle.displayable._hide(now - st, now - at, prefix)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(pong, fps=50, duration=60):
-  File "game/minigames/pong/pongscreen.rpy", line 12, in execute
-    screen pong(pong, fps=50, duration=60):
-  File "game/minigames/pong/pongscreen.rpy", line 51, in execute
-    $ pong_paddle_control(pong.paddles["leftPaddle"], leftPaddleControls)
-  File "game/minigames/pong/pongscreen.rpy", line 51, in <module>
-    $ pong_paddle_control(pong.paddles["leftPaddle"], leftPaddleControls)
-NameError: name 'pong_paddle_control' is not defined
+  File "game/story/Day 1/2 after rollcall.rpy", line 3, in script
+    $ renpy.save("autosave")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/story/Day 1/2 after rollcall.rpy", line 3, in <module>
+    $ renpy.save("autosave")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/loadsave.py", line 300, in save
+    dump((roots, renpy.game.log), logf)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/loadsave.py", line 45, in dump
+    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
+PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

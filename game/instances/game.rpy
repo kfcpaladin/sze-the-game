@@ -1,4 +1,4 @@
-init python:
+init -10 python:
     game = Game({
         "allowedAreas": [
             "bcourts", "bridge", "carpark", "cohen", "currycourts", 
@@ -19,6 +19,7 @@ init python:
         "timeTravelCounter": 0,
         "currentDay": 1,
         "suicideCount": 0,
+        "currentDiaryPage": 0,
     })
 
     game.addTimes({

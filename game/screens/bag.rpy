@@ -2,6 +2,7 @@
 # currently inefficent, can probably optimise
 screen bag_view(bag=bag):
     add "Diary.jpg"
+    use diary_nav
     use bag_stats(bag.who)
     # Variables
     default colours = {

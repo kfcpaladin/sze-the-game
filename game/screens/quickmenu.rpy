@@ -11,14 +11,7 @@ screen quick_menu():
         xalign 1.0
         yalign 1.0
 
-        # if config.developer:
-        textbutton _("Developer")   action ShowMenu('developerScreen')
-        textbutton _("Bag")         action ShowMenu('bag_view', bag)
-        textbutton _("Quests")      action ShowMenu('questscreen')
-        textbutton _("Achievements")action ShowMenu('achievementscreen')
-        textbutton _("Stats")       action ShowMenu('statsscreen', sze)
         textbutton _("kms")         action ShowMenu('kms')
-        textbutton _("Roadmap")     action ShowMenu('roadmap')
         textbutton _("Back")        action Rollback()
         textbutton _("Save")        action ShowMenu('save')
         textbutton _("Q.Save")      action QuickSave()

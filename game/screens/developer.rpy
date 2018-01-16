@@ -2,9 +2,8 @@
 # Developer console
 
 screen developerScreen:
-    tag menu
-    use navigation
     add "Quests.jpg"
+    use diary_nav
     # Give title of page
     frame:
         area (0, 0, 500, 50)

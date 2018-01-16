@@ -1,5 +1,6 @@
 ########################################################################################################################
-screen fortmap: #Preparing the imagemap
+screen fortmap:
+    use diary_nav
     imagemap:
         ground "map.png"
         hover "Map selected.png"

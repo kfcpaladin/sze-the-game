@@ -1,18 +1,9 @@
 ###########################################################################
 screen statsscreen(who=sze):
-    tag menu
     # Include the navigation.
-    use navigation
     add "Quests.jpg"
-    # Give title of page
-    frame:
-        area (0, 0, 500, 50)
-        text "Statistics": 
-            size 45
-            xoffset 30
-            yoffset 10
-            font "DejaVuSans.ttf"
-    
+    use diary_nav
+    use diary_title("Statistics")
     # display info
     use attribute_info(who)
     use attribute_info_description

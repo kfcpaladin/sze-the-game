@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/Pong.rpy", line 12: invalid syntax
-                    pos = Vector(1366/2, 768/2),
-                       ^
-    
+File "game/screens/diary.rpy", line 33: Line is indented, but the preceding screen statement does not expect a block. Please check this line's indentation.
+    frame:
+    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

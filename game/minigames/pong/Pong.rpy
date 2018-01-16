@@ -10,8 +10,8 @@ init python:
             self.balls["ball"] = Ball(
                 colour = "#c2d12a",
                 pos = Vector(1366/2, 768/2),
-                radius = 10,
-                speed = 25,
+                radius = 15,
+                speed = 20,
             )
             # left paddle
             self.paddles["leftPaddle"] = Paddle(

@@ -59,7 +59,7 @@ python early:
             diff.y /= (paddle.height/2.0)
             diff.x /= (paddle.width/2.0)
             yThreshold = 0.8
-            xThreshold = 0.7
+            xThreshold = 0.6
             # bounce horizontal
             if diff.x > xThreshold:
                 self.vel.x = self.speed

@@ -202,7 +202,6 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
-│   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
 │   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
@@ -1556,4 +1555,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-106 directories, 1450 files
+106 directories, 1449 files

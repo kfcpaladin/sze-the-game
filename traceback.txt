@@ -1,94 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'screenIcons/arthurside.png'>:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-IOError: Couldn't find file 'screenIcons/arthurside.png'.
+While running game code:
+  File "game/story/Day 1/9 economics.rpy", line 16, in script call
+    call econ1kahoot1
+  File "game/story/Day 1/9 economics.rpy", line 20, in script call
+    call kahootGame(question=kahoot["econ1"], time_range=10)
+  File "game/minigames/kahoot/kahootscreen.rpy", line 14, in script
+    label kahootGame(kahoot, show_result=True, **options):
+Exception: Required parameter kahoot has no value.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2916, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1980, in draw_screen
-    renpy.config.screen_height,
-  File "renpy/display/render.pyx", line 430, in renpy.display.render.render_screen (gen/renpy.display.render.c:6938)
-    rv = render(root, width, height, 0, 0)
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 361, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 625, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 715, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 1093, in render
-    st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/imagelike.py", line 254, in render
-    crend = render(image, width, height, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/im.py", line 503, in render
-    texture = cache.get(self, texture=True)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/im.py", line 212, in get
-    surf = image.load()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/im.py", line 553, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/loader.py", line 548, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'screenIcons/arthurside.png'.
+  File "game/story/Day 1/9 economics.rpy", line 16, in script call
+    call econ1kahoot1
+  File "game/story/Day 1/9 economics.rpy", line 20, in script call
+    call kahootGame(question=kahoot["econ1"], time_range=10)
+  File "game/minigames/kahoot/kahootscreen.rpy", line 14, in script
+    label kahootGame(kahoot, show_result=True, **options):
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 772, in execute
+    values = apply_arguments(self.parameters, renpy.store._args, renpy.store._kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 151, in apply_arguments
+    return parameters.apply(args, kwargs, ignore_errors)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
+    raise Exception("Required parameter %s has no value." % name)
+Exception: Required parameter kahoot has no value.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

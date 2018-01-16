@@ -56,14 +56,12 @@ screen label_screen_entry(label):
                 spacing 5
                 textbutton "Jump":
                     action [
-                        Hide("developerScreen"),
-                        Hide("label_screen_description"),
+                        Function(hideDeveloperScreen),
                         Function(renpy.jump, label["name"])
                     ]
                 textbutton "Call":
                     action [
-                        Hide("developerScreen"),
-                        Hide("label_screen_description"),
+                        Function(hideDeveloperScreen),
                         Function(renpy.call, label["name"])
                     ]
                 textbutton "Show description":
@@ -157,8 +155,7 @@ screen minigames_screen_kahoot(kahootQuestions):
                 textbutton name:
                     xalign 0.5
                     action [
-                        Hide("developerScreen"),
-                        Hide("minigames_screen_kahoot"),
+                        Function(hideDeveloperScreen),
                         Function(renpy.call, "kahootGame", kahootQuestion)
                     ]
 
@@ -175,8 +172,8 @@ screen screen_console:
                 for screen in availableScreens:
                     textbutton screen:
                         action [
+                            Function(hideDeveloperScreen),
                             Show(screen),
-                            Hide("developerScreen"),
                         ]
                     
 
@@ -195,6 +192,21 @@ init python:
             if index is not len(messages)-1:
                 text += ", "
         return text
+
+    def hideDeveloperScreen():
+        screens = [
+            "developerScreen", 
+            "label_screen",
+            "label_screen_entry",
+            "label_screen_description",
+            "sound_screen",
+            "time_screen",
+            "minigames_screen",
+            "minigames_screen_kahoot",
+            "screen_console",
+        ]
+        for screen in screens:
+            renpy.hide_screen(screen)
 
 ###########################################################################
 style label_screen:

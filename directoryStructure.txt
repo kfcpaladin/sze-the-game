@@ -114,6 +114,8 @@
 │   │   │   ├── willis.png
 │   │   │   ├── willyang.png
 │   │   │   └── willyin.png
+│   │   ├── images.rpy
+│   │   ├── images.rpyc
 │   │   ├── items
 │   │   │   ├── axe.png
 │   │   │   ├── bag.png
@@ -242,8 +244,6 @@
 │   ├── scripts
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
-│   │   ├── images.rpy
-│   │   ├── images.rpyc
 │   │   ├── labels
 │   │   │   ├── after_rollcall.rpy
 │   │   │   ├── after_rollcall.rpyc

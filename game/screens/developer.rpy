@@ -19,6 +19,7 @@ screen developerScreen:
     use sound_screen
     use time_screen
     use minigames_screen
+    use screen_console
 
 # Labels explorer menu
 screen label_screen:
@@ -108,7 +109,7 @@ screen time_screen:
         style "time_screen"
         frame:
             has vbox
-            text "{b}Time Control{/b}"
+            text "{b}" + "Time Control ({0})".format(game.getTime()) + "{/b}" 
             hbox:
                 spacing 5
                 for time in game.currentTime:
@@ -161,7 +162,24 @@ screen minigames_screen_kahoot(kahootQuestions):
                         Function(renpy.call, "kahootGame", kahootQuestion)
                     ]
 
- 
+# get call labels to all screens
+screen screen_console:
+    default availableScreens = ["fortmap"]
+    vbox:
+        style "screen_console"
+        frame:
+            has vbox
+            text "{b}Screen Console{/b}"
+            hbox:
+                spacing 5
+                for screen in availableScreens:
+                    textbutton screen:
+                        action [
+                            Show(screen),
+                            Hide("developerScreen"),
+                        ]
+                    
+
                 
 
 # convert list of strings to properly formatted
@@ -217,3 +235,8 @@ style minigames_screen_kahoot:
     xoffset 900
     xsize 100
     yoffset 250
+
+style screen_console:
+    xoffset 720
+    xsize 625
+    yoffset 365

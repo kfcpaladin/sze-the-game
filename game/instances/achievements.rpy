@@ -3,7 +3,7 @@ init -1 python:
     # add achievements
 
 init python:
-    # thirst 
+    # attribute achievements 
     achievements.addAchievements({
         "thirst1": {
             "title": "Become thirsty",
@@ -28,6 +28,66 @@ init python:
     })
 
     achievements.addAchievements({
+        "poweredUp": {
+            "title": "Become a better person",
+            "brief": "All your stats are positive",
+            "description": "Since the days when you were thirsting over Serena, you have evolved into a better person",
+            "hidden": True,
+            "conditions": [
+                {
+                    "function": lambda: sze.thirst > 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.intellect > 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.charm > 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.fort > 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.strength > 0,
+                    "msg": None,
+                },
+            ],
+        },
+        "autistic": {
+            "title": "You are a horrible person",
+            "brief": "All your stats are negative",
+            "description": "Your obsession with Serena has led you down a dark and terrible path, one that you may never recover from",
+            "hidden": True,
+            "conditions": [
+                {
+                    "function": lambda: sze.thirst < 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.intellect < 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.charm < 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.fort < 0,
+                    "msg": None,
+                },
+                {
+                    "function": lambda: sze.strength < 0,
+                    "msg": None,
+                },
+            ],
+        },
+    })
+
+    # friendship achievements
+    achievements.addAchievements({
         "rina1": {
             "title": "Slay Serena",
             "brief": "Date Serena",
@@ -40,6 +100,7 @@ init python:
         },
     })
 
+    # suicide achievements
     achievements.addAchievements({
         "suicide": {
             "title": "Become suicidal",

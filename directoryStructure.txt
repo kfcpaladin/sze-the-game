@@ -129,6 +129,7 @@
 │   │   │   ├── diaryGrid.jpg
 │   │   │   ├── diaryNormal.jpg
 │   │   │   ├── gunSuicide.jpg
+│   │   │   ├── hangingSuicide.jpg
 │   │   │   ├── map.png
 │   │   │   ├── Map selected.png
 │   │   │   ├── map unavailable.png
@@ -1556,4 +1557,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-106 directories, 1450 files
+106 directories, 1451 files

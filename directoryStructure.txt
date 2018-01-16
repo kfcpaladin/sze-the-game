@@ -108,6 +108,7 @@
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
 │   │   ├── diary.rpy
+│   │   ├── diary.rpyc
 │   │   ├── friends.rpy
 │   │   ├── friends.rpyc
 │   │   ├── game.rpy
@@ -170,9 +171,11 @@
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
 │   │   ├── auto-7-LT1.save
 │   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -237,8 +240,6 @@
 │   │   │   ├── quest_garyreeducation.rpyc
 │   │   │   ├── recess.rpy
 │   │   │   ├── recess.rpyc
-│   │   │   ├── screens.rpy
-│   │   │   ├── screens.rpyc
 │   │   │   ├── start_dead.rpy
 │   │   │   └── start_dead.rpyc
 │   │   ├── mousePosition.rpy
@@ -1524,4 +1525,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-100 directories, 1424 files
+100 directories, 1425 files

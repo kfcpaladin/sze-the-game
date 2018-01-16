@@ -2,9 +2,7 @@ screen achievementscreen(achievements=achievements):
     add "Quests.jpg"
     use diary_nav
     use diary_title("Achievements")
-    
     default currentAchieveType = achievements.currentAchieveType
-    
     # Create hbox to select achivement type to display
     hbox:
         style "achieve_select"
@@ -16,11 +14,9 @@ screen achievementscreen(achievements=achievements):
                         SetScreenVariable("currentAchieveType", achieveType),
                         Hide("achieve_description")
                     ]
-    # Left vertical box for ongoing quests
+    # Show achievements
     use achieve_info(currentAchieveType, achievements)
     use achieve_description
-    
-
 
 # Achievement info
 screen achieve_info(achieveType, achievements):
@@ -33,40 +29,33 @@ screen achieve_info(achieveType, achievements):
     $ colour = achieveColour[achieveType]
     vbox:
         style "achieve_info"
-        frame:          # The frame window is used for dialogue, which has a maroon color
-            xsize 625
-            has vbox    # Give it the size of the vbox
+        frame:          
+            has vbox    
             text "{b}" + "{0} achievements".format(unicode.title(achieveType)) + "{/b}"
             if currentAchievements:
                 # Grid and scroll bar
                 side "c r":
-                    # Create a grid of 1 column, and n rows
                     $ _vpgrid_name = "achievement_vpgrid"
                     vpgrid id (_vpgrid_name):
                         cols 1
-                        spacing 20
+                        spacing 10
                         draggable True
                         mousewheel True
                         style "achieve_vpgrid"
                         # Show each quest in the dictionary
                         for achieveID, achievement in currentAchievements.iteritems():
                             use achieve_entry(achieveID, achievement, colour)
-                    # Add scrollbar
                     vbar value YScrollValue(_vpgrid_name)
-            # If there are no achievements, show a message
             else:
                 text "No achievements are currently {0}".format(achieveType)
 
 # Achievement entry
 screen achieve_entry(achieveID, achievement, colour):
     default achieveInfo = ["title", "brief"]
-    vbox:
+    frame:
         style "achieve_entry"
-        frame:
-            xsize 600
-            ymaximum 100
-            background Solid(colour)
-            has vbox
+        background Solid(colour)
+        vbox:
             text "{b}" + "Achievement: {0}".format(achieveID) + "{/b}"
             for option in achieveInfo:
                 $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
@@ -85,10 +74,10 @@ screen achieve_description(achievement=None):
     default achieveInfo = ["description", "dependencies"]
     vbox:
         style "achieve_description"
-        frame:          # The frame window is used for dialogue, which has a maroon color
+        frame:          
             xsize 625
             ymaximum 200
-            has vbox    # Give it the size of the vbox
+            has vbox    
             if achievement:
                 for option in achieveInfo:
                     text "{b}" + "{0}".format(unicode.title(option)) + "{/b}"
@@ -128,4 +117,3 @@ style achieve_select:
     xoffset 700
     ysize 20
     yoffset 45
-# alpha = transparency for images

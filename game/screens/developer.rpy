@@ -13,11 +13,12 @@ screen developerScreen:
             yoffset 10
             font "DejaVuSans.ttf"
     
-    # use label menu
+    # use developer consoles
     use label_screen
     use label_screen_description
     use sound_screen
     use time_screen
+    use minigames_screen
 
 # Labels explorer menu
 screen label_screen:
@@ -116,6 +117,23 @@ screen time_screen:
                             Function(game.setTime, time)
                         ]
 
+# minigames
+screen minigames_screen:
+    default minigames = ["playPong", "kahootGame"]
+    vbox:
+        style "minigames_screen"
+        frame:
+            has vbox
+            text "{b}Minigames{/b}"
+            hbox:
+                spacing 5
+                for minigame in minigames:
+                    textbutton minigame:
+                        action [
+                            Hide("developerScreen"),
+                            Jump(minigame),
+                        ]
+
 # convert list of strings to properly formatted
 init python:
     def listToText(messages):
@@ -129,8 +147,6 @@ init python:
             if index is not len(messages)-1:
                 text += ", "
         return text
-
-
 
 ###########################################################################
 style label_screen:
@@ -161,3 +177,8 @@ style time_screen:
     xoffset 720
     xsize 625
     yoffset 185
+
+style minigames_screen:
+    xoffset 720
+    xsize 625
+    yoffset 275

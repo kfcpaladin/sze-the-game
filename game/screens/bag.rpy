@@ -1,102 +1,92 @@
 ############################## inventory screens ##############################################
 # currently inefficent, can probably optimise
 screen bag_view(bag=bag):
+    # screen components
     add "Diary.jpg"
     use diary_nav
+    use diary_title(bag.name)
     use bag_stats(bag.who)
+    use bag_tooltip
     # Variables
-    default colours = {
-        "item_used": "#00993371",       # Green
-        "item_not_used": "#e6ac0071",   # Orange
-        "item_blocked": "#b30000",      # Red
-        "background": "#00000000",      # Transparent
-    }
-    default grid = {
-        "size": (112, 112),
-        "spacing": 5,
-        "offset": (43, 131),
-        "dimensions": (580, 580),
-        "matrix": (5, int((len(bag.inv)-1)/5)+1),
-    }
+    default clearColour = "#00000000"
+    default iconSize = (112, 112)
+    default gapSize = 5
+    default offset = (43, 131)
+    default dimensions = (580, 580)
+    default matrix = (5, int((len(bag.inv)-1)/5)+1)
+    # render inventory
     frame:
-        area (0, 0, 500, 50)
-        text "{0}".format(unicode.title(bag.name)): 
-            size 45
-            xoffset 30
-            yoffset 10
-            font "DejaVuSans.ttf"
-    frame:
-        background Color(colours["background"])
-        xoffset grid["offset"][0]-grid["spacing"]
-        yoffset grid["offset"][1]-grid["spacing"]
+        background clearColour
+        xoffset offset[0] - gapSize
+        yoffset offset[1] - gapSize
         hbox:
-            ysize 580
-            $ _grid_name = bag.name
+            
+            $ _grid_name = "{0}_vpgrid".format(bag.name)
             vpgrid id (_grid_name):
-                xsize grid["dimensions"][0] 
-                ysize grid["dimensions"][1] 
-                spacing 5
-                cols grid["matrix"][0] 
-                rows grid["matrix"][1] 
+                xsize dimensions[0]
+                ysize dimensions[1]
+                spacing gapSize
+                cols matrix[0]
+                rows matrix[1]
                 draggable False
                 mousewheel True
                 for item in bag.inv:
-                    # Create an item element in the list
-                    frame:
-                        xsize grid["size"][0]
-                        ysize grid["size"][1]
-                        if item.used:
-                            background Color(colours["item_used"])
-                        else:
-                            background Color(colours["item_not_used"]) 
-                        hbox:
-                            xmaximum grid["size"][0]
-                            ymaximum grid["size"][1]
-                            imagebutton:
-                                xmaximum grid["size"][0]
-                                ymaximum grid["size"][1]
-                                idle Frame(item.icon, grid["size"][0], grid["size"][1], grid["size"][0], grid["size"][1])
-                                hover Frame(im.Sepia(item.icon), grid["size"][0], grid["size"][1], grid["size"][0], grid["size"][1])
-                                action [
-                                    Play ("sound", "sfx/vpunch.ogg"),
-                                    Function(item.toggle, bag.who),
-                                ]
-                                hovered [ 
-                                    Show("bag_tooltip",item=item) 
-                                ]
-                                unhovered Show("bag_tooltip")
-            if grid["matrix"][1] > grid["matrix"][0]:
+                    use bag_item(item, iconSize[0], iconSize[1])
+            if matrix[1] > matrix[0]:
                 frame:
                     vbar:
                         value YScrollValue(_grid_name)
 
-screen bag_tooltip(item=False):
-    default desc_box = {
-        "offset": (703, 95),
-        "size": (646, 429),
+# display a bag item
+screen bag_item(item, width, height):
+    default colour = {
+        "item_used":     "#00993371",   # Green
+        "item_not_used": "#e6ac0071",   # Orange
+        "item_blocked":  "#b30000",     # Red
     }
-    default colours = {
+    frame:
+        xsize width
+        ysize height
+        if item.used:
+            background Color(colour["item_used"])
+        else:
+            background Color(colour["item_not_used"]) 
+        imagebutton:
+            xmaximum width
+            ymaximum height
+            idle  Frame(item.icon, width, height, width, height)
+            hover Frame(im.Sepia(item.icon), width, height, width, height)
+            action [
+                Play ("sound", "sfx/vpunch.ogg"),
+                Function(item.toggle, bag.who),
+            ]
+            hovered [ 
+                Show("bag_tooltip",item=item) 
+            ]
+            unhovered Show("bag_tooltip")
+
+
+screen bag_tooltip(item=None):
+    default colour = {
         "not_used": "#e6ac00",
         "used": "#009933",
     }
     # Description box
-    frame:
-        xoffset desc_box["offset"][0]
-        yoffset desc_box["offset"][1]
-        xsize   desc_box["size"][0]
-        vbox:
-            ymaximum desc_box["size"][1]
+    vbox:
+        style "bag_tooltip"
+        frame:
+            style "bag_tooltip_frame"
+            has vbox
             # Give an item description if there is one
             if item:
                 text "{b}Name: {/b}" + "{0}".format(item.name)
                 frame:
-                    xsize desc_box["size"][0]
+                    style "bag_tooltip_frame"
                     if item.used:
-                        background Solid(colours["used"])
+                        background Solid(colour["used"])
                     else:
-                        background Solid(colours["not_used"])
+                        background Solid(colour["not_used"])
                     vbox:
-                        xmaximum desc_box["size"][0]
                         text "{b}Brief: {/b}" + "{0}".format(item.desc)
                         text "{b}Stats: {/b}"
                         for stat, value in item.stat.iteritems():
@@ -109,22 +99,34 @@ screen bag_tooltip(item=False):
                 text "{b}Description{/b}"
                 text "Hover over an item for description"
 
-    # Statistics box
+# Statistics box
+screen bag_stats(person):
+    vbox:
+        style "bag_stats"
+        frame:
+            style "bag_stats_frame"
+            has vbox
+            text "{b}" + "{0}'s statistics".format(unicode.title(person.name)) + "{/b}"
+            for stat in person.attributes:
+                text "{0}: {1}".format(unicode.title(stat), getattr(person, stat))
 
-screen bag_stats(person=False):
-    default stat_box = {
-        "offset": (703, 577),
-        "size": (646, 75),
-    }
-    frame:
-        xoffset stat_box["offset"][0]
-        yoffset stat_box["offset"][1]
-        xsize   stat_box["size"][0]
-        vbox:
-            ymaximum stat_box["size"][1]
-            if person:
-                text "{b}" + "{0}'s statistics".format(unicode.title(person.name)) + "{/b}"
-                for stat in person.attributes:
-                    text "{0}: {1}".format(unicode.title(stat), getattr(person, stat))
-            else:
-                text "{b}Error: No user assigned to inventory{/b}"
+#########################################################################
+style bag_tooltip:
+    xoffset 703
+    yoffset 95
+    xsize 646
+    ysize 429
+
+style bag_tooltip_frame:
+    xsize 646
+    ymaximum 429
+
+style bag_stats:
+    xoffset 703
+    yoffset 577
+    xsize 646
+    ysize 75
+
+style bag_stats_frame:
+    xsize 646
+    ymaximum 75

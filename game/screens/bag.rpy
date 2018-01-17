@@ -1,6 +1,7 @@
 ############################## inventory screens ##############################################
 # currently inefficent, can probably optimise
 screen bag_view(bag=bag):
+    modal True
     # screen components
     add loadImage("screen_bg_diaryGrid.jpg")
     use diary_nav

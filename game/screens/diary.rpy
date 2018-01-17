@@ -53,6 +53,7 @@ init python:
     descriptionScreens = [
         "achieve_description",
         "attribute_info_description",
+        "bag_tooltip",
         "friend_info_description",
         "label_screen_description",
         "label_screen_unsafe",

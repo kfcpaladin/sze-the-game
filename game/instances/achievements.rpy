@@ -92,6 +92,7 @@ init python:
             "title": "Slay Serena",
             "brief": "Date Serena",
             "description": "Your goal as a barnacle is complete",
+            "icon": loadImage("achievement_rina1.png"),
             "dependencies": None,
             "conditions": {
                 "function": lambda: rin.friendship >= 100,

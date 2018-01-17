@@ -67,7 +67,8 @@
 │   │   └── Quest.rpyc
 │   ├── images
 │   │   ├── achievementIcons
-│   │   │   └── achievement_default.png
+│   │   │   ├── achievement_default.png
+│   │   │   └── achievement_rina1.png
 │   │   ├── backgrounds
 │   │   │   ├── bg_arthur.jpg
 │   │   │   ├── bg_CmEdPF6UgAAQQgF.jpg
@@ -167,7 +168,8 @@
 │   │   │   └── item_kirby.png
 │   │   ├── logo.png
 │   │   ├── questIcons
-│   │   │   └── quest_default.png
+│   │   │   ├── quest_default.png
+│   │   │   └── quest_serenaSlay.png
 │   │   ├── screenBackgrounds
 │   │   │   ├── screen_bg_diaryGrid.jpg
 │   │   │   ├── screen_bg_diaryNormal.jpg
@@ -227,7 +229,6 @@
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
-│   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
 │   │   ├── auto-7-LT1.save
 │   │   ├── auto-8-LT1.save
@@ -1565,4 +1566,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1456 files
+109 directories, 1457 files

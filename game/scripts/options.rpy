@@ -8,8 +8,7 @@
 ## appropriate.
 
 init -1 python hide:
-    config.developer = True
-    config.debug_sound = True
+    # config.developer = True
 
     ## These control the width and height of the screen.
     config.screen_width = 1366

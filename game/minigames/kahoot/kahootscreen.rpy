@@ -74,7 +74,7 @@ screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.2
                         Return({"points": points, "time_remain": time_remain, "choice": answer})
                     ]
                     hovered [
-                        Function(playsfx, "8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
+                        Function(playsfx, "button_select.ogg")
                     ]
 
 #################################################################################

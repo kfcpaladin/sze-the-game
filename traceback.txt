@@ -1,52 +1,29 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "game/screens/roadmap.rpy", line 3, in execute
-    screen roadmap:
-  File "game/screens/roadmap.rpy", line 3, in execute
-    screen roadmap:
-  File "game/screens/roadmap.rpy", line 4, in execute
-    add screenBackgroundDir + "diaryNormal.jpg"
-NameError: name 'screenBackgroundDir' is not defined
+  File "game/audio/sound.rpy", line 56, in script
+    init -1 python hide:
+  File "game/audio/sound.rpy", line 61, in <module>
+    style.textbutton.activate_sound = loadAudio("button_select.ogg")
+Exception: Style 'textbutton' does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
+  File "game/audio/sound.rpy", line 56, in script
+    init -1 python hide:
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2565, in interact
-    scene_lists.replace_transient()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 831, in replace_transient
-    self.remove(layer, tag)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1120, in remove
-    self.hide_or_replace(layer, remove_index, "hide")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
-    d = oldsle.displayable._hide(now - st, now - at, prefix)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/roadmap.rpy", line 3, in execute
-    screen roadmap:
-  File "game/screens/roadmap.rpy", line 3, in execute
-    screen roadmap:
-  File "game/screens/roadmap.rpy", line 4, in execute
-    add screenBackgroundDir + "diaryNormal.jpg"
-  File "<screen language>", line 4, in <module>
-NameError: name 'screenBackgroundDir' is not defined
+  File "game/audio/sound.rpy", line 61, in <module>
+    style.textbutton.activate_sound = loadAudio("button_select.ogg")
+  File "renpy/style.pyx", line 214, in renpy.style.StyleManager.__getattr__ (gen/renpy.style.c:3560)
+    return get_style(name)
+  File "renpy/style.pyx", line 81, in renpy.style.get_style (gen/renpy.style.c:1682)
+    raise Exception("Style %r does not exist." % name)
+Exception: Style 'textbutton' does not exist.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
-sze-the game 0.0
+ 

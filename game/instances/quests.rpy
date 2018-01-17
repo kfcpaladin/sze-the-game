@@ -32,7 +32,7 @@ init python:
         },
         "sexuality": {
             "title": "Arthur's gay journey",
-            "brief": "Arthur is planning on going on an adventure",
+            "brief": "Arthur is going on an adventure",
             "description": "In order to acquire all 9 pokeballs, he must conquer Kevin Spacey",
             "dependencies": None,
             "conditions": {

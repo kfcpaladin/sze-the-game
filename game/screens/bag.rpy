@@ -57,7 +57,7 @@ screen bag_item(item, width, height):
             idle  Frame(item.icon, width, height, width, height)
             hover Frame(im.Sepia(item.icon), width, height, width, height)
             action [
-                Play ("sound", "sfx/vpunch.ogg"),
+                Function(playsfx, "vpunch.ogg"),
                 Function(item.toggle, bag.who),
             ]
             hovered [ 

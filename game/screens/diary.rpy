@@ -5,12 +5,12 @@ screen float_menu:
         align (0.84, 0.04)
         has vbox
         spacing 10
-        textbutton "Open Diary":
+        textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
             action [
                 ShowMenu(diary.getCurrentPage()), 
             ]
             xalign 0.5
-        textbutton "kms":
+        textbutton _("kms"):
             action [
                 ShowMenu("kms"),
             ] 

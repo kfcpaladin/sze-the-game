@@ -55,7 +55,7 @@ screen quest_info(questType, quests):
 # Quest entry
 screen quest_entry(questID, quest, quests, colour):
     default questInfo = ["title", "brief"]
-    default iconSize = 130
+    default iconSize = 105
     frame:
         style "quest_entry"
         background Solid(colour)
@@ -64,6 +64,7 @@ screen quest_entry(questID, quest, quests, colour):
             spacing 5
             use icon_frame(quest["icon"], iconSize, iconSize)
             vbox:
+                ysize iconSize
                 # quest info
                 text "{b}" + "Quest: {0}".format(questID) + "{/b}"
                 for option in questInfo:

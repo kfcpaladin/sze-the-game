@@ -84,14 +84,14 @@ python early:
             if side == "left":
                 self.score["right"] += 1
                 self.vel = Vector(
-                    self.speed + random.randint(-2, 2), 
-                    self.speed + random.randint(0, 2)
+                    -self.speed/2.0 + random.randint(-2, 2), 
+                    self.speed * random.randint(-5, 5) / 5.0
                 )
             elif side == "right":
                 self.score["left"] += 1
                 self.vel = Vector(
-                    self.speed + random.randint(-2, 2), 
-                    -self.speed - random.randint(0, 2)
+                    self.speed/2.0 + random.randint(-2, 2), 
+                    self.speed * random.randint(-5, 5) / 5.0
                 )
         
         # Resets the ball position and nulls the score

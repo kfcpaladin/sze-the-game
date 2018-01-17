@@ -1,6 +1,6 @@
 # Used to configure the audio settings
 
-init -100 python:
+python early:
     
     audioDir = {
         "folders": ["audio/music", "audio/sfx"],
@@ -53,22 +53,16 @@ init -100 python:
         audioCache[filename] = audioDir["default"]
         return audioDir["default"]
         
-
-        
-            
-
-
-init -1 python hide:
+init python:
     ###########################################
     # Audio
-    
     ## Sounds that are used when button and imagemaps are clicked.
-    style.button.activate_sound = loadAudio("8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
-    style.imagemap.activate_sound = loadAudio("8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
+    style.button.activate_sound = loadAudio("button_select.ogg")
+    style.imagemap.activate_sound = loadAudio("button_select.ogg")
     ## Sounds that are used when entering and exiting the game menu.
-    config.enter_sound = loadAudio("8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
-    config.exit_sound = loadAudio("8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
+    config.enter_sound = loadAudio("button_select.ogg")
+    config.exit_sound = loadAudio("button_select.ogg")
     ## A sample sound that can be played to check the sound volume.
-    config.sample_sound = loadAudio("8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg")
+    config.sample_sound = loadAudio("button_select.ogg")
     ## Music that is played while the user is at the main menu.
     config.main_menu_music = loadAudio("p3IwatodaiDorm.ogg")

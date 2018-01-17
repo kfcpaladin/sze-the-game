@@ -28,7 +28,7 @@
 │   │   │   ├── TheRoomOSTMainTheme.ogg
 │   │   │   └── VarienThroneOfRavens.ogg
 │   │   ├── sfx
-│   │   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
+│   │   │   ├── button_select.ogg
 │   │   │   ├── game_over.ogg
 │   │   │   ├── gunClick.ogg
 │   │   │   ├── gunSound.ogg
@@ -43,9 +43,6 @@
 │   │   └── sound.rpyc
 │   ├── cache
 │   │   ├── bytecode.rpyb
-│   │   ├── im-8a73c074683b032f8d44bc027f212036-12f674c.png
-│   │   ├── im-ae30380b7717974ad4127e95a590f855-47a4f943.png
-│   │   ├── im-af78cec1cdc09080b83ca2d5cb74bbde-12f674c.png
 │   │   ├── im-b3e0a6d556792e4afa8d638980eb8566-47a4f943.png
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
@@ -1560,4 +1557,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-107 directories, 1453 files
+107 directories, 1450 files

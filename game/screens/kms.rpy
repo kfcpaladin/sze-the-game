@@ -12,6 +12,7 @@ screen kms:
 ##############################################################################
 # All suicide scenes
 screen kmsGun:
+    modal True
     add loadImage("kms_bg_bedroom.jpg")
     imagebutton:
         idle Frame(loadImage("char_arthurside.png"))
@@ -36,6 +37,7 @@ screen kmsGun:
         ]
 
 screen kmsHanging:
+    modal True
     add loadImage("kms_bg_hangingSuicide.jpg")
     imagebutton:
         idle Frame(loadImage("char_arthurside.png"))

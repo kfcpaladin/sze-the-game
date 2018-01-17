@@ -11,6 +11,14 @@
 #     _points = Points from the game of kahoot
 #     _time_remain = Time that was remaining when finished
 #     _choice = The choice that was made (None if time ran out) 
+######################################################################################
+# initialising game return variables
+init python:
+    _points = 0
+    _time_remain = 0
+    _choice = None
+
+# Call to this label to start game
 label kahootGame(kahoot, show_result=True, **options):
     menu:
         "Start Kahoot?":
@@ -29,6 +37,7 @@ label kahootGame(kahoot, show_result=True, **options):
             "Finally you give up on the game of Kahoot"
             return
 
+# handles all screen elements
 screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.25):
     default time_remain = time_range
     timer speed:

@@ -1,5 +1,7 @@
 ###########################################################################
 screen statsscreen(who=sze):
+    # prevent interaction underneath
+    modal True
     # Include the navigation.
     add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
@@ -56,7 +58,8 @@ screen attribute_info_entry(attribute, who):
                 use bar_graph_widget(attributeValue)
                 textbutton "Show description":
                     action [
-                        Show("attribute_info_description", None, attribute, who)
+                        Hide("attribute_info_description"), 
+                        Show("attribute_info_description", None, attribute, who),
                     ]
 
 # show attribute descrition
@@ -125,6 +128,7 @@ screen friend_info_entry(friend):
                 use bar_graph_widget(friend.friendship)
                 textbutton "Show description":
                     action [
+                        Hide("friend_info_description"),
                         Show("friend_info_description", friend=friend),
                     ]
 

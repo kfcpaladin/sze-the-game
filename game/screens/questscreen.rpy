@@ -1,5 +1,6 @@
 ##############################################
 screen questscreen(quests=quests):
+    modal True
     add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Quests")
@@ -80,10 +81,11 @@ screen quest_entry(questID, quest, quests, colour):
                     textbutton "Start quest":
                         action [
                             Function(quests.startQuest, questID),
-                            Hide("quest_description")
+                            Function(closeDescriptionScreens),
                         ]
                     textbutton "Show description":
                         action [
+                            Hide("quest_description"),
                             Show("quest_description", quest=quest)
                         ]
                     

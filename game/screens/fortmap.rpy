@@ -1,5 +1,6 @@
 ########################################################################################################################
 screen fortmap:
+    modal True
     use diary_nav
     imagemap:
         ground loadImage("screen_bg_map.png")

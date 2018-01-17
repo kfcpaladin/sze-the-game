@@ -1,7 +1,13 @@
-style popup_vpgrid:
-    xsize 500
-    xalign 0.5
-    yoffset 100
+# Used to manage popups
+python early:
+    def popup(messages,**options):
+        if type(messages) in [str, unicode, basestring]:
+            messages = [messages]
+        elif type(messages) is not list:
+            raise TypeError("Popup message should be list or string, not {0}".format(type(messages)))
+        renpy.show_screen("popup", messages, **options)
+        ## WARNING 
+        ## You should not call after calling a popup, since it will cancel it
 
 screen popup(messages=[], icons=[], duration=2, speed=0.5):
     default time_remain = duration
@@ -29,4 +35,9 @@ screen popup(messages=[], icons=[], duration=2, speed=0.5):
                     if not message:
                         $ message = "No message"    
                     text "{b}" + message + "{/b}"
+
+style popup_vpgrid:
+    xsize 500
+    xalign 0.5
+    yoffset 100
                     

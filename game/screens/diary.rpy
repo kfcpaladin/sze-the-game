@@ -7,7 +7,7 @@ screen float_menu:
         spacing 10
         textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
             action [
-                ShowMenu(diary.getCurrentPage()), 
+                Show(diary.getCurrentPage()), 
             ]
             xalign 0.5
         textbutton _("kms"):
@@ -23,10 +23,17 @@ screen diary_nav:
             textbutton _(str(index)):
                 action [
                     Hide("diary_nav_buttons"),
+                    Function(closeDescriptionScreens),
                     Hide(diary.getCurrentPage()),
-                    ShowMenu(diary.getPage(index)),
+                    Show(diary.getPage(index)),
                     Function(diary.setPage, index),
-                ]                    
+                ]
+        textbutton "Close":
+            action [
+                Hide("diary_nav_buttons"),
+                Function(closeDescriptionScreens),
+                Hide(diary.getCurrentPage())
+            ]                    
 
 # diary title
 screen diary_title(title="Undefined"):
@@ -38,6 +45,26 @@ screen diary_title(title="Undefined"):
             xoffset 30
             yoffset 10
             font "DejaVuSans.ttf"
+
+##############################################################################
+# Due to the way description boxes are implemented, they need to be updated
+# manually after each closing
+init python:
+    descriptionScreens = [
+        "achieve_description",
+        "attribute_info_description",
+        "friend_info_description",
+        "label_screen_description",
+        "label_screen_unsafe",
+        "minigames_screen_kahoot",
+        "quest_description",
+        "sound_screen_music_list",
+    ]
+
+    def closeDescriptionScreens():
+        for screen in descriptionScreens:
+            renpy.hide_screen(screen)
+        
 
 
 

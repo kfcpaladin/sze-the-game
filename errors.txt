@@ -2,16 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/images/images.rpy", line 1: end of line expected.
-(Perhaps you left out a " at the end of the first line.)
-    """
-        This is the image loading system
-        You use loadImage(...) to load the image, providing the name of the file.
-        You do not have to specify directory, but the directory must be present in
-        imageDir["subfolders"].
-                      ^
-        If an image could not be loaded, it will default to the default image, specified
-        in imageDir["default"]
-    """
+File "game/screens/developer.rpy", line 330: Line is indented, but the preceding style statement statement does not expect a block. Please check this line's indentation.
+    xsize 100
+    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

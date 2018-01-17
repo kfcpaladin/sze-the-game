@@ -1,4 +1,5 @@
 screen achievementscreen(achievements=achievements):
+    modal True
     add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Achievements")
@@ -75,6 +76,7 @@ screen achieve_entry(achieveID, achievement, colour):
                     spacing 5
                     textbutton "Show description":
                         action [
+                            Hide("achieve_description"),    # prevent old screen from covering new one
                             Show("achieve_description", achievement=achievement)
                         ]
 

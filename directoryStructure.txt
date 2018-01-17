@@ -29,6 +29,7 @@
 │   │   │   └── VarienThroneOfRavens.ogg
 │   │   ├── sfx
 │   │   │   ├── button_select.ogg
+│   │   │   ├── error.ogg
 │   │   │   ├── game_over.ogg
 │   │   │   ├── gunClick.ogg
 │   │   │   ├── gunSound.ogg
@@ -46,6 +47,7 @@
 │   │   ├── im-24df2e0d3435b19a0d8e3667a8ca7787-47a4f943.png
 │   │   ├── im-9536a2d19569c3d0113085f79a5011f4-47a4f943.png
 │   │   ├── im-b3e0a6d556792e4afa8d638980eb8566-47a4f943.png
+│   │   ├── im-e8e809871804fc273a1888a37d320f06-12f674c.png
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
 │   ├── classes
@@ -229,8 +231,8 @@
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
 │   │   ├── auto-6-LT1.save
-│   │   ├── auto-7-LT1.save
 │   │   ├── auto-8-LT1.save
 │   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
@@ -300,9 +302,7 @@
 │   │   ├── mousePosition.rpy
 │   │   ├── mousePosition.rpyc
 │   │   ├── options.rpy
-│   │   ├── options.rpyc
-│   │   ├── popup.rpy
-│   │   └── popup.rpyc
+│   │   └── options.rpyc
 │   ├── script_version.txt
 │   └── story
 │       ├── Day 1

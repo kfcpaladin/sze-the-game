@@ -2,6 +2,7 @@
 # Developer console
 
 screen developerScreen:
+    modal True # prevent interaction underneath
     add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     # Give title of page
@@ -43,6 +44,7 @@ screen label_screen:
 # entry for labels menu
 screen label_screen_entry(label):
     default defaultColour = "#009933"
+    default showDescription = False
     $ colour = defaultColour
     if "colour" in label:
         $ colour = label["colour"]
@@ -55,20 +57,56 @@ screen label_screen_entry(label):
             hbox:
                 spacing 5
                 textbutton "Jump":
-                    action [
-                        Function(hideDeveloperScreen),
-                        Function(renpy.jump, label["name"]),
-                        Show("float_menu")
-                    ]
+                    action If(
+                        ("call" in label and label["call"]) or ("jump" in label and label["jump"]),
+                        true = [
+                            Hide("developerScreen"),
+                            Function(closeDescriptionScreens),
+                            Function(renpy.jump, label["name"]),
+                        ],
+                        false = [
+                            Show("label_screen_unsafe", None, label),
+                            Function(playsfx, "error.ogg"),
+                        ]
+                    )
                 textbutton "Call":
                     action [
-                        Function(hideDeveloperScreen),
+                        Hide("developerScreen"),
+                        Function(closeDescriptionScreens),
                         Function(renpy.call, label["name"]),
-                        Show("float_menu")
                     ]
                 textbutton "Show description":
                     action [
                         Show("label_screen_description", label=label)
+                    ]
+
+# screen for unsafe jump
+screen label_screen_unsafe(label, timeout=5):
+    modal True
+    timer timeout:
+        repeat False
+        action [
+            Hide("label_screen_unsafe", dissolve)
+        ]
+    frame:
+        xalign 0.5
+        yalign 0.5
+        vbox:
+            text "{b}" + "Warning, {0} has no jump or call labels!".format(label["name"]) + "{/b}" xalign 0.5
+            text "{b}" + "If you continue, you will return back to main menu" + "{/b}" xalign 0.5
+            text "{b}" + "Continue?" + "{/b}" xalign 0.5
+            hbox:
+                xalign 0.5
+                spacing 5
+                textbutton "Yes":
+                    action [
+                        Hide("developerScreen"),
+                        Function(closeDescriptionScreens),
+                        Function(renpy.jump, label["name"]),
+                    ]
+                textbutton "No":
+                    action [
+                        Hide("label_screen_unsafe"),
                     ]
 
 # description
@@ -91,6 +129,8 @@ screen label_screen_description(label=None):
 
 # sound control board
 screen sound_screen:
+    default showMusicList = False
+    default showSfxList = False
     vbox:
         style "sound_screen"
         frame:
@@ -98,10 +138,64 @@ screen sound_screen:
             text "{b}Sound Menu{/b}"
             hbox:
                 spacing 5
+                # music commands
+                textbutton "Play music":
+                    action [
+                        Show("sound_screen_music_list", playFunction=playmusic),
+                    ]
                 textbutton "Stop music":
                     action Function(stopmusic)
+                # sfx commands
+                textbutton "Play sfx":
+                    action [
+                        Show("sound_screen_music_list", playFunction=playsfx),
+                    ]
                 textbutton "Stop sfx":
                     action Function(stopsfx)
+
+
+# list of cached music files
+screen sound_screen_music_list(playFunction=playmusic):
+    modal True
+    vbox:
+        xsize 500
+        spacing 5
+        xcenter 0.5
+        ycenter 0.5
+        frame:
+            xsize 500
+            has vbox
+            # title of window with close button
+            hbox:
+                xsize 500
+                text "{b}Select file to play{/b}":
+                    xalign 0.5
+                    xoffset 80
+                textbutton "x":
+                    xalign 1
+                    xoffset 120
+                    action [
+                        Hide("sound_screen_music_list"),
+                    ]
+            # a list of all music files
+            side "c r":
+                $ _grid_name = "music_list_vpgrid"
+                vpgrid id (_grid_name):
+                    xsize 500
+                    spacing 5
+                    cols 1
+                    draggable False
+                    mousewheel True
+                    for file in audioCache:
+                        textbutton file:
+                            xsize 475
+                            xalign 0.5 
+                            action [
+                                Function(playFunction, file),
+                            ]
+                vbar:
+                    value YScrollValue(_grid_name)
+
 
 # time control board
 screen time_screen:
@@ -120,7 +214,6 @@ screen time_screen:
 
 # minigames
 screen minigames_screen:
-    default showKahoot = False
     vbox:
         style "minigames_screen"
         frame:
@@ -131,35 +224,54 @@ screen minigames_screen:
                 textbutton "Pong":
                     action [
                         Hide("developerScreen"),
+                        Function(closeDescriptionScreens),
                         Jump("playPong"),
                     ]
                 textbutton "Kahoot":
-                    action If(
-                        showKahoot is False,
-                        true = [
-                            SetScreenVariable("showKahoot", True)
-                        ],
-                        false = [
-                            SetScreenVariable("showKahoot", False)
-                        ]
-                    )
-    # toggle kahoot screen
-    if showKahoot:
-        use minigames_screen_kahoot(kahoot)
+                    action [
+                        Show("minigames_screen_kahoot", None, kahoot)
+                    ]
 
 screen minigames_screen_kahoot(kahootQuestions):
+    modal True
     vbox:
         style "minigames_screen_kahoot"
         frame:
+            xsize 300
             has vbox
-            text "{b}Questions{/b}"
-            for name, kahootQuestion in kahootQuestions.iteritems():
-                textbutton name:
+            # window title with close button
+            hbox:
+                xsize 300
+                text "{b}Questions{/b}":
                     xalign 0.5
+                    xoffset 50
+                textbutton "x":
+                    xalign 1
+                    xoffset 70
                     action [
-                        Function(hideDeveloperScreen),
-                        Function(renpy.call, "kahootGame", kahootQuestion)
+                        Hide("minigames_screen_kahoot"),
                     ]
+            # list of all kahoot questions
+            side "c r":
+                $ _grid_name = "minigames_screen_kahoot_vpgrid"
+                vpgrid id (_grid_name):
+                    xsize 300
+                    spacing 5
+                    cols 1
+                    draggable False
+                    mousewheel True
+                    for name, kahootQuestion in kahootQuestions.iteritems():
+                        textbutton name:
+                            xsize 275
+                            xalign 0.5
+                            action [
+                                Hide("developerScreen"),
+                                Function(closeDescriptionScreens),
+                                Function(renpy.call, "kahootGame", kahootQuestion)
+                            ]
+                vbar:
+                    value YScrollValue(_grid_name)
+            
 
 # get call labels to all screens
 screen screen_console:
@@ -174,8 +286,9 @@ screen screen_console:
                 for screen in availableScreens:
                     textbutton screen:
                         action [
-                            Function(hideDeveloperScreen),
-                            Show(screen),
+                            Hide("developerScreen"),
+                            Function(closeDescriptionScreens),
+                            ShowMenu(screen),
                         ]
                     
 
@@ -194,21 +307,6 @@ init python:
             if index is not len(messages)-1:
                 text += ", "
         return text
-
-    def hideDeveloperScreen():
-        screens = [
-            "developerScreen", 
-            "label_screen",
-            "label_screen_entry",
-            "label_screen_description",
-            "sound_screen",
-            "time_screen",
-            "minigames_screen",
-            "minigames_screen_kahoot",
-            "screen_console",
-        ]
-        for screen in screens:
-            renpy.hide_screen(screen)
 
 ###########################################################################
 style label_screen:
@@ -246,9 +344,10 @@ style minigames_screen:
     yoffset 275
 
 style minigames_screen_kahoot:
-    xoffset 900
-    xsize 100
-    yoffset 250
+    xsize 300
+    xcenter 0.5
+    ycenter 0.5
+
 
 style screen_console:
     xoffset 720

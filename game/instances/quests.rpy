@@ -3,7 +3,7 @@ init python:
     # Test quests
     quests.addQuests({
         "serenaSlay": {
-            "title": "Slay Serena and acquire your pass into heaven",
+            "title": "Slay Serena and go to heaven",
             "brief": "Arthur is planning on slaying Serena",
             "description": "Once in heaven, Arthur will be able to slay several virgins, thereby satisfying his life goal of being a donkey",
             "dependencies": None,

@@ -1,7 +1,7 @@
 ###########################################################################
 screen statsscreen(who=sze):
     # Include the navigation.
-    add screenBackgroundDir + "diaryNormal.jpg"
+    add loadImage("diaryNormal.jpg")
     use diary_nav
     use diary_title("Statistics")
     # display info
@@ -50,15 +50,7 @@ screen attribute_info_entry(attribute, who):
             xsize 600
             ysize iconSize
             spacing 5
-            # creating friend icon
-            frame:
-                xsize iconSize
-                ysize iconSize
-                background Solid("#ffffff")
-                imagebutton:
-                    xmaximum iconSize
-                    ymaximum iconSize
-                    idle Frame("icons/{0}.jpg".format(attribute))
+            use icon_frame(loadImage("{0}.jpg".format(attribute)), iconSize, iconSize)
             vbox:
                 text "{b}" + " {0} ({1})".format(unicode.title(attribute), attributeValue) + "{/b}"
                 use bar_graph_widget(attributeValue)
@@ -127,19 +119,7 @@ screen friend_info_entry(friend):
             xsize 600
             ysize iconSize
             spacing 5
-            # creating friend icon
-            frame:
-                xsize iconSize
-                ysize iconSize
-                background Solid("#ffffff")
-                imagebutton:
-                    xmaximum iconSize
-                    ymaximum iconSize
-                    if friend.icon:
-                        idle Frame(friend.icon)
-                    else:
-                        idle Frame("icons/default.jpg")
-            # friend info
+            use icon_frame(friend.icon, iconSize, iconSize)
             vbox:
                 text "{b}" + " {0} ({1})".format(unicode.title(friend.name), friend.friendship) + "{/b}"
                 use bar_graph_widget(friend.friendship)
@@ -183,7 +163,7 @@ screen bar_graph_widget(value):
             Show("bar_graph_tooltip", value),
         ]
 
-
+# NOTE: This is not working
 screen bar_graph_tooltip(value):
     $ mousePosition = getMousePosition()
     frame:
@@ -191,6 +171,20 @@ screen bar_graph_tooltip(value):
         yoffset mousePosition[1]
         vbox:
             text str(value)
+
+# Icon frame for mounting icons
+screen icon_frame(icon, width, height):
+    frame:
+        xsize width
+        ysize height
+        background Solid("#ffffff")
+        imagebutton:
+            xmaximum width
+            ymaximum height
+            if icon:
+                idle Frame(icon)
+            else:
+                idle Frame("icons/default.jpg")
 
 ###########################################################################
 style attribute_info:

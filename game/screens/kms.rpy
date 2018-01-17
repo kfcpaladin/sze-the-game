@@ -12,15 +12,15 @@ screen kms:
 ##############################################################################
 # All suicide scenes
 screen kmsGun:
-    add screenBackgroundDir + "bedroom.jpg"
+    add loadImage("bedroom.jpg")
     imagebutton:
-        idle Frame(characterDir + "arthurside.png")
+        idle Frame(loadImage("arthurside.png"))
         xsize 200
         ysize 300
         xoffset 200
         yoffset 200
     imagebutton:
-        idle Frame(screenIconDir + "glockNoTrigger.png")
+        idle Frame(loadImage("glockNoTrigger.png"))
         xsize 200
         ysize 150
         xoffset 600
@@ -36,9 +36,9 @@ screen kmsGun:
         ]
 
 screen kmsHanging:
-    add screenBackgroundDir + "hangingSuicide.jpg"
+    add loadImage("hangingSuicide.jpg")
     imagebutton:
-        idle Frame(characterDir + "arthurside.png")
+        idle Frame(loadImage("arthurside.png"))
         xsize 200
         ysize 300
         xoffset 200

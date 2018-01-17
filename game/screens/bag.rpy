@@ -2,7 +2,7 @@
 # currently inefficent, can probably optimise
 screen bag_view(bag=bag):
     # screen components
-    add screenBackgroundDir + "diaryGrid.jpg"
+    add loadImage("diaryGrid.jpg")
     use diary_nav
     use diary_title(bag.name)
     use bag_stats(bag.who)

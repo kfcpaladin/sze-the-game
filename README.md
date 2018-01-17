@@ -12,8 +12,8 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 1. Restructures the /game directory so that it is easier to manage  
 2. Introduces subclasses to the ADVCharacter used in master/nub to offer specialisation
 3. Uses an updated renpy engine to [*renpy-6.99.13*](https://www.renpy.org/dl/6.99.13/)
-4. Added redirectable music and sfx directories
-5. Added redirectable image subdirectories for better global image classification (*prevents image clashing between images with same name*)
+4. Added redirectable audio subdirectories for better global audio classification (*allows for better classification*)
+5. Added redirectable image subdirectories for better global image classification (*allows for better classification*)
 6. Added achievements, quests, inventory, items, statistics screen, and a diary
 7. Added minigames, including *pong, kahoot*
 
@@ -21,14 +21,13 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 
 | Folder                         | Description                                                       |
 | ------------------------------ | ----------------------------------------------------------------- |
+| [audio](./game/audio)          | Stores all audio files, and is customisable                       |
 | [classes](./game/classes)      | Stores python scripts containing the classes                      |
 | [images](./game/images)        | Stores the images declared by default in renpy                    |
 | [instances](./game/instances)  | Stores pythons scripts which initialise all the instances         |
 | [minigames](./game/minigames)  | Stores all minigames used inside the game                         |
-| [music](./game/music)          | Custom directory declarable through options.rpy in /game/scripts  |
 | [screens](./game/screens)      | Folder dedicated for gui renpy script files                       |
 | [scripts](./game/scripts)      | Where you place renpy scripts not related to story                |
-| [sfx](./game/scripts)          | Where sfx sounds effects are stored                               |
 | [story](./game/story)          | Specialised directory used to store all the narratives            |
 
 ## New classes and instances

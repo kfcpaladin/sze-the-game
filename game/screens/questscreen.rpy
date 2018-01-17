@@ -1,6 +1,6 @@
 ##############################################
 screen questscreen(quests=quests):
-    add screenBackgroundDir + "diaryNormal.jpg"
+    add loadImage("diaryNormal.jpg")
     use diary_nav
     use diary_title("Quests")
     # Used to keep track of the quest types, and which one to show
@@ -55,27 +55,37 @@ screen quest_info(questType, quests):
 # Quest entry
 screen quest_entry(questID, quest, quests, colour):
     default questInfo = ["title", "brief"]
+    default iconSize = 130
     frame:
         style "quest_entry"
         background Solid(colour)
-        vbox:
-            text "{b}" + "Quest: {0}".format(questID) + "{/b}"
-            for option in questInfo:
-                $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
-                if not quest[option]:
-                    $ msg += "None"
-                else:
-                    $ msg += quest[option] 
-                text msg
-            textbutton "Show description":
-                action [
-                    Show("quest_description", quest=quest)
-                ]
-            textbutton "Start quest":
-                action [
-                    Function(quests.startQuest, questID),
-                    Hide("quest_description")
-                ]
+        hbox:
+            ysize iconSize
+            spacing 5
+            use icon_frame(quest["icon"], iconSize, iconSize)
+            vbox:
+                # quest info
+                text "{b}" + "Quest: {0}".format(questID) + "{/b}"
+                for option in questInfo:
+                    $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
+                    if not quest[option]:
+                        $ msg += "None"
+                    else:
+                        $ msg += quest[option] 
+                    text msg
+                # interactive buttons
+                hbox:
+                    spacing 5
+                    textbutton "Start quest":
+                        action [
+                            Function(quests.startQuest, questID),
+                            Hide("quest_description")
+                        ]
+                    textbutton "Show description":
+                        action [
+                            Show("quest_description", quest=quest)
+                        ]
+                    
 
 # Longer description
 screen quest_description(quest=None):
@@ -109,7 +119,7 @@ style quest_vpgrid:
     ysize 415
 
 style quest_entry:  
-    xsize 650
+    xsize 600
     ysize 70
 
 style quest_description:  

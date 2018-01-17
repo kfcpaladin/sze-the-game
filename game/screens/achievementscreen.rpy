@@ -1,5 +1,5 @@
 screen achievementscreen(achievements=achievements):
-    add screenBackgroundDir + "diaryNormal.jpg"
+    add loadImage("diaryNormal.jpg")
     use diary_nav
     use diary_title("Achievements")
     default currentAchieveType = achievements.currentAchieveType
@@ -52,22 +52,31 @@ screen achieve_info(achieveType, achievements):
 # Achievement entry
 screen achieve_entry(achieveID, achievement, colour):
     default achieveInfo = ["title", "brief"]
+    default iconSize = 105
     frame:
         style "achieve_entry"
         background Solid(colour)
-        vbox:
-            text "{b}" + "Achievement: {0}".format(achieveID) + "{/b}"
-            for option in achieveInfo:
-                $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
-                if not achievement[option]:
-                    $ msg += "None"
-                else:
-                    $ msg += achievement[option] 
-                text msg
-            textbutton "Show description":
-                action [
-                    Show("achieve_description", achievement=achievement)
-                ]
+        hbox:
+            spacing 5
+            ysize iconSize
+            use icon_frame(achievement["icon"], iconSize, iconSize)
+            vbox:
+                # acheivement info
+                text "{b}" + "Achievement: {0}".format(achieveID) + "{/b}"
+                for option in achieveInfo:
+                    $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
+                    if not achievement[option]:
+                        $ msg += "None"
+                    else:
+                        $ msg += achievement[option] 
+                    text msg
+                # buttons
+                hbox:
+                    spacing 5
+                    textbutton "Show description":
+                        action [
+                            Show("achieve_description", achievement=achievement)
+                        ]
 
 # Longer description of achievement
 screen achieve_description(achievement=None):

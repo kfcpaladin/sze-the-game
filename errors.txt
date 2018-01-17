@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/kms.rpy", line 6: expected 'word' not found.
-    use "kmsGun"
-        ^
+File "game/scripts/sound.rpy", line 25: invalid syntax
+            renpy.music.play((loadAudio(filename), channel=channel, loop=loop, **options))
+                                                           ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

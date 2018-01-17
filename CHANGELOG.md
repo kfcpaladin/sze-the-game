@@ -52,3 +52,8 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Made significant changes to pong game, including a new Pong class for better abstraction
 * Integrated all pages of the diary into the diary button available during gameplay
 * Restructed the game/images/ folder for better expandability in the future
+
+**17/01/2018**
+* Added icons to quests and achievements
+* Restructured audio and image directories to make it easier to classify images
+* Now uses loadImage(...) and loadAudio(...) to load assets in

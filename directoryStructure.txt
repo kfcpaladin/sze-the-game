@@ -3,6 +3,44 @@
 ├── directoryStructure.txt
 ├── errors.txt
 ├── game
+│   ├── audio
+│   │   ├── default.ogg
+│   │   ├── music
+│   │   │   ├── CongressNeptune.ogg
+│   │   │   ├── DeemoPaper Plane's Adventure.ogg
+│   │   │   ├── Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
+│   │   │   ├── kahoot.ogg
+│   │   │   ├── LeCastleVaniaLEDSpiralsJW.ogg
+│   │   │   ├── ManuelGasGasGas(InitialD).ogg
+│   │   │   ├── p3IwatodaiDorm.ogg
+│   │   │   ├── p3_JikaNetTanaka.ogg
+│   │   │   ├── p3MassDestruction.ogg
+│   │   │   ├── p3WhenTheMoon'sReachingOutStars.ogg
+│   │   │   ├── p4LikeADreamComeTrue.ogg
+│   │   │   ├── p4Reasoning.ogg
+│   │   │   ├── p4Traumerei.ogg
+│   │   │   ├── p4YouthfulLunch.ogg
+│   │   │   ├── p5BeneathTheMaskInstrumental.ogg
+│   │   │   ├── PinkFloydAnotherBrickInTheWall.ogg
+│   │   │   ├── RaxlenSliceBG8bit.ogg
+│   │   │   ├── rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg
+│   │   │   ├── terroristyterroristsong.ogg
+│   │   │   ├── TheRoomOSTMainTheme.ogg
+│   │   │   └── VarienThroneOfRavens.ogg
+│   │   ├── sfx
+│   │   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
+│   │   │   ├── game_over.ogg
+│   │   │   ├── gunClick.ogg
+│   │   │   ├── gunSound.ogg
+│   │   │   ├── hpunch.ogg
+│   │   │   ├── mlady.ogg
+│   │   │   ├── respawn.ogg
+│   │   │   ├── slayer.ogg
+│   │   │   ├── vpunch.ogg
+│   │   │   ├── wind.ogg
+│   │   │   └── xbox.ogg
+│   │   ├── sound.rpy
+│   │   └── sound.rpyc
 │   ├── cache
 │   │   ├── bytecode.rpyb
 │   │   ├── im-8a73c074683b032f8d44bc027f212036-12f674c.png
@@ -90,6 +128,7 @@
 │   │   │   ├── willisside.png
 │   │   │   ├── willyin.png
 │   │   │   └── yang1.png
+│   │   ├── default.png
 │   │   ├── icons
 │   │   │   ├── anthonyle.png
 │   │   │   ├── billthecleaner.png
@@ -176,28 +215,6 @@
 │   │       ├── pongscreen.rpyc
 │   │       ├── Vector.rpy
 │   │       └── Vector.rpyc
-│   ├── music
-│   │   ├── CongressNeptune.ogg
-│   │   ├── DeemoPaper Plane's Adventure.ogg
-│   │   ├── Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
-│   │   ├── kahoot.ogg
-│   │   ├── LeCastleVaniaLEDSpiralsJW.ogg
-│   │   ├── ManuelGasGasGas(InitialD).ogg
-│   │   ├── p3IwatodaiDorm.ogg
-│   │   ├── p3_JikaNetTanaka.ogg
-│   │   ├── p3MassDestruction.ogg
-│   │   ├── p3WhenTheMoon'sReachingOutStars.ogg
-│   │   ├── p4LikeADreamComeTrue.ogg
-│   │   ├── p4Reasoning.ogg
-│   │   ├── p4Traumerei.ogg
-│   │   ├── p4YouthfulLunch.ogg
-│   │   ├── p5BeneathTheMaskInstrumental.ogg
-│   │   ├── PinkFloydAnotherBrickInTheWall.ogg
-│   │   ├── RaxlenSliceBG8bit.ogg
-│   │   ├── rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg
-│   │   ├── terroristyterroristsong.ogg
-│   │   ├── TheRoomOSTMainTheme.ogg
-│   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
 │   │   ├── 1-1-LT1.save
 │   │   ├── auto-10-LT1.save
@@ -279,22 +296,8 @@
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
 │   │   ├── popup.rpy
-│   │   ├── popup.rpyc
-│   │   ├── sound.rpy
-│   │   └── sound.rpyc
+│   │   └── popup.rpyc
 │   ├── script_version.txt
-│   ├── sfx
-│   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
-│   │   ├── game_over.ogg
-│   │   ├── gunClick.ogg
-│   │   ├── gunSound.ogg
-│   │   ├── hpunch.ogg
-│   │   ├── mlady.ogg
-│   │   ├── respawn.ogg
-│   │   ├── slayer.ogg
-│   │   ├── vpunch.ogg
-│   │   ├── wind.ogg
-│   │   └── xbox.ogg
 │   └── story
 │       ├── Day 1
 │       │   ├── 1 before school.rpy
@@ -1557,4 +1560,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-106 directories, 1451 files
+107 directories, 1453 files

@@ -225,7 +225,7 @@ screen minigames_screen:
                     action [
                         Hide("developerScreen"),
                         Function(closeDescriptionScreens),
-                        Jump("playPong"),
+                        Function(renpy.call, "playPong"),
                     ]
                 textbutton "Kahoot":
                     action [

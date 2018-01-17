@@ -3,8 +3,12 @@
 python early:
     
     audioDir = {
-        "folders": ["audio/music", "audio/sfx"],
-        "default": "audio/default.ogg",
+        "folder": "audio",
+        "subfolders": [
+            "music", 
+            "sfx"
+        ],
+        "default": "audio_default.ogg",
     }
     audioCache = {}
 
@@ -30,7 +34,7 @@ python early:
     """
     def checkIfDefaultAudio(filename):
         filepath = loadAudio(filename)
-        if filepath == audioDir["default"]:
+        if filepath == "{0}/{1}".format(audioDir["folder"], audioDir["default"]):
             renpy.music.play(filepath, channel="sound", loop=False)
             popup("{0} is not a valid music file".format(filename))
             return True
@@ -45,13 +49,14 @@ python early:
     def loadAudio(filename):
         if filename in audioCache:
             return audioCache[filename]
-        for folder in audioDir["folders"]:
-            filepath = "{0}/{1}".format(folder, filename)
-            if os.path.exists("game/"+filepath):
+        for folder in audioDir["subfolders"]:
+            filepath = "{0}/{1}/{2}".format(audioDir["folder"], folder, filename)
+            if os.path.exists("game/{0}".format(filepath)):
                 audioCache[filename] = filepath
                 return filepath
-        audioCache[filename] = audioDir["default"]
-        return audioDir["default"]
+        filepath = "{0}/{1}".format(audioDir["folder"], audioDir["default"])
+        audioCache[filename] = filepath
+        return filepath
         
 init python:
     ###########################################

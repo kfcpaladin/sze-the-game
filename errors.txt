@@ -2,9 +2,16 @@
 errors listed below, and try again.
 
 
-File "game/scripts/sound.rpy", line 25: invalid syntax
-            renpy.music.play((loadAudio(filename), channel=channel, loop=loop, **options))
-                                                           ^
-    
+File "game/images/images.rpy", line 1: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    """
+        This is the image loading system
+        You use loadImage(...) to load the image, providing the name of the file.
+        You do not have to specify directory, but the directory must be present in
+        imageDir["subfolders"].
+                      ^
+        If an image could not be loaded, it will default to the default image, specified
+        in imageDir["default"]
+    """
 
 Ren'Py Version: Ren'Py 6.99.13.2919

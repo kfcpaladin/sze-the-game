@@ -8,7 +8,7 @@ init -1 python:
                 "intellect": -1,
                 "strength": 1,
             }, 
-            "icon": loadImage("ball.png"),
+            "icon": loadImage("item_ball.png"),
         }),
         "axe": Item(**{
             "name": "axe", 
@@ -18,7 +18,7 @@ init -1 python:
                 "intellect": -10,
                 "strength": 10,
             }, 
-            "icon": loadImage("axe.png"),
+            "icon": loadImage("item_axe.png"),
         }),
         "money": Item(**{
             "name": "monies", 
@@ -28,7 +28,7 @@ init -1 python:
                 "intellect": 4,
                 "strength": -3,
             }, 
-            "icon": loadImage("bag.png"),
+            "icon": loadImage("item_bag.png"),
         }),
         "fireaxe": Item(**{
             "name": "fireaxe", 
@@ -38,7 +38,7 @@ init -1 python:
                 "intellect": -20,
                 "strength": 15,
             }, 
-            "icon": loadImage("axe.png"),
+            "icon": loadImage("item_axe.png"),
         }),
         "calc": Item(**{
             "name": "calculator", 
@@ -48,7 +48,7 @@ init -1 python:
                 "intellect": 20,
                 "strength": -10,
             }, 
-            "icon": loadImage("calc1.png"),
+            "icon": loadImage("item_calc1.png"),
         }),
     }
 
@@ -63,7 +63,7 @@ init -1 python:
                 "strength": 1000,
                 "thirst": -1000,
             },
-            "icon": loadImage("kirby.png"),
+            "icon": loadImage("item_kirby.png"),
         }),
         "neo armstrong": Item(**{
             "name": "neo armstrong cyclone jet armstrong cannon",
@@ -75,6 +75,6 @@ init -1 python:
                 "strength": 1000,
                 "thirst": 1000,
             },
-            "icon": loadImage("cannon.png"),
+            "icon": loadImage("item_cannon.png"),
         })
     }

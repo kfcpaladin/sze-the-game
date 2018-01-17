@@ -1,7 +1,7 @@
 ###########################################################################
 screen statsscreen(who=sze):
     # Include the navigation.
-    add loadImage("diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Statistics")
     # display info
@@ -50,7 +50,7 @@ screen attribute_info_entry(attribute, who):
             xsize 600
             ysize iconSize
             spacing 5
-            use icon_frame(loadImage("{0}.jpg".format(attribute)), iconSize, iconSize)
+            use icon_frame(loadImage("icon_{0}.jpg".format(attribute)), iconSize, iconSize, loadImage("icon_default.png"))
             vbox:
                 text "{b}" + " {0} ({1})".format(unicode.title(attribute), attributeValue) + "{/b}"
                 use bar_graph_widget(attributeValue)
@@ -119,7 +119,7 @@ screen friend_info_entry(friend):
             xsize 600
             ysize iconSize
             spacing 5
-            use icon_frame(friend.icon, iconSize, iconSize)
+            use icon_frame(friend.icon, iconSize, iconSize, loadImage("icon_default.png"))
             vbox:
                 text "{b}" + " {0} ({1})".format(unicode.title(friend.name), friend.friendship) + "{/b}"
                 use bar_graph_widget(friend.friendship)
@@ -173,7 +173,7 @@ screen bar_graph_tooltip(value):
             text str(value)
 
 # Icon frame for mounting icons
-screen icon_frame(icon, width, height):
+screen icon_frame(icon, width, height, default=loadImage("default.png")):
     frame:
         xsize width
         ysize height
@@ -184,7 +184,7 @@ screen icon_frame(icon, width, height):
             if icon:
                 idle Frame(icon)
             else:
-                idle Frame("icons/default.jpg")
+                idle Frame(default)
 
 ###########################################################################
 style attribute_info:

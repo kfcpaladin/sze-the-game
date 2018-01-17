@@ -1,6 +1,6 @@
 ##############################################
 screen questscreen(quests=quests):
-    add loadImage("diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Quests")
     # Used to keep track of the quest types, and which one to show
@@ -62,7 +62,7 @@ screen quest_entry(questID, quest, quests, colour):
         hbox:
             ysize iconSize
             spacing 5
-            use icon_frame(quest["icon"], iconSize, iconSize)
+            use icon_frame(quest["icon"], iconSize, iconSize, loadImage("quest_default.png"))
             vbox:
                 ysize iconSize
                 # quest info

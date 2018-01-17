@@ -1,5 +1,5 @@
 screen achievementscreen(achievements=achievements):
-    add loadImage("diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Achievements")
     default currentAchieveType = achievements.currentAchieveType
@@ -59,7 +59,7 @@ screen achieve_entry(achieveID, achievement, colour):
         hbox:
             spacing 5
             ysize iconSize
-            use icon_frame(achievement["icon"], iconSize, iconSize)
+            use icon_frame(achievement["icon"], iconSize, iconSize, loadImage("achievement_default.png"))
             vbox:
                 # acheivement info
                 text "{b}" + "Achievement: {0}".format(achieveID) + "{/b}"

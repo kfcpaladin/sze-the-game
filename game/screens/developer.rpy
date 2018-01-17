@@ -2,7 +2,7 @@
 # Developer console
 
 screen developerScreen:
-    add loadImage("diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     # Give title of page
     frame:

@@ -1,16 +1,23 @@
-# Declare images below this line, using the image statement.
-# eg. image eileen happy = "eileen_happy.png"
+# This is the image loading system
+# You use loadImage(...) to load the image, providing the name of the file.
+# You do not have to specify directory, but the directory must be present in
+# imageDir["subfolders"].
+# If an image could not be loaded, it will default to the default image, specified
+# in imageDir["default"]
 init -100 python:
     imageDir = {
-        "folders": [
+        "folder" : "images",
+        "subfolders": [
+            "achievementIcons",
             "backgrounds",
             "characterImages",
-            "items",
             "icons",
+            "items",
+            "questIcons",
             "screenBackgrounds",
-            "screenIcons",
+            "suicideScreens",
         ],
-        "default": "default.png",
+        "default": "image_default.png",
     }
 
     imageCache = {}
@@ -21,63 +28,65 @@ init -100 python:
             return None
         if filename in imageCache:
             return imageCache[filename]
-        for folder in imageDir["folders"]:
-            if os.path.exists("game/images/{0}/{1}".format(folder, filename)):
-                filepath = "{0}/{1}".format(folder, filename)
+        for folder in imageDir["subfolders"]:
+            filepath = "{0}/{1}/{2}".format(imageDir["folder"], folder, filename)
+            if os.path.exists("game/{0}".format(filepath)):
                 imageCache[filename] = filepath
                 return filepath
-        imageCache[filename] = imageDir["default"]
-        return imageDir["default"]
+        filepath = "{0}/{1}".format(imageDir["folder"], imageDir["default"])
+        imageCache[filename] = filepath
+        return filepath
 
 
-
-image bg disclaimer =   loadImage("disclaimer.png")
-image bg intro =        loadImage("arthur.jpg")
-image bg school =       loadImage("memorial_hall.jpg")
-image bg physclass =    loadImage("physclass.png")
-image bg principaldoor =loadImage("principalofficedoor.jpg")
-image bg principaloffice = loadImage("principaloffice.jpg")
-image bg workshop =     loadImage("Workshop.jpg")
-image bg hall =         loadImage("hall.jpg")
-image bg hallentrance = loadImage("hallentrance.jpg")
-image bg schoolfront =  loadImage("wilkins_side.jpg")
-image bg rowecorridor = loadImage("fortrowecorridor.jpg")
-image bg dream =        loadImage("eoarchean.jpg")
-image bg ded =          loadImage("szeceded.jpg")
-image bg field =        loadImage("fields_by_applesin_mod.jpg")
-image bg parisafremov = loadImage("parisafremov.jpg")
-image bg norton =       loadImage("NortonSt.png")
-image bg toilet =       loadImage("toilet.png")
-image bg d_workshop =   loadImage("Workshopdark.jpg")
-image bg dreamtree =    loadImage("dreamtree.png")
-image bg economics =    loadImage("economics.png")
+# Declare images below this line, using the image statement.
+# eg. image eileen happy = "eileen_happy.png"
+image bg disclaimer =   loadImage("bg_disclaimer.png")
+image bg intro =        loadImage("bg_arthur.jpg")
+image bg school =       loadImage("bg_memorial_hall.jpg")
+image bg physclass =    loadImage("bg_physclass.png")
+image bg principaldoor =loadImage("bg_principalofficedoor.jpg")
+image bg principaloffice = loadImage("bg_principaloffice.jpg")
+image bg workshop =     loadImage("bg_Workshop.jpg")
+image bg hall =         loadImage("bg_hall.jpg")
+image bg hallentrance = loadImage("bg_hallentrance.jpg")
+image bg schoolfront =  loadImage("bg_wilkins_side.jpg")
+image bg rowecorridor = loadImage("bg_fortrowecorridor.jpg")
+image bg dream =        loadImage("bg_eoarchean.jpg")
+image bg ded =          loadImage("bg_szeceded.jpg")
+image bg field =        loadImage("bg_fields_by_applesin_mod.jpg")
+image bg parisafremov = loadImage("bg_parisafremov.jpg")
+image bg norton =       loadImage("bg_NortonSt.png")
+image bg toilet =       loadImage("bg_toilet.png")
+image bg d_workshop =   loadImage("bg_Workshopdark.jpg")
+image bg dreamtree =    loadImage("bg_dreamtree.png")
+image bg economics =    loadImage("bg_economics.png")
 
 #not sure if that's legit spelling, plz check
 style window:
     left_padding 150
-image side arthur =     loadImage("arthurside.png")
-image willis normal =   loadImage("willis1.png")
-image side willis =     loadImage("willisside1.png")
-image rusali normal =   loadImage("rusali.png")
-image side rusali =     loadImage("rusali_side.png")
-image moxham happy =    loadImage("moxhamhappy.png")
-image moxham unhappy =  loadImage("moxhamunhappy.png")
-image side moxham =     loadImage("moxhamside.png")
-image grant normal =    loadImage("grant.png")
-image pragash normal =  loadImage("pragashnormal.png")
-image pragash shocked = loadImage("pragash2.png")
-image yang normal =     loadImage("yang1.png")
-image chao normal =     loadImage("chao2.png")
-image chao happy =      loadImage("chaohappy.png")
-image side pragash =    loadImage("pragash.png")
-image side bill =       loadImage("billthecleaner.png")
-image side dean =       loadImage("deanside.png")
-image side chao =       loadImage("chaoport.png")
-image le calculetor =   loadImage("calculetor.png")
-image side le =         loadImage("lecalc.png")
-image side yin =        loadImage("willyin.png")
-image side richard =    loadImage("rick.png")
-image side roy =        loadImage("RRRROOOOOOOYYYYYYYYYboi.png")
-image side gary =       loadImage("garry.png")
-image side todd =       loadImage("toddside.png")
-image side derek =      loadImage("derkiederkside.png")
+image side arthur =     loadImage("char_arthurside.png")
+image willis normal =   loadImage("char_willis1.png")
+image side willis =     loadImage("char_willisside1.png")
+image rusali normal =   loadImage("char_rusali.png")
+image side rusali =     loadImage("char_rusali_side.png")
+image moxham happy =    loadImage("char_moxhamhappy.png")
+image moxham unhappy =  loadImage("char_moxhamunhappy.png")
+image side moxham =     loadImage("char_moxhamside.png")
+image grant normal =    loadImage("char_grant.png")
+image pragash normal =  loadImage("char_pragashnormal.png")
+image pragash shocked = loadImage("char_pragash2.png")
+image yang normal =     loadImage("char_yang1.png")
+image chao normal =     loadImage("char_chao2.png")
+image chao happy =      loadImage("char_chaohappy.png")
+image side pragash =    loadImage("char_pragash.png")
+image side bill =       loadImage("char_billthecleaner.png")
+image side dean =       loadImage("char_deanside.png")
+image side chao =       loadImage("char_chaoport.png")
+image le calculetor =   loadImage("char_calculetor.png")
+image side le =         loadImage("char_lecalc.png")
+image side yin =        loadImage("char_willyin.png")
+image side richard =    loadImage("char_rick.png")
+image side roy =        loadImage("char_RRRROOOOOOOYYYYYYYYYboi.png")
+image side gary =       loadImage("char_garry.png")
+image side todd =       loadImage("char_toddside.png")
+image side derek =      loadImage("char_derkiederkside.png")

@@ -2,9 +2,9 @@
 screen fortmap:
     use diary_nav
     imagemap:
-        ground loadImage("map.png")
-        hover  loadImage("Map selected.png")
-        idle   loadImage("map unavailable.png")
+        ground loadImage("screen_bg_map.png")
+        hover  loadImage("screen_bg_map_selected.png")
+        idle   loadImage("screen_bg_map_unavailable.png")
 
         if "rowe" in game.allowedAreas:
             hotspot (945, 85, 85, 75) clicked Return(1)

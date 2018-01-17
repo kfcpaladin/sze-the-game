@@ -1,29 +1,37 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/audio/sound.rpy", line 56, in script
-    init -1 python hide:
-  File "game/audio/sound.rpy", line 61, in <module>
-    style.textbutton.activate_sound = loadAudio("button_select.ogg")
-Exception: Style 'textbutton' does not exist.
+IOError: Couldn't find file 'music/p3IwatodaiDorm.ogg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/audio/sound.rpy", line 56, in script
-    init -1 python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/audio/sound.rpy", line 61, in <module>
-    style.textbutton.activate_sound = loadAudio("button_select.ogg")
-  File "renpy/style.pyx", line 214, in renpy.style.StyleManager.__getattr__ (gen/renpy.style.c:3560)
-    return get_style(name)
-  File "renpy/style.pyx", line 81, in renpy.style.get_style (gen/renpy.style.c:1682)
-    raise Exception("Style %r does not exist." % name)
-Exception: Style 'textbutton' does not exist.
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in <module>
+    ui.interact()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3104, in interact_core
+    renpy.audio.audio.periodic()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 960, in periodic_thread_main
+    periodic_pass()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 917, in periodic_pass
+    c.periodic()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 409, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/loader.py", line 548, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'music/p3IwatodaiDorm.ogg'.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
- 
+sze-the game 0.0

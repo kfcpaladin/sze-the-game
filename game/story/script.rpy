@@ -6,7 +6,7 @@ label start:
     $ renpy.save("autosave")
     show screen gameLoop
     show screen float_menu
-    image blank = im.Recolor(loadImage("arthur.jpg"), 255, 255, 255, 0)
+    image blank = im.Recolor(loadImage("bg_arthur.jpg"), 255, 255, 255, 0)
     scene bg disclaimer
     with fade
     pause

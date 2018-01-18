@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens/developer.rpy", line 188: reached end of line when expecting ':'.
-    if playFunction is playmusic and filepath.startswith("music") \ 
-                                                                    ^
+File "game/scripts/scanDirectory.rpy", line 56: invalid syntax
+                print("==>", end="")
+                                 ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

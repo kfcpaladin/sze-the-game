@@ -1,85 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 33, in script
-    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-  File "game/screens/developer.rpy", line 155, in execute
-    screen sound_screen_audio_list(playFunction=playmusic):
-  File "game/screens/developer.rpy", line 155, in execute
-    screen sound_screen_audio_list(playFunction=playmusic):
-  File "game/screens/developer.rpy", line 157, in execute
-    vbox:
-  File "game/screens/developer.rpy", line 162, in execute
-    frame:
-  File "game/screens/developer.rpy", line 164, in execute
-    has vbox
-  File "game/screens/developer.rpy", line 178, in execute
-    side "c r":
-  File "game/screens/developer.rpy", line 180, in execute
-    vpgrid id (_grid_name):
-  File "game/screens/developer.rpy", line 187, in execute
-    for file, filepath in audioCache.iteritems():
-  File "game/screens/developer.rpy", line 188, in execute
-    if sortAudioFile(filepath, playfunction):
-NameError: name 'playfunction' is not defined
+  File "renpy/common/00start.rpy", line 199, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 439, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 449, in <module>
+    renpy.load("_reload-2")
+AttributeError: 'StoreModule' object has no attribute 'readFileCache'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 33, in script
-    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
-    **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/developer.rpy", line 155, in execute
-    screen sound_screen_audio_list(playFunction=playmusic):
-  File "game/screens/developer.rpy", line 155, in execute
-    screen sound_screen_audio_list(playFunction=playmusic):
-  File "game/screens/developer.rpy", line 157, in execute
-    vbox:
-  File "game/screens/developer.rpy", line 162, in execute
-    frame:
-  File "game/screens/developer.rpy", line 164, in execute
-    has vbox
-  File "game/screens/developer.rpy", line 178, in execute
-    side "c r":
-  File "game/screens/developer.rpy", line 180, in execute
-    vpgrid id (_grid_name):
-  File "game/screens/developer.rpy", line 187, in execute
-    for file, filepath in audioCache.iteritems():
-  File "game/screens/developer.rpy", line 188, in execute
-    if sortAudioFile(filepath, playfunction):
-  File "<screen language>", line 188, in <module>
-NameError: name 'playfunction' is not defined
+  File "renpy/common/00start.rpy", line 199, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 439, in script
+    python hide:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 449, in <module>
+    renpy.load("_reload-2")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/loadsave.py", line 607, in load
+    roots, log = loads(location.load(filename))
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/loadsave.py", line 59, in loads
+    return cPickle.loads(s)
+AttributeError: 'StoreModule' object has no attribute 'readFileCache'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

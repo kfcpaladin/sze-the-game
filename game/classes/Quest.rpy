@@ -210,8 +210,8 @@ python early:
                 Goto a label for a particular quest
             """
             if type(label) in self._stringType:
-                renpy.hide_screen("questscreen")
-                renpy.call(label)
+                closeDiary()
+                renpy.jump(label)
                 playsfx("vpunch.ogg")
             else:
                 popup("This quest does not go anywhere!")

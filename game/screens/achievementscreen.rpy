@@ -16,15 +16,15 @@ screen achievementscreen(achievements=achievements):
                         Hide("achieve_description")
                     ]
     # Show achievements
-    use achieve_info(currentAchieveType, achievements)
     use achieve_description
+    use achieve_info(currentAchieveType, achievements)
 
 # Achievement info
 screen achieve_info(achieveType, achievements):
     default achieveColour = {
-        "hidden":       "#b30000",
-        "available":    "#e6ac00",
-        "completed":    "#009933"
+        "hidden":       colour.red,
+        "available":    colour.yellow,
+        "completed":    colour.green,
     }
     $ currentAchievements = getattr(achievements, achieveType)
     $ colour = achieveColour[achieveType]

@@ -2,8 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/screens/developer.rpy", line 330: Line is indented, but the preceding style statement statement does not expect a block. Please check this line's indentation.
-    xsize 100
-    ^
+File "game/screens/statscreen.rpy", line 164: u'action' is not a keyword argument or valid child for the bar statement.
+    action [
+          ^
+                Function(playsfx, "button_select.ogg")
+            ]
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -5,22 +5,19 @@ init python:
         {
             "name": "dead",
             "jump": "start",
-            "colour": "#000000",
-            "font_colour": "#ffffff",
+            "colour": colour.black,
             "pos": (4.5, -3.75),
         },
         {
             "name": "deadrestart",
             "jump": "start",
-            "colour": "#000000",
-            "font_colour": "#ffffff",
+            "colour": colour.black,
             "pos": (4, -3.75),
         },
         {
             "name": "actualdead",
             "jump": None,
-            "colour": "#000000",
-            "font_colour": "#ffffff",
+            "colour": colour.black,
             "pos": (3.5, -3.75),
         },
     ])
@@ -30,7 +27,7 @@ init python:
         {
             "name": "start",
             "jump": "schoolday1",
-            "colour": "#5e33ff",
+            "colour": colour.purple,
             "pos": (2, -3.75),
         },
     ])

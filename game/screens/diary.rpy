@@ -22,17 +22,13 @@ screen diary_nav:
         for index, screenName in enumerate(diary.screenNames):
             textbutton _(str(index)):
                 action [
-                    Hide("diary_nav_buttons"),
-                    Function(closeDescriptionScreens),
-                    Hide(diary.getCurrentPage()),
+                    Function(closeDiary),
                     Show(diary.getPage(index)),
                     Function(diary.setPage, index),
                 ]
         textbutton "Close":
             action [
-                Hide("diary_nav_buttons"),
-                Function(closeDescriptionScreens),
-                Hide(diary.getCurrentPage())
+                Function(closeDiary),
             ]                    
 
 # diary title
@@ -62,9 +58,11 @@ init python:
         "sound_screen_music_list",
     ]
 
-    def closeDescriptionScreens():
+    def closeDiary():
         for screen in descriptionScreens:
             renpy.hide_screen(screen)
+        renpy.hide_screen(diary.getCurrentPage())
+        renpy.hide_screen("diary_nav_buttons")
         
 
 

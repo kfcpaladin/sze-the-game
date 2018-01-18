@@ -59,6 +59,7 @@ image bg norton =       loadImage("bg_NortonSt.png")
 image bg toilet =       loadImage("bg_toilet.png")
 image bg d_workshop =   loadImage("bg_Workshopdark.jpg")
 image bg dreamtree =    loadImage("bg_dreamtree.png")
+image bg english =      loadImage("bg_english.png")
 image bg economics =    loadImage("bg_economics.png")
 
 #not sure if that's legit spelling, plz check

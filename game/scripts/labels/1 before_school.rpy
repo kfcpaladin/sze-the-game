@@ -6,6 +6,6 @@ init python:
             "name": "schoolday1",
             "jump": ["postrollcall1"],
             "pos": (0.5, 1),
-            "colour": "#ff5733",
+            "colour": colour.orange,
         },
     ])

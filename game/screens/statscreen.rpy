@@ -34,9 +34,9 @@ screen attribute_info(who):
 # show attribute information entry
 screen attribute_info_entry(attribute, who):
     default attributeColour = {
-        "negative": "#b30000",
-        "neutral": "#e6ac00",
-        "positive": "#009933",
+        "negative": colour.red,
+        "neutral": colour.yellow,
+        "positive": colour.green,
     }
     default iconSize = 80
     $ attributeValue = getattr(who, attribute)
@@ -105,9 +105,9 @@ screen friend_info:
 # Show friend info
 screen friend_info_entry(friend):
     default friendColour = {
-        "negative": "#b30000",
-        "neutral": "#e6ac00",
-        "positive": "#009933",
+        "negative": colour.red,
+        "neutral": colour.yellow,
+        "positive": colour.green,
     }
     default iconSize = 80
     frame:
@@ -152,11 +152,6 @@ screen friend_info_description(friend=None):
 
 # Show bar graph
 screen bar_graph_widget(value):
-    default barColour = {
-        "negative": "#b30000",
-        "neutral": "#e6ac00",
-        "positive": "#009933",
-    }
     bar:
         value (value+100) 
         range 200 

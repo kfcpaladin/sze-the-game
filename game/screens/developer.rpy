@@ -43,7 +43,7 @@ screen label_screen:
 
 # entry for labels menu
 screen label_screen_entry(label):
-    default defaultColour = "#009933"
+    default defaultColour = colour.green
     default showDescription = False
     $ colour = defaultColour
     if "colour" in label:
@@ -60,8 +60,7 @@ screen label_screen_entry(label):
                     action If(
                         ("call" in label and label["call"]) or ("jump" in label and label["jump"]),
                         true = [
-                            Hide("developerScreen"),
-                            Function(closeDescriptionScreens),
+                            Function(closeDiary),
                             Function(renpy.jump, label["name"]),
                         ],
                         false = [
@@ -71,8 +70,7 @@ screen label_screen_entry(label):
                     )
                 textbutton "Call":
                     action [
-                        Hide("developerScreen"),
-                        Function(closeDescriptionScreens),
+                        Function(closeDiary),
                         Function(renpy.call, label["name"]),
                     ]
                 textbutton "Show description":
@@ -100,8 +98,7 @@ screen label_screen_unsafe(label, timeout=5):
                 spacing 5
                 textbutton "Yes":
                     action [
-                        Hide("developerScreen"),
-                        Function(closeDescriptionScreens),
+                        Function(closeDiary),
                         Function(renpy.jump, label["name"]),
                     ]
                 textbutton "No":
@@ -223,8 +220,7 @@ screen minigames_screen:
                 spacing 5
                 textbutton "Pong":
                     action [
-                        Hide("developerScreen"),
-                        Function(closeDescriptionScreens),
+                        Function(closeDiary),
                         Function(renpy.call, "playPong"),
                     ]
                 textbutton "Kahoot":
@@ -265,8 +261,7 @@ screen minigames_screen_kahoot(kahootQuestions):
                             xsize 275
                             xalign 0.5
                             action [
-                                Hide("developerScreen"),
-                                Function(closeDescriptionScreens),
+                                Function(closeDiary),
                                 Function(renpy.call, "kahootGame", kahootQuestion)
                             ]
                 vbar:
@@ -286,8 +281,6 @@ screen screen_console:
                 for screen in availableScreens:
                     textbutton screen:
                         action [
-                            Hide("developerScreen"),
-                            Function(closeDescriptionScreens),
                             ShowMenu(screen),
                         ]
                     

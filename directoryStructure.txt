@@ -78,6 +78,7 @@
 │   │   │   ├── bg_disclaimer.png
 │   │   │   ├── bg_dreamtree.png
 │   │   │   ├── bg_economics.png
+│   │   │   ├── bg_english.png
 │   │   │   ├── bg_eoarchean.jpg
 │   │   │   ├── bg_fields_by_applesin_mod.jpg
 │   │   │   ├── bg_forthandballarea.jpg
@@ -235,8 +236,10 @@
 │   │   ├── auto-6-LT1.save
 │   │   ├── auto-7-LT1.save
 │   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
+│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── achievementscreen.rpy
@@ -271,34 +274,36 @@
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
 │   │   ├── labels
-│   │   │   ├── after_rollcall.rpy
-│   │   │   ├── after_rollcall.rpyc
-│   │   │   ├── assembly.rpy
-│   │   │   ├── assembly.rpyc
-│   │   │   ├── before_school.rpy
-│   │   │   ├── before_school.rpyc
-│   │   │   ├── economics.rpy
-│   │   │   ├── economics.rpyc
-│   │   │   ├── engineering.rpy
-│   │   │   ├── engineering.rpyc
-│   │   │   ├── english.rpy
-│   │   │   ├── english.rpyc
-│   │   │   ├── jigassembly.rpy
-│   │   │   ├── jigassembly.rpyc
-│   │   │   ├── labels.rpy
-│   │   │   ├── labels.rpyc
-│   │   │   ├── maths.rpy
-│   │   │   ├── maths.rpyc
-│   │   │   ├── office.rpy
-│   │   │   ├── office.rpyc
-│   │   │   ├── physics.rpy
-│   │   │   ├── physics.rpyc
-│   │   │   ├── quest_garyreeducation.rpy
-│   │   │   ├── quest_garyreeducation.rpyc
-│   │   │   ├── recess.rpy
-│   │   │   ├── recess.rpyc
-│   │   │   ├── start_dead.rpy
-│   │   │   └── start_dead.rpyc
+│   │   │   ├── 0 labels.rpy
+│   │   │   ├── 0 labels.rpyc
+│   │   │   ├── 0 start_dead.rpy
+│   │   │   ├── 0 start_dead.rpyc
+│   │   │   ├── 1 before_school.rpy
+│   │   │   ├── 1 before_school.rpyc
+│   │   │   ├── 2 after_rollcall.rpy
+│   │   │   ├── 2 after_rollcall.rpyc
+│   │   │   ├── 3.0 physics.rpy
+│   │   │   ├── 3.0 physics.rpyc
+│   │   │   ├── 3.1 office.rpy
+│   │   │   ├── 3.1 office.rpyc
+│   │   │   ├── 4 engineering.rpy
+│   │   │   ├── 4 engineering.rpyc
+│   │   │   ├── 5.0 assembly.rpy
+│   │   │   ├── 5.0 assembly.rpyc
+│   │   │   ├── 5.1 jigassembly.rpy
+│   │   │   ├── 5.1 jigassembly.rpyc
+│   │   │   ├── 5.4 gary reeducation.rpy
+│   │   │   ├── 5.4 gary reeducation.rpyc
+│   │   │   ├── 6.0 recess.rpy
+│   │   │   ├── 6.0 recess.rpyc
+│   │   │   ├── 7 english.rpy
+│   │   │   ├── 7 english.rpyc
+│   │   │   ├── 8 maths.rpy
+│   │   │   ├── 8 maths.rpyc
+│   │   │   ├── 9 economics.rpy
+│   │   │   ├── 9 economics.rpyc
+│   │   │   ├── colours.rpy
+│   │   │   └── colours.rpyc
 │   │   ├── mousePosition.rpy
 │   │   ├── mousePosition.rpyc
 │   │   ├── options.rpy
@@ -324,6 +329,8 @@
 │       │   ├── 5.2 jig toilet.rpyc
 │       │   ├── 5.3 jig food.rpy
 │       │   ├── 5.3 jig food.rpyc
+│       │   ├── 5.4 gary reeducation.rpy
+│       │   ├── 5.4 gary reeducation.rpyc
 │       │   ├── 5.4 jig vices.rpy
 │       │   ├── 5.4 jig vices.rpyc
 │       │   ├── 5.5 assembly shitstorm.rpy
@@ -1566,4 +1573,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1457 files
+109 directories, 1464 files

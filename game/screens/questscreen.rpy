@@ -25,9 +25,9 @@ screen questscreen(quests=quests):
 # Quest info
 screen quest_info(questType, quests):
     default questColour = {
-        "unavailable":  "#b30000",
-        "available":    "#e6ac00",
-        "completed":    "#009933"
+        "unavailable":  colour.red,
+        "available":    colour.yellow,
+        "completed":    colour.red,
     }
     $ currentQuests = getattr(quests, questType)
     $ colour = questColour[questType]
@@ -81,7 +81,6 @@ screen quest_entry(questID, quest, quests, colour):
                     textbutton "Start quest":
                         action [
                             Function(quests.startQuest, questID),
-                            Function(closeDescriptionScreens),
                         ]
                     textbutton "Show description":
                         action [

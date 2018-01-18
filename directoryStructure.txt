@@ -231,15 +231,8 @@
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
-│   │   ├── auto-4-LT1.save
-│   │   ├── auto-5-LT1.save
-│   │   ├── auto-6-LT1.save
-│   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
-│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
-│   │   ├── _reload-1-LT1.save
 │   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── achievementscreen.rpy
@@ -271,6 +264,8 @@
 │   │   ├── szeclicker.rpy
 │   │   └── szeclicker.rpyc
 │   ├── scripts
+│   │   ├── colours.rpy
+│   │   ├── colours.rpyc
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
 │   │   ├── labels
@@ -301,13 +296,13 @@
 │   │   │   ├── 8 maths.rpy
 │   │   │   ├── 8 maths.rpyc
 │   │   │   ├── 9 economics.rpy
-│   │   │   ├── 9 economics.rpyc
-│   │   │   ├── colours.rpy
-│   │   │   └── colours.rpyc
+│   │   │   └── 9 economics.rpyc
 │   │   ├── mousePosition.rpy
 │   │   ├── mousePosition.rpyc
 │   │   ├── options.rpy
-│   │   └── options.rpyc
+│   │   ├── options.rpyc
+│   │   ├── scanDirectory.rpy
+│   │   └── scanDirectory.rpyc
 │   ├── script_version.txt
 │   └── story
 │       ├── Day 1
@@ -1573,4 +1568,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1464 files
+109 directories, 1459 files

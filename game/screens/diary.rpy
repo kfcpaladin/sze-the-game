@@ -55,7 +55,7 @@ init python:
         "label_screen_unsafe",
         "minigames_screen_kahoot",
         "quest_description",
-        "sound_screen_music_list",
+        "sound_screen_audio_list",
     ]
 
     def closeDiary():

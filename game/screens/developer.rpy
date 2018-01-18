@@ -138,27 +138,24 @@ screen sound_screen:
                 # music commands
                 textbutton "Play music":
                     action [
-                        Show("sound_screen_music_list", playFunction=playmusic),
+                        Show("sound_screen_audio_list", playFunction=playmusic),
                     ]
                 textbutton "Stop music":
                     action Function(stopmusic)
                 # sfx commands
                 textbutton "Play sfx":
                     action [
-                        Show("sound_screen_music_list", playFunction=playsfx),
+                        Show("sound_screen_audio_list", playFunction=playsfx),
                     ]
                 textbutton "Stop sfx":
                     action Function(stopsfx)
 
 
-# list of cached music files
-screen sound_screen_music_list(playFunction=playmusic):
+# list of cached audio files
+screen sound_screen_audio_list(playFunction=playmusic):
     modal True
     vbox:
-        xsize 500
-        spacing 5
-        xcenter 0.5
-        ycenter 0.5
+        style "sound_screen_audio_list"
         frame:
             xsize 500
             has vbox
@@ -172,27 +169,32 @@ screen sound_screen_music_list(playFunction=playmusic):
                     xalign 1
                     xoffset 120
                     action [
-                        Hide("sound_screen_music_list"),
+                        Hide("sound_screen_audio_list"),
                     ]
             # a list of all music files
             side "c r":
                 $ _grid_name = "music_list_vpgrid"
                 vpgrid id (_grid_name):
                     xsize 500
+                    ymaximum 500
                     spacing 5
                     cols 1
                     draggable False
                     mousewheel True
-                    for file in audioCache:
-                        textbutton file:
-                            xsize 475
-                            xalign 0.5 
-                            action [
-                                Function(playFunction, file),
-                            ]
+                    for file, filepath in audioCache.iteritems():
+                        # determine if file is "appropriate" for the function
+                        # this is an arbituary distinction thats made for convenience
+                        # i.e a file in sfx/ can still be played using playmusic()
+                        # but it clutters the menu and removes clarity
+                        if sortAudioFile(filepath, playFunction):   
+                            textbutton file:
+                                xsize 475
+                                xalign 0.5 
+                                action [
+                                    Function(playFunction, file),
+                                ]
                 vbar:
                     value YScrollValue(_grid_name)
-
 
 # time control board
 screen time_screen:
@@ -341,8 +343,13 @@ style minigames_screen_kahoot:
     xcenter 0.5
     ycenter 0.5
 
-
 style screen_console:
     xoffset 720
     xsize 625
     yoffset 365
+
+style sound_screen_audio_list:
+    xsize 500
+    spacing 5
+    xcenter 0.5
+    ycenter 0.5

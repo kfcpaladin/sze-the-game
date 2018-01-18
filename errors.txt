@@ -2,10 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens/statscreen.rpy", line 164: u'action' is not a keyword argument or valid child for the bar statement.
-    action [
-          ^
-                Function(playsfx, "button_select.ogg")
-            ]
+File "game/screens/developer.rpy", line 188: reached end of line when expecting ':'.
+    if playFunction is playmusic and filepath.startswith("music") \ 
+                                                                    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

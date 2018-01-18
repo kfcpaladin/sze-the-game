@@ -1,16 +1,13 @@
 # Used to configure the audio settings
-
-python early:
-    
+init -1 python:
     audioDir = {
         "folder": "audio",
-        "subfolders": [
-            "music", 
-            "sfx"
-        ],
+        "subfolders": [],
         "default": "audio_default.ogg",
     }
     audioCache = {}
+
+    scanDirectory(audioDir, audioCache) # located in scripts/scanDirectory.rpy
 
     """
         Play and stop music/sfx files
@@ -57,7 +54,22 @@ python early:
         filepath = "{0}/{1}".format(audioDir["folder"], audioDir["default"])
         audioCache[filename] = filepath
         return filepath
-        
+    
+    """
+        arbituary sorting function to distinguish whether an 
+        audio file is suitable for the relevant function
+    """
+    def sortAudioFile(filepath, audioFunction, audioFolder="audio"):
+        audioPaths = {
+            playmusic: "music",
+            playsfx: "sfx",
+        }
+        for function, subfolder in audioPaths.iteritems():
+            if audioFunction is function and filepath.startswith(os.path.join(audioFolder, subfolder)):
+                return True
+        return False
+
+# Default menu and gui sounds
 init python:
     ###########################################
     # Audio

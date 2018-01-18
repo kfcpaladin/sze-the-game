@@ -4,23 +4,14 @@
 # imageDir["subfolders"].
 # If an image could not be loaded, it will default to the default image, specified
 # in imageDir["default"]
-init -100 python:
+init -1 python:
     imageDir = {
         "folder" : "images",
-        "subfolders": [
-            "achievementIcons",
-            "backgrounds",
-            "characterImages",
-            "icons",
-            "items",
-            "questIcons",
-            "screenBackgrounds",
-            "suicideScreens",
-        ],
+        "subfolders": [],
         "default": "image_default.png",
     }
-
     imageCache = {}
+    scanDirectory(imageDir, imageCache) # located in scripts/scanDirectory.rpy
 
     import os.path
     def loadImage(filename):

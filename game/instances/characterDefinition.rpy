@@ -16,7 +16,7 @@ define kok = Friend('Willis',       friendship=0, color="#666666", image="willis
 define lee = Friend('Andrew',       friendship=0, color="#FFFFFF", image="andrew")
 define mox = Friend('MOXHAM',       friendship=0, color="#FFFFFF", image="moxham",  icon=loadImage("icon_moxham.png"))
 define pra = Friend('Pragash',      friendship=0, color="#FFFFFF", image="pragash", icon=loadImage("icon_pragash.png"))
-define rin = Friend('Rina',         friendship=0, color="#007408", image="serena",  icon=loadImage("icon_rina.png"))
+define rin = Friend('Rina',         friendship=0, color="#007408", image="serena")  #icon=loadImage("icon_rina.png"))
 define roy = Friend('Roy',          friendship=0, color="#FFFFFF", image="roy",     icon=loadImage("icon_roy.jpg"))
 define rus = Friend('Rusali',       friendship=0, color="#FFFFFF", image="rusali",  icon=loadImage("icon_rusali.png"))
 define slm = Friend('Schlam',       friendship=0, color="#FFFFFF", image="shlam")

@@ -8,6 +8,7 @@ screen float_menu:
         textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
             action [
                 Hide("popup"), # prevent popup screen from being frozen
+                Function(popupList.clear),
                 Show(diary.getCurrentPage()), 
             ]
             xalign 0.5
@@ -65,6 +66,7 @@ init python:
             renpy.hide_screen(screen)
         renpy.hide_screen(diary.getCurrentPage())
         renpy.hide_screen("diary_nav_buttons")
+        popupList.clear()
         
 
 

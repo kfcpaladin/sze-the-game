@@ -6,6 +6,7 @@ init -1 python:
         "default": "audio_default.ogg",
     }
     audioCache = {}
+    musicHistory = []
 
     scanDirectory(audioDir, audioCache) # located in scripts/scanDirectory.rpy
 
@@ -13,10 +14,15 @@ init -1 python:
         Play and stop music/sfx files
     """
     def playmusic(filename, **options):
+        if not filename:    # if None was given (no previous music)
+            return
         if not checkIfDefaultAudio(filename):
+            musicHistory.append(filename)
             renpy.music.play(loadAudio(filename), channel="music", **options)
 
     def playsfx(filename, loop=False, **options):
+        if not filename:
+            return
         if not checkIfDefaultAudio(filename):
             renpy.music.play(loadAudio(filename), channel="sound", loop=loop, **options)
 
@@ -37,6 +43,17 @@ init -1 python:
             return True
         else:
             return False
+    
+    """
+        Load index from music history
+    """
+    def getMusicHistory(index):
+        filename = None
+        try:
+            filename = musicHistory[index]
+        except IndexError:
+            pass
+        return filename
         
 
     """

@@ -1,108 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/1 before school.rpy", line 45, in script
-    $ sze.gain("fort")
-  File "game/story/Day 1/1 before school.rpy", line 45, in <module>
-    $ sze.gain("fort")
-  File "game/classes/MainCharacter.rpy", line 169, in gain
-    self.sayIntro(attribute, "msgGain")
-  File "game/classes/MainCharacter.rpy", line 203, in sayIntro
-    self._say(message)
-  File "game/classes/MainCharacter.rpy", line 271, in _say
-    renpy.say(adv, line)
-  File "game/screens/bag.rpy", line 3, in execute
-    screen bag_view(bag=bag):
-  File "game/screens/bag.rpy", line 3, in execute
-    screen bag_view(bag=bag):
-  File "game/screens/bag.rpy", line 10, in execute
-    use bag_inventory(bag)
-  File "game/screens/bag.rpy", line 14, in execute
-    screen bag_inventory(bag, pos=Vector(43,131), size=Vector(580, 580), iconSize=Vector(112, 112), borderThickness=5):
-  File "game/screens/bag.rpy", line 14, in execute
-    screen bag_inventory(bag, pos=Vector(43,131), size=Vector(580, 580), iconSize=Vector(112, 112), borderThickness=5):
-  File "game/screens/bag.rpy", line 19, in execute
-    frame:
-  File "game/screens/bag.rpy", line 23, in execute
-    hbox:
-  File "game/screens/bag.rpy", line 26, in execute
-    vpgrid id (_grid_name):
-  File "game/screens/bag.rpy", line 34, in execute
-    for item in bag.inv:
-  File "game/screens/bag.rpy", line 35, in execute
-    use bag_item(item, iconSize.x, iconSize.y, pos, size)
-Exception: Too many arguments in call (expected 3, got 5).
+  File "game/story/script.rpy", line 33, in script call
+    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
+  File "game/minigames/pong/pongscreen.rpy", line 9, in script
+    $ _previousMusic = musicHistory[-1]
+  File "game/minigames/pong/pongscreen.rpy", line 9, in <module>
+    $ _previousMusic = musicHistory[-1]
+IndexError: list index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/1 before school.rpy", line 45, in script
-    $ sze.gain("fort")
+  File "game/story/script.rpy", line 33, in script call
+    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
+  File "game/minigames/pong/pongscreen.rpy", line 9, in script
+    $ _previousMusic = musicHistory[-1]
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/story/Day 1/1 before school.rpy", line 45, in <module>
-    $ sze.gain("fort")
-  File "game/classes/MainCharacter.rpy", line 169, in gain
-    self.sayIntro(attribute, "msgGain")
-  File "game/classes/MainCharacter.rpy", line 203, in sayIntro
-    self._say(message)
-  File "game/classes/MainCharacter.rpy", line 271, in _say
-    renpy.say(adv, line)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
-    **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/bag.rpy", line 3, in execute
-    screen bag_view(bag=bag):
-  File "game/screens/bag.rpy", line 3, in execute
-    screen bag_view(bag=bag):
-  File "game/screens/bag.rpy", line 10, in execute
-    use bag_inventory(bag)
-  File "game/screens/bag.rpy", line 14, in execute
-    screen bag_inventory(bag, pos=Vector(43,131), size=Vector(580, 580), iconSize=Vector(112, 112), borderThickness=5):
-  File "game/screens/bag.rpy", line 14, in execute
-    screen bag_inventory(bag, pos=Vector(43,131), size=Vector(580, 580), iconSize=Vector(112, 112), borderThickness=5):
-  File "game/screens/bag.rpy", line 19, in execute
-    frame:
-  File "game/screens/bag.rpy", line 23, in execute
-    hbox:
-  File "game/screens/bag.rpy", line 26, in execute
-    vpgrid id (_grid_name):
-  File "game/screens/bag.rpy", line 34, in execute
-    for item in bag.inv:
-  File "game/screens/bag.rpy", line 35, in execute
-    use bag_item(item, iconSize.x, iconSize.y, pos, size)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 133, in apply
-    raise Exception("Too many arguments in call (expected %d, got %d)." % (len(self.positional), len(args)))
-Exception: Too many arguments in call (expected 3, got 5).
+  File "game/minigames/pong/pongscreen.rpy", line 9, in <module>
+    $ _previousMusic = musicHistory[-1]
+IndexError: list index out of range
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

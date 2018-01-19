@@ -54,6 +54,7 @@ init python:
         "label_screen_description",
         "label_screen_unsafe",
         "minigames_screen_kahoot",
+        "popup",
         "quest_description",
         "sound_screen_audio_list",
     ]

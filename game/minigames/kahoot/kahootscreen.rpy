@@ -19,18 +19,26 @@ init python:
     _choice = None
 
 # Call to this label to start game
-label kahootGame(kahoot, show_result=True, **options):
+label kahootGame(kahoot, **options):
     menu:
         "Start Kahoot?":
+            $ _previousMusic = getMusicHistory(-1)
             $ playmusic("kahoot.ogg")
             call screen kahootscreen(question=kahoot["question"], answers=kahoot["answers"], **options)
             $ stopmusic()
             $ _points = _return["points"]
             $ _time_remain = _return["time_remain"]
             $ _choice = _return["choice"]
-            if show_result:
-                "You chose [_choice]"
-                "You got [_points] points with [_time_remain] seconds remaining"
+            "You chose [_choice]"
+            if _points > 0:
+                $ playmusic("p4LikeADreamComeTrue.ogg")
+                "You are victorious with [_points] points, sparing only [_time_remain] seconds"
+                "This new found academic brilliance of yours makes you feel something {b}interesting{/b}"
+                $ sze.gain("intellect", 10)
+            else:
+                "The class stares at you, perhaps thinking of how {i}retarded{/i} you are"
+                $ sze.loss("intellect", 4)
+            $ playmusic(_previousMusic)
             return
         "Pussy out":
             "Your knees start shaking and your penis recedes into its cavity"
@@ -39,6 +47,7 @@ label kahootGame(kahoot, show_result=True, **options):
 
 # handles all screen elements
 screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.25):
+    modal True
     default time_remain = time_range
     timer speed:
         repeat True

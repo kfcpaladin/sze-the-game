@@ -1,17 +1,47 @@
 # give dialog for the pong game
+init python:
+    _score = 0
+    _surrender = False
+
 label playPong(pong=pong):
     menu:
         "Play pong":
+            $ _previousMusic = getMusicHistory(-1)
+            $ playmusic("VarienThroneOfRavens.ogg")
             call screen pong(pong)
-            "You finished playing pong!"
-            "You got a net score of [_return]"
+            $ stopmusic()
+            $ _score = _return["score"]
+            $ _surrender = _return["surrender"]
+            if _surrender:
+                "You surrender like a pussy bitch"
+                "You failed by [_score] points"
+            else:
+                "You finished playing pong!"
+                if _score > 0:
+                    $ playmusic("p4LikeADreamComeTrue.ogg")
+                    "You won with a net score of [_score]"
+                    "After your victorious victory, you decide to masturbate furiously tonight"
+                    "{i}zippppp....{/i}"
+                    "You decide to zip your {b}pants{/b} back up"
+                    $ sze.gain("strength", 5)
+                elif _score < 0:
+                    "You lose miserably by [_score] points"
+                    "Perhaps it is time you killed yourself"
+                    "{b}Tip: {/b}Press kms to commit suicide"
+                    $ sze.loss("strength", 2)
+                else:
+                    "You tied with your opponent"
+                    "Perhaps this is time for a truce"
+                    $ sze.gain("strength", 1)
+            $ playmusic(_previousMusic)
             return
         "Pass":
             "You pussy out"
             return
 
 # run the pong game
-screen pong(pong, fps=70, tickrate=50, duration=60):
+screen pong(pong, fps=70, tickrate=50, duration=30):
+    modal True
     add loadImage("screen_bg_pong.jpg")
     # default variables
     default rate = 1/float(fps)
@@ -31,7 +61,22 @@ screen pong(pong, fps=70, tickrate=50, duration=60):
             false = [
                 Function(ball.resetScore), 
                 Hide('pong', dissolve),
-                Return(score)
+                Return({"score":score, "surrender": False}),
+            ]
+        )
+    # surrender button
+    textbutton "Surrender":
+        xalign 0.9
+        yalign 0.1
+        action If(
+            score < 0,
+            true = [
+                Function(ball.resetScore),
+                Hide("pong", dissolve),
+                Return({"score":score, "surrender": True}),
+            ],
+            false = [
+                Function(popup, "You can only surrender if you suck shit"),
             ]
         )
     # update and render objects

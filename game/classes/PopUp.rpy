@@ -41,7 +41,11 @@ init -1 python:
                 if key not in message: 
                     message[key] = defaultValue
             # make newest message last longer than last item
-            message["time_remain"] += self.getLastTime()
+            lastTime = self.getLastTime()
+            if lastTime >= 1.5:
+                message["time_remain"] = lastTime + 0.5
+            else:
+                message["time_remain"] += self.getLastTime()
             return True
 
         # make message from pure text
@@ -49,8 +53,9 @@ init -1 python:
             message = {
                 "text": text,
                 "icon": icon,
-                "time_remain": self.getLastTime()+1,
+                "time_remain": 2,
             }
+            self.checkMessage(message)
             return message
 
         # get time of oldest item in list

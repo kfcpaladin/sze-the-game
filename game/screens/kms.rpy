@@ -28,10 +28,10 @@ screen kmsGun:
         xoffset 600
         yoffset 300
         action [
+            Hide("kms", Fade(2.5,0.0,1.0)),
+            Show("deathFade"),
             Function(playsfx, "gunSound.ogg"),
             Function(game.gain, "suicideCount", 1),
-            Hide("kmsGun", Fade(2.5,0.0,1.0)),
-            Show("deathFade"),
         ]
         hovered [
             Function(playsfx, "gunClick.ogg"),
@@ -47,10 +47,10 @@ screen kmsHanging:
         xoffset 200
         yoffset 200
         action [
+            Hide("kms", Fade(2.5,0.0,1.0)),
+            Show("deathFade"),
             Function(playsfx, "vpunch.ogg"),
             Function(game.gain, "suicideCount", 1),
-            Hide("kmsHanging", Fade(2.5,0.0,1.0)),
-            Show("deathFade")
         ]
         hovered [
             Function(playsfx, "mlady.ogg")

@@ -1,4 +1,5 @@
 label schoolday1:
+    $ autosave()
     scene bg school
     with fade
     $ game.setTime("morning")

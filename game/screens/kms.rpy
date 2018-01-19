@@ -1,5 +1,6 @@
 ##############################################################################
 screen kms:
+    modal True
     default totalSuicides = 2
     default randomIndex = renpy.random.randint(0, totalSuicides-1) 
     if randomIndex == 0:
@@ -60,7 +61,8 @@ screen kmsHanging:
 screen deathFade(delay=2.5):
     timer delay:
         action [
-            Start("deadrestart")
+            Hide("deathFade"),
+            Jump("deadrestart"),
         ]
 
     

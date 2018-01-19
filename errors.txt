@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/classes/Quest.rpy", line 108: invalid syntax
-                        "text": "Completed quest: {0}".format(questID)),
-                                                                       ^
+File "game/classes/MainCharacter.rpy", line 192: expected an indented block
+                message += ". " + self.tutorials[attribute]["brief"]
+                       ^
     
 
 Ren'Py Version: Ren'Py 6.99.13.2919

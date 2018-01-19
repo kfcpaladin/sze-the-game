@@ -18,13 +18,11 @@ screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
     vpgrid:
         # define dynamic properties
         cols 1
-        draggable True
-        mousewheel True
         spacing 5
         xalign 0.5
         xsize size.x+25
         yoffset pos.y
-        ysize 600
+        ymaximum 600
         # go through all popups
         for popup in sorted(popups.popupList, key = lambda k: k["time_remain"], reverse=True):
             # get transparency number

@@ -189,6 +189,9 @@ python early:
             message = ""
             if self.tutorials[attribute]["brief"]:
                 message += self.tutorials[attribute]["brief"]
+                # connect sentences together
+                if message[-1] != ".":
+                    message += ". "
             message += self.tutorials[attribute][msgType]
             self._say(message)
 

@@ -374,7 +374,7 @@ label recess1a:
         if rin.friendship >= 100:
             sze "I think I can now finally die happy"
             "..."
-            call dead
+            call screen kms
         else:
             $ stopmusic()
             sze "Well I suck shit"

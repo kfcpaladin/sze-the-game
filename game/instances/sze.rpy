@@ -12,28 +12,33 @@ init python:
     sze.setTutorials({
         "charm": {
             "show": True, 
-            "msgGain": "Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life.",
-            "msgLoss": "Charm is a measure of how well you slay. Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life.",
+            "brief": "Charm is a measure of how well you slay",
+            "msgGain": "Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life.",
+            "msgLoss": "Currently you are a faggot, however this may be changed through slaying not being retarded in day to day life.",
         },
         "fort": {
             "show": True, 
-            "msgGain": "Fortianness is how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian.",
-            "msgLoss": "Fortianness is a measure of how Fortian you are and can be improved by being more Michael Kirby. Currently, you aren't very Fortian.",  
+            "brief": "Fortianness is how Fortian you are and can be improved by being more Michael Kirby",
+            "msgGain": "Currently, you aren't very Fortian.",
+            "msgLoss": "Currently, you aren't very Fortian.",  
         },
         "intellect": {
             "show": True, 
-            "msgGain": "Intelligence is a measure of how smart you are. Currently you are a retard, however this may be changed through diligent studying and participating in class.",
-            "msgLoss": "Intelligence is a measure of how smart you are. Currently you are a retard, however this may be changed through diligent studying and participating in class.",
+            "brief": "Intelligence is a measure of how smart you are",
+            "msgGain": "Currently you are a retard, however this may be changed through diligent studying and participating in class.",
+            "msgLoss": "Currently you are a retard, however this may be changed through diligent studying and participating in class.",
         },
         "strength": {
             "show": True, 
+            "brief": "Strength is a measure of how strong you are",
             "msgGain": "It can be improved by getting good. Currently you aren't very good.",
             "msgLoss": "It can be improved by getting good. Currently, you make 6 year olds look like professional MMA fighters.", 
         },
         "thirst": {
             "show": True, 
-            "msgGain": "Thirst is a measure of desperately you want to drink water.",
-            "msgLoss": "Thirst is a measure of desperately you want to drink water.",
+            "brief": "Thirst is a measure of desperately you want to drink water",
+            "msgGain": "You become one step closer to Tiddalik.",
+            "msgLoss": "At this rate your body will dehydrate into a shrivelled penis.",
         },
     })
     # Whenever your attribute changes, a message will be provided depending on whether it increased or decreased

@@ -16,6 +16,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 5. Added redirectable image subdirectories for better global image classification (*allows for better classification*)
 6. Added achievements, quests, inventory, items, statistics screen, and a diary
 7. Added minigames, including *pong, kahoot*
+8. Added complex popup system with smooth transitions
 
 ## Game directory layout
 
@@ -44,6 +45,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [Achievements](./game/classes/Achievement.rpy)     | Used to store, add and update achievements in realtime using the gameloop         |
 | [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
 | [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
+| [PopUp](./game/classes/PopUp.rpy)                  | Stores all popups, and manages their lifetime                                     |
 
 ### Instances
 
@@ -57,6 +59,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | Achievements  | [achievements](./game/instances/achievements.rpy) |
 | Inventory     | [bag](./game/instances/inventory.rpy) |
 | Item          | [{itemList}](./game/instances/items.rpy)|
+| PopUp         | [popupList](./games/instances/popup.rpy) |
 
 ### Usage inside renpy script
 
@@ -111,6 +114,12 @@ Possesses information about an item, including its *statistics*, *icon*, and *et
 
 * **Equiping an item**: $ item.equip()
 * **Unequpping an item**: $ item.unequip()
+
+#### PopUp
+Stores and manages all messages for the popup system
+
+* **Adding a popup**: $ popupList.add(*string* or *dict* or *list*)
+* **Clearing all popups**: $ popupList.clear()
 
 *Note*: For more information check out [**game/instances/**](./game/instances) to see how all of this is implemented
 

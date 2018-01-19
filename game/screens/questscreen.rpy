@@ -26,7 +26,7 @@ screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 415))
     default questColour = {
         "unavailable":  colour.red,
         "available":    colour.yellow,
-        "completed":    colour.red,
+        "completed":    colour.green,
     }
     # values that are expected to change must be kept track of
     $ currentQuests = getattr(quests, questType)
@@ -84,10 +84,12 @@ screen quest_entry(questID, quest, quests, colour, pos, size):
                 # interactive buttons
                 hbox:
                     spacing 5
-                    textbutton "Start quest":
-                        action [
-                            Function(quests.startQuest, questID),
-                        ]
+                    # only show start if in available
+                    if questID in quests.available:
+                        textbutton "Start quest":
+                            action [
+                                Function(quests.startQuest, questID),
+                            ]
                     textbutton "Show description":
                         action [
                             Show("quest_description", None, quest, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))

@@ -29,7 +29,7 @@ bg_strathloadingdocksign.png: images/backgrounds/bg_strathloadingdocksign.png
 bg_szeceded.png: images/backgrounds/bg_szeceded.png
 bg_toilet.png: images/backgrounds/bg_toilet.png
 bg_wilkins_side.png: images/backgrounds/bg_wilkins_side.png
-char_CTf1fsBUwAAIe9a.jpg: images/characterImages/char_CTf1fsBUwAAIe9a.jpg
+char_CTf1fsBUwAAIe9a.png: images/characterImages/char_CTf1fsBUwAAIe9a.png
 char_RRRROOOOOOOYYYYYYYYYboi.png: images/characterImages/char_RRRROOOOOOOYYYYYYYYYboi.png
 char_arthurside.png: images/characterImages/char_arthurside.png
 char_billthecleaner.png: images/characterImages/char_billthecleaner.png
@@ -37,7 +37,7 @@ char_calculetor.png: images/characterImages/char_calculetor.png
 char_chao2.png: images/characterImages/char_chao2.png
 char_chaohappy.png: images/characterImages/char_chaohappy.png
 char_chaoport.png: images/characterImages/char_chaoport.png
-char_darkstreet.jpg: images/characterImages/char_darkstreet.jpg
+char_darkstreet.png: images/characterImages/char_darkstreet.png
 char_deanside.png: images/characterImages/char_deanside.png
 char_derkiederkside.png: images/characterImages/char_derkiederkside.png
 char_garry.png: images/characterImages/char_garry.png
@@ -81,6 +81,7 @@ icon_richard.png: images/icons/icon_richard.png
 icon_rina.png: images/icons/icon_rina.png
 icon_roy.png: images/icons/icon_roy.png
 icon_rusali.png: images/icons/icon_rusali.png
+icon_save.png: images/icons/icon_save.png
 icon_strength.png: images/icons/icon_strength.png
 icon_thirst.png: images/icons/icon_thirst.png
 icon_todd.png: images/icons/icon_todd.png

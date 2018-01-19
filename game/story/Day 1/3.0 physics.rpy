@@ -1,6 +1,5 @@
 label phys1:
-    $ popup("Autosaving")
-    $ renpy.save("autosave")
+    $ autosave()
     scene bg physclass
     $ stopmusic()
     $ playmusic("PinkFloydAnotherBrickInTheWall.ogg", loop=True)

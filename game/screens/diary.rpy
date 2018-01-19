@@ -7,6 +7,7 @@ screen float_menu:
         spacing 10
         textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
             action [
+                Hide("popup"), # prevent popup screen from being frozen
                 Show(diary.getCurrentPage()), 
             ]
             xalign 0.5

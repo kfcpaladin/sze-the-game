@@ -2,8 +2,7 @@
 
 label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
-    $ popup("Autosaving")
-    $ renpy.save("autosave")
+    $ autosave()
     $ logDefaultCache() # for debugging improperly read files
     show screen gameLoop
     show screen float_menu

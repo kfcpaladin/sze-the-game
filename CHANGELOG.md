@@ -57,3 +57,11 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Added icons to quests and achievements
 * Restructured audio and image directories to make it easier to classify images
 * Now uses loadImage(...) and loadAudio(...) to load assets in
+
+**19/01/2018**
+* Overhauled the inventory screen by adding hovering tooltips, and statistics screen
+* Added statistics screen to the quest and achievements pages
+* Made significant overhaul to the popup system, including adding a PopUp class
+* Popups now support icons, and have a better aesthetic
+* Added a logCache() function to show the status of the file caches
+* Added autosave function to the game

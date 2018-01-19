@@ -8,6 +8,7 @@ init -1 python:
             self.purple = "#5e33ff"
             self.red = "#ff0603"
             self.yellow = "#e6ac00"
+            self.maroon = "#800000"
             self.black = self.rgb(0, 0, 0)
             self.white = self.rgb(255, 255, 255)
 

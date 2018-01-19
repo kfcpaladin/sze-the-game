@@ -76,13 +76,8 @@ screen attribute_info_description(who=None, attribute=None, pos, size):
             has vbox
             if attribute != None and who != None:
                 $ attributeValue = getattr(who, attribute)
-                $ briefMsg = ""
-                if attributeValue >= 0:
-                    $ briefMsg = who.getTutorialMessage(attribute, "msgGain")
-                else:
-                    $ briefMsg = who.getTutorialMessage(attribute, "msgLoss")
                 text "{b}Brief{/b}"
-                text briefMsg
+                text who.getTutorialMessage(attribute)
                 text "{b}Description{/b}"
                 text who.getStatMessage(attribute)
             else:

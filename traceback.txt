@@ -1,28 +1,132 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 33, in script call
-    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-  File "game/minigames/pong/pongscreen.rpy", line 9, in script
-    $ _previousMusic = musicHistory[-1]
-  File "game/minigames/pong/pongscreen.rpy", line 9, in <module>
-    $ _previousMusic = musicHistory[-1]
-IndexError: list index out of range
+  File "game/story/Day 1/2 after rollcall.rpy", line 4, in script
+    sze "I watch her from afar, but I doubt she notices arthur"
+  File "renpy/common/00action_other.rpy", line 484, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/classes/Quest.rpy", line 97, in startQuest
+    if self._checkQuestCondition(quest["conditions"]):
+  File "game/classes/Quest.rpy", line 156, in _checkQuestCondition
+    popup(failMessages)
+  File "game/screens/popup.rpy", line 86, in popup
+    popupList.add(messages)
+  File "game/screens/popup.rpy", line 25, in add
+    self.add(message)
+  File "game/screens/popup.rpy", line 30, in add
+    renpy.show_screen("popup", self)
+  File "game/screens/popup.rpy", line 102, in execute
+    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
+  File "game/screens/popup.rpy", line 102, in execute
+    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
+  File "game/screens/popup.rpy", line 111, in execute
+    vpgrid:
+  File "game/screens/popup.rpy", line 122, in execute
+    for popup in sorted(popups.popupList, key = lambda k: k["time_remain"], reverse=True):
+  File "game/screens/popup.rpy", line 133, in execute
+    if popup["icon"]:
+  File "game/screens/popup.rpy", line 136, in execute
+    use popup_message(message, transparency)
+Exception: Required parameter pos has no value.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 33, in script call
-    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-  File "game/minigames/pong/pongscreen.rpy", line 9, in script
-    $ _previousMusic = musicHistory[-1]
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/minigames/pong/pongscreen.rpy", line 9, in <module>
-    $ _previousMusic = musicHistory[-1]
-IndexError: list index out of range
+  File "game/story/Day 1/2 after rollcall.rpy", line 4, in script
+    sze "I watch her from afar, but I doubt she notices arthur"
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 45, in event
+    return self.new_widget.event(ev, x, y, st)  # E1101
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 653, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 232, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 232, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/viewport.py", line 300, in event
+    rv = super(Viewport, self).event(ev, x, y, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 232, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 232, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 897, in event
+    return handle_click(self.clicked)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 832, in handle_click
+    rv = run(action)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 299, in run
+    new_rv = run(i, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 306, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 484, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/classes/Quest.rpy", line 97, in startQuest
+    if self._checkQuestCondition(quest["conditions"]):
+  File "game/classes/Quest.rpy", line 156, in _checkQuestCondition
+    popup(failMessages)
+  File "game/screens/popup.rpy", line 86, in popup
+    popupList.add(messages)
+  File "game/screens/popup.rpy", line 25, in add
+    self.add(message)
+  File "game/screens/popup.rpy", line 30, in add
+    renpy.show_screen("popup", self)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 1051, in show_screen
+    sls.add(_layer, d, _tag, zorder=d.zorder, transient=_transient, keep_st=True, name=name)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1022, in add
+    self.hide_or_replace(layer, remove_index, "replaced")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 1044, in hide_or_replace
+    d = oldsle.displayable._hide(now - st, now - at, prefix)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 445, in _hide
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/popup.rpy", line 102, in execute
+    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
+  File "game/screens/popup.rpy", line 102, in execute
+    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
+  File "game/screens/popup.rpy", line 111, in execute
+    vpgrid:
+  File "game/screens/popup.rpy", line 122, in execute
+    for popup in sorted(popups.popupList, key = lambda k: k["time_remain"], reverse=True):
+  File "game/screens/popup.rpy", line 133, in execute
+    if popup["icon"]:
+  File "game/screens/popup.rpy", line 136, in execute
+    use popup_message(message, transparency)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
+    raise Exception("Required parameter %s has no value." % name)
+Exception: Required parameter pos has no value.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

@@ -56,13 +56,11 @@ init python:
         playsfx("xbox.ogg")
         popup("Unlocked item: Neo Armstrong")
         bag.add(deepcopy(unlockableItems["neo armstrong"]))
-        renpy.end_interaction(True)
 
     def kirbyUnlock():
         playsfx("xbox.ogg")
         popup("Unlocked item: Michael Kirby's Suit")
         bag.add(deepcopy(unlockableItems["god"]))
-        renpy.end_interaction(True)
 
     konamiCode = CodeSequence(
         sequence=(

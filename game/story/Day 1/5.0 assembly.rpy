@@ -1,6 +1,5 @@
 label asszembly1:
-    $ popup("Autosaving")
-    $ renpy.save("autosave")
+    $ autosave()
     $ stopmusic()
     $ playmusic("p4YouthfulLunch.ogg", loop=True)
     scene bg rowecorridor

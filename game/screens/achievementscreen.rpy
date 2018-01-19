@@ -99,10 +99,10 @@ screen achieve_description(achievement=None, pos, size):
             if achievement:
                 for option in achieveInfo:
                     text "{b}" + "{0}".format(unicode.title(option)) + "{/b}"
-                    if not achievement[option]:
-                        text "None"
+                    if achievement[option]:
+                        text listToText(achievement[option])
                     else:
-                        text achievement[option]           
+                        text "None" 
             else:
                 text "{b}An achievement has not been selected{/b}"
 

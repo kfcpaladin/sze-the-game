@@ -1,5 +1,5 @@
 # Game loop for updating things 
-screen gameLoop(speed=2):
+screen gameLoop(speed=0.5):
     timer speed:
         repeat True
         action [
@@ -9,3 +9,4 @@ screen gameLoop(speed=2):
 init python:
     def gameLoop():
         achievements.updateAchievements()
+        quests.updateQuests()

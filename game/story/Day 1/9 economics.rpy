@@ -1,4 +1,5 @@
 label econ1:
+    $ autosave()
     scene bg economics
     "It's time for some economics 101 with Garth Chapman, and u are ready to absorb this {s}bullshit{/s} uh, i mean buitifool knowledges."
     "Like sponges Chappo tells us he expects us to just be able to vomit back out what he tells us"

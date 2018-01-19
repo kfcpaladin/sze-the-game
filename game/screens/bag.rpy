@@ -74,10 +74,12 @@ screen bag_tooltip(item):
     }
     default mousePos = getMousePosition()
     default transparency = "{:02x}".format(180)
-    default width = 300
+    default minWidth = 300
+    default maxWidth = 600
     # Description box
     vbox:
-        xsize width
+        xminimum minWidth
+        xmaximum maxWidth
         xoffset mousePos[0]+20
         yoffset mousePos[1]+40
         frame:
@@ -87,7 +89,8 @@ screen bag_tooltip(item):
             if item:
                 text "{b}Name: {/b}" + "{0}".format(item.name)
                 frame:
-                    xsize width
+                    xminimum minWidth
+                    xmaximum maxWidth
                     if item.used:
                         background Solid(colour["used"]+transparency)
                     else:

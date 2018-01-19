@@ -18,6 +18,7 @@ label mthext1day1:
             jump mthext1shitstorm
 
 label mthext1shitstorm:
+    $ autosave()
     "The Barton asks, Anthony what are you doing on your computer?"
     "Geogebrah sir is the reply"
     "No your not, bring your laptop over here"

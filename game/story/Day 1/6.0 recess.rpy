@@ -1,7 +1,6 @@
 label recess1:
     $ game.setTime("recess")
-    $ popup("Autosaving")
-    $ renpy.save("autosave")
+    $ autosave()
     "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
     jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
     jump recess1a

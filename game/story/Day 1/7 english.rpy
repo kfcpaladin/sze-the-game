@@ -1,6 +1,7 @@
 # first english class testing
 label english1:
     $ game.setTime("lunch")
+    $ autosave()
     scene bg english
     "You arrive at {s}base camp{/s} ground floor of Wilkins"
     "You look up at the stairs, into the gaping maws of the infinite abyss"

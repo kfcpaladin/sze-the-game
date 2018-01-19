@@ -2,6 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/scanDirectory.rpy", line 93: indentation mismatch.
+File "game/classes/Quest.rpy", line 108: invalid syntax
+                        "text": "Completed quest: {0}".format(questID)),
+                                                                       ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

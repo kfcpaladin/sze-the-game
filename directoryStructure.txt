@@ -2,6 +2,7 @@
 ├── CHANGELOG.md
 ├── directoryStructure.txt
 ├── errors.txt
+├── fileCacheStatus.log
 ├── game
 │   ├── audio
 │   │   ├── audio_default.ogg
@@ -73,33 +74,33 @@
 │   │   │   ├── achievement_garyreeducation.png
 │   │   │   └── achievement_rina1.png
 │   │   ├── backgrounds
-│   │   │   ├── bg_arthur.jpg
-│   │   │   ├── bg_CmEdPF6UgAAQQgF.jpg
-│   │   │   ├── bg_CWY6FxMUsAIfDuO.jpg
+│   │   │   ├── bg_arthur.png
+│   │   │   ├── bg_CmEdPF6UgAAQQgF.png
+│   │   │   ├── bg_CWY6FxMUsAIfDuO.png
 │   │   │   ├── bg_disclaimer.png
 │   │   │   ├── bg_dreamtree.png
 │   │   │   ├── bg_economics.png
 │   │   │   ├── bg_english.png
-│   │   │   ├── bg_eoarchean.jpg
-│   │   │   ├── bg_fields_by_applesin_mod.jpg
-│   │   │   ├── bg_forthandballarea.jpg
-│   │   │   ├── bg_fortrowecorridor.jpg
-│   │   │   ├── bg_grant1.jpg
-│   │   │   ├── bg_hallentrance.jpg
-│   │   │   ├── bg_hall.jpg
-│   │   │   ├── bg_memorial_hall.jpg
+│   │   │   ├── bg_eoarchean.png
+│   │   │   ├── bg_fields_by_applesin_mod.png
+│   │   │   ├── bg_forthandballarea.png
+│   │   │   ├── bg_fortrowecorridor.png
+│   │   │   ├── bg_grant1.png
+│   │   │   ├── bg_hallentrance.png
+│   │   │   ├── bg_hall.png
+│   │   │   ├── bg_memorial_hall.png
 │   │   │   ├── bg_NortonSt.png
-│   │   │   ├── bg_parisafremov.jpg
+│   │   │   ├── bg_parisafremov.png
 │   │   │   ├── bg_physclass.png
-│   │   │   ├── bg_principalofficedoor.jpg
-│   │   │   ├── bg_principaloffice.jpg
-│   │   │   ├── bg_strathloadingdock.jpg
-│   │   │   ├── bg_strathloadingdocksign.jpg
-│   │   │   ├── bg_szeceded.jpg
+│   │   │   ├── bg_principalofficedoor.png
+│   │   │   ├── bg_principaloffice.png
+│   │   │   ├── bg_strathloadingdock.png
+│   │   │   ├── bg_strathloadingdocksign.png
+│   │   │   ├── bg_szeceded.png
 │   │   │   ├── bg_toilet.png
-│   │   │   ├── bg_wilkins_side.jpg
-│   │   │   ├── bg_Workshopdark.jpg
-│   │   │   └── bg_Workshop.jpg
+│   │   │   ├── bg_wilkins_side.png
+│   │   │   ├── bg_Workshopdark.png
+│   │   │   └── bg_Workshop.png
 │   │   ├── characterImages
 │   │   │   ├── char_arthurside.png
 │   │   │   ├── char_billthecleaner.png
@@ -139,23 +140,23 @@
 │   │   │   ├── icon_anthonyle.png
 │   │   │   ├── icon_billthecleaner.png
 │   │   │   ├── icon_chao.png
-│   │   │   ├── icon_charm.jpg
+│   │   │   ├── icon_charm.png
 │   │   │   ├── icon_cursor.png
 │   │   │   ├── icon_dean.png
 │   │   │   ├── icon_default.png
 │   │   │   ├── icon_derek.png
-│   │   │   ├── icon_fort.jpg
+│   │   │   ├── icon_fort.png
 │   │   │   ├── icon_gary.png
 │   │   │   ├── icon_grant.png
-│   │   │   ├── icon_intellect.jpg
+│   │   │   ├── icon_intellect.png
 │   │   │   ├── icon_moxham.png
 │   │   │   ├── icon_pragash.png
 │   │   │   ├── icon_richard.png
 │   │   │   ├── icon_rina.png
-│   │   │   ├── icon_roy.jpg
+│   │   │   ├── icon_roy.png
 │   │   │   ├── icon_rusali.png
-│   │   │   ├── icon_strength.jpg
-│   │   │   ├── icon_thirst.jpg
+│   │   │   ├── icon_strength.png
+│   │   │   ├── icon_thirst.png
 │   │   │   ├── icon_todd.png
 │   │   │   ├── icon_willis.png
 │   │   │   ├── icon_willyang.png
@@ -175,16 +176,16 @@
 │   │   │   ├── quest_default.png
 │   │   │   └── quest_serenaSlay.png
 │   │   ├── screenBackgrounds
-│   │   │   ├── screen_bg_diaryGrid.jpg
-│   │   │   ├── screen_bg_diaryNormal.jpg
+│   │   │   ├── screen_bg_diaryGrid.png
+│   │   │   ├── screen_bg_diaryNormal.png
 │   │   │   ├── screen_bg_map.png
 │   │   │   ├── screen_bg_map_selected.png
 │   │   │   ├── screen_bg_map_unavailable.png
-│   │   │   └── screen_bg_pong.jpg
+│   │   │   └── screen_bg_pong.png
 │   │   └── suicideScreens
-│   │       ├── kms_bg_bedroom.jpg
-│   │       ├── kms_bg_gunSuicide.jpg
-│   │       ├── kms_bg_hangingSuicide.jpg
+│   │       ├── kms_bg_bedroom.png
+│   │       ├── kms_bg_gunSuicide.png
+│   │       ├── kms_bg_hangingSuicide.png
 │   │       └── kms_icon_glockNoTrigger.png
 │   ├── instances
 │   │   ├── achievements.rpy
@@ -229,10 +230,6 @@
 │   ├── saves
 │   │   ├── 1-1-LT1.save
 │   │   ├── auto-10-LT1.save
-│   │   ├── auto-1-LT1.save
-│   │   ├── auto-2-LT1.save
-│   │   ├── auto-7-LT1.save
-│   │   ├── auto-8-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -1570,4 +1567,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1461 files
+109 directories, 1458 files

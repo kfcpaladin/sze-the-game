@@ -2,7 +2,7 @@
 # shows choices user has made
 screen roadmap:
     modal True
-    add loadImage("screen_bg_diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     use diary_title("Roadmap")
 

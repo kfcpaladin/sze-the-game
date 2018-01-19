@@ -3,7 +3,7 @@
 
 screen developerScreen:
     modal True # prevent interaction underneath
-    add loadImage("screen_bg_diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     # Give title of page
     frame:

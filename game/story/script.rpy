@@ -4,9 +4,10 @@ label start:
 # list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
     $ popup("Autosaving")
     $ renpy.save("autosave")
+    $ logDefaultCache() # for debugging improperly read files
     show screen gameLoop
     show screen float_menu
-    image blank = im.Recolor(loadImage("bg_arthur.jpg"), 255, 255, 255, 0)
+    image blank = im.Recolor(loadImage("bg_arthur.png"), 255, 255, 255, 0)
     scene bg disclaimer
     with fade
     pause

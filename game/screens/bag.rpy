@@ -3,7 +3,7 @@
 screen bag_view(bag=bag):
     modal True
     # screen components
-    add loadImage("screen_bg_diaryGrid.jpg")
+    add loadImage("screen_bg_diaryGrid.png")
     use diary_nav
     use diary_title(bag.name)
     # show inventory and stats

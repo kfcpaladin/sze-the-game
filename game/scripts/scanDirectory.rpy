@@ -61,3 +61,33 @@ init -2 python:
                     warning = " ==> "
             # print filenames and its path
             print "{0}{1}: {2}".format(warning, file, filepath)
+
+    """
+        Log the cache during initialisation
+    """
+    def logCache(filename, cacheDict):
+        logfile = open(filename, "w")
+        for name, cache in cacheDict.iteritems():
+            logfile.write(">>> Reading {0}\n".format(name))
+            sortedFileList = sorted(cache)
+            for file in sortedFileList:
+                filepath = cache[file]
+                # give a warning symbol if file could not be loaded
+                warning = ""
+                for config in (audioDir, imageDir):
+                    if filepath == os.path.join(config["folder"], config["default"]):
+                        warning = " ==> "
+                # print filenames and its path
+                logfile.write("{0}{1}: {2}\n".format(warning, file, filepath))
+            logfile.write("\n")
+
+init python:
+    def logDefaultCache():
+        logCache(
+            "fileCacheStatus.log",
+            {
+                "images": imageCache,
+                "audio": audioCache,
+            }
+        )
+    logDefaultCache()

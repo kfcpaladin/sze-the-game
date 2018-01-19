@@ -42,7 +42,7 @@ label playPong(pong=pong):
 # run the pong game
 screen pong(pong, fps=70, tickrate=50, duration=30):
     modal True
-    add loadImage("screen_bg_pong.jpg")
+    add loadImage("screen_bg_pong.png")
     # default variables
     default rate = 1/float(fps)
     default dt = tickrate/float(fps)

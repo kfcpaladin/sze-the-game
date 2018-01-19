@@ -1,7 +1,7 @@
 ##############################################
 screen questscreen(quests=quests):
     modal True
-    add loadImage("screen_bg_diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     use diary_title("Quests")
     # Create hbox to select quest type to display

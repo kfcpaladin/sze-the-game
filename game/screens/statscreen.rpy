@@ -3,7 +3,7 @@ screen statsscreen(who=sze):
     # prevent interaction underneath
     modal True
     # Include the navigation.
-    add loadImage("screen_bg_diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     use diary_title("Statistics")
     # display info
@@ -55,7 +55,7 @@ screen attribute_info_entry(who, attribute, pos, size):
             xsize size.x-25
             ysize iconSize
             spacing 5
-            use icon_frame(loadImage("icon_{0}.jpg".format(attribute)), iconSize, iconSize, loadImage("icon_default.png"))
+            use icon_frame(loadImage("icon_{0}.png".format(attribute)), iconSize, iconSize, loadImage("icon_default.png"))
             vbox:
                 text "{b}" + " {0} ({1})".format(unicode.title(attribute), attributeValue) + "{/b}"
                 use bar_graph_widget(attributeValue)

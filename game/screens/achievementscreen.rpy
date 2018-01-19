@@ -1,6 +1,6 @@
 screen achievementscreen(achievements=achievements):
     modal True
-    add loadImage("screen_bg_diaryNormal.jpg")
+    add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     use diary_title("Achievements")
     # Create hbox to select achivement type to display

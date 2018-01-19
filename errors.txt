@@ -2,16 +2,6 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/pongscreen.rpy", line 23: expected statement.
-    sze.gain("strength", 5)
-                           ^
-
-File "game/minigames/pong/pongscreen.rpy", line 28: expected statement.
-    sze.loss("strength", 2)
-                           ^
-
-File "game/minigames/pong/pongscreen.rpy", line 32: expected statement.
-    sze.gain("strength", 1)
-                           ^
+File "game/scripts/scanDirectory.rpy", line 93: indentation mismatch.
 
 Ren'Py Version: Ren'Py 6.99.13.2919

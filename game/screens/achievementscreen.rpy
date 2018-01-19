@@ -19,7 +19,7 @@ screen achievementscreen(achievements=achievements):
     use achieve_info(currentAchieveType, achievements)
 
 # Achievement info
-screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(625, 450)):
+screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(625, 415)):
     default achieveColour = {
         "hidden":       colour.red,
         "available":    colour.yellow,
@@ -34,7 +34,6 @@ screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(
         xoffset pos.x
         yoffset pos.y
         xsize size.x
-        ysize size.y 
         frame:       
             has vbox    
             text "{b}" + "{0} achievements".format(unicode.title(achieveType)) + "{/b}"
@@ -48,7 +47,7 @@ screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(
                         draggable True
                         mousewheel True
                         xsize size.x-25
-                        ysize size.y-25
+                        ysize size.y
                         # Show each quest in the dictionary
                         for achieveID, achievement in currentAchievements.iteritems():
                             use achieve_entry(achieveID, achievement, colour, pos, size)

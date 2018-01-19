@@ -22,7 +22,7 @@ screen questscreen(quests=quests):
     
 
 # Quest info
-screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 450)):
+screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 415)):
     default questColour = {
         "unavailable":  colour.red,
         "available":    colour.yellow,
@@ -37,7 +37,6 @@ screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 450))
         xoffset pos.x 
         yoffset pos.y
         xsize size.x
-        ysize size.y
         frame:         
             has vbox    
             text "{b}" + "{0} quests".format(unicode.title(questType)) + "{/b}"

@@ -9,7 +9,6 @@ screen statsscreen(who=sze):
     # display info
     use attribute_info(who)
     use friend_info
-    use friend_info_description
 
 # Show bar graph of all attributes
 screen attribute_info(who, pos=Vector(40,95), size=Vector(625,415)):
@@ -90,9 +89,11 @@ screen attribute_info_description(who=None, attribute=None, pos, size):
                 text "{b}Select an attribute{/b}"
 
 # Show friendship with everyone
-screen friend_info:
+screen friend_info(pos=Vector(720, 95), size=Vector(625, 415)):
     vbox:
-        style "friend_info"
+        xoffset pos.x
+        yoffset pos.y
+        xsize size.x
         frame:
             has vbox
             text "{b}Friendship Status{/b}"
@@ -103,13 +104,15 @@ screen friend_info:
                     draggable True
                     mousewheel True
                     spacing 10
-                    style "friend_info_vpgrid"
+                    xsize size.x-25
+                    ysize size.y
                     for friend in friendList:
-                        use friend_info_entry(friend)
+                        use friend_info_entry(friend, pos, size)
                 vbar value YScrollValue(_vpgrid_name)
+    use friend_info_description(pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
 
 # Show friend info
-screen friend_info_entry(friend):
+screen friend_info_entry(friend, pos, size):
     default friendColour = {
         "negative": colour.red,
         "neutral": colour.yellow,
@@ -118,6 +121,8 @@ screen friend_info_entry(friend):
     default iconSize = 80
     frame:
         style "friend_info_entry"
+        xsize size.x-25
+        ymaximum 50
         if friend.friendship > 0:
             background Solid(friendColour["positive"])
         elif friend.friendship == 0:
@@ -125,7 +130,7 @@ screen friend_info_entry(friend):
         else:
             background Solid(friendColour["negative"])
         hbox:
-            xsize 600
+            xsize size.x-25
             ysize iconSize
             spacing 5
             use icon_frame(friend.icon, iconSize, iconSize, loadImage("icon_default.png"))
@@ -135,16 +140,17 @@ screen friend_info_entry(friend):
                 textbutton "Show description":
                     action [
                         Hide("friend_info_description"),
-                        Show("friend_info_description", friend=friend),
+                        Show("friend_info_description", None, friend=friend, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100)),
                     ]
 
 # Show description for friend
-screen friend_info_description(friend=None):
+screen friend_info_description(friend=None, pos, size):
     vbox:
-        style "friend_info_description"
+        xoffset pos.x
+        yoffset pos.y
         frame:
-            xsize 625
-            ymaximum 100
+            xsize size.x
+            ymaximum size.y
             has vbox
             if friend:
                 text "{b}Description{/b}"
@@ -195,21 +201,5 @@ screen icon_frame(icon, width, height, default=loadImage("default.png")):
 style attribute_info_entry:
     ymaximum 50
 
-style friend_info:
-    xoffset 720
-    xsize 625
-    yoffset 95
-
-style friend_info_description:
-    xsize 625
-    ysize 20
-    xoffset 720
-    yoffset 565
-
-style friend_info_vpgrid:
-    xsize 625
-    ymaximum 415
-
 style friend_info_entry:
-    xsize 600
     ymaximum 50

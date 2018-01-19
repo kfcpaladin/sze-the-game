@@ -2,8 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/screens/questscreen.rpy", line 94: u'Hide' is not a keyword argument or valid child for the screen statement.
-    Hide("quest_description")
-        ^
+File "game/screens/statscreen.rpy", line 92: is not terminated with a newline. (Check strings and parenthesis.)
+    screen friend_info(pos=Vector(720, 95, size=Vector(625, 440)):
 
 Ren'Py Version: Ren'Py 6.99.13.2919

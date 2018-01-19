@@ -8,14 +8,15 @@ screen statsscreen(who=sze):
     use diary_title("Statistics")
     # display info
     use attribute_info(who)
-    use attribute_info_description
     use friend_info
     use friend_info_description
 
 # Show bar graph of all attributes
-screen attribute_info(who):
+screen attribute_info(who, pos=Vector(40,95), size=Vector(625,415)):
     vbox:
-        style "attribute_info"
+        xoffset pos.x
+        yoffset pos.y
+        xsize size.x
         frame:
             has vbox
             text "{b}Attribute Status{/b}"
@@ -26,13 +27,15 @@ screen attribute_info(who):
                     draggable True
                     mousewheel True
                     spacing 10
-                    style "attribute_info_vpgrid"
+                    xsize size.x-25
+                    ysize size.y
                     for attribute in who.attributes:
-                        use attribute_info_entry(attribute, who)
+                        use attribute_info_entry(who, attribute, pos, size)
                 vbar value YScrollValue(_vpgrid_name)
+    use attribute_info_description(pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
 
 # show attribute information entry
-screen attribute_info_entry(attribute, who):
+screen attribute_info_entry(who, attribute, pos, size):
     default attributeColour = {
         "negative": colour.red,
         "neutral": colour.yellow,
@@ -42,6 +45,7 @@ screen attribute_info_entry(attribute, who):
     $ attributeValue = getattr(who, attribute)
     frame:
         style "attribute_info_entry"
+        xsize size.x-25
         if attributeValue > 0:
             background Solid(attributeColour["positive"])
         elif attributeValue == 0:
@@ -49,7 +53,7 @@ screen attribute_info_entry(attribute, who):
         else:
             background Solid(attributeColour["negative"])
         hbox:
-            xsize 600
+            xsize size.x-25
             ysize iconSize
             spacing 5
             use icon_frame(loadImage("icon_{0}.jpg".format(attribute)), iconSize, iconSize, loadImage("icon_default.png"))
@@ -59,15 +63,16 @@ screen attribute_info_entry(attribute, who):
                 textbutton "Show description":
                     action [
                         Hide("attribute_info_description"), 
-                        Show("attribute_info_description", None, attribute, who),
+                        Show("attribute_info_description", None, who, attribute, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100)),
                     ]
 
 # show attribute descrition
-screen attribute_info_description(attribute=None, who=None):
+screen attribute_info_description(who=None, attribute=None, pos, size):
     vbox:
-        style "attribute_info_description"
+        xoffset pos.x
+        yoffset pos.y
         frame:
-            xsize 625
+            xsize size.x
             ymaximum 100
             has vbox
             if attribute != None and who != None:
@@ -83,6 +88,7 @@ screen attribute_info_description(attribute=None, who=None):
                 text who.getStatMessage(attribute)
             else:
                 text "{b}Select an attribute{/b}"
+
 # Show friendship with everyone
 screen friend_info:
     vbox:
@@ -186,23 +192,7 @@ screen icon_frame(icon, width, height, default=loadImage("default.png")):
                 idle Frame(default)
 
 ###########################################################################
-style attribute_info:
-    xoffset 40
-    xsize 625
-    yoffset 95
-
-style attribute_info_vpgrid:
-    xsize 600
-    ymaximum 415
-
-style attribute_info_description:
-    xsize 625
-    ysize 20
-    xoffset 40
-    yoffset 565
-
 style attribute_info_entry:
-    xsize 600
     ymaximum 50
 
 style friend_info:

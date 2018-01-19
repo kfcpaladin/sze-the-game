@@ -71,6 +71,18 @@ python early:
                 playsfx("xbox.ogg")
                 popup(achieveUnlockMessages)
 
+        """
+            Unlock an achievement by achievement identification code
+        """
+        def unlockAchievement(self, achieveID):
+            for achieveType in ("hidden", "available"):
+                achievements = getattr(self, achieveType)
+                if achieveID in achievements:
+                    self.completed[achieveID] = achievements[achieveID]
+                    achievements.pop(achieveID)
+                    playsfx("xbox.ogg")
+                    popup("Unlocked achievement: {0}".format(achieveID))
+
         def checkAchievements(self, achievements):
             achieveMadeAvailable = []
             for achieveID, achievement in achievements.iteritems():
@@ -167,6 +179,9 @@ python early:
                         raise TypeError("Expected a function for a condition")
                     if not condition["function"]():
                         return False
+                # if no unlock function, assume it requires a direct unlock
+                else:
+                    return False
             return True
 
         def _checkAchieveDependencies(self, dependencies):

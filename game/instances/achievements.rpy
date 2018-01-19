@@ -86,6 +86,17 @@ init python:
         },
     })
 
+    # quest achievements
+    achievements.addAchievements({
+        "garyreeducation": {
+            "title": "Complete reeducation",
+            "brief": "Gary has taught you well",
+            "description": "As a fully fledged graduate of the Gary reeducation clinic, your thirst for Serena has become boundless",
+            "icon": loadImage("achievement_garyreeducation.png"),
+            "hidden": True,
+        }
+    })
+
     # friendship achievements
     achievements.addAchievements({
         "rina1": {

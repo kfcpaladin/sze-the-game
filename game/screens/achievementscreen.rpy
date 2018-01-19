@@ -3,8 +3,8 @@ screen achievementscreen(achievements=achievements):
     add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Achievements")
-    default currentAchieveType = achievements.currentAchieveType
     # Create hbox to select achivement type to display
+    default currentAchieveType = achievements.currentAchieveType
     hbox:
         style "achieve_select"
         frame:
@@ -13,24 +13,29 @@ screen achievementscreen(achievements=achievements):
                 textbutton unicode.title(achieveType):
                     action [
                         SetScreenVariable("currentAchieveType", achieveType),
-                        Hide("achieve_description")
+                        Hide("achieve_description"),
                     ]
-    # Show achievements
-    use achieve_description
+    use attribute_info(sze)
     use achieve_info(currentAchieveType, achievements)
 
 # Achievement info
-screen achieve_info(achieveType, achievements):
+screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(625, 450)):
     default achieveColour = {
         "hidden":       colour.red,
         "available":    colour.yellow,
         "completed":    colour.green,
     }
+    # changes dynamically
     $ currentAchievements = getattr(achievements, achieveType)
     $ colour = achieveColour[achieveType]
+    # default description box
+    use achieve_description(pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
     vbox:
-        style "achieve_info"
-        frame:          
+        xoffset pos.x
+        yoffset pos.y
+        xsize size.x
+        ysize size.y 
+        frame:       
             has vbox    
             text "{b}" + "{0} achievements".format(unicode.title(achieveType)) + "{/b}"
             if currentAchievements:
@@ -42,20 +47,22 @@ screen achieve_info(achieveType, achievements):
                         spacing 10
                         draggable True
                         mousewheel True
-                        style "achieve_vpgrid"
+                        xsize size.x-25
+                        ysize size.y-25
                         # Show each quest in the dictionary
                         for achieveID, achievement in currentAchievements.iteritems():
-                            use achieve_entry(achieveID, achievement, colour)
+                            use achieve_entry(achieveID, achievement, colour, pos, size)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No achievements are currently {0}".format(achieveType)
 
 # Achievement entry
-screen achieve_entry(achieveID, achievement, colour):
+screen achieve_entry(achieveID, achievement, colour, pos, size):
     default achieveInfo = ["title", "brief"]
     default iconSize = 105
     frame:
         style "achieve_entry"
+        xsize size.x-25
         background Solid(colour)
         hbox:
             spacing 5
@@ -77,17 +84,18 @@ screen achieve_entry(achieveID, achievement, colour):
                     textbutton "Show description":
                         action [
                             Hide("achieve_description"),    # prevent old screen from covering new one
-                            Show("achieve_description", achievement=achievement)
+                            Show("achieve_description", achievement=achievement, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
                         ]
 
 # Longer description of achievement
-screen achieve_description(achievement=None):
+screen achieve_description(achievement=None, pos, size):
     default achieveInfo = ["description", "dependencies"]
     vbox:
-        style "achieve_description"
+        xoffset pos.x
+        yoffset pos.y
         frame:          
-            xsize 625
-            ymaximum 200
+            xsize size.x
+            ymaximum size.y
             has vbox    
             if achievement:
                 for option in achieveInfo:
@@ -101,28 +109,9 @@ screen achieve_description(achievement=None):
 
 
 ##############################################
-
-
-style achieve_info:  
-    xsize 625
-    ysize 450
-    xoffset 720
-    yoffset 95
-
-style achieve_vpgrid: 
-    xsize 600
-    ysize 415
-
 style achieve_entry:  
-    xsize 600
     ysize 40
 
-style achieve_description:  
-    xsize 625
-    ysize 200
-    xoffset 720
-    yoffset 565
-    
 style achieve_select:
     xmaximum 625
     xoffset 700

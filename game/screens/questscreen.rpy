@@ -4,10 +4,8 @@ screen questscreen(quests=quests):
     add loadImage("screen_bg_diaryNormal.jpg")
     use diary_nav
     use diary_title("Quests")
-    # Used to keep track of the quest types, and which one to show
-    default currentQuestType = quests.currentQuestType
-
     # Create hbox to select quest type to display
+    default currentQuestType = quests.currentQuestType
     hbox:
         style "quest_select"
         frame:
@@ -18,21 +16,28 @@ screen questscreen(quests=quests):
                         SetScreenVariable("currentQuestType", questType),   
                         Hide("quest_description")
                     ]
-    # right panel for info
+    # Show panels
+    use attribute_info(sze)
     use quest_info(currentQuestType, quests)
-    use quest_description
+    
 
 # Quest info
-screen quest_info(questType, quests):
+screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 450)):
     default questColour = {
         "unavailable":  colour.red,
         "available":    colour.yellow,
         "completed":    colour.red,
     }
+    # values that are expected to change must be kept track of
     $ currentQuests = getattr(quests, questType)
     $ colour = questColour[questType]
+    # default description
+    use quest_description(pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
     vbox:
-        style "quest_info"
+        xoffset pos.x 
+        yoffset pos.y
+        xsize size.x
+        ysize size.y
         frame:         
             has vbox    
             text "{b}" + "{0} quests".format(unicode.title(questType)) + "{/b}"
@@ -45,20 +50,22 @@ screen quest_info(questType, quests):
                         spacing 10
                         draggable True
                         mousewheel True
-                        style "quest_vpgrid"
+                        xsize size.x-25
+                        ysize size.y
                         # Show each quest in the dictionary
                         for questID, quest in currentQuests.iteritems():
-                            use quest_entry(questID, quest, quests, colour)
+                            use quest_entry(questID, quest, quests, colour, pos, size)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No quests are currently {0}".format(questType)
 
 # Quest entry
-screen quest_entry(questID, quest, quests, colour):
+screen quest_entry(questID, quest, quests, colour, pos, size):
     default questInfo = ["title", "brief"]
     default iconSize = 105
     frame:
         style "quest_entry"
+        xsize size.x-25
         background Solid(colour)
         hbox:
             ysize iconSize
@@ -84,16 +91,18 @@ screen quest_entry(questID, quest, quests, colour):
                         ]
                     textbutton "Show description":
                         action [
-                            Hide("quest_description"),
-                            Show("quest_description", quest=quest)
+                            Show("quest_description", None, quest, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
                         ]
                     
 
 # Longer description
-screen quest_description(quest=None):
+screen quest_description(quest=None, pos, size):
     default questInfo = ["description", "dependencies"]
     vbox:
-        style "quest_description"
+        xoffset pos.x
+        yoffset pos.y
+        xsize size.x
+        ysize size.y
         frame:          # The frame window is used for dialogue, which has a maroon color
             xsize 625
             ymaximum 200
@@ -110,25 +119,8 @@ screen quest_description(quest=None):
 
 
 ##############################################
-style quest_info:  
-    xsize 650
-    ysize 450
-    xoffset 720
-    yoffset 95
-
-style quest_vpgrid: 
-    xsize 600
-    ysize 415
-
 style quest_entry:  
-    xsize 600
     ysize 70
-
-style quest_description:  
-    xsize 625
-    ysize 200
-    xoffset 720
-    yoffset 565
     
 style quest_select:
     xmaximum 625

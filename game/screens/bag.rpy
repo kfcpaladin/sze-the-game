@@ -6,38 +6,40 @@ screen bag_view(bag=bag):
     add loadImage("screen_bg_diaryGrid.jpg")
     use diary_nav
     use diary_title(bag.name)
-    use bag_stats(bag.who)
-    use bag_tooltip
+    # show inventory and stats
+    use bag_inventory(bag)
+    use attribute_info(bag.who, pos=Vector(695, 95), size=Vector(650,415))
+
+# display the bag inventory
+screen bag_inventory(bag, pos=Vector(43,131), size=Vector(580, 580), iconSize=Vector(112, 112), borderThickness=5):
     # Variables
     default clearColour = "#00000000"
-    default iconSize = (112, 112)
-    default gapSize = 5
-    default offset = (43, 131)
-    default dimensions = (580, 580)
-    default matrix = (5, int((len(bag.inv)-1)/5)+1)
+    default matrix = Vector(5, int((len(bag.inv)-1)/5)+1)
     # render inventory
     frame:
         background clearColour
-        xoffset offset[0] - gapSize
-        yoffset offset[1] - gapSize
+        xoffset pos.x-borderThickness
+        yoffset pos.y-borderThickness
         hbox:
-            
+            # render inventory grid
             $ _grid_name = "{0}_vpgrid".format(bag.name)
             vpgrid id (_grid_name):
-                xsize dimensions[0]
-                ysize dimensions[1]
-                spacing gapSize
-                cols matrix[0]
-                rows matrix[1]
+                xsize size.x
+                ysize size.y
+                spacing borderThickness
+                cols matrix.x
+                rows matrix.y
                 draggable False
                 mousewheel True
                 for item in bag.inv:
-                    use bag_item(item, iconSize[0], iconSize[1])
-            if matrix[1] > matrix[0]:
+                    use bag_item(item, iconSize.x, iconSize.y)
+            # if rows exceed columns, assume we need to scroll
+            if matrix.y > matrix.x:
                 frame:
+                    ysize size.y
                     vbar:
                         value YScrollValue(_grid_name)
-
+    
 # display a bag item
 screen bag_item(item, width, height):
     default colour = {
@@ -61,32 +63,35 @@ screen bag_item(item, width, height):
                 Function(playsfx, "vpunch.ogg"),
                 Function(item.toggle, bag.who),
             ]
-            hovered [ 
-                Show("bag_tooltip",item=item) 
-            ]
-            unhovered Show("bag_tooltip")
+            hovered Show("bag_tooltip", None, item) 
+            unhovered Hide("bag_tooltip")
 
 
-screen bag_tooltip(item=None):
+screen bag_tooltip(item):
     default colour = {
-        "not_used": "#e6ac00",
-        "used": "#009933",
+        "not_used": colour.yellow,
+        "used": colour.green,
     }
+    default mousePos = getMousePosition()
+    default transparency = "{:02x}".format(180)
+    default width = 300
     # Description box
     vbox:
-        style "bag_tooltip"
+        xsize width
+        xoffset mousePos[0]+20
+        yoffset mousePos[1]+40
         frame:
-            style "bag_tooltip_frame"
+            background Solid("#800000"+transparency)
             has vbox
             # Give an item description if there is one
             if item:
                 text "{b}Name: {/b}" + "{0}".format(item.name)
                 frame:
-                    style "bag_tooltip_frame"
+                    xsize width
                     if item.used:
-                        background Solid(colour["used"])
+                        background Solid(colour["used"]+transparency)
                     else:
-                        background Solid(colour["not_used"])
+                        background Solid(colour["not_used"]+transparency)
                     vbox:
                         text "{b}Brief: {/b}" + "{0}".format(item.desc)
                         text "{b}Stats: {/b}"
@@ -97,37 +102,4 @@ screen bag_tooltip(item=None):
                                 text "{0} {1}".format(value, stat)
             # Indicate user to hover over item
             else:
-                text "{b}Description{/b}"
-                text "Hover over an item for description"
-
-# Statistics box
-screen bag_stats(person):
-    vbox:
-        style "bag_stats"
-        frame:
-            style "bag_stats_frame"
-            has vbox
-            text "{b}" + "{0}'s statistics".format(unicode.title(person.name)) + "{/b}"
-            for stat in person.attributes:
-                text "{0}: {1}".format(unicode.title(stat), getattr(person, stat))
-
-#########################################################################
-style bag_tooltip:
-    xoffset 703
-    yoffset 95
-    xsize 646
-    ysize 429
-
-style bag_tooltip_frame:
-    xsize 646
-    ymaximum 429
-
-style bag_stats:
-    xoffset 703
-    yoffset 577
-    xsize 646
-    ysize 75
-
-style bag_stats_frame:
-    xsize 646
-    ymaximum 75
+                text "{b}Error: {/b}Item is None type"

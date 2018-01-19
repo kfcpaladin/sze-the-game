@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/scripts/scanDirectory.rpy", line 56: invalid syntax
-                print("==>", end="")
-                                 ^
-    
+File "game/screens/questscreen.rpy", line 94: u'Hide' is not a keyword argument or valid child for the screen statement.
+    Hide("quest_description")
+        ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

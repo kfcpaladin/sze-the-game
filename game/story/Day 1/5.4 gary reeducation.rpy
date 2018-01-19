@@ -66,6 +66,7 @@ label garyreeducation8:
     "The exotic blend between pain and pleasure makes you lose control of your body"
     sze "{i}urrgpgkgpghhh...{/i}"
     jit "What the fuck Arthur"
+    $ achievements.unlockAchievement("garyreeducation")
     jump garyreeducation_finish
 
 label garyreeducation_finish:

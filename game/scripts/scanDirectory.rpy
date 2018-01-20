@@ -90,4 +90,6 @@ init python:
                 "audio": audioCache,
             }
         )
-    logDefaultCache()
+
+    if config.developer:
+        logDefaultCache()

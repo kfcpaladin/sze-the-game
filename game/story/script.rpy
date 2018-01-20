@@ -1,7 +1,8 @@
 # INTRODUCTION
 
 label start:
-    $ logDefaultCache() # for debugging improperly read files
+    if config.developer:
+        $ logDefaultCache() # for debugging improperly read files
     $ autosave()
     image blank = im.Recolor(loadImage("bg_arthur.png"), 255, 255, 255, 0)
     scene bg disclaimer

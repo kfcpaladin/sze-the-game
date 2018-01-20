@@ -224,9 +224,7 @@
 │   │       ├── Paddle.rpyc
 │   │       ├── pongInit.rpy
 │   │       ├── pongInit.rpyc
-│   │       ├── pong.rpy
 │   │       ├── Pong.rpy
-│   │       ├── pong.rpyc
 │   │       ├── Pong.rpyc
 │   │       ├── screen_pong.rpy
 │   │       ├── screen_pong.rpyc
@@ -1591,4 +1589,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1482 files
+109 directories, 1480 files

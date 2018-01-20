@@ -5,5 +5,8 @@ errors listed below, and try again.
 File "game/screens/screen_attribute.rpy", line 32: expected '=' not found.
     default attributeConfig.combine(customConfig)
                            ^
+File "game/scripts/options.rpy", line 327: expected statement.
+    config.mouse = { 'default' : [ ('cursor.png', 0, 0)] }
+                 ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

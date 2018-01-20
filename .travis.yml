@@ -12,4 +12,4 @@ install:
 # command to run tests
 script: 
   - ls
-  - ../renpy/renpy.sh "./" lint && ../renpy/renpy.sh launcher distribute "./"
+  - ../renpy/renpy.sh "./" lint && ../renpy/renpy.sh ../renpy/launcher distribute "./"

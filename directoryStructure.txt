@@ -215,8 +215,7 @@
 │   │   ├── kahoot
 │   │   │   ├── kahootQuestions.rpy
 │   │   │   ├── kahootQuestions.rpyc
-│   │   │   ├── kahootscreen.rpy
-│   │   │   └── kahootscreen.rpyc
+│   │   │   └── screen_kahootscreen.rpy
 │   │   └── pong
 │   │       ├── Ball.rpy
 │   │       ├── Ball.rpyc
@@ -228,8 +227,7 @@
 │   │       ├── pongInit.rpyc
 │   │       ├── Pong.rpy
 │   │       ├── Pong.rpyc
-│   │       ├── pongscreen.rpy
-│   │       ├── pongscreen.rpyc
+│   │       ├── screen_pong.rpy
 │   │       ├── Vector.rpy
 │   │       └── Vector.rpyc
 │   ├── saves
@@ -238,39 +236,27 @@
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
-│   │   ├── auto-9-LT1.save
+│   │   ├── auto-4-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
 │   ├── screens
-│   │   ├── achievementscreen.rpy
-│   │   ├── achievementscreen.rpyc
-│   │   ├── bag.rpy
-│   │   ├── bag.rpyc
-│   │   ├── default.rpy
-│   │   ├── default.rpyc
-│   │   ├── developer.rpy
-│   │   ├── developer.rpyc
-│   │   ├── diary.rpy
-│   │   ├── diary.rpyc
-│   │   ├── fortmap.rpy
-│   │   ├── fortmap.rpyc
-│   │   ├── gameLoop.rpy
-│   │   ├── gameLoop.rpyc
-│   │   ├── kms.rpy
-│   │   ├── kms.rpyc
-│   │   ├── popup.rpy
-│   │   ├── popup.rpyc
-│   │   ├── questscreen.rpy
-│   │   ├── questscreen.rpyc
-│   │   ├── quickmenu.rpy
-│   │   ├── quickmenu.rpyc
-│   │   ├── roadmap.rpy
-│   │   ├── roadmap.rpyc
-│   │   ├── statscreen.rpy
-│   │   ├── statscreen.rpyc
-│   │   ├── szeclicker.rpy
-│   │   └── szeclicker.rpyc
+│   │   ├── screen_achievement.rpy
+│   │   ├── screen_attribute.rpy
+│   │   ├── screen_bag.rpy
+│   │   ├── screen_barGraph.rpy
+│   │   ├── screen_default.rpy
+│   │   ├── screen_developer.rpy
+│   │   ├── screen_diary.rpy
+│   │   ├── screen_fortmap.rpy
+│   │   ├── screen_friend.rpy
+│   │   ├── screen_game_loop.rpy
+│   │   ├── screen_kms.rpy
+│   │   ├── screen_popup.rpy
+│   │   ├── screen_quests.rpy
+│   │   ├── screen_quickmenu.rpy
+│   │   ├── screen_roadmap.rpy
+│   │   └── screen_szeclicker.rpy
 │   ├── scripts
 │   │   ├── autosave.rpy
 │   │   ├── autosave.rpyc
@@ -1578,4 +1564,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1469 files
+109 directories, 1455 files

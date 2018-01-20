@@ -9,6 +9,12 @@ screen kms:
         use kmsHanging
     else:
         use kmsGun
+    textbutton "{i}Don't kms{/i}":
+        xalign 0.9
+        yalign 0.1
+        action [
+            Hide("kms"),
+        ]
     
 ##############################################################################
 # All suicide scenes

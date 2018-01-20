@@ -15,6 +15,6 @@ screen float_menu:
                 xalign 0.5
         textbutton _("kms"):
             action [
-                ShowMenu("kms"),
+                Show("kms"),
             ] 
             xalign 0.5

@@ -8,7 +8,7 @@ screen bag_view(bag=bag):
     use diary_title(bag.name)
     # show inventory and stats
     use bag_inventory(bag)
-    use attribute_info(bag.who, pos=Vector(695, 95), size=Vector(650,415))
+    use attribute_info(bag.who, pos=Vector(720, 95), size=Vector(625, 415))
 
 # display the bag inventory
 screen bag_inventory(bag, pos=Vector(43,131), size=Vector(580, 580), iconSize=Vector(112, 112), borderThickness=5):

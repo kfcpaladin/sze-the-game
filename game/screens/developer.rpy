@@ -5,15 +5,7 @@ screen developerScreen:
     modal True # prevent interaction underneath
     add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
-    # Give title of page
-    frame:
-        area (0, 0, 500, 50)
-        text "Developer Menu": 
-            size 45
-            xoffset 30
-            yoffset 10
-            font "DejaVuSans.ttf"
-    
+    use diary_title("Developer Menu")
     # use developer consoles
     use label_screen
     use label_screen_description

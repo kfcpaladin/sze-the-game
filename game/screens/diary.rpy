@@ -40,8 +40,8 @@ screen diary_title(title="Undefined"):
         area (0, 0, 500, 50)
         text title: 
             size 45
-            xoffset 30
-            yoffset 10
+            xoffset 40
+            yoffset 20
             font "DejaVuSans.ttf"
 
 ##############################################################################

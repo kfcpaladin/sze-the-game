@@ -183,7 +183,7 @@ screen icon_frame(icon, width, height, default=loadImage("default.png")):
     frame:
         xsize width
         ysize height
-        background Solid("#ffffff")
+        background Solid(colour.white)
         imagebutton:
             xmaximum width
             ymaximum height

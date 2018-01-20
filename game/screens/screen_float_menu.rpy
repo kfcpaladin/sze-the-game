@@ -5,13 +5,14 @@ screen float_menu:
         align (0.84, 0.04)
         has vbox
         spacing 10
-        textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
-            action [
-                Hide("popup"), # prevent popup screen from being frozen
-                Function(popupList.clear),
-                Show(diary.getCurrentPage()), 
-            ]
-            xalign 0.5
+        if game.diaryIntro:
+            textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
+                action [
+                    Hide("popup"), # prevent popup screen from being frozen
+                    Function(popupList.clear),
+                    Show(diary.getCurrentPage()), 
+                ]
+                xalign 0.5
         textbutton _("kms"):
             action [
                 ShowMenu("kms"),

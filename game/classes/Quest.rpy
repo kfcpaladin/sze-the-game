@@ -1,5 +1,5 @@
 python early:
-    class Quests:
+    class Quests(store.object):
         def __init__(self, questParams):
             self.questParams = questParams
             self._baseParams = {

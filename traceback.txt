@@ -1,22 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-ScriptError: Name (u'/home/fiendchain/Downloads/sze-the-game/game/minigames/pong/pong.rpy', 1516436513, 0) is defined twice, at game/minigames/pong/pong.rpy:1 and game/minigames/pong/pong.rpy:1.
+  File "game/instances/game.rpy", line 1, in script
+    init -10 python:
+  File "game/instances/game.rpy", line 2, in <module>
+    game = Game({
+NameError: name 'Game' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
-    renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 365, in main
-    renpy.game.script.load_script()  # sets renpy.game.script.
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 265, in load_script
-    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 756, in load_appropriate_file
-    self.finish_load(stmts, initcode, filename=lastfn)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 422, in finish_load
-    bad_node.filename, bad_node.linenumber))
-ScriptError: Name (u'/home/fiendchain/Downloads/sze-the-game/game/minigames/pong/pong.rpy', 1516436513, 0) is defined twice, at game/minigames/pong/pong.rpy:1 and game/minigames/pong/pong.rpy:1.
+  File "game/instances/game.rpy", line 1, in script
+    init -10 python:
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/instances/game.rpy", line 2, in <module>
+    game = Game({
+NameError: name 'Game' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

@@ -1,5 +1,5 @@
 python early:
-    class MainCharacter(ADVCharacter):
+    class MainCharacter(ADVCharacter, store.object):
         """
             self.attributes = all attributes
             self.tutorials = all tutorial messages

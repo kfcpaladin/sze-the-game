@@ -2,6 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/story/Day 1/7 english.rpy", line 462: indentation mismatch.
+File "game/story/Day 1/1 before school.rpy", line 70: expected 'name' not found.
+    show screen (diary.getCurrentPage()), 
+                ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

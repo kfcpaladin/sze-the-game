@@ -125,3 +125,21 @@ init python:
             },
         },
     })
+
+    # diary achievements
+    achievements.addAchievements({
+        "unlockSuicide": {
+            "title": "Learn about suicide",
+            "brief": "Unlock the suicide button",
+            "description": "The school seems to think that suicide is a nice choice...",
+            "icon": loadImage("achievement_unlockSuicide.png"),
+            "hidden": True,
+        },
+        "unlockDiary": {
+            "title": "Unlock the diary",
+            "brief": "Moxham has blessed you",
+            "description": "This diary is closer to a TARDIS than a book. The inventory doesn't seem to end...",
+            "icon": loadImage("achievement_unlockDiary.png"),
+            "hidden": True,
+        }
+    })

@@ -2,6 +2,8 @@
 achievement_default.png: images/achievementIcons/achievement_default.png
 achievement_garyreeducation.png: images/achievementIcons/achievement_garyreeducation.png
 achievement_rina1.png: images/achievementIcons/achievement_rina1.png
+achievement_unlockDiary.png: images/achievementIcons/achievement_unlockDiary.png
+achievement_unlockSuicide.png: images/achievementIcons/achievement_unlockSuicide.png
 bg_CWY6FxMUsAIfDuO.png: images/backgrounds/bg_CWY6FxMUsAIfDuO.png
 bg_CmEdPF6UgAAQQgF.png: images/backgrounds/bg_CmEdPF6UgAAQQgF.png
 bg_NortonSt.png: images/backgrounds/bg_NortonSt.png

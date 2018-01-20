@@ -1,12 +1,18 @@
 # INTRODUCTION
 
 label start:
-# list of areas: lkilgour, uquad, lquad, hall, cohen, quad, wilkins, place, bridge, fortstreet, carpark, bcourts, currycourts, oval, valley, food, gym, library, rquad, kilgour, rowe
     $ logDefaultCache() # for debugging improperly read files
-    show screen gameLoop
-    show screen float_menu
+    $ autosave()
     image blank = im.Recolor(loadImage("bg_arthur.png"), 255, 255, 255, 0)
     scene bg disclaimer
+    if config.developer and not game.hasDiary:
+        "As a developer you gain access to the diary immediately"
+        "Go to /game/scripts/options.rpy, and make config.developer = false to remove this"
+        $ game.hasDiary = True
+        $ game.diaryIntro = True
+    if game.hasDiary:
+        show screen float_menu
+    show screen gameLoop
     with fade
     pause
     scene black

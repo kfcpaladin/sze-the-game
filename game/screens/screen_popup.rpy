@@ -53,18 +53,19 @@ screen popup_icon(icon, message, transparency, pos, size):
             style "popup_icon" # use for tight icon wrap
             xalign 0.5
             yalign 0.5
-            xsize size.x-borderSize
-            ysize size.y-borderSize
+            xsize size.x
+            ysize size.y
             background Solid(colour.maroon+alphaCode)
             hbox:
-                xsize size.x-borderSize
-                ysize size.y-borderSize
+                xsize size.x
+                ysize size.y
                 # end bxo rendering
                 use popup_icon_frame(icon, size.y, size.y, transparency, loadImage("icon_default.png"))
                 hbox:
                     xsize size.x-size.y-borderSize
-                    ysize size.y-borderSize
+                    ysize size.y
                     text message:
+                        xoffset -10 # visual effect for making it look more centered
                         xalign 0.5
                         yalign 0.5
             

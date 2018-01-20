@@ -77,7 +77,7 @@ label schoolday1:
             show screen float_menu
             mox "\"Click on \"Open diary\" to open the diary again\""
             "...."
-            "You walk away, holding this leather bound between your asscheeks"
+            "You walk away, holding this leather bound book between your asscheeks"
             sze "{i}blushes{/i}"
 
         else:

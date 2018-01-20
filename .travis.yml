@@ -10,4 +10,6 @@ install:
   - mv renpy-6.99.13-sdk renpy
   - cd renpy
 # command to run tests
-script: ./renpy.sh "../sze-the-game/" lint && ./renpy.sh launcher distribute "../sze-the-game/"
+script: 
+  - ls
+  - ./renpy.sh "../sze-the-game/" lint && ./renpy.sh launcher distribute "../sze-the-game/"

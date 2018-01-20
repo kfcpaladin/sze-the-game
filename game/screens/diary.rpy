@@ -36,7 +36,7 @@ screen diary_nav:
 # diary title
 screen diary_title(title="Undefined"):
     $ title = unicode.title(title)
-    frame:
+    vbox:
         area (0, 0, 500, 50)
         text title: 
             size 45

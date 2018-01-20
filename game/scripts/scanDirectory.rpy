@@ -38,6 +38,8 @@ init -2 python:
                 if file in cache:
                     raise IOError("{0} is conflicting with existing file {1}".format(filePath, cache[file]))
                 else:
+                    # for windows replace "\\" to "/"
+                    filePath = filePath.replace("\\", "/")
                     # remove gameDirectory prefix since renpy scans in game/ by default
                     cache[file] = removePrefix(filePath, gameDir+"/") 
 

@@ -8,8 +8,8 @@ install:
   - tar xf renpy-6.99.13-sdk.tar.bz2
   - rm renpy-6.99.13-sdk.tar.bz2
   - mv renpy-6.99.13-sdk renpy
-  - cd renpy
+  - cd sze-the-game/
 # command to run tests
 script: 
   - ls
-  - ./renpy.sh "../sze-the-game/" lint && ./renpy.sh launcher distribute "../sze-the-game/"
+  - ../renpy/renpy.sh "./" lint && ../renpy/renpy.sh launcher distribute "./"

@@ -1,6 +1,5 @@
 label postrollcall1:
-    $ popup("Autosaving")
-    $ renpy.save("autosave")
+    $ autosave()
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the classroom"
     menu stealwillisgirl:

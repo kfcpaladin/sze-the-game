@@ -64,3 +64,5 @@ log.txt
 traceback.txt
 persistent
 .directory
+game/saves/auto-10-LT1.save
+game/saves/persistent

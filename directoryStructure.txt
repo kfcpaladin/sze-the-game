@@ -2,14 +2,60 @@
 ├── CHANGELOG.md
 ├── directoryStructure.txt
 ├── errors.txt
+├── fileCacheStatus.log
 ├── game
+│   ├── audio
+│   │   ├── audio_default.ogg
+│   │   ├── music
+│   │   │   ├── CongressNeptune.ogg
+│   │   │   ├── DeemoPaper Plane's Adventure.ogg
+│   │   │   ├── Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
+│   │   │   ├── kahoot.ogg
+│   │   │   ├── LeCastleVaniaLEDSpiralsJW.ogg
+│   │   │   ├── ManuelGasGasGas(InitialD).ogg
+│   │   │   ├── p3IwatodaiDorm.ogg
+│   │   │   ├── p3_JikaNetTanaka.ogg
+│   │   │   ├── p3MassDestruction.ogg
+│   │   │   ├── p3WhenTheMoon'sReachingOutStars.ogg
+│   │   │   ├── p4LikeADreamComeTrue.ogg
+│   │   │   ├── p4Reasoning.ogg
+│   │   │   ├── p4Traumerei.ogg
+│   │   │   ├── p4YouthfulLunch.ogg
+│   │   │   ├── p5BeneathTheMaskInstrumental.ogg
+│   │   │   ├── PinkFloydAnotherBrickInTheWall.ogg
+│   │   │   ├── RaxlenSliceBG8bit.ogg
+│   │   │   ├── rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg
+│   │   │   ├── terroristyterroristsong.ogg
+│   │   │   ├── TheRoomOSTMainTheme.ogg
+│   │   │   └── VarienThroneOfRavens.ogg
+│   │   ├── sfx
+│   │   │   ├── button_select.ogg
+│   │   │   ├── error.ogg
+│   │   │   ├── game_over.ogg
+│   │   │   ├── gunClick.ogg
+│   │   │   ├── gunSound.ogg
+│   │   │   ├── hpunch.ogg
+│   │   │   ├── mlady.ogg
+│   │   │   ├── respawn.ogg
+│   │   │   ├── slayer.ogg
+│   │   │   ├── vpunch.ogg
+│   │   │   ├── wind.ogg
+│   │   │   └── xbox.ogg
+│   │   ├── sound.rpy
+│   │   └── sound.rpyc
 │   ├── cache
 │   │   ├── bytecode.rpyb
-│   │   ├── im-8a73c074683b032f8d44bc027f212036-12f674c.png
-│   │   ├── im-ae30380b7717974ad4127e95a590f855-47a4f943.png
+│   │   ├── im-24df2e0d3435b19a0d8e3667a8ca7787-47a4f943.png
+│   │   ├── im-9536a2d19569c3d0113085f79a5011f4-47a4f943.png
+│   │   ├── im-b3e0a6d556792e4afa8d638980eb8566-47a4f943.png
+│   │   ├── im-e8e809871804fc273a1888a37d320f06-12f674c.png
 │   │   ├── pyanalysis.rpyb
 │   │   └── screens.rpyb
 │   ├── classes
+│   │   ├── Achievement.rpy
+│   │   ├── Achievement.rpyc
+│   │   ├── Diary.rpy
+│   │   ├── Diary.rpyc
 │   │   ├── Friend.rpy
 │   │   ├── Friend.rpyc
 │   │   ├── Game.rpy
@@ -20,83 +66,137 @@
 │   │   ├── Item.rpyc
 │   │   ├── MainCharacter.rpy
 │   │   ├── MainCharacter.rpyc
+│   │   ├── PopUp.rpy
+│   │   ├── PopUp.rpyc
 │   │   ├── Quest.rpy
 │   │   └── Quest.rpyc
 │   ├── images
-│   │   ├── 91_big.jpg
-│   │   ├── arthur.jpg
-│   │   ├── arthurside.png
-│   │   ├── axe.png
-│   │   ├── bag.png
-│   │   ├── ball.png
-│   │   ├── billthecleaner.png
-│   │   ├── calc1.png
-│   │   ├── calculetor.png
-│   │   ├── cannon.png
-│   │   ├── chao2.png
-│   │   ├── chaohappy.png
-│   │   ├── chaoport.png
-│   │   ├── CmEdPF6UgAAQQgF.jpg
-│   │   ├── CTf1fsBUwAAIe9a.jpg
-│   │   ├── CWY6FxMUsAIfDuO.jpg
-│   │   ├── CZ2Yss_UAAAPRqz.jpg
-│   │   ├── darkstreet.jpg
-│   │   ├── deanside.png
-│   │   ├── derkiederkside.png
-│   │   ├── Diary.jpg
-│   │   ├── disclaimer.png
-│   │   ├── dreamtree.png
-│   │   ├── economics.png
-│   │   ├── eoarchean.jpg
-│   │   ├── fields_by_applesin_mod.jpg
-│   │   ├── forthandballarea.jpg
-│   │   ├── fortrowecorridor.jpg
-│   │   ├── Fort_Street_High_School_Memorial_Hall.JPG
-│   │   ├── garry.png
-│   │   ├── grant1.jpg
-│   │   ├── grant.png
-│   │   ├── hall.jpg
-│   │   ├── jitian.png
-│   │   ├── kirby.png
-│   │   ├── lecalc.png
+│   │   ├── achievementIcons
+│   │   │   ├── achievement_default.png
+│   │   │   ├── achievement_garyreeducation.png
+│   │   │   └── achievement_rina1.png
+│   │   ├── backgrounds
+│   │   │   ├── bg_arthur.png
+│   │   │   ├── bg_CmEdPF6UgAAQQgF.png
+│   │   │   ├── bg_CWY6FxMUsAIfDuO.png
+│   │   │   ├── bg_disclaimer.png
+│   │   │   ├── bg_dreamtree.png
+│   │   │   ├── bg_economics.png
+│   │   │   ├── bg_english.png
+│   │   │   ├── bg_eoarchean.png
+│   │   │   ├── bg_fields_by_applesin_mod.png
+│   │   │   ├── bg_forthandballarea.png
+│   │   │   ├── bg_fortrowecorridor.png
+│   │   │   ├── bg_grant1.png
+│   │   │   ├── bg_hallentrance.png
+│   │   │   ├── bg_hall.png
+│   │   │   ├── bg_memorial_hall.png
+│   │   │   ├── bg_NortonSt.png
+│   │   │   ├── bg_parisafremov.png
+│   │   │   ├── bg_physclass.png
+│   │   │   ├── bg_principalofficedoor.png
+│   │   │   ├── bg_principaloffice.png
+│   │   │   ├── bg_strathloadingdock.png
+│   │   │   ├── bg_strathloadingdocksign.png
+│   │   │   ├── bg_szeceded.png
+│   │   │   ├── bg_toilet.png
+│   │   │   ├── bg_wilkins_side.png
+│   │   │   ├── bg_Workshopdark.png
+│   │   │   └── bg_Workshop.png
+│   │   ├── characterImages
+│   │   │   ├── char_arthurside.png
+│   │   │   ├── char_billthecleaner.png
+│   │   │   ├── char_calculetor.png
+│   │   │   ├── char_chao2.png
+│   │   │   ├── char_chaohappy.png
+│   │   │   ├── char_chaoport.png
+│   │   │   ├── char_CTf1fsBUwAAIe9a.png
+│   │   │   ├── char_darkstreet.png
+│   │   │   ├── char_deanside.png
+│   │   │   ├── char_derkiederkside.png
+│   │   │   ├── char_garry.png
+│   │   │   ├── char_grant.png
+│   │   │   ├── char_jitian.png
+│   │   │   ├── char_kirby.png
+│   │   │   ├── char_lecalc.png
+│   │   │   ├── char_moxhamhappy.png
+│   │   │   ├── char_moxhamside.png
+│   │   │   ├── char_moxhamunhappy.png
+│   │   │   ├── char_pragash2.png
+│   │   │   ├── char_pragashnormal.png
+│   │   │   ├── char_pragash.png
+│   │   │   ├── char_rick.png
+│   │   │   ├── char_rina.png
+│   │   │   ├── char_RRRROOOOOOOYYYYYYYYYboi.png
+│   │   │   ├── char_rusalidropkick.png
+│   │   │   ├── char_rusali.png
+│   │   │   ├── char_rusali_side.png
+│   │   │   ├── char_sze1.png
+│   │   │   ├── char_toddside.png
+│   │   │   ├── char_willis1.png
+│   │   │   ├── char_willisside1.png
+│   │   │   ├── char_willisside.png
+│   │   │   ├── char_willyin.png
+│   │   │   └── char_yang1.png
+│   │   ├── icons
+│   │   │   ├── icon_anthonyle.png
+│   │   │   ├── icon_billthecleaner.png
+│   │   │   ├── icon_chao.png
+│   │   │   ├── icon_charm.png
+│   │   │   ├── icon_cursor.png
+│   │   │   ├── icon_dean.png
+│   │   │   ├── icon_default.png
+│   │   │   ├── icon_derek.png
+│   │   │   ├── icon_fort.png
+│   │   │   ├── icon_gary.png
+│   │   │   ├── icon_grant.png
+│   │   │   ├── icon_intellect.png
+│   │   │   ├── icon_moxham.png
+│   │   │   ├── icon_pragash.png
+│   │   │   ├── icon_richard.png
+│   │   │   ├── icon_rina.png
+│   │   │   ├── icon_roy.png
+│   │   │   ├── icon_rusali.png
+│   │   │   ├── icon_save.png
+│   │   │   ├── icon_strength.png
+│   │   │   ├── icon_thirst.png
+│   │   │   ├── icon_todd.png
+│   │   │   ├── icon_willis.png
+│   │   │   ├── icon_willyang.png
+│   │   │   └── icon_willyin.png
+│   │   ├── image_default.png
+│   │   ├── images.rpy
+│   │   ├── images.rpyc
+│   │   ├── items
+│   │   │   ├── item_axe.png
+│   │   │   ├── item_bag.png
+│   │   │   ├── item_ball.png
+│   │   │   ├── item_calc1.png
+│   │   │   ├── item_cannon.png
+│   │   │   └── item_kirby.png
 │   │   ├── logo.png
-│   │   ├── map.png
-│   │   ├── Map selected.png
-│   │   ├── map unavailable.png
-│   │   ├── moxhamhappy.png
-│   │   ├── moxhamside.png
-│   │   ├── moxhamunhappy.png
-│   │   ├── NortonSt.png
-│   │   ├── parisafremov.jpg
-│   │   ├── physclass.png
-│   │   ├── pong.jpg
-│   │   ├── pragash2.png
-│   │   ├── pragashnormal.png
-│   │   ├── pragash.png
-│   │   ├── principalofficedoor.jpg
-│   │   ├── principaloffice.jpg
-│   │   ├── Quests.jpg
-│   │   ├── rick.png
-│   │   ├── RRRROOOOOOOYYYYYYYYYboi.png
-│   │   ├── rusalidropkick.png
-│   │   ├── rusali.png
-│   │   ├── rusali_side.png
-│   │   ├── strathloadingdock.jpg
-│   │   ├── strathloadingdocksign.jpg
-│   │   ├── sze1.png
-│   │   ├── szeceded.jpg
-│   │   ├── toddside.png
-│   │   ├── toilet.png
-│   │   ├── willis1.png
-│   │   ├── willisside1.png
-│   │   ├── willisside.png
-│   │   ├── willyin.png
-│   │   ├── Workshopdark.jpg
-│   │   ├── Workshop.jpg
-│   │   └── yang1.png
+│   │   ├── questIcons
+│   │   │   ├── quest_default.png
+│   │   │   └── quest_serenaSlay.png
+│   │   ├── screenBackgrounds
+│   │   │   ├── screen_bg_diaryGrid.png
+│   │   │   ├── screen_bg_diaryNormal.png
+│   │   │   ├── screen_bg_map.png
+│   │   │   ├── screen_bg_map_selected.png
+│   │   │   ├── screen_bg_map_unavailable.png
+│   │   │   └── screen_bg_pong.png
+│   │   └── suicideScreens
+│   │       ├── kms_bg_bedroom.png
+│   │       ├── kms_bg_gunSuicide.png
+│   │       ├── kms_bg_hangingSuicide.png
+│   │       └── kms_icon_glockNoTrigger.png
 │   ├── instances
+│   │   ├── achievements.rpy
+│   │   ├── achievements.rpyc
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
+│   │   ├── diary.rpy
+│   │   ├── diary.rpyc
 │   │   ├── friends.rpy
 │   │   ├── friends.rpyc
 │   │   ├── game.rpy
@@ -105,14 +205,17 @@
 │   │   ├── inventory.rpyc
 │   │   ├── items.rpy
 │   │   ├── items.rpyc
+│   │   ├── popup.rpy
+│   │   ├── popup.rpyc
 │   │   ├── quests.rpy
 │   │   ├── quests.rpyc
 │   │   ├── sze.rpy
 │   │   └── sze.rpyc
 │   ├── minigames
 │   │   ├── kahoot
-│   │   │   ├── kahootscreen.rpy
-│   │   │   └── kahootscreen.rpyc
+│   │   │   ├── kahootQuestions.rpy
+│   │   │   ├── kahootQuestions.rpyc
+│   │   │   └── screen_kahootscreen.rpy
 │   │   └── pong
 │   │       ├── Ball.rpy
 │   │       ├── Ball.rpyc
@@ -120,88 +223,83 @@
 │   │       ├── PaddleBot.rpyc
 │   │       ├── Paddle.rpy
 │   │       ├── Paddle.rpyc
-│   │       ├── pong.rpy
-│   │       ├── pong.rpyc
-│   │       ├── pongscreen.rpy
-│   │       ├── pongscreen.rpyc
+│   │       ├── pongInit.rpy
+│   │       ├── pongInit.rpyc
+│   │       ├── Pong.rpy
+│   │       ├── Pong.rpyc
+│   │       ├── screen_pong.rpy
 │   │       ├── Vector.rpy
 │   │       └── Vector.rpyc
-│   ├── music
-│   │   ├── CongressNeptune.ogg
-│   │   ├── DeemoPaper Plane's Adventure.ogg
-│   │   ├── Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
-│   │   ├── kahoot.ogg
-│   │   ├── LeCastleVaniaLEDSpiralsJW.ogg
-│   │   ├── ManuelGasGasGas(InitialD).ogg
-│   │   ├── p3IwatodaiDorm.ogg
-│   │   ├── p3_JikaNetTanaka.ogg
-│   │   ├── p3MassDestruction.ogg
-│   │   ├── p3WhenTheMoon'sReachingOutStars.ogg
-│   │   ├── p4LikeADreamComeTrue.ogg
-│   │   ├── p4Reasoning.ogg
-│   │   ├── p4Traumerei.ogg
-│   │   ├── p4YouthfulLunch.ogg
-│   │   ├── p5BeneathTheMaskInstrumental.ogg
-│   │   ├── PinkFloydAnotherBrickInTheWall.ogg
-│   │   ├── RaxlenSliceBG8bit.ogg
-│   │   ├── rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg
-│   │   ├── terroristyterroristsong.ogg
-│   │   ├── TheRoomOSTMainTheme.ogg
-│   │   └── VarienThroneOfRavens.ogg
 │   ├── saves
+│   │   ├── 1-1-LT1.save
 │   │   ├── auto-10-LT1.save
+│   │   ├── auto-1-LT1.save
+│   │   ├── auto-2-LT1.save
+│   │   ├── auto-3-LT1.save
+│   │   ├── auto-4-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
 │   ├── screens
-│   │   ├── achievement.rpy
-│   │   ├── achievement.rpyc
-│   │   ├── bag.rpy
-│   │   ├── bag.rpyc
-│   │   ├── default.rpy
-│   │   ├── default.rpyc
-│   │   ├── diary.rpy
-│   │   ├── diary.rpyc
-│   │   ├── fortmap.rpy
-│   │   ├── fortmap.rpyc
-│   │   ├── kms.rpy
-│   │   ├── kms.rpyc
-│   │   ├── popup.rpy
-│   │   ├── popup.rpyc
-│   │   ├── questscreen.rpy
-│   │   ├── questscreen.rpyc
-│   │   ├── quickmenu.rpy
-│   │   ├── quickmenu.rpyc
-│   │   ├── roadmap.rpy
-│   │   ├── roadmap.rpyc
-│   │   ├── statscreen.rpy
-│   │   ├── statscreen.rpyc
-│   │   ├── szeclicker.rpy
-│   │   └── szeclicker.rpyc
+│   │   ├── screen_achievement.rpy
+│   │   ├── screen_attribute.rpy
+│   │   ├── screen_bag.rpy
+│   │   ├── screen_barGraph.rpy
+│   │   ├── screen_default.rpy
+│   │   ├── screen_developer.rpy
+│   │   ├── screen_diary.rpy
+│   │   ├── screen_fortmap.rpy
+│   │   ├── screen_friend.rpy
+│   │   ├── screen_game_loop.rpy
+│   │   ├── screen_kms.rpy
+│   │   ├── screen_popup.rpy
+│   │   ├── screen_quests.rpy
+│   │   ├── screen_quickmenu.rpy
+│   │   ├── screen_roadmap.rpy
+│   │   └── screen_szeclicker.rpy
 │   ├── scripts
+│   │   ├── autosave.rpy
+│   │   ├── autosave.rpyc
+│   │   ├── colours.rpy
+│   │   ├── colours.rpyc
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
-│   │   ├── images.rpy
-│   │   ├── images.rpyc
-│   │   ├── kahootQuestions.rpy
-│   │   ├── kahootQuestions.rpyc
+│   │   ├── labels
+│   │   │   ├── 0 labels.rpy
+│   │   │   ├── 0 labels.rpyc
+│   │   │   ├── 0 start_dead.rpy
+│   │   │   ├── 0 start_dead.rpyc
+│   │   │   ├── 1 before_school.rpy
+│   │   │   ├── 1 before_school.rpyc
+│   │   │   ├── 2 after_rollcall.rpy
+│   │   │   ├── 2 after_rollcall.rpyc
+│   │   │   ├── 3.0 physics.rpy
+│   │   │   ├── 3.0 physics.rpyc
+│   │   │   ├── 3.1 office.rpy
+│   │   │   ├── 3.1 office.rpyc
+│   │   │   ├── 4 engineering.rpy
+│   │   │   ├── 4 engineering.rpyc
+│   │   │   ├── 5.0 assembly.rpy
+│   │   │   ├── 5.0 assembly.rpyc
+│   │   │   ├── 5.1 jigassembly.rpy
+│   │   │   ├── 5.1 jigassembly.rpyc
+│   │   │   ├── 5.4 gary reeducation.rpy
+│   │   │   ├── 5.4 gary reeducation.rpyc
+│   │   │   ├── 6.0 recess.rpy
+│   │   │   ├── 6.0 recess.rpyc
+│   │   │   ├── 7 english.rpy
+│   │   │   ├── 7 english.rpyc
+│   │   │   ├── 8 maths.rpy
+│   │   │   ├── 8 maths.rpyc
+│   │   │   ├── 9 economics.rpy
+│   │   │   └── 9 economics.rpyc
+│   │   ├── mousePosition.rpy
+│   │   ├── mousePosition.rpyc
 │   │   ├── options.rpy
 │   │   ├── options.rpyc
-│   │   ├── popup.rpy
-│   │   ├── popup.rpyc
-│   │   ├── sound.rpy
-│   │   └── sound.rpyc
+│   │   ├── scanDirectory.rpy
+│   │   └── scanDirectory.rpyc
 │   ├── script_version.txt
-│   ├── sfx
-│   │   ├── 8d82b5_Final_Fantasy_XI_Menu_Selection_Sound_Effect.ogg
-│   │   ├── game_over.ogg
-│   │   ├── hpunch.ogg
-│   │   ├── mlady.ogg
-│   │   ├── respawn.ogg
-│   │   ├── slayer.ogg
-│   │   ├── vpunch.ogg
-│   │   ├── wind.ogg
-│   │   └── xbox.ogg
 │   └── story
 │       ├── Day 1
 │       │   ├── 1 before school.rpy
@@ -222,6 +320,8 @@
 │       │   ├── 5.2 jig toilet.rpyc
 │       │   ├── 5.3 jig food.rpy
 │       │   ├── 5.3 jig food.rpyc
+│       │   ├── 5.4 gary reeducation.rpy
+│       │   ├── 5.4 gary reeducation.rpyc
 │       │   ├── 5.4 jig vices.rpy
 │       │   ├── 5.4 jig vices.rpyc
 │       │   ├── 5.5 assembly shitstorm.rpy
@@ -839,6 +939,7 @@
 │       ├── zsync.exe
 │       └── zsyncmake.exe
 ├── log.txt
+├── makeVideo.sh
 ├── OGLdpf.log
 ├── README.md
 ├── renpy
@@ -1463,4 +1564,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-99 directories, 1364 files
+109 directories, 1455 files

@@ -1,41 +1,69 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 11, in script call
-    pause
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/7 english.rpy", line 355, in script
-    menu:
-SyntaxError: invalid syntax (game/story/Day 1/7 english.rpy, line 375)
+  File "game/story/Day 1/6.0 recess.rpy", line 377, in script
+    call screen kms
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "renpy/common/00action_menu.rpy", line 141, in __call__
+    renpy.jump_out_of_context(self.label)
+JumpOutException: deadrestart
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 11, in script call
-    pause
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "renpy/common/00console.rpy", line 765, in script call
-    python in _console:
-  File "game/story/Day 1/7 english.rpy", line 355, in script
-    menu:
-  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\ast.py", line 1482, in execute
-    choice = renpy.exports.menu(choices, self.set)
-  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\exports.py", line 849, in menu
-    if renpy.python.py_eval(condition) ]
-  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\python.py", line 1793, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\RICK\Documents\GitHub\sze-the-game\renpy\python.py", line 597, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/story/Day 1/7 english.rpy, line 375)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
+    renpy.execution.run_context(True)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
+    context.run()
+  File "game/story/Day 1/6.0 recess.rpy", line 377, in script
+    call screen kms
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
+    self.call("execute")
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 156, in event
+    return self.transitions[-1].event(ev, x, y, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 45, in event
+    return self.new_widget.event(ev, x, y, st)  # E1101
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 653, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 1977, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 299, in run
+    new_rv = run(i, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 306, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_menu.rpy", line 141, in __call__
+    renpy.jump_out_of_context(self.label)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1619, in jump_out_of_context
+    raise renpy.game.JumpOutException(label)
+JumpOutException: deadrestart
 
-Windows-8-6.2.9200
+Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
 sze-the game 0.0

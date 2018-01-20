@@ -7,6 +7,8 @@ init python:
             "msgLoss": None,
         },
     })
+    ale.setDescription("He is a calculator")
+
     # Bill the Cleaner
     bil.setMessages({
         "friendship": {
@@ -14,6 +16,8 @@ init python:
             "msgLoss": None,
         },
     })
+    bil.setDescription("Janitor person")
+
     # Aradhya
     but.setMessages({
         "friendship": {
@@ -21,6 +25,8 @@ init python:
             "msgLoss": "You probably made a bad butter pun or mispelt Arradiia's name, causing friendship with him to drop to [but.friendship].",
         },
     })
+    but.setDescription("Indian guy")
+
     # Chao
     cha.setMessages({
         "friendship": {
@@ -28,6 +34,8 @@ init python:
             "msgLoss": "You almost made Chao raep you, friendship with Chao is currently at [cha.friendship]",
         },
     })
+    cha.setDescription("He's big and he can squish you. Avoid him at all costs to preserve your virginity!")
+    
     # Dean
     dea.setMessages({
         "friendship": {
@@ -35,6 +43,7 @@ init python:
             "msgLoss": "You must've confused Masterchief with Masterchef cos he thinks you're a shit, resulting in friendship with Dean to drop to [dea.friendship]",
         },
     })
+
     # Richard
     dik.setMessages({
         "friendship": {
@@ -42,6 +51,7 @@ init python:
             "msgLoss": "You probably use wrong grammar or make rude joke, very annoy Rick Dick, Friendship now is [dik.friendship]",
         },
     })
+
     # Steven
     dng.setMessages({
         "friendship": {
@@ -49,6 +59,7 @@ init python:
             "msgLoss": "You probs made bad joke about a female friend of Deng's, or were just retard, lowering friendship with him to [dng.friendship].",
         },
     })
+
     # Derek
     drk.setMessages({
         "friendship": {
@@ -56,6 +67,7 @@ init python:
             "msgLoss": "You dirked Derk, causing friendship with him to fall to [drk.friendship]",
         },
     })
+
     # Fluitsima
     flu.setMessages({
         "friendship": {
@@ -63,6 +75,7 @@ init python:
             "msgLoss": "Something you did upset Ms Fluistma. Your current predicted Phys HSC mark is [flu.friendship]. Just kidding, thats your friendship with her",
         },
     })
+
     # Grant
     gra.setMessages({
         "friendship": {
@@ -70,6 +83,7 @@ init python:
             "msgLoss": "Grant wasnt exactly pleased with your behaviour, resulting in friendship dropping to [gra.friendship]. Looks like you might have to spend some more time in the naughty corner.",
         },
     })
+
     # Jitian/Gay
     jit.setMessages({
         "friendship": {
@@ -77,6 +91,7 @@ init python:
             "msgLoss": "Your friendship with Gary dropped to [jit.friendship]. You probably criticized his interests in chinese \"cartoons\" or something.",
         },
     })
+
     # Willis
     kok.setMessages({
         "friendship": {
@@ -84,6 +99,7 @@ init python:
             "msgLoss": "Fuck Willis. \"Friendship\" is currently at [kok.friendship]",
         },
     })
+
     # Andrew Lee
     lee.setMessages({
         "friendship": {
@@ -91,6 +107,7 @@ init python:
             "msgLoss": "You Gullible George, coz your friendship with him is lowered to [lee.friendship].",
         },
     })
+
     # Moxham
     mox.setMessages({
         "friendship": {
@@ -98,6 +115,7 @@ init python:
             "msgLoss": "Your friendship with Moxham dropped to [mox.friendship]. Looks like more afterschool detentions, suspensions or worse.",
         },
     })
+
     # Pragrash
     pra.setMessages({
         "friendship": {
@@ -105,6 +123,7 @@ init python:
             "msgLoss": "You weren't very cricket to Pragash, reducing your friendship with him to [pra.friendship]",
         },
     })
+
     # Serena 
     rin.setMessages({
         "friendship": {
@@ -112,6 +131,7 @@ init python:
             "msgLoss": "Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rin.friendship]",
         },
     })
+
     # Roy Zhang
     roy.setMessages({
         "friendship": {
@@ -119,6 +139,7 @@ init python:
             "msgLoss": "Your friendship with Roy dropped to [roy.friendship]. It is strongly advised that you immediately evacuate the room.",
         },
     })
+
     # Rusali
     rus.setMessages({
         "friendship": {
@@ -126,6 +147,7 @@ init python:
             "msgLoss": "You dogged [rus.name], thus your friendship level with him is currently as [rus.friendship]",
         },
     })
+
     # Schlam
     slm.setMessages({
         "friendship": {
@@ -133,6 +155,7 @@ init python:
             "msgLoss": None,
         },
     })
+
     # Todd Treoir
     tod.setMessages({
         "friendship": {
@@ -140,6 +163,7 @@ init python:
             "msgLoss": None,
         },
     })
+
     # Will Yin
     wil.setMessages({
         "friendship": {
@@ -147,6 +171,7 @@ init python:
             "msgLoss": "Ur a fcktard and will, at this rate, fail Yang's eugenics program. Friendship with him is currently at [wil.friendship]",
         },
     })
+    
     # Will Yang
     wiy.setMessages({
         "friendship": {

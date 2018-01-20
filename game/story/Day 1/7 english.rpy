@@ -1,5 +1,8 @@
 # first english class testing
 label english1:
+    $ game.setTime("lunch")
+    $ autosave()
+    scene bg english
     "You arrive at {s}base camp{/s} ground floor of Wilkins"
     "You look up at the stairs, into the gaping maws of the infinite abyss"
     sze "Am I even bothered enough for this?"
@@ -303,7 +306,7 @@ label english1flight3:
             pra "\"I think that's a yes\""
             "You aren't too sure what's going on, but you think you see Pragash deliberately prick his own finger"
             pra "\"Ouch\""
-            pra "\"{i}Kuchiyose: Karesenshu{/i}\""
+            pra "\"{i}Kuchiyose: Karegyangu{/i}\""
             sze "I must be dreaming"
             "{s}Curries{/s} People clearly of sub-continental descent appear around Pragash"
             pra "\"Thanks for appearing on such short notice, my dudes\""
@@ -353,28 +356,13 @@ label english1top:
     sze "I think he's waving to me?"
     sze "\"Hi...uh...?\""
     menu:
-        "Stevie" if sze.fort > 3:
-            sze "\"G'day Stevie\""
-            dng "\"lol when did you get so ozzie?\""
-            sze "\"I dunno, sometimes, I just feel like a videogame character being manipulated into saying random things{nw}\""
-            sze "\"Ahem\""
-            sze "\"What I meant is, sometimes, I just feel a bit weird in the head\""
-            dng "\"lol, as expected\""
-            jump eng1pt1
         "Stefan":
             sze "\"Hi Stefan\""
             dng "\"lol, when did you get a lisp?\""
-            sze "Wow, I feel like I am mentally handicapped, but in a social sense"
-            $ sze.loss("charm")
-            sze "\"erm, ahem\""
-            sze "\"anyhow\""
-            sze "\"How were your holidays?\""
-            dng "\"maths and metal\""
-            lee "\"typical\""
-            return    
-        "Steven" if sze.intellect > 3:
+        "Steven":
             sze "\"Hi Steven\""
             dng "\"Hey Arthur\""
+<<<<<<< HEAD
             sze "I have sucessfully navigated the treacherous waters of social conduct"
             sze "Surely I deserve to have an extra charisma point?"
             "Does sze deserve an extra charm point for remembering an acquaintance's name?"
@@ -547,5 +535,10 @@ label english1top:
     roy "\"ROY\""
 #   slm "\"stfu Boy\""
     "Schlam appears to be a somewhat aged, short, slightly round, Caucasian woman; a benign, humoured individual."
+=======
+        "Stevo":
+            sze "\"G'day Stevo\""
+            dng "\"lmao when did you get so ozzie?\""
+>>>>>>> 27abbd6fae73bd5688b8789cf9d26bf8ec927158
     sze "\"Bullshittery at its finest\""
     jump mthext1day1

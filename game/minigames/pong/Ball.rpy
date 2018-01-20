@@ -1,23 +1,43 @@
 python early:
     import random
     class Ball:
-        def __init__(self, pos, radius=10, speed=20, bounds=(0,0,1366,768)):
-            self.pos = pos
-            self.vel = Vector(0, 0)
-            self.speed = speed
-            self.radius = radius
-            self.bounds = bounds    # bounds = (0, 0, 1366, 768)
-            self.score = {
-                "left": 0,
-                "right": 0
+        def __init__(self, **kargs):
+            self.defaultOptions = {
+                "bounds": (0, 0, 1366, 768),
+                "colour": "#ffffff",
+                "pos": Vector(0, 0),
+                "radius": 10,
+                "score": {
+                    "left": 0,
+                    "right": 0,
+                },
+                "speed": 20,
+                "vel": Vector(0, 0),
             }
+            self.setOptions(**kargs)
             self._start()
 
-        def update(self):
-            self._limitSpeed()
-            self.pos.add(self.vel)
+        """
+            Set options given keyword arguments
+        """
+        def setOptions(self, **kargs):
+            for key, value in self.defaultOptions.iteritems():
+                if key in kargs:
+                    setattr(self, key, kargs[key])
+                else:
+                    setattr(self, key, value)
+
+        """
+            Update physics
+        """
+        def update(self, dt=1.0):
+            self._limitSpeed() 
+            self.pos.add(self.vel.getMult(dt))
             self.checkBounds()
 
+        """
+            Limit ball to game window
+        """
         def checkBounds(self):
             # Bounce off top and bottom boundary
             if self.pos.y - self.radius <= self.bounds[1]:
@@ -30,48 +50,48 @@ python early:
             if self.pos.x + self.radius >= self.bounds[2]:
                 self.reset("right")
 
-        # Takes paddle and bounces accordingly
-        def bounce(self, paddle):
-            # Bounce if collide left and right
-            if(paddle._checkYInside(self.pos.y + self.radius) or
-                    paddle._checkYInside(self.pos.y - self.radius)):
-                # Left side
-                if paddle._checkXInside(self.pos.x + self.radius):
-                    playsfx("vpunch.ogg")
-                    self.vel.x = -abs(self.vel.x)
-                    self.vel.add(paddle.vel)
-                # Right side
-                elif paddle._checkXInside(self.pos.x - self.radius):
-                    playsfx("vpunch.ogg")
-                    self.vel.x = abs(self.vel.x)
-                    self.vel.add(paddle.vel)
-            # Bounce if collide up and down
-            if(paddle._checkXInside(self.pos.x + self.radius) or
-                    paddle._checkXInside(self.pos.x - self.radius)):
-                # Top edge
-                if paddle._checkYInside(self.pos.y + self.radius):
-                    playsfx("vpunch.ogg");
-                    self.vel.y = -abs(self.vel.y)
-                # Bottom edge
-                elif paddle._checkYInside(self.pos.y - self.radius):
-                    playsfx("vpunch.ogg")
-                    self.vel.y = abs(self.vel.y)
+        """
+            Given a paddle, bounce according to position difference
+        """
+        def bounceUsingVector(self, paddle):
+            playsfx("vpunch.ogg")
+            diff = self.pos.getSub(paddle.pos)
+            diff.y /= (paddle.height/2.0)
+            diff.x /= (paddle.width/2.0)
+            yThreshold = 0.8
+            xThreshold = 0.6
+            # bounce horizontal
+            if diff.x > xThreshold:
+                self.vel.x = self.speed
+                self.vel.y += paddle.vel.y
+            elif diff.x < -xThreshold:
+                self.vel.x = -self.speed
+                self.vel.y += paddle.vel.y
+            # bounce vertical
+            if diff.y > yThreshold:
+                self.vel.y = self.speed
+                self.vel.x += paddle.vel.x
+            elif diff.y < -yThreshold:
+                self.vel.y = -self.speed
+                self.vel.x += paddle.vel.x
 
-
+        """
+            reset the ball and add score to the correct side
+        """
         def reset(self, side):    
             self.pos.x = self.bounds[2]/2.0
             self.pos.y = self.bounds[3]/2.0
             if side == "left":
                 self.score["right"] += 1
                 self.vel = Vector(
-                    self.speed + random.randint(-2, 2), 
-                    self.speed + random.randint(0, 2)
+                    -self.speed/2.0 + random.randint(-2, 2), 
+                    self.speed * random.randint(-5, 5) / 5.0
                 )
             elif side == "right":
                 self.score["left"] += 1
                 self.vel = Vector(
-                    self.speed + random.randint(-2, 2), 
-                    -self.speed - random.randint(0, 2)
+                    self.speed/2.0 + random.randint(-2, 2), 
+                    self.speed * random.randint(-5, 5) / 5.0
                 )
         
         # Resets the ball position and nulls the score
@@ -83,11 +103,12 @@ python early:
             }
 
         # Cap the velocity if it goes above the maximum limit
-        def _limitSpeed(self):
-            if self.vel.x > self.speed:
-                self.vel.x = self.speed
-            if self.vel.y > self.speed:
-                self.vel.y = self.speed
+        def _limitSpeed(self, factor=2):
+            maxSpeed = factor * self.speed
+            if self.vel.x > maxSpeed:
+                self.vel.x = maxSpeed
+            if self.vel.y > maxSpeed:
+                self.vel.y = maxSpeed
 
         # This will start the ball moving at a random direction
         def _start(self):

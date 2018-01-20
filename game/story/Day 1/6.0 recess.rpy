@@ -1,7 +1,6 @@
 label recess1:
     $ game.setTime("recess")
-    $ popup("Autosaving")
-    $ renpy.save("autosave")
+    $ autosave()
     "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
     jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
     jump recess1a
@@ -143,7 +142,7 @@ label recess1a:
                                 "Recess is over, time for next class"
                                 jump english1
 
-# make variable for royfriendship
+# make variable for royfriendship --> its roy.friendship
                         "\"Yes\"":
                             sze "\"Yes\""
                             sze "\"I'd totes stick ma dick in the exhaust pipe of a car transformer\""
@@ -375,7 +374,7 @@ label recess1a:
         if rin.friendship >= 100:
             sze "I think I can now finally die happy"
             "..."
-            call dead
+            call screen kms
         else:
             $ stopmusic()
             sze "Well I suck shit"

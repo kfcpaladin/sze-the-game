@@ -43,6 +43,11 @@ python early:
                 self.currentTime[desiredTime] = True
             else:
                 raise AttributeError("{0} is not a valid timestate".format(desiredTime))
+        # Get the time
+        def getTime(self):
+            for time, state in self.currentTime.iteritems():
+                if state:
+                    return time
 
         """
             Allow for the modification of iterable game state variables

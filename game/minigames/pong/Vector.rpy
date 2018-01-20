@@ -15,3 +15,11 @@ python early:
         def sub(self, vector):
             self.x -= vector.x
             self.y -= vector.y
+
+        def getSub(self, vector):
+            v = Vector(self.x, self.y)
+            v.sub(vector)
+            return v
+        
+        def getMult(self, scalar):
+            return Vector(self.x*scalar, self.y*scalar)

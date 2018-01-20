@@ -37,3 +37,31 @@ The standard format for a changelog is the date as a title, followed by bullet p
 
 **24/12/2017**
 * Added pong to the game
+
+**10/01/2018**
+* Added custom floating Arthur head cursor
+
+**16/01/2018**
+* Added stat screen for attributes and friends
+* Added achievement system
+* Added achievement screen
+* Change kms screen to interactive gun suicide
+* Fixed pong physics and added custom physics timescale for smoother gameplay
+* Fixed incorrect image dimensions
+* Added better minigame support to the developer console page
+* Made significant changes to pong game, including a new Pong class for better abstraction
+* Integrated all pages of the diary into the diary button available during gameplay
+* Restructed the game/images/ folder for better expandability in the future
+
+**17/01/2018**
+* Added icons to quests and achievements
+* Restructured audio and image directories to make it easier to classify images
+* Now uses loadImage(...) and loadAudio(...) to load assets in
+
+**19/01/2018**
+* Overhauled the inventory screen by adding hovering tooltips, and statistics screen
+* Added statistics screen to the quest and achievements pages
+* Made significant overhaul to the popup system, including adding a PopUp class
+* Popups now support icons, and have a better aesthetic
+* Added a logCache() function to show the status of the file caches
+* Added autosave function to the game

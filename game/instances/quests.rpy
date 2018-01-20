@@ -1,11 +1,12 @@
 init python:
-    quests = Quests(["title", "brief", "description", "dependencies"])
+    quests = Quests(["title", "brief", "description", "dependencies", "label"])
     # Test quests
     quests.addQuests({
         "serenaSlay": {
-            "title": "Slay Serena and acquire your pass into heaven",
+            "title": "Slay Serena and go to heaven",
             "brief": "Arthur is planning on slaying Serena",
             "description": "Once in heaven, Arthur will be able to slay several virgins, thereby satisfying his life goal of being a donkey",
+            "icon": loadImage("quest_serenaSlay.png"),
             "dependencies": None,
             "conditions": [
                 {
@@ -32,7 +33,7 @@ init python:
         },
         "sexuality": {
             "title": "Arthur's gay journey",
-            "brief": "Arthur is planning on going on an adventure",
+            "brief": "Arthur is going on an adventure",
             "description": "In order to acquire all 9 pokeballs, he must conquer Kevin Spacey",
             "dependencies": None,
             "conditions": {

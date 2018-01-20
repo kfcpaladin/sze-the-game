@@ -1,4 +1,5 @@
 label econ1:
+    $ autosave()
     scene bg economics
     "It's time for some economics 101 with Garth Chapman, and u are ready to absorb this {s}bullshit{/s} uh, i mean buitifool knowledges."
     "Like sponges Chappo tells us he expects us to just be able to vomit back out what he tells us"
@@ -17,7 +18,7 @@ label econ1:
     call dead
 
 label econ1kahoot1:
-    call kahootGame(question=kahoot["econ1"], time_range=10)
+    call kahootGame(kahoot["econ1"], time_range=10)
     if _choice is not None:
         if _points > 0:
             "You got the answer correct"

@@ -1,5 +1,12 @@
 python early:
     class MainCharacter(ADVCharacter):
+        """
+            self.attributes = all attributes
+            self.tutorials = all tutorial messages
+            self.introMessages = all intro messages for attributes
+            self.attributeMessages = all jokes for attributes
+            self.statMessages = all messages for statscreen
+        """
         def __init__(self, name, kind=None, **properties):
             ADVCharacter.__init__(self, name, kind=kind, **properties)
             self._default = {
@@ -9,6 +16,7 @@ python early:
                 },
                 "tutorialMessage": {
                     "show": False,
+                    "brief": None,
                     "msgGain": None,
                     "msgLoss": None,
                 },
@@ -19,22 +27,24 @@ python early:
                 "attributeMessage": [
                     {"min": 0, "msg": None},
                 ],
+                "statMessage": [
+                    {"min": 0, "msg": None},
+                ]
             }
             self.setAttributes(self._default["attributes"])
 
-        ## Update character attributes and generate default tutorial
+        
+        """
+            setAttributes will initiliase character with a set of attributes, which
+            can have messages programmed accordingly for them
+            setAttributes({
+                "strength": 0,
+                "penisLength": -2, etc
+            })
+
+        """
         def setAttributes(self, attributes):
-            """
-                attributes = {
-                    "strength": 0, etc
-                }
-
-                Attributes stored in the dictionary will be put into an array, then the
-                values will be stored into the object's attributes 
-                self.attributes = [strength, etc]
-                self.strength = 0, self.intellect = 0, etc etc
-
-            """
+            
             self.attributes = []
             for attribute, value in attributes.iteritems():
                 setattr(self, attribute, value)
@@ -42,44 +52,66 @@ python early:
             self.setTutorials()
             self.setAttributeIntroMessages()
             self.setAttributeMessages()
+            self.setStatMessages()
 
+        """
+            // plays when attribute is initially changed, and then disabled
+            // saves to self.tutorials
+            setTutorials({
+                "strength": {
+                    "show": True,
+                    "brief": ...,
+                    "msgGain": ...,
+                    "msgLoss": ...,
+                }, etc
+            })
+
+            // message given when lose() or gain() an attribute
+            // saves to self.introMessages
+            setAttributeIntroMessages({
+                "strength": {
+                    "msgGain": "A message for gaining strength",
+                    "msgLoss": "A message for losing strength",
+                }, etc 
+            })
+
+            // status message for current attribute value
+            // saves to self.attributeMessages
+            setAttributeMessages({
+                "strength": [
+                    {"min": 10,  "msg": "You are stronger"},
+                    {"min": 0,   "msg": "You are average"},
+                    {"min": -10, "msg": "You are weaker"}
+                ], etc
+            })
+
+            // messages for stat screen
+            // saves to self.statMessages
+            setStatMessage({
+                "strength": [
+                    {"min": 10,  "msg": "You are stronger"},
+                    {"min": 0,   "msg": "You are average"},
+                    {"min": -10, "msg": "You are weaker"}
+                ], etc
+            })
+        """
         # Set the tutorial messages and status for character
         def setTutorials(self, tutorials={}):
-            """
-                tutorials = {
-                    "strength": {
-                        "show": True, 
-                        "msgGain": "Tutorial message for gaining",
-                        "msgLoss": "Tutorial message for losing",
-                    }, etc
-                }
-                An attribute is fetched from self.attributes, and used to read from
-                the tutorials dictionary. 
-                If there is an attribute in the tutorial which matches, set that as
-                the new tutorial message, otherwise default to an empty tutorial 
-                
-                Custom tutorial messages are stored in self.tutorials in the same format
-                displayed above
-            """
             self.tutorials = {}
             for attribute in self.attributes:
+                # if valid attribute in tutorials, add to list of tutorial messages
                 if attribute in tutorials:
                     self.tutorials[attribute] = tutorials[attribute]
+                    # fill in any missing components using the default tutorial message
+                    for key, defaultMessage in self._default["tutorialMessage"].iteritems():
+                        if key not in tutorials[attribute]:
+                            self.tutorials[attribute][key] = defaultMessage
+                # otherwise, add the default message
                 else:
                     self.tutorials[attribute] = self._default["tutorialMessage"]
 
-        ## Set initial message for the loss or gain of an attribute
+        # Set initial message for the loss or gain of an attribute
         def setAttributeIntroMessages(self, msgDict={}):
-            """
-                msgDict = {
-                    "strength": {
-                        "msgGain": "A message for gaining strength",
-                        "msgLoss": "A message for losing strength",
-                    }, etc etc
-                }
-                This is stored inside self.introMessages with the same syntax as
-                msgDict listed above
-            """
             self._checkDict(msgDict)
             self.introMessages = {}
             for attribute in self.attributes:
@@ -89,22 +121,8 @@ python early:
                     self.introMessages[attribute] = self._default["attributeIntroMessage"]
 
 
-        ## Set attribute status messages
+        # Set attribute status messages
         def setAttributeMessages(self, msgDict={}):
-            """ 
-                msgDict = {
-                    "strength": [
-                        {"min": 10,  "msg": "You are stronger"},
-                        {"min": 0,   "msg": "You are average"},
-                        {"min": -10, "msg": "You are weaker"}
-                    ], etc etc
-                }
-                When dictionary is passed into function, it autosorts it into
-                descending order based on the "min" attribute
-                If the attribute value does not exceed any of the values
-
-                self.attributeMessages matches the syntax of msgDict shown above
-            """
             self._checkDict(msgDict)
             self.attributeMessages = {}
             for attribute in self.attributes:
@@ -114,10 +132,23 @@ python early:
                 else:
                     self.attributeMessages[attribute] = self._default["attributeMessage"]
 
+        # Set attribute messages for statscreen
+        def setStatMessages(self, msgDict={}):
+            self._checkDict(msgDict)
+            self.statMessages = {}
+            for attribute in self.attributes:
+                if attribute in msgDict:
+                    sortedList = sorted(msgDict[attribute], key=lambda k: k["min"], reverse=True)
+                    self.statMessages[attribute] = sortedList
+                else:
+                    self.statMessages[attribute] = self._default["statMessage"]
+
         """
             Methods used during the parsing of the renpy scripts
+            loss = decrease attribute and give the appropriate message
+            gain = increase attribute and give the appropriate message
+            _changeAttribute = directly sets the attribute (Should not be used by writers)
         """
-
         # Lose n points for a specified attribute
         def loss(self, attribute, amount=1):
             self._changeAttribute(attribute, -amount)
@@ -139,6 +170,11 @@ python early:
 
         """
             Methods used by loss/gain functions
+            showTutorial = will deactivate tutorial message when called, and call sayTutorialMessage
+            sayTutorialMessage = will say the message
+            sayIntro = Gives intro to losing or gaining an attribute
+            sayStatus = Gives the joke for an attribute
+            getStatMessage = Gets the appropriate joke for statscreen
         """
         # Show a tutorial if true, then toggle off
         def showTutorial(self, attribute, msgType="msgLoss"):
@@ -150,7 +186,13 @@ python early:
         # Always says the tutorial message when called
         def sayTutorialMessage(self, attribute, msgType="msgLoss"):
             self._checkAttribute(attribute)
-            message = self.tutorials[attribute][msgType]
+            message = ""
+            if self.tutorials[attribute]["brief"]:
+                message += self.tutorials[attribute]["brief"]
+                # connect sentences together
+                if message[-1] != ".":
+                    message += ". "
+            message += self.tutorials[attribute][msgType]
             self._say(message)
 
         # For an attribute, display the intro message
@@ -172,6 +214,38 @@ python early:
             else:
                 message = msgList[-1]["msg"]
             self._say(message)
+
+        # For an attribute, display the status message    
+        def getStatMessage(self, attribute):
+            self._checkAttribute(attribute)
+            msgList = self.statMessages[attribute]
+            attributeValue = getattr(self, attribute)
+            message = None
+            for msgEntry in msgList:
+                if attributeValue >= msgEntry["min"]:
+                    message = msgEntry["msg"]
+                    break
+            else:
+                message = msgList[-1]["msg"]
+            if message is None:
+                message = "You have a {0} of {1}".format(attribute, attributeValue)
+            return message
+
+        # Get tutorial message
+        def getTutorialMessage(self, attribute, msgType="brief"):
+            self._checkAttribute(attribute)
+            message = self.tutorials[attribute][msgType]
+            if message is None:
+                message = "No tutorial"
+            return message
+
+        
+        """
+            Validation functions used to check if parameters are correct
+            _checkAttribute = checks if attribute is part of base attributes
+            _checkDict = checks if a msgDict is a dictionary of something else
+            _say = wraps message into a list before calling each one sequentially
+        """
 
         # validate attribute is valid
         def _checkAttribute(self, attribute):  

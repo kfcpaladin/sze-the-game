@@ -8,7 +8,7 @@
 ## appropriate.
 
 init -1 python hide:
-    # config.developer = True
+    config.developer = True
 
     ## These control the width and height of the screen.
     config.screen_width = 1366
@@ -67,7 +67,7 @@ init -1 python hide:
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "Fort_Street_High_School_Memorial_Hall.JPG",
+        mm_root = loadImage("bg_memorial_hall.png"),
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
@@ -323,4 +323,9 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+<<<<<<< HEAD
     
+=======
+    config.mouse = { 'default' : [ (loadImage("icon_cursor.png"), 0, 0)] }
+    
+>>>>>>> 27abbd6fae73bd5688b8789cf9d26bf8ec927158

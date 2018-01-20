@@ -1,21 +1,9 @@
-###########################################################################
-# Developer console
-
-screen developerScreen:
-    modal True # prevent interaction underneath
-    add loadImage("screen_bg_diaryNormal.png")
-    use diary_nav
-    use diary_title("Developer Menu")
-    # use developer consoles
-    use label_screen
-    use label_screen_description
-    use sound_screen
-    use time_screen
-    use minigames_screen
-    use screen_console
-
 # Labels explorer menu
-screen label_screen:
+screen label_screen(labels=labels):
+    default labelConfig = AttrDict({
+        "labels": labels,
+        "currentDescription": None,
+    })
     vbox:
         style "label_screen"
         frame:
@@ -30,11 +18,12 @@ screen label_screen:
                     spacing 10
                     style "label_screen_vpgrid"
                     for label in labels:
-                        use label_screen_entry(label)
+                        use label_screen_entry(labelConfig, label)
                 vbar value YScrollValue(_vpgrid_name)
+    use label_screen_description(labelConfig.currentDescription)
 
 # entry for labels menu
-screen label_screen_entry(label):
+screen label_screen_entry(labelConfig, label):
     default defaultColour = colour.green
     default showDescription = False
     $ colour = defaultColour
@@ -67,7 +56,7 @@ screen label_screen_entry(label):
                     ]
                 textbutton "Show description":
                     action [
-                        Show("label_screen_description", label=label)
+                        Function(labelConfig.update, currentDescription=label)
                     ]
 
 # screen for unsafe jump
@@ -99,7 +88,7 @@ screen label_screen_unsafe(label, timeout=5):
                     ]
 
 # description
-screen label_screen_description(label=None):
+screen label_screen_description(label):
     default options = ["jump", "call"]
     vbox:
         style "label_screen_description"

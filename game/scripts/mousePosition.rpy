@@ -5,4 +5,4 @@ init python:
         xScale = 1300/float(realWidth)
         yScale = 700/float(realHeight)
         x, y = pygame.mouse.get_pos()
-        return (x*xScale, y*yScale)
+        return Vector(x*xScale, y*yScale)

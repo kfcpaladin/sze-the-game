@@ -1,68 +1,62 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/6.0 recess.rpy", line 377, in script
-    call screen kms
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/common/00action_menu.rpy", line 141, in __call__
-    renpy.jump_out_of_context(self.label)
-JumpOutException: deadrestart
+  File "game/story/script.rpy", line 34, in script
+    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
+  File "game/screens/screen_developer.rpy", line 4, in execute
+    screen developerScreen:
+  File "game/screens/screen_developer.rpy", line 4, in execute
+    screen developerScreen:
+  File "game/screens/screen_developer.rpy", line 11, in execute
+    use label_screen_description
+Exception: Required parameter label has no value.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
-    renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 499, in main
-    run(restart)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 147, in run
-    renpy.execution.run_context(True)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/execution.py", line 795, in run_context
-    context.run()
-  File "game/story/Day 1/6.0 recess.rpy", line 377, in script
-    call screen kms
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1774, in execute
-    self.call("execute")
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 1762, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/statements.py", line 163, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 485, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 2612, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "game/story/script.rpy", line 34, in script
+    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 3237, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 156, in event
-    return self.transitions[-1].event(ev, x, y, st)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/transition.py", line 45, in event
-    return self.new_widget.event(ev, x, y, st)  # E1101
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 653, in event
-    rv = self.child.event(ev, x, y, st)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 1977, in event
-    return run(self.function, *self.args, **self.kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 299, in run
-    new_rv = run(i, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/behavior.py", line 306, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_menu.rpy", line 141, in __call__
-    renpy.jump_out_of_context(self.label)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1619, in jump_out_of_context
-    raise renpy.game.JumpOutException(label)
-JumpOutException: deadrestart
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/screen_developer.rpy", line 4, in execute
+    screen developerScreen:
+  File "game/screens/screen_developer.rpy", line 4, in execute
+    screen developerScreen:
+  File "game/screens/screen_developer.rpy", line 11, in execute
+    use label_screen_description
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
+    raise Exception("Required parameter %s has no value." % name)
+Exception: Required parameter label has no value.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

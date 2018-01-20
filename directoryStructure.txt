@@ -195,8 +195,6 @@
 │   │   ├── achievements.rpyc
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
-│   │   ├── diary.rpy
-│   │   ├── diary.rpyc
 │   │   ├── friends.rpy
 │   │   ├── friends.rpyc
 │   │   ├── game.rpy
@@ -215,7 +213,8 @@
 │   │   ├── kahoot
 │   │   │   ├── kahootQuestions.rpy
 │   │   │   ├── kahootQuestions.rpyc
-│   │   │   └── screen_kahootscreen.rpy
+│   │   │   ├── screen_kahootscreen.rpy
+│   │   │   └── screen_kahootscreen.rpyc
 │   │   └── pong
 │   │       ├── Ball.rpy
 │   │       ├── Ball.rpyc
@@ -228,6 +227,7 @@
 │   │       ├── Pong.rpy
 │   │       ├── Pong.rpyc
 │   │       ├── screen_pong.rpy
+│   │       ├── screen_pong.rpyc
 │   │       ├── Vector.rpy
 │   │       └── Vector.rpyc
 │   ├── saves
@@ -237,31 +237,55 @@
 │   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
 │   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
 │   ├── screens
 │   │   ├── screen_achievement.rpy
+│   │   ├── screen_achievement.rpyc
 │   │   ├── screen_attribute.rpy
+│   │   ├── screen_attribute.rpyc
 │   │   ├── screen_bag.rpy
+│   │   ├── screen_bag.rpyc
 │   │   ├── screen_barGraph.rpy
+│   │   ├── screen_barGraph.rpyc
 │   │   ├── screen_default.rpy
+│   │   ├── screen_default.rpyc
 │   │   ├── screen_developer.rpy
+│   │   ├── screen_developer.rpyc
 │   │   ├── screen_diary.rpy
+│   │   ├── screen_diary.rpyc
+│   │   ├── screen_float_menu.rpy
 │   │   ├── screen_fortmap.rpy
+│   │   ├── screen_fortmap.rpyc
 │   │   ├── screen_friend.rpy
+│   │   ├── screen_friend.rpyc
 │   │   ├── screen_game_loop.rpy
+│   │   ├── screen_game_loop.rpyc
 │   │   ├── screen_kms.rpy
+│   │   ├── screen_kms.rpyc
 │   │   ├── screen_popup.rpy
+│   │   ├── screen_popup.rpyc
 │   │   ├── screen_quests.rpy
+│   │   ├── screen_quests.rpyc
 │   │   ├── screen_quickmenu.rpy
+│   │   ├── screen_quickmenu.rpyc
 │   │   ├── screen_roadmap.rpy
-│   │   └── screen_szeclicker.rpy
+│   │   ├── screen_roadmap.rpyc
+│   │   ├── screen_szeclicker.rpy
+│   │   └── screen_szeclicker.rpyc
 │   ├── scripts
+│   │   ├── AttrDict.rpy
+│   │   ├── AttrDict.rpyc
 │   │   ├── autosave.rpy
 │   │   ├── autosave.rpyc
-│   │   ├── colours.rpy
-│   │   ├── colours.rpyc
+│   │   ├── Colours.rpy
+│   │   ├── Colours.rpyc
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
 │   │   ├── labels
@@ -1564,4 +1588,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1455 files
+109 directories, 1479 files

@@ -7,7 +7,6 @@
 #     }, etc
 # ]
 screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-    default maxMessages = 5
     timer speed:
         repeat True
         action If(
@@ -24,7 +23,7 @@ screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
         yoffset pos.y
         ymaximum 600
         # go through all popups
-        for popup in sorted(popups.popupList, key = lambda k: k["time_remain"], reverse=True):
+        for popup in reversed(popups.popupList):
             # get transparency number
             $ time_remain = popup["time_remain"]
             $ transparency = int(255*time_remain)

@@ -1,6 +1,7 @@
 init -1 python:
     class CustomColour:
         def __init__(self):
+            self.clear = "#ffffff00"
             self.blue = "#333cff"
             self.green = "#009933"
             self.grey = "#b6b3b3"
@@ -12,8 +13,11 @@ init -1 python:
             self.black = self.rgb(0, 0, 0)
             self.white = self.rgb(255, 255, 255)
 
-        def addRgb(self, name, red, green, blue):
-            setattr(self, name, self.rgb(red, green, blue))
+        def addRgb(self, name, red, green, blue, alpha=255):
+            hexCode = self.rgb(red, green, blue)
+            if alpha != 255:
+                hexCode += "{:02x}".format(alpha)
+            setattr(self, name, hexCode)
 
         def rgb(self, red, green, blue):
             red = self.constrainRGB(red)

@@ -1,40 +1,60 @@
-screen achievementscreen(achievements=achievements):
-    modal True
-    add loadImage("screen_bg_diaryNormal.png")
-    use diary_nav
-    use diary_title("Achievements")
-    # Create hbox to select achivement type to display
-    default currentAchieveType = achievements.currentAchieveType
+# Achievement screen entry point and config
+screen achieve_screen(achievements):
+    default achieveConfig = AttrDict({
+        "achievements": achievements, 
+        "achieveColour": AttrDict({
+            "hidden":       colour.red,
+            "available":    colour.yellow,
+            "completed":    colour.green,
+        }),
+        "selectBox": AttrDict({
+            "pos": Vector(720, 45),
+            "size": Vector(625, 40),
+        }),
+        "infoBox": AttrDict({
+            "pos": Vector(720, 95),
+            "size": Vector(625, 415),
+            "labels": ("title", "brief"),
+        }),
+        "descriptionBox": AttrDict({
+            "pos": Vector(720, 95+470),
+            "size": Vector(625, 100),
+            "labels": ("description", "dependencies"),
+        }),
+        "achieveType": achievements.currentAchieveType,
+        "currentDescription": None,
+    })
+    use achieve_select(achieveConfig, achieveConfig.selectBox.pos, achieveConfig.selectBox.size)
+    use achieve_info(achieveConfig, achieveConfig.infoBox.pos, achieveConfig.infoBox.size)
+    use achieve_description(achieveConfig, achieveConfig.descriptionBox.pos, achieveConfig.descriptionBox.size)
+
+# Achievement select
+screen achieve_select(achieveConfig, pos, size):
     hbox:
-        style "achieve_select"
+        xoffset pos.x
+        yoffset pos.y
         frame:
+            xsize size.x
+            ysize size.y
             has hbox
-            for achieveType in achievements.displayableAchieveTypes:
+            for achieveType in achieveConfig.achievements.displayableAchieveTypes:
                 textbutton unicode.title(achieveType):
                     action [
-                        SetScreenVariable("currentAchieveType", achieveType),
-                        Hide("achieve_description"),
+                        Function(achieveConfig.update, achieveType=achieveType, currentDescription=None),
                     ]
-    use attribute_info(sze)
-    use achieve_info(currentAchieveType, achievements)
+
 
 # Achievement info
-screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(625, 415)):
-    default achieveColour = {
-        "hidden":       colour.red,
-        "available":    colour.yellow,
-        "completed":    colour.green,
-    }
+screen achieve_info(achieveConfig, pos, size):
     # changes dynamically
-    $ currentAchievements = getattr(achievements, achieveType)
-    $ colour = achieveColour[achieveType]
-    # default description box
-    use achieve_description(pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
+    $ achieveType = achieveConfig.achieveType
+    $ currentAchievements = getattr(achieveConfig.achievements, achieveType)
+    $ colour = achieveConfig.achieveColour[achieveType]
     vbox:
         xoffset pos.x
         yoffset pos.y
         xsize size.x
-        frame:       
+        frame:      
             has vbox    
             text "{b}" + "{0} achievements".format(unicode.title(achieveType)) + "{/b}"
             if currentAchievements:
@@ -50,18 +70,17 @@ screen achieve_info(achieveType, achievements, pos=Vector(720, 95), size=Vector(
                         ysize size.y
                         # Show each quest in the dictionary
                         for achieveID, achievement in currentAchievements.iteritems():
-                            use achieve_entry(achieveID, achievement, colour, pos, size)
+                            use achieve_entry(achieveConfig, achieveID, achievement, colour, size.x)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No achievements are currently {0}".format(achieveType)
 
 # Achievement entry
-screen achieve_entry(achieveID, achievement, colour, pos, size):
-    default achieveInfo = ["title", "brief"]
+screen achieve_entry(achieveConfig, achieveID, achievement, colour, width):
     default iconSize = 105
     frame:
         style "achieve_entry"
-        xsize size.x-25
+        xsize width-25
         background Solid(colour)
         hbox:
             spacing 5
@@ -70,7 +89,7 @@ screen achieve_entry(achieveID, achievement, colour, pos, size):
             vbox:
                 # acheivement info
                 text "{b}" + "Achievement: {0}".format(achieveID) + "{/b}"
-                for option in achieveInfo:
+                for option in achieveConfig.infoBox.labels:
                     $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
                     if not achievement[option]:
                         $ msg += "None"
@@ -82,13 +101,12 @@ screen achieve_entry(achieveID, achievement, colour, pos, size):
                     spacing 5
                     textbutton "Show description":
                         action [
-                            Hide("achieve_description"),    # prevent old screen from covering new one
-                            Show("achieve_description", achievement=achievement, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
+                            Function(achieveConfig.update, currentDescription=achievement)
                         ]
 
 # Longer description of achievement
-screen achieve_description(achievement=None, pos, size):
-    default achieveInfo = ["description", "dependencies"]
+screen achieve_description(achieveConfig, pos, size):
+    $ achievement = achieveConfig.currentDescription
     vbox:
         xoffset pos.x
         yoffset pos.y
@@ -97,7 +115,7 @@ screen achieve_description(achievement=None, pos, size):
             ymaximum size.y
             has vbox    
             if achievement:
-                for option in achieveInfo:
+                for option in achieveConfig.descriptionBox.labels:
                     text "{b}" + "{0}".format(unicode.title(option)) + "{/b}"
                     if achievement[option]:
                         text listToText(achievement[option])
@@ -110,9 +128,3 @@ screen achieve_description(achievement=None, pos, size):
 ##############################################
 style achieve_entry:  
     ysize 40
-
-style achieve_select:
-    xmaximum 625
-    xoffset 700
-    ysize 20
-    yoffset 45

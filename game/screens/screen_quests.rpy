@@ -1,38 +1,54 @@
-##############################################
-screen questscreen(quests=quests):
-    modal True
-    add loadImage("screen_bg_diaryNormal.png")
-    use diary_nav
-    use diary_title("Quests")
-    # Create hbox to select quest type to display
-    default currentQuestType = quests.currentQuestType
+# make a quest list
+screen quest_screen(quests, customConfig={}):
+    default questConfig = AttrDict({
+        "quests": quests,
+        "colour": AttrDict({
+            "unavailable":  colour.red,
+            "available":    colour.yellow,
+            "completed":    colour.green,
+        }),
+        "selectBox": AttrDict({
+            "pos": Vector(720, 45),
+            "size": Vector(625, 40),
+        }),
+        "infoBox": AttrDict({
+            "pos": Vector(720, 95),
+            "size": Vector(625, 415),
+            "labels": ("title", "brief"),
+        }),
+        "descriptionBox": AttrDict({
+            "pos": Vector(720, 95+470),
+            "size": Vector(625, 100),
+            "labels": ("description", "dependencies"),
+        }),
+        "questType": quests.currentQuestType,
+        "currentDescription": None,
+    }).combine(customConfig)
+
+    use quest_select(questConfig, questConfig.selectBox.pos, questConfig.selectBox.size)
+    use quest_info(questConfig, questConfig.infoBox.pos, questConfig.infoBox.size)
+    use quest_description(questConfig, questConfig.descriptionBox.pos, questConfig.descriptionBox.size)
+
+screen quest_select(questConfig, pos, size):
     hbox:
-        style "quest_select"
+        xoffset pos.x
+        yoffset pos.y
         frame:
+            xsize size.x
+            ysize size.y
             has hbox
             for questType in quests.displayableQuestTypes:
                 textbutton unicode.title(questType):
                     action [
-                        SetScreenVariable("currentQuestType", questType),   
-                        Hide("quest_description")
+                        Function(questConfig.update, questType=questType, currentDescription=None),
                     ]
-    # Show panels
-    use attribute_info(sze)
-    use quest_info(currentQuestType, quests)
-    
 
 # Quest info
-screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 415)):
-    default questColour = {
-        "unavailable":  colour.red,
-        "available":    colour.yellow,
-        "completed":    colour.green,
-    }
+screen quest_info(questConfig, pos, size):
     # values that are expected to change must be kept track of
-    $ currentQuests = getattr(quests, questType)
-    $ colour = questColour[questType]
-    # default description
-    use quest_description(pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
+    $ questType = questConfig.questType
+    $ currentQuests = getattr(questConfig.quests, questType)
+    $ colour = questConfig.colour[questType]
     vbox:
         xoffset pos.x 
         yoffset pos.y
@@ -53,18 +69,17 @@ screen quest_info(questType, quests, pos=Vector(720, 95), size=Vector(625, 415))
                         ysize size.y
                         # Show each quest in the dictionary
                         for questID, quest in currentQuests.iteritems():
-                            use quest_entry(questID, quest, quests, colour, pos, size)
+                            use quest_entry(questConfig, questID, quest, colour, size.x-25)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No quests are currently {0}".format(questType)
 
 # Quest entry
-screen quest_entry(questID, quest, quests, colour, pos, size):
-    default questInfo = ["title", "brief"]
+screen quest_entry(questConfig, questID, quest, colour, width):
     default iconSize = 105
     frame:
         style "quest_entry"
-        xsize size.x-25
+        xsize width
         background Solid(colour)
         hbox:
             ysize iconSize
@@ -74,13 +89,8 @@ screen quest_entry(questID, quest, quests, colour, pos, size):
                 ysize iconSize
                 # quest info
                 text "{b}" + "Quest: {0}".format(questID) + "{/b}"
-                for option in questInfo:
-                    $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
-                    if not quest[option]:
-                        $ msg += "None"
-                    else:
-                        $ msg += quest[option] 
-                    text msg
+                for option in questConfig.infoBox.labels:
+                    text "{b}"+"{0}: ".format(unicode.title(option))+"{/b}"+"{0}".format(quest[option])
                 # interactive buttons
                 hbox:
                     spacing 5
@@ -92,13 +102,13 @@ screen quest_entry(questID, quest, quests, colour, pos, size):
                             ]
                     textbutton "Show description":
                         action [
-                            Show("quest_description", None, quest, pos=Vector(pos.x, pos.y+470), size=Vector(size.x, 100))
+                            Function(questConfig.update, currentDescription=quest)
                         ]
                     
 
 # Longer description
-screen quest_description(quest=None, pos, size):
-    default questInfo = ["description", "dependencies"]
+screen quest_description(questConfig, pos, size):
+    $ quest = questConfig.currentDescription
     vbox:
         xoffset pos.x
         yoffset pos.y
@@ -109,7 +119,7 @@ screen quest_description(quest=None, pos, size):
             ymaximum 200
             has vbox    # Give it the size of the vbox
             if quest:
-                for option in questInfo:
+                for option in questConfig.descriptionBox.labels:
                     text "{b}" + "{0}".format(unicode.title(option)) + "{/b}"
                     if quest[option]:
                         text listToText(quest[option])

@@ -62,19 +62,21 @@ python early:
         """
         def updateQuests(self):
             questsMadeAvailable = []
-            questUnlockMessages = []
             # unlock quest if dependencies and conditions are satisfied
             for questID, quest in self.unavailable.iteritems():
                 if self._checkQuestDependencies(quest["dependencies"]):
-                    self.available[questID] = self.unavailable[questID]
+                    quest = self.unavailable[questID]
+                    self.available[questID] = quest
                     questsMadeAvailable.append(questID)
-                    questUnlockMessages.append("Unlocked quest: {0}".format(questID))
+                    popup({
+                        "text": "Unlocked quest: {0}".format(questID),
+                        "icon": quest["icon"],
+                    })
             # Remove the quests that were made available from self.unavailable
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
-            if len(questUnlockMessages) > 0:
+            if len(questsMadeAvailable) > 0:
                 playsfx("xbox.ogg")
-                popup(questUnlockMessages)
 
         """
             unlockQuest = unlock a quest by id, and give popup

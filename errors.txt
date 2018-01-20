@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/classes/MainCharacter.rpy", line 192: expected an indented block
-                message += ". " + self.tutorials[attribute]["brief"]
-                       ^
-    
+File "game/screens/screen_attribute.rpy", line 32: expected '=' not found.
+    default attributeConfig.combine(customConfig)
+                           ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -1,63 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 34, in script
-    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
-  File "game/screens/screen_developer.rpy", line 4, in execute
-    screen developerScreen:
-  File "game/screens/screen_developer.rpy", line 4, in execute
-    screen developerScreen:
-  File "game/screens/screen_developer.rpy", line 11, in execute
-    use label_screen_description
-Exception: Required parameter label has no value.
+ScriptError: Name (u'/home/fiendchain/Downloads/sze-the-game/game/minigames/pong/pong.rpy', 1516436513, 0) is defined twice, at game/minigames/pong/pong.rpy:1 and game/minigames/pong/pong.rpy:1.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 34, in script
-    sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 910, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 746, in do_display
-    **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/screen_developer.rpy", line 4, in execute
-    screen developerScreen:
-  File "game/screens/screen_developer.rpy", line 4, in execute
-    screen developerScreen:
-  File "game/screens/screen_developer.rpy", line 11, in execute
-    use label_screen_description
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 119, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter label has no value.
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/main.py", line 365, in main
+    renpy.game.script.load_script()  # sets renpy.game.script.
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 265, in load_script
+    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 756, in load_appropriate_file
+    self.finish_load(stmts, initcode, filename=lastfn)
+  File "/home/fiendchain/Downloads/sze-the-game/renpy/script.py", line 422, in finish_load
+    bad_node.filename, bad_node.linenumber))
+ScriptError: Name (u'/home/fiendchain/Downloads/sze-the-game/game/minigames/pong/pong.rpy', 1516436513, 0) is defined twice, at game/minigames/pong/pong.rpy:1 and game/minigames/pong/pong.rpy:1.
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
-sze-the game 0.0
+ 

@@ -7,7 +7,9 @@ init -1 python:
     }
     audioCache = {}
     musicHistory = []
-
+    # travis autotest testing
+    import os
+    print os.getcwd()
     scanDirectory(audioDir, audioCache) # located in scripts/scanDirectory.rpy
 
     """

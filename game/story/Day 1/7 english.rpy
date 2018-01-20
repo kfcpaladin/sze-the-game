@@ -362,7 +362,6 @@ label english1top:
         "Steven":
             sze "\"Hi Steven\""
             dng "\"Hey Arthur\""
-<<<<<<< HEAD
             sze "I have sucessfully navigated the treacherous waters of social conduct"
             sze "Surely I deserve to have an extra charisma point?"
             "Does sze deserve an extra charm point for remembering an acquaintance's name?"
@@ -535,10 +534,5 @@ label english1top:
     roy "\"ROY\""
 #   slm "\"stfu Boy\""
     "Schlam appears to be a somewhat aged, short, slightly round, Caucasian woman; a benign, humoured individual."
-=======
-        "Stevo":
-            sze "\"G'day Stevo\""
-            dng "\"lmao when did you get so ozzie?\""
->>>>>>> 27abbd6fae73bd5688b8789cf9d26bf8ec927158
     sze "\"Bullshittery at its finest\""
     jump mthext1day1

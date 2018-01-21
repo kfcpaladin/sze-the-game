@@ -39,6 +39,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [ADVCharacter](./renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
 | [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
 | [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
+| -------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
 | [Diary](./game/classes/Diary.rpy)                  | Class used to store and manage all diary pages                                    |
 | [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
@@ -46,6 +47,11 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
 | [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
 | [PopUp](./game/classes/PopUp.rpy)                  | Stores all popups, and manages their lifetime                                     |
+| -------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [AttrDict](./game/classes/AttrDict.rpy)            | Used as a wrapped for the python dict, allowing for access like JSON object       |
+| [CodeSequence](./game/classes/CodeSequence.rpy)    | Used for easter eggs, where things can be unlocked using a code sequence          |
+| [Colours](./game/classes/Colours.rpy)              | Allow for making of hex code colours using RGB, and a selection of default colours|
+| [Vector](./game/classes/Vector.rpy)                | Used by pong, and various game screens, for position and sizes of objects         |
 
 ### Instances
 
@@ -147,24 +153,26 @@ For special effect sounds, use **playsfx()** to play a short audio clip and **st
 
 ## Multiple screens
 
-| Screen name                                     | Description                                                               |
-| ----------------------------------------------- | ------------------------------------------------------------------------- |
-| [default](./game/screens/default.rpy)           | Has the default screens used for the menu                                 |
-| [achievementscreen](./game/screens/achievementscreen.rpy) | Used to display all achievements                                |
-| [bag](./game/screens/bag.rpy)                   | Used for the bag inventory, and used the diary grid                       |
-| [countdown](./game/screens/countdown.rpy)       | Kahoot uses this for the countdown, questions and answers                 |
-| [default](./game/screens/default.rpy)           | The default configuration file for all renpy menus (*customizable*)       |
-| [developer](./game/screens/developer.rpy)       | Houses the developer page which allows access to all labels, times and minigames |
-| [diary](./game/screens/diary.rpy)               | Used for the index of the diary                                           |
-| [fortmap](./game/screens/fortmap.rpy)           | Has a map of the school used to navigate to different locations           |
-| [gameLoop](./game/screens/gameLoop.rpy)         | Updates every few seconds, and calls the gameLoop function                |
-| [kms](./game/screens/kms.rpy)                   | Arthur uses this to kill himself                                          |
-| [popup](./game/screens/popup.rpy)               | Will display a popup message/s, useful for achievements and quest unlocks |
-| [questscreen](./game/screens/questscreen.rpy)   | Shows the available and completed quests, and allows user to start quests |
-| [quickmenu](./game/screens/quickmenu.rpy)       | Configures the bottom menu that is present during normal interaction      |
-| [roadmap](./game/screens/roadmap.rpy)           | Will be used to display a graph of choices made by the user               |
-| [statscreen](./game/screens/statscreen.rpy)     | Shows the status you have with your friends, and your statistics          |
-| [szeclicker.rpy](./game/screens/szeclicker.rpy) | *A cookie clicker minigame?*                                              |
+| Screen name                                                   | Description                                                                       |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [screen_achievement](./game/screens/screen_achievement.rpy)   | Used to display all achievements                                                  |
+| [screen_bag](./game/screens/screen_bag.rpy)                   | Used for the bag inventory                                                        |
+| [screen_barGraph](./game/screens/screen_barGraph.rpy)         | A frame containing a bar graph, used by all statistics screens                    |
+| [screen_default](./game/screens/screen_default.rpy)           | The default configuration file for all renpy menus (*customizable*)               |
+| [screen_developer](./game/screens/screen_developer.rpy)       | Houses the developer page which allows access to all labels, times and minigames  |
+| [screen_diary](./game/screens/screen_diary.rpy)               | Contains all diary screens, and selects most recent diary screen                  |
+| [screen_float_menu](./game/screens/screen_float_menu.rpy)     | A menu that is present to access the diary and suicide screen                     |
+| [screen_fortmap](./game/screens/screen_fortmap.rpy)           | Has a map of the school used to navigate to different locations                   |
+| [screen_game_loop](./game/screens/screen_game_loop.rpy)       | Updates every few seconds, and calls the gameLoop function                        |
+| [screen_kms](./game/screens/screen_kms.rpy)                   | Arthur uses this to kill himself                                                  |
+| [screen_popup](./game/screens/screen_popup.rpy)               | Will display a popup message/s, useful for achievements and quest unlocks         |
+| [screen_quests](./game/screens/screen_quests.rpy)             | Shows the available and completed quests, and allows user to start quests         |
+| [screen_quickmenu](./game/screens/screen_quickmenu.rpy)       | Configures the bottom menu that is present during normal interaction              |
+| [screen_roadmap](./game/screens/screen_roadmap.rpy)           | Will be used to display a graph of choices made by the user                       |
+| [screen_szeclicker.rpy](./game/screens/screen_szeclicker.rpy) | *A cookie clicker minigame?*                                                      |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [screen_pong](./game/minigames/pong/screen_pong.rpy)          | Main screen used for the pong minigame                                            |
+| [screen_kahoot](./game/minigames/kahoot/screen_kahoot.rpy)    | Main screen used for the kahoot minigame (*in development*)                       |
 
 *Note*: For more information about the structure and implementation of screens, check out [**game/screens/**](./game/screens)
 

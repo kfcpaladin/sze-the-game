@@ -24,7 +24,7 @@ label kahootGame(kahoot, **options):
         "Start Kahoot?":
             $ _previousMusic = getMusicHistory(-1)
             $ playmusic("kahoot.ogg")
-            call screen kahootscreen(question=kahoot["question"], answers=kahoot["answers"], **options)
+            call screen screen_kahoot(question=kahoot["question"], answers=kahoot["answers"], **options)
             $ stopmusic()
             $ _points = _return["points"]
             $ _time_remain = _return["time_remain"]
@@ -46,7 +46,7 @@ label kahootGame(kahoot, **options):
             return
 
 # handles all screen elements
-screen kahootscreen(question="No question?", answers={}, time_range=10,speed=0.25):
+screen screen_kahoot(question="No question?", answers={}, time_range=10,speed=0.25):
     modal True
     default time_remain = time_range
     timer speed:

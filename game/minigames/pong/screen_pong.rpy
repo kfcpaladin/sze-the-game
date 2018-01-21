@@ -8,7 +8,7 @@ label playPong(pong=pong):
         "Play pong":
             $ _previousMusic = getMusicHistory(-1)
             $ playmusic("VarienThroneOfRavens.ogg")
-            call screen pong(pong)
+            call screen screen_pong(pong)
             $ stopmusic()
             $ _score = _return["score"]
             $ _surrender = _return["surrender"]
@@ -40,7 +40,7 @@ label playPong(pong=pong):
             return
 
 # run the pong game
-screen pong(pong, fps=70, tickrate=50, duration=30):
+screen screen_pong(pong, fps=70, tickrate=50, duration=30):
     modal True
     add loadImage("screen_bg_pong.png")
     # default variables

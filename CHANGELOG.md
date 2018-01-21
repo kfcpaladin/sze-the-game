@@ -65,3 +65,8 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Popups now support icons, and have a better aesthetic
 * Added a logCache() function to show the status of the file caches
 * Added autosave function to the game
+
+**22/01/2018**
+* Fixed path issues regarding windows and os.sep = "\\" instead of "/"
+* Move extraneous classes to game/classes including Vector.rpy, AttrDict.rpy, CodeSequence.rpy, Colours.rpy
+* Added developer unlock code, which is "godmode"

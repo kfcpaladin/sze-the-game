@@ -34,7 +34,7 @@ screen kmsGun:
         xoffset 600
         yoffset 300
         action [
-            Hide("gameLoop"), # disable popups
+            Hide("screen_game_loop"), # disable popups
             Hide("kmsGun", Fade(2.5,0.0,1.0)),
             Show("deathFade"),
             Function(playsfx, "gunSound.ogg"),
@@ -54,7 +54,7 @@ screen kmsHanging:
         xoffset 200
         yoffset 200
         action [
-            Hide("gameLoop"),
+            Hide("screen_game_loop"),
             Hide("kmsHanging", Fade(2.5,0.0,1.0)),
             Show("deathFade"),
             Function(playsfx, "vpunch.ogg"),

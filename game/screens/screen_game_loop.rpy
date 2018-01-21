@@ -1,5 +1,5 @@
 # Game loop for updating things 
-screen gameLoop(speed=0.5):
+screen screen_game_loop(speed=0.5):
     timer speed:
         repeat True
         action [

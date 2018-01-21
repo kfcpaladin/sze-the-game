@@ -41,7 +41,6 @@ python early:
             })
         """
         def addAchievements(self, achievements):
-            
             if type(achievements) is not dict:
                 raise TypeError("Expected dict for achievements, not {0}".format(type(achievements)))
             for achieveID, achievement in achievements.iteritems():
@@ -60,22 +59,22 @@ python early:
             cause some performance drops
         """
         def updateAchievements(self):
-            achieveMadeAvailable = []
-            achieveUnlockMessages = []
-            unlockableTypes = ["hidden", "available"]
+            achieveUnlocked = False
+            # iterate through unlockable options
+            unlockableTypes = ("hidden", "available")
             for achieveType in unlockableTypes:
                 achievements = getattr(self, achieveType)
-                unlockedAchievements = self.checkAchievements(achievements)
-                achieveMadeAvailable.extend(unlockedAchievements)
-            for achieveID in achieveMadeAvailable:
-                achieveUnlockMessages.append("Unlocked achievement: {0}".format(achieveID))
-            if len(achieveUnlockMessages) > 0:
+                # check achievement type
+                if self.checkAchievements(achievements):
+                    achieveUnlocked = True
+            # play unlock sound if achievements were unlock
+            if achieveUnlocked:
                 playsfx("xbox.ogg")
-                popup(achieveUnlockMessages)
+                
 
         """
             unlockAchievement = unlock achievement using id code
-            checkAchievements = check all achievements and complete if conditions are satisfied
+            checkAchievements = check all achievements and complete if conditions are satisfied, and give popups
             describe = print formatted list of all achievements
         """
         def unlockAchievement(self, achieveID):
@@ -92,16 +91,24 @@ python early:
                     })
 
         def checkAchievements(self, achievements):
-            achieveMadeAvailable = []
+            unlockedAchievements = []
             for achieveID, achievement in achievements.iteritems():
                 if(self._checkAchieveDependencies(achievement["dependencies"]) and
                    self._checkAchieveCondition(achievement["conditions"])):
                     self.completed[achieveID] = achievement
-                    achieveMadeAvailable.append(achieveID)
+                    popup({
+                        "text": "Unlocked achievement\n {0}".format(achieveID),
+                        "icon": achievement["icon"],
+                    })
+                    unlockedAchievements.append(achieveID)
             # remove unlocked achievements from hidden/available
-            for achieveID in achieveMadeAvailable: 
+            for achieveID in unlockedAchievements: 
                 achievements.pop(achieveID)
-            return achieveMadeAvailable
+            # true if achievements unlocked, else false
+            if len(unlockedAchievements) > 0:
+                return True
+            else:
+                return False
 
         def describe(self):
             for achieveType in self.achieveTypes:

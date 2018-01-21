@@ -61,11 +61,10 @@ screen popup_icon(icon, message, transparency, pos, size):
                 ysize size.y
                 # end bxo rendering
                 use popup_icon_frame(icon, size.y, size.y, transparency, loadImage("icon_default.png"))
-                hbox:
+                vbox:
                     xsize size.x-size.y-borderSize
                     ysize size.y
                     text message:
-                        xoffset -10 # visual effect for making it look more centered
                         xalign 0.5
                         yalign 0.5
             
@@ -87,7 +86,7 @@ screen popup_message(message, transparency, pos, size):
             ysize size.y-borderSize
             background Solid(colour.maroon+alphaCode)
             # end bxo rendering
-            hbox:
+            vbox:
                 xsize size.x-borderSize
                 ysize size.y-borderSize
                 text message:

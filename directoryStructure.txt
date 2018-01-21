@@ -205,6 +205,8 @@
 │   │   ├── achievements.rpyc
 │   │   ├── characterDefinition.rpy
 │   │   ├── characterDefinition.rpyc
+│   │   ├── diary.rpy
+│   │   ├── diary.rpyc
 │   │   ├── friends.rpy
 │   │   ├── friends.rpyc
 │   │   ├── game.rpy
@@ -223,8 +225,8 @@
 │   │   ├── kahoot
 │   │   │   ├── kahootQuestions.rpy
 │   │   │   ├── kahootQuestions.rpyc
-│   │   │   ├── screen_kahootscreen.rpy
-│   │   │   └── screen_kahootscreen.rpyc
+│   │   │   ├── screen_kahoot.rpy
+│   │   │   └── screen_kahoot.rpyc
 │   │   └── pong
 │   │       ├── Ball.rpy
 │   │       ├── Ball.rpyc
@@ -1593,4 +1595,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1484 files
+109 directories, 1486 files

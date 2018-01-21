@@ -64,6 +64,7 @@ init python:
             diary.screenNames.insert(0, "diary_developer")
         renpy.hide_screen("float_menu")
         renpy.show_screen("float_menu")
+        ui.remove(developerCode)
 
     developerCode = CodeSequence(
         sequence=[getattr(pygame, "K_{0}".format(char)) for char in "godmode"],

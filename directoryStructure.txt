@@ -54,6 +54,12 @@
 │   ├── classes
 │   │   ├── Achievement.rpy
 │   │   ├── Achievement.rpyc
+│   │   ├── AttrDict.rpy
+│   │   ├── AttrDict.rpyc
+│   │   ├── CodeSequence.rpy
+│   │   ├── CodeSequence.rpyc
+│   │   ├── Colours.rpy
+│   │   ├── Colours.rpyc
 │   │   ├── Diary.rpy
 │   │   ├── Diary.rpyc
 │   │   ├── Friend.rpy
@@ -69,7 +75,9 @@
 │   │   ├── PopUp.rpy
 │   │   ├── PopUp.rpyc
 │   │   ├── Quest.rpy
-│   │   └── Quest.rpyc
+│   │   ├── Quest.rpyc
+│   │   ├── Vector.rpy
+│   │   └── Vector.rpyc
 │   ├── images
 │   │   ├── achievementIcons
 │   │   │   ├── achievement_default.png
@@ -229,9 +237,7 @@
 │   │       ├── Pong.rpy
 │   │       ├── Pong.rpyc
 │   │       ├── screen_pong.rpy
-│   │       ├── screen_pong.rpyc
-│   │       ├── Vector.rpy
-│   │       └── Vector.rpyc
+│   │       └── screen_pong.rpyc
 │   ├── saves
 │   │   ├── 1-1-LT1.save
 │   │   ├── auto-10-LT1.save
@@ -283,12 +289,8 @@
 │   │   ├── screen_szeclicker.rpy
 │   │   └── screen_szeclicker.rpyc
 │   ├── scripts
-│   │   ├── AttrDict.rpy
-│   │   ├── AttrDict.rpyc
 │   │   ├── autosave.rpy
 │   │   ├── autosave.rpyc
-│   │   ├── Colours.rpy
-│   │   ├── Colours.rpyc
 │   │   ├── easterEggs.rpy
 │   │   ├── easterEggs.rpyc
 │   │   ├── labels
@@ -1591,4 +1593,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1482 files
+109 directories, 1484 files

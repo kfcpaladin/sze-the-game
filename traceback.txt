@@ -1,25 +1,37 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/instances/game.rpy", line 1, in script
-    init -10 python:
-  File "game/instances/game.rpy", line 2, in <module>
-    game = Game({
-NameError: name 'Game' is not defined
+  File "game/story/Day 1/5.0 assembly.rpy", line 191, in script
+    $ playmusic("EscortsGaudeamusDooWop.ogg", loop=True)
+  File "game/story/Day 1/5.0 assembly.rpy", line 191, in <module>
+    $ playmusic("EscortsGaudeamusDooWop.ogg", loop=True)
+  File "game/audio/sound.rpy", line 19, in playmusic
+    if not checkIfDefaultAudio(filename):
+  File "game/audio/sound.rpy", line 39, in checkIfDefaultAudio
+    filepath = loadAudio(filename)
+  File "game/audio/sound.rpy", line 72, in loadAudio
+    raise IOError(errorString.format(audioDir["default"], filename))
+IOError: Could not load default: audio_default.ogg, for missing file EscortsGaudeamusDooWop.ogg
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/instances/game.rpy", line 1, in script
-    init -10 python:
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/ast.py", line 826, in execute
+  File "game/story/Day 1/5.0 assembly.rpy", line 191, in script
+    $ playmusic("EscortsGaudeamusDooWop.ogg", loop=True)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game/renpy/python.py", line 1764, in py_exec_bytecode
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/instances/game.rpy", line 2, in <module>
-    game = Game({
-NameError: name 'Game' is not defined
+  File "game/story/Day 1/5.0 assembly.rpy", line 191, in <module>
+    $ playmusic("EscortsGaudeamusDooWop.ogg", loop=True)
+  File "game/audio/sound.rpy", line 19, in playmusic
+    if not checkIfDefaultAudio(filename):
+  File "game/audio/sound.rpy", line 39, in checkIfDefaultAudio
+    filepath = loadAudio(filename)
+  File "game/audio/sound.rpy", line 72, in loadAudio
+    raise IOError(errorString.format(audioDir["default"], filename))
+IOError: Could not load default: audio_default.ogg, for missing file EscortsGaudeamusDooWop.ogg
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
- 
+sze-the game 0.0

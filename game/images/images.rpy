@@ -15,19 +15,18 @@ init -1 python:
 
     import os.path
     def loadImage(filename):
+        # None filenames are allowed
         if filename is None:
             return None
+        # try get image
         if filename in imageCache:
             return imageCache[filename]
-        for folder in imageDir["subfolders"]:
-            filepath = "{0}/{1}/{2}".format(imageDir["folder"], folder, filename)
-            if os.path.exists("game/{0}".format(filepath)):
-                imageCache[filename] = filepath
-                return filepath
-        filepath = "{0}/{1}".format(imageDir["folder"], imageDir["default"])
-        imageCache[filename] = filepath
-        return filepath
-
+        # try get default
+        try:
+            return imageCache[imageDir["default"]]
+        except KeyError:
+            errorString = "Could not load default: {0}, for missing file {1}"
+            raise IOError(errorString.format(imageDir["default"], filename))
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"

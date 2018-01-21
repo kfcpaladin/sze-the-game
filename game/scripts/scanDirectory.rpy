@@ -16,11 +16,18 @@ init -2 python:
     """
     def scanDirectory(config, cache, gameDir="game"):
         directory = os.path.join(gameDir, config["folder"])
-        for subfolder in os.listdir(directory):
-            subfolderPath = os.path.join(directory, subfolder)
-            if os.path.isdir(subfolderPath):
-                config["subfolders"].append(subfolder)
-                scanSubFolder(subfolderPath, cache, gameDir)
+        for filename in os.listdir(directory):
+            filepath = os.path.join(directory, filename)
+            # if folder, scan it
+            if os.path.isdir(filepath):
+                config["subfolders"].append(filename)
+                scanSubFolder(filepath, cache, gameDir)
+            # otherwise add file to cache
+            elif os.path.isfile(filepath):
+                # replace for windows
+                filepath.replace("\\", "/")
+                # add to cache
+                cache[filename] = removePrefix(filepath, gameDir+"/") 
 
     """
         This will scan a subfolder, and add each file in it to the 
@@ -33,15 +40,15 @@ init -2 python:
         for file in os.listdir(subfolderPath):
             if file[0] == ".":
                 continue
-            filePath = os.path.join(subfolderPath, file)
-            if os.path.isfile(filePath):
+            filepath = os.path.join(subfolderPath, file)
+            if os.path.isfile(filepath):
                 if file in cache:
-                    raise IOError("{0} is conflicting with existing file {1}".format(filePath, cache[file]))
+                    raise IOError("{0} is conflicting with existing file {1}".format(filepath, cache[file]))
                 else:
                     # for windows replace "\\" to "/"
-                    filePath = filePath.replace("\\", "/")
+                    filepath = filepath.replace("\\", "/")
                     # remove gameDirectory prefix since renpy scans in game/ by default
-                    cache[file] = removePrefix(filePath, gameDir+"/") 
+                    cache[file] = removePrefix(filepath, gameDir+"/") 
 
     # remove prefix from a string
     def removePrefix(string, prefix):

@@ -1,5 +1,5 @@
 # Achievement screen entry point and config
-screen achieve_screen(achievements):
+screen achieve_screen(achievements, customConfig={}):
     default achieveConfig = AttrDict({
         "achievements": achievements, 
         "achieveColour": AttrDict({
@@ -23,7 +23,7 @@ screen achieve_screen(achievements):
         }),
         "achieveType": achievements.currentAchieveType,
         "currentDescription": None,
-    })
+    }).combine(customConfig)
     use achieve_select(achieveConfig, achieveConfig.selectBox.pos, achieveConfig.selectBox.size)
     use achieve_info(achieveConfig, achieveConfig.infoBox.pos, achieveConfig.infoBox.size)
     use achieve_description(achieveConfig, achieveConfig.descriptionBox.pos, achieveConfig.descriptionBox.size)

@@ -1,5 +1,7 @@
 init python:
     import pygame
+
+    # this is used for the hovering tooltips in screen_bag
     def getMousePosition():
         realWidth, realHeight = renpy.get_physical_size()
         xScale = 1300/float(realWidth)

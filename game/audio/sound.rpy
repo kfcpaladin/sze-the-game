@@ -36,10 +36,10 @@ init -1 python:
         Give warning if audio could not be loaded
     """
     def checkIfDefaultAudio(filename):
-        filepath = loadAudio(filename)
-        if filepath == "{0}/{1}".format(audioDir["folder"], audioDir["default"]):
-            renpy.music.play(filepath, channel="sound", loop=False)
-            popup("{0} is not a valid music file".format(filename))
+        defaultAudio = loadAudio(audioDir["default"])
+        if loadAudio(filename) == defaultAudio:
+            renpy.music.play(defaultAudio, channel="sound", loop=False)
+            popup("{0} is not a valid audio file".format(filename))
             return True
         else:
             return False
@@ -63,14 +63,13 @@ init -1 python:
     def loadAudio(filename):
         if filename in audioCache:
             return audioCache[filename]
-        for folder in audioDir["subfolders"]:
-            filepath = "{0}/{1}/{2}".format(audioDir["folder"], folder, filename)
-            if os.path.exists("game/{0}".format(filepath)):
-                audioCache[filename] = filepath
-                return filepath
-        filepath = "{0}/{1}".format(audioDir["folder"], audioDir["default"])
-        audioCache[filename] = filepath
-        return filepath
+        # failed to get file (doesnt exist), try get default
+        try:
+            return audioCache[audioDir["default"]]
+        # if couldnt load file and default, error
+        except KeyError:
+            errorString = "Could not load default: {0}, for missing file {1}"
+            raise IOError(errorString.format(audioDir["default"], filename))
     
     """
         arbituary sorting function to distinguish whether an 

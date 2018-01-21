@@ -2,6 +2,7 @@
 # inventory itself
 python early:
     import renpy.store as store
+    from copy import deepcopy
 
     class Inventory(store.object):
         def __init__(self, who, name, max_items):
@@ -15,7 +16,7 @@ python early:
 
         def add(self, item): #add an item
             if len(self.inv) < self.max_items or self.max_items is None:
-                self.inv.append(item)
+                self.inv.append(deepcopy(item))
 
         def remove(self, item): #remove an item -1
             self.inv.remove(item)

@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/Day 1/1 before school.rpy", line 70: expected 'name' not found.
-    show screen (diary.getCurrentPage()), 
-                ^
+File "game/scripts/easterEggs.rpy", line 29: invalid syntax
+        if "icon" item:
+                      ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

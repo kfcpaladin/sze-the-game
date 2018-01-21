@@ -7,7 +7,7 @@ init python:
     })
     
     for key, item in itemList.iteritems():
-        bag.add(copy.deepcopy(item))
+        bag.add(item)
 
     locker = Inventory(**{
         "who": sze,

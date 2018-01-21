@@ -3,7 +3,7 @@ python early:
     import renpy.store as store
 
     class Item(store.object):
-        def __init__(self, name, desc, stat, icon=False, used=False):
+        def __init__(self, name, desc, stat, icon=None, used=False):
             self.name = name # name of item
             self.desc = desc #description of item
             self.stat = stat #dictionary with values

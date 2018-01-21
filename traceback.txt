@@ -1,116 +1,48 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 39, in script call
-    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-  File "renpy/common/00console.rpy", line 765, in script
-    python in _console:
-  File "renpy/common/00console.rpy", line 766, in <module>
-    console.interact()
-  File "renpy/common/00console.rpy", line 325, in interact
-    line = ui.interact()
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 17, in execute
-    vpgrid:
-  File "game/screens/screen_popup.rpy", line 26, in execute
-    for popup in reversed(popups.popupList):
-  File "game/screens/screen_popup.rpy", line 37, in execute
-    if popup["icon"]:
-  File "game/screens/screen_popup.rpy", line 40, in execute
-    use popup_message(message, transparency, pos, size)
-  File "game/screens/screen_popup.rpy", line 80, in execute
-    screen popup_message(message, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 80, in execute
-    screen popup_message(message, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 84, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 89, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 96, in execute
-    vbox:
-  File "game/screens/screen_popup.rpy", line 100, in execute
-    if type(message) is list:
-  File "game/screens/screen_popup.rpy", line 106, in execute
-    text message:
-NameError: Name 'u'hello', u'No'' is not defined.
+  File "game/story/Day 1/2 after rollcall.rpy", line 31, in script
+    kok "\"Ayy, if it aint my old buddy Arthur.\""
+  File "game/classes/CodeSequence.rpy", line 23, in event
+    self.unlock()
+  File "game/scripts/easterEggs.rpy", line 54, in kirbyUnlock
+    if "icon" in item:
+TypeError: argument of type 'Item' is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 39, in script call
-    sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
-  File "renpy/common/00console.rpy", line 765, in script
-    python in _console:
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00console.rpy", line 766, in <module>
-    console.interact()
-  File "renpy/common/00console.rpy", line 325, in interact
-    line = ui.interact()
+  File "game/story/Day 1/2 after rollcall.rpy", line 31, in script
+    kok "\"Ayy, if it aint my old buddy Arthur.\""
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 17, in execute
-    vpgrid:
-  File "game/screens/screen_popup.rpy", line 26, in execute
-    for popup in reversed(popups.popupList):
-  File "game/screens/screen_popup.rpy", line 37, in execute
-    if popup["icon"]:
-  File "game/screens/screen_popup.rpy", line 40, in execute
-    use popup_message(message, transparency, pos, size)
-  File "game/screens/screen_popup.rpy", line 80, in execute
-    screen popup_message(message, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 80, in execute
-    screen popup_message(message, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 84, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 89, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 96, in execute
-    vbox:
-  File "game/screens/screen_popup.rpy", line 100, in execute
-    if type(message) is list:
-  File "game/screens/screen_popup.rpy", line 106, in execute
-    text message:
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1340, in __init__
-    self.set_text(text, scope, substitute)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1440, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/substitutions.py", line 242, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/substitutions.py", line 201, in __getitem__
-    raise NameError("Name '{}' is not defined.".format(key))
-NameError: Name 'u'hello', u'No'' is not defined.
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/transition.py", line 45, in event
+    return self.new_widget.event(ev, x, y, st)  # E1101
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "game/classes/CodeSequence.rpy", line 23, in event
+    self.unlock()
+  File "game/scripts/easterEggs.rpy", line 54, in kirbyUnlock
+    if "icon" in item:
+TypeError: argument of type 'Item' is not iterable
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

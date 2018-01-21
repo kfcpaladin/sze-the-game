@@ -23,8 +23,15 @@ init python:
     # unlock dildo
     def konamiCodeUnlock():
         playsfx("xbox.ogg")
-        popup("Unlocked item: Neo Armstrong")
-        bag.add(deepcopy(unlockableItems["neo armstrong"]))
+        # get item and icon
+        item = unlockableItems["neo armstrong"]
+        # show popup
+        popup({
+            "text": "Unlocked item\nNeo Armstrong",
+            "icon": item.icon,
+        })
+        # add item
+        bag.add(item)
         ui.remove(konamiCode)
 
     konamiCode = CodeSequence(
@@ -38,8 +45,15 @@ init python:
     # unlock kirby suit
     def kirbyUnlock():
         playsfx("xbox.ogg")
-        popup("Unlocked item: Michael Kirby's Suit")
-        bag.add(deepcopy(unlockableItems["god"]))
+        # get item and icon
+        item = unlockableItems["god"]
+        # show popup
+        popup({
+            "text": "Unlocked item\nKirby Suit",
+            "icon": item.icon,
+        })
+        # add item
+        bag.add(item)
         ui.remove(kirbyCode)
 
     kirbyCode = CodeSequence(

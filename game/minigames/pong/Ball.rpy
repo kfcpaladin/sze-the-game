@@ -1,4 +1,4 @@
-python early:
+init -2 python:
     import random
     class Ball:
         def __init__(self, **kargs):

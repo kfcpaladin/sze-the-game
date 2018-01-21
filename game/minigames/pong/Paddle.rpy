@@ -1,4 +1,4 @@
-python early:
+init -2 python:
     class Paddle:   
         import pygame
         def __init__(self, **kargs):

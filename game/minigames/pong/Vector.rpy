@@ -1,4 +1,4 @@
-python early:
+init -3 python:
     class Vector:
         def __init__(self, x, y):
             self.x = x

@@ -112,6 +112,7 @@ screen_bg_pong.png: images/screenBackgrounds/screen_bg_pong.png
 >>> Reading audio
 CongressNeptune.ogg: audio/music/CongressNeptune.ogg
 DeemoPaper Plane's Adventure.ogg: audio/music/DeemoPaper Plane's Adventure.ogg
+ ==> EscortsGaudeamusDooWop.ogg: audio/audio_default.ogg
 Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg: audio/music/Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
 LeCastleVaniaLEDSpiralsJW.ogg: audio/music/LeCastleVaniaLEDSpiralsJW.ogg
 ManuelGasGasGas(InitialD).ogg: audio/music/ManuelGasGasGas(InitialD).ogg

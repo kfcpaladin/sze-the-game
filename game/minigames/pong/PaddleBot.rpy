@@ -1,4 +1,4 @@
-python early:
+init -2 python:
     class PaddleBot:
         def __init__(self, ball, paddle, skill=1):
             self.ball = ball

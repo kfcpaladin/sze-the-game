@@ -106,7 +106,7 @@ screen bag_tooltip(bagConfig, item, xrange, yrange):
                 text "{b}Name: {/b}" + "{0}".format(item.name)
                 frame:
                     xminimum xrange.min
-                    xmaximum yrange.max
+                    xmaximum xrange.max
                     if item.used:
                         background Solid(bagConfig.tooltipColour.item_used)
                     else:

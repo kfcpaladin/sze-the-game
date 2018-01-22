@@ -69,7 +69,7 @@ python early:
                     self.available[questID] = quest
                     questsMadeAvailable.append(questID)
                     popup({
-                        "text": "Unlocked quest: {0}".format(questID),
+                        "text": "Unlocked quest\n{0}".format(questID),
                         "icon": quest["icon"],
                     })
             # Remove the quests that were made available from self.unavailable
@@ -92,7 +92,7 @@ python early:
                 self.unavailable.pop(questID)
                 playsfx("xbox.ogg")
                 popup({
-                    "text": "Unlocked quest: {0}".format(questID),
+                    "text": "Unlocked quest\n{0}".format(questID),
                     "icon": quest["icon"],
                 })
 
@@ -111,7 +111,7 @@ python early:
                 self.available.pop(questID)
                 playsfx("xbox.ogg")
                 popup({
-                    "text": "Completed quest: {0}".format(questID),
+                    "text": "Completed quest\n{0}".format(questID),
                     "icon": quest["icon"],
                 })
 

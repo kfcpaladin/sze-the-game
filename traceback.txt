@@ -1,48 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/2 after rollcall.rpy", line 31, in script
-    kok "\"Ayy, if it aint my old buddy Arthur.\""
-  File "game/classes/CodeSequence.rpy", line 23, in event
-    self.unlock()
-  File "game/scripts/easterEggs.rpy", line 54, in kirbyUnlock
-    if "icon" in item:
-TypeError: argument of type 'Item' is not iterable
+  File "game/story/Day 1/3.0 physics.rpy", line 238, in script
+    if _phys1p2p1t is True:
+  File "game/story/Day 1/3.0 physics.rpy", line 238, in <module>
+    if _phys1p2p1t is True:
+NameError: name '_phys1p2p1t' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/2 after rollcall.rpy", line 31, in script
-    kok "\"Ayy, if it aint my old buddy Arthur.\""
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 910, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 746, in do_display
-    **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 3237, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/transition.py", line 45, in event
-    return self.new_widget.event(ev, x, y, st)  # E1101
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "game/classes/CodeSequence.rpy", line 23, in event
-    self.unlock()
-  File "game/scripts/easterEggs.rpy", line 54, in kirbyUnlock
-    if "icon" in item:
-TypeError: argument of type 'Item' is not iterable
+  File "game/story/Day 1/3.0 physics.rpy", line 238, in script
+    if _phys1p2p1t is True:
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 1680, in execute
+    if renpy.python.py_eval(condition):
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1794, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1788, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/story/Day 1/3.0 physics.rpy", line 238, in <module>
+    if _phys1p2p1t is True:
+NameError: name '_phys1p2p1t' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

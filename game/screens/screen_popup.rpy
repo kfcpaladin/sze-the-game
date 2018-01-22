@@ -67,6 +67,7 @@ screen popup_icon(icon, message, transparency, pos, size):
                     text message:
                         xalign 0.5
                         yalign 0.5
+                        text_align 0.5
             
 
 # standard popup message
@@ -92,6 +93,7 @@ screen popup_message(message, transparency, pos, size):
                 text message:
                     xalign 0.5
                     yalign 0.5
+                    text_align 0.5
 
 # icon frame with transparency parameter
 screen popup_icon_frame(icon, width, height, transparency, default=loadImage("default.png")):

@@ -86,7 +86,7 @@ python early:
                     achievements.pop(achieveID)
                     playsfx("xbox.ogg")
                     popup({
-                        "text": "Unlocked achievement\n {0}".format(achieveID),
+                        "text": "Unlocked achievement\n{0}".format(achieveID),
                         "icon": achievement["icon"],
                     })
 
@@ -97,7 +97,7 @@ python early:
                    self._checkAchieveCondition(achievement["conditions"])):
                     self.completed[achieveID] = achievement
                     popup({
-                        "text": "Unlocked achievement\n {0}".format(achieveID),
+                        "text": "Unlocked achievement\n{0}".format(achieveID),
                         "icon": achievement["icon"],
                     })
                     unlockedAchievements.append(achieveID)

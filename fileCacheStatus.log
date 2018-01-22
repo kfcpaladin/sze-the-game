@@ -1,4 +1,5 @@
 >>> Reading images
+.directory: images/.directory
 achievement_default.png: images/achievementIcons/achievement_default.png
 achievement_garyreeducation.png: images/achievementIcons/achievement_garyreeducation.png
 achievement_rina1.png: images/achievementIcons/achievement_rina1.png
@@ -90,6 +91,9 @@ icon_todd.png: images/icons/icon_todd.png
 icon_willis.png: images/icons/icon_willis.png
 icon_willyang.png: images/icons/icon_willyang.png
 icon_willyin.png: images/icons/icon_willyin.png
+ ==> image_default.png: images/image_default.png
+images.rpy: images/images.rpy
+images.rpyc: images/images.rpyc
 item_axe.png: images/items/item_axe.png
 item_bag.png: images/items/item_bag.png
 item_ball.png: images/items/item_ball.png
@@ -100,6 +104,7 @@ kms_bg_bedroom.png: images/suicideScreens/kms_bg_bedroom.png
 kms_bg_gunSuicide.png: images/suicideScreens/kms_bg_gunSuicide.png
 kms_bg_hangingSuicide.png: images/suicideScreens/kms_bg_hangingSuicide.png
 kms_icon_glockNoTrigger.png: images/suicideScreens/kms_icon_glockNoTrigger.png
+logo.png: images/logo.png
 quest_default.png: images/questIcons/quest_default.png
 quest_serenaSlay.png: images/questIcons/quest_serenaSlay.png
 screen_bg_diaryGrid.png: images/screenBackgrounds/screen_bg_diaryGrid.png
@@ -112,7 +117,6 @@ screen_bg_pong.png: images/screenBackgrounds/screen_bg_pong.png
 >>> Reading audio
 CongressNeptune.ogg: audio/music/CongressNeptune.ogg
 DeemoPaper Plane's Adventure.ogg: audio/music/DeemoPaper Plane's Adventure.ogg
- ==> EscortsGaudeamusDooWop.ogg: audio/audio_default.ogg
 Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg: audio/music/Herbert von Karajan -Intermezzo Sinfonico- Cavalleria Rusticana.ogg
 LeCastleVaniaLEDSpiralsJW.ogg: audio/music/LeCastleVaniaLEDSpiralsJW.ogg
 ManuelGasGasGas(InitialD).ogg: audio/music/ManuelGasGasGas(InitialD).ogg
@@ -120,6 +124,7 @@ PinkFloydAnotherBrickInTheWall.ogg: audio/music/PinkFloydAnotherBrickInTheWall.o
 RaxlenSliceBG8bit.ogg: audio/music/RaxlenSliceBG8bit.ogg
 TheRoomOSTMainTheme.ogg: audio/music/TheRoomOSTMainTheme.ogg
 VarienThroneOfRavens.ogg: audio/music/VarienThroneOfRavens.ogg
+ ==> audio_default.ogg: audio/audio_default.ogg
 button_select.ogg: audio/sfx/button_select.ogg
 error.ogg: audio/sfx/error.ogg
 game_over.ogg: audio/sfx/game_over.ogg
@@ -140,6 +145,8 @@ p5BeneathTheMaskInstrumental.ogg: audio/music/p5BeneathTheMaskInstrumental.ogg
 respawn.ogg: audio/sfx/respawn.ogg
 rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg: audio/music/rusaliloadingdockHeyYallGotCigaretteBombsAwayRemix.ogg
 slayer.ogg: audio/sfx/slayer.ogg
+sound.rpy: audio/sound.rpy
+sound.rpyc: audio/sound.rpyc
 terroristyterroristsong.ogg: audio/music/terroristyterroristsong.ogg
 vpunch.ogg: audio/sfx/vpunch.ogg
 wind.ogg: audio/sfx/wind.ogg

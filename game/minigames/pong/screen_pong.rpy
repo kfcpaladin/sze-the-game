@@ -133,10 +133,21 @@ screen render_pong_objects(pong):
         use pong_object(paddle.pos.x, paddle.pos.y, paddle.width, paddle.height, paddle.colour)
 
 # display a pong object
-screen pong_object(x, y, width, height, colour="#ffffff"):
+screen pong_object(x, y, width, height, colour="#ffffff", icon=None):
     frame:
+        style "tight_icon_wrap" 
         xoffset (x - width/2.0)
         yoffset (y - height/2.0)
         xsize width
         ysize height
-        background Color(colour)
+        # if there is an icon, use it instead of bg 
+        if icon:
+            imagebutton:
+                xsize width
+                ysize height
+                idle Frame(icon)
+        else:
+            background Color(colour)
+
+style tight_icon_wrap:
+    ymaximum 50

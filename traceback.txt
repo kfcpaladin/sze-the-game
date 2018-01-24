@@ -1,26 +1,83 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/3.0 physics.rpy", line 238, in script
-    if _phys1p2p1t is True:
-  File "game/story/Day 1/3.0 physics.rpy", line 238, in <module>
-    if _phys1p2p1t is True:
-NameError: name '_phys1p2p1t' is not defined
+  File "game/story/script.rpy", line 23, in script
+    pause
+  File "renpy/common/000statements.rpy", line 385, in execute_pause
+    renpy.pause()
+  File "game/screens/screen_kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/screen_kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/screen_kms.rpy", line 6, in execute
+    if randomIndex == 0:
+  File "game/screens/screen_kms.rpy", line 7, in execute
+    use kmsGun
+  File "game/screens/screen_kms.rpy", line 22, in execute
+    screen kmsGun(bullets=bullets):
+  File "game/screens/screen_kms.rpy", line 22, in execute
+    screen kmsGun(bullets=bullets):
+  File "game/screens/screen_kms.rpy", line 41, in execute
+    imagebutton:
+  File "game/screens/screen_kms.rpy", line 41, in keywords
+    imagebutton:
+AttributeError: 'NoneType' object has no attribute 'x'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/3.0 physics.rpy", line 238, in script
-    if _phys1p2p1t is True:
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 1680, in execute
-    if renpy.python.py_eval(condition):
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/story/Day 1/3.0 physics.rpy", line 238, in <module>
-    if _phys1p2p1t is True:
-NameError: name '_phys1p2p1t' is not defined
+  File "game/story/script.rpy", line 23, in script
+    pause
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 1774, in execute
+    self.call("execute")
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 1762, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/statements.py", line 163, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 385, in execute_pause
+    renpy.pause()
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1304, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/screen_kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/screen_kms.rpy", line 2, in execute
+    screen kms:
+  File "game/screens/screen_kms.rpy", line 6, in execute
+    if randomIndex == 0:
+  File "game/screens/screen_kms.rpy", line 7, in execute
+    use kmsGun
+  File "game/screens/screen_kms.rpy", line 22, in execute
+    screen kmsGun(bullets=bullets):
+  File "game/screens/screen_kms.rpy", line 22, in execute
+    screen kmsGun(bullets=bullets):
+  File "game/screens/screen_kms.rpy", line 41, in execute
+    imagebutton:
+  File "game/screens/screen_kms.rpy", line 41, in keywords
+    imagebutton:
+  File "<screen language>", line 45, in <module>
+AttributeError: 'NoneType' object has no attribute 'x'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

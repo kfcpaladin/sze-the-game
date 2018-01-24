@@ -70,3 +70,6 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Fixed path issues regarding windows and os.sep = "\\" instead of "/"
 * Move extraneous classes to game/classes including Vector.rpy, AttrDict.rpy, CodeSequence.rpy, Colours.rpy
 * Added developer unlock code, which is "godmode"
+
+**24/01/2018**
+* Made gun in kms screen shoot bullets

@@ -49,6 +49,7 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | [PopUp](./game/classes/PopUp.rpy)                  | Stores all popups, and manages their lifetime                                     |
 | -------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [AttrDict](./game/classes/AttrDict.rpy)            | Used as a wrapped for the python dict, allowing for access like JSON object       |
+| [Bullet](./game/classes/Bullet.rpy)                | Used by the kmsGun screen for the gun projectiles                                 |
 | [CodeSequence](./game/classes/CodeSequence.rpy)    | Used for easter eggs, where things can be unlocked using a code sequence          |
 | [Colours](./game/classes/Colours.rpy)              | Allow for making of hex code colours using RGB, and a selection of default colours|
 | [Vector](./game/classes/Vector.rpy)                | Used by pong, and various game screens, for position and sizes of objects         |

@@ -1,5 +1,5 @@
 python early:
-    class Game(store.object):
+    class Game:
         def __init__(self, options):
             self.options = []
             self._baseOptions = {

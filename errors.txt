@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/screens/screen_kms.rpy", line 31: expected '=' not found.
-    default del bullets[:]
-                ^
+File "game/story/Quests/1.0 jig school.rpy", line 56: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "{color=[colour.yellow]}{i}Throw your urine soaked pants at him{/i}{/color}"
+                                                                                ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

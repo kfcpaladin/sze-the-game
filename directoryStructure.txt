@@ -85,6 +85,7 @@
 │   │   │   ├── achievement_default.png
 │   │   │   ├── achievement_garyreeducation.png
 │   │   │   ├── achievement_rina1.png
+│   │   │   ├── achievement_toddkarate.png
 │   │   │   ├── achievement_unlockDiary.png
 │   │   │   └── achievement_unlockSuicide.png
 │   │   ├── backgrounds
@@ -189,6 +190,7 @@
 │   │   ├── logo.png
 │   │   ├── questIcons
 │   │   │   ├── quest_default.png
+│   │   │   ├── quest_jigschool1.png
 │   │   │   └── quest_serenaSlay.png
 │   │   ├── screenBackgrounds
 │   │   │   ├── screen_bg_diaryGrid.png
@@ -246,7 +248,14 @@
 │   │   ├── 1-1-LT1.save
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
+│   │   ├── auto-2-LT1.save
 │   │   ├── auto-3-LT1.save
+│   │   ├── auto-4-LT1.save
+│   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-7-LT1.save
+│   │   ├── auto-8-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -346,8 +355,6 @@
 │       │   ├── 5.2 jig toilet.rpyc
 │       │   ├── 5.3 jig food.rpy
 │       │   ├── 5.3 jig food.rpyc
-│       │   ├── 5.4 gary reeducation.rpy
-│       │   ├── 5.4 gary reeducation.rpyc
 │       │   ├── 5.4 jig vices.rpy
 │       │   ├── 5.4 jig vices.rpyc
 │       │   ├── 5.5 assembly shitstorm.rpy
@@ -362,6 +369,11 @@
 │       │   └── 9 economics.rpyc
 │       ├── dead.rpy
 │       ├── dead.rpyc
+│       ├── Quests
+│       │   ├── 1.0 jig school.rpy
+│       │   ├── 1.0 jig school.rpyc
+│       │   ├── 5.0 gary reeducation.rpy
+│       │   └── 5.0 gary reeducation.rpyc
 │       ├── script.rpy
 │       └── script.rpyc
 ├── lib
@@ -1590,4 +1602,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1481 files
+110 directories, 1492 files

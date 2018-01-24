@@ -159,8 +159,8 @@ init python:
     # Todd Treoir
     tod.setMessages({
         "friendship": {
-            "msgGain": None,
-            "msgLoss": None,
+            "msgGain": "You new alien karate master has gained some respect for your {b}tenacity and courage{/b}. You are currently at [tod.friendship] friendship with {i}him/it?{/i}",
+            "msgLoss": "Your cowardice and pitiful attitude has disappointed your master, making your friendship drop to [tod.friendship]. His palms, armed with a {color=[colour.red]}{b}life sucking organ{/b}{/color} begins to move towards you.",
         },
     })
 

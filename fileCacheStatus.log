@@ -3,6 +3,7 @@
 achievement_default.png: images/achievementIcons/achievement_default.png
 achievement_garyreeducation.png: images/achievementIcons/achievement_garyreeducation.png
 achievement_rina1.png: images/achievementIcons/achievement_rina1.png
+achievement_toddkarate.png: images/achievementIcons/achievement_toddkarate.png
 achievement_unlockDiary.png: images/achievementIcons/achievement_unlockDiary.png
 achievement_unlockSuicide.png: images/achievementIcons/achievement_unlockSuicide.png
 bg_CWY6FxMUsAIfDuO.png: images/backgrounds/bg_CWY6FxMUsAIfDuO.png
@@ -106,6 +107,7 @@ kms_bg_hangingSuicide.png: images/suicideScreens/kms_bg_hangingSuicide.png
 kms_icon_glockNoTrigger.png: images/suicideScreens/kms_icon_glockNoTrigger.png
 logo.png: images/logo.png
 quest_default.png: images/questIcons/quest_default.png
+quest_jigschool1.png: images/questIcons/quest_jigschool1.png
 quest_serenaSlay.png: images/questIcons/quest_serenaSlay.png
 screen_bg_diaryGrid.png: images/screenBackgrounds/screen_bg_diaryGrid.png
 screen_bg_diaryNormal.png: images/screenBackgrounds/screen_bg_diaryNormal.png

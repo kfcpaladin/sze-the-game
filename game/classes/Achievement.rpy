@@ -1,5 +1,5 @@
 python early:
-    class Achievements(store.object):
+    class Achievements:
         def __init__(self, achieveParams):
             self.achieveParams = achieveParams
             self._baseParams = {

@@ -134,3 +134,19 @@ init python:
             },
         }
     })
+
+    # Jig school quests
+    quests.addQuests({
+        "jigschool1": {
+            "title": "Be a rebel",
+            "brief": "You don't feel like going to school",
+            "description": "You have decided to abandon your education in the morning",
+            "dependencies": None,
+            "label": "jigschool1",
+            "icon": loadImage("quest_jigschool1.png"),
+            "conditions": {
+                "function": lambda: game.checkTime("morning"),
+                "msg": "You can only jig school in the morning",
+            },
+        }
+    })

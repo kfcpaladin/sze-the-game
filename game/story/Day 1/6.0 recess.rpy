@@ -6,6 +6,8 @@ label recess1:
     jump recess1a
 
 label recess1a:
+    $ game.setTime("recess")
+    $ autosave()
     "It is now recess, which has unfortunately been cut short to 10 minutes to due an extended assembly"
     sze "Hmm, what should I do today for recess?"
     call screen fortmap

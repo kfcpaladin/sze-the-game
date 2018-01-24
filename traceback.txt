@@ -1,35 +1,97 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/classes/Bullet.rpy", line 3, in <module>
-    class Bullet:
-  File "game/classes/Bullet.rpy", line 4, in Bullet
-    def __init__(self, pos=Vector(0, 0), vel=Vector(0, 0), size=Vector(10, 10)):
-NameError: name 'Vector' is not defined
+  File "game/story/Day 1/1 before school.rpy", line 42, in script call
+    "Oh shit, the Principal..."
+  File "game/story/Day 1/1 before school.rpy", line 71, in script call
+    mox "\"Here let me show you\""
+  File "game/story/Quests/1.0 jig school.rpy", line 51, in script
+    "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thorasic cavity{/i}{/b}{color}"
+IndexError: string index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/bootstrap.py", line 305, in bootstrap
-    renpy.main.main()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/main.py", line 365, in main
-    renpy.game.script.load_script()  # sets renpy.game.script.
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/script.py", line 265, in load_script
-    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/script.py", line 756, in load_appropriate_file
-    self.finish_load(stmts, initcode, filename=lastfn)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/script.py", line 448, in finish_load
-    node.early_execute()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 878, in early_execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/classes/Bullet.rpy", line 3, in <module>
-    class Bullet:
-  File "game/classes/Bullet.rpy", line 4, in Bullet
-    def __init__(self, pos=Vector(0, 0), vel=Vector(0, 0), size=Vector(10, 10)):
-NameError: name 'Vector' is not defined
+  File "game/story/Day 1/1 before school.rpy", line 42, in script call
+    "Oh shit, the Principal..."
+  File "game/story/Day 1/1 before school.rpy", line 71, in script call
+    mox "\"Here let me show you\""
+  File "game/story/Quests/1.0 jig school.rpy", line 51, in script
+    "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thorasic cavity{/i}{/b}{color}"
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2916, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 1980, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 430, in renpy.display.render.render_screen (gen/renpy.display.render.c:6938)
+    rv = render(root, width, height, 0, 0)
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 625, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 1093, in render
+    st, at)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 904, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
+    rv = d.render(widtho, heighto, st, at)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1774, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 550, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1000, in segment
+    push().color = renpy.easy.color(value)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/color.py", line 132, in __new__
+    if c[0] == '#':
+IndexError: string index out of range
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
- 
+sze-the game 0.0

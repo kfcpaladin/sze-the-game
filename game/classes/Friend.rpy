@@ -1,5 +1,5 @@
 python early:
-    class Friend(ADVCharacter, store.object):
+    class Friend(ADVCharacter):
         """
             self.attributes = all attributes
             self.attributeMessages = all messages for losing and gaining attributes

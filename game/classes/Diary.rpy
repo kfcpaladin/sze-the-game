@@ -1,5 +1,5 @@
 python early:
-    class Diary(store.object):
+    class Diary:
         def __init__(self, screenNames):
             self.screenNames = screenNames
             self.currentPage = 0

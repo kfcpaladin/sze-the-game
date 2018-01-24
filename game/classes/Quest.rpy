@@ -1,5 +1,5 @@
 python early:
-    class Quests(store.object):
+    class Quests:
         def __init__(self, questParams):
             self.questParams = questParams
             self._baseParams = {
@@ -182,7 +182,7 @@ python early:
         def _gotoLabel(self, label):
             if type(label) in self._stringType:
                 closeDiary()
-                renpy.jump(label)
+                renpy.call(label)
                 playsfx("vpunch.ogg")
             else:
                 playsfx("error.ogg")

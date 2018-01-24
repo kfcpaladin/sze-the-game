@@ -94,6 +94,13 @@ init python:
             "description": "As a fully fledged graduate of the Gary reeducation clinic, your thirst for Serena has become boundless",
             "icon": loadImage("achievement_garyreeducation.png"),
             "hidden": True,
+        },
+        "toddkarate": {
+            "title": "Start learning karate",
+            "brief": "You meet Todd for the first time",
+            "description": "Todd possesses alien karate skills, which he is willing to share with you",
+            "icon": loadImage("achievement_toddkarate.png"),
+            "hidden": True,
         }
     })
 

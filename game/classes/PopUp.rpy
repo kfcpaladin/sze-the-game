@@ -1,6 +1,6 @@
 # Used to manage popups
 python early:
-    class PopUp(store.object):
+    class PopUp:
         def __init__(self):
             self.popupList = []
             self.stringType = (str, unicode, basestring)

@@ -1,5 +1,6 @@
 label postrollcall1:
     $ autosave()
+    scene bg school
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the classroom"
     menu stealwillisgirl:

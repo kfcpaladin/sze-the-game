@@ -28,7 +28,7 @@ screen kmsGun(bullets=bullets):
     default gunSize = Vector(200, 150)
     default bulletSpeed = 100
     default bulletSize = 20
-    default szeDead = False
+    $ szeDead = False
     # arthur
     imagebutton:
         idle Frame(loadImage("char_arthurside.png"))

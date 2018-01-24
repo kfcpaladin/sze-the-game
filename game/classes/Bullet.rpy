@@ -1,5 +1,5 @@
 # creates a bullet projectile
-python early:
+init -1 python:
     class Bullet:
         def __init__(self, pos=Vector(0, 0), vel=Vector(0, 0), size=Vector(10, 10)):
             self.create(pos, vel, size)

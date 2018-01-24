@@ -56,6 +56,8 @@
 │   │   ├── Achievement.rpyc
 │   │   ├── AttrDict.rpy
 │   │   ├── AttrDict.rpyc
+│   │   ├── Bullet.rpy
+│   │   ├── Bullet.rpyc
 │   │   ├── CodeSequence.rpy
 │   │   ├── CodeSequence.rpyc
 │   │   ├── Colours.rpy
@@ -245,7 +247,11 @@
 │   │   ├── auto-10-LT1.save
 │   │   ├── auto-1-LT1.save
 │   │   ├── auto-2-LT1.save
+│   │   ├── auto-3-LT1.save
+│   │   ├── auto-4-LT1.save
 │   │   ├── auto-5-LT1.save
+│   │   ├── auto-6-LT1.save
+│   │   ├── auto-9-LT1.save
 │   │   ├── autosave-LT1.save
 │   │   ├── persistent
 │   │   └── _reload-2-LT1.save
@@ -1589,4 +1595,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-109 directories, 1480 files
+109 directories, 1486 files

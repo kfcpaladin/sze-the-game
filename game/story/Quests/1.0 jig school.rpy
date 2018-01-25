@@ -7,8 +7,10 @@ label jigschool1:
     $ playmusic("TheRoomOSTMainTheme.ogg")
     "\"Who {i}{b}dares{/b}{/i} trespass on my land???\""
     sze "\"Oh shit please don't kill me\""
-    sze "\"{i}Are you a troll???\""
+    "Your bladder feels like it is going to depressurise inside your pants"
+    sze "\"{i}Do you know where a bathroom is???{/i}\""
     "\"Come forth {i}young{/i} one. Let me see you...\""
+    "You feel a {color=[colour.yellow]}{i}little drop of urine{/b}{/color} drip out from your bump"
     # choice
     menu:
         "Should you go into the dark alley way ahead of you?"
@@ -86,8 +88,17 @@ label jigschool1_todd_teach:
     tod "{i}What a pitiful fight{/i}"
     tod "{b}But since you tried to fight back, I can see that you are indeed full of determination and courage{/b}"
     "You sense an aura of respect from your opponent, as he stands above your limp body"
-    tod "Young one, are you willing to train and rise above your {i}weakness{/i}"
-    sze "{color=[colour.yellow]}{b}urggg...{/b}{/color}"
+    tod "Young one, are you willing to train and rise above your {i}weakness{/i}?"
+    # joke menu
+    menu:
+        "{b}urggg...{/b}":
+            sze "{b}urggg...{/b}"
+        "{color=[colour.red]}{b}Cough blood...{/b}{/color}":
+            sze "{color=[colour.red]}{b}ackkt...{/b}{/color}"
+            "{color=[colour.red]}{b}Blood is sprayed everywhere{/b}{/color}"
+        "{color=[colour.yellow]}{i}Piss yourself{/i}{/color}":
+            sze "{i}Ahhh....{/i}"
+            "The alien beast takes a step back to avoid stepping in your {color=[colour.yellow]}{b}urine{/b}{/color}"
     tod "I'll take that as a {color=[colour.green]}{b}yes{/b}{/color}"
     "{b}Todd begins to place his palm on your chest{/b}"
     $ playsfx("vpunch.ogg")

@@ -359,9 +359,120 @@ label english1top:
         "Stefan":
             sze "\"Hi Stefan\""
             dng "\"lol, when did you get a lisp?\""
+            sze "\"...Ahem\""
+            sze "\"I meant Steven\""
+            dng "\"lol Arnold, you didn't forget my name did you?\""
+            menu:
+                "Bitch forgot my name?!":
+                    sze "\"Bitch forgot my name?!\""
+                    dng "\"Says you\""
+                    lee "\"Arguing like an old married couple already\""
+                    sze "\"Steven is baka-desu\""
+                    dng "\"Nani?! U wanna die mate?!\""
+                    $ dng.loss()
+                    lee "\"Lol, both of you are fucking weebs\""
+                    sze "\"N-no\""
+                    dng "\"N-no\""
+# maybe include a weaboo stat?
+                    lee "\"I can see it in your eyes\""
+                    lee "\"You've both been looking for each other\""
+                    sze "\"!!\""
+                    dng "\"S-Shut up\""
+                    $ sze.gain("thirst")
+                    lee "\"Be manly like JoJo\""
+                    dng "\"dafuq, you were just calling us weebs\""
+                    sze "\"Yes! u r fking weeb, Andrew\""
+                    lee "\"Oh...I admit, it's true\""
+                    jump eng1waitforschlammie
+                "Actually it's Arthur":
+                    sze "\"You meant Arthur, right?\""
+                    dng "\"Ahem, yeah, yeah\""
+                    dng "\"Totes remembered your name {s}Arnold{/s} Arthur\""
+                    "It seems we have come to a mutual understanding to never bring this traumatic incident up ever again{nw}"
+                    lee "\"Lol, it seems both of you bunyips has forgotten the other's names\""
+                    dng "\"Actually that's not true, right {s}Arnold{/s} Arthur?\""
+                    "You nod your head vigorously"
+                    lee "\"Then what were you talking about previously?\""
+                    menu:
+                        "Roy":
+                            sze "\"we were talking about Roy\""
+                            lee "\"Then who, in the name of all the krill in the world, is Arnold?\""
+                            dng "\"fking idiot sze\""
+                            $ sze.loss("intellect")
+                            sze "\"Steven is baka-desu\""
+                            dng "\"Nani?! U wanna die mate?!\""
+                            lee "\"Arguing like an old married couple already\""
+                            lee "\"Except you're both a bunch of old married weebs\""
+                            sze "\"...\""
+                            dng "\"...\""
+                            sze "\"We should just murder him\""
+                            dng "\"Yup\""
+                            dng "\"rofl\""
+                            sze "\"wot?\""
+                            sze "\"Who even says 'rofl' before a fight?\""
+                            lee "\"Who even says 'rofl'?\""
+                            dng "\"oi, fk off both of you\""
+                            "You are about to engage in a three-way argument\""
+                            roy "\"Hey guys, I heard you mention my name\""
+                            sze "\"uhhh...did we?\""
+                            dng "\"fgt, you were the one who mentioned it two minutes ago\""
+                            roy "\"Well, if you wanna talk about me, why not include the most qualified expert on the topic\""
+                            roy "\"Namely me\""
+                            lee "\"You're no expert on yourself\""
+                            roy "\"Really? How so?\""
+                            lee "\"I bet you haven't even used your left elbow to touch the back of your right knee while standing on your left leg\""
+                            "You all amuse yourselves with watching Roy engage in an exercise in futility"
+                            $ lee.gain()
+                            $ dng.gain()
+                            $ roy.gain()
+                            roy "\"Aaaargh!!!\""
+                            roy "\"Is this even possible?\""
+                            lee "\"I saw Frank Dwyer do it before, maybe you should try this instead...\""
+                            jump eng1waitforschlammie
+                        "Our families":
+                            sze "\"Deng and I were merely discussing our families, and what we did over the holidays\""
+                            dng "\"uh....yeah. Yes we were\""
+                            sze "\"In fact, you may have heard Steven mention my brother Arnold\""
+                            dng "\"Please continue talking about Arnold, before Andrew most rudely interrupted us\""
+                            lee "\"My most sincere apologies\""
+                            lee "\"My children will serve your children as servants for the rest of their lives\""
+                            sze "\"Errr...as I was saying\""
+                            sze "\"My brother is an autistic savant\""
+                            dng "\"Wait legit? what is he savant at?\""
+                            sze "\"He's a financial extraordinaire, which is why he is with my parents on their 8-year business trip overseas\""
+                            dng "\"Legit? So you live alone?\""
+                            sze "\"Well, I'm staying in my aunt's investment property in Croyden, but yeah, I live alone, pretty much\""
+                            lee "\"That makes you, like, every anime and visual novel protagonist that ever existed\""
+                            sze "\"huh, never thought about it that way\""
+                            "That was a lie, of course. Otherwise, why else would you have someone narrating your life?"
+                            sze "Good point, voice-in-the-head"
+                            jump eng1waitforschlammie
+                        "Vices":
+                            sze "\"We were merely talking about vices\""
+                            dng "\"dafuq? we were?\""
+                            lee "\"Tell me, Deng, what vices were you two talking about?\""
+                            dng "\"Ummm, well, errr, hmmm, help me out a bit Arthur? the, uhh, that vice, umm, {nw}\""
+                            lee "\"Specifically the Arnold vice\""
+                            dng "\"fuck, ahhh, help me explain, plz Arthur?\""
+                            sze "\"nah, I thought I did already, you're just a bad listener\""
+                            dng "\"Oh wait, I remember now\""
+                            sze "\"err...you do?\""
+                            dng "\"Yeah, Arthur stand over there\""
+                            sze "\"sure\""
+                            "Deng walks up behind you"
+                            lee "\"well?\""
+                            dng "\"The Arnold Vice Grip is a wrestling move\""
+                            "You are starting to feel rather uncomfortable, all of a sudden"
+                            dng "\"Basically, you grip the opponent's head, like so, between both hands\"" with hpunch
+                            dng "\"Then you shout in an Austrian accent \"Hasta la vista\" and push your elbows against their shoulders, and pull their head up\""
+                            "You are feeling extremely uncomfortable with the way that this is going"
+                            dng "\"Which results in your simultaneously disconnecting their head from their body, and crushing their head, like so\"" with vpunch
+                            dng "\"oops\""
+                            jump dead
         "Steven":
             sze "\"Hi Steven\""
             dng "\"Hey Arthur\""
+            $ dng.gain()
             sze "I have sucessfully navigated the treacherous waters of social conduct"
             sze "Surely I deserve to have an extra charisma point?"
             "Does sze deserve an extra charm point for remembering an acquaintance's name?"
@@ -385,7 +496,7 @@ label english1top:
                             sze "\"errr...\""
                             sze "\"I was just pumped for English\""
                             dng "\"lmao\""
-                            return
+                            jump eng1waitforschlammie
                         "Maybe...idk":
                             "Maybe?"
                             "Fuck you, I don't want to pick for you"
@@ -402,7 +513,7 @@ label english1top:
                             dng "\"err...bruh, we just said hello\""
                             sze "\"oh...\""
                             dng "\"lmao\""
-                            return
+                            jump eng1waitforschlammie
                         "No, he's scum":
                             "I'd say that's a bit harsh, whether or not he ends up that way is dependent on your guidance"
                             "Nonetheless, such adherence to social justice is an aspect of the Fortianness"
@@ -419,7 +530,7 @@ label english1top:
                             lee "\"Really brings out the \"mental\" in mental conversation\""
                             sze "\"N-n-no, I was just getting myself psyched up for English\""
                             lee "\"See? Sze really is loopy\""
-                            return
+                            jump eng1waitforschlammie
                 "Maybe":
                     "Maybe?"
                     "Fuck you, I don't want to pick for you"
@@ -436,7 +547,7 @@ label english1top:
                     sze "\"oh...\""
                     dng "\"lmao\""
                     dng "\"Anyways, how were your holidays?\""
-                    return
+                    jump eng1waitforschlammie
                 "Honestly, no":
                     "I'm glad that you have picked the Fortian choice"
                     $ sze.gain("fort")
@@ -457,7 +568,7 @@ label english1top:
                     lee "\"Obviously, he was thinking about how he feels like a puppet on the strings of Fate\""
                     dng "\"Wow, so deep\""
                     dng "\"That's the way I like it\""
-                    return
+                    jump eng1waitforschlammie
         "Esteban":
             sze "\"Hola Esteban\""
             dng "\"lmao when did you get so Spanish?\""
@@ -476,7 +587,9 @@ label english1top:
             lee "\"{i}Aide-de-camp in lieu de double entendre{/i}\""
             sze "\"Seems legit\""
             lee "\"{i}Je suis exhausted{/i}\""
-            return
+            jump eng1waitforschlammie
+
+label eng1waitforschlammie:
     "You find yourself engrossed in idle banter with Andrew Lee and Steven Deng"
     sze "\"huh...is it just me or is our teacher late?\""
     dng "\"nah, you're right, dunno what Schlam is doing\""
@@ -523,6 +636,7 @@ label english1top:
     slm "\"Alright, time to get the show back on the road\""
 # include scene change and stuff
     slm "\"Ok, get yourselves seated. I see some familiar and unfamiliar faces.\""
+    "Schlam appears to be a somewhat aged, short, slightly round, Caucasian woman; a benign, humoured individual."
     slm "\"Good, good...ah...\""
     slm "\"Get used to your seating arrangements, you'll be staying in them for the rest of the year, otherwise I will forget your name\""
     slm "\"Unless you do drama, in which case there's a deus ex machina making me remember your name\""
@@ -532,7 +646,28 @@ label english1top:
     roy "\"...it's Roy\""
     slm "\"I'll remember that Troy\""
     roy "\"ROY\""
-#   slm "\"stfu Boy\""
-    "Schlam appears to be a somewhat aged, short, slightly round, Caucasian woman; a benign, humoured individual."
-    sze "\"Bullshittery at its finest\""
+    slm "\"Shut it, Boy\""
+    "Roll call took forever, as Schlam went around trying to remember everyone's names and the correct way of pronouncing them"
+    "You have a niggling feeling that she would forget most people's names by your next lesson"
+    slm "\"Basically, in preliminary (Year 11) English, us teachers are going to see if you kids are worthy of doing Extension 1 or 2 English\""
+    slm "\"although, most of your cohort will probably only go into Advanced English, by the end of the year, like the unworthy scrubs that you are\""
+    slm "\"Anyway, your modules for yr 11 are...\""
+    slm "\"Fk...I forgot\""
+    slm "\"excuse my french\""
+    slm "\"aaah there's my cheat sheet\""
+    slm "\"hehehehehe\""    
+    slm "\"Alright, first you will be doing the Area of Study, or AoS of \"Belonging\". Basically, what it means to belong.\""
+    roy "\"So, miss, like belong in a place, society, in the universe at large? Does it also explore escapism{nw}\""
+    slm "\"STFU, SOY\""
+    roy "\"...\""
+    "You listen as one of the drama students, essentially paraphrase what Roy said"
+    slm "\"Excellent point, MacIntosh. Yes, the texts we will explore will...err...explore these topics in depth\""
+    roy "\"...\""
+    slm "\"You will each be provided an anthology of poems, as prescribed texts...but not yet, cos the library is run by incompetent gophers\""
+    slm "\"Actually, no, it's cos the grade above is too busy sniffing glue to return any of their texts for you to use yet\""
+    slm "\"This applies for your Shakespeare text of the year, Othello\""
+    slm "\"and your text for the study of the American Dream \"Of Mice and Men\", although it is paired with \"American Beauty\"...\""
+    slm "\"Actually, all our discs of \"American Beauty\" are missing, something about students over-analysing roses in bedrooms\""
+    slm "\"And would you look at that, lesson's over\""
+    slm "\"Hopefully next lesson, we will be able to take the glue bottles and texts from the hands of the students in the grade above\""
     jump mthext1day1

@@ -10,7 +10,7 @@ screen kms:
     else:
         use kmsGun
     textbutton "{i}Don't kms{/i}":
-        xalign 0.9
+        xalign 0.84
         yalign 0.1
         action [
             Hide("kms"),

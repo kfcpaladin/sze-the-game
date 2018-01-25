@@ -141,7 +141,7 @@ init python:
             "title": "Be a rebel",
             "brief": "You don't feel like going to school",
             "description": "You have decided to abandon your education in the morning",
-            "dependencies": None,
+            "dependencies": "locked",
             "label": "jigschool1",
             "icon": loadImage("quest_jigschool1.png"),
             "conditions": {

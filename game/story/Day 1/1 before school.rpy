@@ -62,24 +62,30 @@ label schoolday1:
             sze "{i}Blushes violently{/i}"
             "Nevermind..."
             $ game.hasDiary = True
-            show screen float_menu
+            "You notice the bookmark string thingy is labelled with \"kms\""
+            "As you graze the side of it, your skin tears open spilling {color=[colour.red]}{b}blood{/b}{/color} onto the pages"
             $ achievements.unlockAchievement("unlockSuicide")
-            "You notice a button labelled \"kms\" in the top right hand corner"
             sze "\"How come I can kill myself with this diary\""
             mox "\"Its a new feature that students will want after they start the {b}HSC{/b}\""
             sze "\"How do I use this thing?\""
             mox "\"Here let me show you\""
             $ renpy.show_screen(diary.getCurrentPage()) 
-            $ game.diaryIntro = True
             mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
             $ achievements.unlockAchievement("unlockDiary")
             hide screen float_menu
             show screen float_menu
             mox "\"Click on \"Open diary\" to open the diary again\""
             "...."
-            "You walk away, holding this leather bound book between your asscheeks"
-            sze "{i}blushes{/i}"
-
+            "You walk away, holding this leather bound book between your {s}asscheeks{/s}hands"
+            sze "This school kinda {color=[colour.red]}{b}sucks{/b}{/color}"
+            $ sze.loss("fort")
+            mox "What you just {b}say{/b} young man {b}!!!{/b}"
+            sze "I said Michael Kirby is the epitome of social justice"
+            "Your lie does not sound very convincing"
+            mox "Ahhh how true that is"
+            $ sze.gain("fort", 2)
+            "You feel a strong temptation to jig your first day of school"
+            $ quests.unlockQuest("jigschool1")
         else:
             sze "\"But you already gave me one\""
             mox "\"Since when did I give this out to anyone\""

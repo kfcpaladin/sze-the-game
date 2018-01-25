@@ -11,7 +11,6 @@ init -10 python:
         "delivery": False,
         "electionPromise": False,
         "hasDiary": False,
-        "diaryIntro": False,
         "metDerek": False,
         "norton": False,
         "stealWillisGirl": False,

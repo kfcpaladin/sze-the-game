@@ -2,8 +2,16 @@
 errors listed below, and try again.
 
 
-File "game/story/Quests/1.0 jig school.rpy", line 56: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "{color=[colour.yellow]}{i}Throw your urine soaked pants at him{/i}{/color}"
-                                                                                ^
+File "game/story/Day 1/1 before school.rpy", line 82: expected statement.
+    sze.loss("fort")
+                    ^
+
+File "game/story/Day 1/1 before school.rpy", line 87: expected statement.
+    sze.gain("fort", 1)
+                       ^
+
+File "game/story/Day 1/1 before school.rpy", line 89: expected statement.
+    quests.unlockQuest("jigschool1")
+                                    ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

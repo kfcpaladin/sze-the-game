@@ -77,6 +77,16 @@ label schoolday1:
             mox "\"Click on \"Open diary\" to open the diary again\""
             "...."
             "You walk away, holding this leather bound book between your {s}asscheeks{/s}hands"
+            
+        else:
+            sze "\"But you already gave me one\""
+            mox "\"Since when did I give this out to anyone\""
+            sze "\"Maybe you forgot? People do have a habit of forgetting me\""
+            mox "\"...\""
+            mox "\"Oh sorry what {b}were{/b} you saying again?\""
+            "You walk off as [mox.name] lectures a new group of students"
+        # jig school quest
+        if "jigschool1" in quests.unavailable:
             sze "This school kinda {color=[colour.red]}{b}sucks{/b}{/color}"
             $ sze.loss("fort")
             mox "What you just {b}say{/b} young man {b}!!!{/b}"
@@ -86,14 +96,8 @@ label schoolday1:
             $ sze.gain("fort", 2)
             "You feel a strong temptation to jig your first day of school"
             $ quests.unlockQuest("jigschool1")
-        else:
-            sze "\"But you already gave me one\""
-            mox "\"Since when did I give this out to anyone\""
-            sze "\"Maybe you forgot? People do have a habit of forgetting me\""
-            mox "\"...\""
-            mox "\"Oh sorry what {b}were{/b} you saying again?\""
-            "You walk off as [mox.name] lectures a new group of students"
         hide moxham happy
+        # rollcall
         "3 hours later"
         "I arrive at rollcall"
         "But no roll call teacher"

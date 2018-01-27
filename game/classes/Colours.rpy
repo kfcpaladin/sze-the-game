@@ -1,6 +1,5 @@
 init -1 python:
     import itertools
-    import collections
 
     class AdvancedColour(str):
         """
@@ -12,8 +11,6 @@ init -1 python:
 
         def __init__(self, *args, **kwargs):
             self.__default__()  # need to initialise defaults first
-            Range = collections.namedtuple("Range", "min max")
-            self.range = Range(min=0, max=255)
             self.hexFormat = "{:02x}"   
             self.updateStringCache()    # get string cache after specifying hex format
             self.set(*args, **kwargs)   # set colour based on input args
@@ -23,7 +20,11 @@ init -1 python:
             Setups all the default rgb components, and the default values
         """
         def __default__(self):
-            self.components = ("r", "g", "b", "a")
+            self.components = ("r", "g", "b", "a") # must be declared first, since __setattr__ depends on it
+            self.range = AttrDict({
+                "min": 0, 
+                "max": 255,
+            })
             self.defaultValues = (0, 0, 0, 255)
             self.stringType = (str, basestring, unicode)
             # avoid setting using __setattr__, to avoid uninitialisation of self.components
@@ -58,8 +59,9 @@ init -1 python:
         def __setattr__(self, name, value):
             self.__dict__[name] = value
             if name in self.components: # if component changes, update string cache
+                self.__dict__[name] = self.clamp(value)
                 self.updateStringCache()
-
+                
         def __mul__(self, scale):
             copy = self.getCopy()
             copy.multiply(scale)
@@ -263,3 +265,61 @@ init -1 python:
         """
         def updateStringCache(self):
             self.stringCache = self.getHex()
+
+    
+    class RainbowColour(AdvancedColour, renpy.Displayable):
+        def __init__(self):
+            AdvancedColour.__init__(self, "#f00")
+            renpy.Displayable.__init__(self)
+            self.currentCycle = 0
+            self.maxCycles = len(self.components)-1
+            self.fading = False
+            config.overlay_functions.append(lambda: ui.add(self))
+
+        def cycle(self, rate):
+            # get indexes
+            if self.currentCycle >= self.maxCycles:
+                self.currentCycle = 0
+            nextIndex = self.currentCycle+1
+            if nextIndex >= self.maxCycles:
+                nextIndex = 0
+            # get components
+            currentComponent = self.components[self.currentCycle]
+            currentValue = getattr(self, currentComponent)
+            nextComponent = self.components[nextIndex]
+            nextValue = getattr(self, nextComponent)
+            # increasing stage
+            if not self.fading:
+                # increase current component
+                if currentValue != self.range.max:
+                    setattr(self, currentComponent, currentValue+rate)
+                # increase next component if current if full
+                elif nextValue != self.range.max:
+                    setattr(self, nextComponent, nextValue+rate)
+                # if both are full, decrease current
+                else:
+                    self.fading = True
+            # start decreasing current value
+            else:
+                # decrease until current is 0, then cycle on
+                if currentValue != 0:
+                    setattr(self, currentComponent, currentValue-rate)
+                # if 0, cycle and grow next component
+                else:
+                    self.currentCycle += 1
+                    self.fading = False
+        
+        def update(self, rate=25):
+            self.cycle(rate)
+
+        def event(self, ev, x, y, st):
+            self.update()
+        
+        def render(self, width, height, st, at):
+            return renpy.Render(0, 0)
+
+
+
+            
+
+            

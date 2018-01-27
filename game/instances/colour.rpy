@@ -11,4 +11,5 @@ init python:
         "maroon":       AdvancedColour("#800000"),
         "black":        AdvancedColour(0, 0, 0),
         "white":        AdvancedColour(255, 255, 255),
+        "rainbow":      RainbowColour(),
     })

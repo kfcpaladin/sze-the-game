@@ -26,6 +26,7 @@ init python:
         popup({
             "text": "Unlocked item\n{0}".format(item.name),
             "icon": item.icon,
+            "colour": colour.rainbow,
         })
         bag.add(item)
 
@@ -61,6 +62,7 @@ init python:
         popup({
             "text": "Unlocked developer mode",
             "icon": loadImage("icon_rina.png"),
+            "colour": colour.rainbow,
         })
         config.developer = True
         game.diaryIntro = True
@@ -75,15 +77,4 @@ init python:
         sequence=[getattr(pygame, "K_{0}".format(char)) for char in "godmode"],
         unlock=developerUnlock,
     )
-
-    # this adds all the key sequences to the global ui which is updated by
-    # renpys main game loop, via "def event(...)" method
-    def addKeySequences():
-        ui.add(konamiCode)  
-        ui.add(kirbyCode)
-        ui.add(developerCode)
-
-    # can only add ui when other ui elements are added, not during 
-    # game initialisation
-    config.overlay_functions.append(addKeySequences)
 

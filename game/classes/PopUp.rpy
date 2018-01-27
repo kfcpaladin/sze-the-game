@@ -7,6 +7,7 @@ python early:
             self.defaultMessage = {
                 "icon": None,
                 "time_remain": 2,
+                "colour": None,
             }
 
         # adds a message to a list

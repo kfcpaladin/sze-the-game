@@ -1,91 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/1 before school.rpy", line 73, in script
-    mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
-  File "game/screens/screen_diary.rpy", line 16, in execute
-    screen diary_bag(bag=bag):
-  File "game/screens/screen_diary.rpy", line 16, in execute
-    screen diary_bag(bag=bag):
-  File "game/screens/screen_diary.rpy", line 37, in execute
-    use bag_screen(bag)
-  File "game/screens/screen_bag.rpy", line 2, in execute
-    screen bag_screen(bag, customConfig={}):
-  File "game/screens/screen_bag.rpy", line 2, in execute
-    screen bag_screen(bag, customConfig={}):
-  File "game/screens/screen_bag.rpy", line 37, in execute
-    use bag_inventory(bagConfig, bagConfig.grid.pos, bagConfig.grid.size, bagConfig.grid.iconSize, bagConfig.grid.borderSize, bagConfig.grid.matrix)
-  File "game/screens/screen_bag.rpy", line 42, in execute
-    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
-  File "game/screens/screen_bag.rpy", line 42, in execute
-    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
-  File "game/screens/screen_bag.rpy", line 44, in execute
-    frame:
-  File "game/screens/screen_bag.rpy", line 44, in keywords
-    frame:
-Exception: Not a color: <bound method AttrDict.do_mutation of {u'blue': AdvancedColour(#333cffff), u'purple': AdvancedColour(#5e33ffff), u'clear': AdvancedColour(#00000000), u'grey': AdvancedColour(#b6b3b3ff), u'yellow': AdvancedColour(#e6ac00ff), u'green': AdvancedColour(#009933ff), u'maroon': AdvancedColour(#800000ff), u'orange': AdvancedColour(#ff5733ff), u'black': AdvancedColour(#000000ff), u'white': AdvancedColour(#ffffffff), u'red': AdvancedColour(#ff0603ff)}>
+  File "renpy/common/00start.rpy", line 199, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 439, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 449, in <module>
+    renpy.load("_reload-2")
+  File "game/classes/AttrDict.rpy", line 9, in __getattr__
+    return self[name]
+KeyError: '__setstate__'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/1 before school.rpy", line 73, in script
-    mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 623, in execute
-    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1173, in say
-    who(what, *args, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 910, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 746, in do_display
-    **display_args)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 523, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/screen_diary.rpy", line 16, in execute
-    screen diary_bag(bag=bag):
-  File "game/screens/screen_diary.rpy", line 16, in execute
-    screen diary_bag(bag=bag):
-  File "game/screens/screen_diary.rpy", line 37, in execute
-    use bag_screen(bag)
-  File "game/screens/screen_bag.rpy", line 2, in execute
-    screen bag_screen(bag, customConfig={}):
-  File "game/screens/screen_bag.rpy", line 2, in execute
-    screen bag_screen(bag, customConfig={}):
-  File "game/screens/screen_bag.rpy", line 37, in execute
-    use bag_inventory(bagConfig, bagConfig.grid.pos, bagConfig.grid.size, bagConfig.grid.iconSize, bagConfig.grid.borderSize, bagConfig.grid.matrix)
-  File "game/screens/screen_bag.rpy", line 42, in execute
-    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
-  File "game/screens/screen_bag.rpy", line 42, in execute
-    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
-  File "game/screens/screen_bag.rpy", line 44, in execute
-    frame:
-  File "game/screens/screen_bag.rpy", line 44, in keywords
-    frame:
-  File "<screen language>", line 45, in <module>
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/imagelike.py", line 46, in __init__
-    self.color = renpy.easy.color(color)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/color.py", line 184, in __new__
-    raise Exception("Not a color: %r" % (color,))
-Exception: Not a color: <bound method AttrDict.do_mutation of {u'blue': AdvancedColour(#333cffff), u'purple': AdvancedColour(#5e33ffff), u'clear': AdvancedColour(#00000000), u'grey': AdvancedColour(#b6b3b3ff), u'yellow': AdvancedColour(#e6ac00ff), u'green': AdvancedColour(#009933ff), u'maroon': AdvancedColour(#800000ff), u'orange': AdvancedColour(#ff5733ff), u'black': AdvancedColour(#000000ff), u'white': AdvancedColour(#ffffffff), u'red': AdvancedColour(#ff0603ff)}>
+  File "renpy/common/00start.rpy", line 199, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 439, in script
+    python hide:
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 449, in <module>
+    renpy.load("_reload-2")
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 607, in load
+    roots, log = loads(location.load(filename))
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 59, in loads
+    return cPickle.loads(s)
+  File "game/classes/AttrDict.rpy", line 9, in __getattr__
+    return self[name]
+KeyError: '__setstate__'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

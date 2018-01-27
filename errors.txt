@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/classes/Colours.rpy", line 98: invalid syntax
-            if len(args) == 1 and type(args[0]) is in self.stringType:
-                                                     ^
+File "game/classes/Colours.rpy", line 308: invalid syntax
+        def update(self, rate=5)
     
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -8,6 +8,7 @@ init -2 python:
             self.unlocked = False
             self.index = 0
             self.sequence = sequence
+            config.overlay_functions.append(lambda: ui.add(self))
 
         # This function listens for events.
         def event(self, ev, x, y, st):

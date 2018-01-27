@@ -31,16 +31,14 @@ screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
                 $ transparency = 255
             elif transparency < 0:
                 $ transparency = 0
-            # get bolded message
-            $ message = "{b}" + str(popup["text"]) + "{/b}"
             # determine if a normal of icon popup should be used
             if popup["icon"]:
-                use popup_icon(popup["icon"], message, transparency, pos, size)
+                use popup_icon(popup, transparency, pos, size)
             else:
-                use popup_message(message, transparency, pos, size)
+                use popup_message(popup, transparency, pos, size)
 
 # popup message with associated icon
-screen popup_icon(icon, message, transparency, pos, size):
+screen popup_icon(popup, transparency, pos, size):
     default borderSize = 5
     # start the box outline
     frame:
@@ -54,23 +52,26 @@ screen popup_icon(icon, message, transparency, pos, size):
             yalign 0.5
             xsize size.x
             ysize size.y
-            background Solid(colour.maroon.applyAlpha(transparency))
+            if popup["colour"]:
+                background Solid(popup["colour"].applyAlpha(transparency))
+            else:
+                background Solid(colour.maroon.applyAlpha(transparency))
             hbox:
                 xsize size.x
                 ysize size.y
                 # end bxo rendering
-                use popup_icon_frame(icon, size.y, size.y, transparency, loadImage("icon_default.png"))
+                use popup_icon_frame(popup["icon"], size.y, size.y, transparency, loadImage("icon_default.png"))
                 vbox:
                     xsize size.x-size.y-borderSize
                     ysize size.y
-                    text message:
+                    text "{{b}}{}{{b}}".format(popup["text"]):
                         xalign 0.5
                         yalign 0.5
                         text_align 0.5
             
 
 # standard popup message
-screen popup_message(message, transparency, pos, size):
+screen popup_message(popup, transparency, pos, size):
     default borderSize = 5
     # start the box outline
     frame:
@@ -83,12 +84,15 @@ screen popup_message(message, transparency, pos, size):
             yalign 0.5
             xsize size.x-borderSize
             ysize size.y-borderSize
-            background Solid(colour.maroon.applyAlpha(transparency))
+            if popup["colour"]:
+                background Solid(popup["colour"].applyAlpha(transparency))
+            else:
+                background Solid(colour.maroon.applyAlpha(transparency))
             # end bxo rendering
             vbox:
                 xsize size.x-borderSize
                 ysize size.y-borderSize
-                text message:
+                text "{{b}}{}{{b}}".format(popup["text"]):
                     xalign 0.5
                     yalign 0.5
                     text_align 0.5

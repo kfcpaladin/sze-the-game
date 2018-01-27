@@ -19,3 +19,4 @@ init python:
             width = 30,
         ),
     })
+    pong.paddles["leftPaddle"].colour = colour.rainbow

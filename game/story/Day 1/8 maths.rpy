@@ -8,7 +8,7 @@ label mthext1day1:
     menu:
         "kms":
             "wow you suck at keeping yourself alive"
-            jump dead
+            call screen kms
         "don't":
             "You don't, killing urself means u might not be able to play kahoot later, and kahoot is always worth living for"
             "In the first 15 minutes of maths class the drama starts."

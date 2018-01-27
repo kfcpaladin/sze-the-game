@@ -1,32 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 6, in script
-    $ autosave()
-  File "game/story/script.rpy", line 6, in <module>
-    $ autosave()
-  File "game/scripts/autosave.rpy", line 8, in autosave
-    renpy.save("autosave")
-PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
+  File "game/story/script.rpy", line 26, in script
+    "It is the first day of school and you do not look forward to another miserable year of Fort Street."
+  File "renpy/common/00action_control.rpy", line 127, in __call__
+    renpy.show_screen(self.screen, *self.args, **self.kwargs)
+Exception: Screen dead is not known.
+
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 6, in script
-    $ autosave()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/story/script.rpy", line 6, in <module>
-    $ autosave()
-  File "game/scripts/autosave.rpy", line 8, in autosave
-    renpy.save("autosave")
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 300, in save
-    dump((roots, renpy.game.log), logf)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 45, in dump
-    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
-PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
+  File "game/story/script.rpy", line 26, in script
+    "It is the first day of school and you do not look forward to another miserable year of Fort Street."
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 623, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1173, in say
+    who(what, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 910, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 746, in do_display
+    **display_args)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/character.py", line 523, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 3237, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/transition.py", line 156, in event
+    return self.transitions[-1].event(ev, x, y, st)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/transition.py", line 45, in event
+    return self.new_widget.event(ev, x, y, st)  # E1101
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 653, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/behavior.py", line 1977, in event
+    return run(self.function, *self.args, **self.kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/behavior.py", line 299, in run
+    new_rv = run(i, *args, **kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/behavior.py", line 306, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_control.rpy", line 127, in __call__
+    renpy.show_screen(self.screen, *self.args, **self.kwargs)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 1022, in show_screen
+    raise Exception("Screen %s is not known.\n" % (name[0],))
+Exception: Screen dead is not known.
+
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

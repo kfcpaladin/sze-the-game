@@ -602,13 +602,14 @@ label eng1waitforschlammie:
     "How to prevent this escalation to total war?"
     menu:
         "With calm and reason":
-            return
+            sze "\"Guys just chill\""
         "By redirecting their anger towards yourself":
-            return
+            "After being brutally molested as a child, you cannot bear the anger of others"
         "Look for the nearest teacher":
-            return
+            "You hear the sound of gigantic footsteps reveberate towards you"
         "Blame Roy for everything":
-            return
+            sze "Hey guys I think {b}Roy{/b} just {color=[colour.green]}{b}{i}farted{/i}{/b}{/color}"
+    "{b}Thud, thud, thud{/b}"
     sze "\"Uhhhh\""
     slm "\"Stop blocking the way, moving quickly now\""
     "You are nearly bowled over by a short, anthropomorphic tornado"
@@ -618,9 +619,13 @@ label eng1waitforschlammie:
     sze "Ahem, narrator? Please get on with it"
     "You are wondering why it's still movin{nw}"
     slm "\"Right, I am excited to see how you lovely kids will-{nw}\""
+    $ playsfx("vpunch.ogg")
     slm "\"If\"" with vpunch
+    $ playsfx("hpunch.ogg")
     slm "\"This\"" with hpunch
+    $ playsfx("vpunch.ogg")
     slm "\"Bloody\"" with vpunch
+    $ playsfx("hpunch.ogg")
     slm "\"Door would just open!!\"" with hpunch
     "The short anthropomorphic tornado gave the door a futile kick before spinning off in the direction of the office"
     sze "...k"

@@ -21,7 +21,8 @@ screen float_menu:
             ] 
             xalign 0.5
 
-screen refreshTimer(rate=1/float(config.framerate)):
+# a timer that does nothing but refresh a screen
+screen refreshTimer(rate=0.05):
     timer rate:
         repeat True
         action Function(lambda: None)

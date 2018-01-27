@@ -1,11 +1,20 @@
 init python:
 
-    # 1 before rollcall
+    # 1.0 jigschool quests
     labels.extend([
         {
             "name": "jigschool1",
+            "jump": ["jigschool1_todd_teach", "jigschool1_todd_death"],
+            "colour": colour.green,
+        },
+        {
+            "name": "jigschool1_todd_teach",
             "jump": "recess1a",
-            "pos": (0.5, 1),
+            "colour": colour.green,
+        },
+        {
+            "name": "jigschool1_todd_death",
+            "jump": "dead",
             "colour": colour.green,
         },
     ])

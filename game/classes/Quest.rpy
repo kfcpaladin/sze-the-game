@@ -195,3 +195,12 @@ python early:
                 for param in self.questParams:
                     print("{0}: {1}".format(param, quests[questID][param]))
                 print("")
+
+        """
+            Pickling support for achievements
+        """
+        def __getstate__(self):
+            return self.__dict__
+        
+        def __setstate__(self, state):
+            self.__dict__ = state

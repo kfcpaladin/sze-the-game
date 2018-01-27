@@ -10,6 +10,13 @@ init -1 python:
 
         def __setattr__(self, name, value):
             self[name] = value
+        
+        # pickling
+        def __getstate__(self):
+            return self.__dict__
+
+        def __setstate__(self, state):
+            self.__dict__ = state
 
         def combine(self, otherDict):
             self.update(otherDict)

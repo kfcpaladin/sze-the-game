@@ -1,6 +1,17 @@
 init -1 python:
     import itertools
 
+    """
+        A highly advanced colour class for use in the renpy visual novel
+        Includes features such as:
+            - mixing
+            - inverting
+            - changing alpha
+            - getting hex code
+            - getting rgb code
+            - initialising with hex string, rgba keywords and rgba tuple
+            - will essentially behave like a string for the renpy.display.imagelike.Solid() function
+    """
     class AdvancedColour(str):
         """
             Create new superclass of str before __init__, so that it 
@@ -267,15 +278,41 @@ init -1 python:
             self.stringCache = self.getHex()
 
     
+
+    """
+        A subclass of the generic AdvancedColour class, which offers support for 
+        transitioning rainbow colours.
+        The colour will start off from red, before transitioning into the spectrum
+        and then repeating the process again.
+        It is hooked into an event listener, through self.event(...) and self.render(..),
+        which makes sure that the rainbow colour will update every game loop.
+        The rate at which the rainbow transitions is available as a parameter:
+            rainbow = RainbowColour() for default rate=25, or
+                    = RainbowColour(x) for a custom rate=x
+    """
     class RainbowColour(AdvancedColour, renpy.Displayable):
-        def __init__(self):
-            AdvancedColour.__init__(self, "#f00")
+        def __init__(self, rate=25):
+            AdvancedColour.__init__(self, "#f00")   # start off at red
             renpy.Displayable.__init__(self)
             self.currentCycle = 0
             self.maxCycles = len(self.components)-1
             self.fading = False
+            self.rate = rate
+            # add to ui when game starts, to be incoporated into the game loop
             config.overlay_functions.append(lambda: ui.add(self))
 
+        """
+            Cycles through the colour spectrum like a rainbow
+            Starts off as the follow:
+                Start = (255, 0, 0)
+                Add Green = (255, 0->255, 0) => (255, 255, 0)
+                Fade Red  = (255->0, 255, 0) => (0, 255, 0)
+                Add Blue  = (0, 255, 0->255) => (0, 255, 255)
+                Fade Green = (0, 255->0, 255) =>(0, 0, 255)
+                Add Red =   (0->255, 0, 255) => (255, 0, 255)
+                Fade Green = (255, 0, 255->0) => (255, 0, 0)
+                Repeat = (255, 0, 0)
+        """
         def cycle(self, rate):
             # get indexes
             if self.currentCycle >= self.maxCycles:
@@ -309,11 +346,13 @@ init -1 python:
                     self.currentCycle += 1
                     self.fading = False
         
-        def update(self, rate=25):
-            self.cycle(rate)
-
+        """
+            Triggered by the main game loop every 1/config.framerate seconds
+            event = event handler
+            render = make sure that the game will update this
+        """
         def event(self, ev, x, y, st):
-            self.update()
+            self.cycle(self.rate)
         
         def render(self, width, height, st, at):
             return renpy.Render(0, 0)

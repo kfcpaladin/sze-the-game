@@ -325,3 +325,45 @@ Traceback (most recent call last):
     return eval(bytecode, globals, locals)
   File "<none>", line 1, in <module>
 AttributeError: 'Quests' object has no attribute 'locked'
+
+Full traceback:
+  File "game/story/script.rpy", line 6, in script
+    $ autosave()
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/story/script.rpy", line 6, in <module>
+    $ autosave()
+  File "game/scripts/autosave.rpy", line 8, in autosave
+    renpy.save("autosave")
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 300, in save
+    dump((roots, renpy.game.log), logf)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 45, in dump
+    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
+PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
+
+While running game code:
+  File "game/story/script.rpy", line 6, in script
+    $ autosave()
+  File "game/story/script.rpy", line 6, in <module>
+    $ autosave()
+  File "game/scripts/autosave.rpy", line 8, in autosave
+    renpy.save("autosave")
+PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
+Traceback (most recent call last):
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/execution.py", line 468, in run
+    node.execute()
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/story/script.rpy", line 6, in <module>
+    $ autosave()
+  File "game/scripts/autosave.rpy", line 8, in autosave
+    renpy.save("autosave")
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 300, in save
+    dump((roots, renpy.game.log), logf)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 45, in dump
+    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
+PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed

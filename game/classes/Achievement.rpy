@@ -178,11 +178,3 @@ python early:
                     print("{0}: {1}".format(param, achievement[param]))
                 print("")
 
-        """
-            Pickling support for achievements
-        """
-        def __getstate__(self):
-            return self.__dict__
-        
-        def __setstate__(self, state):
-            self.__dict__ = state

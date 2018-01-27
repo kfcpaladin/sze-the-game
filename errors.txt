@@ -2,16 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/Day 1/1 before school.rpy", line 82: expected statement.
-    sze.loss("fort")
-                    ^
-
-File "game/story/Day 1/1 before school.rpy", line 87: expected statement.
-    sze.gain("fort", 1)
-                       ^
-
-File "game/story/Day 1/1 before school.rpy", line 89: expected statement.
-    quests.unlockQuest("jigschool1")
-                                    ^
+File "game/classes/Colours.rpy", line 98: invalid syntax
+            if len(args) == 1 and type(args[0]) is in self.stringType:
+                                                     ^
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

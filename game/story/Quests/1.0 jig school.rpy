@@ -50,7 +50,7 @@ label jigschool1:
             tod "{b}What a feeble race these humans are{/b}"
             $ playsfx("vpunch.ogg")
             "In one swell swoop your internal organs part way from your body" with vpunch
-            "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thorasic cavity{/i}{/b}{/color}"
+            "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thoracic cavity{/i}{/b}{/color}"
             sze "urggg..."
             jump jigschool1_todd_teach
         "{i}Try to run away{/i}":

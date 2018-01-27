@@ -1,6 +1,6 @@
 # Allow for dictionaries to act like javascript dictionaries
 # this if for clarity reasons
-init python:
+init -1 python:
     class AttrDict(dict):
         def __init__(self, init={}):
             dict.__init__(self, init)

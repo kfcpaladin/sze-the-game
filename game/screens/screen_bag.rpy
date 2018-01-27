@@ -4,15 +4,15 @@ screen bag_screen(bag, customConfig={}):
     default tooltipAlpha = 180
     default bagConfig = AttrDict({
         "itemColour": AttrDict({
-            "item_used":     colour.green+"{:02x}".format(itemAlpha),
-            "item_not_used": colour.yellow+"{:02x}".format(itemAlpha),
-            "item_blocked":  colour.red+"{:02x}".format(itemAlpha),
+            "item_used":     colour.green.applyAlpha(itemAlpha),
+            "item_not_used": colour.yellow.applyAlpha(itemAlpha),
+            "item_blocked":  colour.red.applyAlpha(itemAlpha),
         }),
         "tooltipColour": AttrDict({
-            "item_used":     colour.green+"{:02x}".format(tooltipAlpha),
-            "item_not_used": colour.yellow+"{:02x}".format(tooltipAlpha),
-            "item_blocked":  colour.red+"{:02x}".format(tooltipAlpha),
-            "background":    colour.maroon+"{:02x}".format(tooltipAlpha),
+            "item_used":     colour.green.applyAlpha(tooltipAlpha),
+            "item_not_used": colour.yellow.applyAlpha(tooltipAlpha),
+            "item_blocked":  colour.red.applyAlpha(tooltipAlpha),
+            "background":    colour.maroon.applyAlpha(tooltipAlpha),
         }),
         "bag": bag, 
         "grid": AttrDict({
@@ -42,7 +42,7 @@ screen bag_screen(bag, customConfig={}):
 screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
     # render inventory
     frame:
-        background Solid(colour.clear)
+        background Solid(colour.transparent)
         xoffset pos.x-borderSize
         yoffset pos.y-borderSize
         hbox:

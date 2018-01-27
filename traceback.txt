@@ -1,23 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/1 before school.rpy", line 42, in script call
-    "Oh shit, the Principal..."
-  File "game/story/Day 1/1 before school.rpy", line 71, in script call
-    mox "\"Here let me show you\""
-  File "game/story/Quests/1.0 jig school.rpy", line 51, in script
-    "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thorasic cavity{/i}{/b}{color}"
-IndexError: string index out of range
+  File "game/story/Day 1/1 before school.rpy", line 73, in script
+    mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
+  File "game/screens/screen_diary.rpy", line 16, in execute
+    screen diary_bag(bag=bag):
+  File "game/screens/screen_diary.rpy", line 16, in execute
+    screen diary_bag(bag=bag):
+  File "game/screens/screen_diary.rpy", line 37, in execute
+    use bag_screen(bag)
+  File "game/screens/screen_bag.rpy", line 2, in execute
+    screen bag_screen(bag, customConfig={}):
+  File "game/screens/screen_bag.rpy", line 2, in execute
+    screen bag_screen(bag, customConfig={}):
+  File "game/screens/screen_bag.rpy", line 37, in execute
+    use bag_inventory(bagConfig, bagConfig.grid.pos, bagConfig.grid.size, bagConfig.grid.iconSize, bagConfig.grid.borderSize, bagConfig.grid.matrix)
+  File "game/screens/screen_bag.rpy", line 42, in execute
+    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
+  File "game/screens/screen_bag.rpy", line 42, in execute
+    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
+  File "game/screens/screen_bag.rpy", line 44, in execute
+    frame:
+  File "game/screens/screen_bag.rpy", line 44, in keywords
+    frame:
+Exception: Not a color: <bound method AttrDict.do_mutation of {u'blue': AdvancedColour(#333cffff), u'purple': AdvancedColour(#5e33ffff), u'clear': AdvancedColour(#00000000), u'grey': AdvancedColour(#b6b3b3ff), u'yellow': AdvancedColour(#e6ac00ff), u'green': AdvancedColour(#009933ff), u'maroon': AdvancedColour(#800000ff), u'orange': AdvancedColour(#ff5733ff), u'black': AdvancedColour(#000000ff), u'white': AdvancedColour(#ffffffff), u'red': AdvancedColour(#ff0603ff)}>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/1 before school.rpy", line 42, in script call
-    "Oh shit, the Principal..."
-  File "game/story/Day 1/1 before school.rpy", line 71, in script call
-    mox "\"Here let me show you\""
-  File "game/story/Quests/1.0 jig school.rpy", line 51, in script
-    "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thorasic cavity{/i}{/b}{color}"
+  File "game/story/Day 1/1 before school.rpy", line 73, in script
+    mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 623, in execute
     renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/exports.py", line 1173, in say
@@ -32,65 +44,48 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2916, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 1980, in draw_screen
-    renpy.config.screen_height,
-  File "renpy/display/render.pyx", line 430, in renpy.display.render.render_screen (gen/renpy.display.render.c:6938)
-    rv = render(root, width, height, 0, 0)
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 625, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 702, in render
-    surf = render(child, width, height, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 1093, in render
-    st, at)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 904, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "renpy/display/render.pyx", line 110, in renpy.display.render.render (gen/renpy.display.render.c:3445)
-    cpdef render(d, object widtho, object heighto, double st, double at):
-  File "renpy/display/render.pyx", line 196, in renpy.display.render.render (gen/renpy.display.render.c:2983)
-    rv = d.render(widtho, heighto, st, at)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1774, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 550, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1000, in segment
-    push().color = renpy.easy.color(value)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/color.py", line 132, in __new__
-    if c[0] == '#':
-IndexError: string index out of range
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
+    d.visit_all(callback)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 401, in visit_all
+    callback(self)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 411, in per_interact
+    self.update()
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 580, in update
+    self.screen.function(**self.scope)
+  File "game/screens/screen_diary.rpy", line 16, in execute
+    screen diary_bag(bag=bag):
+  File "game/screens/screen_diary.rpy", line 16, in execute
+    screen diary_bag(bag=bag):
+  File "game/screens/screen_diary.rpy", line 37, in execute
+    use bag_screen(bag)
+  File "game/screens/screen_bag.rpy", line 2, in execute
+    screen bag_screen(bag, customConfig={}):
+  File "game/screens/screen_bag.rpy", line 2, in execute
+    screen bag_screen(bag, customConfig={}):
+  File "game/screens/screen_bag.rpy", line 37, in execute
+    use bag_inventory(bagConfig, bagConfig.grid.pos, bagConfig.grid.size, bagConfig.grid.iconSize, bagConfig.grid.borderSize, bagConfig.grid.matrix)
+  File "game/screens/screen_bag.rpy", line 42, in execute
+    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
+  File "game/screens/screen_bag.rpy", line 42, in execute
+    screen bag_inventory(bagConfig, pos, size, iconSize, borderSize, matrix):
+  File "game/screens/screen_bag.rpy", line 44, in execute
+    frame:
+  File "game/screens/screen_bag.rpy", line 44, in keywords
+    frame:
+  File "<screen language>", line 45, in <module>
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/imagelike.py", line 46, in __init__
+    self.color = renpy.easy.color(color)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/color.py", line 184, in __new__
+    raise Exception("Not a color: %r" % (color,))
+Exception: Not a color: <bound method AttrDict.do_mutation of {u'blue': AdvancedColour(#333cffff), u'purple': AdvancedColour(#5e33ffff), u'clear': AdvancedColour(#00000000), u'grey': AdvancedColour(#b6b3b3ff), u'yellow': AdvancedColour(#e6ac00ff), u'green': AdvancedColour(#009933ff), u'maroon': AdvancedColour(#800000ff), u'orange': AdvancedColour(#ff5733ff), u'black': AdvancedColour(#000000ff), u'white': AdvancedColour(#ffffffff), u'red': AdvancedColour(#ff0603ff)}>
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

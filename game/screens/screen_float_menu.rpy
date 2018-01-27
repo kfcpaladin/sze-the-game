@@ -1,7 +1,7 @@
 # float menu for the game
 screen float_menu:
     frame:
-        background Solid(colour.clear)
+        background Solid(colour.transparent)
         align (0.84, 0.04)
         has vbox
         spacing 10

@@ -73,3 +73,8 @@ The standard format for a changelog is the date as a title, followed by bullet p
 
 **24/01/2018**
 * Made gun in kms screen shoot bullets
+* Added Todd quest line
+* Finished 7.0 english.rpy story file
+
+**27/01/2018**
+* Added AdvancedColour class, for support with colour mixing, inversion and alpha changes

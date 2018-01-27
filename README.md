@@ -37,36 +37,35 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 | Class                                              | Description                                                                       |
 | -------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [ADVCharacter](./renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
-| [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
-| [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
-| -------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
-| [Diary](./game/classes/Diary.rpy)                  | Class used to store and manage all diary pages                                    |
-| [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
 | [Achievements](./game/classes/Achievement.rpy)     | Used to store, add and update achievements in realtime using the gameloop         |
-| [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
-| [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
-| [PopUp](./game/classes/PopUp.rpy)                  | Stores all popups, and manages their lifetime                                     |
-| -------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [AdvancedColour](./game/classes/Colours.rpy)       | Allow for making of hex code colours using RGB, and a selection of default colours|
 | [AttrDict](./game/classes/AttrDict.rpy)            | Used as a wrapped for the python dict, allowing for access like JSON object       |
 | [Bullet](./game/classes/Bullet.rpy)                | Used by the kmsGun screen for the gun projectiles                                 |
 | [CodeSequence](./game/classes/CodeSequence.rpy)    | Used for easter eggs, where things can be unlocked using a code sequence          |
-| [Colours](./game/classes/Colours.rpy)              | Allow for making of hex code colours using RGB, and a selection of default colours|
+| [Diary](./game/classes/Diary.rpy)                  | Class used to store and manage all diary pages                                    |
+| [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
+| [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
+| [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
+| [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
+| [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
+| [PopUp](./game/classes/PopUp.rpy)                  | Stores all popups, and manages their lifetime                                     |
+| [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
 | [Vector](./game/classes/Vector.rpy)                | Used by pong, and various game screens, for position and sizes of objects         |
 
 ### Instances
 
 | Class         | Instance names  |
 | ------------- | --------------- |
-| MainCharacter | [sze](./game/instances/sze.rpy)       |
+| Achievements  | [achievements](./game/instances/achievements.rpy) |
+| AdvancedColour| [colour](./game/instances/colour.rpy) |
+| Diary         | [diary](./game/instances/diary.rpy)   |
 | Friend        | [ale, bil, but, cha, dea, dik, dng, drk, flu, gra, jit, kok, lee, mox, pra, rin, roy, rus, slm, tod, wil, wiy](./game/instances/friends.rpy) |
 | Game          | [game](./game/instances/game.rpy)     |
-| Diary         | [diary](./game/instances/diary.rpy)   |
-| Quest         | [quests](./game/instances/quests.rpy) |
-| Achievements  | [achievements](./game/instances/achievements.rpy) |
 | Inventory     | [bag](./game/instances/inventory.rpy) |
 | Item          | [{itemList}](./game/instances/items.rpy)|
+| MainCharacter | [sze](./game/instances/sze.rpy)       |
 | PopUp         | [popupList](./games/instances/popup.rpy) |
+| Quest         | [quests](./game/instances/quests.rpy) |
 
 ### Usage inside renpy script
 

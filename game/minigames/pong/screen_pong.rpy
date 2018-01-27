@@ -103,7 +103,6 @@ screen pong_score(left, right):
         "left":  (1366/4, 50),
         "right": (3*1366/4, 50),
     }
-    default clearColour = "#ffffff00"
     default font = {
         "size": 60,
         "name": "DejaVuSans.ttf",
@@ -112,7 +111,7 @@ screen pong_score(left, right):
     frame:
         xoffset scorePos["left"][0]
         yoffset scorePos["left"][1]
-        background Color(clearColour)
+        background Color(colour.transparent)
         text "{0}".format(left):
             font font["name"]
             size font["size"]
@@ -120,7 +119,7 @@ screen pong_score(left, right):
     frame:
         xoffset scorePos["right"][0]
         yoffset scorePos["right"][1]
-        background Color(clearColour)
+        background Color(colour.transparent)
         text "{0}".format(right):
             font font["name"]
             size font["size"]

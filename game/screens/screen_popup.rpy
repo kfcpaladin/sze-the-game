@@ -42,12 +42,11 @@ screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
 # popup message with associated icon
 screen popup_icon(icon, message, transparency, pos, size):
     default borderSize = 5
-    $ alphaCode = "{:02x}".format(int(transparency))
     # start the box outline
     frame:
         xalign 0.5
         xsize size.x
-        background Solid(colour.white+alphaCode)
+        background Solid(colour.white.applyAlpha(transparency))
         # draw box background
         frame:
             style "popup_icon" # use for tight icon wrap
@@ -55,7 +54,7 @@ screen popup_icon(icon, message, transparency, pos, size):
             yalign 0.5
             xsize size.x
             ysize size.y
-            background Solid(colour.maroon+alphaCode)
+            background Solid(colour.maroon.applyAlpha(transparency))
             hbox:
                 xsize size.x
                 ysize size.y
@@ -73,19 +72,18 @@ screen popup_icon(icon, message, transparency, pos, size):
 # standard popup message
 screen popup_message(message, transparency, pos, size):
     default borderSize = 5
-    $ alphaCode = "{:02x}".format(int(transparency))
     # start the box outline
     frame:
         xalign 0.5
         xsize size.x
-        background Solid(colour.white+alphaCode)
+        background Solid(colour.white.applyAlpha(transparency))
         # draw box background
         frame:
             xalign 0.5
             yalign 0.5
             xsize size.x-borderSize
             ysize size.y-borderSize
-            background Solid(colour.maroon+alphaCode)
+            background Solid(colour.maroon.applyAlpha(transparency))
             # end bxo rendering
             vbox:
                 xsize size.x-borderSize
@@ -97,7 +95,6 @@ screen popup_message(message, transparency, pos, size):
 
 # icon frame with transparency parameter
 screen popup_icon_frame(icon, width, height, transparency, default=loadImage("default.png")):
-    $ alphaCode = "{:02x}".format(int(transparency))
     imagebutton:
         xsize width
         ysize width
@@ -105,7 +102,7 @@ screen popup_icon_frame(icon, width, height, transparency, default=loadImage("de
             idle Frame(icon)
         else:
             idle Frame(default)
-        background Solid(colour.white+alphaCode)
+        background Solid(colour.white.applyAlpha(transparency))
 
 # tight wrap style
 style popup_icon:

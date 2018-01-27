@@ -11,7 +11,6 @@
 # Screen that's used to display adv-mode dialogue.
 # http://www.renpy.org/doc/html/screen_special.html#say
 screen say(who, what, side_image=None, two_window=False):
-
     # Decide if we want to use the one-window or two-window variant.
     if not two_window:
 
@@ -124,7 +123,6 @@ screen input(prompt):
 # http://www.renpy.org/doc/html/screen_special.html#nvl
 
 screen nvl(dialogue, items=None):
-
     window:
         style "nvl_window"
 

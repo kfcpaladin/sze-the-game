@@ -14,6 +14,14 @@ KeyError: '__setstate__'
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/bootstrap.py", line 305, in bootstrap
+    renpy.main.main()
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/main.py", line 499, in main
+    run(restart)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/main.py", line 147, in run
+    renpy.execution.run_context(True)
+  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/execution.py", line 795, in run_context
+    context.run()
   File "renpy/common/00start.rpy", line 199, in script call
     call _load_reload_game from _call__load_reload_game_1
   File "renpy/common/00keymap.rpy", line 439, in script

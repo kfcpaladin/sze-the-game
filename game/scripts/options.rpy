@@ -14,6 +14,8 @@ init -1 python hide:
     config.screen_width = 1366
     config.screen_height = 768
 
+    config.framerate = 60
+
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
     config.console = "True"

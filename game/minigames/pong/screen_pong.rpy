@@ -40,7 +40,7 @@ label playPong(pong=pong):
             return
 
 # run the pong game
-screen screen_pong(pong, fps=70, tickrate=50, duration=30):
+screen screen_pong(pong, fps=60, tickrate=50, duration=30):
     modal True
     add loadImage("screen_bg_pong.png")
     # default variables

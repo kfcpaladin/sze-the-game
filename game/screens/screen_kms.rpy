@@ -28,7 +28,7 @@ screen kmsGun(bullets=bullets):
     default pos = Vector(200, 200)
     default size = Vector(200, 300)
     default gunSize = Vector(200, 150)
-    default bulletSpeed = 100
+    default bulletSpeed = 50
     default bulletSize = 20
     $ szeDead = False
     # arthur
@@ -76,10 +76,10 @@ screen kmsGun(bullets=bullets):
             ]
     else:
         # update gun position if sze not dead
-        timer 0.05:
+        timer 0.01:
             repeat True
             action [
-                SetScreenVariable("mousePos", None),
+                Function(lambda: None)
             ]
 
 init python:

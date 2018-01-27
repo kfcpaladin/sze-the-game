@@ -3,13 +3,15 @@ screen kms:
     modal True
     default totalSuicides = 2
     default randomIndex = renpy.random.randint(0, totalSuicides-1) 
+    use refreshTimer
     if randomIndex == 0:
         use kmsGun
     elif randomIndex == 1:
         use kmsHanging
     else:
         use kmsGun
-    textbutton "{i}Don't kms{/i}":
+    textbutton "{color=[colour.white]}{b}{i}Don't kms{/i}{b}{/color}":
+        background Solid(colour.rainbow)
         xalign 0.84
         yalign 0.1
         action [

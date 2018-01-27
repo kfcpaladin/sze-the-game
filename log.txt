@@ -1,4 +1,4 @@
-Sat Jan 27 17:17:33 2018
+Sat Jan 27 17:53:02 2018
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -7,27 +7,27 @@ Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.03s
-Loading script took 0.24s
-Loading persistent took 0.08s
+Loading script took 0.27s
+Loading persistent took 0.07s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.17s
-Loading analysis data took 0.05s
+Running init code took 0.15s
+Loading analysis data took 0.06s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 0.07s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.01s
 Build styles took 0.00s
-Load screen analysis took 0.07s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.17s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.26s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
@@ -299,71 +299,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.14941906929s
+Total time until interface ready: 1.55855202675s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.025141 seconds.
-- Frame drawn at 0.031973 seconds.
-- Frame drawn at 0.048244 seconds.
-- Frame drawn at 0.066553 seconds.
-- 0.066553 seconds to render 5 frames.
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-AttributeError: 'Quests' object has no attribute 'hidden'
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-AttributeError: 'Quests' object has no attribute 'locked'
-
-Full traceback:
-  File "game/story/script.rpy", line 6, in script
-    $ autosave()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/story/script.rpy", line 6, in <module>
-    $ autosave()
-  File "game/scripts/autosave.rpy", line 8, in autosave
-    renpy.save("autosave")
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 300, in save
-    dump((roots, renpy.game.log), logf)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 45, in dump
-    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
-PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
-
-While running game code:
-  File "game/story/script.rpy", line 6, in script
-    $ autosave()
-  File "game/story/script.rpy", line 6, in <module>
-    $ autosave()
-  File "game/scripts/autosave.rpy", line 8, in autosave
-    renpy.save("autosave")
-PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
-Traceback (most recent call last):
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/execution.py", line 468, in run
-    node.execute()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/story/script.rpy", line 6, in <module>
-    $ autosave()
-  File "game/scripts/autosave.rpy", line 8, in autosave
-    renpy.save("autosave")
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 300, in save
-    dump((roots, renpy.game.log), logf)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/loadsave.py", line 45, in dump
-    cPickle.dump(o, f, cPickle.HIGHEST_PROTOCOL)
-PicklingError: Can't pickle <type 'function'>: attribute lookup __builtin__.function failed
+- Frame drawn at 0.024706 seconds.
+- Frame drawn at 0.028712 seconds.
+- Frame drawn at 0.045510 seconds.
+- Frame drawn at 0.063115 seconds.
+- 0.063115 seconds to render 5 frames.

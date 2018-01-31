@@ -16,7 +16,7 @@ init python:
             "msgLoss": None,
         },
     })
-    bil.setDescription("Janitor person")
+    bil.setDescription("A janitor who has a PhD in Chemistry and Physics")
 
     # Aradhya
     but.setMessages({
@@ -25,7 +25,7 @@ init python:
             "msgLoss": "You probably made a bad butter pun or mispelt Arradiia's name, causing friendship with him to drop to [but.friendship].",
         },
     })
-    but.setDescription("Indian guy")
+    but.setDescription("Is a black belt in karate and can eat super-curry")
 
     # Chao
     cha.setMessages({
@@ -43,6 +43,7 @@ init python:
             "msgLoss": "You must've confused Masterchief with Masterchef cos he thinks you're a shit, resulting in friendship with Dean to drop to [dea.friendship]",
         },
     })
+    dea.setDescription("He is obsessed with Halo and his IQ fluctuates more rapidly than Fluitisma's mood")
 
     # Richard
     dik.setMessages({
@@ -51,6 +52,7 @@ init python:
             "msgLoss": "You probably use wrong grammar or make rude joke, very annoy Rick Dick, Friendship now is [dik.friendship]",
         },
     })
+    dik.setDescription("Has an impeccable taste in women, quite literally")
 
     # Steven
     dng.setMessages({
@@ -59,6 +61,7 @@ init python:
             "msgLoss": "You probs made bad joke about a female friend of Deng's, or were just retard, lowering friendship with him to [dng.friendship].",
         },
     })
+    dng.setDescription("Is a fanatic of hard metal, and he once urinated into a pile of tissues, you think...")
 
     # Derek
     drk.setMessages({
@@ -67,6 +70,7 @@ init python:
             "msgLoss": "You dirked Derk, causing friendship with him to fall to [drk.friendship]",
         },
     })
+    drk.setDescription("He and Willis seem to share an intangible bond, one that surpasses your feelings for her")
 
     # Fluitsima
     flu.setMessages({
@@ -75,6 +79,7 @@ init python:
             "msgLoss": "Something you did upset Ms Fluistma. Your current predicted Phys HSC mark is [flu.friendship]. Just kidding, thats your friendship with her",
         },
     })
+    flu.setDescription("Fluitisma is as emotionally stable as an inverted pendulum. You think she's your physics teacher, but it seems like she's just there to berate you...")
 
     # Grant
     gra.setMessages({
@@ -83,6 +88,7 @@ init python:
             "msgLoss": "Grant wasnt exactly pleased with your behaviour, resulting in friendship dropping to [gra.friendship]. Looks like you might have to spend some more time in the naughty corner.",
         },
     })
+    gra.setDescription("Likes to mingle with children, especially you since you are his favourite student. Does not like it when you touch his vices...")
 
     # Jitian/Gay
     jit.setMessages({
@@ -91,6 +97,7 @@ init python:
             "msgLoss": "Your friendship with Gary dropped to [jit.friendship]. You probably criticized his interests in chinese \"cartoons\" or something.",
         },
     })
+    jit.setDescription("Also known as Gary, his taste in pornographic material is questionable. His laptop is a treasure cove of exotic and potentially illegal material...")
 
     # Willis
     kok.setMessages({
@@ -99,6 +106,7 @@ init python:
             "msgLoss": "Fuck Willis. \"Friendship\" is currently at [kok.friendship]",
         },
     })
+    kok.setDescription("You never see him without Derek, and is your primary opponent in your battle to slay [rin.name]. Unfortunately his charm far exceeds yours, and you are more than likely to lose her to him permanently.")
 
     # Andrew Lee
     lee.setMessages({
@@ -107,6 +115,7 @@ init python:
             "msgLoss": "You Gullible George, coz your friendship with him is lowered to [lee.friendship].",
         },
     })
+    lee.setDescription("He aspires to be a future archeitect, and is currently helping your improve your foreign language skills to seduce [rin.name]")
 
     # Moxham
     mox.setMessages({
@@ -115,6 +124,7 @@ init python:
             "msgLoss": "Your friendship with Moxham dropped to [mox.friendship]. Looks like more afterschool detentions, suspensions or worse.",
         },
     })
+    mox.setDescription("The {color=[colour.red]}{b}dictator{/b}{/color} of this 1984 dystopian knightmare of a school, and is willing to kill anyone who stands between her and Michael Kirby.")
 
     # Pragrash
     pra.setMessages({
@@ -123,6 +133,7 @@ init python:
             "msgLoss": "You weren't very cricket to Pragash, reducing your friendship with him to [pra.friendship]",
         },
     })
+    pra.setDescription("He is a master of economics, and potentially figurehead for your infiltration of the {color=[colour.red]}{b}S.R.C.{/b}{/color}")
 
     # Serena 
     rin.setMessages({
@@ -131,6 +142,7 @@ init python:
             "msgLoss": "Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rin.friendship]",
         },
     })
+    rin.setDescription("She is the only one you truly desire {{b}}{{s}}{0}{{/s}}{{/b}}".format(rainbowText("except maybe your brother")))
 
     # Roy Zhang
     roy.setMessages({
@@ -139,6 +151,7 @@ init python:
             "msgLoss": "Your friendship with Roy dropped to [roy.friendship]. It is strongly advised that you immediately evacuate the room.",
         },
     })
+    roy.setDescription("Has the ability to generate a {color=[colour.green]}{b}plume of toxic gases{/b}{/color} that is capable of wiping out everyone in the school...")
 
     # Rusali
     rus.setMessages({
@@ -147,6 +160,7 @@ init python:
             "msgLoss": "You dogged [rus.name], thus your friendship level with him is currently as [rus.friendship]",
         },
     })
+    rus.setDescription("Tries harder than anyone to slay girls and ace trials, but unfornately cannot do either.")
 
     # Schlam
     slm.setMessages({
@@ -155,6 +169,7 @@ init python:
             "msgLoss": None,
         },
     })
+    slm.setDescription("Your English teacher who is also a hobbit of sorts. Perhaps one day, she can train you to act like Leonardo Decaprio...")
 
     # Todd Treoir
     tod.setMessages({
@@ -163,6 +178,7 @@ init python:
             "msgLoss": "Your cowardice and pitiful attitude has disappointed your master, making your friendship drop to [tod.friendship]. His palms, armed with a {color=[colour.red]}{b}life sucking organ{/b}{/color} begins to move towards you.",
         },
     })
+    tod.setDescription("An alien from outer space who for some reason is dresses as a {color=[colour.green]}{b}leprechaun{/b}{/color}. He/it is skilled in the latest form of alien martial arts, and perhaps could help you defeat your opponent [kok.name] once and forever...")
 
     # Will Yin
     wil.setMessages({
@@ -171,6 +187,7 @@ init python:
             "msgLoss": "Ur a fcktard and will, at this rate, fail Yang's eugenics program. Friendship with him is currently at [wil.friendship]",
         },
     })
+    wil.setDescription("He is an asian kid that you found under the gutters and adopted. Now he plans to restart the {color=[colour.red]}{b}fourth Reich{/b}{/color}, perhaps eliminating you if it is required for his eugenics program...")
     
     # Will Yang
     wiy.setMessages({
@@ -179,3 +196,4 @@ init python:
             "msgLoss": None,
         },
     })
+    wiy.setDescription("[wiy.name] suffers from multi-peronality disorder, which causes him to fluctuate between {s}good{/s}less evil and {color=[colour.red]}{b}pure evil{/b}{/color}")

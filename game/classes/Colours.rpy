@@ -284,22 +284,17 @@ init -1 python:
         transitioning rainbow colours.
         The colour will start off from red, before transitioning into the spectrum
         and then repeating the process again.
-        It is hooked into an event listener, through self.event(...) and self.render(..),
-        which makes sure that the rainbow colour will update every game loop.
         The rate at which the rainbow transitions is available as a parameter:
             rainbow = RainbowColour() for default rate=25, or
                     = RainbowColour(x) for a custom rate=x
     """
-    class RainbowColour(AdvancedColour, renpy.Displayable):
+    class RainbowColour(AdvancedColour):
         def __init__(self, rate=25):
             AdvancedColour.__init__(self, "#f00")   # start off at red
-            renpy.Displayable.__init__(self)
             self.currentCycle = 0
             self.maxCycles = len(self.components)-1
             self.fading = False
             self.rate = rate
-            # add to ui when game starts, to be incoporated into the game loop
-            config.overlay_functions.append(lambda: ui.add(self))
 
         """
             Cycles through the colour spectrum like a rainbow
@@ -345,7 +340,20 @@ init -1 python:
                 else:
                     self.currentCycle += 1
                     self.fading = False
-        
+
+    """
+        ChangingRainbowColour will update automatically as determined by the gameloop in which
+        it is attached to.
+        It is hooked into an event listener, through self.event(...) and self.render(..),
+        which makes sure that the rainbow colour will update every game loop.
+    """
+    class ChangingRainbowColour(RainbowColour, renpy.Displayable):
+        def __init__(self, rate=25):
+            RainbowColour.__init__(self)   
+            renpy.Displayable.__init__(self)
+            # add to ui when game starts, to be incoporated into the game loop
+            config.overlay_functions.append(lambda: ui.add(self))
+
         """
             Triggered by the main game loop every 1/config.framerate seconds
             event = event handler
@@ -356,6 +364,35 @@ init -1 python:
         
         def render(self, width, height, st, at):
             return renpy.Render(0, 0)
+        
+        def remove(self):
+            ui.remove(self)
+
+    """
+        Function for turning a generic string into a coloured string
+        string = string you want to convert
+        rate = how much the rainbow progresses for each character
+            - lower rate = slower changing rainbow
+            - higher rate = faster changing rainbow
+            - 127.5 = 255/2 or a normal looking rainbow
+        exclude = characters to ignore when changing rainbow
+        excludeColour = make excluded characters white if true
+    """
+    def rainbowText(string, rate=127.5, exclude="", excludeColour=""):
+        rainbow = RainbowColour()
+        rainbowString = ""
+        excludeChar = " " + str(exclude)
+        colourFormatter = "{{color={0}}}{1}{{/color}}"
+        for char in string:
+            # determine whether to colour character
+            if char in excludeColour:
+                rainbowString +=  char
+            else:
+                rainbowString += colourFormatter.format(rainbow, char)
+            # only cycle for acceptable characters
+            if char not in excludeChar and char not in excludeColour: 
+                rainbow.cycle(rate)
+        return rainbowString
 
 
 

@@ -1,5 +1,5 @@
 init python:
-    quests = Quests(["title", "brief", "description", "dependencies", "label"])
+    quests = Quests()
     # Test quests
     quests.addQuests({
         "serenaSlay": {

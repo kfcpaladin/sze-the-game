@@ -1,8 +1,14 @@
 python early:
     class Achievements:
-        def __init__(self, achieveParams):
-            self.achieveParams = achieveParams
-            self._baseParams = {
+        def __init__(self):
+            self.__default__()
+
+        """
+            Set default and custom parameters of the achievement
+        """
+        def __default__(self):
+            # default structure of achievement parameters
+            self.achieveParams = {
                 "title": None, 
                 "brief": None,
                 "description": None, 
@@ -16,15 +22,11 @@ python early:
                     },
                 ],
             }
-            # Add in basic parameters
-            for baseParam in self._baseParams:
-                if baseParam not in self.achieveParams:
-                    self.achieveParams.append(baseParam)
             # Quest types
-            self.achieveTypes = ["hidden", "available", "completed"]
-            self.displayableAchieveTypes = ["available", "completed"]
+            self.achieveTypes = ("hidden", "available", "completed")
+            self.displayableAchieveTypes = ("available", "completed")
             self.currentAchieveType = self.achieveTypes[1]  # this is used by the screen by default
-            self._stringType = [unicode, str, basestring]
+            self.stringType = (unicode, str, basestring)
             for achieveType in self.achieveTypes:
                 setattr(self, achieveType, {})
 
@@ -125,15 +127,15 @@ python early:
             _debugAchieveType = prints to console all achievements of a specific type
         """
         def _checkAchieveID(self, achieveID):
-            if type(achieveID) not in self._stringType:
+            if type(achieveID) not in self.stringType:
                 raise TypeError("Expected achieveID to be string, not {0}".format(type(achieveID)))
 
         def _checkAchieve(self, achievement):
             if type(achievement) is not dict:
                 raise TypeError("A achievement should be a dict, not a {0}".format(type(achievement)))
-            for param in self.achieveParams:
+            for param, defaultValue in self.achieveParams.iteritems():
                 if param not in achievement:
-                    achievement[param] = self._baseParams[param]
+                    achievement[param] = defaultValue
 
         def _getAchieveByID(self, achieveID):
             self._checkAchieveID(achieveID)
@@ -163,7 +165,7 @@ python early:
         def _checkAchieveDependencies(self, dependencies):
             if not dependencies:
                 return True
-            if type(dependencies) in self._stringType:
+            if type(dependencies) in self.stringType:
                 dependencies = [dependencies]
             for dependency in dependencies:
                 if dependency not in self.completed:

@@ -1,8 +1,14 @@
 python early:
     class Quests:
-        def __init__(self, questParams):
-            self.questParams = questParams
-            self._baseParams = {
+        def __init__(self):
+            self.__default__()
+            
+        """
+            Default initialisation of the class
+        """
+        def __default__(self):
+            # base layout of a quest
+            self.questParams = {
                 "title": None, 
                 "brief": None,
                 "description": None, 
@@ -16,17 +22,14 @@ python early:
                     },
                 ],
             }
-            # Add in basic parameters
-            for baseParam in self._baseParams:
-                if baseParam not in self.questParams:
-                    self.questParams.append(baseParam)
             # Quest types
-            self.questTypes = ["unavailable", "available", "completed"]
-            self.displayableQuestTypes = ["available", "completed"]
+            self.questTypes = ("unavailable", "available", "completed")
+            self.displayableQuestTypes = ("available", "completed")
             self.currentQuestType = self.questTypes[1]  # this is used by the screen by default
-            self._stringType = [unicode, str, basestring]
+            self.stringType = [unicode, str, basestring]
             for questType in self.questTypes:
                 setattr(self, questType, {})
+
 
         """
             // add a dictionary of quests to either unavailable or available
@@ -42,8 +45,6 @@ python early:
 
             // update all unavailable quests to see if they are now available
             updateQuests()
-
-
         """
         def addQuests(self, quests):
             if type(quests) is not dict:
@@ -130,15 +131,15 @@ python early:
             _debugQuestType = gives formatted console output of all quests of a specific type
         """
         def _checkQuestID(self, questID):
-            if type(questID) not in self._stringType:
+            if type(questID) not in self.stringType:
                 raise TypeError("Expected questID to be string, not {0}".format(type(questID)))
 
         def _checkQuest(self, quest):
             if type(quest) is not dict:
                 raise TypeError("A quest should be a dict, not a {0}".format(type(quest)))
-            for param in self.questParams:
+            for param, defaultValue in self.questParams.iteritems():
                 if param not in quest:
-                    quest[param] = self._baseParams[param]
+                    quest[param] = defaultValue
         
         def _getQuestByID(self, questID):
             self._checkQuestID(questID)
@@ -150,37 +151,39 @@ python early:
                 raise NameError("{0} is not a valid quest ID".format(questID))
 
         def _checkQuestCondition(self, conditions):
+            # must be a list of conditions
             if type(conditions) is dict:
                 conditions = [conditions]
             elif type(conditions) is not list:
                 raise TypeError("Quest conditions must be either a list or dict")
-            failMessages = []
+            # popup all failed conditions
+            failed = False
             for condition in conditions:
                 if condition["function"]:
                     if not callable(condition["function"]):
                         raise TypeError("Expected a function for a condition")
                     if not condition["function"]():
-                        failMessages.append(condition["msg"])
-            if len(failMessages) > 0:
+                        popup(condition["msg"])
+                        failed = True
+            # play fail sound
+            if failed:
                 playsfx("vpunch.ogg")
-                popup(failMessages)
                 return False
             else:
                 return True
 
         def _checkQuestDependencies(self, dependencies):
-            if not dependencies:
+            if not dependencies:    # no dependencies = automatic pass
                 return True
-            if type(dependencies) in self._stringType:
+            if type(dependencies) in self.stringType:
                 dependencies = [dependencies]
             for dependency in dependencies:
                 if dependency not in self.completed:
                     return False
             return True
 
-
         def _gotoLabel(self, label):
-            if type(label) in self._stringType:
+            if label:
                 closeDiary()
                 renpy.call(label)
                 playsfx("vpunch.ogg")

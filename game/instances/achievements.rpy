@@ -1,5 +1,5 @@
 init -1 python:
-    achievements = Achievements(["title", "brief", "description", "dependencies"])
+    achievements = Achievements()
     # add achievements
 
 init python:

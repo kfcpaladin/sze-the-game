@@ -188,7 +188,7 @@ label asszembly1_3:
     scene bg hall
     with fade
     $ stopmusic()
-    $ playmusic("EscortsGaudeamusDooWop.ogg", loop=True)
+    $ playmusic("EscortsGaudeamusDooWop.ogg")
     "Gaudeamus igitur...something something...venit mors velociter, rapit nos atrociter..."
     mox "\"I would like to acknowledge the traditional owners of the land...\""
     sze "Wow, this is boring"
@@ -197,9 +197,13 @@ label asszembly1_3:
             sze "\"I sleep\""
             sze "\"{i}I dream {/i}\""
             scene bg schoolfront
-            sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
-            $ stopmusic()
-            $ playmusic("p4Traumerei.ogg", loop=True)
+            $ playsfx("hpunch.ogg")
+            # dereks manual rainbow text
+            # sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
+            # using rainbowText(...) to generate a rainbow string
+            $ _string = "{{size=90}}{{b}}{{i}}{0}{{/i}}{{/b}}{{/size}}".format(rainbowText("C.O.L.O.U.R.F.U.L", excludeColour="."))
+            sze "[_string]" with hpunch
+            $ playmusic("p4Traumerei.ogg")
             sze "I still remember the day I first met her"
             sze "It was the first school day of 2011, and I had just entered my dream high school, Fort Street High School"
             sze "\"I can't wait for a diligent 6 years of study, and to hopefully get an high ATAR and become a lawyer/doctor in USYD\""
@@ -214,10 +218,12 @@ label asszembly1_3:
             sze "\"I decide to linger in this serene enviroment a little longer to rest my weary soul\""
             sze "And then I saw her"
             scene bg dreamtree
+            $ playsfx("wind.ogg")
             sze "As she turned, the wind blew and her hair flowed around her"
             sze "The falling cherry blossom petals danced around her figure"
             sze "The twinkle in her eyes was as bright as Michael Kirby's ideals"
             sze "I knew then her name was Serena"
+            $ stopsfx()
             scene bg hall
             sze "I had a dream, and it had water"
             sze "My pants are wet"

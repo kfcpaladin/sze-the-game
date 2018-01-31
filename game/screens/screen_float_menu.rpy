@@ -22,7 +22,7 @@ screen float_menu:
             xalign 0.5
 
 # a timer that does nothing but refresh a screen
-screen refreshTimer(rate=0.05):
+screen refreshTimer(rate=0.1):
     timer rate:
         repeat True
         action Function(lambda: None)

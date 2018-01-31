@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/scripts/labels/1.0 jigschool.rpy", line 13: invalid syntax
-                "colour": colour.green,
-                         ^
-    
+File "game/story/Day 1/5.0 assembly.rpy", line 203: expected statement.
+    sze _string with hpunch
+                ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

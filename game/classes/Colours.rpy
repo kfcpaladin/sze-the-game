@@ -1,4 +1,4 @@
-init -1 python:
+python early:
     import itertools
 
     """
@@ -367,32 +367,6 @@ init -1 python:
         
         def remove(self):
             ui.remove(self)
-
-    """
-        Function for turning a generic string into a coloured string
-        string = string you want to convert
-        rate = how much the rainbow progresses for each character
-            - lower rate = slower changing rainbow
-            - higher rate = faster changing rainbow
-            - 127.5 = 255/2 or a normal looking rainbow
-        exclude = characters to ignore when changing rainbow
-        excludeColour = make excluded characters white if true
-    """
-    def rainbowText(string, rate=127.5, exclude="", excludeColour=""):
-        rainbow = RainbowColour()
-        rainbowString = ""
-        excludeChar = " " + str(exclude)
-        colourFormatter = "{{color={0}}}{1}{{/color}}"
-        for char in string:
-            # determine whether to colour character
-            if char in excludeColour:
-                rainbowString +=  char
-            else:
-                rainbowString += colourFormatter.format(rainbow, char)
-            # only cycle for acceptable characters
-            if char not in excludeChar and char not in excludeColour: 
-                rainbow.cycle(rate)
-        return rainbowString
 
 
 

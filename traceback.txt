@@ -1,112 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/Day 1/5.0 assembly.rpy", line 203, in script call
-    sze "[_string]" with hpunch
-  File "renpy/common/00console.rpy", line 765, in script
-    python in _console:
-  File "renpy/common/00console.rpy", line 766, in <module>
-    console.interact()
-  File "renpy/common/00console.rpy", line 325, in interact
-    line = ui.interact()
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 17, in execute
-    vpgrid:
-  File "game/screens/screen_popup.rpy", line 26, in execute
-    for popup in reversed(popups.popupList):
-  File "game/screens/screen_popup.rpy", line 35, in execute
-    if popup["icon"]:
-  File "game/screens/screen_popup.rpy", line 38, in execute
-    use popup_message(popup, transparency, pos, size)
-  File "game/screens/screen_popup.rpy", line 74, in execute
-    screen popup_message(popup, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 74, in execute
-    screen popup_message(popup, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 77, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 82, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 92, in execute
-    vbox:
-  File "game/screens/screen_popup.rpy", line 95, in execute
-    text "{{b}}{}{{b}}".format(popup["text"]):
-NameError: Name '"test string"' is not defined.
+  File "game/instances/friends.rpy", line 1, in script
+    init python:
+  File "game/instances/friends.rpy", line 145, in <module>
+    rin.setDescription("She is the only one you truly desire {{b}}{{s}}{0}{{/s}}{{/b}}".format(rainbowText("except maybe your brother")))
+NameError: name 'rainbowText' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/Day 1/5.0 assembly.rpy", line 203, in script call
-    sze "[_string]" with hpunch
-  File "renpy/common/00console.rpy", line 765, in script
-    python in _console:
+  File "game/instances/friends.rpy", line 1, in script
+    init python:
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "renpy/common/00console.rpy", line 766, in <module>
-    console.interact()
-  File "renpy/common/00console.rpy", line 325, in interact
-    line = ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 495, in visit_all
-    d.visit_all(callback)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 401, in visit_all
-    callback(self)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2821, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 411, in per_interact
-    self.update()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/screen.py", line 580, in update
-    self.screen.function(**self.scope)
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 9, in execute
-    screen popup(popups, pos=Vector(0, 50), size=Vector(400, 50), speed=0.1):
-  File "game/screens/screen_popup.rpy", line 17, in execute
-    vpgrid:
-  File "game/screens/screen_popup.rpy", line 26, in execute
-    for popup in reversed(popups.popupList):
-  File "game/screens/screen_popup.rpy", line 35, in execute
-    if popup["icon"]:
-  File "game/screens/screen_popup.rpy", line 38, in execute
-    use popup_message(popup, transparency, pos, size)
-  File "game/screens/screen_popup.rpy", line 74, in execute
-    screen popup_message(popup, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 74, in execute
-    screen popup_message(popup, transparency, pos, size):
-  File "game/screens/screen_popup.rpy", line 77, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 82, in execute
-    frame:
-  File "game/screens/screen_popup.rpy", line 92, in execute
-    vbox:
-  File "game/screens/screen_popup.rpy", line 95, in execute
-    text "{{b}}{}{{b}}".format(popup["text"]):
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1340, in __init__
-    self.set_text(text, scope, substitute)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/text/text.py", line 1440, in set_text
-    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/substitutions.py", line 242, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 605, in get_value
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/substitutions.py", line 201, in __getitem__
-    raise NameError("Name '{}' is not defined.".format(key))
-NameError: Name '"test string"' is not defined.
+  File "game/instances/friends.rpy", line 145, in <module>
+    rin.setDescription("She is the only one you truly desire {{b}}{{s}}{0}{{/s}}{{/b}}".format(rainbowText("except maybe your brother")))
+NameError: name 'rainbowText' is not defined
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919

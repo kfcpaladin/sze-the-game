@@ -10,7 +10,7 @@ label jigschool1:
     "Your bladder feels like it is going to depressurise inside your pants"
     sze "\"{i}Do you know where a bathroom is???{/i}\""
     "\"Come forth {i}young{/i} one. Let me see you...\""
-    "You feel a {color=[colour.yellow]}{i}little drop of urine{/b}{/color} drip out from your bump"
+    "You feel a {color=[colour.yellow]}{i}little drop of urine{/i}{/color} drip out from your bump"
     # choice
     menu:
         "Should you go into the dark alley way ahead of you?"
@@ -30,7 +30,7 @@ label jigschool1:
     $ playmusic("ManuelGasGasGas(InitialD).ogg")
     "Suddenly you see a blurry wall of moving muscle and raw power move towards you"
     $ _string = sizeText("!"*10, start=25, end=50)
-    sze "{i}{b}{color=[colour.red]}[_string]{/color}{b}{/i}"
+    sze "{i}{b}{color=[colour.red]}[_string]{/color}{/b}{/i}"
     tod "{b}Fight or die!!!{/b}"
     "{color=[colour.red]}{b}You are greeted with claws slashing away at your flesh, causing blood to gush out of your ragged wounds{/b}{/color}"
     sze "{b}Argggrgegegafwadnaw{/b}"

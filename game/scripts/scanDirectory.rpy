@@ -14,11 +14,7 @@ init -2 python:
         cache = {}
         gameDir = all sources and assets
     """
-    def scanDirectory(config, cache, gameDir="game"):
-        # get the base directory
-        mainDir = os.path.dirname(os.path.realpath(sys.argv[0]))
-        print "mainDir: "+mainDir
-        gameDir = os.path.join(mainDir, gameDir)
+    def scanDirectory(config, cache, gameDir=renpy.config.gamedir):
         directory = os.path.join(gameDir, config["folder"])
         if not os.path.isdir(directory):
             raise IOError("\"{0}\" is not a valid directory".format(directory))
@@ -77,8 +73,7 @@ init -2 python:
         Log the cache during initialisation
     """
     def logCache(filename, cacheDict):
-        mainDir = os.path.dirname(os.path.realpath(sys.argv[0]))
-        logfile = open(os.path.join(mainDir, filename), "w")
+        logfile = open(os.path.join(renpy.config.basedir, filename), "w")
         for name, cache in cacheDict.iteritems():
             logfile.write(">>> Reading {0}\n".format(name))
             sortedFileList = sorted(cache)

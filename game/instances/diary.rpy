@@ -11,8 +11,10 @@ init python:
         "diary_quests",
         "diary_achievements",
         "diary_statistics",
-        "diary_roadmap"
     ])
+    # if developer add the roadmap
+    if config.developer:
+        diaryScreens.append("diary_roadmap")
     diary = Diary(diaryScreens)
 
     # developer description boxes are prone to being stuck

@@ -52,14 +52,14 @@
 │   ├── classes
 │   │   ├── Achievement.rpy
 │   │   ├── Achievement.rpyc
+│   │   ├── AdvancedColour.rpy
+│   │   ├── AdvancedColour.rpyc
 │   │   ├── AttrDict.rpy
 │   │   ├── AttrDict.rpyc
 │   │   ├── Bullet.rpy
 │   │   ├── Bullet.rpyc
 │   │   ├── CodeSequence.rpy
 │   │   ├── CodeSequence.rpyc
-│   │   ├── Colours.rpy
-│   │   ├── Colours.rpyc
 │   │   ├── Diary.rpy
 │   │   ├── Diary.rpyc
 │   │   ├── Friend.rpy
@@ -76,6 +76,8 @@
 │   │   ├── PopUp.rpyc
 │   │   ├── Quest.rpy
 │   │   ├── Quest.rpyc
+│   │   ├── RainbowColour.rpy
+│   │   ├── RainbowColour.rpyc
 │   │   ├── Vector.rpy
 │   │   └── Vector.rpyc
 │   ├── images
@@ -1607,4 +1609,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-110 directories, 1497 files
+110 directories, 1499 files

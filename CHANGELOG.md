@@ -89,3 +89,4 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Added formatting support to rainbowText() and sizeText() to allow for {tag} to be used
 * Added examples in the diary intro sequence, and the demonstration Todd quest
 * Made the initialisation of classes more discrete at a default of -10
+* Removed roadmap from base game since it is not complete

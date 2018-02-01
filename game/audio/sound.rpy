@@ -80,7 +80,7 @@ init -1 python:
             playsfx: "sfx",
         }
         for function, subfolder in audioPaths.iteritems():
-            if audioFunction is function and filepath.startswith(os.path.join(audioFolder, subfolder)):
+            if audioFunction is function and filepath.startswith(os.path.join(audioFolder, subfolder).replace("\\", "/")):
                 return True
         return False
 

@@ -15,19 +15,15 @@ init -2 python:
         gameDir = all sources and assets
     """
     def scanDirectory(config, cache, gameDir="game"):
+        # get the base directory
+        mainDir = os.path.dirname(os.path.realpath(sys.argv[0]))
+        gameDir = os.path.join(mainDir, gameDir)
         directory = os.path.join(gameDir, config["folder"])
-        for filename in os.listdir(directory):
-            filepath = os.path.join(directory, filename)
-            # if folder, scan it
-            if os.path.isdir(filepath):
-                config["subfolders"].append(filename)
-                scanSubFolder(filepath, cache, gameDir)
-            # otherwise add file to cache
-            elif os.path.isfile(filepath):
-                # replace for windows
-                filepath.replace("\\", "/")
-                # add to cache
-                cache[filename] = removePrefix(filepath, gameDir+"/") 
+        if not os.path.isdir(directory):
+            raise IOError("\"{0}\" is not a valid directory".format(directory))
+        # start scanning recursively
+        scanSubFolder(directory, cache, gameDir)
+
 
     """
         This will scan a subfolder, and add each file in it to the 
@@ -37,18 +33,23 @@ init -2 python:
         }
     """
     def scanSubFolder(subfolderPath, cache, gameDir):
-        for file in os.listdir(subfolderPath):
-            if file[0] == ".":
+        for filename in os.listdir(subfolderPath):
+            if filename[0] == ".":
                 continue
-            filepath = os.path.join(subfolderPath, file)
+            filepath = os.path.join(subfolderPath, filename)
+            # if a file, add to cache
             if os.path.isfile(filepath):
-                if file in cache:
+                if filename in cache:
                     raise IOError("{0} is conflicting with existing file {1}".format(filepath, cache[file]))
                 else:
                     # for windows replace "\\" to "/"
+                    filepath = filepath.replace(gameDir, "")
                     filepath = filepath.replace("\\", "/")
                     # remove gameDirectory prefix since renpy scans in game/ by default
-                    cache[file] = removePrefix(filepath, gameDir+"/") 
+                    cache[filename] = removePrefix(filepath, "/")
+            # recursively scan each folder
+            elif os.path.isdir(filepath):
+                scanSubFolder(filepath, cache, gameDir)
 
     # remove prefix from a string
     def removePrefix(string, prefix):
@@ -75,7 +76,8 @@ init -2 python:
         Log the cache during initialisation
     """
     def logCache(filename, cacheDict):
-        logfile = open(filename, "w")
+        mainDir = os.path.dirname(os.path.realpath(sys.argv[0]))
+        logfile = open(os.path.join(mainDir, filename), "w")
         for name, cache in cacheDict.iteritems():
             logfile.write(">>> Reading {0}\n".format(name))
             sortedFileList = sorted(cache)

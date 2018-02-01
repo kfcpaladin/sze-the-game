@@ -2,7 +2,6 @@
 init -1 python:
     audioDir = {
         "folder": "audio",
-        "subfolders": [],
         "default": "audio_default.ogg",
     }
     audioCache = {}

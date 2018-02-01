@@ -1,25 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/instances/friends.rpy", line 1, in script
-    init python:
-  File "game/instances/friends.rpy", line 145, in <module>
-    rin.setDescription("She is the only one you truly desire {{b}}{{s}}{0}{{/s}}{{/b}}".format(rainbowText("except maybe your brother")))
-NameError: name 'rainbowText' is not defined
+  File "game/audio/sound.rpy", line 2, in script
+    init -1 python:
+  File "game/audio/sound.rpy", line 11, in <module>
+    scanDirectory(audioDir, audioCache) # located in scripts/scanDirectory.rpy
+  File "game/scripts/scanDirectory.rpy", line 31, in scanDirectory
+    scanSubFolder(filepath, cache, gameDir)
+  File "game/scripts/scanDirectory.rpy", line 52, in scanSubFolder
+    filepath = os.path.join(subfolderPath, file)
+AttributeError: type object 'file' has no attribute 'startswith'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/instances/friends.rpy", line 1, in script
-    init python:
+  File "game/audio/sound.rpy", line 2, in script
+    init -1 python:
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/instances/friends.rpy", line 145, in <module>
-    rin.setDescription("She is the only one you truly desire {{b}}{{s}}{0}{{/s}}{{/b}}".format(rainbowText("except maybe your brother")))
-NameError: name 'rainbowText' is not defined
+  File "game/audio/sound.rpy", line 11, in <module>
+    scanDirectory(audioDir, audioCache) # located in scripts/scanDirectory.rpy
+  File "game/scripts/scanDirectory.rpy", line 31, in scanDirectory
+    scanSubFolder(filepath, cache, gameDir)
+  File "game/scripts/scanDirectory.rpy", line 52, in scanSubFolder
+    filepath = os.path.join(subfolderPath, file)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/posixpath.py", line 68, in join
+AttributeError: type object 'file' has no attribute 'startswith'
 
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
-sze-the game 0.0
+ 

@@ -7,7 +7,6 @@
 init -1 python:
     imageDir = {
         "folder" : "images",
-        "subfolders": [],
         "default": "image_default.png",
     }
     imageCache = {}

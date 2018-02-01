@@ -17,6 +17,7 @@ init -2 python:
     def scanDirectory(config, cache, gameDir="game"):
         # get the base directory
         mainDir = os.path.dirname(os.path.realpath(sys.argv[0]))
+        print "mainDir: "+mainDir
         gameDir = os.path.join(mainDir, gameDir)
         directory = os.path.join(gameDir, config["folder"])
         if not os.path.isdir(directory):

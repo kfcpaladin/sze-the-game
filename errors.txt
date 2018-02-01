@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/story/Day 1/5.0 assembly.rpy", line 203: expected statement.
-    sze _string with hpunch
-                ^
+File "game/story/Day 1/1 before school.rpy", line 63: non-keyword arg after keyword arg
+    label schoolday1:
+    
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -337,7 +337,8 @@
 │   │   ├── options.rpyc
 │   │   ├── scanDirectory.rpy
 │   │   ├── scanDirectory.rpyc
-│   │   └── textFormat.rpy
+│   │   ├── textFormat.rpy
+│   │   └── textFormat.rpyc
 │   ├── script_version.txt
 │   └── story
 │       ├── Day 1
@@ -1606,4 +1607,4 @@
 ├── sze-the-game.sh
 └── traceback.txt
 
-110 directories, 1496 files
+110 directories, 1497 files

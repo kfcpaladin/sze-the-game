@@ -53,13 +53,16 @@ label schoolday1:
             sze "\"But I don't want it\""
             mox "\"It's an offer you can't refuse\""
             mox "\"And if the diary is more than 10m from your person at any time, as regional director of educational shit, I will use my elite B.R.A.S.I. squad to apprehend you\"" 
-            sze "\"wtf is B.R.A.S.I.?\""
+            $ _string = sizeText(rainbowText("{b}B.R.A.S.I.{/b}", excludeColour="."), start=25, end=50)
+            sze "\"wtf is [_string]?\""
             mox "\"The {b}B{/b}oard of Studies {b}R{/b}egulatory {b}A{/b}ction {b}S{/b}quad for {b}I{/b}ntervention\""
             mox "\"Good, you are demonstrating the critical and inquiring nature that is expected of all Fortians. I am confidant that my decision to use you as the guinea pig for the diary was a good one\""
             sze "\"Wow it also has a bookmark string thingy\""
             "You walk away with your shiny new toy"
             "This time try not to put it up your ass"
-            sze "{i}Blushes violently{/i}"
+            $ _string = rainbowText(sizeText("{i}Blushes violently{/i}", start=25, end=50))
+            $ playsfx("vpunch.ogg")
+            sze "[_string]" with vpunch
             "Nevermind..."
             $ game.hasDiary = True
             "You notice the bookmark string thingy is labelled with \"kms\""

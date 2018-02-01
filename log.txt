@@ -1,4 +1,4 @@
-Thu Feb  1 12:22:44 2018
+Thu Feb  1 12:32:57 2018
 Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
 Ren'Py 6.99.13.2919
  
@@ -7,11 +7,11 @@ Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.03s
-Loading script took 0.28s
+Loading script took 0.34s
 Loading persistent took 0.08s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: (6, 99, 10)
-Running init code took 0.14s
+Running init code took 0.15s
 Loading analysis data took 0.06s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
@@ -21,12 +21,12 @@ Making clean stores took 0.00s
 DPI scale factor: 1.000000
 Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.02s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.03s
-Save screen analysis took 0.17s
-Prepare screens took 0.12s
+Save screen analysis took 0.18s
+Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.05s
 Running _start took 0.00s
@@ -299,20 +299,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 1.36739015579s
+Total time until interface ready: 1.41490507126s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.022634 seconds.
-- Frame drawn at 0.032852 seconds.
-- Frame drawn at 0.049206 seconds.
-- Frame drawn at 0.067057 seconds.
-- 0.067057 seconds to render 5 frames.
-Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 426, in run
-    result = renpy.python.py_eval(code)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1794, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1788, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'string' is not defined
+- Frame drawn at 0.021526 seconds.
+- Frame drawn at 0.032229 seconds.
+- Frame drawn at 0.048410 seconds.
+- Frame drawn at 0.067262 seconds.
+- 0.067262 seconds to render 5 frames.

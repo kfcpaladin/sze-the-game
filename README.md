@@ -34,23 +34,25 @@ Since this is essentially a new version of the game, don't attempt to merge it w
 ## New classes and instances
 ### Class descriptions
 
-| Class                                              | Description                                                                       |
-| -------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [ADVCharacter](./renpy/character.py#L583)          | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
-| [Achievements](./game/classes/Achievement.rpy)     | Used to store, add and update achievements in realtime using the gameloop         |
-| [AdvancedColour](./game/classes/Colours.rpy)       | Allow for making of hex code colours using RGB, and a selection of default colours|
-| [AttrDict](./game/classes/AttrDict.rpy)            | Used as a wrapped for the python dict, allowing for access like JSON object       |
-| [Bullet](./game/classes/Bullet.rpy)                | Used by the kmsGun screen for the gun projectiles                                 |
-| [CodeSequence](./game/classes/CodeSequence.rpy)    | Used for easter eggs, where things can be unlocked using a code sequence          |
-| [Diary](./game/classes/Diary.rpy)                  | Class used to store and manage all diary pages                                    |
-| [Friend](./game/classes/Friend.rpy)                | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
-| [Game](./game/classes/Game.rpy)                    | Unique object used to store all the game variables, and includes debugger         |
-| [Inventory](./game/classes/Inventory.rpy)          | Used as a manager of **Item** instances, and communicated with inventory screen   |
-| [Item](./game/classes/Item.rpy)                    | Stores information about an item, most notably statistic changes to a character   |
-| [MainCharacter](./game/classes/MainCharacter.rpy)  | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
-| [PopUp](./game/classes/PopUp.rpy)                  | Stores all popups, and manages their lifetime                                     |
-| [Quest](./game/classes/Quest.rpy)                  | Used to store, add and push quests as the game progress                           |
-| [Vector](./game/classes/Vector.rpy)                | Used by pong, and various game screens, for position and sizes of objects         |
+| Class                                                         | Description                                                                       |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [ADVCharacter](./renpy/character.py#L583)                     | Subclass of renpy's default object, and returned in Character(...) *(deprecated)* |
+| [Achievements](./game/classes/Achievement.rpy)                | Used to store, add and update achievements in realtime using the gameloop         |
+| [AdvancedColour](./game/classes/AdvancedColour.rpy)           | Allow for making of hex code colours using RGB, and a selection of default colours|
+| [AttrDict](./game/classes/AttrDict.rpy)                       | Used as a wrapped for the python dict, allowing for access like JSON object       |
+| [Bullet](./game/classes/Bullet.rpy)                           | Used by the kmsGun screen for the gun projectiles                                 |
+| [ChangingRainbowColour](./game/classes/RainbowColour.rpy)     | A subclass of the RainbowColour class, which automatically cycles through spectrum|
+| [CodeSequence](./game/classes/CodeSequence.rpy)               | Used for easter eggs, where things can be unlocked using a code sequence          |
+| [Diary](./game/classes/Diary.rpy)                             | Class used to store and manage all diary pages                                    |
+| [Friend](./game/classes/Friend.rpy)                           | Subclass of renpy's ADVCharacter and has loss() and gain() methods for friendship |
+| [Game](./game/classes/Game.rpy)                               | Unique object used to store all the game variables, and includes debugger         |
+| [Inventory](./game/classes/Inventory.rpy)                     | Used as a manager of **Item** instances, and communicated with inventory screen   |
+| [Item](./game/classes/Item.rpy)                               | Stores information about an item, most notably statistic changes to a character   |
+| [MainCharacter](./game/classes/MainCharacter.rpy)             | Subclass of renpy's ADVCharacter, and supports multiple attributes                |
+| [PopUp](./game/classes/PopUp.rpy)                             | Stores all popups, and manages their lifetime                                     |
+| [Quest](./game/classes/Quest.rpy)                             | Used to store, add and push quests as the game progress                           |
+| [RainbowColour](./game/classes/RainbowColour.rpy)             | A subclass of AdvancedColour which adds support for cycling through the spectrum  |
+| [Vector](./game/classes/Vector.rpy)                           | Used by pong, and various game screens, for position and sizes of objects         |
 
 ### Instances
 

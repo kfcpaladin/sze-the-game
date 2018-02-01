@@ -78,3 +78,14 @@ The standard format for a changelog is the date as a title, followed by bullet p
 
 **27/01/2018**
 * Added AdvancedColour class, for support with colour mixing, inversion and alpha changes
+
+**28/01/2018**
+* Added a RainbowColour class and ChangingRainbowColour class for rainbow styled UI
+* Made autosave and developer unlocks use the new ChangingRainbowClass
+* Added rainbowText(...) text formatter to create rainbow styled text
+
+**1/02/2018**
+* Added sizeText(...) to allow for text size to change between a min and max
+* Added formatting support to rainbowText() and sizeText() to allow for {tag} to be used
+* Added examples in the diary intro sequence, and the demonstration Todd quest
+* Made the initialisation of classes more discrete at a default of -10

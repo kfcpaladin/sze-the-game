@@ -1,9 +1,5 @@
-########################################################################################################################
-# inventory itself
-python early:
-    import renpy.store as store
+init -10 python:
     from copy import deepcopy
-
     class Inventory:
         def __init__(self, who, name, max_items):
             self.inv = []  # initialise list to store items, first in is top of list

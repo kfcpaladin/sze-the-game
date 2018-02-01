@@ -1,4 +1,4 @@
-init -2 python:
+init -10 python:
     # class for handling key sequences
     class CodeSequence(renpy.Displayable):
 

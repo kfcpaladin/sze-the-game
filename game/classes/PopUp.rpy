@@ -1,5 +1,5 @@
 # Used to manage popups
-python early:
+init -10 python:
     class PopUp:
         def __init__(self):
             self.popupList = []

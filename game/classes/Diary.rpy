@@ -1,4 +1,4 @@
-python early:
+init -10 python:
     class Diary:
         def __init__(self, screenNames):
             self.screenNames = screenNames

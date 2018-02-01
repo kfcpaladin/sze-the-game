@@ -1,4 +1,4 @@
-python early:
+init -10 python:
     class MainCharacter(ADVCharacter):
         """
             self.attributes = all attributes

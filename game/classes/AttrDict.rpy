@@ -1,6 +1,6 @@
 # Allow for dictionaries to act like javascript dictionaries
 # this if for clarity reasons
-init -1 python:
+init -10 python:
     class AttrDict(renpy.python.RevertableDict):
         def __init__(self, init={}):
             dict.__init__(self, init)

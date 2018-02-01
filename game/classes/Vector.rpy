@@ -1,4 +1,4 @@
-init -3 python:
+init -20 python:
     """
         Vector class used by pong in particular, and screen elements which
         use it for the x,y attributes for positioning and size

@@ -1,7 +1,5 @@
 # Initialise item class 
-python early:
-    import renpy.store as store
-
+init -10 python:
     class Item:
         def __init__(self, name, desc, stat, icon=None, used=False):
             self.name = name # name of item

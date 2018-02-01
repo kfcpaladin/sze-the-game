@@ -1,4 +1,4 @@
-python early:
+init -10 python:
     class Friend(ADVCharacter):
         """
             self.attributes = all attributes

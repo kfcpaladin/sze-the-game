@@ -1,4 +1,4 @@
-python early:
+init -10 python:
     class Game:
         def __init__(self, options):
             self.options = []

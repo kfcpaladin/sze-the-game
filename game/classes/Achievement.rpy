@@ -1,4 +1,4 @@
-python early:
+init -10 python:
     class Achievements:
         def __init__(self):
             self.__default__()

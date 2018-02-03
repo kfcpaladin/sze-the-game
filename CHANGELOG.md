@@ -90,3 +90,6 @@ The standard format for a changelog is the date as a title, followed by bullet p
 * Added examples in the diary intro sequence, and the demonstration Todd quest
 * Made the initialisation of classes more discrete at a default of -10
 * Removed roadmap from base game since it is not complete
+
+**2/02/2018**
+* Changed the pong minigame to use the renpy.Displayable class, which offers significant performance increases

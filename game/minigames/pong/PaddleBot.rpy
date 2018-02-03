@@ -56,9 +56,9 @@ init -2 python:
                 if self.inPosition is False:
                     # Get it to be within middle segment
                     if y > self.paddle.pos.y + self.paddle.height/3:
-                        self.paddle.move("down")
+                        self.paddle.move(Paddle.DOWN)
                     elif y < self.paddle.pos.y - self.paddle.height/3:
-                        self.paddle.move("up")
+                        self.paddle.move(Paddle.UP)
                     else:
                         self.paddle.move()
                         self.inPosition = True

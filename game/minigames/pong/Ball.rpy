@@ -1,38 +1,50 @@
 init -2 python:
     import random
+    import collections
     class Ball:
-        def __init__(self, **kargs):
-            self.defaultOptions = {
+        """
+            Ball constants for determining which side
+        """
+        LEFT = 0
+        RIGHT = 1
+
+        """
+            __init__ = initialises all paddle info
+            __default__ = will initialise default values if parameters are not specified
+        """
+        def __init__(self, **kwargs):
+            self.__default__(**kwargs)
+            self._start()
+
+        def __default__(self, **kwargs):
+            defaultOptions = {
                 "bounds": (0, 0, 1366, 768),
                 "colour": "#ffffff",
                 "pos": Vector(0, 0),
                 "radius": 10,
-                "score": {
+                "score": AttrDict({
                     "left": 0,
                     "right": 0,
-                },
+                }),
                 "speed": 20,
                 "vel": Vector(0, 0),
             }
-            self.setOptions(**kargs)
-            self._start()
+            defaultOptions.update(kwargs)
+            self.setOptions(**defaultOptions)
 
         """
             Set options given keyword arguments
         """
-        def setOptions(self, **kargs):
-            for key, value in self.defaultOptions.iteritems():
-                if key in kargs:
-                    setattr(self, key, kargs[key])
-                else:
-                    setattr(self, key, value)
+        def setOptions(self, **kwargs):
+            for key, value in kwargs.iteritems():
+                setattr(self, key, value)
 
         """
             Update physics
         """
         def update(self, dt=1.0):
             self._limitSpeed() 
-            self.pos.add(self.vel.getMult(dt))
+            self.pos += self.vel*dt
             self.checkBounds()
 
         """
@@ -46,9 +58,9 @@ init -2 python:
                 self.vel.y = -abs(self.vel.y)
             # Reset if left or right boundaries
             if self.pos.x - self.radius <= self.bounds[0]:
-                self.reset("left")
+                self.reset(Ball.LEFT)
             if self.pos.x + self.radius >= self.bounds[2]:
-                self.reset("right")
+                self.reset(Ball.RIGHT)
 
         """
             Given a paddle, bounce according to position difference
@@ -76,19 +88,28 @@ init -2 python:
                 self.vel.x += paddle.vel.x
 
         """
+            Get the rendering and events
+        """
+        def render(self, width, height, st, at):
+            return renpy.render(Solid(self.colour), 2*self.radius, 2*self.radius, st, at) 
+
+        def getRenderPos(self):
+            return (self.pos.x-self.radius, self.pos.y-self.radius)
+
+        """
             reset the ball and add score to the correct side
         """
         def reset(self, side):    
             self.pos.x = self.bounds[2]/2.0
             self.pos.y = self.bounds[3]/2.0
-            if side == "left":
-                self.score["right"] += 1
+            if side == Ball.LEFT:
+                self.score.right += 1
                 self.vel = Vector(
                     -self.speed/2.0 + random.randint(-2, 2), 
                     self.speed * random.randint(-5, 5) / 5.0
                 )
-            elif side == "right":
-                self.score["left"] += 1
+            elif side == Ball.RIGHT:
+                self.score.left += 1
                 self.vel = Vector(
                     self.speed/2.0 + random.randint(-2, 2), 
                     self.speed * random.randint(-5, 5) / 5.0
@@ -96,11 +117,9 @@ init -2 python:
         
         # Resets the ball position and nulls the score
         def resetScore(self):
-            self.reset("left")
-            self.score = {
-                "left": 0,
-                "right": 0
-            }
+            self.reset(Ball.LEFT)
+            self.score.left = 0
+            self.score.right = 0
 
         # Cap the velocity if it goes above the maximum limit
         def _limitSpeed(self, factor=2):
@@ -122,6 +141,8 @@ init -2 python:
                     -self.speed,
                     random.randint(-self.speed, self.speed),
                 )
+
+        
         
         
 

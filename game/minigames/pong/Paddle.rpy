@@ -1,8 +1,24 @@
 init -2 python:
     class Paddle:   
         import pygame
-        def __init__(self, **kargs):
-            self.defaultOptions = {
+        """
+            Defining control constants
+        """
+        UP = 0
+        DOWN = 1
+        LEFT = 2
+        RIGHT = 3
+
+        """
+            __init__ = initialises all paddle info
+            __default__ = will initialise default values if parameters are not specified
+        """
+        def __init__(self, **kwargs):
+            self.__default__(**kwargs)
+            self.initialPos = self.pos.getCopy()
+
+        def __default__(self, **kwargs):
+            defaultOptions = {
                 "ball": None,
                 "bounds": (0, 0, 1366, 768),
                 "colour": "#ffffff",
@@ -13,17 +29,15 @@ init -2 python:
                 "vel": Vector(0, 0),
                 "width": 20,
             }
-            self.setOptions(**kargs)
+            defaultOptions.update(kwargs)
+            self.setOptions(**defaultOptions)
             
         """
             Set options given keyword arguments
         """
-        def setOptions(self, **kargs):
-            for key, value in self.defaultOptions.iteritems():
-                if key in kargs:
-                    setattr(self, key, kargs[key])
-                else:
-                    setattr(self, key, value)
+        def setOptions(self, **kwargs):
+            for key, value in kwargs.iteritems():
+                setattr(self, key, value)
 
         """
             If the paddle reaches a bound, push it back into the bounds
@@ -73,42 +87,48 @@ init -2 python:
                     self.ball.bounceUsingVector(self)
 
         """
-            Control a paddle using keypresses
+            Used to move the paddle
+        """ 
+        def move(self, direction=None):
+            if direction == Paddle.UP:
+                self.vel.y = -self.speed
+            elif direction == Paddle.DOWN:
+                self.vel.y = +self.speed
+            elif direction == Paddle.LEFT:
+                self.vel.x = -self.speed
+            elif direction == Paddle.RIGHT:
+                self.vel.x = +self.speed
+            else:
+                self.vel.x = 0
+                self.vel.y = 0
+
+        """
+            control = Control a paddle using keypresses
+            update = update velocity and check bounces and bounds
+            reset = reset to original location and stop moving
         """
         def control(self):
             if not self.keys:
                 return 
             pressed = pygame.key.get_pressed()
             keyPressed = False
-            for keyName, keyCode in self.keys.iteritems():
-                if pressed[getattr(pygame, keyCode)]:
-                    self.move(keyName)
+            for keyName, direction in self.keys.iteritems():
+                if pressed[keyName]:
+                    self.move(direction)
                     keyPressed = True
             if not keyPressed:
-                self.vel.x = self.vel.y = 0
-
-        """
-            Used to move the paddle
-        """ 
-        def move(self, direction=None):
-            if direction == "up":
-                self.vel.y = -self.speed
-            elif direction == "down":
-                self.vel.y = +self.speed
-            elif direction == "left":
-                self.vel.x = -self.speed
-            elif direction == "right":
-                self.vel.x = +self.speed
-            else:
-                self.vel.y = 0
-                self.vel.x = 0
+                self.move()
         
         # updates game info on the position of paddle
         def update(self, dt=1.0):
             self.control()
-            self.pos.add(self.vel.getMult(dt))
+            self.pos += self.vel*dt
             self.checkBounds()
             self.bounce()
+
+        def reset(self):
+            self.pos = self.initialPos.getCopy()
+            self.move()
 
         """
             Used to check if a coordinate is within the x/y range
@@ -117,13 +137,22 @@ init -2 python:
         
         # Check if a x-coordinate is inline
         def checkXInside(self, x):
-            if(x >= self.pos.x - self.width/2 and
-                    x <= self.pos.x + self.width/2):
+            if(x >= self.pos.x - self.width/2 and x <= self.pos.x + self.width/2):
                 return True
             return False
+
         # Check if a y-coordinate is inline
         def checkYInside(self, y):
-            if(y >= self.pos.y - self.height/2 and
-                    y <= self.pos.y + self.height/2):
+            if(y >= self.pos.y - self.height/2 and y <= self.pos.y + self.height/2):
                 return True
             return False
+
+        """
+            render = render the paddle
+            event = provide events to the paddle
+        """
+        def render(self, width, height, st, at):
+            return renpy.render(Solid(self.colour), self.width, self.height, st, at) 
+
+        def getRenderPos(self):
+            return (self.pos.x-self.width/2, self.pos.y-self.height/2)

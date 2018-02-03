@@ -54,6 +54,9 @@ image bg schoolfront =  loadImage("bg_wilkins_side.png")
 image bg toilet =       loadImage("bg_toilet.png")
 image bg workshop =     loadImage("bg_Workshop.png")
 
+# minigame background
+image bg pong = loadImage("screen_bg_pong.png")
+
 #not sure if that's legit spelling, plz check
 style window:
     left_padding 150

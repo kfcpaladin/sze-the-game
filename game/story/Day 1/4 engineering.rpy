@@ -400,59 +400,9 @@ label eng1p2:
             menu:
                 "*Knock *knock\""
                 "Open door":
-                    "You open the door"
-                    sze "\"Sir, someon-\""
-                    $ stopmusic()
-                    $ playmusic("RaxlenSliceBG8bit.ogg")
-                    $ playsfx("hpunch.ogg")
-                    dik "\"...\"" with hpunch
-                    "You find yourself being garotted by earphones"
-                    dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
-                    dik "\"I do pray that thou'st injuries are not grievous and thou grievances are not severe.\""
-                    sze "\"Gurg... Sir, someone has a message for you\""
-                    gra "\"Give it to me\""
-                    gra "\"...yes...indeed\""
-                    dik "\"Humourous indeed, it seems that our poor fellow, Sir Haran, has yet again been exiled to the Alcove of Degeneracy.\""
-                    gra "\"He has inappropriate footwear\""
-                    pra "\"What?!? These are leather shoes\""
-                    gra "\"Richard, give me the specs of your shoes\""
-                    dik "\"Very well...Work boots, leather upper, quarter and tongue, all put together by the finest cobbler of Sydney, whom goes by the name Steel Blue\""
-                    dik "\"Underneath the upper, the toe cap is made of bullet resistant AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
-                    dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
-                    dik "\"The insole contains an advanced ventilation system for optimum comfort. Both the vulcanised rubber heel and outsole contain compartments\""
-                    sze "\"...wtf\""
-                    pra "\"...wtf\""
-                    gra "\"Now those are leather shoes\""
-                    dik "\"Once more, I must apologise for my trangressions; If god wills it I'll be sure to right my wongs later on\""
-                    "Richard left"
-                    $ stopmusic()
-                    $ dik.gain()
-                    gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
-                    jump asszembly1
+                    jump engyesdoor
                 "Don't open door":
-                    sze "\"...\""
-                    sze "\"szeebs\""
-                    dea "\"I'll get it\""
-                    "Sudden movement catches your peripheral vision"
-                    $ playsfx("hpunch.ogg")
-                    dea "\"Gaaaafuuuuccc\"" with hpunch
-                    dea "\"heeelllllppppp\""
-                    $ sze.gain("intellect")
-                    $ stopmusic()
-                    $ playmusic("RaxlenSliceBG8bit.ogg")
-                    dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
-                    dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
-                    "Richard left leaving Dean cowering on the ground moaning in an unhealthy "
-                    $ stopmusic()
-                    dea "\"...fuck u arthur, ur a coward\""
-                    $ sze.loss("strength")
-                    sze "\"What did I do?\""
-                    dea "\"nuthing\""
-                    $ sze.loss("fort")
-                    dea "\"Sir, message for you\""
-                    gra "\"k\""
-                    gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
-                    jump asszembly1
+                    jump engnodoor
         "Don't do worksheets":
             sze "Ceebs to worksheet"
             sze "I'll just do maths..."
@@ -467,58 +417,9 @@ label eng1p2:
             menu:
                 "*Knock *knock\""
                 "Open door":
-                    "You open the door"
-                    sze "\"Sir, someon-\""
-                    $ stopmusic()
-                    $ playmusic("RaxlenSliceBG8bit.ogg")
-                    $ playsfx("hpunch.ogg")
-                    dik "\"...\"" with hpunch
-                    "You find yourself being garotted by earphones"
-                    dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
-                    dik "\"I do pray that thou'st injuries are not grievous and thou grievances are not severe.\""
-                    sze "\"Gurg... Sir, someone has a message for you\""
-                    gra "\"Give it to me\""
-                    gra "\"...yes...indeed\""
-                    dik "\"Humourous indeed, it seems that our poor fellow, Sir Haran, has yet again been exiled to the Alcove of Degeneracy.\""
-                    gra "\"He has inappropriate footwear\""
-                    pra "\"What?!? These are leather shoes\""
-                    gra "\"Richard, give me the specs of your shoes\""
-                    dik "\"Very well...Work boots, leather upper, quarter and tongue, all put together by the finest cobbler of Sydney, whom goes by the name Steel Blue\""
-                    dik "\"Underneath the upper, the toe cap is made of bullet resistant AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
-                    dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
-                    dik "\"The insole contains an advanced ventilation system for optimum comfort. Both the vulcanised rubber heel and outsole contain compartments\""
-                    sze "\"...wtf\""
-                    pra "\"...wtf\""
-                    gra "\"Now those are leather shoes\""
-                    dik "\"Once more, I must apologise for my trangressions; If god wills it I'll be sure to right my wongs later on\""
-                    "Richard left"
-                    $ dik.gain()
-                    $ stopmusic()
-                    gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
-                    jump asszembly1
+                    jump engyesdoor
                 "Don't open door":
-                    sze "\"...\""
-                    sze "\"szeebs\""
-                    dea "\"I'll get it\""
-                    "Sudden movement catches your peripheral vision"
-                    $ playsfx("hpunch.ogg")
-                    dea "\"Gaaaafuuuuccc\"" with hpunch
-                    dea "\"heeelllllppppp\""
-                    $ stopmusic()
-                    $ playmusic("RaxlenSliceBG8bit.ogg")
-                    dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
-                    dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
-                    "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
-                    $ stopmusic()
-                    dea "\"...fuck u arthur, ur a coward\""
-                    $ sze.loss("strength")
-                    sze "\"What did I do?\""
-                    dea "\"nuthing\""
-                    $ sze.loss("fort")
-                    dea "\"Sir, message for you\""
-                    gra "\"k\""
-                    gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
-                    jump asszembly1
+                    jump engnodoor
         "Play with vices":
             "you are unable to contain yourself, your hands inexorably moving towards the vices"
             "with a swift movement, you gracefully turn the handle a half-revolution, the two plates inching closer"
@@ -535,3 +436,58 @@ label eng1p2:
             sze "\"FUCK\""
             gra "\"GO STAND IN THE NAUGHTY CORNER\""
             jump eng1p1naughtycorner
+
+label engyesdoor:
+    "You open the door"
+    sze "\"Sir, someon-\""
+    $ stopmusic()
+    $ playmusic("RaxlenSliceBG8bit.ogg")
+    $ playsfx("hpunch.ogg")
+    dik "\"...\"" with hpunch
+    "You find yourself being garotted by earphones"
+    dik "\"My apologies, good sir, these machinations, twere not meant for thee.\""
+    dik "\"I do pray that thou'st injuries are not grievous and thou grievances are not severe.\""
+    sze "\"Gurg... Sir, someone has a message for you\""
+    gra "\"Give it to me\""
+    gra "\"...yes...indeed\""
+    dik "\"Humourous indeed, it seems that our poor fellow, Sir Haran, has yet again been exiled to the Alcove of Degeneracy.\""
+    gra "\"He has inappropriate footwear\""
+    pra "\"What?!? These are leather shoes\""
+    gra "\"Richard, give me the specs of your shoes\""
+    dik "\"Very well...Work boots, leather upper, quarter and tongue, all put together by the finest cobbler of Sydney, whom goes by the name Steel Blue\""
+    dik "\"Underneath the upper, the toe cap is made of bullet resistant AR500 steel, with 9mm Level IIIA kevlar padding underneath\""
+    dik "\"Shoe laces double as garottes with carbide diamond edge to double as file, aglets double as laser and UV light\""
+    dik "\"The insole contains an advanced ventilation system for optimum comfort. Both the vulcanised rubber heel and outsole contain compartments\""
+    sze "\"...wtf\""
+    pra "\"...wtf\""
+    gra "\"Now those are leather shoes\""
+    dik "\"Once more, I must apologise for my trangressions; If god wills it I'll be sure to right my wongs later on\""
+    "Richard left"
+    $ stopmusic()
+    $ dik.gain()
+    gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
+    jump asszembly1
+
+label engnodoor:
+    sze "\"...\""
+    sze "\"szeebs\""
+    dea "\"I'll get it\""
+    "Sudden movement catches your peripheral vision"
+    $ playsfx("hpunch.ogg")
+    dea "\"Gaaaafuuuuccc\"" with hpunch
+    dea "\"heeelllllppppp\""
+    $ stopmusic()
+    $ playmusic("RaxlenSliceBG8bit.ogg")
+    dik "\"Fool! T'is is a rookie mistake to leave ones backside exposed.\""
+    dik "\"Fortunately for thou, I am on an errand, with an urgent message for Sir Grant.\""
+    "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
+    $ stopmusic()
+    dea "\"...fuck u arthur, ur a coward\""
+    $ sze.loss("strength")
+    sze "\"What did I do?\""
+    dea "\"nuthing\""
+    $ sze.loss("fort")
+    dea "\"Sir, message for you\""
+    gra "\"k\""
+    gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
+    jump asszembly1

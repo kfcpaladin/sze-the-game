@@ -1,49 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/story/script.rpy", line 39, in script call
-    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full, and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1 played softly in the background"
-  File "game/minigames/pong/screen_pong.rpy", line 11, in script call
-    call screen_pong(pong)
-  File "game/minigames/pong/screen_pong.rpy", line 44, in script
-    python:
-  File "game/minigames/pong/screen_pong.rpy", line 46, in <module>
-    score = ui.interact()
-  File "game/minigames/pong/Pong.rpy", line 93, in event
-    return {"score": score.left-score.right, "surrender": False}
-AttributeError: 'RevertableDict' object has no attribute 'left'
+  File "game/instances/inventory.rpy", line 1, in script
+    init python:
+  File "game/instances/inventory.rpy", line 6, in <module>
+    "max_items": 10,
+TypeError: __init__() takes exactly 5 arguments (4 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/script.rpy", line 39, in script call
-    sze "beside a rose garden in fragrant bloom, with the moon and stars out in full, and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1 played softly in the background"
-  File "game/minigames/pong/screen_pong.rpy", line 11, in script call
-    call screen_pong(pong)
-  File "game/minigames/pong/screen_pong.rpy", line 44, in script
-    python:
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ast.py", line 826, in execute
+  File "game/instances/inventory.rpy", line 1, in script
+    init python:
+  File "C:\Users\Dean Hou\Documents\GitHub\sze-the-game\renpy\ast.py", line 826, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/python.py", line 1764, in py_exec_bytecode
+  File "C:\Users\Dean Hou\Documents\GitHub\sze-the-game\renpy\python.py", line 1764, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/minigames/pong/screen_pong.rpy", line 46, in <module>
-    score = ui.interact()
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/ui.py", line 287, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 2553, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/core.py", line 3237, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "/home/fiendchain/Downloads/sze-the-game-orphan/renpy/display/layout.py", line 969, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "game/minigames/pong/Pong.rpy", line 93, in event
-    return {"score": score.left-score.right, "surrender": False}
-AttributeError: 'RevertableDict' object has no attribute 'left'
+  File "game/instances/inventory.rpy", line 6, in <module>
+    "max_items": 10,
+TypeError: __init__() takes exactly 5 arguments (4 given)
 
-Linux-4.10.0-35-generic-x86_64-with-debian-stretch-sid
+Windows-8-6.2.9200
 Ren'Py 6.99.13.2919
 sze-the game 0.0

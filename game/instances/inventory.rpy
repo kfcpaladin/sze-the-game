@@ -3,6 +3,7 @@ init python:
     bag = Inventory(**{
         "who": sze,
         "name": "Bag", 
+        "money": 0,
         "max_items": 10, 
     })
     
@@ -12,5 +13,20 @@ init python:
     locker = Inventory(**{
         "who": sze,
         "name": "Locker",
+        "money": 0,
+        "max_items": None,
+    })
+
+    khajiit = Inventory(**{
+        "who": pra,
+        "name": "Khajiit",
+        "money": 99999,
+        "max_items": None,
+    })
+
+    canteen = Inventory(**{
+        "who": mox,
+        "name": "Skinner",
+        "money": 99999,
         "max_items": None,
     })

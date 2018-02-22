@@ -1,10 +1,11 @@
 init -10 python:
     from copy import deepcopy
     class Inventory:
-        def __init__(self, who, name, max_items):
+        def __init__(self, who, name, money, max_items):
             self.inv = []  # initialise list to store items, first in is top of list
             self.who = who
             self.name = name #name of inventory i.e. locker or bag
+            self.money = money
             self.max_items = max_items # maximum items it can hold, bag = 6, locker = infinte
             # sorts
             #self.sort_by = self.sort_name #alphabetical
@@ -16,6 +17,14 @@ init -10 python:
 
         def remove(self, item): #remove an item -1
             self.inv.remove(item)
+
+        def deposit(self, amount):
+            self.money -= amount
+        
+        def withdraw(self, amount):
+            self.money += amount
+
+        
 
         # sorts, figure out later
         #def sort_name(self):

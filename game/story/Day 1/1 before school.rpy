@@ -5,6 +5,8 @@ label schoolday1:
     $ game.setTime("morning")
     "Wednesday Morning"
     sze "I arrived at school 3 hours early to show my dedication to the system"
+    sze "Well, more so because I didn't know what else to do, as I couldn't fall asleep after that weird dream"
+    sze "But perhaps, maybe this effort will pay off..."
     sze "One day she will notice"
     #btw, the day is probably wednesday or tuesday because first day back
     show moxham happy
@@ -80,6 +82,13 @@ label schoolday1:
             mox "\"Click on \"Open diary\" to open the diary again\""
             "...."
             "You walk away, holding this leather bound book between your {s}asscheeks{/s}hands"
+#   will include a sorta psychopass system with this diary, where -ve score is good, +ve is bad; you start off as an exemplary student
+#   "Exit Profile Exemplified" (best score) -> "Socially Aware" (good score) -> "Clear" (average) -> "stained" (bad) -> "in the shits" (suspended) -> "expelled waste" (expelled)
+#   more so reliant on the (as of now) hidden two part moxcounter -> both add up at the same time
+#   daily moxcounter -> pretty self-explanatory, resets everyday. I'm thinking 2 or 3 of these in one day = fkd by mox
+#   persistent moxcounter -> maybe have it decrease by 3 every week? The idea is, this will act as an aggregate, so you would be noticed for doing naughty things
+#   maybe once your persistent moxcounter hits "in the shits" you will be insta-suspended when another moxcounter is added?
+#   post-suspension, moxcounter does not decrease for 4 weeks (a month); any further infraction results in expulsion, and loss of game
             
         else:
             sze "\"But you already gave me one\""

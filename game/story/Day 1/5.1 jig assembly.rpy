@@ -126,7 +126,8 @@ label asszemblyjigolo1_3:
             jit "\"Ez pz\""
             sze "\"{b} What if it is a teacher {/b}\""
             jit "\"{b} stfu, if it is then they can hear you {/b}\""
-            "Turns out, it wasn't a teacher...it was several of them on patrol"
+            "Turns out, it wasn't a teacher"
+            "It was a patrol of them"
             "\"{i} {b} Oi, you there! STOP! {/b} {/i}\""
             jit "\"fml, fcking Arthur\""
             $ jit.loss()
@@ -135,9 +136,9 @@ label asszemblyjigolo1_3:
             jit "\"U for realz??? I don't even...\""
             $ jit.loss()
             "You sense that Gary is somewhat reluctant to talk to you now..."
-            "\" {i} Off to the principal with youse...no funny moves, put your things in your bags, place your hands behind your head, interlock your fingers...{/i} {nw}\""
-            sze "fuck fuck fuck fuck fuck"
-            sze "knew I shouldn't've jigged"
+            "\" {i} Stop moving, put everything in your bags, place your hands behind your head, interlock your fingers...{/i} {nw}\""
+            sze "\"fuck fuck fuck fuck fuck\""
+            sze "\"knew I shouldn't've jigged\""
             "You endure the march of shame in silence"
             "..."
             "..."
@@ -155,7 +156,6 @@ label asszemblyjigolo1_3:
             "Everyone sneaks through the side door of the Rowe Dungeon just as the footsteps reach the stairwell"
             "You hear the pursuers' voices in the room you just left"
             "\"{i} I thought I saw movement... {/i}\""
-            "\"{b} {i} Pah, I see no one...you must be hallucinating {/i} {/b}\""
             scene bg schoolfront
             with fade
             jump fugitivesfromasszembly1

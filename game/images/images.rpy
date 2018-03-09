@@ -53,6 +53,11 @@ image bg school =       loadImage("bg_memorial_hall.png")
 image bg schoolfront =  loadImage("bg_wilkins_side.png")
 image bg toilet =       loadImage("bg_toilet.png")
 image bg workshop =     loadImage("bg_Workshop.png")
+image bg bdr1night =    loadImage("bg_starterbedroom1.jpg")
+image bg bdr1day =      loadImage("bg_starterbedroom2.jpg")
+image bg bdr1dwndsk =   loadImage("bg_starterbedroom3.jpg")
+image bg classdoor =    loadImage("bg_outsideclass.jpg")
+image bg kilgourup =    loadImage("bg_rayretireupperkilgour.jpg")
 
 # minigame background
 image bg pong = loadImage("screen_bg_pong.png")
@@ -88,3 +93,4 @@ image side yin =        loadImage("char_willyin.png")
 image todd normal =     loadImage("char_toddside.png") # placeholder?
 image willis normal =   loadImage("char_willis1.png")
 image yang normal =     loadImage("char_yang1.png")
+image sze normal =      loadImage("char_sze1.png")

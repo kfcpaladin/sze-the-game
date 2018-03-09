@@ -3,6 +3,8 @@ label postrollcall1:
     scene bg school
     sze "I watch her from afar, but I doubt she notices arthur"
     sze "I see her, walking towards the classroom"
+    scene bg classdoor
+    with fade
     menu stealwillisgirl:
         "Should I go talk to her?"
         "Go talk to her":
@@ -10,7 +12,6 @@ label postrollcall1:
         "Ignore her, and continue walking to your next class":
             $ game.stealWillisGirl = False
 label TheKwokappears:
-    scene bg school
     if game.stealWillisGirl is True:
         $ sze.gain("thirst")
         show willis normal

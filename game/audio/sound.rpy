@@ -85,7 +85,6 @@ init -1 python:
         return False
 
 # Default menu and gui sounds
-init python:
     ###########################################
     # Audio
     ## Sounds that are used when button and imagemaps are clicked.

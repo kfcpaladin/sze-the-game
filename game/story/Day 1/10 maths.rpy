@@ -20,7 +20,7 @@ label mthext1day1:
 label mthext1shitstorm:
     $ autosave()
     "The Barton asks, Anthony what are you doing on your computer?"
-    "Geogebrah sir is the reply"
+    "Geogebrah sir is the reply" #create anthony lin character later
     "No your not, bring your laptop over here"
     "It's just geogebrah sir"
     $ playsfx("vpunch.ogg")

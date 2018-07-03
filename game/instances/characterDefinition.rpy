@@ -12,7 +12,7 @@ define drk = Friend('Derek',        friendship=0, color="#FFFFFF", image="derek"
 define flu = Friend('FLUITSIE',     friendship=0, color="#FFFFFF", image="fluitsma")
 define gra = Friend('GRANT',        friendship=0, color="#FFFFFF", image="grant",   icon=loadImage("icon_grant.png"))
 define jit = Friend('Gary',         friendship=5, color="#FFFFFF", image="gary",    icon=loadImage("icon_gary.png"))
-define kok = Friend('Willis',       friendship=0, color="#666666", image="willis",  icon=loadImage("icon_willis.png"))
+define kok = Friend('Willis',       friendship=-10, color="#666666", image="willis",  icon=loadImage("icon_willis.png"))
 define lee = Friend('Andrew',       friendship=0, color="#FFFFFF", image="andrew")
 define mox = Friend('MOXHAM',       friendship=0, color="#FFFFFF", image="moxham",  icon=loadImage("icon_moxham.png"))
 define pra = Friend('Pragash',      friendship=0, color="#FFFFFF", image="pragash", icon=loadImage("icon_pragash.png"))
@@ -21,9 +21,10 @@ define roy = Friend('Roy',          friendship=0, color="#FFFFFF", image="roy", 
 define rus = Friend('Rusali',       friendship=0, color="#FFFFFF", image="rusali",  icon=loadImage("icon_rusali.png"))
 define slm = Friend('Schlam',       friendship=0, color="#FFFFFF", image="shlam")
 define tod = Friend('Todd Treoir',  friendship=0, color="#99ff99", image="todd",    icon=loadImage("icon_todd.png"))
+define web = Friend('Dr. Webb',     friendship=0, color="#FFFFFF", image="webb")
 define wil = Friend('Will Yin',     friendship=40, color="#ff0000",image="yin",     icon=loadImage("icon_willyin.png"))
 define wiy = Friend('Will Yang',    friendship=40, color="#FFFFFF",image="will",    icon=loadImage("icon_willyang.png"))
+define zhn = Friend('Will Zhong',    friendship=0, color="#FFFFFF",image="Zhong",    icon=loadImage("icon_willyang.png"))
 
 init -1 python:
     friendList = []
-

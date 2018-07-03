@@ -25,7 +25,7 @@ label phys1p3principal1:
         mox "\"I'll clear all your records of loading dockness if you rek Arthur and spend afternoon of re-education with me\""
         show rusali normal
         $ playsfx("vpunch.ogg")
-        rus "\Soz man. Need to ace trials\"" with vpunch
+        rus "\"Soz man. Need to ace trials\"" with vpunch
         sze "\"faarrrr\""
         jump dead
     else:
@@ -61,7 +61,7 @@ label phys1p3principal2:
         $ game.gain("moxCounter")
         mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
         mox "\"Especially you Joshua Chao Lin, you have a history of being drop kick\""
-        mox "\"This behaviour is intolerable and unbefitting of the Fortian Race. I expect this from\""
+        mox "\"This behaviour is intolerable and unbefitting of the Fortian Race. I expect this from\"" #unfinished sentence?
         mox "\"You two are lucky you arent expelled\""
         mox "\"Instead you will be given after school detention...how merciful of me\""
         hide moxham unhappy

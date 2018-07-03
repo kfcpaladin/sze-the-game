@@ -115,7 +115,7 @@ label schoolday1:
         "But no roll call teacher"
         "Ceebs waiting, I go to office to get timetable"
         "Got a new timetable"
-        "I have Physics (Fluitsma), Engineering (Grant), English (Schlam), Extension Maths (Barton), Chem (Webb), Eco (Chapman)"
+        "I have Physics (Fluitsma), Engineering (Grant), English (Schlam), Chem (Webb), Extension Maths (Barton), Eco (Chapman)"
         scene bg school
         with fade
         sze "My life feels empty without her, like a photoelectric cell without UV rays"

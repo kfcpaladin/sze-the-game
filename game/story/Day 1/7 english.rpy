@@ -441,7 +441,7 @@ label english1top:
                             dng "\"Wait legit? what is he savant at?\""
                             sze "\"He's a financial extraordinaire, which is why he is with my parents on their 8-year business trip overseas\""
                             dng "\"Legit? So you live alone?\""
-                            sze "\"Well, I'm staying in my aunt's investment property in Croyden, but yeah, I live alone, pretty much\""
+                            sze "\"Well, I'm staying in my aunt's investment property in Burwood, but yeah, I live alone, pretty much\""
                             lee "\"That makes you, like, every anime and visual novel protagonist that ever existed\""
                             sze "\"huh, never thought about it that way\""
                             "That was a lie, of course. Otherwise, why else would you have someone narrating your life?"
@@ -572,7 +572,7 @@ label english1top:
         "Esteban":
             sze "\"Hola Esteban\""
             dng "\"lmao when did you get so Spanish?\""
-            sze "\"(inverted ?)que pasa con hablar en espanol, cholo?\""
+            sze "\"¿que pasa con hablar en espanol, cholo?\""
             dng "\"I don't understand, but you called me gangster\""
             dng "\"Thanks, bruh\""
             $ dng.gain()
@@ -682,6 +682,39 @@ label eng1waitforschlammie:
     slm "\"This applies for your Shakespeare text of the year, Othello\""
     slm "\"and your text for the study of the American Dream \"Of Mice and Men\", although it is paired with \"American Beauty\"...\""
     slm "\"Actually, all our discs of \"American Beauty\" are missing, something about students over-analysing roses in bedrooms\""
+    slm "\"Hmmm....\""
+    slm "\"How about you all partner up, and speak your classmates about your experiences in \"Belonging\".\""
+    "Around the class, students instantly start moving around, forming pairs with their friends"
+    sze "Damn, I need to find a partner soon or I will be left out"
+    "You head towards Steven, catching his glance upon the way"
+    dng "\"Soz man, already partnered up with Andrew\""
+    sze "Fuck, the only remaining classmate I know is Roy"
+    "You gaze across jostling students, but it appears that Roy has already partnered with a member of the infamous \"Games Club\""
+    "It appears that everyone has already formed into groups."
+    "But wait, there appears to be one student sitting alone in the back row engrossed in his mobile, unaware of what is going on around him"
+    sze "\"Hey man, Wanna {s}play soccer{/s} partner up?\""
+    zhn "\"对不起, 我不会说英文\""
+    sze "\"uhh...\""
+    menu:
+        "\"[The teacher asked us to partner up for some groupwork]\"" #someone translate this to chinese pls, actually translate everything in square brackets
+            zhn "\"[I see, I only just arrived in Australia, so I cant really help much]\""
+            sze "Fricking useless international students, this wasnt meant to be an issue until uni"
+            sze "\"[We should pretend to do work so we don't get in trouble]\""
+            zhn "\"[That sounds like a good idea, I wasn't planning on doing work anyway]\""
+            zhn "\"[By the way, you should play Hearthstone, it's a pretty good mobile game]\""
+            #sze proceeds to play hearthstone, and adds some other students as friends on the game. Raises friendships with zhong and other students, maybe loss of intellect tho.
+        "\"Ahh nevermind, Ill just pretend to do work\""
+            zhn "\"[I'll just be playing some Hearthstone]\""
+            "You sit down in the adjacent seat and upon up your school laptop"
+            sze "Maybe Dean has a halo server set up"
+            #sze proceeds to play halo with Rick and Dean and potentially Anthony Le (bringing up storyline of Calculetor)
+        "\"Fuck off boat person, We're Full\""
+            "It seems your words have triggered the majority left-leaning students in your class"
+            "\"Asylums seekers have a right to seek shelter\""
+            "\"It's Un-Australian to discriminate\""
+            "\"I bet your a {s}TRUMP{/s} Abbott supporter, shame on you\""
+            sze.loss("fort")
+            #sze is isolated for the rest of the lesson
     slm "\"And would you look at that, lesson's over\""
     slm "\"Hopefully next lesson, we will be able to take the glue bottles and texts from the hands of the students in the grade above\""
-    jump mthext1day1
+    jump chemday1

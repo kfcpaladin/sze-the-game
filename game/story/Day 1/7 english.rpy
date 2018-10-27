@@ -1,4 +1,4 @@
-# first english class testing
+﻿# first english class testing
 label english1:
     $ game.setTime("lunch")
     $ autosave()
@@ -696,24 +696,25 @@ label eng1waitforschlammie:
     zhn "\"对不起, 我不会说英文\""
     sze "\"uhh...\""
     menu:
-        "\"[The teacher asked us to partner up for some groupwork]\"" #someone translate this to chinese pls, actually translate everything in square brackets
+        "\"[The teacher asked us to partner up for some groupwork]\"": 
+#someone translate this to chinese pls, actually translate everything in square brackets
             zhn "\"[I see, I only just arrived in Australia, so I cant really help much]\""
             sze "Fricking useless international students, this wasnt meant to be an issue until uni"
             sze "\"[We should pretend to do work so we don't get in trouble]\""
             zhn "\"[That sounds like a good idea, I wasn't planning on doing work anyway]\""
             zhn "\"[By the way, you should play Hearthstone, it's a pretty good mobile game]\""
             #sze proceeds to play hearthstone, and adds some other students as friends on the game. Raises friendships with zhong and other students, maybe loss of intellect tho.
-        "\"Ahh nevermind, Ill just pretend to do work\""
+        "\"Ahh nevermind, Ill just pretend to do work\"":
             zhn "\"[I'll just be playing some Hearthstone]\""
             "You sit down in the adjacent seat and upon up your school laptop"
             sze "Maybe Dean has a halo server set up"
             #sze proceeds to play halo with Rick and Dean and potentially Anthony Le (bringing up storyline of Calculetor)
-        "\"Fuck off boat person, We're Full\""
+        "\"Fuck off boat person, We're Full\"":
             "It seems your words have triggered the majority left-leaning students in your class"
             "\"Asylums seekers have a right to seek shelter\""
             "\"It's Un-Australian to discriminate\""
             "\"I bet your a {s}TRUMP{/s} Abbott supporter, shame on you\""
-            sze.loss("fort")
+            $ sze.loss("fort")
             #sze is isolated for the rest of the lesson
     slm "\"And would you look at that, lesson's over\""
     slm "\"Hopefully next lesson, we will be able to take the glue bottles and texts from the hands of the students in the grade above\""

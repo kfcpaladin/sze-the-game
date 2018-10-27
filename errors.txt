@@ -2,12 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/Paddle.rpy", line 129: expected an indented block
-(Perhaps you left out a " at the end of the first line.)
-        """
-                Used to check if a coordinate is within the x/y range
-                of the paddle (Used by ball)
-            """
-    
+File "game/story/Day 1/7 english.rpy", line 699: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "\"[The teacher asked us to partner up for some groupwork]\"" 
+                                                                  ^
 
 Ren'Py Version: Ren'Py 6.99.13.2919

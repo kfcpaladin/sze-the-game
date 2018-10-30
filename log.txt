@@ -234,4 +234,24 @@ Extensions:
     GL_SGIS_generate_mipmap
     GL_SGIS_texture_edge_clamp
     GL_SGIS_texture_lod
-    GL
+    GL_SUN_multi_draw_arrays
+    GL_WIN_swap_hint
+Number of texture units: 8
+Using shader environment.
+Using copy RTT.
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Total time until interface ready: 1.62399983406s
+The window was minimized.
+The window was restored.
+
+primary display bounds: (0, 0, 1920, 1080)
+Windowed mode.
+Screen sizes: virtual=(800, 600) physical=(1110, 833) drawable=(1110, 833)

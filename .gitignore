@@ -1,13 +1,3 @@
-# Ignore autosaves and caches
-./game/cache/
-./game/saves/
-
-# Ignore python byte code (takes up extra space)
-*.rpyc
-*.pyo
-*.rpyb
-*.save
-
 # Linux files
 .directory
 
@@ -64,5 +54,3 @@ log.txt
 traceback.txt
 persistent
 .directory
-game/saves/auto-10-LT1.save
-game/saves/persistent

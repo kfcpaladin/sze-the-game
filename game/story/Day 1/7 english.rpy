@@ -696,7 +696,7 @@ label eng1waitforschlammie:
     zhn "\"对不起, 我不会说英文\""
     sze "\"uhh...\""
     menu:
-        "\"[The teacher asked us to partner up for some groupwork]\"" #someone translate this to chinese pls, actually translate everything in square brackets
+        "\"[The teacher asked us to partner up for some groupwork]老师需要我们团体做这些功课。\"" #someone translate this to chinese pls, actually translate everything in square brackets
             zhn "\"[I see, I only just arrived in Australia, so I cant really help much]\""
             sze "Fricking useless international students, this wasnt meant to be an issue until uni"
             sze "\"[We should pretend to do work so we don't get in trouble]\""

@@ -35,7 +35,7 @@ label beforeAssembly1:
 	pra "\"I pushed for that changes That the people wanted. But the powers that be deemed me to be a threat and through figureheads they turned student opinion against me\""
 	sze "\"Ok......\""
 	wil "\"I think I see Gary\""
-	sze "\"Gary Chen is an \""
+	pra "\"Haven't seen Gary at assembly since.....um....can't remember...\""
 	#pra "\"I'm finally free from the Engineering room...\""
     #sze "\"Why not drop it?\""
     #pra "\"Not just yet... I need to enact my revenge\""

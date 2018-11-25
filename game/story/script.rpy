@@ -1,5 +1,5 @@
 # INTRODUCTION
-
+define pov = Character('[povname]')
 label start:
     if config.developer:
         $ logDefaultCache() # for debugging improperly read files
@@ -30,7 +30,10 @@ label start:
     "or just the dull records of another face in the crowd"
     "is up to you to decide."
     "I suppose that raises a question..."
-    "Who are you?..."
+    python:
+        povname = renpy.input("Who are you?")
+        if not povname:
+            povname = "Uszeless"
     "Not your name, I couldn't care less what you call yourself."
     "I suppose, for the purposes of this tale, you are some archetype of our Hero's collective unconscious. I don't know which one in particular"
     "simply that you are a guiding force. Your decisions will be acted upon, subconsciously, of course, by the Hero."

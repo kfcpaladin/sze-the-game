@@ -5,6 +5,8 @@ class Visitor:
 
     def register(self, handler_id):
         def wrapper(func):
+            if handler_id in self.handlers:
+                raise KeyError("Handler {0} already registered".format(handler_id))
             self.handlers.setdefault(handler_id, func)
             return func
         return wrapper
@@ -13,5 +15,10 @@ class Visitor:
         handler = self.handlers.get(handler_id, None)
         if handler:
             return handler(obj)
-        return None
+        raise UnknownVisitorHandler(handler_id)
+
+class UnknownVisitorHandler(Exception):
+    def __init__(self, handler_id):
+        super().__init__(self, "Unknown handler id {0}".format(handler_id))
+        self.handler_id = handler_id
             

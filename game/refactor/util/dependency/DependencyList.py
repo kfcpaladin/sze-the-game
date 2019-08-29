@@ -43,3 +43,4 @@ class DependencyList(Dependency, serialisation.Visitable):
             if not dependency.is_satisifed:
                 return False
         return True
+

@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/refactor/util/DependencyList.rpy", line 23: invalid syntax
-            if self._is_all_satisfied not is_all_satisifed:
-                                                          ^
+File "game/refactor/defaults/achievements.rpy", line 158: can't assign to function call
+    
     
 
 Ren'Py Version: Ren'Py 6.99.13.2919

@@ -111,7 +111,7 @@ screen achieve_description(achieveConfig, pos, size):
             has vbox    
             if achievement:
                 text "{{b}}Description: {{/b}}{0}".format(achievement.description)
-                text "{{b}}Dependencies: {{/b}}{0}".format(len(achievement._unlock_dependencies.dependencies))
+                text "{{b}}Dependencies: {{/b}}{0}".format(len(achievement.unlock_dependencies.dependencies))
             else:
                 text "{b}An achievement has not been selected{/b}"
 

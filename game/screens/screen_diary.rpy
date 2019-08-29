@@ -1,3 +1,7 @@
+init python:
+    from refactor.view.achievements import AchievementViewController
+    achievement_view_controller = AchievementViewController(achievements)
+
 ##############################################################################
 # developer page
 screen diary_developer:
@@ -47,7 +51,7 @@ screen diary_quests(quests=quests):
     use quest_screen(quests)
 
 # achievements
-screen diary_achievements(achievements=achievements):
+screen diary_achievements(achievements=achievement_view_controller):
     modal True
     add loadImage("screen_bg_diaryNormal.png")
     use diary_nav

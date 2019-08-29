@@ -4,7 +4,7 @@ from . import serialisation
 class DependencyList(Dependency, serialisation.Visitable):
     def __init__(self):
         self._dependencies = []
-        self._is_all_satisfied = False
+        self._is_all_satisfied = self._check_all_satisfied()
 
     def __iter__(self):
         for dependency in self._dependencies:
@@ -13,6 +13,7 @@ class DependencyList(Dependency, serialisation.Visitable):
     def add(self, dependency):
         self.dependencies.append(dependency)
         dependency.listen(self._listen_dependency)
+        self._set_is_all_satisfied(self._check_all_satisfied())
 
     @property
     def dependencies(self):
@@ -40,7 +41,7 @@ class DependencyList(Dependency, serialisation.Visitable):
 
     def _check_all_satisfied(self):
         for dependency in self._dependencies:
-            if not dependency.is_satisifed:
+            if not dependency.is_satisfied:
                 return False
         return True
 

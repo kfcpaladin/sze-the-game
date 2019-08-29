@@ -1,7 +1,6 @@
 from . import serialisation
-from serialisation import Visitor, UnknownVisitorHandler
 
-class BufferedImporter(Visitor):
+class BufferedImporter(serialisation.Visitor):
     def __init__(self):
         serialisation.Visitor.__init__(self) 
         self._buffered_data = [] 
@@ -27,7 +26,7 @@ class BufferedImporter(Visitor):
             self._buffered_data.append(buffered_data)
 
 
-class BufferedData(Visitable):
+class BufferedData(serialisation.Visitable):
     def __init__(self, handler_id, data):
         self.handler_id = handler_id
         self.data = data

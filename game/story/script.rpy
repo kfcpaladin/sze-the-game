@@ -104,4 +104,11 @@ label start:
     sze "Or perhaps it conjures an image of quaint Parisian cafes at night"
     sze "beside a rose garden in fragrant bloom, with the moon and stars out in full, and Mascagni's Cavalleria Rusticana: Intermezzo of Act 1 played softly in the background"
     sze "But for now, her name wrings out nought but sadness. More sadness than another year of school."
-    jump schoolday1
+    "But was High School as sad as Sze made it out to be? To understand that much require some more stories....more perspective..."
+    #You can now tack on side stories for which the player can try
+    menu AltPerspectives:
+        "Which of these stories would you like to see?"
+            "The WrongHow Causality Hypothesis"
+                jump WrongHow1
+            "Return me to Sze's perspective"
+                jump schoolday1

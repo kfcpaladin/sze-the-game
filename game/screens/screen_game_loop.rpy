@@ -8,5 +8,4 @@ screen screen_game_loop(speed=0.5):
 
 init python:
     def gameLoop():
-        achievements.updateAchievements()
         quests.updateQuests()

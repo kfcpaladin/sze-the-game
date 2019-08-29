@@ -54,3 +54,5 @@ log.txt
 traceback.txt
 persistent
 .directory
+
+/game/saves/

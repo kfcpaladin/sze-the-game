@@ -21,7 +21,7 @@ screen achieve_screen(achievements, customConfig={}):
             "size": Vector(625, 100),
             "labels": ("description", "dependencies"),
         }),
-        "achieveType": achievements.currentAchieveType,
+        "achieveType": "available",
         "currentDescription": None,
     }).combine(customConfig)
     use achieve_select(achieveConfig, achieveConfig.selectBox.pos, achieveConfig.selectBox.size)
@@ -37,7 +37,7 @@ screen achieve_select(achieveConfig, pos, size):
             xsize size.x
             ysize size.y
             has hbox
-            for achieveType in achieveConfig.achievements.displayableAchieveTypes:
+            for achieveType in ("hidden", "available", "completed"):
                 textbutton unicode.title(achieveType):
                     action [
                         Function(achieveConfig.update, achieveType=achieveType, currentDescription=None),
@@ -48,7 +48,7 @@ screen achieve_select(achieveConfig, pos, size):
 screen achieve_info(achieveConfig, pos, size):
     # changes dynamically
     $ achieveType = achieveConfig.achieveType
-    $ currentAchievements = getattr(achieveConfig.achievements, achieveType)
+    $ currentAchievements = achieveConfig.achievements.achievements 
     $ colour = achieveConfig.achieveColour[achieveType]
     vbox:
         xoffset pos.x
@@ -69,14 +69,14 @@ screen achieve_info(achieveConfig, pos, size):
                         xsize size.x-25
                         ysize size.y
                         # Show each quest in the dictionary
-                        for achieveID, achievement in currentAchievements.iteritems():
-                            use achieve_entry(achieveConfig, achieveID, achievement, colour, size.x)
+                        for achievement in currentAchievements:
+                            use achieve_entry(achieveConfig, achievement, colour, size.x)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No achievements are currently {0}".format(achieveType)
 
 # Achievement entry
-screen achieve_entry(achieveConfig, achieveID, achievement, colour, width):
+screen achieve_entry(achieveConfig, achievement, colour, width):
     default iconSize = 105
     frame:
         style "achieve_entry"
@@ -85,17 +85,12 @@ screen achieve_entry(achieveConfig, achieveID, achievement, colour, width):
         hbox:
             spacing 5
             ysize iconSize
-            use icon_frame(achievement["icon"], iconSize, iconSize, loadImage("achievement_default.png"))
+            use icon_frame(achievement.icon, iconSize, iconSize, loadImage("achievement_default.png"))
             vbox:
                 # acheivement info
-                text "{b}" + "Achievement: {0}".format(achieveID) + "{/b}"
-                for option in achieveConfig.infoBox.labels:
-                    $ msg = "{b}" + "{0}: ".format(unicode.title(option)) + "{/b}"
-                    if not achievement[option]:
-                        $ msg += "None"
-                    else:
-                        $ msg += achievement[option] 
-                    text msg
+                text "{b}" + "Achievement: {0}".format(achievement.id) + "{/b}"
+                text "{{b}}Title: {{/b}}{0}".format(achievement.title)
+                text "{{b}}Brief: {{/b}}{0}".format(achievement.brief)
                 # buttons
                 hbox:
                     spacing 5
@@ -115,12 +110,8 @@ screen achieve_description(achieveConfig, pos, size):
             ymaximum size.y
             has vbox    
             if achievement:
-                for option in achieveConfig.descriptionBox.labels:
-                    text "{b}" + "{0}".format(unicode.title(option)) + "{/b}"
-                    if achievement[option]:
-                        text listToText(achievement[option])
-                    else:
-                        text "None" 
+                text "{{b}}Description: {{/b}}{0}".format(achievement.description)
+                text "{{b}}Dependencies: {{/b}}{0}".format(len(achievement._unlock_dependencies.dependencies))
             else:
                 text "{b}An achievement has not been selected{/b}"
 

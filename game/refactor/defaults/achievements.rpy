@@ -1,15 +1,15 @@
 init -1 python:
-    achievements = Achievements()
-    # add achievements
+    from refactor.models.achievements import AchievementsManager, AchievementsLoader
+    achievements = AchievementsManager(AchievementsLoader())
 
 init python:
     # attribute achievements 
-    achievements.addAchievements({
+    achievements.add_achievements({
         "thirst1": {
             "title": "Become thirsty",
             "brief": "Get more than 25 thirst",
             "description": "One step closer to adulthood",
-            "dependencies": None,
+            "dependencies": [],
             "conditions": {
                 "function": lambda: sze.thirst > 25,
                 "msg": None,
@@ -19,7 +19,7 @@ init python:
             "title": "Become thirstier",
             "brief": "Get more than 50 thirst",
             "description": "The joys of adulthood become more apparent",
-            "dependencies": "thirst1",
+            "dependencies": ["thirst1"],
             "conditions": {
                 "function": lambda: sze.thirst > 50,
                 "msg": None,
@@ -27,7 +27,7 @@ init python:
         },
     })
 
-    achievements.addAchievements({
+    achievements.add_achievements({
         "poweredUp": {
             "title": "Become a better person",
             "brief": "All your stats are positive",
@@ -87,7 +87,7 @@ init python:
     })
 
     # quest achievements
-    achievements.addAchievements({
+    achievements.add_achievements({
         "garyreeducation": {
             "title": "Complete reeducation",
             "brief": "Gary has taught you well",
@@ -105,13 +105,12 @@ init python:
     })
 
     # friendship achievements
-    achievements.addAchievements({
+    achievements.add_achievements({
         "rina1": {
             "title": "Slay Serena",
             "brief": "Date Serena",
             "description": "Your goal as a barnacle is complete",
             "icon": loadImage("achievement_rina1.png"),
-            "dependencies": None,
             "conditions": {
                 "function": lambda: rin.friendship >= 100,
                 "msg": "You have slain the beast",
@@ -120,7 +119,7 @@ init python:
     })
 
     # suicide achievements
-    achievements.addAchievements({
+    achievements.add_achievements({
         "suicide": {
             "title": "Become suicidal",
             "brief": "Kill yourself at least 5 times",
@@ -134,7 +133,7 @@ init python:
     })
 
     # diary achievements
-    achievements.addAchievements({
+    achievements.add_achievements({
         "unlockSuicide": {
             "title": "Learn about suicide",
             "brief": "Unlock the suicide button",
@@ -150,3 +149,5 @@ init python:
             "hidden": True,
         }
     })
+
+    achievements.load()

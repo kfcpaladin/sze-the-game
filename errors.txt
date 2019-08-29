@@ -2,12 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/minigames/pong/Paddle.rpy", line 129: expected an indented block
-(Perhaps you left out a " at the end of the first line.)
-        """
-                Used to check if a coordinate is within the x/y range
-                of the paddle (Used by ball)
-            """
+File "game/refactor/util/DependencyList.rpy", line 23: invalid syntax
+            if self._is_all_satisfied not is_all_satisifed:
+                                                          ^
     
 
 Ren'Py Version: Ren'Py 6.99.13.2919

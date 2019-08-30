@@ -19,7 +19,7 @@ class AchievementViewController:
         self._achievements = self._manager.achievements
 
     def select_pending(self):
-        self._achievements = (a for a in self._manager.achievements if a.is_unlocked and not a.is_completed)
+        self._achievements = self._manager.pending_achievements 
 
     def select_available(self):
         self._achievements = self._manager.unlocked_achievements

@@ -27,7 +27,7 @@ screen achieve_info(controller):
         frame:      
             has vbox    
             text "{b}" + "? Achievements" + "{/b}"
-            if controller.achievements:
+            if controller.achievements and len(controller.achievements) > 0:
                 # Grid and scroll bar
                 side "c r":
                     $ _vpgrid_name = "achievement_vpgrid"

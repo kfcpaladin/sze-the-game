@@ -9,15 +9,19 @@ class AchievementsManager:
 
     @property 
     def achievements(self):
-        return self._achievements
+        return list(self._achievements)
+
+    @property
+    def pending_achievements(self):
+        return [achieve for achieve in self.achievements if achieve.is_unlocked and not achieve.is_completed]
 
     @property
     def unlocked_achievements(self):
-        return (achieve for achieve in self.achievements if achieve.is_unlocked)
+        return [achieve for achieve in self.achievements if achieve.is_unlocked]
 
     @property
     def completed_achievements(self):
-        return (achieve for achieve in self.achievements if achieve.is_completed)
+        return [achieve for achieve in self.achievements if achieve.is_completed]
 
     # LEGACY: Unlock achievement using a method to manager 
     # TODO: Implement achievement unlocking using a method call

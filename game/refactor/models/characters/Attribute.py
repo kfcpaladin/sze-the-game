@@ -5,7 +5,6 @@ from refactor.persistence import JSONExporter
 class Attribute(ObservableProperty, Visitable):
     def __init__(self, name, value):
         ObservableProperty.__init__(self, value)
-        Visitable.__init__(self)
         self.name = name
     
     def accept(self, visitor):

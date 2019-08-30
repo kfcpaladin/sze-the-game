@@ -46,13 +46,12 @@ screen attribute_info(attributeConfig, pos, size):
 # show attribute information entry
 screen attribute_info_entry(attributeConfig, attribute, width):
     default iconSize = 80
-    $ attributeValue = getattr(attributeConfig.who, attribute)
     frame:
         style "attribute_info_entry"
         xsize width
-        if attributeValue > 0:
+        if attribute.value > 0:
             background Solid(attributeConfig.colour["positive"])
-        elif attributeValue == 0:
+        elif attribute.value == 0:
             background Solid(attributeConfig.colour["neutral"])
         else:
             background Solid(attributeConfig.colour["negative"])
@@ -60,13 +59,13 @@ screen attribute_info_entry(attributeConfig, attribute, width):
             xsize width
             ysize iconSize
             spacing 5
-            use icon_frame(loadImage("icon_{0}.png".format(attribute)), iconSize, iconSize, loadImage("icon_default.png"))
+            use icon_frame(loadImage("icon_{0}.png".format(attribute.name)), iconSize, iconSize, loadImage("icon_default.png"))
             vbox:
-                text "{b}" + " {0} ({1})".format(unicode.title(attribute), attributeValue) + "{/b}"
-                use bar_graph_widget(attributeValue)
+                text "{b}" + " {0} ({1})".format(unicode.title(attribute.name), attribute.value) + "{/b}"
+                use bar_graph_widget(attribute.value)
                 textbutton "Show description":
                     action [
-                        Function(attributeConfig.update, currentAttribute=attribute)
+                        Function(attributeConfig.update, currentAttribute=attribute.name)
                     ]
 
 # show attribute descrition
@@ -79,11 +78,10 @@ screen attribute_info_description(who, attribute, pos, size):
             ymaximum 100
             has vbox
             if attribute != None:
-                $ attributeValue = getattr(who, attribute)
                 text "{b}Brief{/b}"
-                text who.getTutorialMessage(attribute)
+                # text who.getTutorialMessage(attribute)
                 text "{b}Description{/b}"
-                text who.getStatMessage(attribute)
+                # text who.getStatMessage(attribute)
             else:
                 text "{b}Select an attribute{/b}"
 

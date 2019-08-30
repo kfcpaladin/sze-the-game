@@ -19,6 +19,6 @@ class Visitor:
 
 class UnknownVisitorHandler(Exception):
     def __init__(self, handler_id):
-        super().__init__(self, "Unknown handler id {0}".format(handler_id))
+        Exception.__init__(self, "Unknown handler id {0}".format(handler_id))
         self.handler_id = handler_id
             

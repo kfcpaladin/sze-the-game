@@ -12,13 +12,13 @@ init -10 python:
         def equip(self, person): # what happens when you use item
             if self.used is False:
                 for stat, value in self.stat.iteritems():
-                    person._changeAttribute(stat, value)
+                    person.get_attribute(stat).value += value
                 self.used = True
         
         def unequip(self, person):
             if self.used is True:
                 for stat, value in self.stat.iteritems():
-                    person._changeAttribute(stat, -value)
+                    person.get_attribute(stat).value -= value
                 self.used = False
         
         def toggle(self, person):

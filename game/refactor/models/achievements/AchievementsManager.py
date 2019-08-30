@@ -18,3 +18,8 @@ class AchievementsManager:
     @property
     def completed_achievements(self):
         return (achieve for achieve in self.achievements if achieve.is_completed)
+
+    # LEGACY: Unlock achievement using a method to manager 
+    # TODO: Implement achievement unlocking using a method call
+    def unlockAchievement(self, _id):
+        pass

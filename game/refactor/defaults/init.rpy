@@ -1,23 +1,37 @@
-init python:
+init -1 python:
     import json
     from refactor.persistence import JSONImporter
     from refactor.models.achievements import AchievementsManager
 
+
+    def load_achievements():
+        achievements = []
+        with open("./game/refactor/defaults/achievements.json", "r") as file: 
+            achievements_data = json.load(file)
+            for data in achievements_data:
+                achievement = JSONImporter.visit("achievement", data)
+                achievements.append(achievement)
+        return achievements
+            
+    def load_characters():
+        characters = []
+        with open("./game/refactor/defaults/characters.json", "r") as file:
+            characters_data = json.load(file)
+            for data in characters_data:
+                character = JSONImporter.visit("character", data)
+                characters.append(character)
+        return characters
+
     achievements = AchievementsManager()
+    for achievement in load_achievements():
+        achievements.add_achievement(achievement)
 
-    def load_data():
-        def load_achievements():
-            with open("./game/refactor/defaults/achievements.json", "r") as file: 
-                achievements_data = json.load(file)
-                for data in achievements_data:
-                    achievement = JSONImporter.visit("achievement", data)
-                    achievements.add_achievement(achievement)
-                
-
-
-        load_achievements()
+    characters = load_characters()
+    sze = characters[0]
     
-    load_data()
+
+    
+
 
     # Buffered data relies on other data being loaded before hand
     # TODO: What happens if buffered data relies on other buffered data?

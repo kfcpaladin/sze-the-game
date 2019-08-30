@@ -2,8 +2,11 @@ from refactor.util.serialisation import Visitable
 
 class AttributeManager(Visitable):
     def __init__(self):
-        super().__init__(self)
         self._attributes = {}
+
+    def __iter__(self):
+        for attribute in self._attributes.values():
+            yield attribute
 
     def get(self, name):
         attribute = self._attributes.get(name, None)

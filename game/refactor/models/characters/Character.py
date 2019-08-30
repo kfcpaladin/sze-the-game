@@ -1,14 +1,21 @@
-import renpy
+from renpy.character import ADVCharacter
 from .AttributeManager import AttributeManager
-from .AttributeNotifications import AttributeNotificationSystem
+from .notifications.AttributeNotificationSystem import AttributeNotificationSystem
 
-class Character(renpy.character.ADVCharacter):
+class Character(ADVCharacter):
     def __init__(self, name, icon=None, kind=None, **properties):
-        super().__init__(self, name, kind=kind, **properties)
+        ADVCharacter.__init__(self, name, kind=kind, **properties)
         self.icon = icon
         # dependency inject this later, when other things need access to attributes
         self._attributes = AttributeManager() 
         self._notifications = AttributeNotificationSystem(self._attributes)
+
+    @property
+    def attributes(self):
+        return list(self._attributes)
+
+    def get_attribute(self, name):
+        return self._attributes.get(name)
 
     def add_attribute(self, attribute):
         self._attributes.add(attribute)
@@ -19,26 +26,19 @@ class Character(renpy.character.ADVCharacter):
     # Legacy functions
     # Get attributes like a member field
     def __getattr__(self, key):
-        attribute = self.attributes.get(key)
-        if attribute:
+        try:
+            attribute = self._attributes.get(key)
             return attribute.value
-        else:
-            return super().__getattr__(self, key)
-
-    def __setattr__(self, key, value):
-        attribute = self.attributes.get(key)
-        if attribute:
-            attribute.value = value
-        else:
-            super().__setattr__(self, key, value)
+        except KeyError:
+            raise AttributeError
 
     # modify attributes based on name
     def loss(self, name, total=1):
-        attribute = self.attributes.get(name)
+        attribute = self._attributes.get(name)
         attribute.value -= total 
         
     def gain(self, name, total=1):
-        attribute = self.attributes.get(name)
+        attribute = self._attributes.get(name)
         attribute.value += total 
     
     def say(self, message):

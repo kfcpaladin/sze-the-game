@@ -16,6 +16,11 @@ def import_less_than(data):
     value = data.get("value")
     return LessThan(value)
 
+@JSONImporter.register("condition_le")
+def import_less_equal(data):
+    value = data.get("value")
+    return Or(LessThan(value), EqualTo(value))
+
 @JSONImporter.register("condition_eq")
 def import_equal_to(data):
     value = data.get("value")
@@ -25,6 +30,11 @@ def import_equal_to(data):
 def import_greater_than(data):
     value = data.get("value")
     return GreaterThan(value)
+
+@JSONImporter.register("condition_ge")
+def import_greater_equal(data):
+    value = data.get("value")
+    return Or(GreaterThan(value), EqualTo(value))
 
 @JSONImporter.register("condition_and")
 def import_and(data):

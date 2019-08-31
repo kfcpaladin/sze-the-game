@@ -27,7 +27,7 @@ class DependencyList(Dependency, serialisation.Visitable):
         return visitor.visit("dependency_list", self)
 
     def _listen_dependency(self, dependency):
-        if not dependency.is_satisifed:
+        if not dependency.is_satisfied:
             self._set_is_all_satisfied(False)
         else:
             self._set_is_all_satisfied(self._check_all_satisfied())

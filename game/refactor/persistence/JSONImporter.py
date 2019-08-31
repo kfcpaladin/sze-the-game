@@ -15,6 +15,8 @@ class BufferedImporter(serialisation.Visitor):
         self._object_cache.setdefault(_id, value)
 
     def fetch_cached_object(self, _id):
+        if _id not in self._object_cache:
+            raise KeyError("Object cache doesn't have id '{0}'".format(_id))
         return self._object_cache.get(_id)
 
     def add_buffered_data(self, buffered_data):

@@ -2,7 +2,13 @@ init -1 python:
     from refactor.defaults.loaders import *
     from refactor.models.notifications.AttributeNotificationSystem import AttributeNotification
 
-    AttributeNotification.message_callback = [lambda msg: renpy.say(adv, msg)]
+    def message_callback(message):
+        try:
+            renpy.say(adv, message)
+        except Exception:
+            pass
+
+    AttributeNotification.message_callback = [message_callback]
     
     initial_data_dir = "./game/refactor/defaults/"
     achievements = load_achievements(initial_data_dir+"achievements.json")

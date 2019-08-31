@@ -3,7 +3,7 @@ from refactor.util.serialisation import Visitable
 
 class Condition(Visitable):
     def __call__(self, old, new):
-        self.check(old, new)
+        return self.check(old, new)
 
     @abstractmethod
     def check(self, old, new):

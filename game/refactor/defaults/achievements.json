@@ -4,7 +4,9 @@
     "title": "Complete reeducation", 
     "brief": "Gary has taught you well", 
     "unlock_dependencies": [], 
-    "complete_dependencies": [], 
+    "complete_dependencies": [
+      
+    ], 
     "is_hidden": true, 
     "id": "garyreeducation", 
     "icon": "images/achievementIcons/achievement_garyreeducation.png"
@@ -24,7 +26,38 @@
     "title": "Become a better person", 
     "brief": "All your stats are positive", 
     "unlock_dependencies": [], 
-    "complete_dependencies": [], 
+    "complete_dependencies": [
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "thirst",
+        "condition": { "type": "gt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "charm",
+        "condition": { "type": "gt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "fort",
+        "condition": { "type": "gt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "intellect",
+        "condition": { "type": "gt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "strength",
+        "condition": { "type": "gt", "value": 0 }
+      }
+    ], 
     "is_hidden": true, 
     "id": "poweredUp", 
     "icon": null
@@ -34,7 +67,38 @@
     "title": "You are a horrible person", 
     "brief": "All your stats are negative", 
     "unlock_dependencies": [], 
-    "complete_dependencies": [], 
+    "complete_dependencies": [
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "thirst",
+        "condition": { "type": "lt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "charm",
+        "condition": { "type": "lt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "fort",
+        "condition": { "type": "lt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "intellect",
+        "condition": { "type": "lt", "value": 0 }
+      },
+      {
+        "type": "attribute_dependency",
+        "character_name": "sze",
+        "attribute": "strength",
+        "condition": { "type": "lt", "value": 0 }
+      }
+    ], 
     "is_hidden": true, 
     "id": "autistic", 
     "icon": null
@@ -69,12 +133,7 @@
         "id": "thirst1"
       }
     ], 
-    "complete_dependencies": [
-      {
-        "type": "achievement_dependency", 
-        "id": "thirst1"
-      }
-    ], 
+    "complete_dependencies": [], 
     "is_hidden": false, 
     "id": "thirst2", 
     "icon": null
@@ -104,7 +163,14 @@
     "title": "Slay Serena", 
     "brief": "Date Serena", 
     "unlock_dependencies": [], 
-    "complete_dependencies": [], 
+    "complete_dependencies": [
+      {
+        "type": "attribute_dependency",
+        "character_name": "Rina",
+        "attribute": "friendship",
+        "condition": { "type": "ge", "value": 100 }
+      }
+    ], 
     "is_hidden": false, 
     "id": "rina1", 
     "icon": "images/achievementIcons/achievement_rina1.png"

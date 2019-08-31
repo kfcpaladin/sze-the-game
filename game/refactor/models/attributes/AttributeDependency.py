@@ -8,7 +8,8 @@ class AttributeDependency(BasicDependency):
         self._condition = condition
         self._attribute.observe(self._on_attribute_change)
         self._is_satisifed = False
-
+    
+    @property
     def is_satisfied(self):
         return self._is_satisifed
 

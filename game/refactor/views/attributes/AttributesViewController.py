@@ -26,8 +26,9 @@ class AttributesViewController:
 
 
 class AttributesViewMessage(object):
-    def __init__(self, attribute, priority_list):
+    def __init__(self, attribute, brief, priority_list):
         self._attribute = attribute
+        self._brief = brief
         self._priority_list = priority_list
 
     @property
@@ -37,6 +38,10 @@ class AttributesViewMessage(object):
     @property
     def value(self):
         return self._attribute.value
+    
+    @property
+    def brief(self):
+        return self._brief
     
     @property
     def message(self):

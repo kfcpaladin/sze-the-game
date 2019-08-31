@@ -66,7 +66,7 @@ screen attribute_info_description(controller, rect):
             $ attribute = controller.attribute_message
             if attribute != None:
                 text "{b}Brief{/b}"
-                # text who.getTutorialMessage(attribute)
+                text attribute.brief
                 text "{b}Description{/b}"
                 text attribute.message
             else:

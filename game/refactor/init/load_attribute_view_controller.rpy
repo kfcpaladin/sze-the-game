@@ -19,7 +19,12 @@ init python:
         priority_list.add_entry(PriorityEntry(key=-50, value="With that much charm, you are often mistaken for a modern art piece"))
         priority_list.add_entry(PriorityEntry(key=-75, value="The average gayness of every room you enter is increased by 100%, due to your charm"))
         priority_list.add_entry(PriorityEntry(key=-100, value="You once tried to masturbate, your hand rejected you"))
-        attribute_message = AttributesViewMessage(attribute=sze.get_attribute("charm"), priority_list=priority_list)
+
+        attribute_message = AttributesViewMessage(
+            attribute=sze.get_attribute("charm"), 
+            brief="Charm is a measure of how well you slay",
+            priority_list=priority_list)
+
         controller.add_attribute_message(attribute_message)
 
         # fort
@@ -34,7 +39,12 @@ init python:
         priority_list.add_entry(PriorityEntry(key=-50, value="At [sze.fort] fortianness, Moxham is willing to engage in the capitalist process of putting a bounty on your head to kill you"))
         priority_list.add_entry(PriorityEntry(key=-75, value="With so little fortianness, you're probs a dirty, capitalist, bourgeois pig who might have underlying religious affiliations"))
         priority_list.add_entry(PriorityEntry(key=-100, value="With so little fortian- how are you not just expelled at this point?"))
-        attribute_message = AttributesViewMessage(attribute=sze.get_attribute("fort"), priority_list=priority_list)
+        
+        attribute_message = AttributesViewMessage(
+            attribute=sze.get_attribute("fort"), 
+            brief="Fortianness is how Fortian you are and can be improved by being more Michael Kirby",
+            priority_list=priority_list)
+
         controller.add_attribute_message(attribute_message)
 
         # intellect
@@ -49,7 +59,12 @@ init python:
         priority_list.add_entry(PriorityEntry(key=-50, value="Your test results are probably worse than Chao's tests for STDs"))
         priority_list.add_entry(PriorityEntry(key=-75, value="It's astonishing how you made it to Fort Street. How many dicks did you have to suck to get here?"))
         priority_list.add_entry(PriorityEntry(key=-100, value="With almost no brain activity, the fact that your nervous system still works is a scientific anomaly."))
-        attribute_message = AttributesViewMessage(attribute=sze.get_attribute("intellect"), priority_list=priority_list)
+
+        attribute_message = AttributesViewMessage(
+            attribute=sze.get_attribute("intellect"), 
+            brief="Intelligence is a measure of how smart you are",
+            priority_list=priority_list)
+
         controller.add_attribute_message(attribute_message)
 
         # strength
@@ -64,7 +79,12 @@ init python:
         priority_list.add_entry(PriorityEntry(key=-50, value="At [sze.strength] combat propensity, the only slaying you know is in Dungeons & Dragons..."))
         priority_list.add_entry(PriorityEntry(key=-75, value="With that combat 'proficiency' pussies slays you."))
         priority_list.add_entry(PriorityEntry(key=-100, value="Don't fight; you will get rekt so hard, you will be reincarnated as an abortion."))
-        attribute_message = AttributesViewMessage(attribute=sze.get_attribute("strength"), priority_list=priority_list)
+
+        attribute_message = AttributesViewMessage(
+            attribute=sze.get_attribute("strength"), 
+            brief="Strength is a measure of how strong you are",
+            priority_list=priority_list)
+
         controller.add_attribute_message(attribute_message)
 
         # thirst
@@ -79,7 +99,12 @@ init python:
         priority_list.add_entry(PriorityEntry(key=-50, value="The only thing you drink is mountain dew when playing WoW"))
         priority_list.add_entry(PriorityEntry(key=-75, value="With your lack of desire for water, it is no surprise you have already taken a vow of celibacy."))
         priority_list.add_entry(PriorityEntry(key=-100, value="You elected to have a penectomy, your bladder being sufficient for your needs."))
-        attribute_message = AttributesViewMessage(attribute=sze.get_attribute("thirst"), priority_list=priority_list)
+
+        attribute_message = AttributesViewMessage(
+            attribute=sze.get_attribute("thirst"), 
+            brief="Thirst is a measure of desperately you want to drink water",
+            priority_list=priority_list)
+
         controller.add_attribute_message(attribute_message)
 
         return controller

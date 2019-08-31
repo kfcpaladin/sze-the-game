@@ -57,5 +57,6 @@ persistent
 .vscode/
 *.log
 error.txt
+errors.txt
 
 /game/saves/

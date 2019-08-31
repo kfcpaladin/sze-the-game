@@ -1,16 +1,15 @@
 from refactor.util import ObservableProperty
 
 class Achievement(object):
-    def __init__(self, _id, title, brief, description, icon=None, is_hidden=False):
+    def __init__(self, _id, title, brief, description, icon=None, hidden=False):
         self.id = _id
         self.title = title 
         self.brief = brief 
         self.description = description 
         self.icon = icon
-        self.is_hidden = is_hidden
 
         self._is_complete = ObservableProperty(False)
-        self._is_hidden = ObservableProperty(is_hidden)
+        self._is_hidden = ObservableProperty(hidden)
 
     @property
     def is_complete(self):

@@ -1,10 +1,11 @@
 from .Character import Character
-from refactor.util import ObservableProperty
+from .Attribute import Attribute
 
 class Friend(Character):
     def __init__(self, name, friendship=0, **kwargs):
         Character.__init__(self, name, **kwargs)
-        self._friendship = ObservableProperty(friendship)
+        self._friendship = Attribute("friendship", friendship)
+        self.add_attribute(self._friendship)
 
     @property
     def friendship(self):

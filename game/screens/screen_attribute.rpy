@@ -61,7 +61,7 @@ screen attribute_info_entry(attributeConfig, attribute, width):
             spacing 5
             use icon_frame(loadImage("icon_{0}.png".format(attribute.name)), iconSize, iconSize, loadImage("icon_default.png"))
             vbox:
-                text "{b}" + " {0} ({1})".format(unicode.title(attribute.name), attribute.value) + "{/b}"
+                text "{b}" + " {0} ({1})".format(attribute.name.title(), attribute.value) + "{/b}"
                 use bar_graph_widget(attribute.value)
                 textbutton "Show description":
                     action [

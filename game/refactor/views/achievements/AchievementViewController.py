@@ -16,16 +16,17 @@ class AchievementViewController:
         self._achievement = achievement
 
     def select_hidden(self):
-        self._achievements = self._manager.achievements
+        self._achievements = self._filter_search(lambda a: a.is_hidden and not a.is_complete) 
 
     def select_pending(self):
-        self._achievements = self._manager.pending_achievements 
-
-    def select_available(self):
-        self._achievements = self._manager.unlocked_achievements
+        self._achievements = self._filter_search(lambda a: not a.is_hidden and not a.is_complete) 
 
     def select_completed(self):
-        self._achievements = self._manager.completed_achievements
+        self._achievements = self._filter_search(lambda a: a.is_complete) 
+
+    def _filter_search(self, key):
+        return filter(key, self._manager.achievements)
+
 
 
     

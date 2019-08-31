@@ -1,15 +1,30 @@
 from .Character import Character
-from refactor.util import ObservableProperty
+from .Attribute import Attribute
 
 class MainCharacter(Character):
     def __init__(self, name, icon=None, **kwargs):
         Character.__init__(self, name, icon, **kwargs)
-        self._thirst    = ObservableProperty(0)
-        self._fort      = ObservableProperty(0)
-        self._charm     = ObservableProperty(0)
-        self._strength  = ObservableProperty(0)
-        self._intellect = ObservableProperty(0)
+        self._thirst    = Attribute("thirst", 0)
+        self._fort      = Attribute("fort", 0)
+        self._charm     = Attribute("charm", 0) 
+        self._strength  = Attribute("strength", 0)
+        self._intellect = Attribute("intellect", 0)
+
+        self.add_attribute(self._thirst)
+        self.add_attribute(self._fort)
+        self.add_attribute(self._charm)
+        self.add_attribute(self._strength)
+        self.add_attribute(self._intellect)
+
+    # LEGACY: compatability with existing code 
+    def gain(self, name, value=1):
+        attribute = self.get_attribute(name)
+        attribute.value += value
     
+    def loss(self, name, value=1):
+        attribute = self.get_attribute(name)
+        attribute.value -= value
+
     @property
     def thirst(self):
         return self._thirst.value

@@ -51,9 +51,9 @@ screen achieve_entry(controller, achievement):
     frame:
         style "achieve_entry"
         xsize 600 
-        if achievement.is_completed:
+        if achievement.is_complete:
             background Solid(colour.green)
-        elif achievement.is_unlocked:
+        elif not achievement.is_hidden:
             background Solid(colour.yellow)
         else:
             background Solid(colour.red)
@@ -85,7 +85,6 @@ screen achieve_description(controller):
             $ achievement = controller.achievement
             if achievement:
                 text "{{b}}Description: {{/b}}{0}".format(achievement.description)
-                text "{{b}}Dependencies: {{/b}}{0}".format(len(achievement.unlock_dependencies.dependencies))
             else:
                 text "{b}An achievement has not been selected{/b}"
 

@@ -1,7 +1,3 @@
-init python:
-    from refactor.view.achievements import AchievementViewController
-    achievement_view_controller = AchievementViewController(achievements)
-
 ##############################################################################
 # developer page
 screen diary_developer:
@@ -51,13 +47,13 @@ screen diary_quests(quests=quests):
     use quest_screen(quests)
 
 # achievements
-screen diary_achievements(achievements=achievement_view_controller):
+screen diary_achievements(controller=view_controllers.achievements):
     modal True
     add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     use diary_title("Achievements")
     use attribute_screen(sze)
-    use achieve_screen(achievements)
+    use achieve_screen(controller)
 
 # attribute and friend stats
 screen diary_statistics(who=sze):

@@ -1,6 +1,7 @@
-from refactor.persistence import JSONImporter
+from refactor.persistence import JSONImporter, JSONExporter
 from .Character import Character
 from .Attribute import Attribute
+from .AttributeDependency import AttributeDependency
 
 @JSONImporter.register("character")
 def import_character(data):
@@ -15,39 +16,8 @@ def import_character(data):
         attribute = JSONImporter.visit("attribute", attribute_data)
         character.add_attribute(attribute)
 
-    notifications_data = data.get("notifications", [])
-    for notification_data in notifications_data:
-        notifications = JSONImporter.visit("notifications", notification_data)
-        for notification in notifications:
-            character.add_notification(notification)
-
+    JSONImporter.cache_object(("character", character.name), character)
     return character
-
-@JSONImporter.register("notifications")
-def import_notifications(data):
-    _type = data.get("type")
-    messages_data = data.get("messages")
-
-    if _type in ("attribute_change_message", "tutorial_message"):
-        notifications = []
-        for message_data in messages_data:
-            notification = JSONImporter.visit(_type, message_data)
-            notifications.append(notification)
-        return notifications
-    # priority compiles to asingle notification
-    elif _type == "priority_attribute_message":
-        notifications = []
-        for attribute, message_list in messages_data.items():
-            reformatted_data = {}
-            reformatted_data.setdefault("attribute", attribute)
-            reformatted_data.setdefault("messages", message_list)
-            notification = JSONImporter.visit("priority_attribute_message", reformatted_data)
-            notifications.append(notification)
-        return notifications
-    else:
-        raise KeyError("Unknown notification type '{0}'".format(_type))
-
-
 
 @JSONImporter.register("attribute")
 def import_attribute(data):
@@ -55,3 +25,39 @@ def import_attribute(data):
     value = data.get("value")
     return Attribute(name, value)
 
+@JSONImporter.register("attribute_dependency")
+def import_attribute_dependency(data):
+    character_name = data.get("character_name")
+    attribute_name = data.get("attribute")
+    condition_data = data.get("condition")
+
+    character = JSONImporter.fetch_cached_object(("character", character_name))
+    attribute = character.get_attribute(attribute_name)
+    condition = JSONImporter.visit("condition", condition_data)
+
+    return AttributeDependency(attribute, condition)
+
+
+@JSONExporter.register("character")
+def export_character(character):
+    data = {}
+    data.setdefault("name", character.name)
+    data.setdefault("image", character.image)
+    data.setdefault("icon", character.icon)
+
+    attributes_data = []
+    for attribute in character.attributes:
+        attribute_data = JSONExporter.visit("attribute", attribute)
+        attributes_data.append(attribute_data)
+    
+    data.setdefault("attributes", attributes_data)
+
+    return data
+
+@JSONExporter.register("attribute")
+def export_attribute(attribute):
+    data = {}
+    data.setdefault("name", attribute.name)
+    data.setdefault("value", attribute.value)
+
+    return data

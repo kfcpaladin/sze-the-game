@@ -53,10 +53,7 @@ def import_achievement(data):
 @JSONImporter.register("dependency")
 def import_dependency(data):
     _type = data.get("type", None)
-    if _type == "achievement_dependency":
-        return JSONImporter.visit(_type, data)
-    
-    raise ValueError("Unknown dependency type {0}".format(_type))
+    return JSONImporter.visit(_type, data)
 
 @JSONImporter.register("achievement_dependency")
 def import_achievement_dependency(data):

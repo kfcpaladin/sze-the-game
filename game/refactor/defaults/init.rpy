@@ -1,5 +1,5 @@
 init -1 python:
-    from refactor.defaults.loading import *
+    from refactor.defaults.loaders import *
     from refactor.models.characters.notifications.AttributeNotificationSystem import AttributeNotification
 
     AttributeNotification.message_callback = [lambda msg: renpy.say(adv, msg)]
@@ -8,6 +8,15 @@ init -1 python:
     achievements = load_achievements(initial_data_dir+"achievements.json")
     characters = load_characters(initial_data_dir+"characters.json")
     sze = characters[0]
+
+    notification_handlers = [
+        ("tutorial_message", "tutorial_messages.json"),
+        ("attribute_change_message", "attribute_change_messages.json"),
+        ("priority_attribute_message", "attribute_value_messages.json")
+    ]
+
+    for notification in load_notifications(initial_data_dir+"notifications/sze", notification_handlers):
+        sze.add_notification(notification)
     
 
     # Buffered data relies on other data being loaded before hand

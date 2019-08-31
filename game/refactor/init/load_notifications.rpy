@@ -6,6 +6,7 @@ init 1 python:
 
 init python:
     from refactor.models.notifications import *
+    from refactor.util import PriorityList, PriorityEntry
 
     class Narrator:
         def say(self, message):

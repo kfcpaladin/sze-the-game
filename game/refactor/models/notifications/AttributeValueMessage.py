@@ -1,5 +1,4 @@
 from .AttributeNotification import AttributeNotification
-from .PriorityList import PriorityList
 
 class AttributeValueMessage(AttributeNotification):
     def __init__(self, messages):

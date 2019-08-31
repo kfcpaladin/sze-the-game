@@ -2,5 +2,4 @@ from .AttributeNotification import AttributeNotification
 
 from .AttributeChangeMessage import AttributeChangeMessage
 from .AttributeValueMessage import AttributeValueMessage
-from .PriorityList import PriorityList, PriorityEntry
 from .TutorialMessage import TutorialMessage

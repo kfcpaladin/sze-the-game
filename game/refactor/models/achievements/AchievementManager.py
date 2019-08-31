@@ -1,6 +1,11 @@
+from .AchievementListener import AchievementListener
+from refactor.models.popups import Popup
+
 class AchievementManager(object):
-    def __init__(self):
+    def __init__(self, popups):
         self._achievements = {} 
+        self._listeners = []
+        self._popups = popups
 
     def __iter__(self):
         for achievement in self._achievements.values():
@@ -12,6 +17,8 @@ class AchievementManager(object):
 
     def add_achievement(self, achievement):
         _id = achievement.id
+        listener = AchievementListener(achievement)
+        self._listeners.append(listener)
         self._achievements.setdefault(_id, achievement)
     
     def unlock_achievement(self, _id):
@@ -36,3 +43,8 @@ class AchievementManager(object):
     # LEGACY
     def unlockAchievement(self, _id):
         self.unlock_achievement(_id)
+
+    def _on_unlock(self, achievement):
+        self._popups.add(Popup(
+            message="Unlocked achievement\n{0}".format(achievement.id),
+            icon=achievement.icon))

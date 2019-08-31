@@ -1,19 +1,17 @@
-default achievements = load_achievements()
-
 init -1 python:
     from refactor.models.achievements import Achievement, AchievementManager
     from refactor.util.conditions import * 
 
-    def load_achievements():
+    def load_achievements(popups):
         
 
-        manager = AchievementManager()
+        manager = AchievementManager(popups)
 
         manager.add_achievement(Achievement(
             _id="thirst1",
-            title="Become thirstier",
+            title="Become thirsty",
             brief="Get more than 25 thirst",
-            description="The joys of adulthood become more apparent"
+            description="One step closer to adulthood"
         ))
 
         manager.get_achievement("thirst1").set_unlock_condition(GreaterEqual(sze.thirst_prop, 25))
@@ -37,12 +35,28 @@ init -1 python:
             hidden=True
         ))
 
+        manager.get_achievement("poweredUp").set_unlock_condition(And(
+            GreaterThan(sze.thirst_prop, 0),
+            GreaterThan(sze.intellect_prop, 0),
+            GreaterThan(sze.charm_prop, 0),
+            GreaterThan(sze.fort_prop, 0),
+            GreaterThan(sze.strength_prop, 0),
+        ))
+
         manager.add_achievement(Achievement(
             _id="autistic",
             title="You are a horrible person",
             brief="All your stats are negative",
             description="Your obsession with Serena has led you down a dark and terrible path, one that you may never recover from",
             hidden=True
+        ))
+        
+        manager.get_achievement("autistic").set_unlock_condition(And(
+            LessThan(sze.thirst_prop, 0),
+            LessThan(sze.intellect_prop, 0),
+            LessThan(sze.charm_prop, 0),
+            LessThan(sze.fort_prop, 0),
+            LessThan(sze.strength_prop, 0),
         ))
 
         # quest achievements
@@ -72,6 +86,8 @@ init -1 python:
             description="Your goal as a barnacle is complete",
             icon=loadImage("achievement_rina1.png")
         ))
+
+        # manager.get_achievement("rina1").set_unlock_condition(GreaterEqual(rin.friendship_prop, 100))
 
         # suicide achievements
         manager.add_achievement(Achievement(

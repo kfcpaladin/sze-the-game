@@ -1,6 +1,6 @@
 from renpy.character import ADVCharacter
-from .AttributeManager import AttributeManager
-from .notifications.AttributeNotificationSystem import AttributeNotificationSystem
+from refactor.models.attributes.AttributeManager import AttributeManager
+from refactor.models.notifications.AttributeNotificationSystem import AttributeNotificationSystem
 
 class Character(ADVCharacter):
     def __init__(self, name, icon=None, kind=None, **properties):

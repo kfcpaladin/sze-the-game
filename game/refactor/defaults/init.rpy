@@ -1,6 +1,6 @@
 init -1 python:
     from refactor.defaults.loaders import *
-    from refactor.models.characters.notifications.AttributeNotificationSystem import AttributeNotification
+    from refactor.models.notifications.AttributeNotificationSystem import AttributeNotification
 
     AttributeNotification.message_callback = [lambda msg: renpy.say(adv, msg)]
     

@@ -1,2 +1,2 @@
-from .PopupManager improt PopupManager
+from .PopupsManager import PopupsManager
 from .Popup import Popup

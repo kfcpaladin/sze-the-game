@@ -9,23 +9,23 @@ class PriorityList:
         bisect.insort(self._entries, entry)
 
     def get_entry(self, key):
-        for entry in reversed(self._entries):
+        for entry in self._entries:
             if key >= entry.key:
                 return entry.value 
 
         if self.use_default and len(self._entries) > 0:
-            return self._entries[0].value
+            return self._entries[-1].value
 
 class PriorityEntry:
     def __init__(self, key, value):
         self.key = key
         self.value = value
 
-    def __lt__(self, other):
-        return self.value < other.value
+    def __gt__(self, other):
+        return self.key < other.key
 
     def __eq__(self, other):
-        return self.value == other.value
+        return self.key == other.key
 
-    def __gt__(self, other):
-        return self.value > other.value 
+    def __lt__(self, other):
+        return self.key > other.key 

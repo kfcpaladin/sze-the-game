@@ -1,3 +1,5 @@
+default achievements = load_achievements()
+
 init -1 python:
     from refactor.models.achievements import Achievement, AchievementManager
 

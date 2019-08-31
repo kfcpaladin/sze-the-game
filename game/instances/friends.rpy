@@ -1,4 +1,4 @@
-init python:
+init 1 python:
     ## Configuring friends
     # Calculator?
     ale.setMessages({

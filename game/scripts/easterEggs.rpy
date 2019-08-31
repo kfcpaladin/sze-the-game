@@ -23,11 +23,11 @@ init python:
     # add item to bag
     def unlockItem(item, bag):
         playsfx("xbox.ogg")
-        popup({
-            "text": "Unlocked item\n{0}".format(item.name),
-            "icon": item.icon,
-            "colour": colour.rainbow,
-        })
+        popups.add(Popup(
+            message="Unlocked item\n{0}".format(item.name),
+            icon=item.icon,
+            colour=colour.rainbow
+        ))
         bag.add(item)
 
     # unlock dildo
@@ -59,11 +59,11 @@ init python:
     # unlock developer mode
     def developerUnlock():
         playsfx("xbox.ogg")
-        popup({
-            "text": "Unlocked developer mode",
-            "icon": loadImage("icon_rina.png"),
-            "colour": colour.rainbow,
-        })
+        popups.add(Popup(
+            message="Unlocked developer mode",
+            icon=loadImage("icon_rina.png"),
+            colour=colour.rainbow
+        ))
         config.developer = True
         game.diaryIntro = True
         game.hasDiary = True

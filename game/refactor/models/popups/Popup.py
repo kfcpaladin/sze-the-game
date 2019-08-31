@@ -30,3 +30,7 @@ class Popup(object):
     @property
     def is_alive(self):
         return self._lifespan > 0
+
+    def __eq__(self, other):
+        return self.message == other.message
+        

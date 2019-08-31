@@ -69,10 +69,9 @@ init -10 python:
                     quest = self.unavailable[questID]
                     self.available[questID] = quest
                     questsMadeAvailable.append(questID)
-                    popup({
-                        "text": "Unlocked quest\n{0}".format(questID),
-                        "icon": quest["icon"],
-                    })
+                    popups.add(Popup(
+                        message="Unlocked quest\n{0}".format(questID),
+                        icon=quest["icon"]))
             # Remove the quests that were made available from self.unavailable
             for questID in questsMadeAvailable: 
                 self.unavailable.pop(questID)
@@ -92,10 +91,9 @@ init -10 python:
                 self.available[questID] = quest
                 self.unavailable.pop(questID)
                 playsfx("xbox.ogg")
-                popup({
-                    "text": "Unlocked quest\n{0}".format(questID),
-                    "icon": quest["icon"],
-                })
+                popups.add(Popup(
+                    message="Unlocked quest\n{0}".format(questID),
+                    icon=quest["icon"]))
 
         def startQuest(self, questID):
             self._checkQuestID(questID)
@@ -111,10 +109,10 @@ init -10 python:
                 self.completed[questID] = quest
                 self.available.pop(questID)
                 playsfx("xbox.ogg")
-                popup({
-                    "text": "Completed quest\n{0}".format(questID),
-                    "icon": quest["icon"],
-                })
+                popups.add(Popup(
+                    message="Completed quest\n{0}".format(questID),
+                    icon=quest["icon"]
+                ))
 
         def describe(self):
             for questType in self.questTypes:
@@ -163,7 +161,7 @@ init -10 python:
                     if not callable(condition["function"]):
                         raise TypeError("Expected a function for a condition")
                     if not condition["function"]():
-                        popup(condition["msg"])
+                        popups.add(Popup(condition["msg"]))
                         failed = True
             # play fail sound
             if failed:
@@ -189,7 +187,8 @@ init -10 python:
                 playsfx("vpunch.ogg")
             else:
                 playsfx("error.ogg")
-                popup("This quest does not go anywhere!")
+                popups.add(Popup("This quest does not go anywhere!"))
+                
 
         def _debugQuestType(self, questType):
             quests = getattr(self, questType)

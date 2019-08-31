@@ -32,4 +32,3 @@ init python:
             renpy.hide_screen(screen)
         renpy.hide_screen(diary.getCurrentPage())
         renpy.hide_screen("diary_nav_buttons")
-        popupList.clear()

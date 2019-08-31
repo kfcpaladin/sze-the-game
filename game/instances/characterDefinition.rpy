@@ -1,5 +1,5 @@
 # Declare characters used by this game.
-#define sze = MainCharacter('Sze', color="#FCFCFC", image="arthur")
+define sze = MainCharacter('Sze', color="#FCFCFC", image="arthur")
 # Define friends
 define ale = Friend('Le Calculetor', friendship=0, color="#FFFFFF", image="le", icon=loadImage("icon_anthonyle.png"))
 define bil = Friend('Bill the Cleaner', friendship=0, color="747D7D", image="bill", icon=loadImage("icon_billthecleaner.png"))

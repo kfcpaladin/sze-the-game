@@ -21,18 +21,8 @@ screen diary_bag(bag=bag):
     use diary_title(bag.name)
     # custom positioning of attribute screen on right page
     use attribute_screen(
-        bag.who, 
-        {
-            "infoBox": AttrDict({
-                "pos": Vector(720, 95), 
-                "size": Vector(625, 415),
-            }),
-            "descriptionBox": AttrDict({
-                "pos": Vector(720, 95+470),
-                "size": Vector(625, 100),
-            }),
-        },
-    )
+        view_controllers.attributes, 
+        view_controllers.right_diary_page)
     # allow bag tooltip to cover attribute screen 
     use bag_screen(bag)
 
@@ -43,20 +33,24 @@ screen diary_quests(quests=quests):
     use diary_nav
     use diary_title("Quests")
     # Show panels
-    use attribute_screen(sze)
+    use attribute_screen(
+        view_controllers.attributes,
+        view_controllers.left_diary_page)
     use quest_screen(quests)
 
 # achievements
-screen diary_achievements(controller=view_controllers.achievements):
+screen diary_achievements:
     modal True
     add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
     use diary_title("Achievements")
-    use attribute_screen(sze)
-    use achieve_screen(controller)
+    use attribute_screen(
+        view_controllers.attributes,
+        view_controllers.left_diary_page)
+    use achieve_screen(view_controllers.achievements)
 
 # attribute and friend stats
-screen diary_statistics(who=sze):
+screen diary_statistics(controller=view_controllers.attributes):
     # prevent interaction underneath
     modal True
     # Include the navigation.
@@ -64,7 +58,9 @@ screen diary_statistics(who=sze):
     use diary_nav
     use diary_title("Statistics")
     # display info
-    use attribute_screen(who)
+    use attribute_screen(
+        view_controllers.attributes,
+        view_controllers.left_diary_page)
     use friend_screen(friendList)
 
 # roadmap

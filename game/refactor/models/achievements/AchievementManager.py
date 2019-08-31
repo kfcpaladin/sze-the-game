@@ -15,14 +15,19 @@ class AchievementManager(object):
         self._achievements.setdefault(_id, achievement)
     
     def unlock_achievement(self, _id):
-        achievement = self._get_achievement_by_id(_id)
+        achievement = self.get_achievement(_id)
         achievement.is_complete = True
-
-    def reveal_achievement(self, _id):
-        achievement = self._get_achievement_by_id(_id)
         achievement.is_hidden = False
 
-    def _get_achievement_by_id(self, _id):
+    def reveal_achievement(self, _id):
+        achievement = self.get_achievement(_id)
+        achievement.is_hidden = False
+    
+    def is_achievement_unlocked(self, _id):
+        achievement = self.get_achievement(_id)
+        return achievement.is_complete
+
+    def get_achievement(self, _id):
         achievement = self._achievements.get(_id)
         if achievement is None:
             raise KeyError("Unknown achievement {0}".format(_id))

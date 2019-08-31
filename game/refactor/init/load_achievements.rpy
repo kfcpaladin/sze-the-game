@@ -2,23 +2,32 @@ default achievements = load_achievements()
 
 init -1 python:
     from refactor.models.achievements import Achievement, AchievementManager
+    from refactor.util.conditions import * 
 
     def load_achievements():
+        
+
         manager = AchievementManager()
 
         manager.add_achievement(Achievement(
             _id="thirst1",
             title="Become thirstier",
-            brief="Get more than 50 thirst",
+            brief="Get more than 25 thirst",
             description="The joys of adulthood become more apparent"
         ))
+
+        manager.get_achievement("thirst1").set_unlock_condition(GreaterEqual(sze.thirst_prop, 25))
 
         manager.add_achievement(Achievement(
             _id="thirst2",
             title="Become thirstier",
             brief="Get more than 50 thirst",
-            description="The joys of adulthood become more apparent"
+            description="The joys of adulthood become more apparent",
+            hidden=True
         ))
+
+        manager.get_achievement("thirst2").set_reveal_condition(EqualTo(manager.get_achievement("thirst1").is_complete_prop, True))
+        manager.get_achievement("thirst2").set_unlock_condition(GreaterEqual(sze.thirst_prop, 50))
 
         manager.add_achievement(Achievement(
             _id="poweredUp",

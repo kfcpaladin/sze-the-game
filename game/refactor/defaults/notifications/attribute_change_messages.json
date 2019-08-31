@@ -1,27 +1,27 @@
 [ 
     {
         "attribute": "charm",
-        "msgGain": "Your charm increased",
-        "msgLoss": "Your charm just decreased"
+        "msg_gain": "Your charm increased",
+        "msg_loss": "Your charm just decreased"
     },
     {
         "attribute": "fort",
-        "msgGain": "You became more Michael Kirby  , as your Fortianness is at [sze.fort]",
-        "msgLoss": "You fortianness dropped."
+        "msg_gain": "You became more Michael Kirby  , as your Fortianness is at [sze.fort]",
+        "msg_loss": "You fortianness dropped."
     },
     {
         "attribute": "intellect",
-        "msgGain": "Congratulations",
-        "msgLoss": "You become a bit dumber"
+        "msg_gain": "Congratulations",
+        "msg_loss": "You become a bit dumber"
     },
     {
         "attribute": "strength",
-        "msgGain": "Your combat propensity has increased",
-        "msgLoss": "Your combat propensity has decreased"
+        "msg_gain": "Your combat propensity has increased",
+        "msg_loss": "Your combat propensity has decreased"
     }, 
     {
         "attribute": "thirst",
-        "msgGain": "You became more thirsty",
-        "msgLoss": "You start zipping your pants back up"
+        "msg_gain": "You became more thirsty",
+        "msg_loss": "You start zipping your pants back up"
     }
 ]

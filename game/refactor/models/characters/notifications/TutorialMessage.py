@@ -1,8 +1,8 @@
 from .AttributeNotificationSystem import AttributeNotification
 
-class TutorialMessage(Notification):
+class TutorialMessage(AttributeNotification):
     def __init__(self, attribute, brief, msg_gain, msg_loss):
-        super().__init__(self, attribute)
+        AttributeNotification.__init__(self, attribute)
         self.brief = brief
         self.msg_gain = msg_gain
         self.msg_loss = msg_loss
@@ -18,8 +18,4 @@ class TutorialMessage(Notification):
             self.say(self.msg_gain)
         elif old < new:
             self.say(self.msg_loss)
-
-    def say(self, message):
-        if msg is not None:
-            renpy.say(adv, message)
 

@@ -23,8 +23,7 @@ class Character(ADVCharacter):
     def add_notification(self, notification):
         self._notifications.add(notification)
 
-    # Legacy functions
-    # Get attributes like a member field
+
     def __getattr__(self, key):
         try:
             attribute = self._attributes.get(key)
@@ -40,6 +39,10 @@ class Character(ADVCharacter):
     def gain(self, name, total=1):
         attribute = self._attributes.get(name)
         attribute.value += total 
+
+    def change(self, name, value):
+        attribute = self._attributes.get(name)
+        attribute.value = value 
     
     def say(self, message):
         renpy.say(self, message)

@@ -1,8 +1,8 @@
 from .AttributeNotificationSystem import AttributeNotification
 
-class AttributeChangeMessage(Notification):
+class AttributeChangeMessage(AttributeNotification):
     def __init__(self, attribute, msg_gain, msg_loss):
-        super().__init__(self, attribute)
+        AttributeNotification.__init__(self, attribute)
         self.msg_gain = msg_gain
         self.msg_loss = msg_loss
     

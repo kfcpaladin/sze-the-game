@@ -20,7 +20,7 @@ class AttributeManager(Visitable):
             def wrapped(old, new):
                 if condition(old, new):
                     return func(old, new)
-            attribute.observer(wrapped)
+            attribute.observe(wrapped)
             return wrapped
         return wrapper
 

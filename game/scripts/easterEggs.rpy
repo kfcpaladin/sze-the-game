@@ -15,10 +15,7 @@ init python:
                 if type(total) not in (int, float):
                     continue
                 break
-        if(total >= 0):
-            friend.gain("friendship", total)
-        else:
-            friend.loss("friendship", -total)
+        friend.friendship += total
 
     # add item to bag
     def unlockItem(id, bag):

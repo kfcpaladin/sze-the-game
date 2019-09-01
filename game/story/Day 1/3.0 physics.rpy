@@ -37,7 +37,7 @@ label phys1answered:
     flu "\"Great answer Arthur. It's only the first day and you are already demonstrating why you are rank double one.\""
     "You close Wikipedia"
     flu "\"You should stay after school for some private tutoring ;);)\""
-    $ sze.gain("intellect")
+    $ sze.intellect += 1
     menu:
         ";) private tutoring? ;)"
         "Say nothing":
@@ -91,7 +91,7 @@ label phys1answered_b:
     flu "\"Anything you want, anytime...\""
     kok "\"wow sugoi, you are a genius arthur\""
     pra "\"Whoa Arthur, too good\""
-    $ flu.gain()
+    $ flu.friendship += 1
     jump phys1part2
 
 label phys1nothing:
@@ -114,7 +114,7 @@ label phys1talked:
     sze "\"How have your holidays been?\""
     pra "\"Pretty good. Been playing cricket daily all summer. Also I did 200 past papers for economics\""
     sze "Wow Pragash is so smart, actually kill myself."
-    $ pra.gain()
+    $ pra.friendship += 1
     "you talk a bit more with Pragash before refocusing like electron beam from electron gun in cathode ray tube\""
     hide pragash normal
     jump phys1part2
@@ -140,8 +140,8 @@ label phys1p2p1:
     $ playsfx("vpunch.ogg")
     "You pick up the paper and throw it at rusali" with vpunch
     rus "\"Waow, what was that for.\""
-    $ rus.loss()
-    $ rus.gain()
+    $ rus.friendship -= 1
+    $ rus.friendship += 1
     "He picks up the paper, and readies himself to through it back"
     flu "\"Stop throwing paper.\""
     rus "\"Waa, it wasnt me, arthur threw it first\""
@@ -158,7 +158,7 @@ label phys1p2p1:
         flu "\"I'm very proud of both of you for physically applying your theoretical physics knowledge.\""
         "Pragash and Willis gaze in awe at your remarkable talent in the art of lying"
         "You notice that you may have caught the fleeting interest of Serena"
-        $ sze.gain("intellect")
+        $ sze.intellect += 1
         show willis normal
         kok "\"Teach me senpai\""
         hide willis normal
@@ -242,7 +242,7 @@ label phys1p2p4:
             else:
                 sze "\"A piece of paper was thrown at my head, in an vicious and inexcusable attack. The perpetrator, Chao must be punished\""
                 $ _phys1p2p4t = True
-                $ cha.loss()
+                $ cha.friendship -= 1
                 return
         "Say nothing":
             sze "\"...\""
@@ -257,16 +257,16 @@ label phys1p3p1:
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    $ sze.gain("intellect")
+    $ sze.intellect += 1
     "As you start to leave class ..."
     cha "\"I won't forget this ..."
     $ game.chaoPissed = True
-    $ cha.loss()
+    $ cha.friendship -= 1
     show willis normal
     kok "\"Isn't annoying chao the most fun thing to do.\""
     kok "\"It seems we have a lot in common\""
     hide willis normal
-    $ kok.gain()
+    $ kok.friendship += 1
     jump eng1p1
 
 label phys1p3p2:
@@ -274,11 +274,11 @@ label phys1p3p2:
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    $ sze.gain("intellect")
+    $ sze.intellect += 1
     show rusali normal
     rus "\"Thanks for not reporting me, my ATAR wouldve been dead if i got a detention\""
     hide rusali normal
-    $ rus.gain()
+    $ rus.friendship += 1
     jump eng1p1
 
 label phys1p3p3:
@@ -286,5 +286,5 @@ label phys1p3p3:
     "The class continues without any further issues"
     "You feel like you learnt a lot this lesson"
     "the secrets of superconductors have been revealed"
-    $ sze.gain("intellect")
+    $ sze.intellect += 1
     jump eng1p1

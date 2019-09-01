@@ -13,7 +13,7 @@ label postrollcall1:
             $ game.stealWillisGirl = False
 label TheKwokappears:
     if game.stealWillisGirl is True:
-        $ sze.gain("thirst")
+        $ sze.thirst += 1
         show willis normal
         with dissolve
         sze "Oh dear, its Willis Lau Kwok. He is currently in a relationship with serena, but i will win her in the end."
@@ -148,7 +148,7 @@ label Rektrusali:
         mox "\"Nothing, which makes you almost as bad a shit as Rusali.\""
         sze "\"ok...\""
         mox "\"I've got my eyes on you, ya hear? punks...\""
-        $ game.gain("moxCounter")
+        $ game.moxCounter += 1
         hide moxham unhappy
         with dissolve
         show rusali normal
@@ -160,5 +160,5 @@ label Rektrusali:
         with dissolve
         kok "\"Nice one, let's go physics with flujtsma, don't want her to go psychotic\""
         sze "\"K\""
-        $ kok.gain()
+        $ kok.friendship += 1
         jump phys1

@@ -2,7 +2,7 @@ label asszemblyjigolokindagaytoilet:
     scene bg toilet
     with fade
     sze "\"Looks like we're here\""
-    $ sze.gain("thirst")
+    $ sze.thirst += 1
     jit "\"...\""
     $ stopmusic()
     $ playmusic("TheRoomOSTMainTheme.ogg", loop=True)
@@ -30,7 +30,7 @@ label asszemblyjigolokindagaytoilet:
                     sze "\"...\""
                     sze "\"Szeebs\""
                     jit "\"Pussies aren't meant to be in men's toilets, you know?\""
-                    $ sze.loss("strength")
+                    $ sze.strength -= 1
                     jit "\"So what now?\""
                     jump toiletstudies1
         "\"Study\"":
@@ -38,13 +38,13 @@ label asszemblyjigolokindagaytoilet:
 
 label toiletstudies1:
     sze "\"I guess I'll just try to be diligent Fortian and study...\""
-    $ sze.gain("fort")
+    $ sze.fort += 1
     jit "\"wtf, actually?\""
     "You go to cubicle as far away from disturbing sound as possible and first textbook you could find"
-    $ sze.gain("intellect")
+    $ sze.intellect += 1
     jit "\"wow, you're making me feel bad, I bring great dishonour to my famirii\""
     jit "\"Now what? This was worst idea ever\""
-    $ jit.loss()
+    $ jit.friendship -= 1
     "You ignore Jitian until recess arrives"
     jump recess1a
 

@@ -72,7 +72,7 @@ screen kmsGun(bullets=bullets):
                 Hide("kmsGun", Fade(2.5, 0.0, 1.0)),
                 Show("deathFade"),
                 Function(playsfx, "vpunch.ogg"),
-                Function(game.gain, "suicideCount", 1),
+                Function(lambda: game.suicideCount += 1),
             ]
     else:
         # update gun position if sze not dead
@@ -101,7 +101,7 @@ screen kmsHanging:
             Hide("kmsHanging", Fade(2.5,0.0,1.0)),
             Show("deathFade"),
             Function(playsfx, "vpunch.ogg"),
-            Function(game.gain, "suicideCount", 1),
+            Function(lambda: game.suicideCount += 1),
         ]
         hovered [
             Function(playsfx, "mlady.ogg")

@@ -2,7 +2,7 @@ label schoolday1:
     $ autosave()
     scene bg school
     with fade
-    $ game.setTime("morning")
+    $ clock.setTime("morning")
     "Wednesday Morning"
     sze "I arrived at school 3 hours early to show my dedication to the system"
     sze "Well, more so because I didn't know what else to do, as I couldn't fall asleep after that weird dream"
@@ -44,7 +44,7 @@ label schoolday1:
         "Oh shit, the Principal..."
         mox "\"Wow, you are a good Fortian\""
         mox "\"I don't know who you are but, you are like next Michael Kirby, greatest of Fortians\""
-        $ sze.gain("fort")
+        $ sze.fort += 1
         mox "\"As a reward, I shall give you this experimental new Fort Street Diary prototype mk.1.RBY.\""
         mox "\"Among its features, it records your subjects, the progress of your interpersonal relationships and academic studies\""
         mox "\"All in a non-invasive system, designed to allow the school to monitor your life, and allows for early intervention with problem students\""
@@ -100,12 +100,12 @@ label schoolday1:
         # jig school quest
         if not quests.is_quest_unlocked("jigschool1"):
             sze "This school kinda {color=[colour.red]}{b}sucks{/b}{/color}"
-            $ sze.loss("fort")
+            $ sze.fort -= 1
             mox "What you just {b}say{/b} young man {b}!!!{/b}"
             sze "I said Michael Kirby is the epitome of social justice"
             "Your lie does not sound very convincing"
             mox "Ahhh how true that is"
-            $ sze.gain("fort", 2)
+            $ sze.fort += 2
             "You feel a strong temptation to jig your first day of school"
             $ quests.unlockQuest("jigschool1")
         hide moxham happy

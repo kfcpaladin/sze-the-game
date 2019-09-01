@@ -34,10 +34,10 @@ label kahootGame(kahoot, **options):
                 $ playmusic("p4LikeADreamComeTrue.ogg")
                 "You are victorious with [_points] points, sparing only [_time_remain] seconds"
                 "This new found academic brilliance of yours makes you feel something {b}interesting{/b}"
-                $ sze.gain("intellect", 10)
+                $ sze.intellect += 10
             else:
                 "The class stares at you, perhaps thinking of how {i}retarded{/i} you are"
-                $ sze.loss("intellect", 4)
+                $ sze.intellect -= 4
             $ playmusic(_previousMusic)
             return
         "Pussy out":

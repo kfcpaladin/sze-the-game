@@ -111,8 +111,8 @@ label jigschool1_todd_teach:
     tod "I [tod.name] will teach you my ways, and one day you may ascend to rival me"
     $ achievements.unlockAchievement("toddkarate")
     sze "{b}Holy shit that felt good{/b}"
-    $ sze.gain("strength", 10)
-    $ tod.gain("friendship", 10)
+    $ sze.strength += 10
+    $ tod.friendship += 10
     sze "Teach me your ways master [tod.name]"
     scene bg loadingdocksign
     with fade

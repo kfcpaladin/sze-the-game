@@ -23,16 +23,16 @@ label playPong(pong=pong):
                     "After your victorious victory, you decide to masturbate furiously tonight"
                     "{i}zippppp....{/i}"
                     "You decide to zip your {b}pants{/b} back up"
-                    $ sze.gain("strength", 5)
+                    $ sze.strength += 5
                 elif _score < 0:
                     "You lose miserably by [_score] points"
                     "Perhaps it is time you killed yourself"
                     "{b}Tip: {/b}Press kms to commit suicide"
-                    $ sze.loss("strength", 2)
+                    $ sze.strength -= 2
                 else:
                     "You tied with your opponent"
                     "Perhaps this is time for a truce"
-                    $ sze.gain("strength", 1)
+                    $ sze.strength += 1
             $ playmusic(_previousMusic)
             return
         "Pass":

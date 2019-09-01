@@ -6,6 +6,7 @@ class AttributesViewController:
     def __iter__(self):
         for attribute_message in self._attribute_messages:
             yield attribute_message
+
     @property
     def attribute_message(self):
         return self._attribute_message

@@ -1,6 +1,6 @@
-class PopupsViewController:
-    callback = None
+from refactor.util import RenpyCallbacks
 
+class PopupsViewController:
     def __init__(self, manager):
         self._manager = manager
         self._manager.listen_populate(self._show_screen)
@@ -22,9 +22,7 @@ class PopupsViewController:
         return 255 * lifespan / self._fade_time
 
     def _show_screen(self, _):
-        if PopupsViewController.callback is None:
-            raise RuntimeError("Callback for PopupsViewController not set")
-        PopupsViewController.callback.show_screen("popup", self)
+        RenpyCallbacks.get_instance().show_screen("popup", self)
 
     def _clamp(self, value, _min, _max):
         if value > _max:

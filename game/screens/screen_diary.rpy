@@ -50,7 +50,7 @@ screen diary_achievements:
     use achieve_screen(view_controllers.achievements)
 
 # attribute and friend stats
-screen diary_statistics(controller=view_controllers.attributes):
+screen diary_statistics:
     # prevent interaction underneath
     modal True
     # Include the navigation.

@@ -2,6 +2,7 @@ class ObservableProperty(object):
     def __init__(self, value):
         self._value = value
         self._observers = [] 
+        self._prop_observers = []
         self._binds = []
 
     @property
@@ -19,19 +20,20 @@ class ObservableProperty(object):
         self._observers.append(observer)
         return observer
 
+    def observe_prop(self, observer):
+        self._prop_observers.append(observer)
+        return observer
+
     def bind(self, other_prop):
         self._binds.append(other_prop)
-
-    def detach(self, observer):
-        try:
-            self._observers.remove(observer)
-            return observer
-        except ValueError:
-            return None
 
     def _on_change(self, old, new):
         for observer in self._observers:
             observer(old, new)
+
+        for observer in self._prop_observers:
+            observer(self)
+
             # observer.on_change(old, new)
         for other_prop in self._binds:
             other_prop.value = new

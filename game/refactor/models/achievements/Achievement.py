@@ -16,20 +16,20 @@ class Achievement(object):
 
     def set_unlock_condition(self, condition):
         if self._unlock_condition is None:
-            condition.observe(self._on_unlock_condition)
+            condition.observe_prop(self._on_unlock_condition)
             self._unlock_condition = condition
 
-    def _on_unlock_condition(self, _, is_satisfied):
-        if is_satisfied:
+    def _on_unlock_condition(self, condition):
+        if condition.is_satisfied:
             self.is_complete = True 
     
     def set_reveal_condition(self, condition):
         if self._reveal_condition is None:
-            condition.observe(self._on_reveal_condition)
+            condition.observe_prop(self._on_reveal_condition)
             self._reveal_condition = condition
 
-    def _on_reveal_condition(self, _, is_satisfied):
-        if is_satisfied:
+    def _on_reveal_condition(self, condition):
+        if condition.is_satisfied:
             self.is_hidden = False
 
     @property

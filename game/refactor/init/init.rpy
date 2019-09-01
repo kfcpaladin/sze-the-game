@@ -1,7 +1,9 @@
 default popups = PopupsManager()
 default achievements = load_achievements(popups)
+default quests = load_quests(popups)
 
 default view_controllers.achievements = AchievementViewController(achievements)
+default view_controllers.quests = QuestsViewController(quests)
 default view_controllers.popups = PopupsViewController(popups)
 default view_controllers.left_diary_page = create_left_diary_page()
 default view_controllers.right_diary_page = create_right_diary_page()
@@ -9,6 +11,7 @@ default view_controllers.right_diary_page = create_right_diary_page()
 init -1 python:
     from refactor.models.popups import PopupsManager, Popup
     from refactor.views.achievements import AchievementViewController
+    from refactor.views.quests import QuestsViewController
     from refactor.views.popups import PopupsViewController
     from refactor.util import Vector2D, Rect2D
     from refactor.util import RenpyCallbacks
@@ -27,12 +30,15 @@ init -1 python:
                 renpy.say(character, message)
             except Exception:
                 pass
-        
+
+        def call_label(self, label):
+            renpy.call(label)
+
         def play_sfx(self, filepath):
-            pass
+            playsfx(filepath)
 
         def play_music(self, filepath):
-            pass
+            playmusic(filepath)
 
     RenpyCallbacks.set_instance(ConcreteRenpyCallbacks())
 

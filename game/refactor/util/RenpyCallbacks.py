@@ -24,6 +24,10 @@ class RenpyCallbacks(object):
         pass
 
     @abstractmethod
+    def call_label(self, label):
+        pass
+
+    @abstractmethod
     def play_sfx(self, filepath):
         pass
     

@@ -1,15 +1,25 @@
+# TODO: Placeholder class - Waiting for refactor
 class Clock(object):
     def __init__(self):
-        pass
+        self._times = {} 
     
-    def addTimes(self, times):
-        pass
+    @property
+    def times(self):
+        return self._times.keys()
 
-    def checkTime(self, time):
-        pass
+    def add_time(self, time):
+        self._times[time] = False
 
-    def setTime(self, time):
-        pass
+    def check_time(self, time):
+        return self._times[time]
+
+    def set_time(self, time):
+        for other_time, _ in self._times.items():
+            self._times[other_time] = False
+        self._times[time] = True
     
-    def getTime(self, time):
-        pass
+    def get_time(self):
+        for time, is_true in self._times.items():
+            if is_true:
+                return time
+        raise ValueError("Time not currently set")

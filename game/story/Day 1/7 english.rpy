@@ -1,6 +1,6 @@
 ﻿# first english class testing
 label english1:
-    $ clock.setTime("lunch")
+    $ clock.set_time("lunch")
     $ autosave()
     scene bg english
     "You arrive at {s}base camp{/s} ground floor of Wilkins"

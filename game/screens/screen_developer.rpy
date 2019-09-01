@@ -183,13 +183,13 @@ screen time_screen:
         style "time_screen"
         frame:
             has vbox
-            text "{b}" + "Time Control ({0})".format(clock.getTime()) + "{/b}" 
+            text "{b}" + "Time Control ({0})".format(clock.get_time()) + "{/b}" 
             hbox:
                 spacing 5
-                for time in game.currentTime:
+                for time in clock.times:
                     textbutton time:
                         action [
-                            Function(clock.setTime, time)
+                            Function(clock.set_time, time)
                         ]
 
 # minigames

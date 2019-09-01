@@ -1,12 +1,12 @@
 label recess1:
-    $ clock.setTime("recess")
+    $ clock.set_time("recess")
     $ autosave()
     "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
     jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
     jump recess1a
 
 label recess1a:
-    $ clock.setTime("recess")
+    $ clock.set_time("recess")
     $ autosave()
     "It is now recess, which has unfortunately been cut short to 10 minutes to due an extended assembly"
     sze "Hmm, what should I do today for recess?"

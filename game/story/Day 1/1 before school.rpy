@@ -2,7 +2,7 @@ label schoolday1:
     $ autosave()
     scene bg school
     with fade
-    $ clock.setTime("morning")
+    $ clock.set_time("morning")
     "Wednesday Morning"
     sze "I arrived at school 3 hours early to show my dedication to the system"
     sze "Well, more so because I didn't know what else to do, as I couldn't fall asleep after that weird dream"

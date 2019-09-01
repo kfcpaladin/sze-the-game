@@ -13,7 +13,7 @@ default view_controllers.right_diary_page = create_right_diary_page()
 
 init python:
     game = load_property_store()
-    clock = Clock()
+    clock = load_clock()
 
 init -5 python:
     from refactor.models.popups import PopupsManager, Popup
@@ -74,3 +74,16 @@ init -5 python:
         store.add("currentDiaryPage", ObservableProperty(0))
 
         return store
+
+    def load_clock():
+        clock = Clock()
+
+        clock.add_time("morning")
+        clock.add_time("recess")
+        clock.add_time("lunch")
+        clock.add_time("afternoon")
+        clock.add_time("night")
+
+        clock.set_time("morning")
+
+        return clock

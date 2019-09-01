@@ -21,18 +21,19 @@ init python:
             friend.loss("friendship", -total)
 
     # add item to bag
-    def unlockItem(item, bag):
+    def unlockItem(id, bag):
+        item = items.get(id)
+        inventories.bag.add(item)
         playsfx("xbox.ogg")
         popups.add(Popup(
             message="Unlocked item\n{0}".format(item.name),
             icon=item.icon,
             colour=colour.rainbow
         ))
-        bag.add(item)
 
     # unlock dildo
     def konamiCodeUnlock():
-        unlockItem(unlockableItems["neo armstrong"], bag)
+        unlockItem("neo armstrong", inventories.bag)
         ui.remove(konamiCode)
 
     konamiCode = CodeSequence(
@@ -45,7 +46,7 @@ init python:
 
     # unlock kirby suit
     def kirbyUnlock():
-        unlockItem(unlockableItems["god"], bag)
+        unlockItem("god", inventories.bag)
         ui.remove(kirbyCode)
 
     kirbyCode = CodeSequence(

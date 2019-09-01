@@ -27,7 +27,7 @@ screen diary_bag(bag=bag):
     use bag_screen(bag)
 
 # quests
-screen diary_quests(quests=quests):
+screen diary_quests:
     modal True
     add loadImage("screen_bg_diaryNormal.png")
     use diary_nav
@@ -36,7 +36,9 @@ screen diary_quests(quests=quests):
     use attribute_screen(
         view_controllers.attributes,
         view_controllers.left_diary_page)
-    use quest_screen(quests)
+    use quest_screen(
+        view_controllers.quests,
+        view_controllers.right_diary_page)
 
 # achievements
 screen diary_achievements:

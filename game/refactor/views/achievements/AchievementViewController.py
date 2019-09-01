@@ -1,4 +1,4 @@
-class AchievementViewController:
+class AchievementViewController(object):
     def __init__(self, manager):
         self._manager = manager
         self._achievements = []
@@ -26,7 +26,4 @@ class AchievementViewController:
 
     def _filter_search(self, key):
         return filter(key, self._manager.achievements)
-
-
-
     

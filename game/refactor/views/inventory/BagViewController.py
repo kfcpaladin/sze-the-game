@@ -20,7 +20,6 @@ class BagViewController(object):
     def tooltip_transparency(self, value):
         self._tooltip_transparency = self._clamp_alpha(value)
 
-    
     @property
     def item_transparency(self):
         return self._item_transparency
@@ -54,7 +53,6 @@ class BagViewController(object):
         height = int(total_height / self.total_rows)
 
         return Rect2D(bottom=height, right=width)
-
     
     def _clamp_alpha(self, value):
         if value < 0:

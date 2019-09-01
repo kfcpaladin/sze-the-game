@@ -1,1 +1,2 @@
-from .AttributesViewController import AttributesViewController, AttributesViewMessage
+from .AttributesViewController import AttributesViewController
+from .AttributesViewMessage import AttributesViewMessage

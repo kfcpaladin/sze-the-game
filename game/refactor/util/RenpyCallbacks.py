@@ -26,6 +26,10 @@ class RenpyCallbacks(object):
         pass
 
     @abstractmethod
+    def hide_screen(self, screen):
+        pass
+
+    @abstractmethod
     def call_label(self, label):
         pass
 

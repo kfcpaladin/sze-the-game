@@ -9,7 +9,7 @@ screen float_menu:
         textbutton _("Open Diary"): # _(...) prevents the sfx sound from being played twice
             action [
                 Hide("popup"), # prevent popup screen from being frozen
-                Show(diary.getCurrentPage()), 
+                Function(diary.show)
             ]
             xalign 0.5
         textbutton _("{color=[colour.white]}{b}kms{b}{/color}"):

@@ -68,11 +68,8 @@ init python:
         config.developer = True
         game.diaryIntro = True
         game.hasDiary = True
-        if "diary_developer" not in diary.screenNames:
-            diary.screenNames.insert(0, "diary_developer")
-            diary.currentPage += 1
-        if "diary_roadmap" not in diary.screenNames:
-            diary.screenNames.append("diary_roadmap")
+        diary.insert_page(DiaryPage("diary_developer"), 0)
+        diary.append_page(DiaryPage("diary_roadmap"))
         renpy.show_screen("float_menu")
         ui.remove(developerCode)
 

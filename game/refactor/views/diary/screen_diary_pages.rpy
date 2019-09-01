@@ -1,4 +1,3 @@
-##############################################################################
 # developer page
 screen diary_developer:
     modal True # prevent interaction underneath
@@ -73,32 +72,7 @@ screen diary_roadmap:
     use diary_title("Roadmap")
     use roadmap_screen
 
-##############################################################################
-# navigation for all diary pages
-screen diary_nav:
-    hbox xcenter 1366/2:
-        for index, screenName in enumerate(diary.screenNames):
-            textbutton _(str(index)):
-                action [
-                    Function(closeDiary),
-                    Show(diary.getPage(index)),
-                    Function(diary.setPage, index),
-                ]
-        textbutton "Close":
-            action [
-                Function(closeDiary),
-            ]                    
 
-# diary title
-screen diary_title(title="Undefined"):
-    $ title = unicode.title(title)
-    vbox:
-        area (0, 0, 500, 50)
-        text title: 
-            size 45
-            xoffset 40
-            yoffset 20
-            font "DejaVuSans.ttf"
         
 
 

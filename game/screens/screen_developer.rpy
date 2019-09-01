@@ -41,7 +41,7 @@ screen label_screen_entry(labelConfig, label):
                     action If(
                         ("call" in label and label["call"]) or ("jump" in label and label["jump"]),
                         true = [
-                            Function(closeDiary),
+                            Function(diary.close),
                             Function(renpy.jump, label["name"]),
                         ],
                         false = [
@@ -51,7 +51,7 @@ screen label_screen_entry(labelConfig, label):
                     )
                 textbutton "Call":
                     action [
-                        Function(closeDiary),
+                        Function(diary.close),
                         Function(renpy.call, label["name"]),
                     ]
                 textbutton "Show description":
@@ -79,7 +79,7 @@ screen label_screen_unsafe(label, timeout=5):
                 spacing 5
                 textbutton "Yes":
                     action [
-                        Function(closeDiary),
+                        Function(diary.close),
                         Function(renpy.jump, label["name"]),
                     ]
                 textbutton "No":
@@ -203,7 +203,7 @@ screen minigames_screen:
                 spacing 5
                 textbutton "Pong":
                     action [
-                        Function(closeDiary),
+                        Function(diary.close),
                         Function(renpy.call, "playPong"),
                     ]
                 textbutton "Kahoot":
@@ -244,7 +244,7 @@ screen minigames_screen_kahoot(kahootQuestions):
                             xsize 275
                             xalign 0.5
                             action [
-                                Function(closeDiary),
+                                Function(diary.close),
                                 Function(renpy.call, "kahootGame", kahootQuestion)
                             ]
                 vbar:

@@ -3,7 +3,7 @@ from renpy.character import ADVCharacter
 class Character(ADVCharacter):
     def __init__(self, name, icon=None, **properties):
         ADVCharacter.__init__(self, name, **properties)
-        self._icon = icon
+        self.icon = icon
         self._attributes = {}
     
     @property
@@ -22,8 +22,13 @@ class Character(ADVCharacter):
             raise KeyError("Attribute {0} doesn't exist".format(name))
         return attribute
 
-    @property
-    def icon(self):
-        return self._icon
+    # LEGACY: compatability with existing code 
+    def gain(self, name, value=1):
+        attribute = self.get_attribute(name)
+        attribute.value += value
+    
+    def loss(self, name, value=1):
+        attribute = self.get_attribute(name)
+        attribute.value -= value
     
     

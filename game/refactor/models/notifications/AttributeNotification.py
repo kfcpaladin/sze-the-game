@@ -4,5 +4,6 @@ from abc import abstractmethod
 
 class AttributeNotification(Observer):
     def say(self, message):
-        RenpyCallbacks.get_instance().say(message)
+        if message is not None:
+            RenpyCallbacks.get_instance().say(message)
      

@@ -2,10 +2,14 @@ from .Character import Character
 from .Attribute import Attribute
 
 class Friend(Character):
-    def __init__(self, name, friendship=0, **kwargs):
+    _instances = []
+
+    def __init__(self, name, description=None, friendship=0, **kwargs):
         Character.__init__(self, name, **kwargs)
         self._friendship = Attribute("friendship", friendship)
+        self.description = description
         self.add_attribute(self._friendship)
+        Friend._instances.append(self)
 
     @property
     def friendship(self):

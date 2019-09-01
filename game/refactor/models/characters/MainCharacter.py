@@ -17,14 +17,6 @@ class MainCharacter(Character):
         self.add_attribute(self._intellect)
 
     # LEGACY: compatability with existing code 
-    def gain(self, name, value=1):
-        attribute = self.get_attribute(name)
-        attribute.value += value
-    
-    def loss(self, name, value=1):
-        attribute = self.get_attribute(name)
-        attribute.value -= value
-
     @property
     def thirst(self):
         return self._thirst.value

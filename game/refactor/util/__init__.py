@@ -5,4 +5,6 @@ from .PriorityList import PriorityList, PriorityEntry
 from .Rect2D import Rect2D
 from .Vector2D import Vector2D
 
+from .PropertyStore import PropertyStore
+
 from .RenpyCallbacks import RenpyCallbacks

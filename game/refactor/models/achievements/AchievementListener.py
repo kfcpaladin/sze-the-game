@@ -9,6 +9,12 @@ class AchievementListener(Observer):
         self._unlock_listeners = []
         self._reveal_listeners = []
 
+    def listen_unlock(self, listener):
+        self._unlock_listeners.append(listener)
+    
+    def listen_reveal(self, listener):
+        self._reveal_listeners.append(listener)
+
     def on_unlock(self, _, is_completed):
         if is_completed:
             for listener in self._unlock_listeners:

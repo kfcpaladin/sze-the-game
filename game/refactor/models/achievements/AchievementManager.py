@@ -19,6 +19,8 @@ class AchievementManager(object):
         _id = achievement.id
         listener = AchievementListener(achievement)
         self._listeners.append(listener)
+        listener.listen_unlock(self._on_unlock)
+        listener.listen_reveal(self._on_reveal)
         self._achievements.setdefault(_id, achievement)
     
     def unlock_achievement(self, _id):
@@ -43,6 +45,9 @@ class AchievementManager(object):
     # LEGACY
     def unlockAchievement(self, _id):
         self.unlock_achievement(_id)
+
+    def _on_reveal(self, achievement):
+        pass
 
     def _on_unlock(self, achievement):
         self._popups.add(Popup(

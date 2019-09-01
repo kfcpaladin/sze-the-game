@@ -98,7 +98,7 @@ label schoolday1:
             mox "\"Oh sorry what {b}were{/b} you saying again?\""
             "You walk off as [mox.name] lectures a new group of students"
         # jig school quest
-        if "jigschool1" in quests.unavailable:
+        if not quests.is_quest_unlocked("jigschool1"):
             sze "This school kinda {color=[colour.red]}{b}sucks{/b}{/color}"
             $ sze.loss("fort")
             mox "What you just {b}say{/b} young man {b}!!!{/b}"

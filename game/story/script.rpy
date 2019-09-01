@@ -13,7 +13,6 @@ label start:
         "Go to /game/scripts/options.rpy, and make config.developer = false to remove this"
     if game.hasDiary:
         show screen float_menu
-    show screen screen_game_loop
     with fade
     pause
     scene black

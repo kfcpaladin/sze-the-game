@@ -74,7 +74,7 @@ label schoolday1:
             mox "\"Its a new feature that students will want after they start the {b}HSC{/b}\""
             sze "\"How do I use this thing?\""
             mox "\"Here let me show you\""
-            $ renpy.show_screen(diary.getCurrentPage()) 
+            $ diary.open() 
             mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
             $ achievements.unlockAchievement("unlockDiary")
             hide screen float_menu

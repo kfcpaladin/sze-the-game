@@ -62,7 +62,10 @@ screen diary_statistics:
     use attribute_screen(
         view_controllers.attributes,
         view_controllers.left_diary_page)
-    use friend_screen(friendList)
+    use friend_screen(
+        view_controllers.friends, 
+        Friend.get_all(), 
+        view_controllers.right_diary_page)
 
 # roadmap
 screen diary_roadmap:

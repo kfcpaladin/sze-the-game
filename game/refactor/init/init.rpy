@@ -7,6 +7,7 @@ default view_controllers.achievements = AchievementViewController(achievements)
 default view_controllers.quests = QuestsViewController(quests)
 default view_controllers.popups = PopupsViewController(popups)
 default view_controllers.bag = create_bag_view_controller(5, 5) 
+default view_controllers.friends = create_friend_view_controller()
 default view_controllers.left_diary_page = create_left_diary_page()
 default view_controllers.right_diary_page = create_right_diary_page()
 
@@ -25,6 +26,8 @@ init -5 python:
             renpy.hide_screen(screen)
 
         def say(self, message, character=None):
+            if diary.is_open:
+                return
             if not character:
                 character = adv
             try:
@@ -33,6 +36,7 @@ init -5 python:
                 pass
 
         def call_label(self, label):
+            diary.close()
             renpy.call(label)
 
         def play_sfx(self, filepath):

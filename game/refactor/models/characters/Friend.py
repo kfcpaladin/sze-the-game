@@ -11,6 +11,10 @@ class Friend(Character):
         self.add_attribute(self._friendship)
         Friend._instances.append(self)
 
+    @staticmethod
+    def get_all():
+        return Friend._instances
+
     @property
     def friendship(self):
         return self._friendship.value

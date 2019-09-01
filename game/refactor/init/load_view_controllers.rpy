@@ -3,6 +3,7 @@ init -1 python:
     from refactor.views.quests import QuestsViewController
     from refactor.views.popups import PopupsViewController
     from refactor.views.inventory import BagViewController
+    from refactor.views.friends import FriendViewController
     from refactor.views.diary import DiaryViewController, DiaryPage
     from refactor.util import Vector2D, Rect2D
 
@@ -14,6 +15,14 @@ init -1 python:
         controller.background_colour = colour.maroon
         controller.item_transparency = 120
         controller.tooltip_transparency = 180
+
+        return controller
+
+    def create_friend_view_controller():
+        controller = FriendViewController()
+        controller.positive_colour = colour.green
+        controller.neutral_colour = colour.yellow
+        controller.negative_colour = colour.red
 
         return controller
 

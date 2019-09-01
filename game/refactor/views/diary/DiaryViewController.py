@@ -34,6 +34,10 @@ class DiaryViewController(object):
     def current_page(self):
         return self._pages[self._index]
 
+    @property
+    def is_open(self):
+        return self._is_visible
+
     def get_page(self, number):
         return self._pages[number % len(self._pages)]
 
@@ -44,8 +48,8 @@ class DiaryViewController(object):
     def insert_page(self, page, index):
         if page not in self._pages:
             self._pages.insert(index, page)
-    
-    def show(self):
+
+    def open(self):
         self._is_visible = True
         self.current_page.show()
 

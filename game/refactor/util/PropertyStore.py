@@ -1,6 +1,6 @@
 class PropertyStore(object):
     def __init__(self):
-        self._values = {}
+        self._values = {} 
     
     def add(self, name, prop):
         if name in self._values:
@@ -12,7 +12,21 @@ class PropertyStore(object):
         if prop is None:
             raise KeyError("Unknown property {0} in store".format(name))
         return prop
+
+    def __getattribute__(self, name):
+        prop = object.__getattribute__(self, "_values").get(name)
+        if prop is not None:
+            return prop.value
+        return object.__getattribute__(self, name)
     
+    def __setattr__(self, name, value):
+        try:
+            prop = self.get_prop(name)
+            prop.value = value
+        except (KeyError, AttributeError):
+            object.__setattr__(self, name, value)
+
+
     def get(self, name):
         return self.get_prop(name).value
     

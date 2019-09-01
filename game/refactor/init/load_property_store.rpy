@@ -1,3 +1,6 @@
+init python:
+    prop_store = load_property_store()
+
 init -1 python:
     from refactor.util import PropertyStore
     from refactor.util import ObservableProperty

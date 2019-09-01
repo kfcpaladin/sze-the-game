@@ -5,8 +5,10 @@ class RenpyCallbacks(object):
 
     @staticmethod
     def set_instance(instance):
+        # deal with pickling issues
         if RenpyCallbacks._instance is not None:
-            raise RuntimeError("RenpyCallbacks already instantiated")
+            return
+            # raise RuntimeError("RenpyCallbacks already instantiated")
         RenpyCallbacks._instance = instance
 
     @staticmethod

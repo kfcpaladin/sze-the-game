@@ -13,18 +13,18 @@ screen diary_developer:
     use screen_console
 
 # bag
-screen diary_bag(bag=bag):
+screen diary_bag(controller=view_controllers.bag, inventory=inventories.bag):
     modal True
     # screen components
     add loadImage("screen_bg_diaryGrid.png")
     use diary_nav
-    use diary_title(bag.name)
+    use diary_title(inventory.name)
     # custom positioning of attribute screen on right page
     use attribute_screen(
         view_controllers.attributes, 
         view_controllers.right_diary_page)
     # allow bag tooltip to cover attribute screen 
-    use bag_screen(bag)
+    use bag_screen(controller, inventory, Rect2D(right=590, bottom=590).add_offset(Vector2D(43, 131)))
 
 # quests
 screen diary_quests:

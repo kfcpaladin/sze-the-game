@@ -1,7 +1,7 @@
 # creates a bullet projectile
 init -10 python:
     class Bullet:
-        def __init__(self, pos=Vector(0, 0), vel=Vector(0, 0), size=Vector(10, 10)):
+        def __init__(self, pos=Vector2D(0, 0), vel=Vector2D(0, 0), size=Vector2D(10, 10)):
             self.create(pos, vel, size)
         
         def create(self, pos, vel, size):

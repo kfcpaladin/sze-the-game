@@ -24,9 +24,9 @@ init -2 python:
                 "colour": "#ffffff",
                 "height": 100,
                 "keys": None,
-                "pos": Vector(0, 0),
+                "pos": Vector2D(0, 0),
                 "speed": 10,
-                "vel": Vector(0, 0),
+                "vel": Vector2D(0, 0),
                 "width": 20,
             }
             defaultOptions.update(kwargs)

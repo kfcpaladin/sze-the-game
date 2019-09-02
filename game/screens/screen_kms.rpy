@@ -25,9 +25,9 @@ screen kmsGun(bullets=bullets):
     modal True
     add loadImage("kms_bg_bedroom.png")
     # positions
-    default pos = Vector(200, 200)
-    default size = Vector(200, 300)
-    default gunSize = Vector(200, 150)
+    default pos = Vector2D(200, 200)
+    default size = Vector2D(200, 300)
+    default gunSize = Vector2D(200, 150)
     default bulletSpeed = 50
     default bulletSize = 20
     $ szeDead = False
@@ -48,7 +48,7 @@ screen kmsGun(bullets=bullets):
         xoffset mousePos.x
         yoffset mousePos.y
         action [
-            Function(bullets.append, Bullet(pos=Vector(mousePos.x, mousePos.y+30), vel=Vector(-bulletSpeed, 0), size=Vector(bulletSize, bulletSize))),
+            Function(bullets.append, Bullet(pos=Vector2D(mousePos.x, mousePos.y+30), vel=Vector2D(-bulletSpeed, 0), size=Vector2D(bulletSize, bulletSize))),
             Function(playsfx, "gunSound.ogg"),
         ]
         hovered [

@@ -20,14 +20,14 @@ init -2 python:
             defaultOptions = {
                 "bounds": (0, 0, 1366, 768),
                 "colour": "#ffffff",
-                "pos": Vector(0, 0),
+                "pos": Vector2D(0, 0),
                 "radius": 10,
                 "score": AttrDict({
                     "left": 0,
                     "right": 0,
                 }),
                 "speed": 20,
-                "vel": Vector(0, 0),
+                "vel": Vector2D(0, 0),
             }
             defaultOptions.update(kwargs)
             self.setOptions(**defaultOptions)
@@ -104,13 +104,13 @@ init -2 python:
             self.pos.y = self.bounds[3]/2.0
             if side == Ball.LEFT:
                 self.score.right += 1
-                self.vel = Vector(
+                self.vel = Vector2D(
                     -self.speed/2.0 + random.randint(-2, 2), 
                     self.speed * random.randint(-5, 5) / 5.0
                 )
             elif side == Ball.RIGHT:
                 self.score.left += 1
-                self.vel = Vector(
+                self.vel = Vector2D(
                     self.speed/2.0 + random.randint(-2, 2), 
                     self.speed * random.randint(-5, 5) / 5.0
                 )
@@ -132,12 +132,12 @@ init -2 python:
         # This will start the ball moving at a random direction
         def _start(self):
             if random.randint(0, 1) == 1:
-                self.vel = Vector(
+                self.vel = Vector2D(
                     self.speed,
                     random.randint(-self.speed, self.speed),
                 )
             else:
-                self.vel = Vector(
+                self.vel = Vector2D(
                     -self.speed,
                     random.randint(-self.speed, self.speed),
                 )

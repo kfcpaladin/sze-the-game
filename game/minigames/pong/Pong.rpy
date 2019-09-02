@@ -30,7 +30,7 @@ init -1 python:
             # ball
             self.balls["ball"] = Ball(
                 colour = "#c2d12a",
-                pos = Vector(1366/2, 768/2),
+                pos = Vector2D(1366/2, 768/2),
                 radius = 15,
                 speed = 20,
             )
@@ -46,7 +46,7 @@ init -1 python:
                     pygame.K_LEFT: Paddle.LEFT, 
                     pygame.K_RIGHT: Paddle.RIGHT,
                 },
-                pos = Vector(50, 768/2),
+                pos = Vector2D(50, 768/2),
                 speed = 20,
                 width = 40,
             )
@@ -56,7 +56,7 @@ init -1 python:
                 bounds = (1366/2, 0, 1366, 768),
                 colour = "#cb3932",
                 height = 150,
-                pos = Vector(1366-50, 768/2),
+                pos = Vector2D(1366-50, 768/2),
                 speed = 20,
                 width = 40,
             )

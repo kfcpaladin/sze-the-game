@@ -16,7 +16,10 @@ class RainbowColour(object):
 
     def update(self, amount=1):
         self._current_edge(amount)
-    
+
+    def __str__(self):
+        return "#{:02x}{:02x}{:02x}{:02x}".format(*self._components)
+
     @property
     def alpha(self):
         return self._components[3]
@@ -51,6 +54,7 @@ class RainbowColour(object):
             self._current_edge = self._falling_edge
 
     def _clamp(self, value):
+        value = int(value)
         if value < 0:
             return 0
         elif value > 255:

@@ -109,7 +109,7 @@ label jigschool1_todd_teach:
     sze "{b}Holy {color=[colour.red]}{i}fuckkk{/i}{/color}{/b}"
     tod "Welcome back my new padawan"
     tod "I [tod.name] will teach you my ways, and one day you may ascend to rival me"
-    $ achievements.unlockAchievement("toddkarate")
+    $ achievements.unlock_achievement("toddkarate")
     sze "{b}Holy shit that felt good{/b}"
     $ sze.strength += 10
     $ tod.friendship += 10
@@ -121,7 +121,7 @@ label jigschool1_todd_teach:
     "{b}Blow{/b} after {b}blow{/b} after {b}blow{/b}, your body is eviscerated and rebuilt" with vpunch
     "{color=[colour.red]}{b}Your body is hardened against the might of Todd's blows, and you begin to overcome your inherent weakness{/b}{/color}"
     "You bow to master Todd before you depart, and return to your classes"
-    $ quests.completeQuest("jigschool1")
+    $ quest.complete_quest("jigschool1")
     tod "Farewell my new student"
     "You walk back to school a new man, now gifted life where there was once none"
     jump recess1a

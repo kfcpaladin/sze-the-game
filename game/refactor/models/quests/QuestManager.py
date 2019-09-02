@@ -60,18 +60,3 @@ class QuestManager(object):
     def is_quest_complete(self, id):
         quest = self.get_quest(id)
         return quest.is_complete
-
-    # LEGACY 
-    def unlockQuest(self, id):
-        quest = self.get_quest(id)
-        quest.is_unlocked = True
-    
-    def startQuest(self, id):
-        quest = self.get_quest(id)
-        quest.start()
-    
-    def completeQuest(self, id):
-        quest = self.get_quest(id)
-        quest.is_complete = True
-    
-         

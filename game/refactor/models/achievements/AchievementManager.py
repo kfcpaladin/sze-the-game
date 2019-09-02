@@ -42,10 +42,6 @@ class AchievementManager(object):
             raise KeyError("Unknown achievement {0}".format(_id))
         return achievement
 
-    # LEGACY
-    def unlockAchievement(self, _id):
-        self.unlock_achievement(_id)
-
     def _on_reveal(self, achievement):
         pass
 

@@ -69,14 +69,14 @@ label schoolday1:
             $ game.hasDiary = True
             "You notice the bookmark string thingy is labelled with \"kms\""
             "As you graze the side of it, your skin tears open spilling {color=[colour.red]}{b}blood{/b}{/color} onto the pages"
-            $ achievements.unlockAchievement("unlockSuicide")
+            $ achievements.unlock_achievement("unlockSuicide")
             sze "\"How come I can kill myself with this diary\""
             mox "\"Its a new feature that students will want after they start the {b}HSC{/b}\""
             sze "\"How do I use this thing?\""
             mox "\"Here let me show you\""
             $ diary.open() 
             mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
-            $ achievements.unlockAchievement("unlockDiary")
+            $ achievements.unlock_achievement("unlockDiary")
             hide screen float_menu
             show screen float_menu
             mox "\"Click on \"Open diary\" to open the diary again\""
@@ -107,7 +107,7 @@ label schoolday1:
             mox "Ahhh how true that is"
             $ sze.fort += 2
             "You feel a strong temptation to jig your first day of school"
-            $ quests.unlockQuest("jigschool1")
+            $ quest.unlock_quest("jigschool1")
         hide moxham happy
         # rollcall
         "3 hours later"

@@ -68,7 +68,7 @@ label schoolday1:
             "Nevermind..."
             $ game.hasDiary = True
             "You notice the bookmark string thingy is labelled with \"kms\""
-            "As you graze the side of it, your skin tears open spilling {color=[colour.red]}{b}blood{/b}{/color} onto the pages"
+            "As you graze the side of it, your skin tears open spilling {color=[PrimaryColours.RED]}{b}blood{/b}{/color} onto the pages"
             $ achievements.unlock_achievement("unlockSuicide")
             sze "\"How come I can kill myself with this diary\""
             mox "\"Its a new feature that students will want after they start the {b}HSC{/b}\""
@@ -99,7 +99,7 @@ label schoolday1:
             "You walk off as [mox.name] lectures a new group of students"
         # jig school quest
         if not quests.is_quest_unlocked("jigschool1"):
-            sze "This school kinda {color=[colour.red]}{b}sucks{/b}{/color}"
+            sze "This school kinda {color=[PrimaryColours.RED]}{b}sucks{/b}{/color}"
             $ sze.fort -= 1
             mox "What you just {b}say{/b} young man {b}!!!{/b}"
             sze "I said Michael Kirby is the epitome of social justice"

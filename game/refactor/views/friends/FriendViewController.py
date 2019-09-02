@@ -1,8 +1,5 @@
 class FriendViewController(object):
     def __init__(self):
-        self.positive_colour = None
-        self.neutral_colour = None
-        self.negative_colour = None
         self._friend = None
 
     @property
@@ -12,10 +9,9 @@ class FriendViewController(object):
     def select_friend(self, friend):
         self._friend = friend
 
-    def get_friend_colour(self, friend):
+    def get_friend_colour(self, friend, theme):
         if friend.friendship > 0:
-            return self.positive_colour
+            return theme.positive
         elif friend.friendship < 0:
-            return self.negative_colour
-        
-        return self.neutral_colour
+            return theme.negative
+        return theme.neutral

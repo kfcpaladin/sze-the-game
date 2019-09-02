@@ -2,7 +2,7 @@
 screen float_menu:
     use refreshTimer
     frame:
-        background Solid(colour.transparent)
+        background Solid(PrimaryColours.CLEAR)
         align (0.84, 0.04)
         has vbox
         spacing 10
@@ -12,8 +12,8 @@ screen float_menu:
                 Function(diary.open)
             ]
             xalign 0.5
-        textbutton _("{color=[colour.white]}{b}kms{b}{/color}"):
-            background Solid(colour.rainbow)
+        textbutton _("{color=[PrimaryColours.WHITE]}{b}kms{b}{/color}"):
+            background Solid(themes.default.rainbow)
             xminimum 150
             action [
                 Show("kms"),

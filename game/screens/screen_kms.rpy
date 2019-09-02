@@ -10,8 +10,8 @@ screen kms:
         use kmsHanging
     else:
         use kmsGun
-    textbutton "{color=[colour.white]}{b}{i}Don't kms{/i}{b}{/color}":
-        background Solid(colour.rainbow)
+    textbutton "{color=[PrimaryColours.WHITE]}{b}{i}Don't kms{/i}{b}{/color}":
+        background Solid(themes.default.rainbow)
         xalign 0.84
         yalign 0.1
         action [

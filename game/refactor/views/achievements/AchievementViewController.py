@@ -26,4 +26,10 @@ class AchievementViewController(object):
 
     def _filter_search(self, key):
         return filter(key, self._manager.achievements)
-    
+
+    def get_achievement_colour(self, achievement, theme):
+        if achievement.is_complete:
+            return theme.positive
+        elif not achievement.is_hidden:
+            return theme.neutral
+        return theme.negative

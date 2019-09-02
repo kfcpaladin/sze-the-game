@@ -608,7 +608,7 @@ label eng1waitforschlammie:
         "Look for the nearest teacher":
             "You hear the sound of gigantic footsteps reveberate towards you"
         "Blame Roy for everything":
-            sze "Hey guys I think {b}Roy{/b} just {color=[colour.green]}{b}{i}farted{/i}{/b}{/color}"
+            sze "Hey guys I think {b}Roy{/b} just {color=[PrimaryColours.GREEN]}{b}{i}farted{/i}{/b}{/color}"
     # experimental sizeText formatter
     $ playsfx("vpunch.ogg")
     $ _string = sizeText("{b}THUD{/b}", start=25, end=30)

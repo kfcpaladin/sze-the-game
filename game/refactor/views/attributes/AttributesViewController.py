@@ -7,6 +7,13 @@ class AttributesViewController(object):
         for attribute_message in self._attribute_messages:
             yield attribute_message
 
+    def get_attribute_colour(self, attribute, theme):
+        if attribute.value > 0:
+            return theme.positive
+        elif attribute.value == 0:
+            return theme.neutral
+        return theme.negative
+
     @property
     def attribute_message(self):
         return self._attribute_message

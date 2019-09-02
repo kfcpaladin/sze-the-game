@@ -6,20 +6,20 @@ init python:
             "name": "asszembly1jigolo",
             "jump": ["asszembly1_2", "asszemblyjigolo1_2"],
             "pos": (9.5, 0),
-            "colour": colour.grey,
+            "colour": PrimaryColours.GREY,
         },
         {
             "name": "asszemblyjigolo1_2",
             "jump": ["asszemblyjigolo1_3"],
             "pos": (9.5, 1),
-            "colour": colour.grey,
+            "colour": PrimaryColours.GREY,
             
         },
         {
             "name": "asszemblyjigolo1_3",
             "jump": ["asszembly1shitstorm", "fugitivesfromasszembly1"],
             "pos": (9.5, 2),
-            "colour": colour.grey,
+            "colour": PrimaryColours.GREY,
         },
         {
             "name": "fugitivesfromasszembly1",
@@ -31,13 +31,13 @@ init python:
             ],
             "call": ["asszemblyjigolo1encounter"],
             "pos": (9.5, 3),
-            "colour": colour.grey,
+            "colour": PrimaryColours.GREY,
         },
         {
             "name": "asszemblyjigolo1encounter",
             "jump": ["asszembly1shitstorm"],
             "pos": (9.5, 4),
-            "colour": colour.grey,
+            "colour": PrimaryColours.GREY,
         },
     ])
 
@@ -47,19 +47,19 @@ init python:
             "name": "asszemblyjigolokindagaytoilet",
             "jump": ["szemeettheleatgaytoilet", "toiletstudies1"],
             "pos": (10, 0.5),
-            "colour": colour.purple,
+            "colour": PrimaryColours.PURPLE,
         },
         {
             "name": "toiletstudies1",
             "jump": "recess1a",
             "pos": (10, 1.5),
-            "colour": colour.purple,
+            "colour": PrimaryColours.PURPLE,
         },
         {
             "name": "szemeettheleatgaytoilet",
             "jump": "recess1a",
             "pos": (10, 2.5),
-            "colour": colour.purple,
+            "colour": PrimaryColours.PURPLE,
         },
     ])
 
@@ -69,7 +69,7 @@ init python:
             "name": "asszemblyjigolodiscoverthefood",
             "jump": "recess1a",
             "pos": (10, 3.5),
-            "colour": colour.red,
+            "colour": PrimaryColours.RED,
         },
     ])
 
@@ -80,7 +80,7 @@ init python:
             "jump": "recess1",
             "call": "garyreeducation",
             "pos": (10.5, 0),
-            "colour": colour.blue,
+            "colour": PrimaryColours.BLUE,
         },
     ])
 
@@ -90,6 +90,6 @@ init python:
             "name": "asszembly1shitstorm",
             "jump": "dead",
             "pos": (10.5, 2),
-            "colour": colour.orange,
+            "colour": PrimaryColours.ORANGE,
         },
     ])

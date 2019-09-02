@@ -24,7 +24,7 @@ screen label_screen(labels=labels):
 
 # entry for labels menu
 screen label_screen_entry(labelConfig, label):
-    default defaultColour = colour.green
+    default defaultColour = PrimaryColours.GREEN
     default showDescription = False
     $ colour = defaultColour
     if "colour" in label:

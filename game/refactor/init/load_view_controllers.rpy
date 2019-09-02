@@ -9,21 +9,10 @@ init -1 python:
 
     def create_bag_view_controller(total_columns, total_rows):
         controller = BagViewController(total_rows, total_columns)
-
-        controller.equipped_colour = colour.green
-        controller.unequipped_colour = colour.yellow
-        controller.background_colour = colour.maroon
-        controller.item_transparency = 120
-        controller.tooltip_transparency = 180
-
         return controller
 
     def create_friend_view_controller():
         controller = FriendViewController()
-        controller.positive_colour = colour.green
-        controller.neutral_colour = colour.yellow
-        controller.negative_colour = colour.red
-
         return controller
 
     def create_diary_view_controller():

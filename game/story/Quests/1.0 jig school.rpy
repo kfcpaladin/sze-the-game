@@ -10,7 +10,7 @@ label jigschool1:
     "Your bladder feels like it is going to depressurise inside your pants"
     sze "\"{i}Do you know where a bathroom is???{/i}\""
     "\"Come forth {i}young{/i} one. Let me see you...\""
-    "You feel a {color=[colour.yellow]}{i}little drop of urine{/i}{/color} drip out from your bump"
+    "You feel a {color=[PrimaryColours.YELLOW]}{i}little drop of urine{/i}{/color} drip out from your bump"
     # choice
     menu:
         "Should you go into the dark alley way ahead of you?"
@@ -21,7 +21,7 @@ label jigschool1:
             "As you begin to turn around something grabs you by the neck"
             tod "{b}What a coward{/b}"
             sze "{i}Oh shit my pants{/i}"
-            "{color=[colour.yellow]}{i}You urinate inside your pants{/i}{/color}"
+            "{color=[PrimaryColours.YELLOW]}{i}You urinate inside your pants{/i}{/color}"
     # start fighting
     $ playsfx("vpunch.ogg")
     sze "What the..." with vpunch
@@ -30,9 +30,9 @@ label jigschool1:
     $ playmusic("ManuelGasGasGas(InitialD).ogg")
     "Suddenly you see a blurry wall of moving muscle and raw power move towards you"
     $ _string = sizeText("!"*10, start=25, end=50)
-    sze "{i}{b}{color=[colour.red]}[_string]{/color}{/b}{/i}"
+    sze "{i}{b}{color=[PrimaryColours.RED]}[_string]{/color}{/b}{/i}"
     tod "{b}Fight or die!!!{/b}"
-    "{color=[colour.red]}{b}You are greeted with claws slashing away at your flesh, causing blood to gush out of your ragged wounds{/b}{/color}"
+    "{color=[PrimaryColours.RED]}{b}You are greeted with claws slashing away at your flesh, causing blood to gush out of your ragged wounds{/b}{/color}"
     sze "{b}Argggrgegegafwadnaw{/b}"
     $ playsfx("hpunch.ogg")
     sze "Please stop" with hpunch
@@ -48,27 +48,27 @@ label jigschool1:
             $ playsfx("vpunch.ogg")
             "Your fist is propelled at near luminal speeds, colliding against the skull of your enemy" with vpunch
             $ playsfx("hpunch.ogg")
-            "{color=[colour.red]}{b}Your fist turns into a soft suspension of blood and shattered bones{/b}{/color}" with hpunch
+            "{color=[PrimaryColours.RED]}{b}Your fist turns into a soft suspension of blood and shattered bones{/b}{/color}" with hpunch
             tod "{b}What a feeble race these humans are{/b}"
             $ playsfx("vpunch.ogg")
             "In one swell swoop your internal organs part way from your body" with vpunch
-            "{color=[colour.red]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thoracic cavity{/i}{/b}{/color}"
+            "{color=[PrimaryColours.RED]}{b}{i}Blood rushes out of your chest cavity, and you feel your heart expanding into your thoracic cavity{/i}{/b}{/color}"
             sze "urggg..."
             jump jigschool1_todd_teach
         "{i}Try to run away{/i}":
             jump jigschool1_todd_death
-        "{color=[colour.yellow]}{i}Throw your urine soaked pants at him{/i}{/color}":
+        "{color=[PrimaryColours.YELLOW]}{i}Throw your urine soaked pants at him{/i}{/color}":
             sze "Take this"
             $ playsfx("hpunch.ogg")
             "Your drenched pants slam into your opponent's face" with hpunch
-            tod "{color=[colour.red]}{b}Big mistake{/b}{/color}"
+            tod "{color=[PrimaryColours.RED]}{b}Big mistake{/b}{/color}"
             jump jigschool1_todd_death
 
     
 label jigschool1_todd_death:
     sze "{i}whimpers{/i}"
     "As you start to run back you feel something run down your spine"
-    sze "{color=[colour.red]}{b}glurrg....{/b}{/color}"
+    sze "{color=[PrimaryColours.RED]}{b}glurrg....{/b}{/color}"
     "You spine has been {b}ripped{/b} out of your body"
     tod "I shall consume this {i}wimp{/i} for nutrition"
     "As the alien approaches you, a sense of overwhelming fear comes over you"
@@ -77,7 +77,7 @@ label jigschool1_todd_death:
     "This alien plunges his hand onto yor chest, and you feel your sternum parting way" with vpunch
     $ playsfx("vpunch.ogg")
     "You body is being drained of all life..." with vpunch
-    "You feel yourself turning into a skeleton, as your organs become {color=[colour.red]}{b}liquified{/b}{/color}"
+    "You feel yourself turning into a skeleton, as your organs become {color=[PrimaryColours.RED]}{b}liquified{/b}{/color}"
     hide bg loadingdock
     with fade
     show bg ded
@@ -86,7 +86,7 @@ label jigschool1_todd_death:
 label jigschool1_todd_teach:
     # choose to fight back
     $ playsfx("vpunch.ogg")
-    "You begin to succumb to your {color=[colour.red]}{b}CATASTROPHIC{/b}{/color} blood loss" with vpunch
+    "You begin to succumb to your {color=[PrimaryColours.RED]}{b}CATASTROPHIC{/b}{/color} blood loss" with vpunch
     tod "{i}What a pitiful fight{/i}"
     tod "{b}But since you tried to fight back, I can see that you are indeed full of determination and courage{/b}"
     "You sense an aura of respect from your opponent, as he stands above your limp body"
@@ -95,18 +95,18 @@ label jigschool1_todd_teach:
     menu:
         "{b}urggg...{/b}":
             sze "{b}urggg...{/b}"
-        "{color=[colour.red]}{b}Cough blood...{/b}{/color}":
-            sze "{color=[colour.red]}{b}ackkt...{/b}{/color}"
-            "{color=[colour.red]}{b}Blood is sprayed everywhere{/b}{/color}"
-        "{color=[colour.yellow]}{i}Piss yourself{/i}{/color}":
+        "{color=[PrimaryColours.RED]}{b}Cough blood...{/b}{/color}":
+            sze "{color=[PrimaryColours.RED]}{b}ackkt...{/b}{/color}"
+            "{color=[PrimaryColours.RED]}{b}Blood is sprayed everywhere{/b}{/color}"
+        "{color=[PrimaryColours.YELLOW]}{i}Piss yourself{/i}{/color}":
             sze "{i}Ahhh....{/i}"
-            "The alien beast takes a step back to avoid stepping in your {color=[colour.yellow]}{b}urine{/b}{/color}"
-    tod "I'll take that as a {color=[colour.green]}{b}yes{/b}{/color}"
+            "The alien beast takes a step back to avoid stepping in your {color=[PrimaryColours.YELLOW]}{b}urine{/b}{/color}"
+    tod "I'll take that as a {color=[PrimaryColours.GREEN]}{b}yes{/b}{/color}"
     "{b}Todd begins to place his palm on your chest{/b}"
     $ playsfx("vpunch.ogg")
     "Suddenly you feel a rush of adrenaline as he pumps his life force into you" with vpunch
-    "Your body becomes {color=[colour.green]}{b}completely invigorated{/b}{/color} as you recover from your mortal wounds"
-    sze "{b}Holy {color=[colour.red]}{i}fuckkk{/i}{/color}{/b}"
+    "Your body becomes {color=[PrimaryColours.GREEN]}{b}completely invigorated{/b}{/color} as you recover from your mortal wounds"
+    sze "{b}Holy {color=[PrimaryColours.RED]}{i}fuckkk{/i}{/color}{/b}"
     tod "Welcome back my new padawan"
     tod "I [tod.name] will teach you my ways, and one day you may ascend to rival me"
     $ achievements.unlock_achievement("toddkarate")
@@ -119,7 +119,7 @@ label jigschool1_todd_teach:
     "You spent several hours fighting it out"
     $ playsfx("hpunch.ogg")
     "{b}Blow{/b} after {b}blow{/b} after {b}blow{/b}, your body is eviscerated and rebuilt" with vpunch
-    "{color=[colour.red]}{b}Your body is hardened against the might of Todd's blows, and you begin to overcome your inherent weakness{/b}{/color}"
+    "{color=[PrimaryColours.RED]}{b}Your body is hardened against the might of Todd's blows, and you begin to overcome your inherent weakness{/b}{/color}"
     "You bow to master Todd before you depart, and return to your classes"
     $ quests.complete_quest("jigschool1")
     tod "Farewell my new student"

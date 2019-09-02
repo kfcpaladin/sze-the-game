@@ -78,13 +78,13 @@ init 1 python:
         msg_loss="You Gullible George, coz your friendship with him is lowered to [lee.friendship]."))
 
     # mox
-    mox.description = "The {color=[colour.red]}{b}dictator{/b}{/color} of this 1984 dystopian knightmare of a school, and is willing to kill anyone who stands between her and Michael Kirby."
+    mox.description = "The {color=[PrimaryColours.RED]}{b}dictator{/b}{/color} of this 1984 dystopian knightmare of a school, and is willing to kill anyone who stands between her and Michael Kirby."
     mox.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain="Moxham has finally recognised you diligence and continued efforts to improve the school, resulting in your friendship rising to [mox.friendship]",
         msg_loss="Your friendship with Moxham dropped to [mox.friendship]. Looks like more afterschool detentions, suspensions or worse."))
 
     # pra
-    pra.description = "He is a master of economics, and potentially figurehead for your infiltration of the {color=[colour.red]}{b}S.R.C.{/b}{/color}"
+    pra.description = "He is a master of economics, and potentially figurehead for your infiltration of the {color=[PrimaryColours.RED]}{b}S.R.C.{/b}{/color}"
     pra.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain="If you continue this way, maybe Dynamite Black might mention you in a future song, as friendship with Pragash is currently at [pra.friendship]",
         msg_loss="You weren't very cricket to Pragash, reducing your friendship with him to [pra.friendship]"))
@@ -96,7 +96,7 @@ init 1 python:
         msg_loss="Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rin.friendship]"))
 
     # roy
-    roy.description = "Has the ability to generate a {color=[colour.green]}{b}plume of toxic gases{/b}{/color} that is capable of wiping out everyone in the school..."
+    roy.description = "Has the ability to generate a {color=[PrimaryColours.GREEN]}{b}plume of toxic gases{/b}{/color} that is capable of wiping out everyone in the school..."
     roy.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain="You improved your friendship with Roy, it is now at [roy.friendship]. You might be safe from his gas attacks, for now.",
         msg_loss="Your friendship with Roy dropped to [roy.friendship]. It is strongly advised that you immediately evacuate the room."))
@@ -114,21 +114,21 @@ init 1 python:
         msg_loss=None))
 
     # tod
-    tod.description = "An alien from outer space who for some reason is dresses as a {color=[colour.green]}{b}leprechaun{/b}{/color}. He/it is skilled in the latest form of alien martial arts, and perhaps could help you defeat your opponent [kok.name] once and forever..."
+    tod.description = "An alien from outer space who for some reason is dresses as a {color=[PrimaryColours.GREEN]}{b}leprechaun{/b}{/color}. He/it is skilled in the latest form of alien martial arts, and perhaps could help you defeat your opponent [kok.name] once and forever..."
     tod.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain="You new alien karate master has gained some respect for your {b}tenacity and courage{/b}. You are currently at [tod.friendship] friendship with {i}him/it?{/i}",
-        msg_loss="Your cowardice and pitiful attitude has disappointed your master, making your friendship drop to [tod.friendship]. His palms, armed with a {color=[colour.red]}{b}life sucking organ{/b}{/color} begins to move towards you."))
+        msg_loss="Your cowardice and pitiful attitude has disappointed your master, making your friendship drop to [tod.friendship]. His palms, armed with a {color=[PrimaryColours.RED]}{b}life sucking organ{/b}{/color} begins to move towards you."))
 
     # web
 
     # wil
-    wil.description = "He is an asian kid that you found under the gutters and adopted. Now he plans to restart the {color=[colour.red]}{b}fourth Reich{/b}{/color}, perhaps eliminating you if it is required for his eugenics program..."
+    wil.description = "He is an asian kid that you found under the gutters and adopted. Now he plans to restart the {color=[PrimaryColours.RED]}{b}fourth Reich{/b}{/color}, perhaps eliminating you if it is required for his eugenics program..."
     wil.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain="You have further proved to Yang that you belong in his 4th Reich, friendship is currently at [wil.friendship]",
         msg_loss="Ur a fcktard and will, at this rate, fail Yang's eugenics program. Friendship with him is currently at [wil.friendship]"))
 
     # wiy
-    wiy.description = "[wiy.name] suffers from multi-peronality disorder, which causes him to fluctuate between {s}good{/s}less evil and {color=[colour.red]}{b}pure evil{/b}{/color}"
+    wiy.description = "[wiy.name] suffers from multi-peronality disorder, which causes him to fluctuate between {s}good{/s}less evil and {color=[PrimaryColours.RED]}{b}pure evil{/b}{/color}"
     wiy.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain=None,
         msg_loss=None))

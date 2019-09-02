@@ -25,7 +25,7 @@ init python:
         popups.add(Popup(
             message="Unlocked item\n{0}".format(item.name),
             icon=item.icon,
-            colour=colour.rainbow
+            colour=themes.default.rainbow
         ))
 
     # unlock dildo
@@ -60,7 +60,7 @@ init python:
         popups.add(Popup(
             message="Unlocked developer mode",
             icon=loadImage("icon_rina.png"),
-            colour=colour.rainbow
+            colour=themes.default.rainbow
         ))
         config.developer = True
         game.diaryIntro = True

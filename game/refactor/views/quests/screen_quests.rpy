@@ -1,14 +1,14 @@
 # make a quest list
-screen quest_screen(controller, rect):
+screen quest_screen(controller, rect, theme):
     $ select_rect = rect.resize_from_top_left(height=40).add_offset(Vector2D(0, -50))
     $ info_rect = rect.resize_from_top_left(height=415)
     $ description_rect = rect.resize_from_bottom_left(height=100).add_offset(-Vector2D(0, 100))
 
-    use quest_select(controller, select_rect)
-    use quest_info(controller, info_rect)
-    use quest_description(controller, description_rect)
+    use quest_select(controller, select_rect, theme)
+    use quest_info(controller, info_rect, theme)
+    use quest_description(controller, description_rect, theme)
 
-screen quest_select(controller, rect):
+screen quest_select(controller, rect, theme):
     hbox:
         xoffset rect.left
         yoffset rect.top
@@ -21,7 +21,7 @@ screen quest_select(controller, rect):
             textbutton unicode.title("Completed") action [Function(controller.select_completed)]
 
 # Quest info
-screen quest_info(controller, rect):
+screen quest_info(controller, rect, theme):
     vbox:
         xoffset rect.left
         yoffset rect.top
@@ -41,24 +41,18 @@ screen quest_info(controller, rect):
                         xsize rect.width-25
                         ysize rect.height 
                         for quest in controller.quests:
-                            use quest_entry(controller, quest, rect)
+                            use quest_entry(controller, quest, rect, theme)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No quests are currently {0}".format("<<>>")
 
 # Quest entry
-screen quest_entry(controller, quest, rect):
+screen quest_entry(controller, quest, rect, theme):
     default iconSize = 105
     frame:
         style "quest_entry"
         xsize rect.width-25
-        if quest.is_complete:
-            background Solid(colour.green)
-        elif quest.is_unlocked:
-            background Solid(colour.yellow)
-        else:
-            background Solid(colour.red)
-
+        background Solid(controller.get_quest_colour(quest, theme))
         hbox:
             ysize iconSize
             spacing 5
@@ -79,8 +73,7 @@ screen quest_entry(controller, quest, rect):
                     
 
 # Longer description
-screen quest_description(controller, rect):
-    $ quest = controller.quest
+screen quest_description(controller, rect, theme):
     vbox:
         xoffset rect.left
         yoffset rect.top 
@@ -88,6 +81,7 @@ screen quest_description(controller, rect):
             xsize rect.width 
             ymaximum rect.height 
             has vbox    
+            $ quest = controller.quest
             if quest:
                 text "{{b}}Description: {{/b}}{0}".format(quest.description)
             else:

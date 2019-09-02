@@ -21,9 +21,14 @@ screen diary_bag(controller=view_controllers.bag, inventory=inventories.bag):
     # custom positioning of attribute screen on right page
     use attribute_screen(
         view_controllers.attributes, 
-        view_controllers.right_diary_page)
+        view_controllers.right_diary_page,
+        themes.default)
     # allow bag tooltip to cover attribute screen 
-    use bag_screen(controller, inventory, Rect2D(right=590, bottom=590).add_offset(Vector2D(43, 131)))
+    use bag_screen(
+        controller, 
+        inventory, 
+        Rect2D(right=590, bottom=590).add_offset(Vector2D(43, 131)),
+        themes.default)
 
 # quests
 screen diary_quests:
@@ -34,10 +39,12 @@ screen diary_quests:
     # Show panels
     use attribute_screen(
         view_controllers.attributes,
-        view_controllers.left_diary_page)
+        view_controllers.left_diary_page,
+        themes.default)
     use quest_screen(
         view_controllers.quests,
-        view_controllers.right_diary_page)
+        view_controllers.right_diary_page,
+        themes.default)
 
 # achievements
 screen diary_achievements:
@@ -47,8 +54,12 @@ screen diary_achievements:
     use diary_title("Achievements")
     use attribute_screen(
         view_controllers.attributes,
-        view_controllers.left_diary_page)
-    use achieve_screen(view_controllers.achievements)
+        view_controllers.left_diary_page,
+        themes.default)
+    use achieve_screen(
+        view_controllers.achievements,
+        view_controllers.right_diary_page,
+        themes.default)
 
 # attribute and friend stats
 screen diary_statistics:
@@ -61,11 +72,13 @@ screen diary_statistics:
     # display info
     use attribute_screen(
         view_controllers.attributes,
-        view_controllers.left_diary_page)
+        view_controllers.left_diary_page,
+        themes.default)
     use friend_screen(
         view_controllers.friends, 
         Friend.get_all(), 
-        view_controllers.right_diary_page)
+        view_controllers.right_diary_page,
+        themes.default)
 
 # roadmap
 screen diary_roadmap:

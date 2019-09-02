@@ -31,7 +31,7 @@ screen popup_icon(controller, popup, rect):
     frame:
         xalign 0.5
         xsize rect.width 
-        background Solid(colour.white.applyAlpha(transparency))
+        background Solid(PrimaryColours.WHITE.replace_opacity(transparency))
         # draw box background
         frame:
             style "popup_icon" # use for tight icon wrap
@@ -40,9 +40,9 @@ screen popup_icon(controller, popup, rect):
             xsize rect.width 
             ysize rect.height
             if popup.colour:
-                background Solid(popup.colour.applyAlpha(transparency))
+                background Solid(popup.colour.replace_opacity(transparency))
             else:
-                background Solid(colour.maroon.applyAlpha(transparency))
+                background Solid(PrimaryColours.MAROON.replace_opacity(transparency))
             hbox:
                 xsize rect.width
                 ysize rect.height
@@ -65,7 +65,7 @@ screen popup_message(controller, popup, rect):
     frame:
         xalign 0.5
         xsize rect.width
-        background Solid(colour.white.applyAlpha(transparency))
+        background Solid(PrimaryColours.WHITE.replace_opacity(transparency))
         # draw box background
         frame:
             xalign 0.5
@@ -73,9 +73,9 @@ screen popup_message(controller, popup, rect):
             xsize rect.width-borderSize
             ysize rect.height-borderSize
             if popup.colour:
-                background Solid(popup.colour.applyAlpha(transparency))
+                background Solid(popup.colour.replace_opacity(transparency))
             else:
-                background Solid(colour.maroon.applyAlpha(transparency))
+                background Solid(PrimaryColours.MAROON.replace_opacity(transparency))
             # end bxo rendering
             vbox:
                 xsize rect.width-borderSize
@@ -94,7 +94,7 @@ screen popup_icon_frame(icon, width, transparency, default=loadImage("icon_defau
             idle Frame(icon)
         else:
             idle Frame(default)
-        background Solid(colour.white.applyAlpha(transparency))
+        background Solid(PrimaryColours.WHITE.replace_opacity(transparency))
 
 # tight wrap style
 style popup_icon:

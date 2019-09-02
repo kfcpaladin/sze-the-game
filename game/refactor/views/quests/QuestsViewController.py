@@ -14,6 +14,13 @@ class QuestsViewController:
     def quest(self):
         return self._quest
 
+    def get_quest_colour(self, quest, theme):
+        if quest.is_complete:
+            return theme.positive
+        elif quest.is_unlocked:
+            return theme.neutral
+        return theme.negative
+
     def start_quest(self, quest):
         # RenpyCallbacks.get_instance().hide_screen("achieve_screen")
         quest.start()

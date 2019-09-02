@@ -1,29 +1,33 @@
 # Achievement screen entry point and config
-screen achieve_screen(controller):
-    use achieve_select(controller)
-    use achieve_info(controller)
-    use achieve_description(controller)
+screen achieve_screen(controller, rect, theme):
+    $ select_rect = rect.resize_from_top_left(height=40).add_offset(Vector2D(0, -50))
+    $ info_rect = rect.resize_from_top_left(height=415)
+    $ description_rect = rect.resize_from_bottom_left(height=100).add_offset(-Vector2D(0, 100))
+
+    use achieve_select(controller, select_rect, theme)
+    use achieve_info(controller, info_rect, theme)
+    use achieve_description(controller, description_rect, theme)
 
 # Achievement select
-screen achieve_select(controller):
+screen achieve_select(controller, rect, theme):
     hbox:
-        xoffset 720 
-        yoffset 45
+        xoffset rect.left
+        yoffset rect.top
         frame:
-            xsize 625
-            ysize 40
-            has hbox
+            xsize rect.width
+            ysize rect.height 
+            has hbox 
             textbutton unicode.title("Hidden")    action [Function(controller.select_hidden)]
             textbutton unicode.title("Pending")   action [Function(controller.select_pending)]
             textbutton unicode.title("Completed") action [Function(controller.select_completed)]
 
 
 # Achievement info
-screen achieve_info(controller):
+screen achieve_info(controller, rect, theme):
     vbox:
-        xoffset 720 
-        yoffset 95 
-        xsize 625 
+        xoffset rect.left
+        yoffset rect.top
+        xsize rect.width
         frame:      
             has vbox    
             text "{b}" + "? Achievements" + "{/b}"
@@ -36,33 +40,28 @@ screen achieve_info(controller):
                         spacing 10
                         draggable True
                         mousewheel True
-                        xsize 600 
-                        ysize 415 
+                        xsize rect.width-25 
+                        ysize rect.height 
                         # Show each quest in the dictionary
                         for achievement in controller.achievements:
-                            use achieve_entry(controller, achievement)
+                            use achieve_entry(controller, achievement, rect, theme)
                     vbar value YScrollValue(_vpgrid_name)
             else:
                 text "No achievements"
 
 # Achievement entry
-screen achieve_entry(controller, achievement):
+screen achieve_entry(controller, achievement, rect, theme):
     default iconSize = 105
     frame:
         style "achieve_entry"
-        xsize 600 
-        if achievement.is_complete:
-            background Solid(colour.green)
-        elif not achievement.is_hidden:
-            background Solid(colour.yellow)
-        else:
-            background Solid(colour.red)
-
+        xsize rect.width 
+        background Solid(controller.get_achievement_colour(achievement, theme))
         hbox:
-            spacing 5
             ysize iconSize
+            spacing 5
             use icon_frame(achievement.icon, iconSize, iconSize, loadImage("achievement_default.png"))
             vbox:
+                ysize iconSize
                 # acheivement info
                 text "{b}" + "Achievement: {0}".format(achievement.id) + "{/b}"
                 text "{{b}}Title: {{/b}}{0}".format(achievement.title)
@@ -74,21 +73,16 @@ screen achieve_entry(controller, achievement):
                         action [Function(controller.select_achievement, achievement=achievement)]
 
 # Longer description of achievement
-screen achieve_description(controller):
+screen achieve_description(controller, rect, theme):
     vbox:
-        xoffset 720 
-        yoffset (95+470)
+        xoffset rect.left
+        yoffset rect.top 
         frame:          
-            xsize 625
-            ymaximum 100
+            xsize rect.width
+            ymaximum rect.height
             has vbox    
             $ achievement = controller.achievement
             if achievement:
                 text "{{b}}Description: {{/b}}{0}".format(achievement.description)
             else:
                 text "{b}An achievement has not been selected{/b}"
-
-
-##############################################
-style achieve_entry:  
-    ysize 40

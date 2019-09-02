@@ -24,7 +24,7 @@ screen icon_frame(icon, width, height, default=loadImage("default.png")):
     frame:
         xsize width
         ysize height
-        background Solid(colour.white)
+        background Solid(themes.default.light)
         imagebutton:
             xmaximum width
             ymaximum height

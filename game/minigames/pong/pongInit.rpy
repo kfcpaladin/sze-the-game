@@ -1,4 +1,4 @@
-init python:
+init 1 python:
     pong = Pong()
     pong.initStandard()
     pong.addPaddles({
@@ -19,4 +19,4 @@ init python:
             width = 30,
         ),
     })
-    pong.paddles["leftPaddle"].colour = colour.rainbow
+    pong.paddles["leftPaddle"].colour = themes.default.rainbow

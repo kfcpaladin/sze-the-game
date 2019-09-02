@@ -67,7 +67,7 @@ init -2 python:
         """
         def bounceUsingVector(self, paddle):
             playsfx("vpunch.ogg")
-            diff = self.pos.getSub(paddle.pos)
+            diff = self.pos - paddle.pos
             diff.y /= (paddle.height/2.0)
             diff.x /= (paddle.width/2.0)
             yThreshold = 0.8

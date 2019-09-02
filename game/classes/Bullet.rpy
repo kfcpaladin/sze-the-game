@@ -12,7 +12,7 @@ init -10 python:
             self.size = size
         
         def update(self, dt=1.0):
-            self.pos.add(self.vel.getMult(dt))
+            self.pos += self.vel * dt
 
         def checkBounds(self, bounds):
             if((self.pos.x < 0 or self.pos.x+self.size.x > bounds.x) or

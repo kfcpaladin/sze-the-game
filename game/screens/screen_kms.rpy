@@ -40,7 +40,7 @@ screen kmsGun(bullets=bullets):
         yoffset pos.y
     # gun
     $ mousePos = getMousePosition()
-    $ mousePos.add(gunSize.getMult(-1/3.0))
+    $ mousePos += gunSize * -1/3.0
     imagebutton:
         idle Frame(loadImage("kms_icon_glockNoTrigger.png"))
         xsize gunSize.x

@@ -10,6 +10,10 @@ class ColourTheme(object):
         self.warning = PrimaryColours.YELLOW
         self.error = PrimaryColours.RED
 
+        self.positive = PrimaryColours.GREEN
+        self.negative = PrimaryColours.RED
+        self.neutral = PrimaryColours.YELLOW
+
         self.background = PrimaryColours.MAROON
         
         self.dark = PrimaryColours.BLACK

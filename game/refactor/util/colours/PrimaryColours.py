@@ -11,3 +11,4 @@ class PrimaryColours(object):
     MAROON  = Color("#800000")
     BLACK   = Color("#000000")
     WHITE   = Color("#ffffff")
+    CLEAR   = Color((0,0,0,0))

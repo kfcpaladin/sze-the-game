@@ -61,7 +61,7 @@ screen kmsGun(bullets=bullets):
             use pong_object(bullet.pos.x, bullet.pos.y, bullet.size.x, bullet.size.y, icon=loadImage("icon_rina.png"))
             if bullet.checkCollide(pos, size):
                 $ szeDead = True
-        $ bullets[:] = [bullet for bullet in bullets if bullet.checkBounds(Vector(1366, 768))]
+        $ bullets[:] = [bullet for bullet in bullets if bullet.checkBounds(Vector2D(1366, 768))]
     # separate timers
     if szeDead:
         timer 0.05:

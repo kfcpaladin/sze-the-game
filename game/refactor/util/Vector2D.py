@@ -20,3 +20,6 @@ class Vector2D(object):
     
     def __div__(self, k):
         return Vector2D(self.x/k, self.y/k)
+
+    def copy(self):
+        return Vector2D(self.x, self.y)

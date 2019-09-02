@@ -15,7 +15,7 @@ init -2 python:
         """
         def __init__(self, **kwargs):
             self.__default__(**kwargs)
-            self.initialPos = self.pos.getCopy()
+            self.initialPos = self.pos.copy()
 
         def __default__(self, **kwargs):
             defaultOptions = {
@@ -127,7 +127,7 @@ init -2 python:
             self.bounce()
 
         def reset(self):
-            self.pos = self.initialPos.getCopy()
+            self.pos = self.initialPos.copy()
             self.move()
 
         """

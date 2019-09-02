@@ -1,5 +1,7 @@
 # creates a bullet projectile
 init -10 python:
+    from refactor.util import Vector2D
+
     class Bullet:
         def __init__(self, pos=Vector2D(0, 0), vel=Vector2D(0, 0), size=Vector2D(10, 10)):
             self.create(pos, vel, size)

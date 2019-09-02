@@ -107,7 +107,7 @@ label schoolday1:
             mox "Ahhh how true that is"
             $ sze.fort += 2
             "You feel a strong temptation to jig your first day of school"
-            $ quest.unlock_quest("jigschool1")
+            $ quests.unlock_quest("jigschool1")
         hide moxham happy
         # rollcall
         "3 hours later"

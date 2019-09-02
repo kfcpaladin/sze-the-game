@@ -121,7 +121,7 @@ label jigschool1_todd_teach:
     "{b}Blow{/b} after {b}blow{/b} after {b}blow{/b}, your body is eviscerated and rebuilt" with vpunch
     "{color=[colour.red]}{b}Your body is hardened against the might of Todd's blows, and you begin to overcome your inherent weakness{/b}{/color}"
     "You bow to master Todd before you depart, and return to your classes"
-    $ quest.complete_quest("jigschool1")
+    $ quests.complete_quest("jigschool1")
     tod "Farewell my new student"
     "You walk back to school a new man, now gifted life where there was once none"
     jump recess1a

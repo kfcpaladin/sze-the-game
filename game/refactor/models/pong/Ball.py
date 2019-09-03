@@ -1,10 +1,11 @@
 from .Entity import Entity
 from .PongRenderer import Renderable
+from .PersistentEntity import add_persistence
 
+@add_persistence
 class Ball(Entity, Renderable):
-    def __init__(self, width, height, speed, colour):
+    def __init__(self, width, height, colour):
         Entity.__init__(self, width, height)
-        self.max_speed = speed
         self.colour = colour
 
     def render(self, renderer):

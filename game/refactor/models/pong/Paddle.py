@@ -1,8 +1,10 @@
 from .Entity import Entity
 from .PongRenderer import Renderable
 from .BounceSurface import BounceSurface, left_right_bounce
+from .PersistentEntity import add_persistence
 
-class Paddle(Entity, BounceSurface):
+@add_persistence
+class Paddle(Entity, BounceSurface, Renderable):
 
     def __init__(self, width, height, speed, colour):
         Entity.__init__(self, width, height)

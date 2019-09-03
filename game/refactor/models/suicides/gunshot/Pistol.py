@@ -11,14 +11,12 @@ class Pistol(Gun):
 
     def pull_trigger(self):
         RenpyCallbacks.get_instance().play_sfx("gunClick.ogg")
-        return
-        yield
     
     def release_trigger(self):
         RenpyCallbacks.get_instance().play_sfx("gunSound.ogg")
-        yield self.fire_bullet()
+        self.fire_bullet(self.create_bullet())
     
-    def fire_bullet(self):
+    def create_bullet(self):
         bullet = Bullet(self._round_size, self._round_size)
         bullet.position = self.position.copy()
         bullet.velocity = Vector2D(-self._bullet_velocity, 0) 

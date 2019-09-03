@@ -32,9 +32,14 @@ init python:
         right_paddle_bot = PaddleBot(ball, right_paddle, bounding_box)
 
 
+        extra_ball = Ball(width=30, height=30, speed=config.screen_width/1.5, colour=PrimaryColours.GREEN)
+        extra_ball.position = Vector2D(1366/2, 768/2)
+        extra_ball.velocity.x = extra_ball.speed
+
         pong.add(top_wall)
         pong.add(bottom_wall)
         pong.add(ball)
+        pong.add(extra_ball)
         pong.add(left_paddle)
         pong.add(right_paddle)
         pong.add(left_paddle_controls)

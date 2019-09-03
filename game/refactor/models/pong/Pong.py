@@ -1,7 +1,7 @@
 from .Surface import Surface
 from .Ball import Ball
 from .PongRenderer import Renderable
-from .PaddleControls import PaddleControls
+from .Controls import Controls
 from .Entity import Entity
 
 class Pong(object):
@@ -60,7 +60,7 @@ class Pong(object):
             self._balls.append(entity)
         if isinstance(entity, Renderable):
             self._renderables.append(entity)
-        if isinstance(entity, PaddleControls):
+        if isinstance(entity, Controls):
             self._controls.append(entity)
     
     def render(self, renderer):

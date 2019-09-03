@@ -25,11 +25,12 @@ init python:
 
         left_paddle = Paddle(width=40, height=150, speed=500, colour=PrimaryColours.WHITE)
         left_paddle.position = Vector2D(padding, 768/2 - left_paddle.height/2)
+        left_paddle_controls = PaddleControls(left_paddle, up_key=pygame.K_UP, down_key=pygame.K_DOWN)
 
         right_paddle = Paddle(width=40, height=150, speed=500, colour=PrimaryColours.WHITE)
         right_paddle.position = Vector2D(1366-left_paddle.width-padding, 768/2 - left_paddle.height/2)
+        right_paddle_bot = PaddleBot(ball, right_paddle, bounding_box)
 
-        left_paddle_controls = PaddleControls(left_paddle, up_key=pygame.K_UP, down_key=pygame.K_DOWN)
 
         pong.add(top_wall)
         pong.add(bottom_wall)
@@ -37,5 +38,6 @@ init python:
         pong.add(left_paddle)
         pong.add(right_paddle)
         pong.add(left_paddle_controls)
+        pong.add(right_paddle_bot)
 
         return pong

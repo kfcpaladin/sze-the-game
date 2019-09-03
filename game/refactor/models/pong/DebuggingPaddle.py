@@ -1,44 +1,24 @@
-from .Entity import Entity
 from .PongRenderer import Renderable
-from .BounceSurface import BounceSurface
-
+from .Paddle import Paddle
 from refactor.util.colours import PrimaryColours
 
-class DebuggingPaddle(Entity, BounceSurface, Renderable):
+class DebuggingPaddle(Paddle):
 
-    def __init__(self, width, height, speed):
-        Entity.__init__(self, width, height)
-        self.max_speed = speed
-        self.colour = PrimaryColours.WHITE
+    def __init__(self, width, height, speed, colour):
+        Paddle.__init__(self, width, height, speed, colour)
     
-    # up and down is inverted (origin is top-left)
-    def move_up(self):
-        self.velocity.y = -self.max_speed.y
-        self.velocity.x = 0
-    
-    def move_down(self):
-        self.velocity.y = +self.max_speed.y
-        self.velocity.x = 0
-
-    def render(self, renderer):
-        return renderer.render_paddle(self)
-
-    def bounce(self, ball):
-        if not self.check_collision(ball):
-            self.colour = PrimaryColours.WHITE
-            return False
+    def bounce(self, entity):
+        if not self.check_collision(entity):
+            return
 
         # bounce right
-        if ball.rect.left > self.rect.left:
-            ball.position.x = self.rect.right
-            ball.velocity.x = abs(ball.velocity.x)
+        if entity.velocity.x < 0:
+            entity.velocity.x = abs(entity.velocity.x)
+            entity.position.x = self.rect.right
             self.colour = PrimaryColours.RED
-            return True
-        elif ball.rect.left < self.rect.left:
-            ball.position.x = self.position.x - ball.rect.width
-            ball.velocity.x = -abs(ball.velocity.x)
-            self.colour = PrimaryColours.GREEN
-            return True
 
-        self.colour = PrimaryColours.YELLOW 
-        return False 
+        # bounce left
+        elif entity.velocity.x > 0:
+            entity.velocity.x = -abs(entity.velocity.x)
+            entity.position.x = self.rect.left - entity.width  
+            self.colour = PrimaryColours.GREEN

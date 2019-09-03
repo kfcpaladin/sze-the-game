@@ -1,4 +1,4 @@
-from .BounceSurface import BounceSurface
+from .Surface import Surface
 from .Ball import Ball
 from .PongRenderer import Renderable
 from .PaddleControls import PaddleControls
@@ -43,7 +43,7 @@ class Pong(object):
     def update(self, dt):
         self._update_controls()
         self._update_entities(dt)
-        self._check_bounces()
+        self._check_collision()
         self._check_balls_scored()
         
 
@@ -54,7 +54,7 @@ class Pong(object):
         if isinstance(entity, Entity):
             entity.store()
             self._entities.append(entity)
-        if isinstance(entity, BounceSurface):
+        if isinstance(entity, Surface):
             self._surfaces.append(entity)
         if isinstance(entity, Ball):
             self._balls.append(entity)
@@ -79,12 +79,12 @@ class Pong(object):
         for entity in self._entities:
             entity.update(dt)
     
-    def _check_bounces(self):
-        for ball in self._balls:
+    def _check_collision(self):
+        for entity in self._entities:
             for surface in self._surfaces:
-                if ball is surface:
+                if entity is surface:
                     continue
-                surface.bounce(ball)
+                surface.on_collision(entity)
     
     def _check_balls_scored(self):
         for ball in self._balls:

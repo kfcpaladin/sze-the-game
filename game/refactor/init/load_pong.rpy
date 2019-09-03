@@ -13,18 +13,26 @@ init python:
 
         pong = Pong(bounding_box)
 
+
+        top_wall = Wall(width=bounding_box.width, height=100)
+        top_wall.position.y = -100
+        bottom_wall = Wall(width=bounding_box.width, height=100)
+        bottom_wall.position.y = bounding_box.bottom
+
         ball = Ball(width=30, height=30, colour=PrimaryColours.WHITE)
         ball.position = Vector2D(1366/2, 768/2)
-        ball.velocity.x = config.screen_width/1.5
+        ball.velocity = Vector2D(-config.screen_width/1.5, -400)
 
-        left_paddle = Paddle(width=40, height=150, speed=50, colour=PrimaryColours.WHITE)
+        left_paddle = Paddle(width=40, height=150, speed=500, colour=PrimaryColours.WHITE)
         left_paddle.position = Vector2D(padding, 768/2 - left_paddle.height/2)
 
-        right_paddle = Paddle(width=40, height=150, speed=50, colour=PrimaryColours.WHITE)
+        right_paddle = Paddle(width=40, height=150, speed=500, colour=PrimaryColours.WHITE)
         right_paddle.position = Vector2D(1366-left_paddle.width-padding, 768/2 - left_paddle.height/2)
 
         left_paddle_controls = PaddleControls(left_paddle, up_key=pygame.K_UP, down_key=pygame.K_DOWN)
 
+        pong.add(top_wall)
+        pong.add(bottom_wall)
         pong.add(ball)
         pong.add(left_paddle)
         pong.add(right_paddle)

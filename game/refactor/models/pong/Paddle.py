@@ -1,13 +1,10 @@
-from .Entity import Entity
 from .PongRenderer import Renderable
-from .BounceSurface import BounceSurface, left_right_bounce
-from .PersistentEntity import add_persistence
+from .Wall import Wall
 
-@add_persistence
-class Paddle(Entity, BounceSurface, Renderable):
+class Paddle(Wall, Renderable):
 
     def __init__(self, width, height, speed, colour):
-        Entity.__init__(self, width, height)
+        Wall.__init__(self, width, height)
         self.max_speed = speed
         self.colour = colour
     
@@ -24,9 +21,15 @@ class Paddle(Entity, BounceSurface, Renderable):
     def render(self, renderer):
         return renderer.render_paddle(self)
 
-    def bounce(self, ball):
-        return left_right_bounce(self, ball)
+    def on_collision(self, entity):
+        if not self.check_collision(entity):
+            return       
 
-            
-            
-
+        # bounce right
+        if entity.velocity.x < 0:
+            entity.velocity.x = abs(entity.velocity.x)
+            entity.position.x = self.rect.right
+        # bounce left
+        elif entity.velocity.x > 0:
+            entity.velocity.x = -abs(entity.velocity.x)
+            entity.position.x = self.rect.left - entity.width  

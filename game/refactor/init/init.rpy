@@ -11,6 +11,8 @@ default view_controllers.friends = create_friend_view_controller()
 default view_controllers.left_diary_page = create_left_diary_page()
 default view_controllers.right_diary_page = create_right_diary_page()
 
+default view_controllers.suicides.gunshot = create_gunshot_suicide_view_controller()
+
 init python:
     game = load_property_store()
     clock = load_clock()

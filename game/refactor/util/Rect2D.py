@@ -69,3 +69,14 @@ class Rect2D:
     def height(self):
         return self.bottom - self.top
     
+    def check_overlap(self, other):
+        if self.left > other.right:
+            return False
+        if self.right < other.left:
+            return False 
+        if self.top > other.bottom:
+            return False
+        if self.bottom < other.top:
+            return False
+        return True
+    

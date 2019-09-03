@@ -1,6 +1,10 @@
 from .Pong import Pong
-from .Wall import Wall
+from .PongRenderer import PongRenderer
+
+from .Ball import Ball
+
 from .Paddle import Paddle
 from .DebuggingPaddle import DebuggingPaddle
-from .Ball import Ball
-from .PongRenderer import PongRenderer
+from .PaddleControls import PaddleControls
+
+from .Wall import Wall

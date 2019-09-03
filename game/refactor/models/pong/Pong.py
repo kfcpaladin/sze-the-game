@@ -1,6 +1,7 @@
 from .BounceSurface import BounceSurface
 from .Ball import Ball
 from .PongRenderer import Renderable
+from .PaddleControls import PaddleControls
 from .Entity import Entity
 
 class Pong(object):
@@ -9,6 +10,7 @@ class Pong(object):
         self._balls = []
         self._entities = []
         self._renderables = []
+        self._controls = []
 
         self._bounding_box = bounding_box
         self._is_ended = False
@@ -39,22 +41,11 @@ class Pong(object):
         self._is_ended = False
 
     def update(self, dt):
-        for entity in self._entities:
-            entity.update(dt)
-        # bounce 
-        for ball in self._balls:
-            for surface in self._surfaces:
-                if ball is surface:
-                    continue
-                surface.bounce(ball)
-        # track score 
-        for ball in self._balls:
-            if ball.rect.left < self._bounding_box.left:
-                self._right_score += 1
-                ball.load()
-            elif ball.rect.right > self._bounding_box.right:
-                self._left_score += 1
-                ball.load()
+        self._update_controls()
+        self._update_entities(dt)
+        self._check_bounces()
+        self._check_balls_scored()
+        
 
     def end(self):
         self._is_ended = True
@@ -69,13 +60,38 @@ class Pong(object):
             self._balls.append(entity)
         if isinstance(entity, Renderable):
             self._renderables.append(entity)
-        
-    def _reset_entities(self):
-        for entity in self._entities:
-            entity.load()
+        if isinstance(entity, PaddleControls):
+            self._controls.append(entity)
     
     def render(self, renderer):
         for renderable in self._renderables:
             renderable.render(renderer)
 
-        
+    def _reset_entities(self):
+        for entity in self._entities:
+            entity.load()
+    
+    def _update_controls(self):
+        for control in self._controls:
+            control.update()
+
+    def _update_entities(self, dt):
+        for entity in self._entities:
+            entity.update(dt)
+    
+    def _check_bounces(self):
+        for ball in self._balls:
+            for surface in self._surfaces:
+                if ball is surface:
+                    continue
+                surface.bounce(ball)
+    
+    def _check_balls_scored(self):
+        for ball in self._balls:
+            if ball.rect.left < self._bounding_box.left:
+                self._right_score += 1
+                ball.load()
+            elif ball.rect.right > self._bounding_box.right:
+                self._left_score += 1
+                ball.load()
+

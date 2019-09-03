@@ -13,12 +13,13 @@ class Paddle(Entity, BounceSurface, Renderable):
     
     # up and down is inverted (origin is top-left)
     def move_up(self):
-        self.velocity.y = -self.max_speed.y
-        self.velocity.x = 0
+        self.velocity.y = -self.max_speed
     
     def move_down(self):
-        self.velocity.y = +self.max_speed.y
-        self.velocity.x = 0
+        self.velocity.y = +self.max_speed
+    
+    def stop(self):
+        self.velocity.y = 0
 
     def render(self, renderer):
         return renderer.render_paddle(self)

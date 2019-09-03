@@ -30,11 +30,11 @@ init -1 python:
         return Rect2D(right=625, bottom=570).add_offset(Vector2D(720, 95))
     
     def create_gunshot_suicide_view_controller():
-        from refactor.models.suicides.gunshot import GunshotSuicide, Gun, Head
-        gun = Gun(
+        from refactor.models.suicides.gunshot import GunshotSuicide, Pistol, Head
+        pistol = Pistol(
             width=200,
             height=150,
-            bullet_velocity=50,
+            bullet_velocity=config.screen_width/0.5,
             round_size=20)
         
         head = Head(width=200, height=300)
@@ -42,7 +42,7 @@ init -1 python:
 
         bounding_box = Rect2D(right=config.screen_width, bottom=config.screen_height)
 
-        gunshot_suicide = GunshotSuicide(bounding_box, head, gun)
+        gunshot_suicide = GunshotSuicide(bounding_box, head, pistol)
 
         controller = GunshotSuicideViewController(gunshot_suicide)
 

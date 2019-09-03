@@ -10,6 +10,7 @@
 init -1 python hide:
     ## config.developer conflicts with travis autotest, so disable when pushing for long term
     # config.developer = True
+    config.log = "dev_log.log"
 
     ## These control the width and height of the screen.
     config.screen_width = 1366

@@ -9,7 +9,7 @@ class GunshotSuicide(object):
         self._has_died = False
 
     def reset(self):
-        self._bullets.clear()
+        self._bullets = []
         self._has_died = False
 
     @property
@@ -20,11 +20,14 @@ class GunshotSuicide(object):
     def bullets(self):
         return self._bullets
 
-    def fire_gun(self):
-        if self.has_died:
-            return 
-        bullet = self._gun.fire_bullet()
-        self._bullets.append(bullet)
+    def pull_trigger(self):
+        self._on_gun_fire(self._gun.pull_trigger)
+
+    def release_trigger(self):
+        self._on_gun_fire(self._gun.release_trigger)
+
+    def move_gun(self, position):
+        self._gun.position = position.copy()
     
     def update(self, dt):
         for bullet in self._bullets:
@@ -40,8 +43,12 @@ class GunshotSuicide(object):
 
         self._gun.render(renderer)
         self._head.render(renderer)
+    
+    def _on_gun_fire(self, gen):
+        for bullet in gen():
+            self._bullets.append(bullet)
 
     def _on_hit(self):
-        self._bullets.clear()
+        self._bullets = []
         self._has_died = True
     

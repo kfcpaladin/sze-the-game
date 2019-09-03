@@ -1,18 +1,20 @@
 from refactor.util.gametools import Entity, Renderable, Vector2D
-from .Bullet import Bullet
+from abc import abstractmethod
 
 class Gun(Entity, Renderable):
-    def __init__(self, width, height, bullet_velocity, round_size):
+    def __init__(self, width, height):
         Entity.__init__(self, width, height)
-        self._bullet_velocity = bullet_velocity
-        self._round_size = round_size
-    
-    def fire_bullet(self):
-        bullet = Bullet(self._round_size, self._round_size)
-        bullet.position = self.position.copy()
-        bullet.velocity = Vector2D(-self._bullet_velocity, 0) 
 
-        return bullet
-    
+    @abstractmethod
+    def pull_trigger(self):
+        return
+        yield
+
+    @abstractmethod 
+    def release_trigger(self):
+        return
+        yield
+
+    @abstractmethod 
     def render(self, renderer):
-        return renderer.render_gun(self)
+        pass

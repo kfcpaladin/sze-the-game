@@ -4,23 +4,26 @@ init 1 python:
 init python:
     def load_basic_pong_game():
         from refactor.models.pong import *
-        from refactor.util import Vector2D
+        from refactor.util import Vector2D, Rect2D
         from refactor.util.colours import PrimaryColours
 
-        pong = Pong()
+        bounding_box = Rect2D(right=config.screen_width, bottom=config.screen_height)
+        padding = 20
 
-        ball = Ball(width=15, height=15, colour=PrimaryColours.WHITE)
+        pong = Pong(bounding_box)
+
+        ball = Ball(width=30, height=30, colour=PrimaryColours.WHITE)
         ball.position = Vector2D(1366/2, 768/2)
-        ball.velocity.x = 200
+        ball.velocity.x = config.screen_width/1.5
 
-        left_paddle = Paddle(width=20, height=200, speed=50, colour=PrimaryColours.WHITE)
-        left_paddle.position = Vector2D(20, 768/2 - left_paddle.height/2)
+        left_paddle = Paddle(width=40, height=150, speed=50, colour=PrimaryColours.WHITE)
+        left_paddle.position = Vector2D(padding, 768/2 - left_paddle.height/2)
 
-        right_paddle = Paddle(width=200, height=200, speed=50, colour=PrimaryColours.WHITE)
-        right_paddle.position = Vector2D(1366/2 + 50, 768/2 - left_paddle.height/2)
+        right_paddle = Paddle(width=40, height=150, speed=50, colour=PrimaryColours.WHITE)
+        right_paddle.position = Vector2D(1366-left_paddle.width-padding, 768/2 - left_paddle.height/2)
 
         pong.add(ball)
         pong.add(left_paddle)
-        pong.add(right_paddle)
+        # pong.add(right_paddle)
 
         return pong

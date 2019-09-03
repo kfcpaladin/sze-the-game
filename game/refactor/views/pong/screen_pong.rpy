@@ -8,7 +8,8 @@ label playPong(pong=pong):
         "Play pong":
             $ _previousMusic = getMusicHistory(-1)
             $ playmusic("VarienThroneOfRavens.ogg")
-            call screen_pong(pong)
+            $ controller = PongViewController(pong)
+            call screen_pong(controller)
             $ stopmusic()
             $ _score = _return["score"]
             $ _surrender = _return["surrender"]
@@ -40,10 +41,10 @@ label playPong(pong=pong):
             return
 
 # run the pong game
-label screen_pong(pong):
+label screen_pong(controller):
     hide screen float_menu
     python:
-        ui.add(pong)
+        ui.add(controller)
         score = ui.interact()
     show screen float_menu
     return score

@@ -1,5 +1,4 @@
-from refactor.util.gametools import Entity, Persistent
-from .PongRenderer import Renderable
+from refactor.util.gametools import Entity, Persistent, Renderable
 
 import random
 

@@ -1,4 +1,3 @@
-from .PongRenderer import Renderable
 from .Paddle import Paddle
 from refactor.util.colours import PrimaryColours
 

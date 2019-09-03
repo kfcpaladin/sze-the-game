@@ -1,7 +1,6 @@
-from .PongRenderer import Renderable
 from .Wall import Wall
 from .Ball import Ball
-from refactor.util.gametools import Persistent
+from refactor.util.gametools import Persistent, Renderable
 
 import math
 

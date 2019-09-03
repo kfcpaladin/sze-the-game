@@ -1,6 +1,5 @@
-from refactor.util.gametools import Entity, Surface, Persistent, Controls
+from refactor.util.gametools import Entity, Surface, Persistent, Controls, Renderable
 from .Ball import Ball
-from .PongRenderer import Renderable
 
 class Pong(object):
     def __init__(self, bounding_box):

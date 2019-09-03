@@ -1,5 +1,5 @@
 from refactor.util import RenpyCallbacks
-from refactor.util import Rect2D
+from refactor.util.gametools import Rect2D
 
 class BagViewController(object):
     def __init__(self, total_rows, total_columns):

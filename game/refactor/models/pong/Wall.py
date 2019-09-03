@@ -1,9 +1,18 @@
-from .Entity import Entity
-from .Surface import Surface
+from refactor.util.gametools import Entity, Surface, Persistent
 
-class Wall(Entity, Surface):
+class Wall(Entity, Persistent, Surface):
     def __init__(self, width, height):
         Entity.__init__(self, width, height)
+        self.store()
+    
+    def store(self):
+        self._initial_pos = self.position.copy()
+        self._initial_velocity = self.velocity.copy()
+    
+    def load(self):
+        self.position = self._initial_pos.copy()
+        self.velocity = self._initial_velocity.copy()
+
 
     def on_collision(self, entity):
         if not self.check_collision(entity):

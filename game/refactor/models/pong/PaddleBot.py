@@ -1,4 +1,4 @@
-from .Controls import Controls
+from refactor.util.gametools import Controls
 
 class PaddleBot(Controls):
     def __init__(self, ball, paddle, bounds, skill=1):

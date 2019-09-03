@@ -1,5 +1,5 @@
 import pygame
-from .Controls import Controls
+from refactor.util.gametools import Controls
 
 from refactor.util.colours import PrimaryColours
 

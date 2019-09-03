@@ -1,7 +1,7 @@
-from refactor.util import Vector2D, Rect2D
-from .Persistent import Persistent
+from .Vector2D import Vector2D
+from .Rect2D import Rect2D
 
-class Entity(Persistent):
+class Entity(object):
     def __init__(self, width, height):
         self._width = width
         self._height = height
@@ -22,14 +22,6 @@ class Entity(Persistent):
     @property
     def rect(self):
         return Rect2D(right=self.width, bottom=self.height).add_offset(self.position)
-
-    def store(self):
-        self._initial_pos = self.position.copy()
-        self._initial_vel = self.velocity.copy()
-    
-    def load(self):
-        self.position = self._initial_pos.copy()
-        self.velocity = self._initial_vel.copy()
 
     def check_collision(self, other):
         return self.rect.check_overlap(other.rect) 

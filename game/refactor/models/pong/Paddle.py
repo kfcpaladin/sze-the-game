@@ -1,16 +1,26 @@
 from .PongRenderer import Renderable
 from .Wall import Wall
 from .Ball import Ball
+from refactor.util.gametools import Persistent
 
 import math
 
-class Paddle(Wall, Renderable):
+class Paddle(Wall, Persistent, Renderable):
 
     def __init__(self, width, height, speed, colour):
         Wall.__init__(self, width, height)
         self.max_speed = speed
         self.colour = colour
+        self.store()
+
+    def store(self):
+        self._initial_pos = self.position.copy()
+        self._initial_vel = self.velocity.copy()
     
+    def load(self):
+        self.position = self._initial_pos.copy()
+        self.velocity = self._initial_vel.copy()
+
     # up and down is inverted (origin is top-left)
     def move_up(self):
         self.velocity.y = -self.max_speed

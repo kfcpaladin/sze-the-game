@@ -1,16 +1,15 @@
-from .Surface import Surface
+from refactor.util.gametools import Entity, Surface, Persistent, Controls
 from .Ball import Ball
 from .PongRenderer import Renderable
-from .Controls import Controls
-from .Entity import Entity
 
 class Pong(object):
     def __init__(self, bounding_box):
         self._surfaces = []
-        self._balls = []
         self._entities = []
         self._renderables = []
         self._controls = []
+        self._persistent = []
+        self._balls = []
 
         self._bounding_box = bounding_box
         self._is_ended = False
@@ -52,8 +51,10 @@ class Pong(object):
 
     def add(self, entity):
         if isinstance(entity, Entity):
-            entity.store()
             self._entities.append(entity)
+        if isinstance(entity, Persistent):
+            entity.store()
+            self._persistent.append(entity)
         if isinstance(entity, Surface):
             self._surfaces.append(entity)
         if isinstance(entity, Ball):
@@ -68,7 +69,7 @@ class Pong(object):
             renderable.render(renderer)
 
     def _reset_entities(self):
-        for entity in self._entities:
+        for entity in self._persistent:
             entity.load()
     
     def _update_controls(self):

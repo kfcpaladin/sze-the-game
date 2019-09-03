@@ -21,7 +21,7 @@ init -5 python:
     from refactor.util import RenpyCallbacks
     from refactor.util import PropertyStore
     from refactor.util import ObservableProperty
-    from refactor.util import Vector2D
+    from refactor.util.gametools import Vector2D
 
     class ConcreteRenpyCallbacks(RenpyCallbacks):
         def __init__(self):

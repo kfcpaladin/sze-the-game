@@ -4,7 +4,7 @@ init 1 python:
 init python:
     def load_basic_pong_game():
         from refactor.models.pong import *
-        from refactor.util import Vector2D, Rect2D
+        from refactor.util.gametools import Vector2D, Rect2D
         from refactor.util.colours import PrimaryColours
         import pygame
 

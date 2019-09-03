@@ -20,6 +20,10 @@ class Rect2D:
         left = self.left + (x * self.width)
 
         return Vector2D(x=left, y=top)
+
+    @property 
+    def centre(self):
+        return self.get_relative_centre(0.5, 0.5)
     
     def resize_from_relative_centre(self, x, y, width=None, height=None):
         if width is None:

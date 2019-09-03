@@ -19,9 +19,9 @@ init python:
         bottom_wall = Wall(width=bounding_box.width, height=100)
         bottom_wall.position.y = bounding_box.bottom
 
-        ball = Ball(width=30, height=30, colour=PrimaryColours.WHITE)
+        ball = Ball(width=30, height=30, speed=config.screen_width/1.5, colour=PrimaryColours.WHITE)
         ball.position = Vector2D(1366/2, 768/2)
-        ball.velocity = Vector2D(-config.screen_width/1.5, -400)
+        ball.velocity.x = ball.speed
 
         left_paddle = Paddle(width=40, height=150, speed=500, colour=PrimaryColours.WHITE)
         left_paddle.position = Vector2D(padding, 768/2 - left_paddle.height/2)

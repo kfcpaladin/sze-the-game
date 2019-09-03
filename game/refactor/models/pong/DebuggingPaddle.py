@@ -7,18 +7,16 @@ class DebuggingPaddle(Paddle):
     def __init__(self, width, height, speed, colour):
         Paddle.__init__(self, width, height, speed, colour)
     
-    def bounce(self, entity):
+    def on_collision(self, entity):
         if not self.check_collision(entity):
             return
 
-        # bounce right
-        if entity.velocity.x < 0:
-            entity.velocity.x = abs(entity.velocity.x)
-            entity.position.x = self.rect.right
-            self.colour = PrimaryColours.RED
+        Paddle.on_collision(self, entity)
 
-        # bounce left
+        if entity.velocity.x < 0:
+            self.colour = PrimaryColours.RED
         elif entity.velocity.x > 0:
-            entity.velocity.x = -abs(entity.velocity.x)
-            entity.position.x = self.rect.left - entity.width  
             self.colour = PrimaryColours.GREEN
+
+      
+       

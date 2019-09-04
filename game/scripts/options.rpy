@@ -28,6 +28,11 @@ init -1 python hide:
     config.name = "sze-the game"
     config.version = "0.0"
 
+    config.font_replacement_map["Montserrat.ttf", False, False] = ("assets/fonts/Montserrat-Medium.ttf", False, False) 
+    config.font_replacement_map["Montserrat.ttf", True, False] = ("assets/fonts/Montserrat-Bold.ttf", False, False) 
+    config.font_replacement_map["Montserrat.ttf", False, True] = ("assets/fonts/Montserrat-MediumItalic.ttf", False, False) 
+    config.font_replacement_map["Montserrat.ttf", True, True] = ("assets/fonts/Montserrat-SemiBoldItalic.ttf", False, False) 
+
     #########################################
     # Themes
 

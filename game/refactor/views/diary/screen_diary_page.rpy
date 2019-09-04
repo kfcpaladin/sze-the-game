@@ -1,3 +1,10 @@
+screen diary_page(title, background="screen_bg_diaryNormal.png"):
+    modal True # prevent interaction underneath
+    add loadImage(background)
+    use diary_nav
+    use diary_title(title)
+    transclude
+
 # navigation for all diary pages
 screen diary_nav:
     hbox xcenter 1366/2:

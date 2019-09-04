@@ -54,3 +54,9 @@ log.txt
 traceback.txt
 persistent
 .directory
+.vscode/
+*.log
+error.txt
+errors.txt
+
+/game/saves/

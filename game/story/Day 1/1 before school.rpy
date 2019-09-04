@@ -2,7 +2,7 @@ label schoolday1:
     $ autosave()
     scene bg school
     with fade
-    $ game.setTime("morning")
+    $ clock.set_time("morning")
     "Wednesday Morning"
     sze "I arrived at school 3 hours early to show my dedication to the system"
     sze "Well, more so because I didn't know what else to do, as I couldn't fall asleep after that weird dream"
@@ -44,7 +44,7 @@ label schoolday1:
         "Oh shit, the Principal..."
         mox "\"Wow, you are a good Fortian\""
         mox "\"I don't know who you are but, you are like next Michael Kirby, greatest of Fortians\""
-        $ sze.gain("fort")
+        $ sze.fort += 1
         mox "\"As a reward, I shall give you this experimental new Fort Street Diary prototype mk.1.RBY.\""
         mox "\"Among its features, it records your subjects, the progress of your interpersonal relationships and academic studies\""
         mox "\"All in a non-invasive system, designed to allow the school to monitor your life, and allows for early intervention with problem students\""
@@ -68,15 +68,15 @@ label schoolday1:
             "Nevermind..."
             $ game.hasDiary = True
             "You notice the bookmark string thingy is labelled with \"kms\""
-            "As you graze the side of it, your skin tears open spilling {color=[colour.red]}{b}blood{/b}{/color} onto the pages"
-            $ achievements.unlockAchievement("unlockSuicide")
+            "As you graze the side of it, your skin tears open spilling {color=[PrimaryColours.RED]}{b}blood{/b}{/color} onto the pages"
+            $ achievements.unlock_achievement("unlockSuicide")
             sze "\"How come I can kill myself with this diary\""
             mox "\"Its a new feature that students will want after they start the {b}HSC{/b}\""
             sze "\"How do I use this thing?\""
             mox "\"Here let me show you\""
-            $ renpy.show_screen(diary.getCurrentPage()) 
+            $ diary.open() 
             mox "\"Use the navigation buttons above to select a page, and press \"Close\" to exit it\""
-            $ achievements.unlockAchievement("unlockDiary")
+            $ achievements.unlock_achievement("unlockDiary")
             hide screen float_menu
             show screen float_menu
             mox "\"Click on \"Open diary\" to open the diary again\""
@@ -98,16 +98,16 @@ label schoolday1:
             mox "\"Oh sorry what {b}were{/b} you saying again?\""
             "You walk off as [mox.name] lectures a new group of students"
         # jig school quest
-        if "jigschool1" in quests.unavailable:
-            sze "This school kinda {color=[colour.red]}{b}sucks{/b}{/color}"
-            $ sze.loss("fort")
+        if not quests.is_quest_unlocked("jigschool1"):
+            sze "This school kinda {color=[PrimaryColours.RED]}{b}sucks{/b}{/color}"
+            $ sze.fort -= 1
             mox "What you just {b}say{/b} young man {b}!!!{/b}"
             sze "I said Michael Kirby is the epitome of social justice"
             "Your lie does not sound very convincing"
             mox "Ahhh how true that is"
-            $ sze.gain("fort", 2)
+            $ sze.fort += 2
             "You feel a strong temptation to jig your first day of school"
-            $ quests.unlockQuest("jigschool1")
+            $ quests.unlock_quest("jigschool1")
         hide moxham happy
         # rollcall
         "3 hours later"

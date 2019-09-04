@@ -5,19 +5,19 @@ init python:
         {
             "name": "dead",
             "jump": "start",
-            "colour": colour.black,
+            "colour": PrimaryColours.BLACK,
             "pos": (4.5, -3.75),
         },
         {
             "name": "deadrestart",
             "jump": "start",
-            "colour": colour.black,
+            "colour": PrimaryColours.BLACK,
             "pos": (4, -3.75),
         },
         {
             "name": "actualdead",
             "jump": None,
-            "colour": colour.black,
+            "colour": PrimaryColours.BLACK,
             "pos": (3.5, -3.75),
         },
     ])
@@ -27,7 +27,7 @@ init python:
         {
             "name": "start",
             "jump": "schoolday1",
-            "colour": colour.purple,
+            "colour": PrimaryColours.PURPLE,
             "pos": (2, -3.75),
         },
     ])

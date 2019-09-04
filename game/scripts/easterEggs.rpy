@@ -15,24 +15,22 @@ init python:
                 if type(total) not in (int, float):
                     continue
                 break
-        if(total >= 0):
-            friend.gain("friendship", total)
-        else:
-            friend.loss("friendship", -total)
+        friend.friendship += total
 
     # add item to bag
-    def unlockItem(item, bag):
+    def unlockItem(id, bag):
+        item = items.get(id)
+        inventories.bag.add(item)
         playsfx("xbox.ogg")
-        popup({
-            "text": "Unlocked item\n{0}".format(item.name),
-            "icon": item.icon,
-            "colour": colour.rainbow,
-        })
-        bag.add(item)
+        popups.add(Popup(
+            message="Unlocked item\n{0}".format(item.name),
+            icon=item.icon,
+            colour=themes.default.rainbow
+        ))
 
     # unlock dildo
     def konamiCodeUnlock():
-        unlockItem(unlockableItems["neo armstrong"], bag)
+        unlockItem("neo armstrong", inventories.bag)
         ui.remove(konamiCode)
 
     konamiCode = CodeSequence(
@@ -45,7 +43,7 @@ init python:
 
     # unlock kirby suit
     def kirbyUnlock():
-        unlockItem(unlockableItems["god"], bag)
+        unlockItem("god", inventories.bag)
         ui.remove(kirbyCode)
 
     kirbyCode = CodeSequence(
@@ -59,19 +57,16 @@ init python:
     # unlock developer mode
     def developerUnlock():
         playsfx("xbox.ogg")
-        popup({
-            "text": "Unlocked developer mode",
-            "icon": loadImage("icon_rina.png"),
-            "colour": colour.rainbow,
-        })
+        popups.add(Popup(
+            message="Unlocked developer mode",
+            icon=loadImage("icon_rina.png"),
+            colour=themes.default.rainbow
+        ))
         config.developer = True
         game.diaryIntro = True
         game.hasDiary = True
-        if "diary_developer" not in diary.screenNames:
-            diary.screenNames.insert(0, "diary_developer")
-            diary.currentPage += 1
-        if "diary_roadmap" not in diary.screenNames:
-            diary.screenNames.append("diary_roadmap")
+        diary.insert_page(DiaryPage("diary_developer"), 0)
+        diary.append_page(DiaryPage("diary_roadmap"))
         renpy.show_screen("float_menu")
         ui.remove(developerCode)
 

@@ -13,7 +13,7 @@ label asszembly1jigolo:
             "You run to assembly like the chicken that you are"
             sze "{cps=*1.5}BOk BOk BOk BOk BOk{/cps}{nw}"
             sze "That was a close call"
-            $ sze.loss("strength")
+            $ sze.strength -= 1
             jump asszembly1_2
         "Sneak up on the source of the sound":
             "You sneak up on the source of the sound"
@@ -23,7 +23,7 @@ label asszembly1jigolo:
             sze "\"Oh, it's just Gary\""
             sze "{cps=*1.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "{s}Jitian{/s} is a great guy with a taste for questionable animes..."
-            $ jit.loss()
+            $ jit.friendship -= 1
             jit "\"Can u not, like plz? I thought you were teacher\""
             sze "\"Soz, why you here?\""
             jump asszemblyjigolo1_2
@@ -33,7 +33,7 @@ label asszembly1jigolo:
             sze "{cps=*1.5}Gary/Jitian is a shady, food-smuggling, hentai-watching{/cps} {nw}"
             sze "Gary/Jitian is a great guy with a taste for questionable animes..."
             sze "\"lol, why you always so shifty?\""
-            $ sze.gain("strength")
+            $ sze.strength += 1
             jit "\"Shut the fuck up, there might be teachers...\""
             sze "\"Well, I'm planning on ditching the assembly\""
             jump asszemblyjigolo1_2
@@ -54,15 +54,15 @@ label asszemblyjigolo1_2:
             jit "\"This is quality anime\""
             sze "\"Lol why is there a bunch of schoolgirls and some tentacles {nw}\""
             sze "\"Oh\""
-            $ sze.gain("thirst")
+            $ sze.thirst += 1
             jit "\"Oh ho ho ho\""
             jit "\"This is the good bit\""
             "..."
             "You go to wash hands"
-            $ sze.gain("thirst")
+            $ sze.thirst += 1
             jit "\"That was good scene wasn't it?\""
             sze "\"...yea...is ok, i guess\""
-            $ jit.gain()
+            $ jit.friendship += 1
             jump asszemblyjigolo1_3
 
         "Study":
@@ -73,9 +73,9 @@ label asszemblyjigolo1_2:
             jit "\"He's going to get 99+ ATAR anyway, he's just one of those guys\""
             jit "\"And then there are some others who will go all tryhard yet still get rekt. No offence mate\""
             "You ponder the philosophical nature of intelligence and ruminate upon the mysteries and questions of epistemology"
-            $ sze.gain("intellect")
+            $ sze.intellect += 1
             "You then direct your focus to your work, this time examining the ways of the locus"
-            $ sze.gain("intellect")
+            $ sze.intellect += 1
             jit "\"Whoa ok chill calm down\""
             jit "\"Don't need to be that try hard\""
             jump asszemblyjigolo1_3
@@ -89,10 +89,10 @@ label asszemblyjigolo1_2:
             jit "\"lol that would be funny, considering how they kicked him off\""
             jit "\"But idk man, these days, Yang always has an agenda...seems kinda shifty to me...\""
             "The thought never occurred to you but Gary's warning has made you more alert...ish"
-            $ sze.gain("strength")
+            $ sze.strength += 1
             sze "\"I'll leave you to your hentai then\""
             jit "\"*nods* thanks mate\""
-            $ jit.gain()
+            $ jit.friendship += 1
             jump asszemblyjigolo1_3
 
 label asszemblyjigolo1_3:
@@ -130,11 +130,11 @@ label asszemblyjigolo1_3:
             "It was a patrol of them"
             "\"{i} {b} Oi, you there! STOP! {/b} {/i}\""
             jit "\"fml, fcking Arthur\""
-            $ jit.loss()
+            $ jit.friendship -= 1
             sze "\"Why is it my fault?\""
-            $ jit.loss()
+            $ jit.friendship -= 1
             jit "\"U for realz??? I don't even...\""
-            $ jit.loss()
+            $ jit.friendship -= 1
             "You sense that Gary is somewhat reluctant to talk to you now..."
             "\" {i} Stop moving, put everything in your bags, place your hands behind your head, interlock your fingers...{/i} {nw}\""
             sze "\"fuck fuck fuck fuck fuck\""
@@ -152,7 +152,7 @@ label asszemblyjigolo1_3:
             sze "\"It can't be random students cos this place is too far away from the hall or the toilets\""
             jit "\"Oh shit tru...Everyone bail, sneak out\""
             jit "\"Oh tru...smart, Sze, good job\""
-            $ jit.gain()
+            $ jit.friendship += 1
             "Everyone sneaks through the side door of the Rowe Dungeon just as the footsteps reach the stairwell"
             "You hear the pursuers' voices in the room you just left"
             "\"{i} I thought I saw movement... {/i}\""
@@ -172,7 +172,7 @@ label asszemblyjigolo1_3:
             sze "\"Really?\""
             jit "\"errrr....\""
             sze "\"cya\""
-            $ jit.loss()
+            $ jit.friendship -= 1
             scene bg schoolfront
             jit "\"not so fast, where you going?\""
             sze "\"idk, eff this, I'm out\""
@@ -205,7 +205,7 @@ label fugitivesfromasszembly1:
                     jit "\"Hmmmm {cps=*0.2}...{/cps} Interesting suggestion\""
                     sze "\"Nothing but fence in the way\""
                     jit "\"Whoa, whoa, Arthur is a badass, step back\""
-                    $ sze.loss("fort")
+                    $ sze.fort -= 1
                     jit "\"You lead, then\""
                     call asszemblyjigolo1encounter 
                     jump asszemblyjigolodiscoverthefood
@@ -240,11 +240,11 @@ label asszemblyjigolo1encounter:
     menu:
         "\"I Surrender\"":
             sze "\"I reckon we should just surrender\""
-            $ sze.loss("strength")
+            $ sze.strength -= 1
             jit "\"wow\""
             sze "\"Soz, but I just too szeebs\""
             jit "\"Well, fuck\""
-            $ jit.loss()
+            $ jit.friendship -= 1
             jit "\"Cya, I ain't staying around for the teachers to catch up\""
             sze "\"...\""
             jump asszembly1shitstorm
@@ -266,12 +266,12 @@ label asszemblyjigolo1encounter:
             menu:
                 "\"I Surrender\"":
                     sze "\"I reckon we should just surrender\""
-                    $ sze.loss("strength")
+                    $ sze.strength -= 1
                     jit "\"wow\""
                     jit "\"You were supposed to be the Chosen One... the Hero...\""
                     sze "\"Soz, but I just too szeebs\""
                     jit "\"Well, fuck\""
-                    $ jit.loss()
+                    $ jit.friendship -= 1
                     jit "\"Cya, I ain't staying around for the teachers to catch up\""
                     sze "\"...\""
                     jump asszembly1shitstorm
@@ -302,7 +302,7 @@ label asszemblyjigolo1encounter:
                             jit "\"You truly are the Chosen One\""
                             "With one last co-ordinated push, you repel their attack and knock them unconscious"
                             $ playmusic("p3_JikaNetTanaka.ogg")
-                            $ sze.gain("strength")
+                            $ sze.strength += 1
                             "Exhausted, you both decide to take a breather, when suddenly you hear rustling"
                             bil "\"Well, now this is a proper mess\""
                             sze "Oh no, the school janitor/cleaner. He must be here to clean us up"
@@ -322,7 +322,7 @@ label asszemblyjigolo1encounter:
                                     bil "\"This impacts their memory, inducing short-term amnesia. As for any side effects, they won't really be any. Kind of\""
                                     sze "Wow, I learnt some science; benzodiazepine and alcohol can make short term amnesia"
 # will be included in end of term chemistry
-                                    $ sze.gain("intellect")
+                                    $ sze.intellect += 1
                                     jit "\"Damn, I should try that some time\""
                                     sze "\"What for?\""
                                     jit "\"...you don't wanna know\""
@@ -332,7 +332,7 @@ label asszemblyjigolo1encounter:
                                 "\"Let's keep moving\"":
                                     sze "\"I reckon we shouldn't ask too many questions, it seems dangerous\""
                                     jit "\"Yeah, that guy is kinda shift, bruh\""
-                                    $ jit.gain()
+                                    $ jit.friendship += 1
                                     return
                         else:
 # finish
@@ -375,6 +375,6 @@ label asszemblyjigolo1encounter:
                     sze "\"Let's fight\""
                     jit "\"wut\""
                     sze "\"by running\""
-                    $ sze.loss("strength")
+                    $ sze.strength -= 1
                     jit "\"lol gud idea\""
                     return

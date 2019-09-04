@@ -7,9 +7,9 @@ label phys1p3principal1:
     sze "\"If you don't tell your parents, wouldn't you get less rekt?\""
     rus "\"Waow, stop roasting me\""
     "It seems that Rusali does not appreciate this comment of yours"
-    $ rus.loss()
+    $ rus.friendship -= 1
     scene bg principaloffice
-    $ game.gain("moxCounter")
+    $ game.moxCounter += 1
     if game.moxCounter > 1:
         mox "\"You two again?\""
         $ playmusic("VarienThroneOfRavens.ogg")
@@ -43,11 +43,11 @@ label phys1p3principal2:
     scene bg principaldoor
     cha "\"Fuck, i cant go to an afternoon detention, i have to slay my gfs after school\""
     sze "\"Wow, how do you slay so many LG's\""
-    $ sze.gain("thirst")
+    $ sze.thirst += 1
     cha "\"You just do\""
-    $ sze.gain("charm")
+    $ sze.charm += 1
     scene bg principaloffice
-    $ game.gain("moxCounter")
+    $ game.moxCounter += 1
     if game.moxCounter > 1:
         show moxham unhappy
         mox "\"You again?\""
@@ -58,7 +58,7 @@ label phys1p3principal2:
         jump dead
     else:
         show moxham unhappy
-        $ game.gain("moxCounter")
+        $ game.moxCounter += 1
         mox "\"I have been told of two boys who were displaying unsatisfactory behaviour in class\""
         mox "\"Especially you Joshua Chao Lin, you have a history of being drop kick\""
         mox "\"This behaviour is intolerable and unbefitting of the Fortian Race. I expect this from\"" #unfinished sentence?
@@ -78,7 +78,7 @@ label phys1p3principal3:
     rus "\"WAOW, this is my first detention.\""
     rus "\"How will i ever ace trials with a detention\""
     rus "\"I can no longer spend my afternoon doing tutoring and writing textbooks\""
-    $ rus.loss()
+    $ rus.friendship -= 1
     hide rusali
     jump eng1p1
 
@@ -88,9 +88,9 @@ label phys1p3principal4:
     mox "\"Wow, you must be retarded\""
     mox "\"Our school offers support programs for retarded fucks like you, so i am giving you 2 afterschool detentions for the price of 1.\""
     mox "\"This way you will be exit profile\""
-    $ sze.gain("fort")
+    $ sze.fort += 1
     mox "\"And DCR, i had expected better of a student wanting ace trials\""
-    $ game.gain("moxCounter")
+    $ game.moxCounter += 1
     hide moxham unhappy
     show rusali
     rus "\"FUARR, my trials can no longer be aced\""

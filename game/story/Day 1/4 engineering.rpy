@@ -39,8 +39,8 @@ label eng1p1:
             show yang normal
             wil "\"Nice arthur, so smart, rank double 1 out of 11\""
             hide yang normal
-            $ sze.gain("intellect")
-            $ kok.gain()
+            $ sze.intellect += 1
+            $ kok.friendship += 1
             wil "\"Perhaps you may have a use after all\""
             jump eng1p1p1
         "\"It swims\"":
@@ -53,16 +53,16 @@ label eng1p1:
             sze "\"The plane swam on the water, and then hit the towers\""
             wil "\"Ur a fckin idiot\""
             wil "\"U must be thirst as fuck to be thinking of water all day\""
-            $ sze.gain("thirst")
+            $ sze.thirst += 1
             wil "\"U deserve to die\""
             sze "\"Actually hydroplanes do kinda swim\""
             wil "\"Fuck you, I'm unfriending you\""
-            $ kok.loss()
+            $ kok.friendship -= 1
             wil "\"I swear this engineering class is so dropkick\""
             wil "\"Im rank 1 but i feel im still only going to get a 99 ATAR\""
             wil "\"actual RIP ATAR\""
             hide yang normal
-            $ sze.loss("intellect")
+            $ sze.intellect -= 1
             jump eng1p1p2
         "\"...\"":
             dea "\"A plane is like a flat surface.\""
@@ -110,31 +110,31 @@ label eng1p1naughtycorner:
     sze "\"wow\""
     pra "\"Here, in the naughty corner, time behaves differently and space warps\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"In fact, the mass of the retardedness of this corner is such that it enhances Earth's warping of the space-time continuum\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"The massiveness of the retardedness of this corner draws you further into the retardedness\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"In fact, this corner seems to allow for, not just the interaction with past light from Minkowski's spacetime cones\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"It allows one to interact with the past light, to in fact, redo one's actions\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"However, unlike Harry Potter's time turner, instead of being simultaneously present with your previous self, you literally replace your previous self\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"Even at this distance, somehow, the mass of retardedness must be emitting some undiscovered form of radiation, spreading its influence\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"Over time, I have adapted to this anomalous curvature in spacetime by studying economics and meditating\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"But this process takes many years of being in the corner\""
     sze "\"Wot\""
-    $ sze.loss("intellect")
+    $ sze.intellect -= 1
     pra "\"So, you are more likely to just become retarded and dropkick here\""
     sze "\"ok\""
     gra "\"Bitches, do your work!!!!\""
@@ -194,11 +194,11 @@ label eng1p1naughtycorner:
                         gra "\"Soon time and space will merge, and the multiple timelines of this world will collapse into one\""
                         gra "\"Aaaaah, we're all in trouble\""
                         "his voices fades into the distance as you start to awaken"
-                        $ game.gain("timeTravelCounter")
+                        $ game.timeTravelCounter += 1
                         jump timetravel1
                     elif game.timeTravelCounter >= 1:
                         "You enter further into the familiar corner and repeat the process again"
-                        $ game.gain("timeTravelCounter")
+                        $ game.timeTravelCounter += 1
                         jump timetravel1
                     else:
                         "You step further into the corner, your body now inches from the wall"
@@ -215,7 +215,7 @@ label eng1p1naughtycorner:
                         "..."
                         "..."
                         "And then you start to stir from your slumber, the first light of a school morning illuminating your eyes"
-                        $ game.gain("timeTravelCounter")
+                        $ game.timeTravelCounter += 1
                         jump timetravel1
                 "Escape while you still can":
                     "You turn away from the corner, and take a step away from it"
@@ -273,7 +273,7 @@ label eng1p1p2:
     wil "\"MWAHAHAHAHAHAHAHAHAHAHHA!!\""
     sze "\"You had two consecutive Hs in your laugh, therefore that was just a joke\""
     wil "\"Ur a faggot; if I already unfriended you, I'll friend you just to unfriend you again\""
-    $ wil.loss()
+    $ wil.friendship -= 1
     sze "\"You are weird\""
     sze "\"I think sir is trying to say something\""
     jump eng1p2
@@ -312,7 +312,7 @@ label yangrantp1_2:
     sze "\"Lol, since when did you have a hard on for our principal...?{nw}\""
     wil "\"Silence\""
     wil "\"We must learn to blend in so that we may takeover the SRC/P&C and bring the 4th Reich into fruition\""
-    $ sze.gain("fort")
+    $ sze.fort += 1
     wil "\"The question is... how? hmmmmm\""
     menu:
             "How should we take over the SRC?"
@@ -322,11 +322,11 @@ label yangrantp1_2:
                 wil "\"That's a brilliant idea\""
                 sze "\"Wow really? Senpai finally noticed me!\""
                 wil "\"For an amoebic brained cretinous slime without a sense of political intrigue\""
-                $ wil.loss()
+                $ wil.friendship -= 1
                 sze "\"Why is Senpai always so mean to me?\""
                 sze "\"Baka-sempai\""
                 wil "\"Sze baka-desu\""
-                $ wil.loss()
+                $ wil.friendship -= 1
                 wil "\"Be quiet now, I need to learn how to jet engine for strategic bomber development\""
                 jump eng1p2
             "\"We vote in Wesley Lai\"":
@@ -350,9 +350,9 @@ label yangrantp1_2:
                 wil "\"A true stroke of genius, considering he was on the SRC previously\""
                 sze "\"...I'm waiting for you to say \"Just Joking\"...\""
                 wil "\"Why would I say that? It is a good idea, one for immediate implementation\""
-                $ sze.gain("intellect")
+                $ sze.intellect += 1
                 wil "\"Perhaps you do have your uses\""
-                $ wil.gain()
+                $ wil.friendship += 1
                 "You see Grant waddling to the front"
                 gra "\"Now listen here, little children, gather around the front table\""
                 sze "\"Yang, what's going on?\""
@@ -363,7 +363,7 @@ label yangrantp1_2:
 label yangrantp1_3:
     sze "\"Indeed\""
     wil "\"I am glad to see that we are in agreement\""
-    $ wil.gain()
+    $ wil.friendship += 1
     wil "\"But all this talking is distracting me from my true joy, ENGINEERING!!\""
     wil "\"So without further ado let us learn more engineering\""
     jump eng1p2
@@ -395,7 +395,7 @@ label eng1p2:
             sze "These worksheets are fucking useless"
             sze "A primary school student could easily do this"
             sze "And no one has the right to tell me whether or not I am allowed to play with vices"
-            $ sze.gain("fort")
+            $ sze.fort += 1
             "As you sit down, you see someone at the door"
             menu:
                 "*Knock *knock\""
@@ -411,7 +411,7 @@ label eng1p2:
             sze "\"...ok\""
             dea "\"I cannot differentiate this integral properly\""
             "It turned out that the question was a difficult question relating to permutations and combinations"
-            $ sze.gain("intellect")
+            $ sze.intellect += 1
             dea "\"shit you smart\""
             "Whilst basking in your glory, you hear knocking on the door"
             menu:
@@ -464,7 +464,7 @@ label engyesdoor:
     dik "\"Once more, I must apologise for my trangressions; If god wills it I'll be sure to right my wongs later on\""
     "Richard left"
     $ stopmusic()
-    $ dik.gain()
+    $ dik.friendship += 1
     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""
     jump asszembly1
 
@@ -483,10 +483,10 @@ label engnodoor:
     "Richard left {cps=*1.5}leaving Dean cowering on the ground moaning in feverish pitch and Derek has a booboo{/cps}"
     $ stopmusic()
     dea "\"...fuck u arthur, ur a coward\""
-    $ sze.loss("strength")
+    $ sze.strength -= 1
     sze "\"What did I do?\""
     dea "\"nuthing\""
-    $ sze.loss("fort")
+    $ sze.fort -= 1
     dea "\"Sir, message for you\""
     gra "\"k\""
     gra "\"Turns out that there is assembly today, got message from O'Neill who got message from office because fuck intercom system\""

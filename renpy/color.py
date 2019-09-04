@@ -190,6 +190,9 @@ class Color(tuple):
         else:
             return "#{self[0]:02x}{self[1]:02x}{self[2]:02x}".format(self=self)
 
+    def __str__(self):
+        return self.hexcode
+
     def __repr__(self):
         return "<Color {}>".format(self.hexcode)
 

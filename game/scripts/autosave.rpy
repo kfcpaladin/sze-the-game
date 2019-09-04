@@ -1,9 +1,9 @@
 init python:
     def autosave():
-        popupList.add({
-            "text": "Autosaving",
-            "icon": loadImage("icon_save.png"),
-            "colour": colour.rainbow,
-        })
+        popups.add(Popup(
+            message="Autosaving",
+            colour=themes.default.rainbow,
+            icon=loadImage("icon_save.png")
+        ))
         renpy.save("autosave")
         

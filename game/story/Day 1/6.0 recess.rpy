@@ -1,12 +1,12 @@
 label recess1:
-    $ game.setTime("recess")
+    $ clock.set_time("recess")
     $ autosave()
     "As you leave assembly hall you see a shadow fliting across Kilgour Quad"
     jit "\"Sup sze, How was assembly? Should've jigged with me, I never get caught\""
     jump recess1a
 
 label recess1a:
-    $ game.setTime("recess")
+    $ clock.set_time("recess")
     $ autosave()
     "It is now recess, which has unfortunately been cut short to 10 minutes to due an extended assembly"
     sze "Hmm, what should I do today for recess?"
@@ -28,7 +28,7 @@ label recess1a:
                     if sze.intellect > 5:
                         sze "\"But I thought you wanted to get rid of the SRC/PNC influence from the school\""
                         wil "\"Only someone as un-fortian as you could say that\""
-                        $ sze.loss("fort")
+                        $ sze.fort -= 1
                         if wil.friendship > 40:
                             wil "\"But since you have proven your worth\""
                             wil "\"Indeed, I do. I foresee that Moxham will have outlived her usefulness by {nw}\""
@@ -38,7 +38,7 @@ label recess1a:
                             wil "\"It is an uncharacteristically intelligent suggestion\""
                             sze "\"...\""
                             wil "\"But I digress\""
-                            $ sze.gain("intellect")
+                            $ sze.intellect += 1
                             sze "\"Why is senpai always so cruel?\""
                             wil "\"Quiet, I have just developed brilliant plan\""
                             wil "\"I may require a certain someone to snoop around and try to infiltrate this secret society, this Illuminati\""
@@ -50,7 +50,7 @@ label recess1a:
                             jump english1
                         else:
                             wil "\"In fact, I should probably unfriend you for being such an un-fortian monster\""
-                            $ wil.loss()
+                            $ wil.friendship -= 1
                             wil "\"But I shall ignore that interruption and think on this later\""
                             jump english1
                     else:
@@ -81,7 +81,7 @@ label recess1a:
                     drk "\"ceebs\""
                     sze "\"Fine, I have English with Schlam\""
                     drk "\"Well, everyone has English at same time, so I'll follow you\""
-                    $ drk.gain()
+                    $ drk.friendship += 1
                     jump english1
                 "Talk to Richard":
                     sze "Maybe I should talk to Richard, since he's not really talking to anyone"
@@ -113,7 +113,7 @@ label recess1a:
                                 roy "\"I don't want one, just, if you had too, wouldn't you get one\""
                                 sze "\"But I won't need one cos I'd probably be able to get one\""
                                 "You have impressed everyone with your confidence in your ability to slay (eventually)"
-                                $ sze.gain("charm")
+                                $ sze.charm += 1
                                 roy "\"You people don't get it. This is because you are held back by your human limitations\""
                                 "You tune out"
                                 "Recess is over, time for next class"
@@ -150,7 +150,7 @@ label recess1a:
                             sze "\"I'd totes stick ma dick in the exhaust pipe of a car transformer\""
                             roy "\"That's not what I meant\""
                             sze "\"And then as they go vrrm vrrm, I go vrrm vrrm\""
-                            $ sze.gain("thirst")
+                            $ sze.thirst += 1
                             dik "\"...\""
                             dik "\"What the shit did I just hear?\""
                             sze "\"Don't worry about it, recess is over, time for English\""
@@ -177,7 +177,7 @@ label recess1a:
                    $ game.metDerek = True
                    "You turn your attention back to Serena, only to see her chatting with Willis"
                    "Your hunt has failed, leaving you greatly unsatiated"
-                   $ sze.gain("thirst")
+                   $ sze.thirst += 1
                    menu:
                         "\"Try to get her attention\"":
                             sze "\"S-s-s-senpai\""
@@ -200,14 +200,14 @@ label recess1a:
                         "\"Give up\"":
                             sze "I must temper my heart with reason"
                             sze "I don't need to be so thirsty"
-                            $ sze.loss("thirst")
+                            $ sze.thirst -= 1
                             sze "maybe I should do something else"
                             jump recess1a
 
                 "Ceebs":
                     "you decide to give up on your pursuit"
                     "Instead you choose to turn your attention towards other people"
-                    $ sze.gain("thirst")
+                    $ sze.thirst += 1
                     menu:
                         "Talk to Richard":
                             "You notice Richard is busy in conversation about something with some other people"
@@ -261,7 +261,7 @@ label recess1a:
                                         wil "\"...so you weren't listening\""
                                         sze "\"No I wasn't...\""
                                         sze "\"I was absorbing\""
-                                        $ wil.loss()
+                                        $ wil.friendship -= 1
                                         wil "\"Whatever, let's just go English\""
                                         jump english1
                         "Talk to yourself":
@@ -290,7 +290,7 @@ label recess1a:
                                         roy "\"I don't want one, just, if you had too, wouldn't you get one\""
                                         sze "\"But I won't need one cos I'd probably be able to get one\""
                                         "You have impressed everyone with your confidence in your ability to slay (eventually)"
-                                        $ sze.gain("charm")
+                                        $ sze.charm += 1
                                         roy "\"You people don't get it. This is because you are held back by your human limitations\""
                                         "You tune out"
                                         "Recess is over, time for next class"
@@ -326,7 +326,7 @@ label recess1a:
                                     sze "\"I'd totes stick ma dick in the exhaust pipe of a car transformer\""
                                     roy "\"That's not what I meant\""
                                     sze "\"And then as they go vrrm vrrm, I go vrrm vrrm\""
-                                    $ sze.gain("thirst")
+                                    $ sze.thirst += 1
                                     dik "\"...\""
                                     dik "\"What the shit did I just hear?\""
                                     sze "\"Don't worry about it, recess is over, time for English\""

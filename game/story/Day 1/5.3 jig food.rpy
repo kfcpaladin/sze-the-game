@@ -1,7 +1,7 @@
 label asszemblyjigolodiscoverthefood:
     sze "\"So we got away\""
     jit "\"Damn, you were a boss\""
-    $ jit.gain()
+    $ jit.friendship += 1
     jit "\"So let's see what lies beyond the fence\""
     "Both you and Jitian wander up along Parramatta Road for a distamce and decide to turn left onto a Nortom Street"
     scene bg norton

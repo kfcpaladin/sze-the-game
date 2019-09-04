@@ -24,7 +24,7 @@ init -2 python:
                 rainbowString += colourFormatter.format(rainbow, char)
             # only cycle for acceptable characters and if not parsing format segment
             if char not in (excludeChar+excludeColour) and not excludeFormat: 
-                rainbow.cycle(rate)
+                rainbow.update(rate)
             if excludeFormat and char == '}':           # toggle off format when {...} is finished
                 excludeFormat = False
         return rainbowString

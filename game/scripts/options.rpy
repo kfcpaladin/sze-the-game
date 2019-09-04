@@ -10,6 +10,7 @@
 init -1 python hide:
     ## config.developer conflicts with travis autotest, so disable when pushing for long term
     # config.developer = True
+    config.log = "dev_log.log"
 
     ## These control the width and height of the screen.
     config.screen_width = 1366
@@ -26,6 +27,11 @@ init -1 python hide:
     # with tracebacks and other debugging logs.
     config.name = "sze-the game"
     config.version = "0.0"
+
+    config.font_replacement_map["Montserrat.ttf", False, False] = ("assets/fonts/Montserrat-Medium.ttf", False, False) 
+    config.font_replacement_map["Montserrat.ttf", True, False] = ("assets/fonts/Montserrat-Bold.ttf", False, False) 
+    config.font_replacement_map["Montserrat.ttf", False, True] = ("assets/fonts/Montserrat-MediumItalic.ttf", False, False) 
+    config.font_replacement_map["Montserrat.ttf", True, True] = ("assets/fonts/Montserrat-SemiBoldItalic.ttf", False, False) 
 
     #########################################
     # Themes

@@ -15,7 +15,7 @@ label asszembly1:
         wil "\"One that might facilitate for such an enactment of revenge, in return for a minor favour\""
         sze "\"Aaah, yes, indeed\""
         "Yang appreciates the backup, allowing Pragash to hear the proposal for his re-election into the SRC"
-        $ wil.gain()
+        $ wil.friendship += 1
         pra "\"Unfortunately, the SRC&PNC hate me, I will need something really hero from a PR team to pull this off\""
         pra "\"Otherwise, I would love to help\""
         wil "\"Hmmm... Arthur, I don't suppose you could be a good friend and help out here...\""
@@ -23,19 +23,19 @@ label asszembly1:
             "\"Ok\"":
                 sze "\"Ok\""
                 pra "\"There's the Fortian spirit\""
-                $ sze.gain("fort")
+                $ sze.fort += 1
                 wil "\"My plan will come into fruition then\""
                 pra "\"I owe much to the two of you then\""
-                $ pra.gain()
+                $ pra.friendship += 1
                 sze "\"np\""
                 $ game.electionPromise = True
                 jump asszembly1p1
             "\"I'll pass\"":
                 sze "\"I'll pass\""
                 pra "\"Wow, what a little shit\""
-                $ pra.loss()
+                $ pra.friendship -= 1
                 wil "\"Indeed\""
-                $ wil.loss()
+                $ wil.friendship -= 1
                 sze "\"Calm down, fine\""
                 $ game.electionPromise = True
                 jump asszembly1p1
@@ -43,7 +43,7 @@ label asszembly1:
                 sze "\"I wanna play with vices\""
                 wil "\"The fuck you talking about?\""
                 sze "\"Nevermind\""
-                $ sze.loss("intellect")
+                $ sze.intellect -= 1
                 pra "\"Just do it\""
                 sze "\"...\""
                 sze "\"fine\""
@@ -72,7 +72,7 @@ label asszembly1_2:
     scene bg hallentrance
     with fade
     sze "\"Lol, actually ceebs skipping asszembly though\""
-    $ sze.gain("fort")
+    $ sze.fort += 1
     wil "\"You are true Fortian, Moxham would be proud of you\""
     sze "\"Really?\""
     wil "\"No, I don't think she cares\""
@@ -119,7 +119,7 @@ label asszembly1_2:
         $ playsfx("hpunch.ogg")
         cha "\"Huehue\"" with hpunch
         sze "\"Ow, fuck, my head...\""
-        $ sze.loss("intellect")
+        $ sze.intellect -= 1
         $ playsfx("hpunch.ogg")
         cha "\"Fuck your head? Ok\"" with hpunch
         sze "\"Nooo, raep, raep\""
@@ -143,31 +143,31 @@ label asszembly1_2:
             $ playmusic("p4YouthfulLunch.ogg", loop=True)
             hide chao normal
             "You observed how to some combat technique"
-            $ sze.gain("strength")
+            $ sze.strength += 1
             jump asszembly1_3
         elif dik.friendship < 1:
             $ playsfx("vpunch.ogg")
             cha "\"I go full frontal\"" with vpunch
-            $ sze.loss("intellect")
+            $ sze.intellect -= 1
             sze "\"Aaah, plz stop\""
             cha "\"Why should I? Beg slave, you know you like it\""
-            $ sze.loss("intellect")
+            $ sze.intellect -= 1
             sze "\"No... No means no\""
             "Chao slams you down onto the ground"
             $ playsfx("vpunch.ogg")
             cha "\"I will ravage you to Chaoder\"" with vpunch
-            $ sze.loss("intellect")
-            $ sze.loss("intellect")
-            $ sze.loss("intellect")
+            $ sze.intellect -= 1
+            $ sze.intellect -= 1
+            $ sze.intellect -= 1
             sze "\"Raep, raep\""
             sze "\"I positively assert that no means no\""
-            $ sze.loss("strength")
+            $ sze.strength -= 1
             "You faintly hear people shouting at Chao and through your blurred vision you can make out a crowd of people swarming Chao..."
             "The whities have heard you positively asserting yourself against Chao's desecration of your physical form, one is helping you up"
             "They praise the Fortianness of your actions"
             hide chao normal
             with dissolve
-            $ sze.gain("fort")
+            $ sze.fort += 1
             "You proceed to weakly move your battered and bruised assemblage into asszembly"
             jump asszembly1_3
     else:
@@ -227,10 +227,10 @@ label asszembly1_3:
             scene bg hall
             sze "I had a dream, and it had water"
             sze "My pants are wet"
-            $ sze.gain("thirst")
+            $ sze.thirst += 1
             mox "\"How dare you wet your pants, when transgendered women in Siberia lack access to basic water facilities?\""
-            $ game.gain("moxCounter")
-            $ sze.loss("fort")
+            $ game.moxCounter += 1
+            $ sze.fort -= 1
             mox "\"Maybe a stint in detention will help you regain you Fortian Pride\""
             $ stopmusic()
             $ playmusic("EscortsGaudeamusDooWop.ogg", loop=True)
@@ -244,7 +244,7 @@ label asszembly1_3:
             else:
                 "But the silhouette of Serena, seated four rows ahead, catches your eye"
                 "You watch as she gossips with Willis"
-                $ sze.gain("thirst")
+                $ sze.thirst += 1
                 drk "\"wtf, are u drooling Arthur?\""
                 "You notice Derek for the first time this year"
                 sze "Derek is {s}a Machiavellian bastard{/s} an intelligent fellow {s}whose morals are as fluid as his loyalties{/s}"
@@ -263,14 +263,14 @@ label asszembly1_3:
                             mox "\"This is extremely relevant to the efforts to donate canned food to the families of the Charlie Hebdo shooting victims\""
                             mox "\"This man is epitome of Fortian\""
                             hide moxham happy
-                            $ sze.gain("charm")
-                            $ sze.gain("fort")
+                            $ sze.charm += 1
+                            $ sze.fort += 1
                             "You sit back down, basking in the glory of your social justice-ness"
                             dik "\"Wow, you commie hippy bastard\""
                             dik "\"I kid, that was some impressive bullshittery\""
                             sze "\"what do you mean \"bullshittery\"?\""
                             dik "\"{cps=*0.2}...{/cps}\""
-                            $ dik.loss()
+                            $ dik.friendship -= 1
                             drk "\"Lol calm down, nice one Sze, so u were just drooling out of social justice\""
                             "You dodged a bullet there"
                             jump asszembly1_4
@@ -279,7 +279,7 @@ label asszembly1_3:
                             "People around you look expectantly at you"
                             sze "Shit forgot what I was going to say"
                             "You spend a few awkward seconds sweating like some craven pig in the middle of summer"
-                            $ sze.loss("charm")
+                            $ sze.charm -= 1
                             sze "\"urm...mumble need...toilet\""
                             drk "\"lolwut? why u drool even more?\""
                             sze "\"I need to go to toilet, wash hands\""
@@ -309,7 +309,7 @@ label asszembly1_3:
                             sze "\"It was more Hong Kong/Indian/Italian/American fusion\""
                             pra "\"wtf\""
                             sze "\"I am accepting to new ideas because of my Fortianness\""
-                            $ sze.gain("fort")
+                            $ sze.fort += 1
                             pra "\"That almost makes annoys me as much as Desney being on SRC\""
                             "You see that this has caught the attention of Will Yang\""
                             wil "\"Perhaps you might be persuaded to run?\""
@@ -321,9 +321,9 @@ label asszembly1_3:
                             menu:
                                 "\"Szeebs\"":
                                     sze "\"Szeebs tho\""
-                                    $ pra.loss()
+                                    $ pra.friendship -= 1
                                     wil "\"I had higher expectations for you, you are disappointment\""
-                                    $ wil.loss()
+                                    $ wil.friendship -= 1
                                     jump asszembly1_4
                                 "\"K\"":
                                     sze "\"K\""
@@ -341,7 +341,7 @@ label asszembly1_3:
                             pra "\"You were\""
                             drk "\"If you think about it, you were\""
                             sze "\"Nooo...why you be like this?\""
-                            $ sze.loss("charm")
+                            $ sze.charm -= 1
                             "You spend the next few minutes insisting that you weren't drooling"
                             jump asszembly1_4
 
@@ -349,7 +349,7 @@ label asszembly1_3:
             "30 minutes later"
             mox "\"Michael Kirby is great, let us worship Michael Kirby\""
             "You worship Michael Kirby, allowing yourself to absorb the power of social justice"
-            $ sze.gain("fort")
+            $ sze.fort += 1
             "40 minutes later"
             jump asszembly1_4
 
@@ -374,7 +374,7 @@ label quest1electionpromise1_a:
                 drk "\"Sigh... you conservatives... Character attacks are the only ways to guarantee election\""
                 dik "\"But surely he needs to be able to back up his attacks with something of substance\""
                 "You have an epiphany"
-                $ sze.gain("intellect")
+                $ sze.intellect += 1
                 sze "\"Maybe, we can get together a campaign team...\""
                 pra "\"Is that even necessa{nw}\""
                 drk "\"Good idea\""
@@ -390,7 +390,7 @@ label quest1electionpromise1_a:
                 drk "\"Figuratively, of course, yes?\""
                 dik "\"errr.....\""
                 pra "\"Thanks all of you\""
-                $ pra.gain()
+                $ pra.friendship += 1
                 pra "\"By the way, have you heard that Chelsea destroyed ManU last night\""
                 dik "\"I was just watching news about that. The cricket match was most intense\""
                 pra "\"OMFG\""
@@ -405,6 +405,6 @@ label asszembly1_4:
     mox "\"Quoting some Latin 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pedicabo ego vos et irrumabo.' There is more to high school than ATAR\""
     "20 minutes later"
     sze "\"Well that was fucking useless\""
-    $ sze.gain("fort")
+    $ sze.fort += 1
     wil "\"Pah, all this talk of helping the community; only I know of what must be done for the greater good\""
     jump recess1

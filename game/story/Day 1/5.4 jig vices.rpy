@@ -23,9 +23,9 @@ label asszemblyjigoloviceland:
         sze "\"wtf is bdsm\""
         jit "\"Wow\""
         jit "\"Are you retarded dude?\""
-        $ sze.loss("intellect")
+        $ sze.intellect -= 1
         jit "\"Even fucking Li Xu knows, and hes legit autistic\""
-        $ jit.loss()
+        $ jit.friendship -= 1
         jit "\"Honestly Arthur, ya need to learn some shit\""
         jit "\"Read a book, or watch some porn or some shit\""
         sze "\"Wait, what. Watch some porn???\""
@@ -38,22 +38,22 @@ label asszemblyjigoloviceland:
             "If it worked for Willis, it will work for me":
                 sze "I would sacrifice anything to have Serena"
                 sze "Even my own sanity"
-                $ sze.gain("thirst")
+                $ sze.thirst += 1
                 jit "\"It's been a while since I had a {b}willing{/b} participant\""
-                $ jit.gain()
+                $ jit.friendship += 1
                 "You start to regret your hasty hormone-led decision"
                 call garyreeducation
                 jump recess1
             "No, this seems too shifty":
                 sze "He does make a good point, but then again this is coming from Jittian"
                 sze "No, I must resist the temptation"
-                $ sze.loss("thirst")
+                $ sze.thirst -= 1
                 sze "Who knows what dark secrets, Gary has planned"
                 sze "\"That sounds pretty sus, gonna sit out on this one\""
                 "Jittian's welcoming smile turns into a malovent smirk"
                 jit "\"Did I imply you had a choice?\""
                 jit "\"Because you didn't\""
-                $ jit.loss()
+                $ jit.friendship -= 1
                 call garyreeducation
                 jump recess1
 

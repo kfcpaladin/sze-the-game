@@ -29,7 +29,7 @@ init -1 python:
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
-image bg black =        Solid(AdvancedColour(0, 0, 0))
+image bg black =        Solid(PrimaryColours.BLACK)
 image bg d_workshop =   loadImage("bg_Workshopdark.png")
 image bg ded =          loadImage("bg_szeceded.png")
 image bg disclaimer =   loadImage("bg_disclaimer.png")

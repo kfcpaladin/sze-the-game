@@ -5,16 +5,16 @@ init python:
         {
             "name": "jigschool1",
             "jump": ["jigschool1_todd_teach", "jigschool1_todd_death"],
-            "colour": colour.green,
+            "colour": PrimaryColours.GREEN,
         },
         {
             "name": "jigschool1_todd_teach",
             "jump": "recess1a",
-            "colour": colour.green,
+            "colour": PrimaryColours.GREEN,
         },
         {
             "name": "jigschool1_todd_death",
             "jump": "dead",
-            "colour": colour.green,
+            "colour": PrimaryColours.GREEN,
         },
     ])

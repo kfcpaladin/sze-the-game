@@ -28,7 +28,7 @@ screen quest_info(controller, rect, theme):
         xsize rect.width
         frame:         
             has vbox    
-            text "{b}" + "? Quests" + "{/b}"
+            text "{b}" + "{0} Quests".format(controller.current_filter_name.title()) + "{/b}"
             if controller.quests and len(controller.quests) > 0:
                 # Grid and scroll bar
                 side "c r":
@@ -44,7 +44,7 @@ screen quest_info(controller, rect, theme):
                             use quest_entry(controller, quest, rect, theme)
                     vbar value YScrollValue(_vpgrid_name)
             else:
-                text "No quests are currently {0}".format("<<>>")
+                text "No quests are currently {0}".format(controller.current_filter_name)
 
 # Quest entry
 screen quest_entry(controller, quest, rect, theme):

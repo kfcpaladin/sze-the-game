@@ -30,7 +30,7 @@ screen achieve_info(controller, rect, theme):
         xsize rect.width
         frame:      
             has vbox    
-            text "{b}" + "? Achievements" + "{/b}"
+            text "{b}" + "{0} Achievements".format(controller.current_filter_name.title()) + "{/b}"
             if controller.achievements and len(controller.achievements) > 0:
                 # Grid and scroll bar
                 side "c r":

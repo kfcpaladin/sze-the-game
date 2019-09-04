@@ -10,6 +10,7 @@ default view_controllers.bag = create_bag_view_controller(5, 5)
 default view_controllers.friends = create_friend_view_controller()
 default view_controllers.left_diary_page = create_left_diary_page()
 default view_controllers.right_diary_page = create_right_diary_page()
+default view_controllers.screen_rect = create_screen_rect()
 
 default view_controllers.suicides.gunshot = create_gunshot_suicide_view_controller()
 

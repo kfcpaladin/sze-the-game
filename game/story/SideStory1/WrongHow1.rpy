@@ -1,4 +1,4 @@
-label WrongHow1
+label WrongHow1:
   "It was once said that the universe is indifferent to existence of individuals and that their perspectives should not mater....."
   roy "\"What do you mean I don't matter?\""
   "You? You're in the wrong part of the story. Also, how are you even aware of my existence?"

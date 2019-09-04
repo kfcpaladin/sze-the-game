@@ -20,6 +20,8 @@ define roy = Friend('Roy',          friendship=0, color="#FFFFFF", image="roy", 
 define rus = Friend('Rusali',       friendship=0, color="#FFFFFF", image="rusali",  icon=loadImage("icon_rusali.png"))
 define slm = Friend('Schlam',       friendship=0, color="#FFFFFF", image="shlam")
 define tod = Friend('Todd Treoir',  friendship=0, color="#99ff99", image="todd",    icon=loadImage("icon_todd.png"))
+define tpe = Friend('TPE?',         friendship=0)
+define ugn = Friend('Euguene?',     friendship=0, color="#FFFFFF")
 define web = Friend('Dr. Webb',     friendship=0, color="#FFFFFF", image="webb")
 define wil = Friend('Will Yin',     friendship=40, color="#ff0000",image="yin",     icon=loadImage("icon_willyin.png"))
 define wiy = Friend('Will Yang',    friendship=40, color="#FFFFFF",image="will",    icon=loadImage("icon_willyang.png"))

@@ -107,7 +107,7 @@ label start:
     #You can now tack on side stories for which the player can try
     menu AltPerspectives:
         "Which of these stories would you like to see?"
-            "The WrongHow Causality Hypothesis"
-                jump WrongHow1
-            "Return me to Sze's perspective"
-                jump schoolday1
+        "The WrongHow Causality Hypothesis":
+            jump WrongHow1
+        "Return me to Sze's perspective":
+            jump schoolday1

@@ -28,7 +28,11 @@ init -1 python:
 
     def create_right_diary_page():
         return Rect2D(right=625, bottom=570).add_offset(Vector2D(720, 95))
-    
+
+    def create_screen_rect():
+        rect = Rect2D(bottom=768, right=1366)
+        return rect
+
     def create_gunshot_suicide_view_controller():
         from refactor.models.suicides.gunshot import GunshotSuicide, Pistol, Head
         pistol = Pistol(

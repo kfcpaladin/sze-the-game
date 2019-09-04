@@ -19,17 +19,20 @@ init python:
     _choice = None
 
 # Call to this label to start game
-label kahootGame(kahoot, **options):
+label kahootGame(question, **options):
     menu:
         "Start Kahoot?":
             $ _previousMusic = getMusicHistory(-1)
             $ playmusic("kahoot.ogg")
-            call screen screen_kahoot(question=kahoot["question"], answers=kahoot["answers"], **options)
+            call screen screen_kahoot(question)
             $ stopmusic()
             $ _points = _return["points"]
             $ _time_remain = _return["time_remain"]
             $ _choice = _return["choice"]
-            "You chose [_choice]"
+            if _choice is not None:
+                "[_choice.message]"
+            else:
+                "You had a seizure and couldn't answer the question"
             if _points > 0:
                 $ playmusic("p4LikeADreamComeTrue.ogg")
                 "You are victorious with [_points] points, sparing only [_time_remain] seconds"
@@ -46,9 +49,10 @@ label kahootGame(kahoot, **options):
             return
 
 # handles all screen elements
-screen screen_kahoot(question="No question?", answers={}, time_range=10,speed=0.25):
+screen screen_kahoot(question, time_range=10,speed=0.25):
     modal True
     default time_remain = time_range
+    default answers = question.answers
     timer speed:
         repeat True
         action If(
@@ -75,7 +79,7 @@ screen screen_kahoot(question="No question?", answers={}, time_range=10,speed=0.
         yalign 0.2
         frame:
             has hbox
-            text question
+            text question.description
 
     # show all answers
     frame:
@@ -84,12 +88,12 @@ screen screen_kahoot(question="No question?", answers={}, time_range=10,speed=0.
         vbox:
             style "kahoot_answers"
             spacing 10
-            for answer, points in answers.iteritems():
-                textbutton answer:
+            for answer in answers:
+                textbutton answer.description:
                     xalign 0.5
                     action [
                         Hide('kahootscreen', dissolve),
-                        Return({"points": points, "time_remain": time_remain, "choice": answer})
+                        Return({"points": answer.points, "time_remain": time_remain, "choice": answer})
                     ]
                     hovered [
                         Function(playsfx, "button_select.ogg")

@@ -40,6 +40,9 @@ init -2 python:
 
         def render_gun(self, gun):
             self.render_entity(gun, Frame(loadImage("kms_icon_glockNoTrigger.png")))
+
+        def render_shotgun(self, shotgun):
+            self.render_entity(shotgun, Frame(loadImage("kms_shotgun.png")))
         
         def render_bullet(self, bullet):
             self.render_entity(bullet, Frame(loadImage("icon_rina.png")))

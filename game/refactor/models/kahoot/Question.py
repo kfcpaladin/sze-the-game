@@ -1,8 +1,9 @@
 import random
 
 class Question(object):
-    def __init__(self, description):
+    def __init__(self, description, image=None):
         self.description = description
+        self.image = image
         self._answers = []
 
     @property

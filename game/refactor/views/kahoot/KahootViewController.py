@@ -14,12 +14,13 @@ class KahootViewController(object):
     
     @property
     def is_time_ran_out(self):
-        return self._time_remaining <= 0
+        return not self._time_remaining > 0
 
     def update(self, dt):
-        self._time_remaining -= dt
-        if self._time_remaining < 0:
-            self._time_remaining = 0
+        time_remaining = self._time_remaining - dt
+        if time_remaining < 0:
+            time_remaining = 0
+        self._time_remaining = time_remaining
     
     def on_hover(self, index):
         self._is_hovered[index] = True

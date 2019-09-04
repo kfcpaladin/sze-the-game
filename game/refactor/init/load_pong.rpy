@@ -29,12 +29,15 @@ init python:
 
         right_paddle = Paddle(width=40, height=150, speed=500, colour=PrimaryColours.WHITE)
         right_paddle.position = Vector2D(1366-left_paddle.width-padding, 768/2 - left_paddle.height/2)
-        right_paddle_bot = PaddleBot(ball, right_paddle, bounding_box)
+        right_paddle_bot = PaddleBot(right_paddle, bounding_box, skill=10)
 
 
         extra_ball = Ball(width=30, height=30, speed=config.screen_width/1.5, colour=PrimaryColours.GREEN)
         extra_ball.position = Vector2D(1366/2, 768/2)
         extra_ball.velocity.x = extra_ball.speed
+
+        right_paddle_bot.track_ball(ball)
+        right_paddle_bot.track_ball(extra_ball)
 
         pong.add(top_wall)
         pong.add(bottom_wall)

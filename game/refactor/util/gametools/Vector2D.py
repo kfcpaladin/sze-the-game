@@ -9,6 +9,9 @@ class Vector2D(object):
     def __pos__(self):
         return self
     
+    def __abs__(self):
+        return (self.x**2 + self.y**2)**0.5
+    
     def __add__(self, v):
         return Vector2D(self.x+v.x, self.y+v.y)
     

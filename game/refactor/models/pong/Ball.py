@@ -11,12 +11,13 @@ class Ball(Entity, Persistent, Renderable):
 
     def store(self):
         self._initial_pos = self.position.copy()
-        self._initial_vel = self.velocity.copy()
+        self._initial_vel_x = self.velocity.x
+        self.velocity.y = random.uniform(-self.speed, self.speed)
 
     # when loaded, randomise y velocity
     def load(self):
         self.position = self._initial_pos.copy()
-        self.velocity.x = self._initial_vel.x
+        self.velocity.x = self._initial_vel_x
         self.velocity.y = random.uniform(-self.speed, self.speed)
 
     def render(self, renderer):

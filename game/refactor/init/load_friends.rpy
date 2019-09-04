@@ -90,7 +90,7 @@ init 1 python:
         msg_loss="You weren't very cricket to Pragash, reducing your friendship with him to [pra.friendship]"))
 
     # rin
-    rin.description = "She is the only one you truly desire {{b}}{{s}}{0}{{/s}}{{/b}}".format(rainbowText("except maybe your brother"))
+    rin.description = "She is the only one you truly desire {b}{s}{rainbow}except maybe your brother{/rainbow}{/s}{/b}"
     rin.get_attribute("friendship").observe(AttributeChangeMessage(
         msg_gain="You grew one step closer with Serena, your friendship with her is now at [rin.friendship]",
         msg_loss="Friendzoned again, your advances towards her were probably rejected, unfortunately your relationship with her has suffered and is now at [rin.friendship]"))

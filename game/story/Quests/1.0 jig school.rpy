@@ -29,7 +29,7 @@ label jigschool1:
     sze "\"Wait what the {b}hell are you doing!!!!{/b}\""
     $ playmusic("ManuelGasGasGas(InitialD).ogg")
     "Suddenly you see a blurry wall of moving muscle and raw power move towards you"
-    $ _string = sizeText("!"*10, start=25, end=50)
+    $ _string = "{grow}!!!!!!!!!!{/grow}"
     sze "{i}{b}{color=[PrimaryColours.RED]}[_string]{/color}{/b}{/i}"
     tod "{b}Fight or die!!!{/b}"
     "{color=[PrimaryColours.RED]}{b}You are greeted with claws slashing away at your flesh, causing blood to gush out of your ragged wounds{/b}{/color}"
@@ -43,7 +43,7 @@ label jigschool1:
     # fight back or not
     menu:
         "{b}Throw your strongest punch back{/b}":
-            $ _string = sizeText("TAKE THIS YOU FOUL BEAST", start=25, end=100)
+            $ _string = "{grow}TAKE THIS YOU FOUL BEAST{/grow}"
             sze "{b}[_string]{/b}"
             $ playsfx("vpunch.ogg")
             "Your fist is propelled at near luminal speeds, colliding against the skull of your enemy" with vpunch

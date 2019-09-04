@@ -198,10 +198,7 @@ label asszembly1_3:
             sze "\"{i}I dream {/i}\""
             scene bg schoolfront
             $ playsfx("hpunch.ogg")
-            # dereks manual rainbow text
-            # sze "{size=+100} {b} {i} {color=#9400D3}C{/color} . {color=#4B0082}O{/color} . {color=#0000FF}L{/color} . {color=#00FF00}O{/color} . {color=#FFFF00}U{/color} . {color=#FF7F00}R{/color} . {color=#FF0000}F{/color} . {color=#ff69b4}U{/color} . {color=#d2691e}L{/color} {/i} {/b} {/size}" with hpunch
-            # using rainbowText(...) to generate a rainbow string
-            $ _string = "{{size=90}}{{b}}{{i}}{0}{{/i}}{{/b}}{{/size}}".format(rainbowText("C.O.L.O.U.R.F.U.L", excludeColour="."))
+            $ _string = "{size=90}{b}{i}{rainbow}C.O.L.O.U.R.F.U.L.{/rainbow}{/i}{/b}{/size}"
             sze "[_string]" with hpunch
             $ playmusic("p4Traumerei.ogg")
             sze "I still remember the day I first met her"

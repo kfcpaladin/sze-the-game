@@ -609,15 +609,14 @@ label eng1waitforschlammie:
             "You hear the sound of gigantic footsteps reveberate towards you"
         "Blame Roy for everything":
             sze "Hey guys I think {b}Roy{/b} just {color=[PrimaryColours.GREEN]}{b}{i}farted{/i}{/b}{/color}"
-    # experimental sizeText formatter
     $ playsfx("vpunch.ogg")
-    $ _string = sizeText("{b}THUD{/b}", start=25, end=30)
+    $ _string = "{b}{grow}THUD{/grow}{/b}"
     "[_string]" with vpunch
     $ playsfx("hpunch.ogg")
-    $ _string += sizeText(" {b}THUD{/b}", start=30, end=50)
+    $ _string += "{b}{grow}THUD{/grow}{/b}"
     "[_string]" with hpunch
     $ playsfx("vpunch.ogg")
-    $ _string += sizeText(" {b}THUD{/b}", start=50, end=100)
+    $ _string += "{b}{grow}THUD{/grow}{/b}"
     "[_string]" with vpunch
     sze "\"Uhhhh\""
     slm "\"Stop blocking the way, moving quickly now\""

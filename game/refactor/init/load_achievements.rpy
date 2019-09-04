@@ -87,7 +87,7 @@ init -1 python:
             icon=loadImage("achievement_rina1.png")
         ))
 
-        # manager.get_achievement("rina1").set_unlock_condition(GreaterEqual(rin.friendship_prop, 100))
+        manager.get_achievement("rina1").set_unlock_condition(GreaterEqual(rin.friendship_prop, 100))
 
         # suicide achievements
         manager.add_achievement(Achievement(
@@ -97,6 +97,8 @@ init -1 python:
             description="You are as suicidal as ISIS",
             hidden=True
         ))
+
+        manager.get_achievement("suicide").set_unlock_condition(GreaterEqual(game.get_prop("suicideCount"), 5))
 
         # diary achievements
         manager.add_achievement(Achievement(

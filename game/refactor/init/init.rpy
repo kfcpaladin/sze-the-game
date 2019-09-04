@@ -14,11 +14,11 @@ default view_controllers.screen_rect = create_screen_rect()
 
 default view_controllers.suicides.gunshot = create_gunshot_suicide_view_controller()
 
-init python:
+init -5 python:
     game = load_property_store()
     clock = load_clock()
 
-init -5 python:
+init -10 python:
     from refactor.models.popups import PopupsManager, Popup
     from refactor.models.clock import Clock
     from refactor.util import RenpyCallbacks

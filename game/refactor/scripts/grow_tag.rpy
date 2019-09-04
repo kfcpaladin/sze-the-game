@@ -1,5 +1,12 @@
 init -1 python:
+    
     def grow_tag(tag, argument, contents):
+        """ Custom text tag for making text change size dynamically
+        Usages: {grow}Hello world!{/grow}
+                {grow=100}Custom end size{/grow}
+                {grow=15...60}Custom range{/grow}
+                {grow=60...15}Shrinking text{/grow}
+        """
         texts = filter(lambda c: c[0] == renpy.TEXT_TEXT, contents)        
         total_characters = sum((len(text) for _, text in texts))
         start_size, end_size = range_from_args(argument)        
@@ -28,8 +35,13 @@ init -1 python:
                 error = "{0}. Reason: {1}".format(error, msg)
             Exception.__init__(self, error)
 
-    # get a range from an argument string 
     def range_from_args(argument, start=22, end=40):
+        """ Convert argument string into an integer range
+        None = (start, end)
+        "10" = (start, 10)
+        "15...100" = (15, 100)
+        """
+
         if not argument:
             return (start, end)
 

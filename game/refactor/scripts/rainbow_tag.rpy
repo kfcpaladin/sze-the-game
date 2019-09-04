@@ -2,6 +2,12 @@ init -2 python:
     from refactor.util.colours import RainbowColour
 
     def rainbow_tag(tag, argument, contents):
+        """ Custom text tag which makes text change colour for each character 
+            inside the tag
+        Usage:  {rainbow}Default rainbow text!{/rainbow}
+                {rainbow=10}Slower rainbow transition{/rainbow}
+                {rainbow=200}Faster rainbow transition{/rainbow}
+        """
         if not argument:
             argument = 100
 

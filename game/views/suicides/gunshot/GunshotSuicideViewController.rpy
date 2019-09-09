@@ -1,5 +1,5 @@
 init -2 python:
-    from refactor.models.suicides.gunshot import Renderer
+    from models.suicides.gunshot import Renderer
 
     class GunshotSuicideViewController(RenpyRenderer, Renderer):
         import pygame

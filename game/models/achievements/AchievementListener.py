@@ -1,4 +1,4 @@
-from refactor.util import Observer
+from util import Observer
 
 class AchievementListener(Observer):
     def __init__(self, achievement):

@@ -1,5 +1,5 @@
-from refactor.util import ObservableProperty
-from refactor.util import Observer
+from util import ObservableProperty
+from util import Observer
 
 class ObservableCondition(ObservableProperty, Observer):
     def __init__(self):

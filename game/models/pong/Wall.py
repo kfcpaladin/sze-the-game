@@ -1,4 +1,4 @@
-from refactor.util.gametools import Entity, Surface, Persistent
+from util.gametools import Entity, Surface, Persistent
 
 class Wall(Entity, Persistent, Surface):
     def __init__(self, width, height):

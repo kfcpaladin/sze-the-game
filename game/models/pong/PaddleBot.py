@@ -1,4 +1,4 @@
-from refactor.util.gametools import Controls, Vector2D
+from util.gametools import Controls, Vector2D
 import math
 
 class PaddleBot(Controls):

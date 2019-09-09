@@ -1,4 +1,4 @@
-from refactor.util import ObservableProperty
+from util import ObservableProperty
 
 class Quest(object):
     def __init__(self, id, title, brief, description, icon=None, is_unlocked=False):

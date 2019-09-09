@@ -1,4 +1,4 @@
-from refactor.util import ObservableProperty
+from util import ObservableProperty
 
 class Attribute(ObservableProperty):
     def __init__(self, name, value=0):

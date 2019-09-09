@@ -1,5 +1,5 @@
-from refactor.util import Observer
-from refactor.util import RenpyCallbacks
+from util import Observer
+from util import RenpyCallbacks
 from abc import abstractmethod
 
 class AttributeNotification(Observer):

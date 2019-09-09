@@ -28,5 +28,5 @@ define wiy = Friend('Will Yang',    friendship=40, color="#FFFFFF",image="will",
 define zhn = Friend('Will Zhong',    friendship=0, color="#FFFFFF",image="Zhong",    icon=loadImage("icon_willyang.png"))
 
 init -1 python:
-    from refactor.models.characters import MainCharacter
-    from refactor.models.characters import Friend
+    from models.characters import MainCharacter
+    from models.characters import Friend

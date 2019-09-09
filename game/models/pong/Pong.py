@@ -1,4 +1,4 @@
-from refactor.util.gametools import Entity, Surface, Persistent, Controls, Renderable
+from util.gametools import Entity, Surface, Persistent, Controls, Renderable
 from .Ball import Ball
 
 class Pong(object):

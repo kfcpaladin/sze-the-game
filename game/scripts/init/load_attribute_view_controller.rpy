@@ -2,8 +2,8 @@ default view_controllers.attributes = load_attribute_view_controller()
 
 init python:
     def load_attribute_view_controller():
-        from refactor.views.attributes import AttributesViewController, AttributesViewMessage
-        from refactor.util import PriorityList, PriorityEntry
+        from views.attributes import AttributesViewController, AttributesViewMessage
+        from util import PriorityList, PriorityEntry
 
         controller = AttributesViewController()
 

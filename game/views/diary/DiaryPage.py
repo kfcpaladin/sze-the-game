@@ -1,4 +1,4 @@
-from refactor.util import RenpyCallbacks
+from util import RenpyCallbacks
 
 class DiaryPage(object):
     def __init__(self, screen, cleanup_screens=[]):

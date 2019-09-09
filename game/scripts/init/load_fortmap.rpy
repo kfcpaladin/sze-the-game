@@ -2,7 +2,7 @@ default fortmap = load_fortmap()
 
 init python:
     def load_fortmap():
-        from refactor.models.fortmap import FortMap, Area
+        from models.fortmap import FortMap, Area
         areas = [
             "bcourts", "bridge", "carpark", "cohen", "currycourts", 
             "food", "fortstreet", "gym", "hall", "kilgour", 

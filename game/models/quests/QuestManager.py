@@ -1,6 +1,6 @@
 from .QuestListener import QuestListener
-from refactor.util import RenpyCallbacks
-from refactor.models.popups import Popup
+from util import RenpyCallbacks
+from models.popups import Popup
 
 class QuestManager(object):
     def __init__(self, popups):

@@ -1,5 +1,5 @@
 from .AchievementListener import AchievementListener
-from refactor.models.popups import Popup
+from models.popups import Popup
 
 class AchievementManager(object):
     def __init__(self, popups):

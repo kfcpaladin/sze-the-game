@@ -1,4 +1,4 @@
-from refactor.util import ObservableProperty
+from util import ObservableProperty
 
 class Achievement(object):
     def __init__(self, _id, title, brief, description, icon=None, hidden=False):

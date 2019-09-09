@@ -1,4 +1,4 @@
-from refactor.util.gametools import Entity, Renderable, Vector2D
+from util.gametools import Entity, Renderable, Vector2D
 from abc import abstractmethod
 
 class Gun(Entity, Renderable):

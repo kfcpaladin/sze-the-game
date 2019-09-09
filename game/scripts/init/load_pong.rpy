@@ -3,9 +3,9 @@ init 1 python:
 
 init python:
     def load_basic_pong_game():
-        from refactor.models.pong import *
-        from refactor.util.gametools import Vector2D, Rect2D
-        from refactor.util.colours import PrimaryColours
+        from models.pong import *
+        from util.gametools import Vector2D, Rect2D
+        from util.colours import PrimaryColours
         import pygame
 
         bounding_box = Rect2D(right=config.screen_width, bottom=config.screen_height)

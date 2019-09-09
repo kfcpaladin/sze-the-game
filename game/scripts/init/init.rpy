@@ -19,12 +19,12 @@ init -5 python:
     clock = load_clock()
 
 init -10 python:
-    from refactor.models.popups import PopupsManager, Popup
-    from refactor.models.clock import Clock
-    from refactor.util import RenpyCallbacks
-    from refactor.util import PropertyStore
-    from refactor.util import ObservableProperty
-    from refactor.util.gametools import Vector2D
+    from models.popups import PopupsManager, Popup
+    from models.clock import Clock
+    from util import RenpyCallbacks
+    from util import PropertyStore
+    from util import ObservableProperty
+    from util.gametools import Vector2D
 
     class ConcreteRenpyCallbacks(RenpyCallbacks):
         def __init__(self):

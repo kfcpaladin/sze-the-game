@@ -1,7 +1,7 @@
 import pygame
-from refactor.util.gametools import Controls
+from util.gametools import Controls
 
-from refactor.util.colours import PrimaryColours
+from util.colours import PrimaryColours
 
 class PaddleControls(Controls):
     def __init__(self, paddle, up_key, down_key):

@@ -1,5 +1,5 @@
-from refactor.util.gametools import Vector2D
-from refactor.util import RenpyCallbacks
+from util.gametools import Vector2D
+from util import RenpyCallbacks
 from .Bullet import Bullet
 from .Gun import Gun
 

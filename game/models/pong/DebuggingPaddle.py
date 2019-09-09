@@ -1,5 +1,5 @@
 from .Paddle import Paddle
-from refactor.util.colours import PrimaryColours
+from util.colours import PrimaryColours
 
 class DebuggingPaddle(Paddle):
 

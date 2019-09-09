@@ -1,11 +1,11 @@
 init -1 python:
-    from refactor.views.achievements import AchievementViewController
-    from refactor.views.quests import QuestsViewController
-    from refactor.views.popups import PopupsViewController
-    from refactor.views.inventory import BagViewController
-    from refactor.views.friends import FriendViewController
-    from refactor.views.diary import DiaryViewController, DiaryPage
-    from refactor.util.gametools import Vector2D, Rect2D
+    from views.achievements import AchievementViewController
+    from views.quests import QuestsViewController
+    from views.popups import PopupsViewController
+    from views.inventory import BagViewController
+    from views.friends import FriendViewController
+    from views.diary import DiaryViewController, DiaryPage
+    from util.gametools import Vector2D, Rect2D
 
     def create_bag_view_controller(total_columns, total_rows):
         controller = BagViewController(total_rows, total_columns)

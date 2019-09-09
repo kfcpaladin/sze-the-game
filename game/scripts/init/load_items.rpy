@@ -1,7 +1,7 @@
 define items = load_items()
 
 init -1 python:
-    from refactor.models.inventory import Inventory, Item, ItemCache, AttributeModifier
+    from models.inventory import Inventory, Item, ItemCache, AttributeModifier
 
     def load_items(): 
         items = ItemCache()

@@ -1,6 +1,6 @@
 from .Wall import Wall
 from .Ball import Ball
-from refactor.util.gametools import Persistent, Renderable
+from util.gametools import Persistent, Renderable
 
 import math
 

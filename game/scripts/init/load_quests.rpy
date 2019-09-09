@@ -1,6 +1,6 @@
 init -1 python:
-    from refactor.models.quests import QuestManager, Quest, QuestJump
-    from refactor.util.conditions import *
+    from models.quests import QuestManager, Quest, QuestJump
+    from util.conditions import *
 
 
 

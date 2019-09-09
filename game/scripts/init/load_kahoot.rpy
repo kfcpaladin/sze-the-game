@@ -2,10 +2,10 @@ default kahoot = load_kahoot_questions()
 default themes.kahoot = load_kahoot_theme()
 
 init -1 python:
-    from refactor.views.kahoot import KahootViewController
+    from views.kahoot import KahootViewController
 
     def load_kahoot_questions():
-        from refactor.models.kahoot import Question, Answer
+        from models.kahoot import Question, Answer
 
         kahoot = {}
 

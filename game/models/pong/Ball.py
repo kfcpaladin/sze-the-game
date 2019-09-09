@@ -1,4 +1,4 @@
-from refactor.util.gametools import Entity, Persistent, Renderable
+from util.gametools import Entity, Persistent, Renderable
 
 import random
 

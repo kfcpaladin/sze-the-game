@@ -1,5 +1,5 @@
 init -1 python:
-    from refactor.models.pong import PongRenderer
+    from models.pong import PongRenderer
 
     class PongViewController(PongRenderer, RenpyRenderer):
         def __init__(self, game):

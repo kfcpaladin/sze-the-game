@@ -1,4 +1,4 @@
-from refactor.util.gametools import Entity, Renderable
+from util.gametools import Entity, Renderable
 
 class Head(Entity, Renderable):
     def __init__(self, width, height):

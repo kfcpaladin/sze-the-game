@@ -1,7 +1,7 @@
 init -1 python:
     def create_gunshot_suicide_view_controller():
-        from refactor.models.suicides.gunshot import GunshotSuicide, Head
-        from refactor.models.suicides.gunshot import Shotgun, Pistol
+        from models.suicides.gunshot import GunshotSuicide, Head
+        from models.suicides.gunshot import Shotgun, Pistol
         pistol = Pistol(
             width=200,
             height=150,

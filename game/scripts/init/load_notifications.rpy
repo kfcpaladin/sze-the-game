@@ -5,8 +5,8 @@ init 1 python:
     load_attribute_value_messages()
 
 init python:
-    from refactor.models.notifications import *
-    from refactor.util import PriorityList, PriorityEntry
+    from models.notifications import *
+    from util import PriorityList, PriorityEntry
 
     class Narrator:
         def say(self, message):

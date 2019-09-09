@@ -1,6 +1,6 @@
 init -1 python:
-    from refactor.models.achievements import Achievement, AchievementManager
-    from refactor.util.conditions import * 
+    from models.achievements import Achievement, AchievementManager
+    from util.conditions import * 
 
     def load_achievements(popups):
         

@@ -1,4 +1,4 @@
-from refactor.util import RenpyCallbacks
+from util import RenpyCallbacks
 
 class QuestJump:
     def __init__(self, label):

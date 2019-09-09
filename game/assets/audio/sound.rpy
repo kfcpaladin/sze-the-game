@@ -1,7 +1,7 @@
 # Used to configure the audio settings
 init -1 python:
     audioDir = {
-        "folder": "audio",
+        "folder": "assets/audio",
         "default": "audio_default.ogg",
     }
     audioCache = {}
@@ -74,7 +74,7 @@ init -1 python:
         arbituary sorting function to distinguish whether an 
         audio file is suitable for the relevant function
     """
-    def sortAudioFile(filepath, audioFunction, audioFolder="audio"):
+    def sortAudioFile(filepath, audioFunction, audioFolder):
         audioPaths = {
             playmusic: "music",
             playsfx: "sfx",

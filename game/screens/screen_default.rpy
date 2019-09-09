@@ -189,7 +189,7 @@ screen main_menu():
 
         has vbox
 
-        add "logo.png"
+        add loadImage("logo.png")
         textbutton _("Start Game") action Start() xminimum 400
         null height 20
         textbutton _("Load Game") action ShowMenu("load")

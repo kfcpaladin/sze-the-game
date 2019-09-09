@@ -74,7 +74,7 @@ init -1 python:
         arbituary sorting function to distinguish whether an 
         audio file is suitable for the relevant function
     """
-    def sortAudioFile(filepath, audioFunction, audioFolder):
+    def sortAudioFile(filepath, audioFunction, audioFolder=audioDir["folder"]):
         audioPaths = {
             playmusic: "music",
             playsfx: "sfx",
